@@ -6,7 +6,15 @@ import remarkGfm from "remark-gfm"
 import remarkHtml from "remark-html"
 import type { WikiPage, Domain, KnowledgeGraph } from "./types"
 
-const WIKI_ROOT = process.env.WIKI_PATH || path.join(process.env.HOME || "", "2nd")
+// Vercel 환경(HOME 없거나 ~/2nd 없음)엔 번들된 data/wiki 사용
+function resolveWikiRoot() {
+  const envPath = process.env.WIKI_PATH
+  if (envPath && fs.existsSync(envPath)) return envPath
+  const local = path.join(process.env.HOME || "", "2nd")
+  if (fs.existsSync(local)) return local
+  return path.join(process.cwd(), "data", "wiki")
+}
+const WIKI_ROOT = resolveWikiRoot()
 const LAYER_DIRS = ["concepts", "entities", "comparisons", "queries"]
 
 function extractWikiLinks(content: string): string[] {
