@@ -1374,6 +1374,124 @@
         "ai-agent"
       ],
       "updated": "2026-07-29"
+    },
+    {
+      "id": "dji-everest-mapping",
+      "name": "DJI Everest Mapping",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "dji-terra",
+      "name": "DJI Terra",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "gcs-software"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "fcc-drone-regulations",
+      "name": "FCC Drone Regulations",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "lockheed-martin-morfius",
+      "name": "Lockheed Martin MORFIUS",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "ai-agent"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "yolo-v8-4-112",
+      "name": "YOLO v8.4.112",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-agent"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "doordash-air",
+      "name": "DoorDash Air",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "company"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "droneshield",
+      "name": "DroneShield",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "company"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "perceptual-robotics",
+      "name": "Perceptual Robotics",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "company"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "terra-drone",
+      "name": "Terra Drone",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "company"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "xtend-ai-robotics",
+      "name": "XTEND AI Robotics",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "company"
+      ],
+      "updated": "2026-07-30"
     }
   ],
   "edges": [
@@ -2927,6 +3045,156 @@
     {
       "source": "yolo",
       "target": "opencv",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-everest-mapping",
+      "target": "dji",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-everest-mapping",
+      "target": "dji-terra",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-everest-mapping",
+      "target": "ops-mission",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-terra",
+      "target": "dji",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-terra",
+      "target": "drone-ai",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-terra",
+      "target": "ground-control-station",
+      "type": "wikilink"
+    },
+    {
+      "source": "fcc-drone-regulations",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "fcc-drone-regulations",
+      "target": "drone-hw",
+      "type": "wikilink"
+    },
+    {
+      "source": "fcc-drone-regulations",
+      "target": "terra-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "lockheed-martin-morfius",
+      "target": "swarm",
+      "type": "wikilink"
+    },
+    {
+      "source": "lockheed-martin-morfius",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "lockheed-martin-morfius",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo-v8-4-112",
+      "target": "yolo",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo-v8-4-112",
+      "target": "drone-ai",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo-v8-4-112",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "doordash-air",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "doordash-air",
+      "target": "ops-mission",
+      "type": "wikilink"
+    },
+    {
+      "source": "doordash-air",
+      "target": "matternet",
+      "type": "wikilink"
+    },
+    {
+      "source": "droneshield",
+      "target": "ai-agent",
+      "type": "wikilink"
+    },
+    {
+      "source": "droneshield",
+      "target": "drone-ai",
+      "type": "wikilink"
+    },
+    {
+      "source": "droneshield",
+      "target": "lockheed-martin-morfius",
+      "type": "wikilink"
+    },
+    {
+      "source": "perceptual-robotics",
+      "target": "drone-ai",
+      "type": "wikilink"
+    },
+    {
+      "source": "perceptual-robotics",
+      "target": "ops-mission",
+      "type": "wikilink"
+    },
+    {
+      "source": "perceptual-robotics",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "terra-drone",
+      "target": "fcc-drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "terra-drone",
+      "target": "drone-power-battery",
+      "type": "wikilink"
+    },
+    {
+      "source": "terra-drone",
+      "target": "drone-hw",
+      "type": "wikilink"
+    },
+    {
+      "source": "xtend-ai-robotics",
+      "target": "ai-agent",
+      "type": "wikilink"
+    },
+    {
+      "source": "xtend-ai-robotics",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "xtend-ai-robotics",
+      "target": "drone-sw",
       "type": "wikilink"
     }
   ],
