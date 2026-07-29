@@ -5,7 +5,9 @@ import { DOMAIN_META } from "@/lib/types"
 
 export default async function HomePage() {
   const pages = await getAllPages()
-  const news = getNewsFeed().slice(0, 5)
+  const news = getNewsFeed()
+    .filter((it) => it.type === "news" || it.type === "release")
+    .slice(0, 5)
   const domainCounts = pages.reduce<Record<string, number>>((acc, p) => {
     if (p.domain) acc[p.domain] = (acc[p.domain] || 0) + 1
     return acc

@@ -2,15 +2,26 @@ import fs from "fs"
 import path from "path"
 import type { Domain } from "./types"
 
+export type NewsType = "news" | "release" | "job" | "gov" | "defense"
+
 export interface NewsItem {
   title: string
   url: string
   source: string
   domain: Domain
-  type: "news" | "release"
+  type: NewsType
+  region?: "KR" | "global"
   summary: string
   published: string
   fetched: string
+}
+
+export const NEWS_TYPE_META: Record<NewsType, { label: string; emoji: string }> = {
+  news:    { label: "뉴스",     emoji: "📰" },
+  release: { label: "릴리즈",   emoji: "🚀" },
+  job:     { label: "채용",     emoji: "💼" },
+  gov:     { label: "정부사업", emoji: "🏛️" },
+  defense: { label: "방산",     emoji: "🪖" },
 }
 
 // lib/wiki.ts resolveWikiRoot와 동일한 규칙
