@@ -45,7 +45,7 @@ async function callOpenRouter(prompt: string): Promise<string> {
       "X-Title": "DroneWiki AI Q&A",
     },
     body: JSON.stringify({
-      model: "anthropic/claude-haiku-4-5-20251001",
+      model: "anthropic/claude-haiku-4.5",
       max_tokens: 2048,
       messages: [{ role: "user", content: prompt }],
     }),
