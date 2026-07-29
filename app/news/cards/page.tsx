@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
+import { toPng } from "html-to-image"
 import { DOMAIN_META } from "@/lib/types"
 
 const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), { ssr: false })
@@ -45,6 +46,31 @@ export default function CardNewsPage() {
   const [error, setError] = useState("")
   const [result, setResult] = useState<CardNewsResult | null>(null)
   const [graphW, setGraphW] = useState(600)
+  const [exporting, setExporting] = useState(false)
+  const deckRef = useRef<HTMLDivElement>(null)
+
+  const exportCard = async (el: HTMLElement, filename: string) => {
+    // 인스타그램 규격 1080px 정사각형으로 스케일
+    const dataUrl = await toPng(el, { pixelRatio: 1080 / el.clientWidth, cacheBust: true })
+    const a = document.createElement("a")
+    a.href = dataUrl
+    a.download = filename
+    a.click()
+  }
+
+  const exportAll = async () => {
+    if (!deckRef.current || exporting) return
+    setExporting(true)
+    try {
+      const cards = deckRef.current.querySelectorAll<HTMLElement>("[data-card]")
+      for (let i = 0; i < cards.length; i++) {
+        await exportCard(cards[i], `dronewiki-card-${String(i + 1).padStart(2, "0")}.png`)
+        await new Promise((r) => setTimeout(r, 400))
+      }
+    } finally {
+      setExporting(false)
+    }
+  }
 
   useEffect(() => {
     const update = () => setGraphW(Math.min(window.innerWidth - 48, 720))
@@ -126,21 +152,41 @@ export default function CardNewsPage() {
         <div className="space-y-10">
           {/* 카드 덱 */}
           <div>
-            <h2 className="text-lg font-bold mb-4">{result.title}</h2>
-            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4">
+            <div className="flex items-center justify-between gap-3 mb-4">
+              <h2 className="text-lg font-bold">{result.title}</h2>
+              <button
+                onClick={exportAll}
+                disabled={exporting}
+                className="shrink-0 px-4 py-2 border border-cyan-600 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-600 hover:text-white rounded-lg text-xs font-semibold transition-colors disabled:opacity-40"
+              >
+                {exporting ? "저장 중..." : "📥 전체 PNG 저장"}
+              </button>
+            </div>
+            <div ref={deckRef} className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4">
               {result.cards.map((c, i) => (
-                <div
-                  key={i}
-                  className="snap-center shrink-0 w-72 h-72 sm:w-80 sm:h-80 rounded-2xl p-6 flex flex-col justify-between text-white shadow-lg"
-                  style={{ background: GRADIENTS[i % GRADIENTS.length] }}
-                >
-                  <div className="text-xs opacity-60 font-mono">{i + 1} / {result.cards.length}</div>
-                  <div>
-                    <div className="text-4xl mb-3">{c.emoji}</div>
-                    <div className="font-extrabold text-xl leading-snug mb-3">{c.heading}</div>
-                    <p className="text-sm opacity-90 leading-relaxed">{c.body}</p>
+                <div key={i} className="snap-center shrink-0 flex flex-col gap-2">
+                  <div
+                    data-card
+                    className="w-72 h-72 sm:w-80 sm:h-80 rounded-2xl p-6 flex flex-col justify-between text-white shadow-lg"
+                    style={{ background: GRADIENTS[i % GRADIENTS.length] }}
+                  >
+                    <div className="text-xs opacity-60 font-mono">{i + 1} / {result.cards.length}</div>
+                    <div>
+                      <div className="text-4xl mb-3">{c.emoji}</div>
+                      <div className="font-extrabold text-xl leading-snug mb-3">{c.heading}</div>
+                      <p className="text-sm opacity-90 leading-relaxed">{c.body}</p>
+                    </div>
+                    <div className="text-xs opacity-50">🛸 DroneWiki</div>
                   </div>
-                  <div className="text-xs opacity-50">🛸 DroneWiki</div>
+                  <button
+                    onClick={(e) => {
+                      const card = (e.currentTarget.previousElementSibling as HTMLElement)
+                      exportCard(card, `dronewiki-card-${String(i + 1).padStart(2, "0")}.png`)
+                    }}
+                    className="text-xs text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                  >
+                    📥 PNG 저장
+                  </button>
                 </div>
               ))}
             </div>
