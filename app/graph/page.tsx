@@ -39,7 +39,7 @@ export default function GraphPage() {
   const handleNodeClick = useCallback((node: any) => setSelected(node as GraphNode), [])
 
   return (
-    <div className="flex flex-col" style={{ height: "calc(100vh - 56px)" }}>
+    <div className="flex flex-col" style={{ height: "calc(100vh - 44px)" }}>
       {/* 컨트롤 바 */}
       <div className="flex flex-wrap items-center gap-3 px-4 py-2 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shrink-0">
         <h1 className="font-bold text-sm">지식 그래프</h1>

@@ -25,11 +25,11 @@ function WikiList() {
   })
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-2xl font-bold mb-6">드론 위키</h1>
+    <div className="max-w-3xl mx-auto px-4 py-5">
+      <h1 className="font-bold text-lg mb-4">드론 위키</h1>
 
       {/* 필터 */}
-      <div className="flex flex-wrap gap-3 mb-8">
+      <div className="flex flex-wrap gap-2 mb-4">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -59,39 +59,33 @@ function WikiList() {
         </select>
       </div>
 
-      <p className="text-sm text-slate-400 mb-4">{filtered.length}개 문서</p>
+      <p className="text-xs text-slate-400 mb-2 pb-2 border-b border-slate-200 dark:border-slate-700">
+        {filtered.length}개 문서
+      </p>
 
       {/* 목록 */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <ul>
         {filtered.map((p) => {
           const meta = DOMAIN_META[p.domain]
           return (
-            <Link
-              key={p.slug}
-              href={`/wiki/${p.slug}`}
-              className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:shadow-md hover:border-cyan-400 dark:hover:border-cyan-500 transition-all group"
-            >
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <span className="text-lg">{meta?.emoji || "📄"}</span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500">
-                  {p.layer}
-                </span>
+            <li key={p.slug} className="py-2 border-b border-slate-100 dark:border-slate-800">
+              <div className="flex items-baseline gap-2 min-w-0">
+                <span className="shrink-0">{meta?.emoji || "📄"}</span>
+                <Link
+                  href={`/wiki/${p.slug}`}
+                  className="text-[15px] leading-snug hover:text-cyan-700 dark:hover:text-cyan-400 min-w-0"
+                >
+                  {p.title}
+                </Link>
               </div>
-              <div className="font-semibold text-sm mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors line-clamp-2">
-                {p.title}
+              <div className="text-xs text-slate-400 mt-0.5 ml-6">
+                {meta?.label || "미분류"} · {p.layer}
+                {p.tags.length > 0 && <> · {p.tags.slice(0, 4).join(", ")}</>}
               </div>
-              <div className="text-xs text-slate-400 mb-2">{meta?.label}</div>
-              <div className="flex flex-wrap gap-1">
-                {p.tags.slice(0, 3).map((t) => (
-                  <span key={t} className="text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-500">
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </Link>
+            </li>
           )
         })}
-      </div>
+      </ul>
 
       {filtered.length === 0 && (
         <div className="text-center py-20 text-slate-400">

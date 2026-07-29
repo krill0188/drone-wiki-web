@@ -100,12 +100,12 @@ export default function CardNewsPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 sm:py-10">
-      <div className="flex items-center gap-2 text-xs text-slate-400 mb-4">
-        <Link href="/news" className="hover:text-cyan-600">← 뉴스 목록</Link>
+    <div className="max-w-3xl mx-auto px-4 py-5">
+      <div className="text-[13px] text-slate-400 mb-3">
+        <Link href="/news" className="hover:underline">← 뉴스 목록</Link>
       </div>
-      <h1 className="text-2xl font-bold mb-1">🎴 AI 카드뉴스</h1>
-      <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
+      <h1 className="font-bold text-lg mb-1">🎴 AI 카드뉴스</h1>
+      <p className="text-[13px] text-slate-500 dark:text-slate-400 mb-4">
         최신 뉴스를 위키 지식으로 학습해 SNS 카드뉴스로 만들어드립니다
       </p>
 

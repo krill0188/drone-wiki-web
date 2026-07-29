@@ -10,39 +10,35 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-        <header className="border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
-              <span className="text-xl">🛸</span>
-              <span className="text-cyan-600 dark:text-cyan-400">Drone</span>Wiki
+      <body className="min-h-screen flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+        <header className="border-b-2 border-cyan-700 dark:border-cyan-600 bg-cyan-700 dark:bg-cyan-800">
+          <div className="max-w-3xl mx-auto px-4 h-11 flex items-center gap-4 text-white">
+            <Link href="/" className="font-bold text-[15px] tracking-tight shrink-0">
+              🛸 DroneWiki
             </Link>
-            <nav className="flex items-center gap-0.5 sm:gap-1 text-sm font-medium">
-              <Link href="/news" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-                <span>📰</span><span className="hidden sm:inline">뉴스</span>
-              </Link>
-              <Link href="/wiki" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-                <span>📖</span><span className="hidden sm:inline">위키</span>
-              </Link>
-              <Link href="/graph" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-                <span>🔵</span><span className="hidden sm:inline">지식 그래프</span>
-              </Link>
-              <Link href="/chat" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-                <span>💬</span><span className="hidden sm:inline">AI Q&amp;A</span>
-              </Link>
-              <Link href="/chat" className="hidden md:flex items-center gap-1.5 ml-2 px-4 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition-colors">
-                <span>✨</span><span>질문하기</span>
-              </Link>
+            <nav className="flex items-center gap-3 text-[13px] overflow-x-auto">
+              <Link href="/news" className="hover:underline whitespace-nowrap">뉴스</Link>
+              <Link href="/news/cards" className="hover:underline whitespace-nowrap">카드뉴스</Link>
+              <Link href="/wiki" className="hover:underline whitespace-nowrap">위키</Link>
+              <Link href="/graph" className="hover:underline whitespace-nowrap">그래프</Link>
+              <Link href="/chat" className="hover:underline whitespace-nowrap">AI Q&amp;A</Link>
             </nav>
+            <span className="ml-auto hidden sm:block text-[11px] text-cyan-100">
+              드론 AI 지식 플랫폼
+            </span>
           </div>
         </header>
 
         <main className="flex-1">{children}</main>
 
-        <footer className="border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 mt-16">
-          <div className="max-w-6xl mx-auto px-4 py-8 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-4">
-            <span>🛸 DroneWiki — 드론 기술 지식 플랫폼</span>
-            <span>Powered by LLM-Wiki · Neo4j · LangGraph · Next.js</span>
+        <footer className="border-t border-slate-200 dark:border-slate-700 mt-12">
+          <div className="max-w-3xl mx-auto px-4 py-6 text-xs text-slate-400 flex flex-wrap gap-x-4 gap-y-1">
+            <span>🛸 DroneWiki</span>
+            <Link href="/news" className="hover:underline">뉴스</Link>
+            <Link href="/wiki" className="hover:underline">위키</Link>
+            <Link href="/graph" className="hover:underline">지식 그래프</Link>
+            <Link href="/chat" className="hover:underline">AI Q&amp;A</Link>
+            <span className="ml-auto">매일 새벽 자동 갱신</span>
           </div>
         </footer>
       </body>
