@@ -53,6 +53,8 @@ export default async function HomePage() {
   const news = feed.filter((it) => ["news", "release", "defense"].includes(it.type)).slice(0, 5)
   const jobs = feed.filter((it) => it.type === "job").slice(0, 5)
   const gov = feed.filter((it) => it.type === "gov").slice(0, 5)
+  const papers = feed.filter((it) => it.type === "paper").slice(0, 5)
+  const videos = feed.filter((it) => it.type === "video").slice(0, 5)
   const domainCounts = pages.reduce<Record<string, number>>((acc, p) => {
     if (p.domain) acc[p.domain] = (acc[p.domain] || 0) + 1
     return acc
@@ -123,6 +125,22 @@ export default async function HomePage() {
         <>
           <SectionHead title="🏛️ 정부사업" href="/news?type=gov" more="더보기" />
           <NewsList items={gov} showType={false} />
+        </>
+      )}
+
+      {/* 논문 */}
+      {papers.length > 0 && (
+        <>
+          <SectionHead title="📄 최신 논문" href="/news?type=paper" more="더보기" />
+          <NewsList items={papers} showType={false} />
+        </>
+      )}
+
+      {/* 영상 */}
+      {videos.length > 0 && (
+        <>
+          <SectionHead title="🎬 기술 영상 (검증 채널)" href="/news?type=video" more="더보기" />
+          <NewsList items={videos} showType={false} />
         </>
       )}
 
