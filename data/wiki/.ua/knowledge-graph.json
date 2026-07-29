@@ -1870,6 +1870,90 @@
         "sim-to-real"
       ],
       "updated": "2026-07-30"
+    },
+    {
+      "id": "ardupilot-params-by-version",
+      "name": "ArduPilot 버전별 주요 파라미터 변경점 (4.4~4.7)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "ardupilot",
+        "parameter",
+        "version"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "cuav-setup-params",
+      "name": "CUAV FC(X7+/V5+/Nora+) 초기 파라미터 설정",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "cuav",
+        "parameter",
+        "setup"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "fc-vendor-param-guide",
+      "name": "FC 제조사별 파라미터 설정 가이드 (총론)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "flight-control",
+        "parameter",
+        "setup"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "holybro-setup-params",
+      "name": "Holybro FC(6C/6X/Durandal/Kakute) 초기 파라미터 설정",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "holybro",
+        "parameter",
+        "setup"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "pixhawk-setup-params",
+      "name": "Pixhawk 6X/6C 초기 파라미터 설정",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "pixhawk",
+        "parameter",
+        "setup"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "px4-params-by-version",
+      "name": "PX4 버전별 주요 파라미터 변경점 (v1.14~v1.17)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "px4",
+        "parameter",
+        "version"
+      ],
+      "updated": "2026-07-30"
     }
   ],
   "edges": [
@@ -3968,6 +4052,86 @@
     {
       "source": "skyjepa-world-models",
       "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "ardupilot-params-by-version",
+      "target": "fc-vendor-param-guide",
+      "type": "wikilink"
+    },
+    {
+      "source": "cuav-setup-params",
+      "target": "fc-vendor-param-guide",
+      "type": "wikilink"
+    },
+    {
+      "source": "cuav-setup-params",
+      "target": "sensor-calibration",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "pixhawk-setup-params",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "cuav-setup-params",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "holybro-setup-params",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "px4-params-by-version",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "ardupilot-params-by-version",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "sensor-calibration",
+      "type": "wikilink"
+    },
+    {
+      "source": "fc-vendor-param-guide",
+      "target": "pid-tuning-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "holybro-setup-params",
+      "target": "fc-vendor-param-guide",
+      "type": "wikilink"
+    },
+    {
+      "source": "holybro-setup-params",
+      "target": "pixhawk-setup-params",
+      "type": "wikilink"
+    },
+    {
+      "source": "pixhawk-setup-params",
+      "target": "fc-vendor-param-guide",
+      "type": "wikilink"
+    },
+    {
+      "source": "pixhawk-setup-params",
+      "target": "px4-params-by-version",
+      "type": "wikilink"
+    },
+    {
+      "source": "pixhawk-setup-params",
+      "target": "sensor-calibration",
+      "type": "wikilink"
+    },
+    {
+      "source": "px4-params-by-version",
+      "target": "fc-vendor-param-guide",
       "type": "wikilink"
     }
   ],
