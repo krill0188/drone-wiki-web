@@ -1,12 +1,17 @@
 import { NextRequest, NextResponse } from "next/server"
 import { spawn } from "child_process"
-import { ragSearch, expandGraphNeighbors, type RagSource } from "@/lib/rag"
+import { ragSearch, expandGraphNeighbors, searchNews, type RagSource, type NewsHit } from "@/lib/rag"
 
 const UNAVAILABLE_MSG =
   "⚠️ AI 답변을 생성할 수 없습니다.\n\n" +
   "아래 참고 문서를 직접 확인하거나, 지식 그래프에서 관련 개념을 탐색해보세요."
 
-function buildPrompt(question: string, sources: RagSource[], neighbors: { id: string; name: string }[]): string {
+function buildPrompt(
+  question: string,
+  sources: RagSource[],
+  neighbors: { id: string; name: string }[],
+  newsHits: NewsHit[]
+): string {
   const contextParts = sources.map(
     (s, i) => `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}`
   )
@@ -15,20 +20,28 @@ function buildPrompt(question: string, sources: RagSource[], neighbors: { id: st
       `[연관 개념]\n${neighbors.map((n) => `- ${n.name}`).join("\n")}`
     )
   }
+  const newsParts = newsHits.map(
+    (n, i) => `[N${i + 1}] (${n.type}${n.region ? `/${n.region}` : ""}) ${n.title}${n.excerpt ? ` — ${n.excerpt}` : ""}`
+  )
 
-  return `당신은 드론 도메인 전문가 AI입니다. 아래 지식 베이스 문서를 근거로 질문에 완전하고 상세하게 답변하세요.
+  return `당신은 드론 도메인 전문가 AI입니다. 아래 지식 베이스 문서와 최신 수집 뉴스를 근거로 질문에 완전하고 상세하게 답변하세요.
 
 <knowledge-base>
-${contextParts.join("\n\n")}
+${contextParts.join("\n\n") || "(관련 위키 문서 없음)"}
 </knowledge-base>
+
+<latest-news>
+${newsParts.join("\n") || "(관련 최신 뉴스 없음)"}
+</latest-news>
 
 질문: ${question}
 
 답변 지침:
-- 제공된 문서를 최대한 활용하여 구체적으로 답변
+- 제공된 문서와 최신 뉴스를 종합하여 구체적으로 답변
+- 최신 동향·채용·정부사업·방산 질문이면 <latest-news>를 적극 활용
 - 핵심 개념, 작동 원리, 기술 비교, 실용 정보를 충분히 포함
 - 소제목이나 목록을 활용해 가독성 있게 구성
-- 출처는 [1], [2] 형식으로 인용
+- 위키 출처는 [1], 뉴스 출처는 [N1] 형식으로 인용
 - 한국어로 답변`
 }
 
@@ -94,12 +107,13 @@ export async function POST(req: NextRequest) {
   }
 
   const sources = ragSearch(question, 5)
+  const newsHits = searchNews(question, 4)
   const neighbors = sources.length > 0
     ? expandGraphNeighbors(sources.map((s) => s.slug), 4)
     : []
 
-  const prompt = sources.length > 0
-    ? buildPrompt(question, sources, neighbors)
+  const prompt = sources.length > 0 || newsHits.length > 0
+    ? buildPrompt(question, sources, neighbors, newsHits)
     : `드론 전문가로서 다음 질문에 한국어로 명확하게 답변하세요.\n\n질문: ${question}`
 
   const answer = await generateAnswer(prompt)
@@ -107,6 +121,7 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({
     answer: answer || UNAVAILABLE_MSG,
     sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain, score: s.score })),
-    mode: sources.length > 0 ? "rag" : "fallback",
+    newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
+    mode: sources.length > 0 || newsHits.length > 0 ? "rag" : "fallback",
   })
 }

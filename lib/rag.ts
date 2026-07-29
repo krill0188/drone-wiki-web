@@ -92,6 +92,48 @@ export function ragSearch(query: string, topK = 5): RagSource[] {
     }))
 }
 
+export interface NewsHit {
+  title: string
+  url: string
+  type: string
+  region?: string
+  excerpt: string
+  score: number
+}
+
+// 수집된 최신 뉴스에서 질문 관련 항목 검색 (AI Q&A 근거용)
+export function searchNews(query: string, topK = 4): NewsHit[] {
+  const feedPath = path.join(WIKI_ROOT, ".ua", "news-feed.json")
+  if (!fs.existsSync(feedPath)) return []
+  let items: any[] = []
+  try {
+    items = JSON.parse(fs.readFileSync(feedPath, "utf-8"))
+  } catch {
+    return []
+  }
+  const qTokens = tokenize(query)
+  return items
+    .slice(0, 200)
+    .map((it) => {
+      const text = `${it.title || ""} ${it.summary || ""}`
+      const tokens = tokenize(text)
+      let hits = 0
+      for (const q of qTokens) if (tokens.has(q)) hits++
+      return { it, score: hits }
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, topK)
+    .map(({ it, score }) => ({
+      title: String(it.title),
+      url: String(it.url),
+      type: String(it.type || "news"),
+      region: it.region,
+      excerpt: String(it.summary || "").slice(0, 200),
+      score,
+    }))
+}
+
 interface GraphNode { id: string; name: string }
 interface GraphEdge { source: string; target: string }
 

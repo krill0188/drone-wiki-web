@@ -1,85 +1,140 @@
 import Link from "next/link"
 import { getAllPages } from "@/lib/wiki"
-import { getNewsFeed, timeAgo, sourceHost, NEWS_TYPE_META } from "@/lib/news"
+import { getNewsFeed, getDailyBriefing, timeAgo, sourceHost, NEWS_TYPE_META, type NewsItem } from "@/lib/news"
 import { DOMAIN_META } from "@/lib/types"
+
+function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: boolean }) {
+  return (
+    <ol>
+      {items.map((it, i) => {
+        const tmeta = NEWS_TYPE_META[it.type] || NEWS_TYPE_META.news
+        return (
+          <li key={it.url} className="flex gap-2 py-2 border-b border-slate-100">
+            <span className="text-[13px] text-slate-400 font-mono w-5 shrink-0 text-right pt-px">
+              {i + 1}.
+            </span>
+            <div className="min-w-0">
+              <a
+                href={it.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[15px] leading-snug hover:text-cyan-700"
+              >
+                {it.title}
+                <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
+              </a>
+              <div className="text-xs text-slate-400 mt-0.5">
+                {showType && <>{tmeta.emoji} {tmeta.label} · </>}
+                {it.region === "KR" ? "🇰🇷 국내" : "🌏 해외"} · {timeAgo(it.fetched)}
+              </div>
+            </div>
+          </li>
+        )
+      })}
+    </ol>
+  )
+}
+
+function SectionHead({ title, href, more }: { title: string; href: string; more: string }) {
+  return (
+    <div className="flex items-baseline justify-between mb-1 mt-8">
+      <h2 className="font-bold text-base">{title}</h2>
+      <Link href={href} className="text-[13px] text-cyan-700 hover:underline">
+        {more} →
+      </Link>
+    </div>
+  )
+}
 
 export default async function HomePage() {
   const pages = await getAllPages()
-  const news = getNewsFeed().slice(0, 15)
+  const feed = getNewsFeed()
+  const briefing = getDailyBriefing()
+  const news = feed.filter((it) => ["news", "release", "defense"].includes(it.type)).slice(0, 5)
+  const jobs = feed.filter((it) => it.type === "job").slice(0, 5)
+  const gov = feed.filter((it) => it.type === "gov").slice(0, 5)
   const domainCounts = pages.reduce<Record<string, number>>((acc, p) => {
     if (p.domain) acc[p.domain] = (acc[p.domain] || 0) + 1
     return acc
   }, {})
   const recent = [...pages]
     .sort((a, b) => (b.updated || "").localeCompare(a.updated || ""))
-    .slice(0, 8)
+    .slice(0, 5)
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-5">
-      {/* 도메인 인덱스 */}
-      <p className="text-[13px] text-slate-500 dark:text-slate-400 mb-5 leading-relaxed">
-        {Object.entries(DOMAIN_META).map(([d, m], i) => (
-          <span key={d}>
-            {i > 0 && <span className="mx-1.5 text-slate-300 dark:text-slate-600">·</span>}
-            <Link href={`/wiki?domain=${d}`} className="hover:underline whitespace-nowrap">
-              {m.emoji} {m.label}
-              <span className="text-slate-400"> {domainCounts[d] || 0}</span>
-            </Link>
-          </span>
+    <div className="max-w-3xl mx-auto px-4 py-6">
+      {/* 드론 지식 7개 카테고리 */}
+      <h2 className="font-bold text-base mb-3">드론 지식 카테고리</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
+        {Object.entries(DOMAIN_META).map(([domain, meta]) => (
+          <Link
+            key={domain}
+            href={`/wiki?domain=${domain}`}
+            className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-slate-200 hover:border-cyan-500 hover:bg-cyan-50 transition-colors"
+          >
+            <span className="text-lg">{meta.emoji}</span>
+            <span className="min-w-0">
+              <span className="block text-[13px] font-medium leading-tight">{meta.label}</span>
+              <span className="block text-xs text-slate-400">{domainCounts[domain] || 0}개 문서</span>
+            </span>
+          </Link>
         ))}
-      </p>
-
-      {/* 최신 뉴스 */}
-      <div className="flex items-baseline justify-between mb-2">
-        <h2 className="font-bold text-[15px]">최신 소식</h2>
-        <Link href="/news" className="text-[13px] text-cyan-700 dark:text-cyan-400 hover:underline">
-          더보기 →
+        <Link
+          href="/chat"
+          className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-cyan-600 bg-cyan-600 text-white hover:bg-cyan-500 transition-colors"
+        >
+          <span className="text-lg">💬</span>
+          <span className="text-[13px] font-medium leading-tight">AI에게 질문</span>
         </Link>
       </div>
-      <ol className="mb-8">
-        {news.map((it, i) => {
-          const tmeta = NEWS_TYPE_META[it.type] || NEWS_TYPE_META.news
-          return (
-            <li key={it.url} className="flex gap-2 py-[7px] border-b border-slate-100 dark:border-slate-800">
-              <span className="text-[13px] text-slate-400 font-mono w-5 shrink-0 text-right pt-px">
-                {i + 1}.
-              </span>
-              <div className="min-w-0">
-                <a
-                  href={it.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[15px] leading-snug hover:text-cyan-700 dark:hover:text-cyan-400"
-                >
-                  {it.title}
-                  <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
-                </a>
-                <div className="text-xs text-slate-400 mt-0.5">
-                  {tmeta.emoji} {tmeta.label}
-                  {it.region === "KR" && " · 🇰🇷"}
-                  {" · "}
-                  {timeAgo(it.fetched)}
-                </div>
-              </div>
-            </li>
-          )
-        })}
-      </ol>
+
+      {/* 오늘의 뉴스 — AI 2장 요약 */}
+      <SectionHead
+        title={briefing ? `🗞️ 오늘의 드론 소식 (${briefing.date})` : "📰 최신 소식"}
+        href="/news"
+        more="전체 뉴스 더보기"
+      />
+      {briefing ? (
+        <div className="space-y-3">
+          {briefing.cards.map((c) => (
+            <div key={c.title} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
+              <div className="font-semibold text-[15px] mb-1.5">{c.title}</div>
+              <p className="text-[14px] text-slate-600 leading-relaxed">{c.body}</p>
+            </div>
+          ))}
+          <p className="text-xs text-slate-400">
+            국내·국외 뉴스, 방산, 정부사업, 채용 소식을 AI가 매일 종합 요약합니다
+          </p>
+        </div>
+      ) : (
+        <NewsList items={news} />
+      )}
+
+      {/* 채용 */}
+      {jobs.length > 0 && (
+        <>
+          <SectionHead title="💼 채용" href="/news?type=job" more="더보기" />
+          <NewsList items={jobs} showType={false} />
+        </>
+      )}
+
+      {/* 정부사업 */}
+      {gov.length > 0 && (
+        <>
+          <SectionHead title="🏛️ 정부사업" href="/news?type=gov" more="더보기" />
+          <NewsList items={gov} showType={false} />
+        </>
+      )}
 
       {/* 위키 최근 업데이트 */}
-      <div className="flex items-baseline justify-between mb-2">
-        <h2 className="font-bold text-[15px]">위키 최근 업데이트</h2>
-        <Link href="/wiki" className="text-[13px] text-cyan-700 dark:text-cyan-400 hover:underline">
-          전체 {pages.length}개 →
-        </Link>
-      </div>
-      <ul className="mb-8">
+      <SectionHead title="📖 위키 최근 업데이트" href="/wiki" more={`전체 ${pages.length}개`} />
+      <ul>
         {recent.map((p) => (
-          <li key={p.slug} className="flex items-baseline gap-2 py-[7px] border-b border-slate-100 dark:border-slate-800">
+          <li key={p.slug} className="flex items-baseline gap-2 py-2 border-b border-slate-100">
             <span className="shrink-0">{DOMAIN_META[p.domain]?.emoji || "📄"}</span>
             <Link
               href={`/wiki/${p.slug}`}
-              className="text-[15px] leading-snug hover:text-cyan-700 dark:hover:text-cyan-400 min-w-0 truncate"
+              className="text-[15px] leading-snug hover:text-cyan-700 min-w-0 truncate"
             >
               {p.title}
             </Link>
@@ -89,12 +144,10 @@ export default async function HomePage() {
       </ul>
 
       {/* 바로가기 */}
-      <div className="text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed">
-        <Link href="/chat" className="text-cyan-700 dark:text-cyan-400 hover:underline">💬 AI에게 질문하기</Link>
-        <span className="mx-1.5 text-slate-300 dark:text-slate-600">·</span>
-        <Link href="/graph" className="text-cyan-700 dark:text-cyan-400 hover:underline">🔵 지식 그래프 탐색</Link>
-        <span className="mx-1.5 text-slate-300 dark:text-slate-600">·</span>
-        <Link href="/news/cards" className="text-cyan-700 dark:text-cyan-400 hover:underline">🎴 AI 카드뉴스 만들기</Link>
+      <div className="mt-8 text-[13px] text-slate-500">
+        <Link href="/graph" className="text-cyan-700 hover:underline">🔵 지식 그래프 탐색</Link>
+        <span className="mx-2 text-slate-300">·</span>
+        <Link href="/chat" className="text-cyan-700 hover:underline">💬 AI Q&amp;A</Link>
       </div>
     </div>
   )

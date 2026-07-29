@@ -44,6 +44,23 @@ export function getNewsFeed(): NewsItem[] {
   }
 }
 
+export interface DailyBriefing {
+  date: string
+  cards: { title: string; body: string }[]
+}
+
+export function getDailyBriefing(): DailyBriefing | null {
+  const p = path.join(resolveWikiRoot(), ".ua", "daily-briefing.json")
+  if (!fs.existsSync(p)) return null
+  try {
+    const d = JSON.parse(fs.readFileSync(p, "utf-8")) as DailyBriefing
+    if (!d.date || !Array.isArray(d.cards) || d.cards.length === 0) return null
+    return d
+  } catch {
+    return null
+  }
+}
+
 export function timeAgo(iso: string): string {
   const t = new Date(iso).getTime()
   if (isNaN(t)) return ""

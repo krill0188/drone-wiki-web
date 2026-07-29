@@ -11,10 +11,17 @@ interface Source {
   score: number
 }
 
+interface NewsSource {
+  title: string
+  url: string
+  type: string
+}
+
 interface Message {
   role: "user" | "assistant"
   content: string
   sources?: Source[]
+  newsSources?: NewsSource[]
   mode?: "rag" | "fallback"
 }
 
@@ -48,6 +55,7 @@ export default function ChatPage() {
           role: "assistant",
           content: data.answer || "응답을 가져올 수 없습니다.",
           sources: data.sources ?? [],
+          newsSources: data.newsSources ?? [],
           mode: data.mode,
         },
       ])
@@ -107,6 +115,26 @@ export default function ChatPage() {
               >
                 {m.content}
               </div>
+
+              {/* 뉴스 근거 */}
+              {m.role === "assistant" && m.newsSources && m.newsSources.length > 0 && (
+                <div className="px-1">
+                  <p className="text-xs text-slate-400 mb-1.5">📰 참고 뉴스</p>
+                  <div className="flex flex-col gap-1">
+                    {m.newsSources.map((n) => (
+                      <a
+                        key={n.url}
+                        href={n.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-slate-500 hover:text-cyan-700 hover:underline truncate"
+                      >
+                        · {n.title}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* 출처 문서 */}
               {m.role === "assistant" && m.sources && m.sources.length > 0 && (
