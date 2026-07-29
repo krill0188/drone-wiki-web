@@ -25,10 +25,19 @@ export default async function HomePage() {
             비행 제어 · 통신 프로토콜 · 하드웨어 · GCS · 법규 · AI 자율<br />
             7개 도메인 {pages.length}개 지식 노드를 AI가 즉시 연결합니다
           </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/chat"  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-xl font-bold transition-colors">AI에게 질문하기</Link>
-            <Link href="/wiki"  className="px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-xl font-bold transition-colors">위키 둘러보기</Link>
-            <Link href="/graph" className="px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-xl font-bold transition-colors">지식 그래프</Link>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/chat" className="flex flex-col items-center gap-2 px-8 py-4 bg-cyan-500 hover:bg-cyan-400 rounded-2xl font-bold transition-all hover:scale-105 shadow-lg shadow-cyan-500/30">
+              <span className="text-2xl">✨</span>
+              <span className="text-sm">AI에게 질문하기</span>
+            </Link>
+            <Link href="/wiki" className="flex flex-col items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-2xl font-bold transition-all hover:scale-105">
+              <span className="text-2xl">📚</span>
+              <span className="text-sm">위키 둘러보기</span>
+            </Link>
+            <Link href="/graph" className="flex flex-col items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-2xl font-bold transition-all hover:scale-105">
+              <span className="text-2xl">🕸️</span>
+              <span className="text-sm">지식 그래프</span>
+            </Link>
           </div>
         </div>
       </section>

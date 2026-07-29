@@ -17,11 +17,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span className="text-xl">🛸</span>
               <span className="text-cyan-600 dark:text-cyan-400">Drone</span>Wiki
             </Link>
-            <nav className="flex items-center gap-0.5 text-sm font-medium">
-              <Link href="/wiki"  className="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">위키</Link>
-              <Link href="/graph" className="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">지식 그래프</Link>
-              <Link href="/chat"  className="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">AI Q&amp;A</Link>
-              <Link href="/chat"  className="ml-2 px-4 py-1.5 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors text-xs font-semibold">질문하기</Link>
+            <nav className="flex items-center gap-1 text-sm font-medium">
+              <Link href="/wiki"  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span className="text-base">📚</span><span className="hidden sm:inline">위키</span>
+              </Link>
+              <Link href="/graph" className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span className="text-base">🕸️</span><span className="hidden sm:inline">지식 그래프</span>
+              </Link>
+              <Link href="/chat"  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span className="text-base">💬</span><span className="hidden sm:inline">AI Q&amp;A</span>
+              </Link>
+              <Link href="/chat"  className="ml-2 flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors text-xs font-semibold">
+                <span>✨</span><span>질문하기</span>
+              </Link>
             </nav>
           </div>
         </header>
