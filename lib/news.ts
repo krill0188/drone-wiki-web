@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import type { Domain } from "./types"
 
-export type NewsType = "news" | "release" | "job" | "gov" | "defense" | "paper"
+export type NewsType = "news" | "release" | "job" | "gov" | "defense" | "paper" | "video"
 
 export interface NewsItem {
   title: string
@@ -23,6 +23,7 @@ export const NEWS_TYPE_META: Record<NewsType, { label: string; emoji: string }> 
   gov:     { label: "정부사업", emoji: "🏛️" },
   defense: { label: "방산",     emoji: "🪖" },
   paper:   { label: "논문",     emoji: "📄" },
+  video:   { label: "영상",     emoji: "🎬" },
 }
 
 // lib/wiki.ts resolveWikiRoot와 동일한 규칙
