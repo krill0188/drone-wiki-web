@@ -12,16 +12,16 @@ export default async function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-24 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-6">
+      <section style={{ background: "linear-gradient(to bottom, #0f172a, #1e293b)", color: "#fff", padding: "6rem 1rem" }}>
+        <div style={{ maxWidth: "48rem", margin: "0 auto", textAlign: "center" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#22d3ee", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
             <span>🛸</span> 드론 특화 AI 지식 플랫폼
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-6">
+          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1.5rem" }}>
             드론에 관한 모든 질문,<br />
-            <span className="text-cyan-400">여기서 해결됩니다</span>
+            <span style={{ color: "#22d3ee" }}>여기서 해결됩니다</span>
           </h1>
-          <p className="text-slate-300 text-lg mb-10 leading-relaxed">
+          <p style={{ color: "#94a3b8", fontSize: "1.1rem", marginBottom: "2.5rem", lineHeight: 1.75 }}>
             비행 제어 · 통신 프로토콜 · 하드웨어 · GCS · 법규 · AI 자율<br />
             7개 도메인 {pages.length}개 지식 노드를 AI가 즉시 연결합니다
           </p>
