@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
 import { spawn } from "child_process"
-import Anthropic from "@anthropic-ai/sdk"
 import { ragSearch, expandGraphNeighbors, type RagSource } from "@/lib/rag"
 
 const UNAVAILABLE_MSG =
@@ -33,18 +32,29 @@ ${contextParts.join("\n\n")}
 - 한국어로 답변`
 }
 
-async function callAnthropicSdk(prompt: string): Promise<string> {
-  const apiKey = process.env.ANTHROPIC_API_KEY
+async function callOpenRouter(prompt: string): Promise<string> {
+  const apiKey = process.env.OPENROUTER_API_KEY
   if (!apiKey) return ""
 
-  const client = new Anthropic({ apiKey })
-  const msg = await client.messages.create({
-    model: "claude-haiku-4-5-20251001",
-    max_tokens: 2048,
-    messages: [{ role: "user", content: prompt }],
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "https://drone-wiki-web.vercel.app",
+      "X-Title": "DroneWiki AI Q&A",
+    },
+    body: JSON.stringify({
+      model: "anthropic/claude-haiku-4-5-20251001",
+      max_tokens: 2048,
+      messages: [{ role: "user", content: prompt }],
+    }),
+    signal: AbortSignal.timeout(60000),
   })
-  const block = msg.content[0]
-  return block.type === "text" ? block.text : ""
+
+  if (!res.ok) return ""
+  const data = await res.json()
+  return data.choices?.[0]?.message?.content ?? ""
 }
 
 function callClaudeCli(prompt: string): Promise<string> {
@@ -69,9 +79,9 @@ function callClaudeCli(prompt: string): Promise<string> {
 }
 
 async function generateAnswer(prompt: string): Promise<string> {
-  // 1순위: Anthropic SDK (Vercel 환경 포함)
-  const sdkAnswer = await callAnthropicSdk(prompt).catch(() => "")
-  if (sdkAnswer) return sdkAnswer
+  // 1순위: OpenRouter API (Vercel 공개 서비스)
+  const orAnswer = await callOpenRouter(prompt).catch(() => "")
+  if (orAnswer) return orAnswer
 
   // 2순위: 로컬 claude CLI 폴백
   return callClaudeCli(prompt)
