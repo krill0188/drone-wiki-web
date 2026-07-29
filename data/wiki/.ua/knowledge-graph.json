@@ -1954,6 +1954,34 @@
         "version"
       ],
       "updated": "2026-07-30"
+    },
+    {
+      "id": "param-diff-copter-4-6-0-4-7-0",
+      "name": "ArduPilot Copter 4.6.0 → 4.7.0 파라미터 변경 전체 목록",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "parameter",
+        "diff",
+        "copter"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "param-diff-px4-1-16-0-1-17-0",
+      "name": "PX4 v1.16.0 → v1.17.0 파라미터 변경 전체 목록",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "parameter",
+        "diff",
+        "px4"
+      ],
+      "updated": "2026-07-30"
     }
   ],
   "edges": [
@@ -4132,6 +4160,16 @@
     {
       "source": "px4-params-by-version",
       "target": "fc-vendor-param-guide",
+      "type": "wikilink"
+    },
+    {
+      "source": "param-diff-copter-4-6-0-4-7-0",
+      "target": "ardupilot-params-by-version",
+      "type": "wikilink"
+    },
+    {
+      "source": "param-diff-px4-1-16-0-1-17-0",
+      "target": "px4-params-by-version",
       "type": "wikilink"
     }
   ],
