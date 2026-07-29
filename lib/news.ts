@@ -12,6 +12,8 @@ export interface NewsItem {
   type: NewsType
   region?: "KR" | "global"
   summary: string
+  summary_ko?: string
+  sha256?: string
   published: string
   fetched: string
 }

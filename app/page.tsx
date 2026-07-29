@@ -23,6 +23,11 @@ function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: bo
                 {it.title}
                 <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
               </a>
+              {it.summary_ko && (
+                <p className="text-[13px] text-slate-500 mt-0.5 line-clamp-1 leading-relaxed">
+                  {it.summary_ko}
+                </p>
+              )}
               <div className="text-xs text-slate-400 mt-0.5">
                 {showType && <>{tmeta.emoji} {tmeta.label} · </>}
                 {it.region === "KR" ? "🇰🇷 국내" : "🌏 해외"} · {timeAgo(it.fetched)}

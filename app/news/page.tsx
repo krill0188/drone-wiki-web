@@ -76,9 +76,9 @@ export default async function NewsPage({ searchParams }: Props) {
                   {it.title}
                   <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
                 </a>
-                {it.summary && (
+                {(it.summary_ko || it.summary) && (
                   <p className="text-[13px] text-slate-500 dark:text-slate-400 mt-0.5 line-clamp-2 leading-relaxed">
-                    {it.summary}
+                    {it.summary_ko ? <span className="text-slate-600">🇰🇷 {it.summary_ko}</span> : it.summary}
                   </p>
                 )}
                 <div className="text-xs text-slate-400 mt-1">
@@ -108,7 +108,7 @@ export default async function NewsPage({ searchParams }: Props) {
       )}
 
       <p className="mt-5 text-xs text-slate-400">
-        총 {all.length}개 수집됨 · 궁금한 내용은{" "}
+        총 {all.length}개 수집됨 · 영문 자료는 AI 한글 요약 제공, 원문은 SHA-256 해시로 무결성 보존 · 궁금한 내용은{" "}
         <Link href="/chat" className="text-cyan-700 dark:text-cyan-400 hover:underline">AI에게 질문</Link>하세요
       </p>
     </div>
