@@ -117,22 +117,6 @@ export default async function HomePage() {
         <NewsList items={news} />
       )}
 
-      {/* 채용 */}
-      {jobs.length > 0 && (
-        <>
-          <SectionHead title="💼 채용" href="/news?type=job" more="더보기" />
-          <NewsList items={jobs} showType={false} />
-        </>
-      )}
-
-      {/* 정부사업 */}
-      {gov.length > 0 && (
-        <>
-          <SectionHead title="🏛️ 정부사업" href="/news?type=gov" more="더보기" />
-          <NewsList items={gov} showType={false} />
-        </>
-      )}
-
       {/* 논문 */}
       {papers.length > 0 && (
         <>
@@ -146,6 +130,22 @@ export default async function HomePage() {
         <>
           <SectionHead title="🎬 기술 영상 (검증 채널)" href="/news?type=video" more="더보기" />
           <NewsList items={videos} showType={false} />
+        </>
+      )}
+
+      {/* 정부사업 */}
+      {gov.length > 0 && (
+        <>
+          <SectionHead title="🏛️ 정부사업" href="/news?type=gov" more="더보기" />
+          <NewsList items={gov} showType={false} />
+        </>
+      )}
+
+      {/* 채용 */}
+      {jobs.length > 0 && (
+        <>
+          <SectionHead title="💼 채용" href="/news?type=job" more="더보기" />
+          <NewsList items={jobs} showType={false} />
         </>
       )}
 
