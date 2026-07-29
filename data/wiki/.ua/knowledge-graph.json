@@ -1492,6 +1492,228 @@
         "company"
       ],
       "updated": "2026-07-30"
+    },
+    {
+      "id": "amazon-mk30-safety-incident",
+      "name": "Amazon Prime Air MK30 Safety Incident",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "delivery",
+        "amazon",
+        "safety",
+        "regulations"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "brinc-emergency-drone-funding",
+      "name": "BRINC Emergency Drone Funding with Motorola",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "emergency",
+        "first-responder",
+        "brinc",
+        "motorola"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "chained-attacks-drone-fl",
+      "name": "Chained Attacks on Drone-Based Federated Learning",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "swarm",
+        "security",
+        "federated-learning"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "distributed-aerial-surveillance-swarm",
+      "name": "Distributed Continuous Aerial Surveillance by UAS Swarms",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "swarm",
+        "flight-control",
+        "ltl",
+        "surveillance"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "dji-easa-sail-bvlos",
+      "name": "DJI EASA SAIL BVLOS Approval",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "bvlos",
+        "easa",
+        "dji",
+        "europe"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "emnn-doa-estimation",
+      "name": "Electromagnetic Neural Network for DOA Estimation",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "ai-autonomy",
+        "beamforming",
+        "antenna"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "federated-lightweight-intrusion-detection",
+      "name": "Federated Lightweight Intrusion Detection in Drone Swarms",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "swarm",
+        "security",
+        "federated-learning",
+        "intrusion-detection"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "flight-ready-lidar-inertial-odometry",
+      "name": "Flight-Ready LiDAR-Inertial Odometry for Embedded Drone Platforms",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "slam",
+        "lidar",
+        "imu",
+        "navigation"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "indi-stability-tilt-rotor-vtol",
+      "name": "INDI Pitch-Rate Controller Stability Analysis for Tilt-Rotor VTOL UAV",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "indi",
+        "tilt-rotor",
+        "vtol",
+        "stability"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "montis-avalanche-faa-approval",
+      "name": "MONTIS Avalanche Drone System FAA Approval",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "avalanche",
+        "safety",
+        "faa",
+        "montis"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "spatial-dubins-quadrotor-control",
+      "name": "Spatial Dubins Airplane-Based Reference Smoothing for Quadrotor Control",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "path-planning",
+        "dubins",
+        "quadrotor"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "stacked-intelligent-metasurfaces",
+      "name": "Stacked Intelligent Metasurfaces Assisted UAV Communications",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "antenna",
+        "metasurface",
+        "beamforming",
+        "uav"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "vertical-pinching-antenna-systems",
+      "name": "Vertical Pinching Antenna Systems (V-PAS) for UAV Communications",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "antenna",
+        "pas",
+        "uav",
+        "urban"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "wing-nhs-medical-delivery",
+      "name": "Wing NHS Medical Drone Delivery",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "medical-delivery",
+        "nhs",
+        "wing",
+        "healthcare"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "zipline-us-expansion",
+      "name": "Zipline US Expansion with Industry Veterans",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "delivery",
+        "zipline",
+        "usa",
+        "austin",
+        "cleveland"
+      ],
+      "updated": "2026-07-30"
     }
   ],
   "edges": [
@@ -3195,6 +3417,231 @@
     {
       "source": "xtend-ai-robotics",
       "target": "drone-sw",
+      "type": "wikilink"
+    },
+    {
+      "source": "amazon-mk30-safety-incident",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "amazon-mk30-safety-incident",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "amazon-mk30-safety-incident",
+      "target": "dji-easa-sail-bvlos",
+      "type": "wikilink"
+    },
+    {
+      "source": "brinc-emergency-drone-funding",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "brinc-emergency-drone-funding",
+      "target": "ops-mission",
+      "type": "wikilink"
+    },
+    {
+      "source": "brinc-emergency-drone-funding",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "chained-attacks-drone-fl",
+      "target": "federated-lightweight-intrusion-detection",
+      "type": "wikilink"
+    },
+    {
+      "source": "chained-attacks-drone-fl",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "chained-attacks-drone-fl",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "distributed-aerial-surveillance-swarm",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "distributed-aerial-surveillance-swarm",
+      "target": "recon-swarm-project",
+      "type": "wikilink"
+    },
+    {
+      "source": "distributed-aerial-surveillance-swarm",
+      "target": "drone-simulation",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-easa-sail-bvlos",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-easa-sail-bvlos",
+      "target": "fcc-drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "dji-easa-sail-bvlos",
+      "target": "doordash-air",
+      "type": "wikilink"
+    },
+    {
+      "source": "emnn-doa-estimation",
+      "target": "stacked-intelligent-metasurfaces",
+      "type": "wikilink"
+    },
+    {
+      "source": "emnn-doa-estimation",
+      "target": "datalink-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "emnn-doa-estimation",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "federated-lightweight-intrusion-detection",
+      "target": "chained-attacks-drone-fl",
+      "type": "wikilink"
+    },
+    {
+      "source": "federated-lightweight-intrusion-detection",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "federated-lightweight-intrusion-detection",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "flight-ready-lidar-inertial-odometry",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "flight-ready-lidar-inertial-odometry",
+      "target": "px4-offboard-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "flight-ready-lidar-inertial-odometry",
+      "target": "drone-simulation",
+      "type": "wikilink"
+    },
+    {
+      "source": "indi-stability-tilt-rotor-vtol",
+      "target": "px4-flight-modes",
+      "type": "wikilink"
+    },
+    {
+      "source": "indi-stability-tilt-rotor-vtol",
+      "target": "px4-architecture-deep",
+      "type": "wikilink"
+    },
+    {
+      "source": "indi-stability-tilt-rotor-vtol",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "montis-avalanche-faa-approval",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "montis-avalanche-faa-approval",
+      "target": "ops-mission",
+      "type": "wikilink"
+    },
+    {
+      "source": "montis-avalanche-faa-approval",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "spatial-dubins-quadrotor-control",
+      "target": "mission-planning",
+      "type": "wikilink"
+    },
+    {
+      "source": "spatial-dubins-quadrotor-control",
+      "target": "px4-flight-modes",
+      "type": "wikilink"
+    },
+    {
+      "source": "spatial-dubins-quadrotor-control",
+      "target": "drone-simulation",
+      "type": "wikilink"
+    },
+    {
+      "source": "stacked-intelligent-metasurfaces",
+      "target": "emnn-doa-estimation",
+      "type": "wikilink"
+    },
+    {
+      "source": "stacked-intelligent-metasurfaces",
+      "target": "vertical-pinching-antenna-systems",
+      "type": "wikilink"
+    },
+    {
+      "source": "stacked-intelligent-metasurfaces",
+      "target": "datalink-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "vertical-pinching-antenna-systems",
+      "target": "stacked-intelligent-metasurfaces",
+      "type": "wikilink"
+    },
+    {
+      "source": "vertical-pinching-antenna-systems",
+      "target": "emnn-doa-estimation",
+      "type": "wikilink"
+    },
+    {
+      "source": "vertical-pinching-antenna-systems",
+      "target": "datalink-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "wing-nhs-medical-delivery",
+      "target": "doordash-air",
+      "type": "wikilink"
+    },
+    {
+      "source": "wing-nhs-medical-delivery",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "wing-nhs-medical-delivery",
+      "target": "ops-mission",
+      "type": "wikilink"
+    },
+    {
+      "source": "zipline-us-expansion",
+      "target": "wing-nhs-medical-delivery",
+      "type": "wikilink"
+    },
+    {
+      "source": "zipline-us-expansion",
+      "target": "doordash-air",
+      "type": "wikilink"
+    },
+    {
+      "source": "zipline-us-expansion",
+      "target": "drone-regulations",
       "type": "wikilink"
     }
   ],
