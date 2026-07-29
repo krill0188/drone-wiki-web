@@ -1210,6 +1210,170 @@
       "domain": "",
       "tags": [],
       "updated": "2026-07-21"
+    },
+    {
+      "id": "ardupilot-plane-4-7",
+      "name": "ArduPilot Plane 4.7.0",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "flight-control"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "betaflight",
+      "name": "Betaflight",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "flight-control"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "drone-news-hardware",
+      "name": "드론 하드웨어 및 제조사 동향 2026-07",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "drone-news-ops",
+      "name": "드론 운용 및 미션 동향 2026-07",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "drone-news-regulations",
+      "name": "드론 규제 동향 2026-07",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "fpv-hardware",
+      "name": "FPV 드론 하드웨어 동향",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "mavsdk-release",
+      "name": "MAVSDK v3.17.2",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "datalink"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "mission-planner",
+      "name": "Mission Planner",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "gcs-software"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "opencv",
+      "name": "OpenCV",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-agent"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "px4-v1-17",
+      "name": "PX4 v1.17.0",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "flight-control"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "pymavlink",
+      "name": "pymavlink",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "datalink"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "qgroundcontrol",
+      "name": "QGroundControl",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "gcs-software"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "ros2-lyrical",
+      "name": "ROS 2 Lyrical Luth",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "gcs-software"
+      ],
+      "updated": "2026-07-29"
+    },
+    {
+      "id": "yolo",
+      "name": "YOLO",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-agent"
+      ],
+      "updated": "2026-07-29"
     }
   ],
   "edges": [
@@ -2513,6 +2677,256 @@
     {
       "source": "ua-knowledge-graph-workflow",
       "target": "ai-knowledge-workflow",
+      "type": "wikilink"
+    },
+    {
+      "source": "ardupilot-plane-4-7",
+      "target": "mavlink-protocol",
+      "type": "wikilink"
+    },
+    {
+      "source": "ardupilot-plane-4-7",
+      "target": "ardupilot",
+      "type": "wikilink"
+    },
+    {
+      "source": "ardupilot-plane-4-7",
+      "target": "ardupilot-architecture",
+      "type": "wikilink"
+    },
+    {
+      "source": "ardupilot-plane-4-7",
+      "target": "mission-planner",
+      "type": "wikilink"
+    },
+    {
+      "source": "ardupilot-plane-4-7",
+      "target": "px4-flight-stack",
+      "type": "wikilink"
+    },
+    {
+      "source": "betaflight",
+      "target": "flight-controller-hardware",
+      "type": "wikilink"
+    },
+    {
+      "source": "betaflight",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "betaflight",
+      "target": "px4-flight-stack",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "flight-controller-hardware",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "drone-payload-systems",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "drone-payload-systems",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-regulations",
+      "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "drone-news-regulations",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "fpv-hardware",
+      "target": "betaflight",
+      "type": "wikilink"
+    },
+    {
+      "source": "fpv-hardware",
+      "target": "flight-controller-hardware",
+      "type": "wikilink"
+    },
+    {
+      "source": "fpv-hardware",
+      "target": "drone-payload-systems",
+      "type": "wikilink"
+    },
+    {
+      "source": "mavsdk-release",
+      "target": "mavlink-protocol",
+      "type": "wikilink"
+    },
+    {
+      "source": "mavsdk-release",
+      "target": "pymavlink",
+      "type": "wikilink"
+    },
+    {
+      "source": "mavsdk-release",
+      "target": "px4-offboard-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "mavsdk-release",
+      "target": "mavros",
+      "type": "wikilink"
+    },
+    {
+      "source": "mission-planner",
+      "target": "ardupilot",
+      "type": "wikilink"
+    },
+    {
+      "source": "mission-planner",
+      "target": "ground-control-station",
+      "type": "wikilink"
+    },
+    {
+      "source": "mission-planner",
+      "target": "qgroundcontrol",
+      "type": "wikilink"
+    },
+    {
+      "source": "mission-planner",
+      "target": "dronecan-protocol",
+      "type": "wikilink"
+    },
+    {
+      "source": "opencv",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "opencv",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "opencv",
+      "target": "drone-payload-systems",
+      "type": "wikilink"
+    },
+    {
+      "source": "opencv",
+      "target": "yolo",
+      "type": "wikilink"
+    },
+    {
+      "source": "opencv",
+      "target": "ros2-drone-integration",
+      "type": "wikilink"
+    },
+    {
+      "source": "px4-v1-17",
+      "target": "px4-flight-stack",
+      "type": "wikilink"
+    },
+    {
+      "source": "px4-v1-17",
+      "target": "px4-architecture-deep",
+      "type": "wikilink"
+    },
+    {
+      "source": "px4-v1-17",
+      "target": "px4-offboard-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "px4-v1-17",
+      "target": "ros2-drone-integration",
+      "type": "wikilink"
+    },
+    {
+      "source": "pymavlink",
+      "target": "mavlink-protocol",
+      "type": "wikilink"
+    },
+    {
+      "source": "pymavlink",
+      "target": "mavsdk",
+      "type": "wikilink"
+    },
+    {
+      "source": "pymavlink",
+      "target": "ground-control-station",
+      "type": "wikilink"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "px4-flight-stack",
+      "type": "wikilink"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "mavlink-protocol",
+      "type": "wikilink"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "mission-planner",
+      "type": "wikilink"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "ground-control-station",
+      "type": "wikilink"
+    },
+    {
+      "source": "ros2-lyrical",
+      "target": "px4-offboard-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "ros2-lyrical",
+      "target": "ros2-drone-integration",
+      "type": "wikilink"
+    },
+    {
+      "source": "ros2-lyrical",
+      "target": "mavros",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo",
+      "target": "drone-payload-systems",
+      "type": "wikilink"
+    },
+    {
+      "source": "yolo",
+      "target": "opencv",
       "type": "wikilink"
     }
   ],
