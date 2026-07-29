@@ -17,6 +17,12 @@ function resolveWikiRoot() {
 const WIKI_ROOT = resolveWikiRoot()
 const LAYER_DIRS = ["concepts", "entities", "comparisons", "queries"]
 
+function formatDate(raw: string): string {
+  const d = new Date(raw)
+  if (isNaN(d.getTime())) return raw
+  return d.toISOString().slice(0, 10)
+}
+
 function extractWikiLinks(content: string): string[] {
   const matches = content.match(/\[\[([^\]|]+?)(?:\|[^\]]+)?\]\]/g) || []
   return matches.map((m) => m.replace(/\[\[([^\]|]+?)(?:\|.+?)?\]\]/, "$1").trim())
@@ -78,8 +84,8 @@ export async function getPageBySlug(slug: string, layerDir?: string): Promise<Wi
     tags: Array.isArray(data.tags) ? data.tags : [],
     content,
     contentHtml: processed.toString(),
-    created: data.created ? String(data.created) : "",
-    updated: data.updated ? String(data.updated) : "",
+    created: data.created ? formatDate(String(data.created)) : "",
+    updated: data.updated ? formatDate(String(data.updated)) : "",
     confidence: data.confidence || "medium",
     links: extractWikiLinks(content),
   }
