@@ -110,6 +110,30 @@ function loadGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
   return { nodes: [], edges: [] }
 }
 
+// 시드 + 1-hop 이웃으로 유도된 서브그래프 (카드뉴스 GraphRAG 시각화용)
+export function getSubgraph(seedSlugs: string[], neighborLimit = 8): {
+  nodes: { id: string; name: string; domain?: string; seed: boolean }[]
+  edges: GraphEdge[]
+} {
+  const { nodes, edges } = loadGraph()
+  const seedSet = new Set(seedSlugs)
+  const neighborIds = new Set<string>()
+
+  for (const e of edges) {
+    const src = String(e.source)
+    const tgt = String(e.target)
+    if (seedSet.has(src) && !seedSet.has(tgt)) neighborIds.add(tgt)
+    if (seedSet.has(tgt) && !seedSet.has(src)) neighborIds.add(src)
+  }
+
+  const keep = new Set([...seedSet, ...[...neighborIds].slice(0, neighborLimit)])
+  const subNodes = nodes
+    .filter((n) => keep.has(String(n.id)))
+    .map((n: any) => ({ id: String(n.id), name: n.name || n.id, domain: n.domain, seed: seedSet.has(String(n.id)) }))
+  const subEdges = edges.filter((e) => keep.has(String(e.source)) && keep.has(String(e.target)))
+  return { nodes: subNodes, edges: subEdges }
+}
+
 export function expandGraphNeighbors(seedSlugs: string[], limit = 4): GraphNode[] {
   const { nodes, edges } = loadGraph()
   const seedSet = new Set(seedSlugs)

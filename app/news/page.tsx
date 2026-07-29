@@ -32,7 +32,15 @@ export default async function NewsPage({ searchParams }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 sm:py-10">
-      <h1 className="text-2xl font-bold mb-1">📰 드론 뉴스</h1>
+      <div className="flex items-start justify-between gap-3 mb-1">
+        <h1 className="text-2xl font-bold">📰 드론 뉴스</h1>
+        <Link
+          href="/news/cards"
+          className="shrink-0 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg text-xs font-semibold transition-colors"
+        >
+          🎴 AI 카드뉴스 만들기
+        </Link>
+      </div>
       <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
         뉴스 · 방산 · 정부사업 · 채용 — 국내외 소식을 매일 새벽 자동 수집
       </p>
