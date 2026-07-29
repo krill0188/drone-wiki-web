@@ -25,18 +25,18 @@ export default async function HomePage() {
             비행 제어 · 통신 프로토콜 · 하드웨어 · GCS · 법규 · AI 자율<br />
             7개 도메인 {pages.length}개 지식 노드를 AI가 즉시 연결합니다
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/chat" className="flex flex-col items-center gap-2 px-8 py-4 bg-cyan-500 hover:bg-cyan-400 rounded-2xl font-bold transition-all hover:scale-105 shadow-lg shadow-cyan-500/30">
-              <span className="text-2xl">✨</span>
-              <span className="text-sm">AI에게 질문하기</span>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", marginTop: "0.5rem" }}>
+            <Link href="/chat" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", padding: "1rem 2rem", background: "#06b6d4", borderRadius: "1rem", fontWeight: 700, color: "#fff", textDecoration: "none", boxShadow: "0 4px 20px rgba(6,182,212,0.4)", transition: "transform 0.15s", minWidth: "130px" }}>
+              <span style={{ fontSize: "2rem", lineHeight: 1 }}>💬</span>
+              <span style={{ fontSize: "0.875rem" }}>AI에게 질문하기</span>
             </Link>
-            <Link href="/wiki" className="flex flex-col items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-2xl font-bold transition-all hover:scale-105">
-              <span className="text-2xl">📚</span>
-              <span className="text-sm">위키 둘러보기</span>
+            <Link href="/wiki" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", padding: "1rem 2rem", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "1rem", fontWeight: 700, color: "#fff", textDecoration: "none", backdropFilter: "blur(4px)", transition: "transform 0.15s", minWidth: "130px" }}>
+              <span style={{ fontSize: "2rem", lineHeight: 1 }}>📖</span>
+              <span style={{ fontSize: "0.875rem" }}>위키 둘러보기</span>
             </Link>
-            <Link href="/graph" className="flex flex-col items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 rounded-2xl font-bold transition-all hover:scale-105">
-              <span className="text-2xl">🕸️</span>
-              <span className="text-sm">지식 그래프</span>
+            <Link href="/graph" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", padding: "1rem 2rem", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "1rem", fontWeight: 700, color: "#fff", textDecoration: "none", backdropFilter: "blur(4px)", transition: "transform 0.15s", minWidth: "130px" }}>
+              <span style={{ fontSize: "2rem", lineHeight: 1 }}>🔵</span>
+              <span style={{ fontSize: "0.875rem" }}>지식 그래프</span>
             </Link>
           </div>
         </div>
