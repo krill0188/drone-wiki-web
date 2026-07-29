@@ -1714,6 +1714,162 @@
         "cleveland"
       ],
       "updated": "2026-07-30"
+    },
+    {
+      "id": "active-sensing-uav-communication",
+      "name": "Active Sensing-Assisted UAV Communications with Jittering",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "comms-protocol",
+        "sensing",
+        "cellular"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "cross-layered-medical-drone-coordination",
+      "name": "Cross-Layered Multi-Drone Coordination for Medical Supply Delivery",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "swarm",
+        "flight-control",
+        "ai-autonomy",
+        "medical-delivery",
+        "disaster-response"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "decentralized-swarm-gps-denied",
+      "name": "Decentralized UAV Swarms in GPS/Communication-Denied Environments",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "swarm",
+        "datalink",
+        "comms-protocol",
+        "military",
+        "counter-uav"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "digital-twin-intent-drone-networks",
+      "name": "Digital Twin for Intent-Based Drone Networks",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "comms-protocol",
+        "digital-twin",
+        "reinforcement-learning"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "e2e-fly-end-to-end-quadrotor",
+      "name": "E2E-Fly: End-to-End Quadrotor Autonomy System",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "ai-autonomy",
+        "sim-to-real",
+        "reinforcement-learning"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "lightweight-safe-rl-uav",
+      "name": "Lightweight Safe RL for UAV Navigation",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "reinforcement-learning",
+        "safety",
+        "collision-avoidance"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "mars-dragonfly-modular-aerial",
+      "name": "MARS-Dragonfly Modular Aerial Robot Systems",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "hardware",
+        "modular-robotics",
+        "swarm"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "multi-modal-human-intent-uav",
+      "name": "Multi-Modal Human Intent Mediation for Safe UAV Maneuvers",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "voice-control",
+        "ai-autonomy",
+        "human-machine-interface",
+        "safety"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "neurosymland-landing-assessment",
+      "name": "NEUROSYMLAND: Neuro-Symbolic Landing Site Assessment",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "computer-vision",
+        "safety",
+        "landing"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "rl-quadrotor-tunable-control",
+      "name": "RL-Based Quadrotor Control with Tunable Performance",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "reinforcement-learning",
+        "control-theory",
+        "px4"
+      ],
+      "updated": "2026-07-30"
+    },
+    {
+      "id": "skyjepa-world-models",
+      "name": "SkyJEPA: Long-Horizon World Models for Quadrotor Control",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "ai-autonomy",
+        "world-models",
+        "sim-to-real"
+      ],
+      "updated": "2026-07-30"
     }
   ],
   "edges": [
@@ -3642,6 +3798,176 @@
     {
       "source": "zipline-us-expansion",
       "target": "drone-regulations",
+      "type": "wikilink"
+    },
+    {
+      "source": "active-sensing-uav-communication",
+      "target": "datalink-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "active-sensing-uav-communication",
+      "target": "mavlink-protocol",
+      "type": "wikilink"
+    },
+    {
+      "source": "active-sensing-uav-communication",
+      "target": "drone-hw",
+      "type": "wikilink"
+    },
+    {
+      "source": "cross-layered-medical-drone-coordination",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "cross-layered-medical-drone-coordination",
+      "target": "px4-flight-stack",
+      "type": "wikilink"
+    },
+    {
+      "source": "cross-layered-medical-drone-coordination",
+      "target": "mavsdk",
+      "type": "wikilink"
+    },
+    {
+      "source": "cross-layered-medical-drone-coordination",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "decentralized-swarm-gps-denied",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "decentralized-swarm-gps-denied",
+      "target": "datalink-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "decentralized-swarm-gps-denied",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "digital-twin-intent-drone-networks",
+      "target": "datalink-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "digital-twin-intent-drone-networks",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "digital-twin-intent-drone-networks",
+      "target": "active-sensing-uav-communication",
+      "type": "wikilink"
+    },
+    {
+      "source": "e2e-fly-end-to-end-quadrotor",
+      "target": "drone-simulation",
+      "type": "wikilink"
+    },
+    {
+      "source": "e2e-fly-end-to-end-quadrotor",
+      "target": "rl-quadrotor-tunable-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "e2e-fly-end-to-end-quadrotor",
+      "target": "px4-offboard-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "lightweight-safe-rl-uav",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "lightweight-safe-rl-uav",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "lightweight-safe-rl-uav",
+      "target": "rl-quadrotor-tunable-control",
+      "type": "wikilink"
+    },
+    {
+      "source": "mars-dragonfly-modular-aerial",
+      "target": "swarm-coordination",
+      "type": "wikilink"
+    },
+    {
+      "source": "mars-dragonfly-modular-aerial",
+      "target": "drone-hw",
+      "type": "wikilink"
+    },
+    {
+      "source": "mars-dragonfly-modular-aerial",
+      "target": "flight-controller-hardware",
+      "type": "wikilink"
+    },
+    {
+      "source": "multi-modal-human-intent-uav",
+      "target": "voice-control-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "multi-modal-human-intent-uav",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "multi-modal-human-intent-uav",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "neurosymland-landing-assessment",
+      "target": "computer-vision-drone",
+      "type": "wikilink"
+    },
+    {
+      "source": "neurosymland-landing-assessment",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink"
+    },
+    {
+      "source": "neurosymland-landing-assessment",
+      "target": "drone-ai-agents",
+      "type": "wikilink"
+    },
+    {
+      "source": "rl-quadrotor-tunable-control",
+      "target": "px4-flight-modes",
+      "type": "wikilink"
+    },
+    {
+      "source": "rl-quadrotor-tunable-control",
+      "target": "drone-simulation",
+      "type": "wikilink"
+    },
+    {
+      "source": "rl-quadrotor-tunable-control",
+      "target": "ros2-drone-integration",
+      "type": "wikilink"
+    },
+    {
+      "source": "skyjepa-world-models",
+      "target": "e2e-fly-end-to-end-quadrotor",
+      "type": "wikilink"
+    },
+    {
+      "source": "skyjepa-world-models",
+      "target": "drone-simulation",
+      "type": "wikilink"
+    },
+    {
+      "source": "skyjepa-world-models",
+      "target": "drone-ai-agents",
       "type": "wikilink"
     }
   ],
