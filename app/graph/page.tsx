@@ -18,7 +18,10 @@ export default function GraphPage() {
 
   useEffect(() => {
     const update = () =>
-      setDims({ w: window.innerWidth - (selected ? 256 : 0), h: window.innerHeight - 104 })
+      setDims({
+        w: window.innerWidth - (selected && window.innerWidth >= 640 ? 256 : 0),
+        h: window.innerHeight - 104,
+      })
     update()
     window.addEventListener("resize", update)
     return () => window.removeEventListener("resize", update)
@@ -63,7 +66,7 @@ export default function GraphPage() {
         </span>
       </div>
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden relative">
         {/* 그래프 캔버스 */}
         <div className="flex-1 bg-slate-50 dark:bg-slate-900 overflow-hidden">
           <ForceGraph2D
@@ -82,7 +85,7 @@ export default function GraphPage() {
 
         {/* 노드 상세 패널 */}
         {selected && (
-          <div className="w-64 shrink-0 border-l border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 overflow-y-auto">
+          <div className="absolute inset-x-0 bottom-0 max-h-[45%] rounded-t-xl border-t shadow-lg sm:static sm:max-h-none sm:w-64 sm:shrink-0 sm:rounded-none sm:shadow-none sm:border-t-0 sm:border-l border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 overflow-y-auto">
             <button
               onClick={() => setSelected(null)}
               className="text-xs text-slate-400 hover:text-slate-600 mb-3 block"

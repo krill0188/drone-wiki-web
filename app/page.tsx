@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { getAllPages } from "@/lib/wiki"
+import { getNewsFeed, timeAgo, sourceHost } from "@/lib/news"
 import { DOMAIN_META } from "@/lib/types"
 
 export default async function HomePage() {
   const pages = await getAllPages()
+  const news = getNewsFeed().slice(0, 5)
   const domainCounts = pages.reduce<Record<string, number>>((acc, p) => {
     if (p.domain) acc[p.domain] = (acc[p.domain] || 0) + 1
     return acc
@@ -12,7 +14,7 @@ export default async function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ background: "linear-gradient(to bottom, #0f172a, #1e293b)", color: "#fff", padding: "6rem 1rem" }}>
+      <section className="text-white px-4 py-16 sm:py-24" style={{ background: "linear-gradient(to bottom, #0f172a, #1e293b)" }}>
         <div style={{ maxWidth: "48rem", margin: "0 auto", textAlign: "center" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "#22d3ee", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
             <span>🛸</span> 드론 특화 AI 지식 플랫폼
@@ -41,6 +43,45 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 오늘의 드론 뉴스 */}
+      {news.length > 0 && (
+        <section className="max-w-6xl mx-auto px-4 pt-12 sm:pt-16">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-bold">📰 오늘의 드론 뉴스</h2>
+            <Link href="/news" className="text-sm text-cyan-600 dark:text-cyan-400 hover:underline shrink-0">
+              전체 보기 →
+            </Link>
+          </div>
+          <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">매일 새벽 자동 수집되는 릴리즈·산업·규제 소식</p>
+          <ol className="divide-y divide-slate-200 dark:divide-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+            {news.map((it) => {
+              const meta = DOMAIN_META[it.domain]
+              return (
+                <li key={it.url}>
+                  <a
+                    href={it.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <span className="text-lg shrink-0">{it.type === "release" ? "🚀" : meta?.emoji || "📰"}</span>
+                      <div className="min-w-0">
+                        <div className="font-medium text-sm truncate">{it.title}</div>
+                        <div className="text-xs text-slate-400">
+                          {sourceHost(it)} · {meta?.label || ""}
+                        </div>
+                      </div>
+                    </div>
+                    <span className="text-xs text-slate-400 shrink-0">{timeAgo(it.fetched)}</span>
+                  </a>
+                </li>
+              )
+            })}
+          </ol>
+        </section>
+      )}
 
       {/* 도메인 카드 */}
       <section className="max-w-6xl mx-auto px-4 py-16">

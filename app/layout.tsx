@@ -17,17 +17,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span className="text-xl">🛸</span>
               <span className="text-cyan-600 dark:text-cyan-400">Drone</span>Wiki
             </Link>
-            <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem", fontSize: "0.875rem", fontWeight: 500 }}>
-              <Link href="/wiki"  style={{ display: "flex", alignItems: "center", gap: "0.375rem", padding: "0.375rem 0.75rem", borderRadius: "0.5rem", textDecoration: "none", color: "inherit" }}>
-                <span>📖</span><span>위키</span>
+            <nav className="flex items-center gap-0.5 sm:gap-1 text-sm font-medium">
+              <Link href="/news" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span>📰</span><span className="hidden sm:inline">뉴스</span>
               </Link>
-              <Link href="/graph" style={{ display: "flex", alignItems: "center", gap: "0.375rem", padding: "0.375rem 0.75rem", borderRadius: "0.5rem", textDecoration: "none", color: "inherit" }}>
-                <span>🔵</span><span>지식 그래프</span>
+              <Link href="/wiki" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span>📖</span><span className="hidden sm:inline">위키</span>
               </Link>
-              <Link href="/chat"  style={{ display: "flex", alignItems: "center", gap: "0.375rem", padding: "0.375rem 0.75rem", borderRadius: "0.5rem", textDecoration: "none", color: "inherit" }}>
-                <span>💬</span><span>AI Q&amp;A</span>
+              <Link href="/graph" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span>🔵</span><span className="hidden sm:inline">지식 그래프</span>
               </Link>
-              <Link href="/chat"  style={{ display: "flex", alignItems: "center", gap: "0.375rem", marginLeft: "0.5rem", padding: "0.375rem 1rem", borderRadius: "0.5rem", background: "#0891b2", color: "#fff", textDecoration: "none", fontSize: "0.75rem", fontWeight: 600 }}>
+              <Link href="/chat" className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <span>💬</span><span className="hidden sm:inline">AI Q&amp;A</span>
+              </Link>
+              <Link href="/chat" className="hidden md:flex items-center gap-1.5 ml-2 px-4 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition-colors">
                 <span>✨</span><span>질문하기</span>
               </Link>
             </nav>
