@@ -1,10 +1,21 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import Link from "next/link"
+import { DOMAIN_META } from "@/lib/types"
+
+interface Source {
+  slug: string
+  title: string
+  domain: string
+  score: number
+}
 
 interface Message {
   role: "user" | "assistant"
   content: string
+  sources?: Source[]
+  mode?: "rag" | "fallback"
 }
 
 export default function ChatPage() {
@@ -31,9 +42,20 @@ export default function ChatPage() {
         body: JSON.stringify({ question: q }),
       })
       const data = await res.json()
-      setMessages((prev) => [...prev, { role: "assistant", content: data.answer || "응답을 가져올 수 없습니다." }])
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: data.answer || "응답을 가져올 수 없습니다.",
+          sources: data.sources ?? [],
+          mode: data.mode,
+        },
+      ])
     } catch {
-      setMessages((prev) => [...prev, { role: "assistant", content: "오류가 발생했습니다. 잠시 후 다시 시도해주세요." }])
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "오류가 발생했습니다. 잠시 후 다시 시도해주세요." },
+      ])
     } finally {
       setLoading(false)
     }
@@ -49,7 +71,9 @@ export default function ChatPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 flex flex-col" style={{ minHeight: "calc(100vh - 120px)" }}>
       <h1 className="text-2xl font-bold mb-1">AI Q&amp;A</h1>
-      <p className="text-sm text-slate-500 mb-6">드론 위키 지식 기반으로 즉시 답변합니다</p>
+      <p className="text-sm text-slate-500 mb-6">
+        드론 위키 지식 베이스를 RAG로 검색하여 즉시 답변합니다
+      </p>
 
       {/* 대화창 */}
       <div className="flex-1 overflow-y-auto space-y-4 mb-4 min-h-[300px]">
@@ -73,14 +97,49 @@ export default function ChatPage() {
 
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-            <div
-              className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
-                m.role === "user"
-                  ? "bg-cyan-600 text-white rounded-br-sm"
-                  : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-bl-sm"
-              }`}
-            >
-              {m.content}
+            <div className="max-w-[85%] space-y-2">
+              <div
+                className={`rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
+                  m.role === "user"
+                    ? "bg-cyan-600 text-white rounded-br-sm"
+                    : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-bl-sm"
+                }`}
+              >
+                {m.content}
+              </div>
+
+              {/* 출처 문서 */}
+              {m.role === "assistant" && m.sources && m.sources.length > 0 && (
+                <div className="px-1">
+                  <p className="text-xs text-slate-400 mb-1.5">📚 참고 문서</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {m.sources.map((s) => {
+                      const meta = DOMAIN_META[s.domain as keyof typeof DOMAIN_META]
+                      return (
+                        <Link
+                          key={s.slug}
+                          href={`/wiki/${s.slug}`}
+                          style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "0.25rem",
+                            padding: "0.2rem 0.6rem",
+                            borderRadius: "9999px",
+                            fontSize: "0.7rem",
+                            border: "1px solid",
+                            borderColor: meta?.color ?? "#94a3b8",
+                            color: meta?.color ?? "#94a3b8",
+                            textDecoration: "none",
+                          }}
+                        >
+                          <span>{meta?.emoji ?? "📄"}</span>
+                          <span>{s.title}</span>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -88,10 +147,11 @@ export default function ChatPage() {
         {loading && (
           <div className="flex justify-start">
             <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl rounded-bl-sm px-4 py-3">
-              <div className="flex gap-1">
+              <div className="flex gap-1 items-center">
                 <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
                 <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
                 <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                <span className="text-xs text-slate-400 ml-2">지식 베이스 검색 중...</span>
               </div>
             </div>
           </div>
