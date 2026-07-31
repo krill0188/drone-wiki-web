@@ -54,6 +54,18 @@ if [[ -f "$GRAPH_SRC" ]]; then
   echo "$LOG_PREFIX  knowledge-graph: ${nodes}개 노드"
 fi
 
+# Phase 2: 임베딩 벡터 동기화 (scripts/embed-docs.py 산출물 — 수동/주기적으로
+# 재생성. 이 sync 자체가 embed-docs.py를 자동 실행하지는 않는다 — 내용이
+# 바뀌지 않으면 git diff가 없어 아래 "변경 없음" 분기로 자연히 스킵됨)
+EMB_SRC="$WIKI_SRC/.ua/embeddings.json"
+EMB_DST="$DATA_WIKI/.ua/embeddings.json"
+if [[ -f "$EMB_SRC" ]]; then
+  mkdir -p "$(dirname "$EMB_DST")"
+  cp "$EMB_SRC" "$EMB_DST"
+  docn=$(python3 -c "import json; d=json.load(open('$EMB_SRC')); print(d.get('doc_count','?'))" 2>/dev/null || echo "?")
+  echo "$LOG_PREFIX  embeddings: ${docn}개 문서 벡터"
+fi
+
 # 변경 여부 확인 (신규 untracked 파일 포함)
 cd "$DRONE_WEB"
 if [[ -z "$(git status --porcelain -- data/wiki)" ]]; then

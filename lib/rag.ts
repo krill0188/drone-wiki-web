@@ -1,5 +1,6 @@
 import fs from "fs"
 import path from "path"
+import { spawnSync } from "child_process"
 import matter from "gray-matter"
 
 function resolveWikiRoot() {
@@ -13,6 +14,18 @@ function resolveWikiRoot() {
 const WIKI_ROOT = resolveWikiRoot()
 const LAYER_DIRS = ["concepts", "entities", "comparisons", "queries"]
 
+// Phase 2 하이브리드 검색 상수. venv/embeddings.json은 둘 다 .gitignore
+// 대상이라 Vercel 배포본에는 존재하지 않는다 — 즉 로컬 dev(~/2nd/.venv 실존)
+// 에서는 자동으로 하이브리드가 켜지고, Vercel에서는 자동으로 기존 키워드
+// 전용 방식으로 폴백한다. 별도 환경 분기 코드 없이 파일 존재 여부만으로
+// 안전하게 갈린다 — scripts/research-search.py와 동일한 원리.
+const VENV_PYTHON = path.join(WIKI_ROOT, ".venv", "bin", "python")
+const EMBEDDINGS_PATH = path.join(WIKI_ROOT, ".ua", "embeddings.json")
+const EMBED_MODEL = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+const HYBRID_VECTOR_WEIGHT = 0.6
+const HYBRID_KEYWORD_WEIGHT = 0.4
+const MIN_COSINE_INCLUDE = 0.35
+
 export interface RagSource {
   slug: string
   title: string
@@ -24,13 +37,21 @@ export interface RagSource {
 
 interface RawDoc {
   slug: string
+  path: string
   title: string
   domain: string
   tags: string[]
   content: string
 }
 
+// 모듈 레벨 캐시 — 서버리스 콜드스타트당 1회만 디스크를 읽는다(Phase 2).
+// 워커가 재사용되는 동안(웜 인스턴스) 매 요청마다 전체 canonical을 다시
+// 읽던 문제를 없앤다. 재검증(revalidate) 요구가 없는 정적 스냅샷이므로
+// 안전하다 — 배포마다 새 워커가 뜨면 자동으로 새로 로드된다.
+let _docsCache: RawDoc[] | null = null
+
 function loadAllDocs(): RawDoc[] {
+  if (_docsCache) return _docsCache
   const docs: RawDoc[] = []
   for (const dir of LAYER_DIRS) {
     const dirPath = path.join(WIKI_ROOT, dir)
@@ -42,6 +63,7 @@ function loadAllDocs(): RawDoc[] {
         if (!data.title) continue
         docs.push({
           slug: file.replace(/\.md$/, ""),
+          path: `${dir}/${file}`,
           title: String(data.title),
           domain: String(data.domain || ""),
           tags: Array.isArray(data.tags) ? data.tags : [],
@@ -50,7 +72,59 @@ function loadAllDocs(): RawDoc[] {
       } catch { /* skip */ }
     }
   }
+  _docsCache = docs
   return docs
+}
+
+// path -> vector. embeddings.json 없으면 빈 맵(=키워드 전용 폴백).
+let _embeddingsCache: Map<string, number[]> | null = null
+
+function loadEmbeddings(): Map<string, number[]> {
+  if (_embeddingsCache) return _embeddingsCache
+  const map = new Map<string, number[]>()
+  try {
+    if (fs.existsSync(EMBEDDINGS_PATH)) {
+      const data = JSON.parse(fs.readFileSync(EMBEDDINGS_PATH, "utf-8"))
+      for (const d of data.docs ?? []) map.set(d.path, d.vector)
+    }
+  } catch { /* 손상된 파일이어도 키워드 폴백으로 안전하게 넘어간다 */ }
+  _embeddingsCache = map
+  return map
+}
+
+function cosine(a: number[], b: number[]): number {
+  if (!a?.length || !b?.length || a.length !== b.length) return 0
+  let dot = 0, na = 0, nb = 0
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i]
+    na += a[i] * a[i]
+    nb += b[i] * b[i]
+  }
+  if (na === 0 || nb === 0) return 0
+  return dot / (Math.sqrt(na) * Math.sqrt(nb))
+}
+
+// 로컬 dev 전용 — venv가 배포본에 없으므로 Vercel에서는 항상 null을 반환해
+// 자동으로 키워드 전용 방식으로 폴백한다(research-search.py와 동일 원리).
+function embedQuery(query: string): number[] | null {
+  if (!fs.existsSync(VENV_PYTHON)) return null
+  const script =
+    "import sys, json\n" +
+    "from fastembed import TextEmbedding\n" +
+    "q = json.load(sys.stdin)\n" +
+    `m = TextEmbedding(${JSON.stringify(EMBED_MODEL)})\n` +
+    "v = list(m.embed([q]))[0]\n" +
+    "print(json.dumps([float(x) for x in v]))\n"
+  try {
+    const result = spawnSync(VENV_PYTHON, ["-c", script], {
+      input: JSON.stringify(query), encoding: "utf-8", timeout: 30000,
+    })
+    if (result.status !== 0 || !result.stdout?.trim()) return null
+    const lines = result.stdout.trim().split("\n")
+    return JSON.parse(lines[lines.length - 1])
+  } catch {
+    return null
+  }
 }
 
 function tokenize(text: string): Set<string> {
@@ -62,7 +136,7 @@ function tokenize(text: string): Set<string> {
   )
 }
 
-function tfidfScore(queryTokens: Set<string>, doc: RawDoc): number {
+function keywordScore(queryTokens: Set<string>, doc: RawDoc): number {
   const bodyTokens = tokenize(`${doc.title} ${doc.tags.join(" ")} ${doc.content}`)
   const titleTokens = tokenize(doc.title)
   let hits = 0
@@ -74,12 +148,34 @@ function tfidfScore(queryTokens: Set<string>, doc: RawDoc): number {
   return hits + titleHits * 2
 }
 
+// 하이브리드 점수: 임베딩 있으면 0.6*코사인 + 0.4*정규화 키워드,
+// 없으면(Vercel 등) 기존 정수 키워드 점수 그대로 — 무회귀 폴백.
+function hybridScore(
+  kw: number, queryTokens: Set<string>, queryVec: number[] | null,
+  doc: RawDoc, embeddings: Map<string, number[]>
+): { score: number; cosine: number } {
+  const docVec = embeddings.get(doc.path)
+  if (!queryVec || !docVec) return { score: kw, cosine: 0 }
+  const cos = cosine(queryVec, docVec)
+  const kwNorm = kw / Math.max(queryTokens.size, 1)
+  return { score: HYBRID_VECTOR_WEIGHT * cos + HYBRID_KEYWORD_WEIGHT * kwNorm, cosine: cos }
+}
+
 export function ragSearch(query: string, topK = 5): RagSource[] {
   const docs = loadAllDocs()
   const qTokens = tokenize(query)
+  const embeddings = loadEmbeddings()
+  const queryVec = embeddings.size > 0 ? embedQuery(query) : null
+
   return docs
-    .map((doc) => ({ doc, score: tfidfScore(qTokens, doc) }))
-    .filter((x) => x.score > 0)
+    .map((doc) => {
+      const kw = keywordScore(qTokens, doc)
+      const { score, cosine: cos } = hybridScore(kw, qTokens, queryVec, doc, embeddings)
+      return { doc, score, cosine: cos, kw }
+    })
+    // 키워드 0건이어도 의미 유사도가 충분하면 포함 — 교차언어 검색 목적
+    // (예: "군집 비행" 질의로 영문 전용 문서를 찾아내는 것이 Phase 2 목표).
+    .filter((x) => x.kw > 0 || x.cosine >= MIN_COSINE_INCLUDE)
     .sort((a, b) => b.score - a.score)
     .slice(0, topK)
     .map(({ doc, score }) => ({
