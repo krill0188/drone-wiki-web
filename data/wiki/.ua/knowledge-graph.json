@@ -63,175 +63,6 @@
       }
     },
     {
-      "id": "article:comparisons/knowledge-tool-roles",
-      "type": "article",
-      "name": "AI 지식관리 도구 역할 비교",
-      "filePath": "comparisons/knowledge-tool-roles.md",
-      "summary": "이 비교는 어느 도구가 “최고”인지보다 [[ai-knowledge-workflow]]에서 각 도구가 맡는 책임과 교체 가능한 경계를 보여준다.",
-      "tags": [
-        "comparisons"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "ai-knowledge-workflow",
-          "second-brain-research-workflow",
-          "llm-wiki",
-          "research-feedback-loop"
-        ],
-        "category": "Comparisons",
-        "content": "---\ntitle: AI 지식관리 도구 역할 비교\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: comparison\ntags:\n  - comparison\n  - pkm\n  - research\n  - workflow\nsources:\n  - \"raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md\"\n  - \"raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md\"\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\n  - \"raw/notebooklm/llm-wiki-skill-github.md\"\n  - \"raw/notebooklm/notebooklm-py-github.md\"\n  - \"raw/notebooklm/understand-anything-github.md\"\n  - \"raw/notebooklm/zotero-mcp-github.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# AI 지식관리 도구 역할 비교\n\n이 비교는 어느 도구가 “최고”인지보다 [[ai-knowledge-workflow]]에서 각 도구가 맡는 책임과 교체 가능한 경계를 보여준다.\n\n| 도구 | 주된 역할 | 지속성 | 강점 | 주의점 |\n| --- | --- | --- | --- | --- |\n| Zotero·Zotero MCP | 원본·서지정보 관리와 자동 수집 | 높음 | 출처와 첨부 파일 보존 | 개념 합성은 별도 계층이 필요하다. |\n| NotebookLM·notebooklm-py | 선택한 소스 묶음 탐색 | 중간 | 범위가 정해진 질의·요약 | 결과를 장기 지식으로 다시 편입해야 한다. |\n| LLM Wiki | 검토된 지식 컴파일 | 높음 | 연결·모순·출처 누적 | 지속적인 유지보수와 lint가 필요하다. |\n| Obsidian | 사람이 읽고 편집하는 인터페이스 | 높음 | 로컬 Markdown과 링크 탐색 | 대형 원본·서지는 전문 도구가 유리하다. |\n| Understand Anything | 지식 관계 분석 | 재생성 가능 | 군집·경로·공백 후보 탐색 | 그래프 해석을 원문으로 검증해야 한다. |\n\nZotero 계층은 원본을 보존하고, NotebookLM 계층은 제한된 소스를 질의하며, LLM Wiki 계층은 검증된 장기 지식을 유지한다.\n\nUnderstand Anything은 이 지식의 구조적 품질을 관찰한다. 이들은 대체재보다 계층별 보완재에 가깝다. ^[raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md]\n\n## 선택 기준\n\n- 원본과 서지정보를 잃지 않는가?\n- 결과를 공개 형식으로 내보낼 수 있는가?\n- 출처를 canonical 지식까지 추적할 수 있는가?\n- 자동화 결과를 독립적으로 검증할 수 있는가?\n- 도구 교체 시 핵심 자산을 재사용할 수 있는가?\n\n가장 이식성이 높은 중심 자산은 공개 형식의 원본, Markdown 문서, 출처 메타데이터다. 특정 제품의 기능이 바뀌어도 이 세 가지를 보존하면 [[second-brain-research-workflow]]를 다른 도구로 재구성할 수 있다.\n\nLLM Wiki의 유지 원칙은 [[llm-wiki]], 분석 결과의 환류는 [[research-feedback-loop]]를 참고한다. ^[raw/notebooklm/llm-wiki-skill-github.md]\n\n제품 기능과 설치 방식은 빠르게 변할 수 있으므로 실제 도입 시점에는 각 프로젝트의 최신 공식 문서를 다시 확인해야 한다.\n",
-        "backlinks": [
-          "article:concepts/ai-knowledge-workflow",
-          "article:concepts/ai-personal-knowledge-management",
-          "article:concepts/llm-wiki",
-          "article:concepts/second-brain-research-workflow"
-        ]
-      }
-    },
-    {
-      "id": "article:concepts/ai-knowledge-workflow",
-      "type": "article",
-      "name": "AI 지식 워크플로",
-      "filePath": "concepts/ai-knowledge-workflow.md",
-      "summary": "AI 지식 워크플로는 원본 수집부터 검토된 지식과 산출물 생성까지를 역할별 계층으로 나누는 운영 방식이다. 개인 지식관리 체계 전체에서 이 흐름이 갖는 의미는 [[ai-personal-knowledge-management]]에 정리한다.",
-      "tags": [
-        "concepts"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "ai-personal-knowledge-management",
-          "knowledge-tool-roles",
-          "research-feedback-loop",
-          "second-brain-research-workflow"
-        ],
-        "category": "Concepts",
-        "content": "---\ntitle: AI 지식 워크플로\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: concept\ntags:\n  - automation\n  - provenance\n  - research\n  - workflow\nsources:\n  - \"raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md\"\n  - \"raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md\"\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\n  - \"raw/notebooklm/llm-wiki-zotero-notebooklm-youtube.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# AI 지식 워크플로\n\nAI 지식 워크플로는 원본 수집부터 검토된 지식과 산출물 생성까지를 역할별 계층으로 나누는 운영 방식이다. 개인 지식관리 체계 전체에서 이 흐름이 갖는 의미는 [[ai-personal-knowledge-management]]에 정리한다.\n\n## 기본 흐름\n\n    수집 → 원본 보존 → 탐색·질의 → 위키 컴파일 → 검증 → 산출\n\n- Zotero와 브라우저 클리퍼는 원본과 서지정보를 수집한다.\n- NotebookLM은 선택한 소스 묶음을 탐색하고 질문한다.\n- LLM Wiki와 Obsidian은 장기 지식과 관계를 Markdown으로 유지한다.\n- Understand Anything은 지식 연결과 공백 후보를 그래프로 탐색한다.\n- 검토된 지식은 글, 보고서, 프레젠테이션 같은 산출물로 변환한다.\n\n한 도구가 모든 책임을 갖지 않도록 원본 보존, 지식 합성, 구조 분석, 결과 표현을 분리하면 도구를 교체해도 축적된 Markdown과 출처 관계를 유지할 수 있다. ^[raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md]\n\n## 검증 관문\n\n1. 원본과 요약이 분리되어 있는가?\n2. 모든 핵심 주장에 추적 가능한 출처가 있는가?\n3. 기존 문서와 중복되거나 충돌하지 않는가?\n4. 내부 링크가 실제 문서를 가리키는가?\n5. 산출물이 목적에 맞는 형식으로 직접 열리고 사용되는가?\n\n## 위험과 제어\n\n- 여러 에이전트가 같은 문서를 서로 다르게 해석할 수 있다.\n- 프로젝트 README나 소개 영상의 홍보성 주장이 검증 없이 굳어질 수 있다.\n- 자동화가 늘수록 잘못된 메타데이터가 빠르게 전파될 수 있다.\n\n따라서 생성 속도는 출처, 링크, 스키마와 일관성 검사를 자동화할 때 비로소 장기 지식 품질로 이어진다.\n\n구체적인 단계 배치는 [[knowledge-tool-roles]], 반복 운영 모델은 [[research-feedback-loop]], 연구 환경 구현은 [[second-brain-research-workflow]]를 참고한다. ^[raw/notebooklm/2026-07-16-all-notes.md]\n",
-        "backlinks": [
-          "article:comparisons/knowledge-tool-roles",
-          "article:concepts/ai-personal-knowledge-management",
-          "article:concepts/llm-wiki",
-          "article:concepts/research-feedback-loop",
-          "article:concepts/second-brain-research-workflow",
-          "article:queries/notebooklm-query-compounding",
-          "article:queries/ua-knowledge-graph-workflow"
-        ]
-      }
-    },
-    {
-      "id": "article:concepts/ai-personal-knowledge-management",
-      "type": "article",
-      "name": "AI 개인 지식관리",
-      "filePath": "concepts/ai-personal-knowledge-management.md",
-      "summary": "AI 개인 지식관리는 자료를 많이 저장하는 일이 아니라, 원본과 해석의 경계를 보존하면서 검증된 지식을 반복해서 재사용할 수 있게 만드는 운영 체계다.",
-      "tags": [
-        "concepts"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "ai-knowledge-workflow",
-          "research-feedback-loop",
-          "knowledge-tool-roles",
-          "second-brain-research-workflow"
-        ],
-        "category": "Concepts",
-        "content": "---\ntitle: AI 개인 지식관리\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: concept\ntags:\n  - knowledge-base\n  - knowledge-graph\n  - pkm\n  - provenance\n  - workflow\nsources:\n  - \"raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md\"\n  - \"raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md\"\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\n  - \"raw/notebooklm/understand-anything-github.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# AI 개인 지식관리\n\nAI 개인 지식관리는 자료를 많이 저장하는 일이 아니라, 원본과 해석의 경계를 보존하면서 검증된 지식을 반복해서 재사용할 수 있게 만드는 운영 체계다.\n\n핵심 단위는 특정 앱이 아니라 추적 가능한 원본, 상호 연결된 Markdown, 명시적인 품질 규칙이다. ^[raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md]\n\n## 지식의 세 층\n\n| 층 | 목적 | 보존 원칙 |\n| --- | --- | --- |\n| 원본 | 논문·웹·영상과 메타데이터 보존 | 수정하지 않고 출처와 수집 시점을 남긴다. |\n| 컴파일된 지식 | 개념·비교·질의를 재사용 가능하게 정리 | 출처, 링크, 갱신일과 신뢰도를 유지한다. |\n| 집중 탐색 | 제한된 소스 묶음에 질문하고 가설 생성 | 생성 답변을 확정 지식과 구분한다. |\n\n원본 도서관, 컴파일된 위키, 소스 기반 질의 공간을 분리하면 대용량 원본을 Markdown 저장소에 모두 복제하지 않으면서도 근거로 돌아갈 수 있다.\n\n한 도구의 대화 기록이나 독점 형식이 사라져도 핵심 지식과 출처 관계가 남는다는 점도 중요하다. ^[raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md]\n\n## 운영 순환\n\n1. 원본과 메타데이터를 먼저 보존한다.\n2. 반복해서 쓸 가치가 있는 내용만 개념·비교·질의 문서로 컴파일한다.\n3. 새 문서를 기존 지식과 연결하고 중복·모순·출처 누락을 검사한다.\n4. 지식그래프로 군집, 브리지, 고립 문서와 약한 연결을 탐색한다.\n5. 그래프가 제안한 관계를 원본 또는 제한된 소스 묶음으로 검증한다.\n6. 검증된 결과만 위키에 환류한다.\n\n이 순환은 [[ai-knowledge-workflow]]의 단계적 흐름과 [[research-feedback-loop]]의 반복 구조를 결합한다. 지식그래프는 문서 관계를 탐색하는 관측 도구이며, 그래프에 나타난 연결 자체가 사실의 증거는 아니다. ^[raw/notebooklm/understand-anything-github.md]\n\n## 편입 기준\n\n- 같은 질문에서 다시 사용할 가능성이 높은가?\n- 원본 위치와 근거 문장을 다시 찾을 수 있는가?\n- 기존 문서의 갱신으로 충분한가, 새 문서가 필요한가?\n- AI 요약, 외부 주장의 사실, 개인 판단을 구분했는가?\n- 빠르게 변하는 정보에 날짜와 적절한 신뢰도를 표시했는가?\n\n이 기준을 통과하지 못한 탐색 결과는 임시 메모로 남기고 canonical 위키에는 편입하지 않는다. 구체적인 도구 경계는 [[knowledge-tool-roles]], 연구 중심 구현은 [[second-brain-research-workflow]]에 정리한다.\n\n## 열린 질문\n\n- 어떤 재사용 빈도와 검증 비용을 새 페이지 생성 임계값으로 삼을 것인가?\n- 자동화된 그래프 분석과 사람의 의미 검토 사이에 어떤 승인 관문을 둘 것인가?\n- 개인 경험에서 나온 지식과 외부 출처 기반 지식을 어떤 구조로 연결할 것인가?\n",
-        "backlinks": [
-          "article:concepts/ai-knowledge-workflow",
-          "article:concepts/llm-wiki",
-          "article:concepts/second-brain-research-workflow",
-          "article:queries/ua-knowledge-graph-workflow"
-        ]
-      }
-    },
-    {
-      "id": "article:concepts/llm-wiki",
-      "type": "article",
-      "name": "LLM Wiki",
-      "filePath": "concepts/llm-wiki.md",
-      "summary": "LLM Wiki는 원본 자료를 한 번 구조화해 사람과 여러 AI 에이전트가 반복해서 사용할 수 있게 만드는 지속형 Markdown 지식베이스다. 질문할 때마다 원본을 처음부터 검색하는 방식과 달리, 개념·비교·질의와 그 출처 연결을 누적한다. ^[raw/notebooklm/llm-wiki-skill-github.md]",
-      "tags": [
-        "concepts"
-      ],
-      "complexity": "moderate",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "ai-personal-knowledge-management",
-          "ai-knowledge-workflow",
-          "notebooklm-query-compounding",
-          "ua-knowledge-graph-workflow",
-          "research-feedback-loop",
-          "knowledge-tool-roles"
-        ],
-        "category": "Concepts",
-        "content": "---\ntitle: LLM Wiki\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: concept\ntags:\n  - knowledge-base\n  - pkm\n  - provenance\n  - workflow\nsources:\n  - \"raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md\"\n  - \"raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md\"\n  - \"raw/notebooklm/llm-wiki-skill-github.md\"\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\nconfidence: high\ncontested: false\ncontradictions: []\n---\n\n# LLM Wiki\n\nLLM Wiki는 원본 자료를 한 번 구조화해 사람과 여러 AI 에이전트가 반복해서 사용할 수 있게 만드는 지속형 Markdown 지식베이스다. 질문할 때마다 원본을 처음부터 검색하는 방식과 달리, 개념·비교·질의와 그 출처 연결을 누적한다. ^[raw/notebooklm/llm-wiki-skill-github.md]\n\n## 세 계층\n\n1. **Raw:** 변경하지 않는 원본 자료와 출처 메타데이터.\n2. **Wiki:** 원본을 요약·비교·연결한 canonical 문서.\n3. **Schema:** 파일명, frontmatter, 태그, 링크, 갱신과 검증 규칙.\n\n이 분리는 원본과 해석을 섞지 않으면서도 하나의 탐색 가능한 공간처럼 사용할 수 있게 한다. [[ai-personal-knowledge-management]]은 이 구조를 전체 PKM 관점에서 설명하고, [[ai-knowledge-workflow]]는 수집부터 산출까지의 위치를 설명한다.\n\n## RAG와의 차이\n\nRAG는 질의 시점에 관련 조각을 검색해 답변 문맥을 구성한다. LLM Wiki는 자주 재사용할 지식을 미리 컴파일하고, 모순과 관계를 문서에 남긴다.\n\n둘은 배타적이지 않다. RAG는 대규모 원본 검색에, 위키는 검토된 장기 지식과 연결 구조에 적합하다. ^[raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md]\n\n## 운영 원칙\n\n- 원본을 `raw/`에 보존하고 canonical 페이지에서 정확한 경로로 인용한다.\n- 특정 소스 묶음의 탐색은 NotebookLM 같은 도구로 보조한다.\n- NotebookLM 결과는 [[notebooklm-query-compounding]]의 가치 판정과 출처 검증을 거쳐 편입한다.\n- 새 자료를 기존 페이지에 연결하고 중복 페이지를 피한다.\n- 생성 결과는 링크·태그·출처·모순 검사를 거친다.\n- 지식그래프 분석은 [[ua-knowledge-graph-workflow]]에 따라 고립 문서와 약한 연결을 찾는 보조 수단으로 사용한다.\n\n유지보수의 순환 구조는 [[research-feedback-loop]], 도구별 책임 경계는 [[knowledge-tool-roles]]에 정리한다.\n\n## 열린 질문\n\n- 위키가 커질 때 자동 생성과 사람의 검토 비율을 어떻게 조정할 것인가?\n- 빠르게 변하는 제품 정보의 신선도를 어떤 주기로 확인할 것인가?\n- 개인 메모와 외부 지식의 경계를 얼마나 엄격하게 유지할 것인가?\n",
-        "backlinks": [
-          "article:comparisons/knowledge-tool-roles",
-          "article:concepts/research-feedback-loop",
-          "article:queries/notebooklm-query-compounding",
-          "article:queries/ua-knowledge-graph-workflow"
-        ]
-      }
-    },
-    {
-      "id": "article:concepts/research-feedback-loop",
-      "type": "article",
-      "name": "연구 피드백 루프",
-      "filePath": "concepts/research-feedback-loop.md",
-      "summary": "연구 피드백 루프는 원본 수집, 위키 컴파일, 그래프 분석, 집중 합성의 결과가 다시 지식베이스로 돌아오는 반복 구조다.",
-      "tags": [
-        "concepts"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "llm-wiki",
-          "notebooklm-query-compounding",
-          "ua-knowledge-graph-workflow",
-          "ai-knowledge-workflow"
-        ],
-        "category": "Concepts",
-        "content": "---\ntitle: 연구 피드백 루프\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: concept\ntags:\n  - knowledge-graph\n  - provenance\n  - research\n  - workflow\nsources:\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\n  - \"raw/notebooklm/llm-wiki-zotero-notebooklm-youtube.md\"\n  - \"raw/notebooklm/notebooklm-py-github.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# 연구 피드백 루프\n\n연구 피드백 루프는 원본 수집, 위키 컴파일, 그래프 분석, 집중 합성의 결과가 다시 지식베이스로 돌아오는 반복 구조다.\n\n## 순환 구조\n\n1. 원본과 서지정보를 확보한다.\n2. [[llm-wiki]]에서 개념·비교·질의 문서로 컴파일한다.\n3. 지식그래프로 브리지·고립·모순 후보를 찾는다.\n4. 관련 Markdown과 원본을 제한된 소스 묶음에 모은다.\n5. 비판적 질문과 보고서로 가설을 검토한다.\n6. 검증된 결과만 출처와 함께 위키에 다시 편입한다.\n\n이 루프의 목표는 산출물 수를 늘리는 것이 아니라 “왜 이 관계가 중요한가”를 반복 검증하는 것이다. NotebookLM의 답변이나 그래프의 연결은 중간 가설이며, 원본을 확인한 뒤에만 장기 지식으로 승격한다. ^[raw/notebooklm/2026-07-16-all-notes.md]\n\n## 환류 가능한 형식\n\n- Markdown 보고서와 질의 결과\n- JSON 마인드맵과 지식그래프\n- CSV 비교표\n- PDF·프레젠테이션·이미지 산출물\n\n장기 보관할 핵심 내용은 공개 형식의 Markdown과 출처 경로로 환원한다. NotebookLM 합성 결과의 증분 편입은 [[notebooklm-query-compounding]], 지식그래프 생성과 재분석은 [[ua-knowledge-graph-workflow]]를 따른다.\n\n이 루프는 [[ai-knowledge-workflow]]의 일회성 단계에 “검증 결과를 다시 입력으로 사용하는” 반복성을 더한다. ^[raw/notebooklm/notebooklm-py-github.md]\n",
-        "backlinks": [
-          "article:comparisons/knowledge-tool-roles",
-          "article:concepts/ai-knowledge-workflow",
-          "article:concepts/ai-personal-knowledge-management",
-          "article:concepts/llm-wiki",
-          "article:concepts/second-brain-research-workflow",
-          "article:queries/notebooklm-query-compounding",
-          "article:queries/ua-knowledge-graph-workflow"
-        ]
-      }
-    },
-    {
-      "id": "article:concepts/second-brain-research-workflow",
-      "type": "article",
-      "name": "세컨드 브레인 연구 워크플로",
-      "filePath": "concepts/second-brain-research-workflow.md",
-      "summary": "세컨드 브레인 연구 워크플로는 원본 보존, AI 합성, 개인 해석을 분리하면서 하나의 반복 가능한 연구 환경으로 연결하는 방식이다. 이는 [[ai-personal-knowledge-management]]의 계층 원칙을 연구 자료 수집과 검증에 적용한 구현이다.",
-      "tags": [
-        "concepts"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "ai-personal-knowledge-management",
-          "ai-knowledge-workflow",
-          "research-feedback-loop",
-          "knowledge-tool-roles"
-        ],
-        "category": "Concepts",
-        "content": "---\ntitle: 세컨드 브레인 연구 워크플로\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: concept\ntags:\n  - knowledge-base\n  - pkm\n  - research\n  - workflow\nsources:\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\n  - \"raw/notebooklm/llm-wiki-zotero-notebooklm-youtube.md\"\n  - \"raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# 세컨드 브레인 연구 워크플로\n\n세컨드 브레인 연구 워크플로는 원본 보존, AI 합성, 개인 해석을 분리하면서 하나의 반복 가능한 연구 환경으로 연결하는 방식이다. 이는 [[ai-personal-knowledge-management]]의 계층 원칙을 연구 자료 수집과 검증에 적용한 구현이다.\n\n## 역할 분담\n\n| 단계 | 역할 | 대표 도구 |\n| --- | --- | --- |\n| 수집 | 논문·웹 자료와 서지정보 보존 | Zotero, 브라우저 클리퍼 |\n| 컴파일 | 재사용할 개념·비교·질의 생성 | LLM Wiki |\n| 집중 탐색 | 제한된 소스 묶음 질의 | NotebookLM |\n| 구조 분석 | 관계, 군집, 고립 문서 후보 탐색 | Understand Anything |\n| 장기 편집 | Markdown과 개인 메모 관리 | Obsidian |\n\n역할을 분리하면 각 도구의 생성 결과가 곧바로 확정 지식이 되는 것을 막고, 원문으로 돌아가는 경로를 유지할 수 있다. ^[raw/notebooklm/llm-wiki-zotero-notebooklm-youtube.md]\n\n## 개인 지식과 외부 지식\n\n외부 원본의 요약과 사용자의 경험·판단을 같은 층에서 섞으면 출처와 의견의 경계가 흐려진다. 원본과 컴파일된 지식은 출처를 유지하고, 개인 메모는 별도 섹션이나 문서로 기록하는 편이 안전하다.\n\n## 성공 조건\n\n- 원문으로 돌아갈 수 있다.\n- AI가 만든 주장과 개인 판단을 구분할 수 있다.\n- 도구가 바뀌어도 Markdown과 메타데이터가 남는다.\n- 새 자료가 기존 지식과 연결되거나 모순으로 표시된다.\n- 편입 전후에 스키마와 링크를 자동 검증한다.\n\n전체 운영 절차는 [[ai-knowledge-workflow]], 반복적 개선은 [[research-feedback-loop]], 도구 선택 기준은 [[knowledge-tool-roles]]에 정리한다. ^[raw/notebooklm/2026-07-16-all-notes.md]\n",
-        "backlinks": [
-          "article:comparisons/knowledge-tool-roles",
-          "article:concepts/ai-knowledge-workflow",
-          "article:concepts/ai-personal-knowledge-management"
-        ]
-      }
-    },
-    {
       "id": "article:docs/AI_ENVIRONMENT",
       "type": "article",
       "name": "AI 개발환경 구성 문서",
@@ -309,55 +140,6 @@
         "wikilinks": [],
         "content": "# 캡처 → Canonical 워크플로우\n\n> 작성일: 2026-07-26  \n> 참조: SCHEMA.md, AGENTS.md\n\n---\n\n## 전체 흐름\n\n```\n[외부 자료]\n    ↓ Web Clipper / Zotero / 수동\n[inbox/]          ← 임시 보관소 (분류 전)\n    ↓ 분류\n[raw/<kind>/]     ← 원본 보존 (수정 금지)\n    ↓ OpenCode + Kimi K2 (llm-wiki)\n[Draft 초안]      ← 합성·정리 (가설 단계)\n    ↓ Claude Code (복잡한 분석) 또는 Kimi\n[Discovery 결과]  ← 가설·보고서 (.ua/ 또는 queries/)\n    ↓ Human Review Gate\n[Canonical Page]  ← entities/ concepts/ comparisons/ queries/\n    ↓ 동기화\nindex.md + log.md ← 항상 함께 업데이트\n```\n\n---\n\n## Step 1: 수집 (Capture)\n\n**목표**: 원본을 정확히 보존한다.\n\n1. **웹 자료** → Chrome에서 Obsidian Web Clipper 클릭 → `inbox/`에 저장\n2. **논문/기사** → Zotero Connector → Zotero에 저장 → `raw/articles/` 또는 `raw/papers/` 내보내기\n3. **YouTube** → 트랜스크립트 복사 → `raw/youtube/` 에 저장\n4. **수동 메모** → `inbox/` 에 날짜 파일명으로 저장 (`2026-07-26-idea.md`)\n\n**규칙**: raw 파일에는 templates/raw-article.md frontmatter를 복사해서 사용\n\n---\n\n## Step 2: 정리 (Organize)\n\n**담당**: OpenCode + Kimi K2\n\n```bash\ncd ~/2nd && opencode\n```\n\nKimi에게 지시:\n> \"inbox/에 있는 <파일명>을 읽고 raw/<appropriate-dir>/에 맞는 형식으로 정리해줘.\n> 원본 본문은 수정하지 말고, frontmatter만 채워줘.\"\n\n---\n\n## Step 3: 합성 (Compile)\n\n**담당**: OpenCode + Kimi K2 (기본) / Claude Code (복잡한 분석)\n\nKimi에게 지시:\n> \"raw/<dir>/<file>.md 를 기반으로 concepts/ 또는 entities/에 canonical 페이지 초안을 만들어줘.\n> templates/concept.md 형식을 사용하고, sources에 raw 경로를 기록해줘.\"\n\n복잡한 설계·모순 분석은 Claude Code에서:\n> \"이 두 개념의 충돌을 분석하고 contradictions 목록을 채워줘.\"\n\n---\n\n## Step 4: 탐색 (Discovery)\n\n**담당**: Claude Code / Codex / NotebookLM / Gemini\n\n- NotebookLM에 raw 파일들을 소스로 추가하고 질의\n- 결과를 `queries/` 에 templates/query.md 형식으로 저장\n- **이 단계의 결과는 가설이다. canonical이 아니다.**\n\n---\n\n## Step 5: 승인 (Human Review)\n\n마스터가 직접 검토:\n\n```\nchecklist:\n- [ ] 원문 경로가 존재하는가? (sources 목록의 raw/ 경로 확인)\n- [ ] 중복 페이지가 없는가? (index.md 검색)\n- [ ] 충돌하는 canonical 페이지가 없는가?\n- [ ] confidence 수준이 적절한가?\n```\n\n---\n\n## Step 6: Canonical 등록\n\n**원자적 작업 (3가지 동시 실행)**:\n\n1. canonical 페이지 저장 (`entities/`, `concepts/`, `comparisons/`, `queries/`)\n2. `index.md` 업데이트 — 해당 섹션에 한 줄 추가\n3. `log.md` 추가 — 날짜·액션·파일 경로 기록\n\n```bash\n# Git 커밋 (명시적 승인 후)\ngit add entities/new-page.md index.md log.md\ngit commit -m \"feat: add canonical page <new-page>\"\n```\n\n---\n\n## 자주 쓰는 패턴\n\n### 오늘 읽은 글 빠르게 캡처\n\n```\n1. Chrome에서 Web Clipper 클릭 → inbox/ 저장\n2. opencode 열고: \"inbox/오늘글.md raw/web/에 정리해줘\"\n3. 나중에 canonical로 승격 여부 판단\n```\n\n### 아이디어 메모 → concept 생성\n\n```\n1. inbox/idea-<날짜>.md 에 자유롭게 메모\n2. claude: \"이 메모 기반으로 concepts/ 초안 만들어줘\"\n3. 검토 후 승인 → index.md + log.md 동기화\n```\n\n### 코드 관련 지식\n\n```\n1. raw/articles/에 기술 문서 저장\n2. codex로 코드 탐색·구현 후보 생성\n3. Claude Code로 설계 검토\n4. 검증된 내용만 concepts/ 또는 entities/ 승격\n```\n",
         "backlinks": []
-      }
-    },
-    {
-      "id": "article:queries/notebooklm-query-compounding",
-      "type": "article",
-      "name": "NotebookLM 질의 지식 증분 워크플로",
-      "filePath": "queries/notebooklm-query-compounding.md",
-      "summary": "NotebookLM 질의응답에서 원본 대화 전문을 별도로 저장하지 않으면서, 재사용 가능한 지식만 `queries/`에 편입해 개인 지식베이스를 증분시키려면 어떻게 운영해야 하는가?",
-      "tags": [
-        "queries"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "research-feedback-loop",
-          "llm-wiki",
-          "ai-knowledge-workflow"
-        ],
-        "category": "Queries",
-        "content": "---\ntitle: NotebookLM 질의 지식 증분 워크플로\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: query\ntags:\n  - automation\n  - knowledge-base\n  - notebooklm\n  - provenance\n  - workflow\nsources:\n  - \"raw/notebooklm/notebooklm-py-github.md\"\n  - \"raw/notebooklm/llm-wiki-skill-github.md\"\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# NotebookLM 질의 지식 증분 워크플로\n\n## 질의\n\nNotebookLM 질의응답에서 원본 대화 전문을 별도로 저장하지 않으면서, 재사용 가능한 지식만 `queries/`에 편입해 개인 지식베이스를 증분시키려면 어떻게 운영해야 하는가?\n\n## 핵심 결론\n\nNotebookLM 답변은 일시적인 합성 결과이고 `queries/` 문서는 검토를 통과한 장기 지식이다. 두 계층을 구분하되 원본 Q&A 파일은 만들지 않는다.\n\n답변의 가치와 근거를 평가한 뒤 하나의 canonical query 문서만 생성하거나 갱신하고, 실제 raw source와 NotebookLM 대화 식별자를 기록한다. ^[raw/notebooklm/notebooklm-py-github.md]\n\n    NotebookLM 질의\n      → JSON 답변과 source ID 확보\n      → 저장 가치 판정\n      → 기존 위키 문서 검색\n      → 근거·사실 교차검증\n      → canonical query 생성 또는 갱신\n      → index·log·역링크 갱신\n      → lint\n\n## 저장 대상 판정\n\n다시 도출하기 어렵고 반복 활용할 수 있는 다음 결과만 저장한다.\n\n- 여러 source를 결합한 비교와 종합\n- 반복 가능한 연구·개발 워크플로\n- 장기적으로 적용할 의사결정 기준\n- 연구 가설, 지식 공백과 검증 계획\n- 기존 문서 여러 개를 새롭게 연결하는 분석\n- 오류와 제약까지 검토된 심층 설명\n\n단순 명령어, 상태 조회, 기존 페이지와 중복되는 설명, 근거가 불명확한 답변은 저장하지 않는다. 답변 길이가 아니라 가치·검증 가능성·재사용성이 기준이다.\n\n## 출처 매핑\n\nNotebookLM 응답의 source ID는 로컬 `raw/**/*.md`의 `notebooklm_source_id`와 연결한다. UUID가 일치하는 파일만 query의 `sources:`에 기록한다.\n\n인용 번호나 제목이 비슷하다는 이유로 경로를 추정하지 않는다. 과거 대화를 재질의한 결과는 기존 인용 복구가 아니라 새로운 검증 turn으로 기록한다. ^[raw/notebooklm/llm-wiki-skill-github.md]\n\n## 편입 체크리스트\n\n1. 같은 장기 질문을 다루는 query가 이미 있는지 검색한다.\n2. 실제 source 경로와 주요 주장을 교차검증한다.\n3. 불확실하거나 버전 의존적인 내용을 표시한다.\n4. 질문, 결론, 근거, 적용 절차와 한계를 작성한다.\n5. 최소 두 개의 유효한 위키링크와 역링크를 확보한다.\n6. `index.md`, `log.md`, 갱신일과 lint 결과를 동기화한다.\n\n이 과정은 [[research-feedback-loop]]의 집중 합성 결과를 [[llm-wiki]]의 검증된 장기 지식으로 승격시키는 관문이다. 전체 수집·검증 맥락은 [[ai-knowledge-workflow]]를 참고한다.\n\n## 제한\n\n- NotebookLM 답변 전문을 저장하지 않으므로 서버 대화가 삭제되면 원문을 복원할 수 없다.\n- 대신 질문, 검증된 최종 지식, 실제 source 경로와 대화 식별자를 보존한다.\n- source ID가 로컬 원본에 매핑되지 않으면 신뢰도를 낮추거나 편입을 보류한다.\n- 빠르게 변하는 기능은 편입 시점의 공식 문서와 설치된 CLI 도움말을 다시 확인한다.\n",
-        "backlinks": [
-          "article:concepts/llm-wiki",
-          "article:concepts/research-feedback-loop"
-        ]
-      }
-    },
-    {
-      "id": "article:queries/ua-knowledge-graph-workflow",
-      "type": "article",
-      "name": "UA 위키 지식그래프 전체 워크플로",
-      "filePath": "queries/ua-knowledge-graph-workflow.md",
-      "summary": "위키 문서가 이미 생성되었다고 가정할 때 Understand Anything의 스킬은 어떤 역할을 하며, 지식그래프 생성부터 분석·활용·갱신까지 어떤 순서로 실행해야 하는가?",
-      "tags": [
-        "queries"
-      ],
-      "complexity": "simple",
-      "knowledgeMeta": {
-        "wikilinks": [
-          "llm-wiki",
-          "research-feedback-loop",
-          "ai-personal-knowledge-management",
-          "ai-knowledge-workflow"
-        ],
-        "category": "Queries",
-        "content": "---\ntitle: UA 위키 지식그래프 전체 워크플로\ncreated: 2026-07-21\nupdated: 2026-07-21\ntype: query\ntags:\n  - knowledge-base\n  - knowledge-graph\n  - research\n  - workflow\nsources:\n  - \"raw/notebooklm/understand-anything-github.md\"\n  - \"raw/notebooklm/2026-07-16-all-notes.md\"\nconfidence: medium\ncontested: false\ncontradictions: []\n---\n\n# UA 위키 지식그래프 전체 워크플로\n\n## 질의\n\n위키 문서가 이미 생성되었다고 가정할 때 Understand Anything의 스킬은 어떤 역할을 하며, 지식그래프 생성부터 분석·활용·갱신까지 어떤 순서로 실행해야 하는가?\n\n## 핵심 결론\n\nKarpathy 패턴의 [[llm-wiki]]가 이미 존재한다면 시작점은 일반 코드 분석용 `understand`가 아니라 위키 전용 `understand-knowledge`다.\n\n이 스킬로 지식그래프를 생성한 뒤 대시보드, 그래프 질의, 도메인 분석을 수행한다. 발견한 공백과 오류를 위키에 반영한 다음 그래프를 다시 생성한다. ^[raw/notebooklm/understand-anything-github.md]\n\n    LLM Wiki 문서·index.md·wikilink\n      → understand-knowledge\n      → .ua/knowledge-graph.json\n      → dashboard·chat·domain 분석\n      → 위키 보강\n      → understand-knowledge 재실행\n\n## 코드 그래프와 지식그래프\n\n`understand`는 파일·함수·클래스·서비스의 구조와 호출·의존 관계를 중심으로 코드 아키텍처를 만든다. `understand-knowledge`는 문서 제목, frontmatter, 위키링크를 추출하고 암시적 관계, 엔티티와 핵심 주장을 보강한다.\n\n- 코드 그래프의 질문: 무엇이 무엇을 호출하고 의존하는가?\n- 지식그래프의 질문: 어떤 개념과 주장이 연결되고 어떤 주제 군집을 이루는가?\n\n## 권장 실행 순서\n\n1. 위키의 `index.md`, canonical 문서와 wikilink가 유효한지 lint한다.\n2. `understand-knowledge`로 `.ua/knowledge-graph.json`과 메타데이터를 생성한다.\n3. 노드·관계 수, 미해결 링크, 고립 문서, 과도한 허브와 출처 없는 주장을 점검한다.\n4. `understand-dashboard`로 주제 군집, 브리지와 학습 순서를 탐색한다.\n5. `understand-chat`으로 관계와 근거가 약한 부분을 질의한다.\n6. `understand-domain`으로 도메인·흐름·단계를 별도 그래프로 파생한다.\n7. 검증된 공백·중복·약한 연결만 위키에 반영한다.\n8. 위키가 바뀌면 `understand-knowledge`를 다시 실행한다.\n\n그래프에서 보이는 빈 공간은 곧바로 연구 공백을 뜻하지 않는다. 자료 누락, 링크 부족, 추출 실패 또는 엔티티 중복일 수 있으므로 원문과 대조한다. ^[raw/notebooklm/2026-07-16-all-notes.md]\n\n## 역할 분담과 환류\n\nNotebookLM은 선택한 원본을 집중적으로 종합하고, LLM Wiki는 검증된 내용을 영속적인 상호 연결 문서로 컴파일한다. Understand Anything은 그 문서를 질의하고 시각화할 수 있는 지식그래프로 변환한다. 이 분석에서 나온 후보를 원본으로 확인하고 [[research-feedback-loop]]를 따라 환류한다.\n\n그래프 품질은 문서 품질을 대신하지 않는다. 전체 PKM 운영 원칙은 [[ai-personal-knowledge-management]], 단계별 품질 관문은 [[ai-knowledge-workflow]]를 참고한다.\n",
-        "backlinks": [
-          "article:concepts/llm-wiki",
-          "article:concepts/research-feedback-loop"
-        ]
       }
     },
     {
@@ -503,7 +285,10 @@
       "layer": "Comparisons",
       "domain": "",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "advanced-mavlink",
@@ -519,7 +304,10 @@
         "routing",
         "dialect"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ai-knowledge-workflow",
@@ -527,7 +315,10 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "ai-personal-knowledge-management",
@@ -535,7 +326,10 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "ardupilot-architecture",
@@ -548,7 +342,10 @@
         "flight-controller",
         "HAL"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "computer-vision-drone",
@@ -563,7 +360,10 @@
         "tracking",
         "YOLO"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "datalink-communication",
@@ -579,7 +379,10 @@
         "communication",
         "C2"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "drone-ai-agents",
@@ -593,7 +396,10 @@
         "decision-making",
         "multi-agent"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "drone-payload-systems",
@@ -607,7 +413,10 @@
         "camera",
         "gripper"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "drone-power-battery",
@@ -622,7 +431,10 @@
         "motor",
         "LiPo"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "drone-regulations",
@@ -638,7 +450,10 @@
         "BVLOS",
         "compliance"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "drone-safety-failsafe",
@@ -653,7 +468,10 @@
         "RTL",
         "geofence"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "drone-simulation",
@@ -668,7 +486,10 @@
         "jmavsim",
         "testing"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "dronecan-deep",
@@ -680,7 +501,10 @@
         "drone-sw",
         "datalink"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "dronecan-protocol",
@@ -693,7 +517,10 @@
         "datalink",
         "CAN-bus"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "flight-controller-hardware",
@@ -707,7 +534,10 @@
         "hardware",
         "Pixhawk"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "flight-logging-analysis",
@@ -722,7 +552,10 @@
         "analysis",
         "debugging"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ground-control-station",
@@ -736,7 +569,10 @@
         "MAVLink",
         "ground-control"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "llm-wiki",
@@ -744,7 +580,10 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "mavlink-advanced-features",
@@ -761,7 +600,10 @@
         "rtps",
         "advanced"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavlink-advanced",
@@ -777,7 +619,10 @@
         "signing",
         "advanced"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavlink-protocol-deep",
@@ -788,7 +633,10 @@
         "datalink",
         "drone-sw"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavlink-protocol",
@@ -801,7 +649,10 @@
         "MAVLink",
         "communication"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavlink2-security",
@@ -817,7 +668,10 @@
         "encryption",
         "authentication"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavsdk",
@@ -831,7 +685,10 @@
         "API",
         "offboard"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mission-planning",
@@ -847,7 +704,10 @@
         "QGC",
         "planning"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "pid-tuning-control",
@@ -864,7 +724,10 @@
         "multicopter",
         "stability"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-architecture-deep",
@@ -874,7 +737,10 @@
       "tags": [
         "drone-sw"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-cicd-pipeline",
@@ -889,7 +755,10 @@
         "github-actions",
         "docker"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-control-tuning",
@@ -905,7 +774,10 @@
         "position",
         "control"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-flight-modes",
@@ -917,7 +789,10 @@
         "PX4",
         "flight-control"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-offboard-control",
@@ -931,7 +806,10 @@
         "companion-computer",
         "autonomous"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-pid-tuning",
@@ -947,7 +825,10 @@
         "attitude",
         "multicopter"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-system-architecture",
@@ -960,7 +841,10 @@
         "flight-controller",
         "companion-computer"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-tuning-control",
@@ -976,7 +860,10 @@
         "control",
         "multicopter"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "recon-swarm-project",
@@ -988,7 +875,10 @@
         "drone-ai",
         "drone"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "research-feedback-loop",
@@ -996,7 +886,10 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "ros2-advanced-integration",
@@ -1012,7 +905,10 @@
         "qos",
         "companion"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ros2-advanced",
@@ -1028,7 +924,10 @@
         "advanced",
         "middleware"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ros2-drone-deep",
@@ -1039,7 +938,10 @@
         "drone-sw",
         "ai-agent"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ros2-drone-integration",
@@ -1053,7 +955,10 @@
         "micro-ROS",
         "middleware"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "rtk-gps-precise-landing",
@@ -1069,7 +974,10 @@
         "precision",
         "landing"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "second-brain-research-workflow",
@@ -1077,7 +985,10 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "sensor-calibration",
@@ -1094,7 +1005,10 @@
         "gyro",
         "baro"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "swarm-coordination",
@@ -1108,7 +1022,10 @@
         "formation",
         "coordination"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "swarm-modes",
@@ -1120,7 +1037,10 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "visual-positioning-odometry",
@@ -1135,7 +1055,10 @@
         "odometry",
         "positioning"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "voice-control-drone",
@@ -1149,7 +1072,10 @@
         "NLP",
         "speech"
       ],
-      "updated": "2026-07-27"
+      "updated": "2026-07-27",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "ardupilot",
@@ -1160,7 +1086,10 @@
         "drone-sw",
         "drone"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavlink",
@@ -1171,7 +1100,10 @@
         "datalink",
         "drone-sw"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "pixhawk",
@@ -1182,7 +1114,10 @@
         "drone-hw",
         "drone-sw"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-flight-stack",
@@ -1193,7 +1128,10 @@
         "drone-sw",
         "drone"
       ],
-      "updated": "2026-07-28"
+      "updated": "2026-07-28",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "notebooklm-query-compounding",
@@ -1201,7 +1139,10 @@
       "layer": "Queries",
       "domain": "",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "ua-knowledge-graph-workflow",
@@ -1209,7 +1150,10 @@
       "layer": "Queries",
       "domain": "",
       "tags": [],
-      "updated": "2026-07-21"
+      "updated": "2026-07-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "ardupilot-plane-4-7",
@@ -1221,7 +1165,10 @@
         "drone-sw",
         "flight-control"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "betaflight",
@@ -1233,7 +1180,10 @@
         "drone-sw",
         "flight-control"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "drone-news-hardware",
@@ -1244,7 +1194,10 @@
         "drone",
         "drone-hw"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "drone-news-ops",
@@ -1255,7 +1208,10 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "drone-news-regulations",
@@ -1266,7 +1222,10 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "fpv-hardware",
@@ -1277,7 +1236,10 @@
         "drone",
         "drone-hw"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavsdk-release",
@@ -1289,7 +1251,10 @@
         "drone-sw",
         "datalink"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mission-planner",
@@ -1301,7 +1266,10 @@
         "drone-sw",
         "gcs-software"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "opencv",
@@ -1313,7 +1281,10 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "px4-v1-17",
@@ -1325,7 +1296,10 @@
         "drone-sw",
         "flight-control"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "pymavlink",
@@ -1337,7 +1311,10 @@
         "drone-sw",
         "datalink"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "qgroundcontrol",
@@ -1349,7 +1326,10 @@
         "drone-sw",
         "gcs-software"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ros2-lyrical",
@@ -1361,7 +1341,10 @@
         "drone-sw",
         "gcs-software"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "yolo",
@@ -1373,7 +1356,10 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-07-29"
+      "updated": "2026-07-29",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "dji-everest-mapping",
@@ -1384,7 +1370,10 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "dji-terra",
@@ -1396,7 +1385,10 @@
         "drone-ai",
         "gcs-software"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "fcc-drone-regulations",
@@ -1407,7 +1399,10 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "lockheed-martin-morfius",
@@ -1419,7 +1414,10 @@
         "swarm",
         "ai-agent"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "yolo-v8-4-112",
@@ -1431,7 +1429,10 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "doordash-air",
@@ -1443,7 +1444,10 @@
         "ops-mission",
         "company"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "droneshield",
@@ -1455,7 +1459,10 @@
         "ai-agent",
         "company"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "perceptual-robotics",
@@ -1467,7 +1474,10 @@
         "drone-ai",
         "company"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "terra-drone",
@@ -1479,7 +1489,10 @@
         "drone-hw",
         "company"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "xtend-ai-robotics",
@@ -1491,7 +1504,10 @@
         "ai-agent",
         "company"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "amazon-mk30-safety-incident",
@@ -1506,7 +1522,10 @@
         "safety",
         "regulations"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "brinc-emergency-drone-funding",
@@ -1521,7 +1540,10 @@
         "brinc",
         "motorola"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "chained-attacks-drone-fl",
@@ -1535,7 +1557,10 @@
         "security",
         "federated-learning"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "distributed-aerial-surveillance-swarm",
@@ -1549,7 +1574,10 @@
         "ltl",
         "surveillance"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "dji-easa-sail-bvlos",
@@ -1564,7 +1592,10 @@
         "dji",
         "europe"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
     },
     {
       "id": "emnn-doa-estimation",
@@ -1578,7 +1609,10 @@
         "beamforming",
         "antenna"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "federated-lightweight-intrusion-detection",
@@ -1593,7 +1627,10 @@
         "federated-learning",
         "intrusion-detection"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "flight-ready-lidar-inertial-odometry",
@@ -1608,7 +1645,10 @@
         "imu",
         "navigation"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "indi-stability-tilt-rotor-vtol",
@@ -1623,7 +1663,10 @@
         "vtol",
         "stability"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "montis-avalanche-faa-approval",
@@ -1638,7 +1681,10 @@
         "faa",
         "montis"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "spatial-dubins-quadrotor-control",
@@ -1652,7 +1698,10 @@
         "dubins",
         "quadrotor"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "stacked-intelligent-metasurfaces",
@@ -1667,7 +1716,10 @@
         "beamforming",
         "uav"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "vertical-pinching-antenna-systems",
@@ -1682,7 +1734,10 @@
         "uav",
         "urban"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "wing-nhs-medical-delivery",
@@ -1697,7 +1752,10 @@
         "wing",
         "healthcare"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "zipline-us-expansion",
@@ -1713,7 +1771,10 @@
         "austin",
         "cleveland"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "active-sensing-uav-communication",
@@ -1727,7 +1788,10 @@
         "sensing",
         "cellular"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "cross-layered-medical-drone-coordination",
@@ -1742,7 +1806,10 @@
         "medical-delivery",
         "disaster-response"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "decentralized-swarm-gps-denied",
@@ -1757,7 +1824,10 @@
         "military",
         "counter-uav"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "digital-twin-intent-drone-networks",
@@ -1771,7 +1841,10 @@
         "digital-twin",
         "reinforcement-learning"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "e2e-fly-end-to-end-quadrotor",
@@ -1785,7 +1858,10 @@
         "sim-to-real",
         "reinforcement-learning"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "lightweight-safe-rl-uav",
@@ -1799,7 +1875,10 @@
         "safety",
         "collision-avoidance"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "mars-dragonfly-modular-aerial",
@@ -1813,7 +1892,10 @@
         "modular-robotics",
         "swarm"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "multi-modal-human-intent-uav",
@@ -1827,7 +1909,10 @@
         "human-machine-interface",
         "safety"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "neurosymland-landing-assessment",
@@ -1841,7 +1926,10 @@
         "safety",
         "landing"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "rl-quadrotor-tunable-control",
@@ -1855,7 +1943,10 @@
         "control-theory",
         "px4"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "skyjepa-world-models",
@@ -1869,7 +1960,10 @@
         "world-models",
         "sim-to-real"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ardupilot-params-by-version",
@@ -1883,7 +1977,10 @@
         "parameter",
         "version"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "cuav-setup-params",
@@ -1897,7 +1994,10 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "fc-vendor-param-guide",
@@ -1911,7 +2011,10 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "holybro-setup-params",
@@ -1925,7 +2028,10 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "pixhawk-setup-params",
@@ -1939,7 +2045,10 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-params-by-version",
@@ -1953,7 +2062,10 @@
         "parameter",
         "version"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "param-diff-copter-4-6-0-4-7-0",
@@ -1967,7 +2079,10 @@
         "diff",
         "copter"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "param-diff-px4-1-16-0-1-17-0",
@@ -1981,292 +2096,598 @@
         "diff",
         "px4"
       ],
-      "updated": "2026-07-30"
+      "updated": "2026-07-30",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "agile-quadrotor-learning",
+      "name": "Agile Quadrotor Flight Learning",
+      "layer": "Concepts",
+      "domain": "",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "drone-sw"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "drone-delivery-news",
+      "name": "Drone Delivery News 2026-08-01",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-07-31",
+      "name": "Drone News 2026-07-31",
+      "layer": "Concepts",
+      "domain": "",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission",
+        "hardware"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "drone-news-2026-08-01",
+      "name": "Drone News 2026-08-01",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "event-camera-drone",
+      "name": "Event Camera for Drones",
+      "layer": "Concepts",
+      "domain": "",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "drone-hw",
+        "hardware"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "gnn-uav-anomaly-detection",
+      "name": "Graph Neural Network-Driven Anomaly Detection for UAV Inspection Data",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "gps-uav-imu",
+      "name": "GPS 미수신 환경에 특화된 마이크로드론/UAV 위치추정 기법들은 공통적으로 외부 위치 인프라(GPS) 없이 온보드 카메라·IMU·옵티컬 플로우 등 상대적/자기완결적 센싱에만 의존한다는 특징을 공유한다.",
+      "layer": "Concepts",
+      "domain": "ai-agent",
+      "tags": [],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "hglrc-talon-cinewhoop",
+      "name": "HGLRC Talon 2-Inch Cinewhoop",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "high-speed-drone-tracking",
+      "name": "This Drone Can Chase F1 Cars",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "mavlink-m-interoperability",
+      "name": "A New Era of Interoperable Payloads Begins at the Dronecode MAVLink-M Integration Hackathon",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m",
+      "name": "검색 결과에서 \\\"micro drone\\\"으로 명시된 SLAM 사례는 카메라+IMU(VIO) 조합을 사용한 반면, LiDAR-관성 오도메트리 사례는 더 큰 임베디드 UAV 플랫폼(Livox Mid-360/Pixhawk 4 Mini)이나 다중 센서 정찰 드론 프로젝트에서 등장해, 마이크로 스케일에서는 카메라+IMU 조합이 상대적으로 더 구체적인 근거를 갖는다.",
+      "layer": "Concepts",
+      "domain": "ai-agent",
+      "tags": [],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "radial-impeller-drone",
+      "name": "Radial Impeller Drone",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "uav-isac-cross-region",
+      "name": "UAV ISAC via Cross-Region Cooperation",
+      "layer": "Concepts",
+      "domain": "",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "swarm",
+        "datalink"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "uav-swarm-target-localization",
+      "name": "UAV Swarm Target Localization via Detection-Aided Enhanced Reweighted Atomic Norm Minimization",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "swarm"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "auterion",
+      "name": "Auterion",
+      "layer": "Entities",
+      "domain": "",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "flight-control",
+        "gcs-software"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "bitcraze",
+      "name": "Bitcraze",
+      "layer": "Entities",
+      "domain": "",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "drone-sw",
+        "swarm"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "dji-osmo-pocket-4",
+      "name": "DJI Osmo Pocket 4P",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dji-rs-5",
+      "name": "DJI RS 5",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "kite-gcs",
+      "name": "Kite GCS",
+      "layer": "Entities",
+      "domain": "",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "gcs-software"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "ratefpv",
+      "name": "RateFPV",
+      "layer": "Entities",
+      "domain": "",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "hardware"
+      ],
+      "updated": "2026-07-31",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "yolo-v8-4-114",
+      "name": "YOLO v8.4.114",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-agent"
+      ],
+      "updated": "2026-08-01",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     }
   ],
   "edges": [
     {
-      "source": "article:comparisons/knowledge-tool-roles",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "knowledge-tool-roles",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:comparisons/knowledge-tool-roles",
-      "target": "article:concepts/second-brain-research-workflow",
+      "source": "knowledge-tool-roles",
+      "target": "second-brain-research-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:comparisons/knowledge-tool-roles",
-      "target": "article:concepts/llm-wiki",
+      "source": "knowledge-tool-roles",
+      "target": "llm-wiki",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:comparisons/knowledge-tool-roles",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "knowledge-tool-roles",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-knowledge-workflow",
-      "target": "article:concepts/ai-personal-knowledge-management",
+      "source": "ai-knowledge-workflow",
+      "target": "ai-personal-knowledge-management",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-knowledge-workflow",
-      "target": "article:comparisons/knowledge-tool-roles",
+      "source": "ai-knowledge-workflow",
+      "target": "knowledge-tool-roles",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-knowledge-workflow",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "ai-knowledge-workflow",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-knowledge-workflow",
-      "target": "article:concepts/second-brain-research-workflow",
+      "source": "ai-knowledge-workflow",
+      "target": "second-brain-research-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-personal-knowledge-management",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "ai-personal-knowledge-management",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-personal-knowledge-management",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "ai-personal-knowledge-management",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-personal-knowledge-management",
-      "target": "article:comparisons/knowledge-tool-roles",
+      "source": "ai-personal-knowledge-management",
+      "target": "knowledge-tool-roles",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-personal-knowledge-management",
-      "target": "article:concepts/second-brain-research-workflow",
+      "source": "ai-personal-knowledge-management",
+      "target": "second-brain-research-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/llm-wiki",
-      "target": "article:concepts/ai-personal-knowledge-management",
+      "source": "llm-wiki",
+      "target": "ai-personal-knowledge-management",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/llm-wiki",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "llm-wiki",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/llm-wiki",
-      "target": "article:queries/notebooklm-query-compounding",
+      "source": "llm-wiki",
+      "target": "notebooklm-query-compounding",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/llm-wiki",
-      "target": "article:queries/ua-knowledge-graph-workflow",
+      "source": "llm-wiki",
+      "target": "ua-knowledge-graph-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/llm-wiki",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "llm-wiki",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/llm-wiki",
-      "target": "article:comparisons/knowledge-tool-roles",
+      "source": "llm-wiki",
+      "target": "knowledge-tool-roles",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/research-feedback-loop",
-      "target": "article:concepts/llm-wiki",
+      "source": "research-feedback-loop",
+      "target": "llm-wiki",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/research-feedback-loop",
-      "target": "article:queries/notebooklm-query-compounding",
+      "source": "research-feedback-loop",
+      "target": "notebooklm-query-compounding",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/research-feedback-loop",
-      "target": "article:queries/ua-knowledge-graph-workflow",
+      "source": "research-feedback-loop",
+      "target": "ua-knowledge-graph-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/research-feedback-loop",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "research-feedback-loop",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/second-brain-research-workflow",
-      "target": "article:concepts/ai-personal-knowledge-management",
+      "source": "second-brain-research-workflow",
+      "target": "ai-personal-knowledge-management",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/second-brain-research-workflow",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "second-brain-research-workflow",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/second-brain-research-workflow",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "second-brain-research-workflow",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/second-brain-research-workflow",
-      "target": "article:comparisons/knowledge-tool-roles",
+      "source": "second-brain-research-workflow",
+      "target": "knowledge-tool-roles",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/notebooklm-query-compounding",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "notebooklm-query-compounding",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/notebooklm-query-compounding",
-      "target": "article:concepts/llm-wiki",
+      "source": "notebooklm-query-compounding",
+      "target": "llm-wiki",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/notebooklm-query-compounding",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "notebooklm-query-compounding",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/ua-knowledge-graph-workflow",
-      "target": "article:concepts/llm-wiki",
+      "source": "ua-knowledge-graph-workflow",
+      "target": "llm-wiki",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/ua-knowledge-graph-workflow",
-      "target": "article:concepts/research-feedback-loop",
+      "source": "ua-knowledge-graph-workflow",
+      "target": "research-feedback-loop",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/ua-knowledge-graph-workflow",
-      "target": "article:concepts/ai-personal-knowledge-management",
+      "source": "ua-knowledge-graph-workflow",
+      "target": "ai-personal-knowledge-management",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:queries/ua-knowledge-graph-workflow",
-      "target": "article:concepts/ai-knowledge-workflow",
+      "source": "ua-knowledge-graph-workflow",
+      "target": "ai-knowledge-workflow",
       "type": "related",
       "direction": "forward",
       "weight": 0.7
     },
     {
-      "source": "article:concepts/ai-knowledge-workflow",
+      "source": "ai-knowledge-workflow",
       "target": "topic:concepts",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:concepts/ai-personal-knowledge-management",
+      "source": "ai-personal-knowledge-management",
       "target": "topic:concepts",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:concepts/llm-wiki",
+      "source": "llm-wiki",
       "target": "topic:concepts",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:concepts/research-feedback-loop",
+      "source": "research-feedback-loop",
       "target": "topic:concepts",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:concepts/second-brain-research-workflow",
+      "source": "second-brain-research-workflow",
       "target": "topic:concepts",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:comparisons/knowledge-tool-roles",
+      "source": "knowledge-tool-roles",
       "target": "topic:comparisons",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:queries/notebooklm-query-compounding",
+      "source": "notebooklm-query-compounding",
       "target": "topic:queries",
       "type": "categorized_under",
       "direction": "forward",
       "weight": 0.6
     },
     {
-      "source": "article:queries/ua-knowledge-graph-workflow",
+      "source": "ua-knowledge-graph-workflow",
       "target": "topic:queries",
       "type": "categorized_under",
       "direction": "forward",
@@ -2275,1902 +2696,3695 @@
     {
       "source": "knowledge-tool-roles",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "knowledge-tool-roles",
       "target": "second-brain-research-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "knowledge-tool-roles",
       "target": "llm-wiki",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "knowledge-tool-roles",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "advanced-mavlink",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "advanced-mavlink",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "advanced-mavlink",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "advanced-mavlink",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-knowledge-workflow",
       "target": "ai-personal-knowledge-management",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-knowledge-workflow",
       "target": "knowledge-tool-roles",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-knowledge-workflow",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-knowledge-workflow",
       "target": "second-brain-research-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-personal-knowledge-management",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-personal-knowledge-management",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-personal-knowledge-management",
       "target": "knowledge-tool-roles",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ai-personal-knowledge-management",
       "target": "second-brain-research-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ardupilot-architecture",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-architecture",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-architecture",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-architecture",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "computer-vision-drone",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "datalink-communication",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "datalink-communication",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "datalink-communication",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "datalink-communication",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-ai-agents",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-ai-agents",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-ai-agents",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-ai-agents",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-payload-systems",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-payload-systems",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-payload-systems",
       "target": "drone-power-battery",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-payload-systems",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-power-battery",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-power-battery",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-power-battery",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-regulations",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-regulations",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-regulations",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "drone-safety-failsafe",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-safety-failsafe",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-safety-failsafe",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-safety-failsafe",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-simulation",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-px4-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-simulation",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-px4-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-simulation",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-px4-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "drone-simulation",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-px4-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "dronecan-deep",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "dronecan-deep",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "dronecan-deep",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "dronecan-protocol",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-dronecan.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "dronecan-protocol",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-dronecan.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "dronecan-protocol",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-dronecan.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "flight-controller-hardware",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-hardware-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "flight-controller-hardware",
       "target": "ardupilot-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-hardware-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "flight-controller-hardware",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-hardware-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "flight-controller-hardware",
       "target": "companion-computer",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-hardware-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "flight-logging-analysis",
       "target": "px4-architecture-deep",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "flight-logging-analysis",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "flight-logging-analysis",
       "target": "sensor-calibration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ground-control-station",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ground-control-station",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ground-control-station",
       "target": "ardupilot-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ground-control-station",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ground-control-station",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "llm-wiki",
       "target": "ai-personal-knowledge-management",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "llm-wiki",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "llm-wiki",
       "target": "notebooklm-query-compounding",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "llm-wiki",
       "target": "ua-knowledge-graph-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "llm-wiki",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "llm-wiki",
       "target": "knowledge-tool-roles",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink-advanced-features",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced-features",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced-features",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced-features",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-advanced",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink-protocol-deep",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink-protocol-deep",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink-protocol-deep",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink-protocol",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-mavlink-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavlink-protocol",
       "target": "ardupilot-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-mavlink-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavlink-protocol",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-mavlink-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavlink-protocol",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-mavlink-reference.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavlink2-security",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink2-security",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavlink2-security",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavsdk",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavsdk",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mavsdk",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mission-planning",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mission-planning",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mission-planning",
       "target": "drone-payload-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "mission-planning",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "pid-tuning-control",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "pid-tuning-control",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "pid-tuning-control",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "pid-tuning-control",
       "target": "flight-logging-analysis",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-architecture-deep",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-architecture-deep",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-architecture-deep",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-cicd-pipeline",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-cicd-pipeline",
       "target": "px4-architecture-deep",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-cicd-pipeline",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-control-tuning",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-control-tuning",
       "target": "sensor-calibration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-control-tuning",
       "target": "drone-power-battery",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-control-tuning",
       "target": "flight-logging-analysis",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-flight-modes",
       "target": "llm-wiki",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-flight-modes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-flight-modes",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-flight-modes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-offboard-control",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-ros2-offboard-control.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-offboard-control",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-ros2-offboard-control.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-offboard-control",
       "target": "companion-computer",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-ros2-offboard-control.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-pid-tuning",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-pid-tuning",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-pid-tuning",
       "target": "flight-logging-analysis",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-pid-tuning",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-system-architecture",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-system-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-system-architecture",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-system-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-system-architecture",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-system-architecture.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-tuning-control",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-tuning-control",
       "target": "drone-power-battery",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-tuning-control",
       "target": "flight-logging-analysis",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "px4-tuning-control",
       "target": "px4-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "recon-swarm-project",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "recon-swarm-project",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "recon-swarm-project",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "recon-swarm-project",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "research-feedback-loop",
       "target": "llm-wiki",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "research-feedback-loop",
       "target": "notebooklm-query-compounding",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "research-feedback-loop",
       "target": "ua-knowledge-graph-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "research-feedback-loop",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced-integration",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced-integration",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced-integration",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced-integration",
       "target": "visual-positioning-odometry",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-advanced",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ros2-drone-deep",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "ros2-drone-deep",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "ros2-drone-deep",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "ros2-drone-integration",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ros2-drone-integration",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ros2-drone-integration",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "rtk-gps-precise-landing",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "rtk-gps-precise-landing",
       "target": "mission-planning",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "rtk-gps-precise-landing",
       "target": "visual-positioning-odometry",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "rtk-gps-precise-landing",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "second-brain-research-workflow",
       "target": "ai-personal-knowledge-management",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "second-brain-research-workflow",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "second-brain-research-workflow",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "second-brain-research-workflow",
       "target": "knowledge-tool-roles",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "sensor-calibration",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "sensor-calibration",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "sensor-calibration",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "swarm-coordination",
       "target": "px4-system-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "swarm-coordination",
       "target": "ardupilot-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "swarm-coordination",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "swarm-coordination",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "swarm-coordination",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "swarm-modes",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "swarm-modes",
       "target": "recon-swarm-project",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "swarm-modes",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "swarm-modes",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "visual-positioning-odometry",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "visual-positioning-odometry",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "visual-positioning-odometry",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "visual-positioning-odometry",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "voice-control-drone",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "voice-control-drone",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "voice-control-drone",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "voice-control-drone",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ardupilot",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "ardupilot",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "ardupilot",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "ardupilot",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink",
       "target": "ardupilot",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "mavlink",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "pixhawk",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "pixhawk",
       "target": "ardupilot",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "pixhawk",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "pixhawk",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-flight-stack",
       "target": "ardupilot",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-flight-stack",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-flight-stack",
       "target": "pixhawk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "px4-flight-stack",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     },
     {
       "source": "notebooklm-query-compounding",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "notebooklm-query-compounding",
       "target": "llm-wiki",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "notebooklm-query-compounding",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ua-knowledge-graph-workflow",
       "target": "llm-wiki",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ua-knowledge-graph-workflow",
       "target": "research-feedback-loop",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ua-knowledge-graph-workflow",
       "target": "ai-personal-knowledge-management",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ua-knowledge-graph-workflow",
       "target": "ai-knowledge-workflow",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ardupilot-plane-4-7",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ardupilot.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-plane-4-7",
       "target": "ardupilot",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ardupilot.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-plane-4-7",
       "target": "ardupilot-architecture",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ardupilot.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-plane-4-7",
       "target": "mission-planner",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ardupilot.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-plane-4-7",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ardupilot.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "betaflight",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-betaflight.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "betaflight",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-betaflight.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "betaflight",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-betaflight.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-hardware",
       "target": "drone-payload-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-hardware",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-ops",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-ops",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-ops",
       "target": "drone-payload-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-regulations",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-suasnews-regulation.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "drone-news-regulations",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-suasnews-regulation.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fpv-hardware",
       "target": "betaflight",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fpv-hardware",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fpv-hardware",
       "target": "drone-payload-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "mavsdk-release",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-mavsdk.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavsdk-release",
       "target": "pymavlink",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-mavsdk.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavsdk-release",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-mavsdk.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mavsdk-release",
       "target": "mavros",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-mavsdk.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mission-planner",
       "target": "ardupilot",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-missionplanner.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mission-planner",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-missionplanner.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mission-planner",
       "target": "qgroundcontrol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-missionplanner.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mission-planner",
       "target": "dronecan-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-missionplanner.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "opencv",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-opencv.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "opencv",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-opencv.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "opencv",
       "target": "drone-payload-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-opencv.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "opencv",
       "target": "yolo",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-opencv.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "opencv",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-opencv.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-v1-17",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-px4.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-v1-17",
       "target": "px4-architecture-deep",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-px4.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-v1-17",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-px4.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "px4-v1-17",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-px4.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "pymavlink",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-pymavlink.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "pymavlink",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-pymavlink.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "pymavlink",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-pymavlink.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "qgroundcontrol",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-qgroundcontrol.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "qgroundcontrol",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-qgroundcontrol.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "qgroundcontrol",
       "target": "mission-planner",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-qgroundcontrol.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "qgroundcontrol",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-qgroundcontrol.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ros2-lyrical",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ros2.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ros2-lyrical",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ros2.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ros2-lyrical",
       "target": "mavros",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-ros2.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "yolo",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "yolo",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "yolo",
       "target": "drone-payload-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "yolo",
       "target": "opencv",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "dji-everest-mapping",
       "target": "dji",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-everest-mapping",
       "target": "dji-terra",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-everest-mapping",
       "target": "ops-mission",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-terra",
       "target": "dji",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-terra",
       "target": "drone-ai",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-terra",
       "target": "ground-control-station",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fcc-drone-regulations",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "fcc-drone-regulations",
       "target": "drone-hw",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "fcc-drone-regulations",
       "target": "terra-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "lockheed-martin-morfius",
       "target": "swarm",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "lockheed-martin-morfius",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "lockheed-martin-morfius",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "yolo-v8-4-112",
       "target": "yolo",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "yolo-v8-4-112",
       "target": "drone-ai",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "yolo-v8-4-112",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-yolo.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "doordash-air",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "doordash-air",
       "target": "ops-mission",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "doordash-air",
       "target": "matternet",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "droneshield",
       "target": "ai-agent",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "droneshield",
       "target": "drone-ai",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "droneshield",
       "target": "lockheed-martin-morfius",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "perceptual-robotics",
       "target": "drone-ai",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "perceptual-robotics",
       "target": "ops-mission",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "perceptual-robotics",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "terra-drone",
       "target": "fcc-drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "terra-drone",
       "target": "drone-power-battery",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "terra-drone",
       "target": "drone-hw",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "xtend-ai-robotics",
       "target": "ai-agent",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "xtend-ai-robotics",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "xtend-ai-robotics",
       "target": "drone-sw",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "amazon-mk30-safety-incident",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "amazon-mk30-safety-incident",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "amazon-mk30-safety-incident",
       "target": "dji-easa-sail-bvlos",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "brinc-emergency-drone-funding",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "brinc-emergency-drone-funding",
       "target": "ops-mission",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "brinc-emergency-drone-funding",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "chained-attacks-drone-fl",
       "target": "federated-lightweight-intrusion-detection",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-chained-attacks-on-drone-based-federated-learning-from-netwo.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "chained-attacks-drone-fl",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-chained-attacks-on-drone-based-federated-learning-from-netwo.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "chained-attacks-drone-fl",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-chained-attacks-on-drone-based-federated-learning-from-netwo.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "distributed-aerial-surveillance-swarm",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-distributed-continuous-aerial-surveillance-by-uas-swarms-und.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "distributed-aerial-surveillance-swarm",
       "target": "recon-swarm-project",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-distributed-continuous-aerial-surveillance-by-uas-swarms-und.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "distributed-aerial-surveillance-swarm",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-distributed-continuous-aerial-surveillance-by-uas-swarms-und.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-easa-sail-bvlos",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-easa-sail-bvlos",
       "target": "fcc-drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "dji-easa-sail-bvlos",
       "target": "doordash-air",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "emnn-doa-estimation",
       "target": "stacked-intelligent-metasurfaces",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-electromagnetic-neural-network-for-direction-of-arrival-esti.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "emnn-doa-estimation",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-electromagnetic-neural-network-for-direction-of-arrival-esti.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "emnn-doa-estimation",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-electromagnetic-neural-network-for-direction-of-arrival-esti.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "federated-lightweight-intrusion-detection",
       "target": "chained-attacks-drone-fl",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-federated-lightweight-intrusion-detection-in-drone-swarms-wi.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "federated-lightweight-intrusion-detection",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-federated-lightweight-intrusion-detection-in-drone-swarms-wi.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "federated-lightweight-intrusion-detection",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-federated-lightweight-intrusion-detection-in-drone-swarms-wi.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "flight-ready-lidar-inertial-odometry",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-flight-ready-lidar-inertial-odometry-for-embedded-drone-plat.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "flight-ready-lidar-inertial-odometry",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-flight-ready-lidar-inertial-odometry-for-embedded-drone-plat.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "flight-ready-lidar-inertial-odometry",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-flight-ready-lidar-inertial-odometry-for-embedded-drone-plat.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "indi-stability-tilt-rotor-vtol",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-linear-stability-analysis-of-an-indi-pitch-rate-controller-u.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "indi-stability-tilt-rotor-vtol",
       "target": "px4-architecture-deep",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-linear-stability-analysis-of-an-indi-pitch-rate-controller-u.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "indi-stability-tilt-rotor-vtol",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-linear-stability-analysis-of-an-indi-pitch-rate-controller-u.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "montis-avalanche-faa-approval",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "montis-avalanche-faa-approval",
       "target": "ops-mission",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "montis-avalanche-faa-approval",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "spatial-dubins-quadrotor-control",
       "target": "mission-planning",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-high-level-spatial-dubins-airplane-based-reference-smoothing.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "spatial-dubins-quadrotor-control",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-high-level-spatial-dubins-airplane-based-reference-smoothing.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "spatial-dubins-quadrotor-control",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-high-level-spatial-dubins-airplane-based-reference-smoothing.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "stacked-intelligent-metasurfaces",
       "target": "emnn-doa-estimation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-stacked-intelligent-metasurfaces-assisted-uav-communications.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "stacked-intelligent-metasurfaces",
       "target": "vertical-pinching-antenna-systems",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-stacked-intelligent-metasurfaces-assisted-uav-communications.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "stacked-intelligent-metasurfaces",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-stacked-intelligent-metasurfaces-assisted-uav-communications.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "vertical-pinching-antenna-systems",
       "target": "stacked-intelligent-metasurfaces",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-vertical-pinching-antenna-systems-v-pas-aided-uav-communicat.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "vertical-pinching-antenna-systems",
       "target": "emnn-doa-estimation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-vertical-pinching-antenna-systems-v-pas-aided-uav-communicat.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "vertical-pinching-antenna-systems",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-vertical-pinching-antenna-systems-v-pas-aided-uav-communicat.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "wing-nhs-medical-delivery",
       "target": "doordash-air",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "wing-nhs-medical-delivery",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "wing-nhs-medical-delivery",
       "target": "ops-mission",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "zipline-us-expansion",
       "target": "wing-nhs-medical-delivery",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "zipline-us-expansion",
       "target": "doordash-air",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "zipline-us-expansion",
       "target": "drone-regulations",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "active-sensing-uav-communication",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/datalink/active-sensing-uav-communication.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "active-sensing-uav-communication",
       "target": "mavlink-protocol",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/datalink/active-sensing-uav-communication.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "active-sensing-uav-communication",
       "target": "drone-hw",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/datalink/active-sensing-uav-communication.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "cross-layered-medical-drone-coordination",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/cross-layered-medical-drone-coordination.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "cross-layered-medical-drone-coordination",
       "target": "px4-flight-stack",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/cross-layered-medical-drone-coordination.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "cross-layered-medical-drone-coordination",
       "target": "mavsdk",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/cross-layered-medical-drone-coordination.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "cross-layered-medical-drone-coordination",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/cross-layered-medical-drone-coordination.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "decentralized-swarm-gps-denied",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/decentralized-swarm-gps-denied.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "decentralized-swarm-gps-denied",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/decentralized-swarm-gps-denied.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "decentralized-swarm-gps-denied",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/swarm/decentralized-swarm-gps-denied.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "digital-twin-intent-drone-networks",
       "target": "datalink-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/datalink/digital-twin-intent-drone-networks.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "digital-twin-intent-drone-networks",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/datalink/digital-twin-intent-drone-networks.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "digital-twin-intent-drone-networks",
       "target": "active-sensing-uav-communication",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/datalink/digital-twin-intent-drone-networks.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "e2e-fly-end-to-end-quadrotor",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/e2e-fly-end-to-end-quadrotor.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "e2e-fly-end-to-end-quadrotor",
       "target": "rl-quadrotor-tunable-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/e2e-fly-end-to-end-quadrotor.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "e2e-fly-end-to-end-quadrotor",
       "target": "px4-offboard-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/e2e-fly-end-to-end-quadrotor.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "lightweight-safe-rl-uav",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/lightweight-safe-rl-uav.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "lightweight-safe-rl-uav",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/lightweight-safe-rl-uav.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "lightweight-safe-rl-uav",
       "target": "rl-quadrotor-tunable-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/lightweight-safe-rl-uav.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mars-dragonfly-modular-aerial",
       "target": "swarm-coordination",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/mars-dragonfly-modular-aerial.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mars-dragonfly-modular-aerial",
       "target": "drone-hw",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/mars-dragonfly-modular-aerial.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "mars-dragonfly-modular-aerial",
       "target": "flight-controller-hardware",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/mars-dragonfly-modular-aerial.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "multi-modal-human-intent-uav",
       "target": "voice-control-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/multi-modal-human-intent-uav.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "multi-modal-human-intent-uav",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/multi-modal-human-intent-uav.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "multi-modal-human-intent-uav",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/multi-modal-human-intent-uav.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "neurosymland-landing-assessment",
       "target": "computer-vision-drone",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/neurosymland-landing-assessment.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "neurosymland-landing-assessment",
       "target": "drone-safety-failsafe",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/neurosymland-landing-assessment.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "neurosymland-landing-assessment",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/ai-autonomy/neurosymland-landing-assessment.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "rl-quadrotor-tunable-control",
       "target": "px4-flight-modes",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/rl-quadrotor-tunable-control.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "rl-quadrotor-tunable-control",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/rl-quadrotor-tunable-control.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "rl-quadrotor-tunable-control",
       "target": "ros2-drone-integration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/rl-quadrotor-tunable-control.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "skyjepa-world-models",
       "target": "e2e-fly-end-to-end-quadrotor",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/skyjepa-world-models.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "skyjepa-world-models",
       "target": "drone-simulation",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/skyjepa-world-models.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "skyjepa-world-models",
       "target": "drone-ai-agents",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/flight-control/skyjepa-world-models.md"
+      ],
+      "confidence": "high"
     },
     {
       "source": "ardupilot-params-by-version",
       "target": "fc-vendor-param-guide",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "ArduPilot 공식 릴리즈노트 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "cuav-setup-params",
       "target": "fc-vendor-param-guide",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "CUAV 공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "cuav-setup-params",
       "target": "sensor-calibration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "CUAV 공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "pixhawk-setup-params",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "cuav-setup-params",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "holybro-setup-params",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "px4-params-by-version",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "ardupilot-params-by-version",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "sensor-calibration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "fc-vendor-param-guide",
       "target": "pid-tuning-control",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "holybro-setup-params",
       "target": "fc-vendor-param-guide",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "Holybro 공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "holybro-setup-params",
       "target": "pixhawk-setup-params",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "Holybro 공식 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "pixhawk-setup-params",
       "target": "fc-vendor-param-guide",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "Pixhawk 표준(DS-009)·Holybro 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "pixhawk-setup-params",
       "target": "px4-params-by-version",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "Pixhawk 표준(DS-009)·Holybro 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "pixhawk-setup-params",
       "target": "sensor-calibration",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "Pixhawk 표준(DS-009)·Holybro 문서 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "px4-params-by-version",
       "target": "fc-vendor-param-guide",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "PX4 공식 릴리즈노트 기반 정리"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "param-diff-copter-4-6-0-4-7-0",
       "target": "ardupilot-params-by-version",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 파라미터 메타데이터 자동 diff"
+      ],
+      "confidence": "high"
     },
     {
       "source": "param-diff-px4-1-16-0-1-17-0",
       "target": "px4-params-by-version",
-      "type": "wikilink"
+      "type": "wikilink",
+      "evidence": [
+        "공식 파라미터 메타데이터 자동 diff"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "agile-quadrotor-learning",
+      "target": "drone-ai",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-learning-agile-quadrotor-flight-in-the-real-world-rss-2026.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "agile-quadrotor-learning",
+      "target": "px4-flight-stack",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-learning-agile-quadrotor-flight-in-the-real-world-rss-2026.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "agile-quadrotor-learning",
+      "target": "drone-simulation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-learning-agile-quadrotor-flight-in-the-real-world-rss-2026.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-delivery-news",
+      "target": "doordash-air",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-delivery-news",
+      "target": "dji-osmo-pocket-4",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-delivery-news",
+      "target": "wing-nhs-medical-delivery",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "dji-everest-mapping",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "dji-terra",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "drone-delivery-news",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "doordash-air",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "event-camera-drone",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-motion-aware-event-suppression-for-event-cameras-rss-2026.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "event-camera-drone",
+      "target": "drone-ai",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-motion-aware-event-suppression-for-event-cameras-rss-2026.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "event-camera-drone",
+      "target": "drone-hw",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-motion-aware-event-suppression-for-event-cameras-rss-2026.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "gnn-uav-anomaly-detection",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-graph-neural-network-driven-anomaly-detection-framework-for-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnn-uav-anomaly-detection",
+      "target": "drone-ai-agents",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-graph-neural-network-driven-anomaly-detection-framework-for-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnn-uav-anomaly-detection",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-graph-neural-network-driven-anomaly-detection-framework-for-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gps-uav-imu",
+      "target": "decentralized-swarm-gps-denied",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "gps-uav-imu",
+      "target": "visual-positioning-odometry",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "hglrc-talon-cinewhoop",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hglrc-talon-cinewhoop",
+      "target": "flight-controller-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hglrc-talon-cinewhoop",
+      "target": "betaflight",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "high-speed-drone-tracking",
+      "target": "drone-payload-systems",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-this-drone-can-chase-f1-cars.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "high-speed-drone-tracking",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-this-drone-can-chase-f1-cars.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "high-speed-drone-tracking",
+      "target": "event-camera-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-this-drone-can-chase-f1-cars.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavlink-m-interoperability",
+      "target": "mavlink-protocol",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-a-new-era-of-interoperable-payloads-begins-at-the-dronecode-.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink-m-interoperability",
+      "target": "mavlink-protocol-deep",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-a-new-era-of-interoperable-payloads-begins-at-the-dronecode-.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink-m-interoperability",
+      "target": "px4-flight-stack",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-a-new-era-of-interoperable-payloads-begins-at-the-dronecode-.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink-m-interoperability",
+      "target": "qgroundcontrol",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-a-new-era-of-interoperable-payloads-begins-at-the-dronecode-.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m",
+      "target": "flight-ready-lidar-inertial-odometry",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m",
+      "target": "recon-swarm-project",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "radial-impeller-drone",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-radial-impeller-drone-fly-by-drone-fpv-diy-rc-fpvdrone-quadm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "radial-impeller-drone",
+      "target": "flight-controller-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-radial-impeller-drone-fly-by-drone-fpv-diy-rc-fpvdrone-quadm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "radial-impeller-drone",
+      "target": "betaflight",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-radial-impeller-drone-fly-by-drone-fpv-diy-rc-fpvdrone-quadm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-isac-cross-region",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/arxiv/fetch-2026-07-31-arxiv-uav-swarming-for-air-ground-isac-via-cross-region-cooperatio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-isac-cross-region",
+      "target": "datalink-communication",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/arxiv/fetch-2026-07-31-arxiv-uav-swarming-for-air-ground-isac-via-cross-region-cooperatio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-isac-cross-region",
+      "target": "mavlink-protocol",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/arxiv/fetch-2026-07-31-arxiv-uav-swarming-for-air-ground-isac-via-cross-region-cooperatio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-swarm-target-localization",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-detection-aided-enhanced-reweighted-atomic-norm-minimization.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-swarm-target-localization",
+      "target": "decentralized-swarm-gps-denied",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-detection-aided-enhanced-reweighted-atomic-norm-minimization.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-swarm-target-localization",
+      "target": "uav-isac-cross-region",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-detection-aided-enhanced-reweighted-atomic-norm-minimization.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "auterion",
+      "target": "px4-flight-stack",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-auterionos-powering-autonomous-mass-across-air-land-sea-aute.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "auterion",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-auterionos-powering-autonomous-mass-across-air-land-sea-aute.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "auterion",
+      "target": "drone-sw",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-auterionos-powering-autonomous-mass-across-air-land-sea-aute.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "auterion",
+      "target": "ground-control-station",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-auterionos-powering-autonomous-mass-across-air-land-sea-aute.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "bitcraze",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-bitcraze-at-icra-2026-crazyflie-swarm-highlights-from-vienna.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "bitcraze",
+      "target": "drone-sw",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-bitcraze-at-icra-2026-crazyflie-swarm-highlights-from-vienna.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "bitcraze",
+      "target": "drone-hw",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-bitcraze-at-icra-2026-crazyflie-swarm-highlights-from-vienna.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-osmo-pocket-4",
+      "target": "dji-rs-5",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-unbox-slip-it-into-your-pocket-start-rolling-osmo-pocket-4.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-osmo-pocket-4",
+      "target": "drone-payload-systems",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-unbox-slip-it-into-your-pocket-start-rolling-osmo-pocket-4.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-rs-5",
+      "target": "dji-osmo-pocket-4",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-three-moves-one-gimbal-all-in-dji-rs-5.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-rs-5",
+      "target": "drone-payload-systems",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-three-moves-one-gimbal-all-in-dji-rs-5.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "kite-gcs",
+      "target": "ardupilot",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-rc-news-kite-gcs-goes-into-release-candidate-a-brand-new-mod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "kite-gcs",
+      "target": "px4-flight-stack",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-rc-news-kite-gcs-goes-into-release-candidate-a-brand-new-mod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "kite-gcs",
+      "target": "ground-control-station",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-rc-news-kite-gcs-goes-into-release-candidate-a-brand-new-mod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "kite-gcs",
+      "target": "mission-planner",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-rc-news-kite-gcs-goes-into-release-candidate-a-brand-new-mod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "kite-gcs",
+      "target": "qgroundcontrol",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-31-yt-rc-news-kite-gcs-goes-into-release-candidate-a-brand-new-mod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "ardupilot",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "mavsdk",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ratefpv",
+      "target": "flight-controller-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-ratefpv-f4-40a-aio-flight-controller-a-first-look.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ratefpv",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-ratefpv-f4-40a-aio-flight-controller-a-first-look.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ratefpv",
+      "target": "betaflight",
+      "type": "wikilink",
+      "evidence": [
+        "raw/youtube/fetch-2026-07-30-yt-ratefpv-f4-40a-aio-flight-controller-a-first-look.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-114",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-114",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-114",
+      "target": "opencv",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yolo.md"
+      ],
+      "confidence": "high"
     }
   ],
   "layers": [
