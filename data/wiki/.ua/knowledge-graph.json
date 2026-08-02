@@ -2403,6 +2403,94 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "drone-first-responder-dfr",
+      "name": "Drone as First Responder (DFR)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-08-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "rgb-ir-fusion-uav-detection",
+      "name": "RGB-IR Fusion for UAV Object Detection",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-autonomy"
+      ],
+      "updated": "2026-08-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-115",
+      "name": "YOLO v8.4.115",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-autonomy"
+      ],
+      "updated": "2026-08-02",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "geocomm",
+      "name": "GeoComm",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-08-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "skyfireai",
+      "name": "SkyfireAI",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "ai-agent"
+      ],
+      "updated": "2026-08-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "wallefpv",
+      "name": "WalleFPV",
+      "layer": "Entities",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "flight-control"
+      ],
+      "updated": "2026-08-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     }
   ],
   "edges": [
@@ -6385,6 +6473,267 @@
         "inbox/fetch-2026-08-01-yolo.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "drone-first-responder-dfr",
+      "target": "geocomm",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-first-responder-dfr",
+      "target": "skyfireai",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-first-responder-dfr",
+      "target": "doordash-air",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-first-responder-dfr",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-first-responder-dfr",
+      "target": "mission-planning",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-first-responder-dfr",
+      "target": "ops-mission",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rgb-ir-fusion-uav-detection",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-crossref-etfnet-an-efficient-transformer-based-rgbir-fusion-network-f.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rgb-ir-fusion-uav-detection",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-crossref-etfnet-an-efficient-transformer-based-rgbir-fusion-network-f.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rgb-ir-fusion-uav-detection",
+      "target": "drone-ai-agents",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-crossref-etfnet-an-efficient-transformer-based-rgbir-fusion-network-f.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-115",
+      "target": "yolo-v8-4-114",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-115",
+      "target": "yolo-v8-4-112",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-115",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-115",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "geocomm",
+      "target": "droneshield",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "geocomm",
+      "target": "auterion",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "geocomm",
+      "target": "doordash-air",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "geocomm",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "geocomm",
+      "target": "mission-planning",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skyfireai",
+      "target": "geocomm",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skyfireai",
+      "target": "auterion",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skyfireai",
+      "target": "droneshield",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skyfireai",
+      "target": "drone-ai-agents",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skyfireai",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wallefpv",
+      "target": "ratefpv",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yt-wallefpv-lightening3-hd-quad-a-real-hoot-and-only-53g-with-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wallefpv",
+      "target": "bitcraze",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yt-wallefpv-lightening3-hd-quad-a-real-hoot-and-only-53g-with-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wallefpv",
+      "target": "pixhawk",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yt-wallefpv-lightening3-hd-quad-a-real-hoot-and-only-53g-with-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wallefpv",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yt-wallefpv-lightening3-hd-quad-a-real-hoot-and-only-53g-with-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wallefpv",
+      "target": "flight-controller-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yt-wallefpv-lightening3-hd-quad-a-real-hoot-and-only-53g-with-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wallefpv",
+      "target": "drone-power-battery",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yt-wallefpv-lightening3-hd-quad-a-real-hoot-and-only-53g-with-w.md"
+      ],
+      "confidence": "medium"
     }
   ],
   "layers": [
