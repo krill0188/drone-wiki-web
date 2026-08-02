@@ -17,8 +17,8 @@ if [[ ! -d "$WIKI_SRC" ]]; then
   exit 1
 fi
 
-# 지식 레이어 동기화
-for dir in concepts entities comparisons queries; do
+# 지식 레이어 동기화 (ontology/는 G2/G3용 클래스 계층 조회 테이블, 2026-08-02)
+for dir in concepts entities comparisons queries ontology; do
   src="$WIKI_SRC/$dir"
   dst="$DATA_WIKI/$dir"
   if [[ -d "$src" && -n "$(ls -A "$src")" ]]; then
@@ -44,14 +44,17 @@ if [[ -f "$BRIEF_SRC" ]]; then
   echo "$LOG_PREFIX  daily-briefing: 동기화"
 fi
 
-# 지식 그래프 동기화
-GRAPH_SRC="$WIKI_SRC/.ua/knowledge-graph.json"
-GRAPH_DST="$DATA_WIKI/.ua/knowledge-graph.json"
+# 지식 그래프 동기화 — G0(2026-08-02): 전용 파일(drone-knowledge-graph.json)로
+# 분리. understand-anything 플러그인이 ~/2nd/.ua/knowledge-graph.json을
+# 코드베이스 구조 그래프 용도로 같이 쓰고 있어(우연한 파일명 충돌) 우리
+# 드론 지식그래프만 별도 이름으로 뗐다 — 구 파일은 건드리지 않는다.
+GRAPH_SRC="$WIKI_SRC/.ua/drone-knowledge-graph.json"
+GRAPH_DST="$DATA_WIKI/.ua/drone-knowledge-graph.json"
 if [[ -f "$GRAPH_SRC" ]]; then
   mkdir -p "$(dirname "$GRAPH_DST")"
   cp "$GRAPH_SRC" "$GRAPH_DST"
   nodes=$(python3 -c "import json; d=json.load(open('$GRAPH_SRC')); print(len(d.get('nodes',[])))" 2>/dev/null || echo "?")
-  echo "$LOG_PREFIX  knowledge-graph: ${nodes}개 노드"
+  echo "$LOG_PREFIX  drone-knowledge-graph: ${nodes}개 노드"
 fi
 
 # Phase 2: 임베딩 벡터 동기화 (scripts/embed-docs.py 산출물 — 수동/주기적으로

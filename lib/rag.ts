@@ -2,6 +2,7 @@ import fs from "fs"
 import path from "path"
 import { spawnSync } from "child_process"
 import matter from "gray-matter"
+import { expandQueryClassTerms } from "./ontology"
 
 function resolveWikiRoot() {
   const envPath = process.env.WIKI_PATH
@@ -164,6 +165,12 @@ function hybridScore(
 export function ragSearch(query: string, topK = 5): RagSource[] {
   const docs = loadAllDocs()
   const qTokens = tokenize(query)
+  // G3(2026-08-02): 질의가 온톨로지 상위 클래스(예: FlightStack)를 가리키면
+  // 하위 클래스명(PX4/ArduPilot)을 검색 토큰에 추가 — GraphRAG(1-hop 이웃
+  // 확장)를 넘어 클래스 계층까지 아는 검색으로 확장(ONTOLOGY_GUIDED_GRAPHRAG_PLAN.md G3).
+  for (const cls of expandQueryClassTerms(query, WIKI_ROOT)) {
+    for (const t of tokenize(cls)) qTokens.add(t)
+  }
   const embeddings = loadEmbeddings()
   const queryVec = embeddings.size > 0 ? embedQuery(query) : null
 
@@ -234,7 +241,12 @@ interface GraphNode { id: string; name: string }
 interface GraphEdge { source: string; target: string }
 
 function loadGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
+  // G0(2026-08-02): 전용 파일명으로 분리 — 2nd Brain 저장소에 설치된
+  // understand-anything 플러그인이 knowledge-graph.json을 코드베이스
+  // 구조 그래프 용도로 같은 경로에 쓰고 있어(우연한 파일명 충돌) 우리
+  // 드론 지식그래프만 별도 파일로 뗐다. 구 경로는 폴백으로만 유지.
   const candidates = [
+    path.join(WIKI_ROOT, ".ua", "drone-knowledge-graph.json"),
     path.join(WIKI_ROOT, ".ua", "knowledge-graph.json"),
     path.join(WIKI_ROOT, "knowledge-graph.json"),
   ]
