@@ -83,7 +83,7 @@ export default function WikiTreeNav() {
                   const active = pathname === `/wiki/${p.slug}`
                   return (
                     <Link
-                      key={p.slug}
+                      key={`${p.layer}-${p.slug}`}
                       href={`/wiki/${p.slug}`}
                       title={p.title}
                       className={`flex items-center gap-1.5 px-2 py-1 rounded-md truncate text-[13px] ${
