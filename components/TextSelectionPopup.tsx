@@ -18,6 +18,7 @@ export default function TextSelectionPopup({ containerRef, sourceSlug, sourceTit
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null)
   const [selectedText, setSelectedText] = useState("")
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle")
+  const [saveError, setSaveError] = useState<string | null>(null)
 
   useEffect(() => {
     const handleUp = (e: MouseEvent) => {
@@ -56,16 +57,23 @@ export default function TextSelectionPopup({ containerRef, sourceSlug, sourceTit
 
   const save = async () => {
     setSaveState("saving")
+    setSaveError(null)
     try {
       const res = await fetch("/api/highlights", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sourceSlug, sourceTitle, text: selectedText }),
       })
-      if (!res.ok) throw new Error()
+      const data = await res.json().catch(() => null)
+      if (!res.ok) {
+        setSaveError(data?.error ?? "저장에 실패했습니다.")
+        setSaveState("error")
+        return
+      }
       setSaveState("saved")
       setTimeout(() => setPos(null), 900)
     } catch {
+      setSaveError("네트워크 오류로 저장하지 못했습니다.")
       setSaveState("error")
     }
   }
@@ -74,16 +82,21 @@ export default function TextSelectionPopup({ containerRef, sourceSlug, sourceTit
     <div
       ref={popupRef}
       onMouseDown={(e) => e.preventDefault()}
-      className="fixed z-50 flex gap-1 bg-slate-900 dark:bg-slate-700 text-white rounded-lg shadow-lg px-1.5 py-1.5 text-xs"
+      className="fixed z-50 flex flex-col gap-1 bg-slate-900 dark:bg-slate-700 text-white rounded-lg shadow-lg px-1.5 py-1.5 text-xs max-w-[280px]"
       style={{ top: pos.top, left: pos.left, transform: "translate(-50%, -100%)" }}
     >
-      <button onClick={ask} className="px-2.5 py-1.5 rounded-md hover:bg-white/10 whitespace-nowrap">
-        🤖 AI에게 질문하기
-      </button>
-      <div className="w-px bg-white/20" />
-      <button onClick={save} disabled={saveState === "saving"} className="px-2.5 py-1.5 rounded-md hover:bg-white/10 whitespace-nowrap disabled:opacity-50">
-        {saveState === "saved" ? "✅ 저장됨" : saveState === "error" ? "⚠️ 실패" : saveState === "saving" ? "저장 중..." : "💾 지식으로 저장하기"}
-      </button>
+      <div className="flex gap-1">
+        <button onClick={ask} className="px-2.5 py-1.5 rounded-md hover:bg-white/10 whitespace-nowrap">
+          🤖 AI에게 질문하기
+        </button>
+        <div className="w-px bg-white/20" />
+        <button onClick={save} disabled={saveState === "saving"} className="px-2.5 py-1.5 rounded-md hover:bg-white/10 whitespace-nowrap disabled:opacity-50">
+          {saveState === "saved" ? "✅ 저장됨" : saveState === "error" ? "⚠️ 실패" : saveState === "saving" ? "저장 중..." : "💾 지식으로 저장하기"}
+        </button>
+      </div>
+      {saveState === "error" && saveError && (
+        <div className="px-2 pb-1 text-[11px] text-amber-300 leading-snug">{saveError}</div>
+      )}
     </div>
   )
 }
