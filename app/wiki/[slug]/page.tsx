@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { getAllPages, getPageBySlug } from "@/lib/wiki"
 import { DOMAIN_META } from "@/lib/types"
+import { WikiDocSync } from "@/components/WikiDocContext"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -25,6 +26,8 @@ export default async function WikiDetailPage({ params }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
+      <WikiDocSync slug={page.slug} title={page.title} content={page.content} />
+
       {/* 빵부스러기 */}
       <div className="flex items-center gap-2 text-xs text-slate-400 mb-6">
         <Link href="/" className="hover:text-cyan-600">홈</Link>

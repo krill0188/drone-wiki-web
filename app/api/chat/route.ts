@@ -1,43 +1,59 @@
-import { NextRequest, NextResponse } from "next/server"
-import { spawn } from "child_process"
-import { ragSearch, expandGraphNeighbors, searchNews, type RagSource, type NewsHit } from "@/lib/rag"
+import { NextRequest } from "next/server"
+import {
+  streamText,
+  convertToModelMessages,
+  createUIMessageStreamResponse,
+  toUIMessageStream,
+  type UIMessage,
+} from "ai"
+import { openrouter } from "@openrouter/ai-sdk-provider"
+import { ragSearch, searchNews, type RagSource, type NewsHit } from "@/lib/rag"
+import { graphRagSearch } from "@/lib/graphrag"
+import type { DocContext } from "@/lib/types"
 
-const UNAVAILABLE_MSG =
-  "⚠️ AI 답변을 생성할 수 없습니다.\n\n" +
-  "아래 참고 문서를 직접 확인하거나, 지식 그래프에서 관련 개념을 탐색해보세요."
+export const maxDuration = 60
 
-function buildPrompt(
-  question: string,
+const MODEL_ID = "anthropic/claude-haiku-4.5"
+const DOC_CONTEXT_MAX_CHARS = 4000
+
+function buildSystemPrompt(
+  docContext: DocContext | null,
   sources: RagSource[],
-  neighbors: { id: string; name: string }[],
+  graphBlock: string,
   newsHits: NewsHit[]
 ): string {
   const contextParts = sources.map(
     (s, i) => `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}`
   )
-  if (neighbors.length > 0) {
-    contextParts.push(
-      `[연관 개념]\n${neighbors.map((n) => `- ${n.name}`).join("\n")}`
-    )
-  }
   const newsParts = newsHits.map(
     (n, i) => `[N${i + 1}] (${n.type}${n.region ? `/${n.region}` : ""}) ${n.title}${n.excerpt ? ` — ${n.excerpt}` : ""}`
   )
 
-  return `당신은 드론 도메인 전문가 AI입니다. 아래 지식 베이스 문서와 최신 수집 뉴스를 근거로 질문에 완전하고 상세하게 답변하세요.
+  const currentDocBlock = docContext
+    ? `사용자가 지금 화면에서 보고 있는 문서:
+<current-document slug="${docContext.slug}" title="${docContext.title}">
+${docContext.content.slice(0, DOC_CONTEXT_MAX_CHARS)}
+</current-document>
 
-<knowledge-base>
+`
+    : ""
+
+  return `당신은 드론 도메인 전문가 AI입니다. 아래 컨텍스트(현재 보고 있는 문서, RAG로 검색된 지식 베이스, 최신 뉴스)를 근거로 사용자 질문에 완전하고 상세하게 답변하세요.
+
+${currentDocBlock}<knowledge-base>
 ${contextParts.join("\n\n") || "(관련 위키 문서 없음)"}
 </knowledge-base>
 
-<latest-news>
+${graphBlock ? `${graphBlock}\n\n` : ""}<latest-news>
 ${newsParts.join("\n") || "(관련 최신 뉴스 없음)"}
 </latest-news>
 
-질문: ${question}
-
 답변 지침:
-- 제공된 문서와 최신 뉴스를 종합하여 구체적으로 답변
+- <current-document>가 있으면 그 내용을 최우선 근거로 삼아 답변
+- 지식 베이스와 최신 뉴스를 종합하여 구체적으로 답변
+- <graph-connections>가 있으면 서로 다른 주제·도메인 사이의 연결고리를 설명할 때
+  적극 활용해, 문서 하나로는 안 보이는 융합적 답변을 제공(특정 두 분야로 한정하지 말고
+  질문에 실제로 걸리는 모든 영역을 자유롭게 연결)
 - 최신 동향·채용·정부사업·방산 질문이면 <latest-news>를 적극 활용
 - 핵심 개념, 작동 원리, 기술 비교, 실용 정보를 충분히 포함
 - 소제목이나 목록을 활용해 가독성 있게 구성
@@ -45,83 +61,53 @@ ${newsParts.join("\n") || "(관련 최신 뉴스 없음)"}
 - 한국어로 답변`
 }
 
-async function callOpenRouter(prompt: string): Promise<string> {
-  const apiKey = process.env.OPENROUTER_API_KEY
-  if (!apiKey) return ""
-
-  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-      "HTTP-Referer": "https://drone-wiki-web.vercel.app",
-      "X-Title": "DroneWiki AI Q&A",
-    },
-    body: JSON.stringify({
-      model: "anthropic/claude-haiku-4.5",
-      max_tokens: 2048,
-      messages: [{ role: "user", content: prompt }],
-    }),
-    signal: AbortSignal.timeout(60000),
-  })
-
-  if (!res.ok) return ""
-  const data = await res.json()
-  return data.choices?.[0]?.message?.content ?? ""
-}
-
-function callClaudeCli(prompt: string): Promise<string> {
-  return new Promise((resolve) => {
-    const proc = spawn("claude", ["-p"], {
-      stdio: ["pipe", "pipe", "pipe"],
-      timeout: 90000,
-    })
-    let out = ""
-    let err = ""
-    proc.stdout.on("data", (d: Buffer) => { out += d.toString() })
-    proc.stderr.on("data", (d: Buffer) => { err += d.toString() })
-    proc.on("error", () => resolve(""))
-    proc.on("close", (code) => {
-      if (code === 0 && out.trim()) resolve(out.trim())
-      else if (err.trim() && !err.includes("command not found")) resolve(err.trim())
-      else resolve("")
-    })
-    proc.stdin.write(prompt)
-    proc.stdin.end()
-  })
-}
-
-async function generateAnswer(prompt: string): Promise<string> {
-  // 1순위: OpenRouter API (Vercel 공개 서비스)
-  const orAnswer = await callOpenRouter(prompt).catch(() => "")
-  if (orAnswer) return orAnswer
-
-  // 2순위: 로컬 claude CLI 폴백
-  return callClaudeCli(prompt)
+function extractQuestion(messages: UIMessage[]): string {
+  const lastUser = [...messages].reverse().find((m) => m.role === "user")
+  if (!lastUser) return ""
+  return lastUser.parts
+    .filter((p): p is { type: "text"; text: string } => p.type === "text")
+    .map((p) => p.text)
+    .join("\n")
+    .trim()
 }
 
 export async function POST(req: NextRequest) {
-  const { question } = await req.json()
-  if (!question?.trim()) {
-    return NextResponse.json({ error: "question required" }, { status: 400 })
-  }
+  const { messages, docContext }: { messages: UIMessage[]; docContext?: DocContext | null } =
+    await req.json()
 
-  const sources = ragSearch(question, 5)
-  const newsHits = searchNews(question, 4)
-  const neighbors = sources.length > 0
-    ? expandGraphNeighbors(sources.map((s) => s.slug), 4)
-    : []
+  const question = extractQuestion(messages)
+  // 현재 보고 있는 문서 제목을 검색어에 섞어 RAG 검색을 문서 맥락에 맞춰 편향시킨다.
+  const ragQuery = docContext ? `${docContext.title} ${question}` : question
 
-  const prompt = sources.length > 0 || newsHits.length > 0
-    ? buildPrompt(question, sources, neighbors, newsHits)
-    : `드론 전문가로서 다음 질문에 한국어로 명확하게 답변하세요.\n\n질문: ${question}`
+  const sources = ragQuery ? ragSearch(ragQuery, 5) : []
+  const newsHits = ragQuery ? searchNews(ragQuery, 4) : []
+  // 벡터/키워드로 찾은 canonical 시드에서 출발해 canonical+discovery 그래프를
+  // 함께 멀티홉 탐색 — 드론 지식과 AI 지식을 잇는 연결고리를 찾는 GraphRAG 레이어.
+  const graph = ragQuery ? graphRagSearch(ragQuery, sources.map((s) => s.slug)) : { block: "", usedDiscovery: false }
 
-  const answer = await generateAnswer(prompt)
+  const system = buildSystemPrompt(docContext ?? null, sources, graph.block, newsHits)
 
-  return NextResponse.json({
-    answer: answer || UNAVAILABLE_MSG,
-    sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain, score: s.score })),
-    newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
-    mode: sources.length > 0 || newsHits.length > 0 ? "rag" : "fallback",
+  const result = streamText({
+    model: openrouter(MODEL_ID),
+    system,
+    messages: await convertToModelMessages(messages),
+  })
+
+  return createUIMessageStreamResponse({
+    stream: toUIMessageStream({
+      stream: result.stream,
+      messageMetadata: ({ part }) => {
+        if (part.type === "finish") {
+          return {
+            sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain })),
+            newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
+          }
+        }
+      },
+      onError: (error) => {
+        if (error instanceof Error) return error.message
+        return "AI 응답 생성 중 오류가 발생했습니다."
+      },
+    }),
   })
 }

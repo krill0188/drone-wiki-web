@@ -22,6 +22,13 @@ export interface WikiPage {
   links: string[]
 }
 
+// 사이드바 AI 챗봇에 전달하는, 사용자가 현재 보고 있는 위키 문서 컨텍스트
+export interface DocContext {
+  slug: string
+  title: string
+  content: string
+}
+
 export interface GraphNode {
   id: string
   name: string

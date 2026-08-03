@@ -237,10 +237,10 @@ export function searchNews(query: string, topK = 4): NewsHit[] {
     }))
 }
 
-interface GraphNode { id: string; name: string }
-interface GraphEdge { source: string; target: string }
+interface GraphNode { id: string; name: string; domain?: string }
+interface GraphEdge { source: string; target: string; type?: string }
 
-function loadGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
+export function loadGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
   // G0(2026-08-02): 전용 파일명으로 분리 — 2nd Brain 저장소에 설치된
   // understand-anything 플러그인이 knowledge-graph.json을 코드베이스
   // 구조 그래프 용도로 같은 경로에 쓰고 있어(우연한 파일명 충돌) 우리

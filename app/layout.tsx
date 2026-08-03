@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 import Link from "next/link"
 import LangToggle from "@/components/LangToggle"
+import { WikiDocProvider } from "@/components/WikiDocContext"
+import ChatWidget from "@/components/Chat"
 
 export const metadata: Metadata = {
   title: "DroneWiki — 드론 특화 AI 지식 플랫폼",
@@ -12,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body className="min-h-screen flex flex-col bg-white text-slate-900">
+        <WikiDocProvider>
         <header className="bg-cyan-700">
           <div className="max-w-3xl mx-auto px-4 h-11 flex items-center gap-4 text-white">
             <Link href="/" className="font-bold text-[15px] tracking-tight shrink-0">
@@ -22,6 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/wiki" className="hover:underline whitespace-nowrap">위키</Link>
               <Link href="/graph" className="hover:underline whitespace-nowrap">그래프</Link>
               <Link href="/chat" className="hover:underline whitespace-nowrap">AI Q&amp;A</Link>
+              <Link href="/wiki-editor" className="hover:underline whitespace-nowrap">✍️ AI 에디터</Link>
+              <Link href="/ai-drone-builder" className="hover:underline whitespace-nowrap">🚀 AI 드론 빌더</Link>
             </nav>
             <div className="ml-auto shrink-0">
               <LangToggle />
@@ -38,9 +43,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/wiki" className="hover:underline">위키</Link>
             <Link href="/graph" className="hover:underline">지식 그래프</Link>
             <Link href="/chat" className="hover:underline">AI Q&amp;A</Link>
+            <Link href="/wiki-editor" className="hover:underline">AI 에디터</Link>
+            <Link href="/ai-drone-builder" className="hover:underline">AI 드론 빌더</Link>
             <span className="ml-auto">매일 새벽 자동 갱신</span>
           </div>
         </footer>
+
+        <ChatWidget />
+        </WikiDocProvider>
       </body>
     </html>
   )
