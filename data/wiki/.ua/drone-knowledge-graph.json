@@ -901,8 +901,8 @@
         "drone-sw",
         "flight-control"
       ],
-      "updated": "2026-07-29",
-      "confidence": "medium",
+      "updated": "2026-08-03",
+      "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -2210,6 +2210,154 @@
       ],
       "updated": "2026-08-02",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dji-osmo-action-6",
+      "name": "DJI Osmo Action 6",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "camera",
+        "dji"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "edgetx-custom-audio",
+      "name": "EdgeTX Custom Audio Setup",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "fpv",
+        "transmitter",
+        "edgetx"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "faa-deter-program",
+      "name": "FAA DETER Program",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "faa",
+        "enforcement"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "faa-section-2209-uafr",
+      "name": "FAA Section 2209 UAFR",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "faa",
+        "airspace"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "faa-section-927-waiver",
+      "name": "FAA Section 927 Waiver Process",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "faa",
+        "bvloss"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "faa-uas-environmental-assessment",
+      "name": "FAA UAS Environmental Assessment",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "faa",
+        "delivery",
+        "environment"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "uk-caa-airspace-architecture",
+      "name": "UK CAA Airspace Architecture Concept of Operations",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "uk",
+        "utm",
+        "airspace"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "parrot",
+      "name": "Parrot",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company",
+        "enterprise"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "skydio",
+      "name": "Skydio",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company",
+        "autonomy",
+        "security"
+      ],
+      "updated": "2026-08-03",
+      "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
     }
@@ -9655,6 +9803,177 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-01-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "betaflight",
+      "target": "edgetx-custom-audio",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-betaflight.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-osmo-action-6",
+      "target": "dji-osmo-pocket-4",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-yt-f28-at-night-the-stars-come-through-dji-osmo-action-6.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-osmo-action-6",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-yt-f28-at-night-the-stars-come-through-dji-osmo-action-6.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "edgetx-custom-audio",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "edgetx-custom-audio",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-deter-program",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-07585.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-deter-program",
+      "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-07585.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-section-2209-uafr",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-08943.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-section-2209-uafr",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-08943.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-section-927-waiver",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-06297.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-section-927-waiver",
+      "target": "fcc-drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-06297.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-uas-environmental-assessment",
+      "target": "drone-delivery-news",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-15417.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-uas-environmental-assessment",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-fedreg-faa-2026-15417.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uk-caa-airspace-architecture",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uk-caa-airspace-architecture",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "parrot",
+      "target": "dji-enterprise",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-parrot.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "parrot",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-parrot.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-skydio.md"
       ],
       "confidence": "high"
     }
