@@ -40,6 +40,32 @@ function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: bo
   )
 }
 
+function FeatureCard({
+  href,
+  emoji,
+  title,
+  desc,
+  cta,
+}: {
+  href: string
+  emoji: string
+  title: string
+  desc: string
+  cta: string
+}) {
+  return (
+    <Link
+      href={href}
+      className="group flex flex-col gap-2 p-4 rounded-xl border border-line bg-panel hover:border-signal-500 transition-colors"
+    >
+      <span className="text-2xl">{emoji}</span>
+      <span className="font-display font-bold text-[15px] leading-snug">{title}</span>
+      <span className="text-[13px] text-ink-dim leading-relaxed flex-1">{desc}</span>
+      <span className="text-xs font-hud text-signal-600 group-hover:underline">{cta} →</span>
+    </Link>
+  )
+}
+
 function SectionHead({ title, href, more }: { title: string; href: string; more: string }) {
   return (
     <div className="flex items-baseline justify-between mb-1 mt-8">
@@ -70,6 +96,31 @@ export default async function HomePage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-6">
+      {/* AI 기능 소개 — 각 도구가 실제로 뭘 해주는지 한 줄씩 설명 */}
+      <div className="grid sm:grid-cols-3 gap-3 mb-8">
+        <FeatureCard
+          href="/chat"
+          emoji="💬"
+          title="드론 지식, 대화로 바로"
+          desc="위키 문서와 지식그래프(GraphRAG)를 근거로 실시간 스트리밍 답변"
+          cta="AI에게 질문하기"
+        />
+        <FeatureCard
+          href="/wiki-editor"
+          emoji="✍️"
+          title="정리 안 된 메모를 위키 문서로"
+          desc="초안을 넣으면 프론트매터·개요·스펙까지 갖춘 문서로 구조화"
+          cta="AI 에디터 열기"
+        />
+        <FeatureCard
+          href="/ai-drone-builder"
+          emoji="🚀"
+          title="컨셉 한 줄로 프로젝트 설계"
+          desc="기획서 → 스펙 → 아키텍처, 3단계 에이전트가 순차로 작성"
+          cta="AI 드론 빌더 열기"
+        />
+      </div>
+
       {/* 드론 지식 7개 카테고리 */}
       <h2 className="font-bold text-base mb-3">드론 지식 카테고리</h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
