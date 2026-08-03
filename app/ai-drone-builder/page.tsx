@@ -19,59 +19,59 @@ const EXAMPLES = [
 
 export default function AiDroneBuilderPage() {
   const [concept, setConcept] = useState("")
-  const [proposal, setProposal] = useState("")
-  const [spec, setSpec] = useState("")
-  const [architecture, setArchitecture] = useState("")
   const [stage, setStage] = useState<Stage>("idle")
 
-  // onFinish 클로저가 stale state를 참조하지 않도록 진행 상태는 ref로도 들고 있는다.
-  const stageRef = useRef<Stage>("idle")
   const proposalRef = useRef("")
   const specRef = useRef("")
 
-  const { completion, complete, isLoading, error } = useCompletion({
+  // 3단계를 useCompletion 하나로 재귀 체이닝하면(onFinish 안에서 같은 훅의 complete를
+  // 다시 호출) 세 단계가 completionId(=SWR 캐시 키)를 공유해서 상태가 서로 덮어써진다
+  // (실제로 프로덕션에서 재현됨: stage1→2는 되지만 2→3에서 요청 자체가 안 나감).
+  // 단계마다 독립된 id를 준 별도 훅 3개로 분리해 상태 충돌을 원천 차단한다.
+  const proposalHook = useCompletion({
+    id: "drone-builder-proposal",
     api: "/api/drone-builder",
     onFinish: (_prompt, text) => {
-      if (stageRef.current === "proposal") {
-        proposalRef.current = text
-        setProposal(text)
-        stageRef.current = "spec"
-        setStage("spec")
-        complete(concept, { body: { stage: "spec", context: { proposal: text } } })
-      } else if (stageRef.current === "spec") {
-        specRef.current = text
-        setSpec(text)
-        stageRef.current = "architecture"
-        setStage("architecture")
-        complete(concept, {
-          body: { stage: "architecture", context: { proposal: proposalRef.current, spec: text } },
-        })
-      } else if (stageRef.current === "architecture") {
-        setArchitecture(text)
-        stageRef.current = "done"
-        setStage("done")
-      }
+      proposalRef.current = text
+      setStage("spec")
+      specHook.complete(concept, { body: { stage: "spec", context: { proposal: text } } })
     },
   })
 
+  const specHook = useCompletion({
+    id: "drone-builder-spec",
+    api: "/api/drone-builder",
+    onFinish: (_prompt, text) => {
+      specRef.current = text
+      setStage("architecture")
+      archHook.complete(concept, {
+        body: { stage: "architecture", context: { proposal: proposalRef.current, spec: text } },
+      })
+    },
+  })
+
+  const archHook = useCompletion({
+    id: "drone-builder-architecture",
+    api: "/api/drone-builder",
+    onFinish: () => setStage("done"),
+  })
+
+  const hooks = { proposal: proposalHook, spec: specHook, architecture: archHook } as const
+  const busy = proposalHook.isLoading || specHook.isLoading || archHook.isLoading
+  const error = proposalHook.error || specHook.error || archHook.error
+
   const start = () => {
-    if (!concept.trim() || isLoading) return
-    setProposal("")
-    setSpec("")
-    setArchitecture("")
+    if (!concept.trim() || busy) return
     proposalRef.current = ""
     specRef.current = ""
-    stageRef.current = "proposal"
+    proposalHook.setCompletion("")
+    specHook.setCompletion("")
+    archHook.setCompletion("")
     setStage("proposal")
-    complete(concept, { body: { stage: "proposal" } })
+    proposalHook.complete(concept, { body: { stage: "proposal" } })
   }
 
   const stages: Exclude<Stage, "idle" | "done">[] = ["proposal", "spec", "architecture"]
-  const textFor = (s: Exclude<Stage, "idle" | "done">) => {
-    if (s === "proposal") return stage === "proposal" ? completion : proposal
-    if (s === "spec") return stage === "spec" ? completion : spec
-    return stage === "architecture" ? completion : architecture
-  }
   const isStageDone = (s: Exclude<Stage, "idle" | "done">) => {
     if (s === "proposal") return stage !== "idle" && stage !== "proposal"
     if (s === "spec") return stage === "architecture" || stage === "done"
@@ -108,10 +108,12 @@ export default function AiDroneBuilderPage() {
         <div>
           <button
             onClick={start}
-            disabled={!concept.trim() || isLoading}
+            disabled={!concept.trim() || busy}
             className="px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
           >
-            {isLoading ? `${STAGE_META[stage as keyof typeof STAGE_META]?.agent ?? "실행"} 작업 중...` : "🤖 3단계 에이전트 실행"}
+            {busy && stage !== "idle" && stage !== "done"
+              ? `${STAGE_META[stage as keyof typeof STAGE_META]?.agent ?? "실행"} 작업 중...`
+              : "🤖 3단계 에이전트 실행"}
           </button>
         </div>
         {error && (
@@ -124,7 +126,7 @@ export default function AiDroneBuilderPage() {
       <div className="flex flex-col gap-6">
         {stages.map((s) => {
           const meta = STAGE_META[s]
-          const text = textFor(s)
+          const text = hooks[s].completion
           const active = isStageActive(s)
           const done = isStageDone(s)
           return (
