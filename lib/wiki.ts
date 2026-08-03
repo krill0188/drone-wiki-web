@@ -92,8 +92,17 @@ export async function getPageBySlug(slug: string, layerDir?: string): Promise<Wi
 }
 
 export function getKnowledgeGraph(): KnowledgeGraph {
-  const graphPath = path.join(WIKI_ROOT, ".ua", "knowledge-graph.json")
-  if (!fs.existsSync(graphPath)) return { nodes: [], edges: [] }
+  // G0(2026-08-02) 이후 canonical 그래프는 drone-knowledge-graph.json 전용 파일로
+  // 분리됐다(understand-anything 플러그인이 구 knowledge-graph.json을 코드 구조
+  // 그래프 용도로 같이 써서 우연히 충돌). 이 함수가 마이그레이션 전 경로에 남아있어서
+  // data/wiki(배포 번들)에 구 파일이 아예 없는 Vercel에서는 항상 빈 그래프를
+  // 반환하고 있었다 — lib/rag.ts의 loadGraph()와 같은 우선순위로 맞춘다.
+  const candidates = [
+    path.join(WIKI_ROOT, ".ua", "drone-knowledge-graph.json"),
+    path.join(WIKI_ROOT, ".ua", "knowledge-graph.json"),
+  ]
+  const graphPath = candidates.find((p) => fs.existsSync(p))
+  if (!graphPath) return { nodes: [], edges: [] }
   const raw = JSON.parse(fs.readFileSync(graphPath, "utf-8"))
 
   const nodes = (raw.nodes || [])

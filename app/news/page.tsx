@@ -25,6 +25,7 @@ export default async function NewsPage({ searchParams }: Props) {
 
   const flink = (href: string, label: string, active: boolean) => (
     <Link
+      key={href}
       href={href}
       className={`whitespace-nowrap hover:underline ${
         active ? "font-bold text-cyan-700 dark:text-cyan-400" : ""
