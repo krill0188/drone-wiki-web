@@ -92,14 +92,14 @@ export default function AiDroneBuilderPage() {
           value={concept}
           onChange={(e) => setConcept(e.target.value)}
           placeholder="예: AI 드론을 기획하고 개발해줘 — 산불 감시용 자율비행 드론"
-          className="min-h-[80px] border border-slate-300 dark:border-slate-600 rounded-xl p-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
+          className="min-h-[80px] border border-slate-300 dark:border-slate-600 rounded-xl p-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400 resize-none"
         />
         <div className="flex flex-wrap gap-2">
           {EXAMPLES.map((ex) => (
             <button
               key={ex}
               onClick={() => setConcept(ex)}
-              className="text-xs px-3 py-1.5 rounded-full border border-slate-300 dark:border-slate-600 hover:border-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-full border border-slate-300 dark:border-slate-600 hover:border-signal-400 hover:text-signal-500 dark:hover:text-signal-400 transition-colors"
             >
               {ex}
             </button>
@@ -109,7 +109,7 @@ export default function AiDroneBuilderPage() {
           <button
             onClick={start}
             disabled={!concept.trim() || busy}
-            className="px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
+            className="px-5 py-2.5 bg-signal-500 hover:bg-signal-500/100 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
           >
             {busy && stage !== "idle" && stage !== "done"
               ? `${STAGE_META[stage as keyof typeof STAGE_META]?.agent ?? "실행"} 작업 중...`
@@ -134,7 +134,7 @@ export default function AiDroneBuilderPage() {
               key={s}
               className={`border rounded-xl overflow-hidden transition-colors ${
                 active
-                  ? "border-cyan-400"
+                  ? "border-signal-400"
                   : done
                     ? "border-slate-200 dark:border-slate-700"
                     : "border-dashed border-slate-200 dark:border-slate-700 opacity-50"

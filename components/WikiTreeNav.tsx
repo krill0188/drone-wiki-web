@@ -62,23 +62,29 @@ export default function WikiTreeNav() {
     .filter((g) => g.pages.length > 0)
 
   return (
-    <nav className="w-60 shrink-0 border-r border-slate-200 dark:border-slate-700 py-4 px-2 text-sm hidden lg:block">
-      <div className="px-2 mb-2 text-xs font-semibold text-slate-400 uppercase tracking-wide">지식 도메인</div>
+    <nav className="w-64 shrink-0 border-r border-line bg-panel py-4 px-2.5 text-sm hidden lg:block">
+      <div className="px-2 mb-3 text-[11px] font-hud font-semibold text-ink-dim uppercase tracking-[0.12em]">
+        지식 도메인
+      </div>
       {grouped.map(({ domain, meta, pages: domainPages }) => {
         const isOpen = openDomains.has(domain)
         return (
           <div key={domain} className="mb-0.5">
             <button
               onClick={() => toggle(domain)}
-              className="w-full flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-left font-medium"
+              className="w-full flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-paper text-left font-display font-medium text-ink"
             >
-              <span className={`text-[9px] text-slate-400 transition-transform ${isOpen ? "rotate-90" : ""}`}>▶</span>
-              <span>{meta.emoji}</span>
+              <span className={`text-[8px] text-ink-dim transition-transform duration-150 ${isOpen ? "rotate-90" : ""}`}>▶</span>
+              <span
+                className="w-1.5 h-1.5 rounded-full shrink-0"
+                style={{ background: meta.color }}
+                aria-hidden
+              />
               <span className="flex-1 truncate">{meta.label}</span>
-              <span className="text-[11px] text-slate-400">{domainPages.length}</span>
+              <span className="text-[10px] font-hud text-ink-dim tabular-nums">{String(domainPages.length).padStart(2, "0")}</span>
             </button>
             {isOpen && (
-              <div className="ml-5 border-l border-slate-200 dark:border-slate-700 pl-2 flex flex-col gap-0.5 mt-0.5 mb-1">
+              <div className="ml-[19px] border-l border-line pl-2.5 flex flex-col gap-0.5 mt-0.5 mb-1.5">
                 {domainPages.map((p) => {
                   const active = pathname === `/wiki/${p.slug}`
                   return (
@@ -86,13 +92,14 @@ export default function WikiTreeNav() {
                       key={`${p.layer}-${p.slug}`}
                       href={`/wiki/${p.slug}`}
                       title={p.title}
-                      className={`flex items-center gap-1.5 px-2 py-1 rounded-md truncate text-[13px] ${
+                      className={`relative flex items-center gap-1.5 px-2 py-1 rounded-md truncate text-[13px] transition-colors ${
                         active
-                          ? "bg-cyan-50 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 font-medium"
-                          : "hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300"
+                          ? "bg-signal-500/10 text-signal-600 font-medium"
+                          : "hover:bg-paper text-ink-dim hover:text-ink"
                       }`}
                     >
-                      <span className="text-[11px] shrink-0">{LAYER_ICON[p.layer] ?? "📄"}</span>
+                      {active && <span className="absolute -left-[13px] top-1/2 -translate-y-1/2 w-[3px] h-3.5 rounded-full bg-signal-500" />}
+                      <span className="text-[10px] shrink-0 opacity-70">{LAYER_ICON[p.layer] ?? "📄"}</span>
                       <span className="truncate">{p.title}</span>
                     </Link>
                   )
@@ -102,7 +109,7 @@ export default function WikiTreeNav() {
           </div>
         )
       })}
-      {pages.length === 0 && <div className="px-2 text-xs text-slate-400">불러오는 중...</div>}
+      {pages.length === 0 && <div className="px-2 text-xs font-hud text-ink-dim">불러오는 중...</div>}
     </nav>
   )
 }

@@ -28,7 +28,7 @@ export default async function NewsPage({ searchParams }: Props) {
       key={href}
       href={href}
       className={`whitespace-nowrap hover:underline ${
-        active ? "font-bold text-cyan-700 dark:text-cyan-400" : ""
+        active ? "font-bold text-signal-600 dark:text-signal-400" : ""
       }`}
     >
       {label}
@@ -72,7 +72,7 @@ export default async function NewsPage({ searchParams }: Props) {
                   href={it.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[15px] leading-snug hover:text-cyan-700 dark:hover:text-cyan-400"
+                  className="text-[15px] leading-snug hover:text-signal-600 dark:hover:text-signal-400"
                 >
                   {it.title}
                   <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
@@ -110,7 +110,7 @@ export default async function NewsPage({ searchParams }: Props) {
 
       <p className="mt-5 text-xs text-slate-400">
         총 {all.length}개 수집됨 · 영문 자료는 AI 한글 요약 제공, 원문은 SHA-256 해시로 무결성 보존 · 궁금한 내용은{" "}
-        <Link href="/chat" className="text-cyan-700 dark:text-cyan-400 hover:underline">AI에게 질문</Link>하세요
+        <Link href="/chat" className="text-signal-600 dark:text-signal-400 hover:underline">AI에게 질문</Link>하세요
       </p>
     </div>
   )

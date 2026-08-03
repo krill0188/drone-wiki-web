@@ -18,7 +18,7 @@ function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: bo
                 href={it.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[15px] leading-snug hover:text-cyan-700"
+                className="text-[15px] leading-snug hover:text-signal-600"
               >
                 {it.title}
                 <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
@@ -44,7 +44,7 @@ function SectionHead({ title, href, more }: { title: string; href: string; more:
   return (
     <div className="flex items-baseline justify-between mb-1 mt-8">
       <h2 className="font-bold text-base">{title}</h2>
-      <Link href={href} className="text-[13px] text-cyan-700 hover:underline">
+      <Link href={href} className="text-[13px] text-signal-600 hover:underline">
         {more} →
       </Link>
     </div>
@@ -77,7 +77,7 @@ export default async function HomePage() {
           <Link
             key={domain}
             href={`/wiki?domain=${domain}`}
-            className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-slate-200 hover:border-cyan-500 hover:bg-cyan-50 transition-colors"
+            className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-slate-200 hover:border-signal-500/100 hover:bg-signal-500/10 transition-colors"
           >
             <span className="text-lg">{meta.emoji}</span>
             <span className="min-w-0">
@@ -88,7 +88,7 @@ export default async function HomePage() {
         ))}
         <Link
           href="/chat"
-          className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-cyan-600 bg-cyan-600 text-white hover:bg-cyan-500 transition-colors"
+          className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-signal-500 bg-signal-500 text-white hover:bg-signal-500/100 transition-colors"
         >
           <span className="text-lg">💬</span>
           <span className="text-[13px] font-medium leading-tight">AI에게 질문</span>
@@ -157,7 +157,7 @@ export default async function HomePage() {
             <span className="shrink-0">{DOMAIN_META[p.domain]?.emoji || "📄"}</span>
             <Link
               href={`/wiki/${p.slug}`}
-              className="text-[15px] leading-snug hover:text-cyan-700 min-w-0 truncate"
+              className="text-[15px] leading-snug hover:text-signal-600 min-w-0 truncate"
             >
               {p.title}
             </Link>
@@ -168,9 +168,9 @@ export default async function HomePage() {
 
       {/* 바로가기 */}
       <div className="mt-8 text-[13px] text-slate-500">
-        <Link href="/graph" className="text-cyan-700 hover:underline">🔵 지식 그래프 탐색</Link>
+        <Link href="/graph" className="text-signal-600 hover:underline">🔵 지식 그래프 탐색</Link>
         <span className="mx-2 text-slate-300">·</span>
-        <Link href="/chat" className="text-cyan-700 hover:underline">💬 AI Q&amp;A</Link>
+        <Link href="/chat" className="text-signal-600 hover:underline">💬 AI Q&amp;A</Link>
       </div>
     </div>
   )

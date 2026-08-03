@@ -172,7 +172,7 @@ export default function DiscoveryReviewPage() {
           <div className="px-4 py-3 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
             <div className="flex items-center gap-2">
               <h2 className="text-lg font-bold">{current.name}</h2>
-              <span className="text-xs px-2 py-0.5 rounded-full bg-cyan-100 dark:bg-cyan-900 text-cyan-700 dark:text-cyan-300">
+              <span className="text-xs px-2 py-0.5 rounded-full bg-signal-500/10 dark:bg-signal-500/15 text-signal-600 dark:text-signal-400">
                 {current.ontologyClass}
               </span>
             </div>
@@ -201,14 +201,14 @@ export default function DiscoveryReviewPage() {
                 <button
                   onClick={openDraft}
                   disabled={writable === false || busy}
-                  className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 text-white rounded-lg text-sm font-semibold"
+                  className="px-4 py-2 bg-signal-500 hover:bg-signal-500/100 disabled:opacity-40 text-white rounded-lg text-sm font-semibold"
                 >
                   🪄 AI 초안 생성
                 </button>
                 <button
                   onClick={skip}
                   disabled={busy}
-                  className="px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-sm hover:border-cyan-400"
+                  className="px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-sm hover:border-signal-400"
                 >
                   건너뛰기
                 </button>
@@ -263,7 +263,7 @@ export default function DiscoveryReviewPage() {
                   <button
                     onClick={closeDraft}
                     disabled={busy}
-                    className="px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-sm hover:border-cyan-400"
+                    className="px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-sm hover:border-signal-400"
                   >
                     취소
                   </button>

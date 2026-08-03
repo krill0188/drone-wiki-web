@@ -37,20 +37,20 @@ export default function WikiEditorPage() {
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             placeholder="예: Holybro Pixhawk 6X는 STM32H7 기반 FC고 IMU가 3중화, CAN 버스 지원, GPS는 M9N 씀..."
-            className="flex-1 min-h-[360px] border border-slate-300 dark:border-slate-600 rounded-xl p-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
+            className="flex-1 min-h-[360px] border border-slate-300 dark:border-slate-600 rounded-xl p-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400 resize-none"
           />
           <div className="flex gap-2">
             <button
               onClick={generate}
               disabled={!draft.trim() || isLoading}
-              className="px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
+              className="px-5 py-2.5 bg-signal-500 hover:bg-signal-500/100 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
             >
               {isLoading ? "정제 중..." : "🪄 AI로 정제"}
             </button>
             {isLoading && (
               <button
                 onClick={stop}
-                className="px-4 py-2.5 border border-slate-300 dark:border-slate-600 rounded-xl text-sm hover:border-cyan-400"
+                className="px-4 py-2.5 border border-slate-300 dark:border-slate-600 rounded-xl text-sm hover:border-signal-400"
               >
                 중단
               </button>
@@ -69,7 +69,7 @@ export default function WikiEditorPage() {
               위키 문서 초안 (마크다운)
             </label>
             {completion && (
-              <button onClick={copy} className="text-xs text-cyan-600 hover:underline">
+              <button onClick={copy} className="text-xs text-signal-500 hover:underline">
                 {copied ? "복사됨 ✓" : "복사"}
               </button>
             )}

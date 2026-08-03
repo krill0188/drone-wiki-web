@@ -34,12 +34,12 @@ function WikiList() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="제목·태그 검색..."
-          className="flex-1 min-w-[180px] border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          className="flex-1 min-w-[180px] border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400"
         />
         <select
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
-          className="border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          className="border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400"
         >
           <option value="">전체 도메인</option>
           {Object.entries(DOMAIN_META).map(([d, m]) => (
@@ -49,7 +49,7 @@ function WikiList() {
         <select
           value={layer}
           onChange={(e) => setLayer(e.target.value)}
-          className="border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          className="border border-slate-300 dark:border-slate-600 rounded-lg px-3 py-2 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400"
         >
           <option value="">전체 레이어</option>
           <option value="Concepts">Concepts</option>
@@ -73,7 +73,7 @@ function WikiList() {
                 <span className="shrink-0">{meta?.emoji || "📄"}</span>
                 <Link
                   href={`/wiki/${p.slug}`}
-                  className="text-[15px] leading-snug hover:text-cyan-700 dark:hover:text-cyan-400 min-w-0"
+                  className="text-[15px] leading-snug hover:text-signal-600 dark:hover:text-signal-400 min-w-0"
                 >
                   {p.title}
                 </Link>

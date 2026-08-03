@@ -57,7 +57,7 @@ export default function ChatPage() {
                 <button
                   key={ex}
                   onClick={() => setInput(ex)}
-                  className="text-xs px-3 py-1.5 rounded-full border border-slate-300 dark:border-slate-600 hover:border-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                  className="text-xs px-3 py-1.5 rounded-full border border-slate-300 dark:border-slate-600 hover:border-signal-400 hover:text-signal-500 dark:hover:text-signal-400 transition-colors"
                 >
                   {ex}
                 </button>
@@ -74,7 +74,7 @@ export default function ChatPage() {
                 <div
                   className={`rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
                     m.role === "user"
-                      ? "bg-cyan-600 text-white rounded-br-sm"
+                      ? "bg-signal-500 text-white rounded-br-sm"
                       : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-bl-sm"
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function ChatPage() {
                           href={n.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs text-slate-500 hover:text-cyan-700 hover:underline truncate"
+                          className="text-xs text-slate-500 hover:text-signal-600 hover:underline truncate"
                         >
                           · {n.title}
                         </a>
@@ -164,12 +164,12 @@ export default function ChatPage() {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && send()}
           placeholder="드론에 대해 질문하세요..."
-          className="flex-1 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          className="flex-1 border border-slate-300 dark:border-slate-600 rounded-xl px-4 py-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400"
         />
         <button
           onClick={send}
           disabled={!input.trim() || busy}
-          className="px-5 py-3 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
+          className="px-5 py-3 bg-signal-500 hover:bg-signal-500/100 disabled:opacity-40 text-white rounded-xl font-semibold text-sm transition-colors"
         >
           전송
         </button>

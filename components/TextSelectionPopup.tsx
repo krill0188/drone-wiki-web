@@ -9,9 +9,9 @@ interface Props {
   sourceTitle: string
 }
 
-// Liner 스타일 텍스트 하이라이트 UX — 위키 본문에서 텍스트를 드래그하면 선택 영역
-// 위에 플로팅 툴팁이 떠서 "AI에게 질문하기"(우측 챗 패널로 전달) / "지식으로
-// 저장하기"(로컬 하이라이트 로그에 저장)를 즉시 실행할 수 있다.
+// 신호 표시등(HUD) 콜아웃 — 코너 브래킷(⌐ / ¬)으로 "포착"된 느낌을 주는, 이 사이트만의
+// 텍스트 선택 팝업. 선택 영역을 드래그하면 뜨고, "AI에게 질문하기"(우측 챗 패널로
+// 전달) / "지식으로 저장하기"(로컬 하이라이트 로그에 저장)를 실행할 수 있다.
 export default function TextSelectionPopup({ containerRef, sourceSlug, sourceTitle }: Props) {
   const { askAboutSelection } = useWikiDoc()
   const popupRef = useRef<HTMLDivElement>(null)
@@ -41,7 +41,7 @@ export default function TextSelectionPopup({ containerRef, sourceSlug, sourceTit
 
       setSelectedText(text)
       setSaveState("idle")
-      setPos({ top: rect.top + window.scrollY - 48, left: rect.left + window.scrollX + rect.width / 2 })
+      setPos({ top: rect.top + window.scrollY - 54, left: rect.left + window.scrollX + rect.width / 2 })
     }
 
     document.addEventListener("mouseup", handleUp)
@@ -78,25 +78,55 @@ export default function TextSelectionPopup({ containerRef, sourceSlug, sourceTit
     }
   }
 
+  const corner = (pos2: "tl" | "tr" | "bl" | "br") => {
+    const base = "absolute w-2 h-2 border-signal-500 pointer-events-none"
+    const map: Record<typeof pos2, string> = {
+      tl: "top-0 left-0 border-t-2 border-l-2 rounded-tl-[3px]",
+      tr: "top-0 right-0 border-t-2 border-r-2 rounded-tr-[3px]",
+      bl: "bottom-0 left-0 border-b-2 border-l-2 rounded-bl-[3px]",
+      br: "bottom-0 right-0 border-b-2 border-r-2 rounded-br-[3px]",
+    }
+    return `${base} ${map[pos2]}`
+  }
+
   return (
     <div
       ref={popupRef}
       onMouseDown={(e) => e.preventDefault()}
-      className="fixed z-50 flex flex-col gap-1 bg-slate-900 dark:bg-slate-700 text-white rounded-lg shadow-lg px-1.5 py-1.5 text-xs max-w-[280px]"
+      className="fixed z-50 max-w-[300px]"
       style={{ top: pos.top, left: pos.left, transform: "translate(-50%, -100%)" }}
     >
-      <div className="flex gap-1">
-        <button onClick={ask} className="px-2.5 py-1.5 rounded-md hover:bg-white/10 whitespace-nowrap">
-          🤖 AI에게 질문하기
-        </button>
-        <div className="w-px bg-white/20" />
-        <button onClick={save} disabled={saveState === "saving"} className="px-2.5 py-1.5 rounded-md hover:bg-white/10 whitespace-nowrap disabled:opacity-50">
-          {saveState === "saved" ? "✅ 저장됨" : saveState === "error" ? "⚠️ 실패" : saveState === "saving" ? "저장 중..." : "💾 지식으로 저장하기"}
-        </button>
+      <div className="relative bg-panel border border-line rounded-md shadow-xl px-3 pt-2.5 pb-2">
+        <span className={corner("tl")} />
+        <span className={corner("tr")} />
+        <span className={corner("bl")} />
+        <span className={corner("br")} />
+
+        <div className="font-hud text-[9px] tracking-[0.14em] text-ink-dim uppercase mb-1.5 flex items-center gap-1.5">
+          <span className="w-1 h-1 rounded-full bg-signal-500 animate-pulse" />
+          선택됨 · {selectedText.length}자
+        </div>
+
+        <div className="flex items-stretch gap-2">
+          <button
+            onClick={ask}
+            className="px-3 py-1.5 rounded bg-signal-500 hover:bg-signal-600 text-white text-xs font-medium whitespace-nowrap transition-colors"
+          >
+            AI에게 질문하기
+          </button>
+          <button
+            onClick={save}
+            disabled={saveState === "saving"}
+            className="px-3 py-1.5 rounded border border-line hover:border-signal-500 hover:text-signal-600 text-ink-dim text-xs font-medium whitespace-nowrap transition-colors disabled:opacity-50"
+          >
+            {saveState === "saved" ? "저장됨 ✓" : saveState === "error" ? "실패" : saveState === "saving" ? "저장 중…" : "지식으로 저장"}
+          </button>
+        </div>
+
+        {saveState === "error" && saveError && (
+          <div className="mt-1.5 text-[11px] font-hud text-signal-600 leading-snug">{saveError}</div>
+        )}
       </div>
-      {saveState === "error" && saveError && (
-        <div className="px-2 pb-1 text-[11px] text-amber-300 leading-snug">{saveError}</div>
-      )}
     </div>
   )
 }

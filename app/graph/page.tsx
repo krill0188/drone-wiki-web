@@ -103,7 +103,7 @@ export default function GraphPage() {
             <p className="text-xs text-slate-400 mb-4">{selected.layer}</p>
             <a
               href={`/wiki/${selected.id}`}
-              className="block text-center text-sm px-3 py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors"
+              className="block text-center text-sm px-3 py-2 bg-signal-500 hover:bg-signal-500/100 text-white rounded-lg transition-colors"
             >
               위키 보기 →
             </a>

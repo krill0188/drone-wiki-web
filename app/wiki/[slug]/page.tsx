@@ -31,13 +31,13 @@ export default async function WikiDetailPage({ params }: Props) {
 
       {/* 빵부스러기 */}
       <div className="flex items-center gap-2 text-xs text-slate-400 mb-6">
-        <Link href="/" className="hover:text-cyan-600">홈</Link>
+        <Link href="/" className="hover:text-signal-500">홈</Link>
         <span>›</span>
-        <Link href="/wiki" className="hover:text-cyan-600">위키</Link>
+        <Link href="/wiki" className="hover:text-signal-500">위키</Link>
         <span>›</span>
         {meta && (
           <>
-            <Link href={`/wiki?domain=${page.domain}`} className="hover:text-cyan-600">
+            <Link href={`/wiki?domain=${page.domain}`} className="hover:text-signal-500">
               {meta.emoji} {meta.label}
             </Link>
             <span>›</span>
@@ -90,7 +90,7 @@ export default async function WikiDetailPage({ params }: Props) {
           <WikiArticleBody html={page.contentHtml} slug={page.slug} title={page.title} />
 
           <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 text-center">
-            <Link href="/chat" className="inline-block px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-white rounded-xl font-semibold transition-colors">
+            <Link href="/chat" className="inline-block px-6 py-3 bg-signal-500/100 hover:bg-signal-400 text-white rounded-xl font-semibold transition-colors">
               이 주제로 AI에게 더 질문하기 →
             </Link>
           </div>
@@ -105,7 +105,7 @@ export default async function WikiDetailPage({ params }: Props) {
                 <Link
                   key={r.slug}
                   href={`/wiki/${r.slug}`}
-                  className="text-sm px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-cyan-400 transition-colors"
+                  className="text-sm px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-signal-400 transition-colors"
                 >
                   <span className="mr-1">{DOMAIN_META[r.domain]?.emoji || "📄"}</span>
                   {r.title}

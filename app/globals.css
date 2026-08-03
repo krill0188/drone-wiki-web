@@ -3,15 +3,35 @@
 /* 다크 변형은 .dark 클래스가 있을 때만 적용 — 사이트는 라이트 테마 고정 */
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+/* ── 디자인 토큰 — "항공 계기판(HUD)" 컨셉 ──────────────────────────
+   드론/항전 장비의 어휘(신호등·경고등·계기 눈금·모노스페이스 리드아웃)에서
+   가져온 팔레트. 시그니처 컬러는 시그널 오렌지(경고등/스트로브 라이트) —
+   전 도메인 컬러(DOMAIN_META)와 겹치지 않게 골랐다. */
+@theme {
+  --color-paper: #f6f5f1;
+  --color-panel: #ffffff;
+  --color-ink: #12181f;
+  --color-ink-dim: #5c6773;
+  --color-line: #dde3e8;
+
+  --color-signal-400: #f0764a;
+  --color-signal-500: #e8542a;
+  --color-signal-600: #c7431e;
+
+  --font-display: var(--ds-display), "Space Grotesk", sans-serif;
+  --font-body: var(--ds-body), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-hud: var(--ds-hud), ui-monospace, SFMono-Regular, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* 선택 영역도 시그널 컬러로 — 텍스트 하이라이트 기능과 시각적으로 이어지게 */
+::selection {
+  background: color-mix(in oklab, var(--color-signal-500) 30%, transparent);
+  color: var(--color-ink);
 }
 
 /* Google 번역 위젯 컴팩트화 */
@@ -33,18 +53,35 @@ body { top: 0 !important; }
 
 /* prose 마크다운 스타일 */
 .prose { max-width: 72ch; }
-.prose h1, .prose h2, .prose h3 { font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; }
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
 .prose h1 { font-size: 1.5rem; }
-.prose h2 { font-size: 1.25rem; }
-.prose h3 { font-size: 1.1rem; }
+.prose h2 {
+  font-size: 1.2rem;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--color-line);
+}
+.prose h3 { font-size: 1.05rem; }
 .prose p { margin-bottom: 1em; line-height: 1.75; }
 .prose ul, .prose ol { padding-left: 1.5em; margin-bottom: 1em; }
 .prose li { margin-bottom: 0.25em; line-height: 1.7; }
-.prose code { font-size: 0.875em; padding: 0.1em 0.35em; border-radius: 0.25rem; background: #f1f5f9; }
-.prose pre { overflow-x: auto; padding: 1em; border-radius: 0.5rem; background: #1e293b; color: #e2e8f0; margin-bottom: 1em; }
-.prose pre code { background: transparent; padding: 0; }
-.prose blockquote { border-left: 3px solid #0891b2; padding-left: 1em; color: #64748b; margin: 1em 0; }
-.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
-.prose th, .prose td { padding: 0.5em 0.75em; border: 1px solid #e2e8f0; }
-.prose th { background: #f8fafc; font-weight: 600; }
-.prose a { color: #0891b2; text-decoration: underline; }
+.prose code {
+  font-family: var(--font-hud);
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.25rem;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+}
+.prose pre { overflow-x: auto; padding: 1em; border-radius: 0.5rem; background: var(--color-ink); color: #e2e8f0; margin-bottom: 1em; }
+.prose pre code { background: transparent; padding: 0; border: none; }
+.prose blockquote { border-left: 3px solid var(--color-signal-500); padding-left: 1em; color: var(--color-ink-dim); margin: 1em 0; }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1em; font-size: 0.95em; }
+.prose th, .prose td { padding: 0.5em 0.75em; border: 1px solid var(--color-line); }
+.prose th { background: var(--color-paper); font-family: var(--font-hud); font-weight: 600; font-size: 0.85em; letter-spacing: 0.02em; }
+.prose a { color: var(--color-signal-600); text-decoration: underline; text-underline-offset: 2px; }
