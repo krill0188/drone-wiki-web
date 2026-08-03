@@ -1,18 +1,32 @@
 "use client"
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react"
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react"
 import type { DocContext } from "@/lib/types"
 
 interface WikiDocContextValue {
   doc: DocContext | null
   setDoc: (doc: DocContext | null) => void
+  // Liner 스타일 텍스트 선택 → "AI에게 질문하기" 연동. 본문(TextSelectionPopup)이
+  // 선택한 텍스트를 여기 밀어넣으면, 전역에 떠 있는 Chat.tsx가 감지해서 패널을 열고
+  // 자동으로 질문을 보낸다 — 두 컴포넌트가 서로 직접 참조하지 않고 컨텍스트로만 연결.
+  pendingAsk: string | null
+  askAboutSelection: (text: string) => void
+  clearPendingAsk: () => void
 }
 
 const WikiDocCtx = createContext<WikiDocContextValue | null>(null)
 
 export function WikiDocProvider({ children }: { children: ReactNode }) {
   const [doc, setDoc] = useState<DocContext | null>(null)
-  const value = useMemo(() => ({ doc, setDoc }), [doc])
+  const [pendingAsk, setPendingAsk] = useState<string | null>(null)
+
+  const askAboutSelection = useCallback((text: string) => setPendingAsk(text), [])
+  const clearPendingAsk = useCallback(() => setPendingAsk(null), [])
+
+  const value = useMemo(
+    () => ({ doc, setDoc, pendingAsk, askAboutSelection, clearPendingAsk }),
+    [doc, pendingAsk, askAboutSelection, clearPendingAsk]
+  )
   return <WikiDocCtx.Provider value={value}>{children}</WikiDocCtx.Provider>
 }
 

@@ -25,7 +25,7 @@ const EXAMPLES = [
 export default function ChatWidget() {
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState("")
-  const { doc } = useWikiDoc()
+  const { doc, pendingAsk, clearPendingAsk } = useWikiDoc()
   const endRef = useRef<HTMLDivElement>(null)
 
   const { messages, sendMessage, status, error } = useChat<ChatUIMessage>({
@@ -37,6 +37,16 @@ export default function ChatWidget() {
   useEffect(() => {
     if (open) endRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages, busy, open])
+
+  // 본문에서 텍스트를 선택하고 "AI에게 질문하기"를 누르면 WikiDocContext에
+  // pendingAsk가 채워진다 — 패널을 열고 즉시 질문을 보낸 뒤 비워준다.
+  useEffect(() => {
+    if (!pendingAsk) return
+    setOpen(true)
+    sendMessage({ text: `다음 내용에 대해 설명해줘:\n\n> ${pendingAsk}` }, { body: { docContext: doc } })
+    clearPendingAsk()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pendingAsk])
 
   const send = () => {
     const text = input.trim()

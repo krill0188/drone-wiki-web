@@ -3,6 +3,7 @@ import Link from "next/link"
 import { getAllPages, getPageBySlug } from "@/lib/wiki"
 import { DOMAIN_META } from "@/lib/types"
 import { WikiDocSync } from "@/components/WikiDocContext"
+import WikiArticleBody from "@/components/WikiArticleBody"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -86,10 +87,7 @@ export default async function WikiDetailPage({ params }: Props) {
             </div>
           )}
 
-          <div
-            className="prose prose-slate dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: page.contentHtml }}
-          />
+          <WikiArticleBody html={page.contentHtml} slug={page.slug} title={page.title} />
 
           <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 text-center">
             <Link href="/chat" className="inline-block px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-white rounded-xl font-semibold transition-colors">
