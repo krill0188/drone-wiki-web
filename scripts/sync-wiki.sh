@@ -57,6 +57,20 @@ if [[ -f "$GRAPH_SRC" ]]; then
   echo "$LOG_PREFIX  drone-knowledge-graph: ${nodes}개 노드"
 fi
 
+# discovery 그래프 동기화 — raw/ 문서에서 LangChain으로 자동 추출한 미검증
+# 개념/관계 레이어(~/2nd/scripts/extract-knowledge-graph.py 산출물). lib/graphrag.ts가
+# canonical 그래프와 함께 읽어 멀티홉 탐색한다. 이걸 빼먹으면 Vercel 배포본(WIKI_PATH
+# 없는 환경 → data/wiki 폴백)에서는 GraphRAG가 discovery 레이어 없이 canonical만
+# 동작하게 된다 — 로컬(~/2nd 직접 참조)과 배포본 동작이 갈리는 걸 막기 위해 반드시 포함.
+DISCOVERY_SRC="$WIKI_SRC/.ua/discovery-knowledge-graph.json"
+DISCOVERY_DST="$DATA_WIKI/.ua/discovery-knowledge-graph.json"
+if [[ -f "$DISCOVERY_SRC" ]]; then
+  mkdir -p "$(dirname "$DISCOVERY_DST")"
+  cp "$DISCOVERY_SRC" "$DISCOVERY_DST"
+  dnodes=$(python3 -c "import json; d=json.load(open('$DISCOVERY_SRC')); print(len(d.get('nodes',[])))" 2>/dev/null || echo "?")
+  echo "$LOG_PREFIX  discovery-knowledge-graph: ${dnodes}개 노드"
+fi
+
 # Phase 2: 임베딩 벡터 동기화 (scripts/embed-docs.py 산출물 — 수동/주기적으로
 # 재생성. 이 sync 자체가 embed-docs.py를 자동 실행하지는 않는다 — 내용이
 # 바뀌지 않으면 git diff가 없어 아래 "변경 없음" 분기로 자연히 스킵됨)
