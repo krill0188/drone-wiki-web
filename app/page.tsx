@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getAllPages } from "@/lib/wiki"
 import { getNewsFeed, getDailyBriefing, timeAgo, sourceHost, NEWS_TYPE_META, type NewsItem } from "@/lib/news"
 import { DOMAIN_META } from "@/lib/types"
+import NewsCarousel from "@/components/NewsCarousel"
 
 function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: boolean }) {
   return (
@@ -9,8 +10,8 @@ function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: bo
       {items.map((it, i) => {
         const tmeta = NEWS_TYPE_META[it.type] || NEWS_TYPE_META.news
         return (
-          <li key={it.url} className="flex gap-2 py-2 border-b border-slate-100">
-            <span className="text-[13px] text-slate-400 font-mono w-5 shrink-0 text-right pt-px">
+          <li key={it.url} className="flex gap-2 py-2 border-b border-line">
+            <span className="text-[13px] text-ink-dim font-mono w-5 shrink-0 text-right pt-px">
               {i + 1}.
             </span>
             <div className="min-w-0">
@@ -21,14 +22,14 @@ function NewsList({ items, showType = true }: { items: NewsItem[]; showType?: bo
                 className="text-[15px] leading-snug hover:text-signal-600"
               >
                 {it.title}
-                <span className="ml-1.5 text-xs text-slate-400">({sourceHost(it)})</span>
+                <span className="ml-1.5 text-xs text-ink-dim">({sourceHost(it)})</span>
               </a>
               {it.summary_ko && (
-                <p className="text-[13px] text-slate-500 mt-0.5 line-clamp-1 leading-relaxed">
+                <p className="text-[13px] text-ink-dim mt-0.5 line-clamp-1 leading-relaxed">
                   {it.summary_ko}
                 </p>
               )}
-              <div className="text-xs text-slate-400 mt-0.5">
+              <div className="text-xs text-ink-dim mt-0.5">
                 {showType && <>{tmeta.emoji} {tmeta.label} · </>}
                 {it.region === "KR" ? "🇰🇷 국내" : "🌏 해외"} · {timeAgo(it.fetched)}
               </div>
@@ -95,7 +96,31 @@ export default async function HomePage() {
     .slice(0, 5)
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-6">
+    <div>
+      {/* 히어로 — GPT/Gemini처럼 중앙에 크게, 3단계 사용법 안내 */}
+      <div className="text-center pt-14 pb-10 px-4 border-b border-line mb-8">
+        <div className="text-5xl mb-3">🛸</div>
+        <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-2">DroneWiki</h1>
+        <p className="text-ink-dim text-sm sm:text-[15px] mb-7">
+          드론 비행제어·통신·하드웨어·GCS·법규·AI 자율 — 모든 드론 지식을 AI와 함께
+        </p>
+        <div className="flex flex-col gap-2.5 max-w-sm mx-auto text-left text-[13px]">
+          <div className="flex items-start gap-2.5">
+            <span className="font-hud text-signal-600 shrink-0 mt-px">01</span>
+            <span className="text-ink-dim">왼쪽 사이드바의 <strong className="text-ink">AI Q&amp;A</strong>로 바로 질문하세요</span>
+          </div>
+          <div className="flex items-start gap-2.5">
+            <span className="font-hud text-signal-600 shrink-0 mt-px">02</span>
+            <span className="text-ink-dim"><strong className="text-ink">위키</strong> 문서를 읽다가 텍스트를 선택하면 그 자리에서 질문·저장</span>
+          </div>
+          <div className="flex items-start gap-2.5">
+            <span className="font-hud text-signal-600 shrink-0 mt-px">03</span>
+            <span className="text-ink-dim"><strong className="text-ink">AI 드론 빌더</strong>에 컨셉 한 줄로 프로젝트 전체를 설계</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 pb-6">
       {/* AI 기능 소개 — 각 도구가 실제로 뭘 해주는지 한 줄씩 설명 */}
       <div className="grid sm:grid-cols-3 gap-3 mb-8">
         <FeatureCard
@@ -128,12 +153,12 @@ export default async function HomePage() {
           <Link
             key={domain}
             href={`/wiki?domain=${domain}`}
-            className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-slate-200 hover:border-signal-500/100 hover:bg-signal-500/10 transition-colors"
+            className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-line hover:border-signal-500/100 hover:bg-signal-500/10 transition-colors"
           >
             <span className="text-lg">{meta.emoji}</span>
             <span className="min-w-0">
               <span className="block text-[13px] font-medium leading-tight">{meta.label}</span>
-              <span className="block text-xs text-slate-400">{domainCounts[domain] || 0}개 문서</span>
+              <span className="block text-xs text-ink-dim">{domainCounts[domain] || 0}개 문서</span>
             </span>
           </Link>
         ))}
@@ -153,15 +178,20 @@ export default async function HomePage() {
         more="전체 뉴스 더보기"
       />
       {briefing ? (
-        <div className="space-y-3">
-          {briefing.cards.map((c) => (
-            <div key={c.title} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
-              <div className="font-semibold text-[15px] mb-1.5">{c.title}</div>
-              <p className="text-[14px] text-slate-600 leading-relaxed">{c.body}</p>
-            </div>
-          ))}
-          <p className="text-xs text-slate-400">
-            국내·국외 뉴스, 방산, 정부사업, 채용 소식을 AI가 매일 종합 요약합니다
+        <div>
+          <NewsCarousel>
+            {briefing.cards.map((c) => (
+              <div
+                key={c.title}
+                className="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-lg border border-line bg-panel px-4 py-3"
+              >
+                <div className="font-semibold text-[15px] mb-1.5">{c.title}</div>
+                <p className="text-[13px] text-ink-dim leading-relaxed line-clamp-6">{c.body}</p>
+              </div>
+            ))}
+          </NewsCarousel>
+          <p className="text-xs text-ink-dim mt-2">
+            국내·국외 뉴스, 방산, 정부사업, 채용 소식을 AI가 매일 종합 요약합니다 · 옆으로 넘겨보세요
           </p>
         </div>
       ) : (
@@ -204,7 +234,7 @@ export default async function HomePage() {
       <SectionHead title="📖 위키 최근 업데이트" href="/wiki" more={`전체 ${pages.length}개`} />
       <ul>
         {recent.map((p) => (
-          <li key={p.slug} className="flex items-baseline gap-2 py-2 border-b border-slate-100">
+          <li key={p.slug} className="flex items-baseline gap-2 py-2 border-b border-line">
             <span className="shrink-0">{DOMAIN_META[p.domain]?.emoji || "📄"}</span>
             <Link
               href={`/wiki/${p.slug}`}
@@ -212,16 +242,15 @@ export default async function HomePage() {
             >
               {p.title}
             </Link>
-            <span className="ml-auto text-xs text-slate-400 shrink-0">{p.updated}</span>
+            <span className="ml-auto text-xs text-ink-dim shrink-0">{p.updated}</span>
           </li>
         ))}
       </ul>
 
       {/* 바로가기 */}
-      <div className="mt-8 text-[13px] text-slate-500">
+      <div className="mt-8 text-[13px] text-ink-dim">
         <Link href="/graph" className="text-signal-600 hover:underline">🔵 지식 그래프 탐색</Link>
-        <span className="mx-2 text-slate-300">·</span>
-        <Link href="/chat" className="text-signal-600 hover:underline">💬 AI Q&amp;A</Link>
+      </div>
       </div>
     </div>
   )
