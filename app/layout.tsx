@@ -22,8 +22,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <nav className="flex items-center gap-4 sm:gap-5 text-[13px] overflow-x-auto">
               <Link href="/news" className="hover:underline whitespace-nowrap">뉴스</Link>
-              <Link href="/wiki" className="hover:underline whitespace-nowrap">위키</Link>
-              <Link href="/graph" className="hover:underline whitespace-nowrap">그래프</Link>
               <Link href="/chat" className="hover:underline whitespace-nowrap">AI Q&amp;A</Link>
               <Link href="/wiki-editor" className="hover:underline whitespace-nowrap">✍️ AI 에디터</Link>
               <Link href="/ai-drone-builder" className="hover:underline whitespace-nowrap">🚀 AI 드론 빌더</Link>
@@ -40,8 +38,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-3xl mx-auto px-4 py-6 text-xs text-slate-400 flex flex-wrap gap-x-4 gap-y-1">
             <span>🛸 DroneWiki</span>
             <Link href="/news" className="hover:underline">뉴스</Link>
-            <Link href="/wiki" className="hover:underline">위키</Link>
-            <Link href="/graph" className="hover:underline">지식 그래프</Link>
             <Link href="/chat" className="hover:underline">AI Q&amp;A</Link>
             <Link href="/wiki-editor" className="hover:underline">AI 에디터</Link>
             <Link href="/ai-drone-builder" className="hover:underline">AI 드론 빌더</Link>
