@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getSelfUpdateProposals, applyProposal, skipNews, isSelfUpdateWritable } from "@/lib/self-update"
+import { getSelfUpdateProposals, applyProposal, skipNews, isSelfUpdateWritable, getSelfUpdateStats } from "@/lib/self-update"
 
 // GET: 뉴스↔위키 교차 참조 제안 목록(읽기 전용, Vercel에서도 안전).
 export async function GET() {
   const proposals = getSelfUpdateProposals(30)
-  return NextResponse.json({ proposals, writable: isSelfUpdateWritable() })
+  const stats = getSelfUpdateStats()
+  return NextResponse.json({ proposals, writable: isSelfUpdateWritable(), ...stats })
 }
 
 // POST: 제안 하나를 실제 위키 문서에 반영(apply) 또는 건너뛰기(skip).

@@ -143,3 +143,12 @@ export function skipNews(newsUrl: string): void {
   state[newsUrl] = { processedAt: new Date().toISOString(), matchedSlugs: [] }
   saveState(state)
 }
+
+// discovery-review와 동일한 승인/반려 카운트 배지에 쓰인다.
+export function getSelfUpdateStats(): { appliedCount: number; skippedCount: number } {
+  const values = Object.values(loadState())
+  return {
+    appliedCount: values.filter((v) => v.matchedSlugs.length > 0).length,
+    skippedCount: values.filter((v) => v.matchedSlugs.length === 0).length,
+  }
+}
