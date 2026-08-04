@@ -138,5 +138,145 @@
   "https://news.google.com/rss/articles/CBMihgFBVV95cUxQZW0xWUJnOTdOcm53Z0VxZkpaazF6SXJPd1pmb0xYSjNubl9mTGJjYWdSRU5LMFM1WE1sdm1PZUFPb3gxb3FlbzBRNXNlLVVyZjk4Vm96MWRNZ2pFQ2ZfZFk3T3VRMUoxUzFlajlzWWlaNG10cUpVcUpHdUhzcnlBR3VXWC1vQQ?oc=5": {
     "processedAt": "2026-08-04T04:25:25.741Z",
     "matchedSlugs": []
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxPYlJzVVpNNGpnd0V3M3FUeHhIVUlCNTktdEFObmlOR1ZLVzVmLWI0bTZ5ZmxHQjBDd21fTVdUUTMxU1dzeUFkNHdzOU9Tc05fRFU2SjEtWVFCblRyU3NYcmdSNW5vODN4SGwxTlpydm1hU3kzZ2NNQWhFVjhjOWNRS2l1X0JSNTRxbTJDU3VpcjAxc3VoTk1wVlVsLTJLc3B1TDg0UzVmUUxGVFdPZXJJQjRFeTY2QlFjY1hTRXpfVnJvVDVQazNibFhR?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.825Z",
+    "matchedSlugs": [
+      "us-dod-cuas-marketplace",
+      "faa-uas-environmental-assessment"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQ2ZSVldfYnY3OWlpREdGRVVTaFNfNUFxX3h6TzJnREhOUzVfLU93bFllLXdnMGZkNFVaUWdHVUo4c1dyMkpXbEh4UzJBOFFSclhJdTlxMl9wOUVZTVFEUlFxQzNNZXU2c21QcW9FY1V4NGlHVkhQVzJjUF80dHh4ODZvc3ZCNlBiQ3NrQmd1Y2NEVDFtSFdXMDFKM3hDem9XM0tpb01xVmpSUHc?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.828Z",
+    "matchedSlugs": [
+      "rgb-ir-fusion-uav-detection",
+      "us-dod-cuas-marketplace"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxNZlV5dzNiZExRT09IeFI4Ymw5NE1pMkpHRnlPMnVoR0NjOWtja0UtUzRlR2VlSFkzM19rTXJBQ3haa1BGdjl1R1pMa08xcUtaY1AyMm5lSWFEamtuVlNhQUNEQml2U3BlSEVVampyWXlzODhMbXRVVEtBUWJNMW40NmFzLWs3SUJuVnAwY3Bsa3hSMGxwN0JKOXN5bWJjQQ?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.832Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pYWR2S2phV2ltcXMzOWN3UEV2TTRVemIweTloQ3dKUWxvcml0NlVfRzR0SWFmUWlVY2xVMzlaOWYwZEQwUGhuNkdtRjRFM3cyUk9MTlZsX3hJd1JBUFJEbGE5dHB0VkpwOVHSAW9BVV95cUxPUWRvYUUzMXEyLXhUaXlza0ZKVTZwVEdlZHdzV1VVWUZGTFNjMTZTUWhDY2xDYjNDaDF0YTN1a2I0TEcxYzF3QlhXMUdxUXhJeGVRQ1p3T1JuNXhhS3g2bzcwNGFiblVqQXRGaGI5SFE?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.834Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNU1rMVJhWUJfWTcya2hVYzkyOFQ0TC1HODFKd2xfM19wMDJaU19OTmI4cldBMHBFRjVVMHVBbXN6TE9sTWJZeXZQblY3dWktcmfSAVNBVV95cUxNWV9rUGFPVDNNRFlBYzFocUxwUFpWenhkT3laN2tsVS14RWM1QmFhR1R0ZmdPZjBQSVBQeUJaMklHV0tnSlRLZHpXNTlZSmxPMDhpbw?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.835Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYEFVX3lxTE51eVNLajVfTVJIRzNwZGg0QV9KN3R4anNhNnh4azVPeUQtSEhCUHBwMEdQQ3lSTWxKQXM0NFcyblZUSWhYOFFiQkhtbkJSeUxiNXJEWDVFeDNYeXU3bGhtZtIBeEFVX3lxTFBlS3Q3TlhZVjFZTnNHMlpmRnhLQzhSRnZCWG96OTZsYmpRSnJpLVNNdmxMZGItS3h3YVlHT196M2tZUmQ4cUlfYXgtZDZsWkF0RVNIcVRidTRDRXV4enBOSGdKZWN0ZVBEaXA3LU1lU1Q4dVlWbDZObw?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.837Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9ZZlZYUHF4WEZLSFZUQUtjVGs2dWp5cmh5WVR6LVdrNlctYm5oOVlEU2YxOUtnVXFGZUFaRnY4TlFLS3BxN3daTmZZUFRELXJlVWc?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.840Z",
+    "matchedSlugs": [
+      "6g-isac-matlab-usrp",
+      "dji-osmo-nano"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NYWhVQy1wOWMtek9ORlpmQnMtWDlSSVpTR1FtUEk2QVFBaldvZnlBSzhuczBxaXltUTZyZXVLT21Cbkc4UXVZUG0zbVlUOHJTLVhfSTZpeGRTRmhVU2cyYVNQVUg0Sld6UjEzeDVodjE?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.842Z",
+    "matchedSlugs": [
+      "cleveland-clinic-drone-delivery",
+      "drone-first-responder-dfr"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTFBPb3NPQW9XZjRUS2FvTUMwNTNDLThvWjI4WWhSN1JEYzhValprNjg5OVJQcU9vcF9aMGlLX1U0Qld1enYyVGQ0S3JjR3dGQmd5NFlJSDJHUlQ2VlRFRXM5ZkhkYkpSQTR3UGtTM21WTEc0R0U?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.857Z",
+    "matchedSlugs": [
+      "faa-uas-environmental-assessment",
+      "drone-news-ops"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4N3VLYUZUNTAwUTVVWTBmQ1NaZXVhams2bEtJOXhnR05NV1NtRnBFSXIzeDlGOFQxYXRLWHNZQm93bHp4azhTdFBxa1NJNG96Q0puVi1PNDZaVENibmNNTW9RLV9veTktMXRXbg?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.855Z",
+    "matchedSlugs": [
+      "faa-uas-environmental-assessment",
+      "brinc-emergency-drone-funding"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IWk5KTzJXcDJvcFJEZGNCQXVMcHlsSmFoVE4yUUhMclFrTk1LWVlFODhNWHgzSVNjdjA2OEJhbFYtZndTbHZzU2Ixd2ZpNmdLZnQ4U0x4dFRxMXk5ckVOSDRDTFVUdw?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.847Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "skydio-centralsquare-dfr-integration"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAwVW8xaXRheWRDUXdlUkFRamJYYkN0bEtLXy1YblBzMzRIcDJPNmxWdzN6bXFueUJIWFBYV1NvQ3BsRXNIa3lwMExIZjZyNm8?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.849Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "sol-one"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA5UV9GZGYwQUpXRU0xUklQREdmU0NqenJMaWxoaVhTM0JoOUs0OFQ4MlZWczJBUHN0cDRKcmMxbVN4OWptYTRkaFhMTkFjNmZidGdUWmp0NEZ2Z285?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.851Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "skydio-centralsquare-dfr-integration"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTFBkbURLZzBVNHFLZlZkWk45VWFnYjktQjZ2VjRUT3hFa3lpaE5ZbFd5LXloaXFHamtndWNnd2Q0anN0UTVqeGNhXzRreUhPNEszZHFBaWRsckowdHJDMmJEZ2RLR1hFN3dDa0JjVktB?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.853Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "tekever"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiUEFVX3lxTE56SUo3VDI0dkZZM3V0ektxampwZjNPcW05N0c2VG5QVTlUOGtHbTJ6Rm81dXhBLXA4NnpaUS1ESmUtLVBIZHZlYjFBNmdiNTBp?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.859Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "drone-news-hardware"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiRkFVX3lxTE53NnRpaXN4OVZWTUNYUEJpZ3ljM0lHaFR2SlcxSTExNWhiZWRxaXA3Q0xFcXh4am5wQS1mOEl4YmhQWEdYTUE?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.864Z",
+    "matchedSlugs": [
+      "uav-swarm-target-localization",
+      "ai-knowledge-workflow"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMicEFVX3lxTFA3R1VDWGRxZWhRYjAwZDc3TjlDdzNDeHBxWHl0TDdxZ24wVDFNbGFSb1lLaW9jLXM3OENwRVJtMVREN1JKVmpQV09ZcmtEc21RWWlEbnQ3Wk94b3FBdkpNdnlOZnV0ekx3SFcyUk9mZk0?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.866Z",
+    "matchedSlugs": [
+      "lockheed-martin-morfius",
+      "drone-news-hardware"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ySFBDbWVDbGdTd3ZTTVlfUWhBYTRDNURtZW8zc2FmLW9CZHZmcF8wcEdFa2FfOVpabEgzM1VjV3lEUFJ3V0pteGtDLWlDN3VEYmhmMDdJQTI1bXl6anNrRW9XTjFxdDk2?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.869Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "swarm-coordination"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5jZ1p5MzR3emdzeV9WVVhMS1VYXzk1VVJJQm9ZUkZNUk8tLTNmZzEyRUsyVEotNncwZE9vSTVoMWQzbC11R2tnWHRSWWZtMUtDdE4zVGlnVndfZHPSAWBBVV95cUxOZU5ORmU4MEhOb2tldmcwblhram9BMUI2Vm5RXzc0OWlMQW40SXRzZmlMYnFhelBrdUk0SFV1V2I0b2xRNmY3MHFlTVdNMVZRU0M3Z2xFMjM5Z0tndThOLW0?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.871Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "lockheed-martin-morfius"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NT2tUQXFwVjE0VUZBSmluMTB0SDVaWVdLV1ZhN2trN1VkaXpUeWplLWlpU05MQnlmVFdyTXBLRnpRS0ViYl9Nb05adWRvTlNBU01XNNIBVEFVX3lxTE1NT2tUQXFwVjE0VUZBSmluMTB0SDVaWVdLV1ZhN2trN1VkaXpUeWplLWlpU05MQnlmVFdyTXBLRnpRS0ViYl9Nb05adWRvTlNBU01XNA?oc=5": {
+    "processedAt": "2026-08-04T19:22:32.873Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "brinc-emergency-drone-funding"
+    ]
   }
 }
