@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getNewsFeed, timeAgo, NEWS_TYPE_META } from "@/lib/news"
+import { getNewsFeed, getDailyBriefing, timeAgo, NEWS_TYPE_META } from "@/lib/news"
 import NewsCarousel from "@/components/NewsCarousel"
 import DroneIcon from "@/components/DroneIcon"
 
@@ -40,6 +40,7 @@ function FeatureCard({
 export default async function HomePage() {
   const feed = getNewsFeed()
   const latest = feed.slice(0, 16)
+  const briefing = getDailyBriefing()
 
   return (
     <div>
@@ -92,14 +93,29 @@ export default async function HomePage() {
           />
         </div>
 
-        {/* 나머지 뉴스는 제목만 슬라이드로 — 전부 더보기(/news)로 들어가서 본다 */}
+        {/* 뉴스 — AI 일일 요약이 있으면 그걸 슬라이드로, 없으면 제목만 슬라이드로 폴백.
+            나머지(논문/영상/정부/채용 등)는 전부 더보기(/news) 하나로 들어가서 본다 */}
         <div className="flex items-baseline justify-between mb-2">
-          <h2 className="font-bold text-base">📰 최신 소식</h2>
+          <h2 className="font-bold text-base">
+            {briefing ? `🗞️ 오늘의 드론 소식 (${briefing.date})` : "📰 최신 소식"}
+          </h2>
           <Link href="/news" className="text-[13px] text-signal-600 hover:underline">
             더보기 →
           </Link>
         </div>
-        {latest.length > 0 ? (
+        {briefing ? (
+          <NewsCarousel>
+            {briefing.cards.map((c) => (
+              <div
+                key={c.title}
+                className="snap-start shrink-0 w-[260px] sm:w-[300px] rounded-lg border border-line bg-panel px-4 py-3"
+              >
+                <div className="font-semibold text-[15px] mb-1.5">{c.title}</div>
+                <p className="text-[13px] text-ink-dim leading-relaxed line-clamp-6">{c.body}</p>
+              </div>
+            ))}
+          </NewsCarousel>
+        ) : latest.length > 0 ? (
           <NewsCarousel>
             {latest.map((it) => {
               const tmeta = NEWS_TYPE_META[it.type] || NEWS_TYPE_META.news
