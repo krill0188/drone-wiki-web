@@ -29,3 +29,6 @@ UAV 이미지를 위한 분할-정복 탐지기 — 다양한 스케일과 조�
 
 - [[computer-vision-drone]] — 드론 컴퓨터 비전
 - [[yolo]] — 실시간 객체 검출
+
+## 📰 최근 관련 소식
+- One size doesn’t fit all: Divide-and-conquer detector for UAV images (doi.org, 2027-1) — https://doi.org/10.1016/j.eswa.2026.133761

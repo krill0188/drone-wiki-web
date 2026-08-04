@@ -33,3 +33,6 @@ DJI의 초소형 액션 카메라 — 52g 무게로 어디에나 클립 가능.
 - [[dji-osmo-pocket-4]] — DJI Osmo Pocket 4P
 - [[dji-osmo-action-6]] — DJI Osmo Action 6
 - [[drone-payload-systems]] — 드론 페이로드 시스템
+
+## 📰 최근 관련 소식
+- [DJI] POV: Flying Through a Waterfall | DJI Osmo Nano (youtube.com, 2026-08-03) — https://www.youtube.com/watch?v=moGHmss3FL8

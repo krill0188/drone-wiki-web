@@ -36,3 +36,6 @@ ExpressLRS 4.1 버전의 주요 개선사항 — 바인딩 프로세스 간소�
 
 - [[fpv-hardware]] — FPV 드론 하드웨어
 - [[datalink-communication]] — RF 통신 및 데이터링크
+
+## 📰 최근 관련 소식
+- [Joshua Bardwell] ELRS 4.1 makes binding EASIER THAN EVER! (youtube.com, 2026-08-03) — https://www.youtube.com/watch?v=nNbh13-DW5E

@@ -29,3 +29,6 @@ contradictions: []
 
 - [[drone-ai-agents]] — 자율 드론 에이전트
 - [[datalink-communication]] — 데이터링크 및 통신
+
+## 📰 최근 관련 소식
+- Dronuum: A smart and energy efficient drone application within the Computing Continuum (doi.org, 2027-1) — https://doi.org/10.1016/j.future.2026.108732

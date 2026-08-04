@@ -29,3 +29,6 @@ Eve Air Mobility(NYSE: EVEX)의 eVTOL 프로그램이 첫 번째 전환 비행(t
 
 - [[drone-hw]] — 드론 하드웨어
 - [[drone-delivery-news]] — 드론 배달 및 UAM 동향
+
+## 📰 최근 관련 소식
+- Eve Air Mobility Achieves First Transition Flight Milestone, Advancing eVTOL Program Toward Wing-Borne Flight (www.suasnews.com, Mon, 03 Au) — https://www.suasnews.com/2026/08/eve-air-mobility-achieves-first-transition-flight-milestone-advancing-evtol-program-toward-wing-borne-flight/

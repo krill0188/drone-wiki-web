@@ -36,3 +36,6 @@ contradictions: []
 
 - [[datalink-communication]] — 드론 데이터링크 통신
 - [[uav-isac-cross-region]] — UAV ISAC 교차 지역 협력
+
+## 📰 최근 관련 소식
+- [MATLAB] 6G ISAC Implementation with MATLAB and USRP (youtube.com, 2026-08-03) — https://www.youtube.com/watch?v=20bb37XtbIk

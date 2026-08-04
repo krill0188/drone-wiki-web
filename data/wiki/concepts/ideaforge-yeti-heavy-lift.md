@@ -25,3 +25,6 @@ contradictions: []
 
 - [[drone-hw]] — 드론 하드웨어
 - [[drone-delivery-news]] — 드론 배달 동향
+
+## 📰 최근 관련 소식
+- ideaForge receives TDB nod for Financial Assistance of ₹151 Crore Under RDI Scheme To Advance Heavy-Lift UAV Platform ‘YETI’ (www.suasnews.com, Mon, 03 Au) — https://www.suasnews.com/2026/08/ideaforge-receives-tdb-nod-for-financial-assistance-of-%e2%82%b9151-crore-under-rdi-scheme-to-advance-heavy-lift-uav-platform-yeti/

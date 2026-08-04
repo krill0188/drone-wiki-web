@@ -36,3 +36,6 @@ DJI Osmo Pocket 4P의 D-Log 2 프로파일과 4K/240fps 슬로우모션 기능.
 
 - [[dji-osmo-pocket-4]] — DJI Osmo Pocket 4P
 - [[dji-osmo-action-6]] — DJI Osmo Action 6
+
+## 📰 최근 관련 소식
+- [DJI] From tricky lighting to fleeting details, camera keeps your vlog looking cinematic.｜Osmo Pocket 4P (youtube.com, 2026-08-03) — https://www.youtube.com/watch?v=rQm3P3pP2NI

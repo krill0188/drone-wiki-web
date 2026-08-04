@@ -36,3 +36,6 @@ MROPE는 협력 감시 미션과 엄격한 로컬 안전 요구사항을 분리�
 - [[swarm-coordination]] — 스웜 조정 및 편대 비행
 - [[drone-ai-agents]] — 자율 의사결정 및 다중 에이전트 협력
 - [[decentralized-swarm-gps-denied]] — 분산형 스웜 제어
+
+## 📰 최근 관련 소식
+- MROPE: A Multi-Robot Safe Cooperative Strategy via combined Predictive Safety Filters and Ellipse-based Constraint Compression (arxiv.org, 2026-07-31) — http://arxiv.org/abs/2607.29203v1
