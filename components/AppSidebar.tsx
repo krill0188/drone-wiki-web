@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { DOMAIN_META, type Domain } from "@/lib/types"
 import LangToggle from "@/components/LangToggle"
+import DroneIcon from "@/components/DroneIcon"
 
 interface TreePage {
   slug: string
@@ -99,7 +100,8 @@ export default function AppSidebar() {
         <div className="flex items-center justify-between h-14 px-4 border-b border-line shrink-0">
           <Link href="/" className="flex items-center gap-1.5 font-display font-bold text-[15px]" onClick={() => setMobileOpen(false)}>
             <span className="w-1.5 h-1.5 rounded-full bg-signal-500 shadow-[0_0_6px_var(--color-signal-500)]" />
-            🛸 DroneWiki
+            <DroneIcon className="w-4 h-4" />
+            DroneWiki
           </Link>
           <button onClick={() => setMobileOpen(false)} className="lg:hidden text-ink-dim text-sm">
             ✕

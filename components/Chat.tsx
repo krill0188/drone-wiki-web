@@ -6,6 +6,7 @@ import { useChat } from "@ai-sdk/react"
 import { DefaultChatTransport, type UIMessage } from "ai"
 import { useWikiDoc } from "@/components/WikiDocContext"
 import { DOMAIN_META } from "@/lib/types"
+import DroneIcon from "@/components/DroneIcon"
 
 interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string }[]
@@ -80,9 +81,9 @@ export default function ChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "AI 챗봇 닫기" : "AI 챗봇 열기"}
-        className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-ink hover:bg-ink/90 text-white shadow-lg flex items-center justify-center text-2xl transition-transform hover:scale-105 ring-2 ring-signal-500/40"
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-ink hover:bg-ink/90 text-white shadow-lg flex items-center justify-center transition-transform hover:scale-105 ring-2 ring-signal-500/40"
       >
-        {open ? "✕" : "🛸"}
+        {open ? <span className="text-2xl">✕</span> : <DroneIcon className="w-6 h-6" />}
       </button>
 
       {/* 우측 고정 패널 */}
