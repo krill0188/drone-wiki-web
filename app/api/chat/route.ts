@@ -9,6 +9,7 @@ import {
 import { openrouter } from "@openrouter/ai-sdk-provider"
 import { ragSearch, searchNews, type RagSource, type NewsHit } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
+import { buildAgentManifest } from "@/lib/agent-manifest"
 import type { DocContext } from "@/lib/types"
 
 export const maxDuration = 60
@@ -17,6 +18,7 @@ const MODEL_ID = "anthropic/claude-haiku-4.5"
 const DOC_CONTEXT_MAX_CHARS = 4000
 
 function buildSystemPrompt(
+  manifest: string,
   docContext: DocContext | null,
   sources: RagSource[],
   graphBlock: string,
@@ -38,7 +40,9 @@ ${docContext.content.slice(0, DOC_CONTEXT_MAX_CHARS)}
 `
     : ""
 
-  return `당신은 드론 도메인 전문가 AI입니다. 아래 컨텍스트(현재 보고 있는 문서, RAG로 검색된 지식 베이스, 최신 뉴스)를 근거로 사용자 질문에 완전하고 상세하게 답변하세요.
+  return `당신은 드론 도메인 전문가 AI입니다. 아래 컨텍스트(위키 전체 지도, 현재 보고 있는 문서, RAG로 검색된 지식 베이스, 최신 뉴스)를 근거로 사용자 질문에 완전하고 상세하게 답변하세요.
+
+${manifest}
 
 ${currentDocBlock}<knowledge-base>
 ${contextParts.join("\n\n") || "(관련 위키 문서 없음)"}
@@ -84,8 +88,9 @@ export async function POST(req: NextRequest) {
   // 벡터/키워드로 찾은 canonical 시드에서 출발해 canonical+discovery 그래프를
   // 함께 멀티홉 탐색 — 드론 지식과 AI 지식을 잇는 연결고리를 찾는 GraphRAG 레이어.
   const graph = ragQuery ? graphRagSearch(ragQuery, sources.map((s) => s.slug)) : { block: "", usedDiscovery: false }
+  const manifest = await buildAgentManifest()
 
-  const system = buildSystemPrompt(docContext ?? null, sources, graph.block, newsHits)
+  const system = buildSystemPrompt(manifest, docContext ?? null, sources, graph.block, newsHits)
 
   const result = streamText({
     model: openrouter(MODEL_ID),

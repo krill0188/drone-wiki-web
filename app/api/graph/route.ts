@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
-import { getKnowledgeGraph } from "@/lib/wiki"
+import { getAugmentedKnowledgeGraph } from "@/lib/wiki"
 
 export async function GET() {
-  const graph = getKnowledgeGraph()
+  const graph = await getAugmentedKnowledgeGraph()
   return NextResponse.json(graph)
 }

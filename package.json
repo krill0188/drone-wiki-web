@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "self-update": "tsx scripts/self-update-pipeline.ts"
   },
   "dependencies": {
     "@ai-sdk/react": "^4.0.51",
@@ -30,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
     "tailwindcss": "^4",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }

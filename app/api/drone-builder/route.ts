@@ -3,6 +3,7 @@ import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai
 import { openrouter } from "@openrouter/ai-sdk-provider"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
+import { buildAgentManifest } from "@/lib/agent-manifest"
 
 // "AI 드론을 기획하고 개발해줘" 같은 요청을 3개 전문 에이전트가 순차 협업해
 // 무에서 유로 만들어내는 멀티 에이전트 오케스트레이션.
@@ -33,10 +34,12 @@ function buildGroundingBlock(query: string): string {
   return `<knowledge-base>\n${kb || "(관련 위키 문서 없음)"}\n</knowledge-base>\n\n${graph.block}`
 }
 
-function proposalSystemPrompt(grounding: string): string {
+function proposalSystemPrompt(manifest: string, grounding: string): string {
   return `당신은 DroneWiki 소속 '기획서 작성 에이전트'다. 3단계 협업 파이프라인의 1단계를 맡는다
 (2단계: 스펙 정의 에이전트, 3단계: 아키텍처·소스코드 설계 에이전트가 이어받는다).
 사용자가 제시한 드론 컨셉을 실행 가능한 프로젝트 기획서로 만드는 것이 임무다.
+
+${manifest}
 
 아래는 DroneWiki 지식 베이스에서 검색된 관련 자료(RAG)와 그래프 탐색으로 찾은, 서로 다른
 주제를 가로지르는 개념 연결고리다 — 근거로 적극 활용해라. [AI 추출·미검증] 표시가 있는
@@ -55,10 +58,12 @@ ${grounding}
 원문/지식베이스에 없는 사실을 지어내지 말고, 불확실한 부분은 "확인 필요"로 명시해라. 한국어로 작성.`
 }
 
-function specSystemPrompt(grounding: string, context: StageContext): string {
+function specSystemPrompt(manifest: string, grounding: string, context: StageContext): string {
   return `당신은 DroneWiki 소속 '스펙 정의 에이전트'다. 3단계 협업 파이프라인의 2단계를 맡는다.
 1단계 기획서 작성 에이전트가 만든 아래 기획서를 받아, 그 목표·기능·제약을 충족하는 구체적인
 기술 스펙으로 구체화하는 것이 임무다.
+
+${manifest}
 
 <proposal>
 ${context.proposal ?? "(기획서 없음)"}
@@ -80,10 +85,12 @@ ${grounding}
 한국어로 작성.`
 }
 
-function architectureSystemPrompt(grounding: string, context: StageContext): string {
+function architectureSystemPrompt(manifest: string, grounding: string, context: StageContext): string {
   return `당신은 DroneWiki 소속 '아키텍처·소스코드 설계 에이전트'다. 3단계 협업 파이프라인의
 마지막 단계를 맡는다. 1단계 기획서와 2단계 기술 스펙을 받아 시스템 아키텍처와 초기 구현
 스켈레톤 코드를 설계하는 것이 임무다.
+
+${manifest}
 
 <proposal>
 ${context.proposal ?? "(기획서 없음)"}
@@ -122,13 +129,14 @@ export async function POST(req: NextRequest) {
         : `${prompt} ${(context?.spec ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
 
   const grounding = buildGroundingBlock(query)
+  const manifest = await buildAgentManifest()
 
   const system =
     stage === "proposal"
-      ? proposalSystemPrompt(grounding)
+      ? proposalSystemPrompt(manifest, grounding)
       : stage === "spec"
-        ? specSystemPrompt(grounding, context ?? {})
-        : architectureSystemPrompt(grounding, context ?? {})
+        ? specSystemPrompt(manifest, grounding, context ?? {})
+        : architectureSystemPrompt(manifest, grounding, context ?? {})
 
   const result = streamText({
     model: openrouter(MODEL_ID),

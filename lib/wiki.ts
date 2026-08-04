@@ -122,3 +122,41 @@ export function getKnowledgeGraph(): KnowledgeGraph {
 
   return { nodes, edges }
 }
+
+// openwiki 벤치마킹: openwiki는 콘셉트 문서 간 표준 마크다운 링크 자체를 시각화
+// 그래프의 관계로 쓴다(별도 추출 파이프라인 없이). 이 프로젝트는 [[wikilink]] 문법을
+// 쓰고(getPageBySlug의 extractWikiLinks), 그 결과가 WikiPage.links에 이미 있었지만
+// getKnowledgeGraph()가 반환하는 그래프(LLM 추출 canonical .ua 그래프)에는 지금까지
+// 반영되지 않고 있었다 — 두 그래프를 병합해 "사람이 직접 쓴 위키 링크"와 "LLM이 추출한
+// 개념 관계"를 edge.type으로 구분해서 함께 보여준다. getKnowledgeGraph()는 그대로 두고
+// (기존 동작 보존) 이 함수가 그 위에 얹는다.
+export async function getAugmentedKnowledgeGraph(): Promise<KnowledgeGraph> {
+  const base = getKnowledgeGraph()
+  const pages = await getAllPages()
+  const slugSet = new Set(pages.map((p) => p.slug))
+
+  const nodeIds = new Set(base.nodes.map((n) => n.id))
+  const extraNodes: KnowledgeGraph["nodes"] = []
+  for (const p of pages) {
+    if (nodeIds.has(p.slug)) continue
+    extraNodes.push({ id: p.slug, name: p.title, domain: p.domain, layer: p.layer, val: 1 })
+    nodeIds.add(p.slug)
+  }
+
+  const existingEdgeKeys = new Set(base.edges.map((e) => `${e.source}->${e.target}`))
+  const linkEdges: KnowledgeGraph["edges"] = []
+  for (const p of pages) {
+    for (const target of p.links) {
+      if (target === p.slug || !slugSet.has(target)) continue
+      const key = `${p.slug}->${target}`
+      if (existingEdgeKeys.has(key)) continue
+      existingEdgeKeys.add(key)
+      linkEdges.push({ source: p.slug, target, type: "internal-link" })
+    }
+  }
+
+  return {
+    nodes: [...base.nodes, ...extraNodes],
+    edges: [...base.edges, ...linkEdges],
+  }
+}
