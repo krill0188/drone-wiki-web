@@ -55,3 +55,4 @@ AI 지식 워크플로는 원본 수집부터 검토된 지식과 산출물 생�
 
 ## 📰 최근 관련 소식
 - [Y르포] 60m 상공서 객체·사물 완벽 인식…안전·치안 구멍 메꾸는 AI드론 (v.daum.net, Mon, 03 Au) — https://news.google.com/rss/articles/CBMiRkFVX3lxTE53NnRpaXN4OVZWTUNYUEJpZ3ljM0lHaFR2SlcxSTExNWhiZWRxaXA3Q0xFcXh4am5wQS1mOEl4YmhQWEdYTUE?oc=5
+- 광교호수공원서 드론으로 간식 받는다…수원시, 배송서비스 시작 (v.daum.net, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiVEFVX3lxTE9YSk1CeXY4R25wMGpBYUVHdjRTVk91b1lvZTQxV3NmdnpVS3BSV2N2UFJtY2J1Z1VHLTNoYTNQaUlGTDZWSXFiaU02VW9LZ1loOFhYLQ?oc=5

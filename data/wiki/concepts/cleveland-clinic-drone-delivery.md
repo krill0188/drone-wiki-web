@@ -41,3 +41,4 @@ Cleveland Clinic은 미국 최초의 장기 의료 드론 배달 프로그램을
 
 ## 📰 최근 관련 소식
 - 드론으로 물품 배송...수원시, 실증 시작 (B world, Tue, 04 Au) — https://news.google.com/rss/articles/CBMicEFVX3lxTE1NYWhVQy1wOWMtek9ORlpmQnMtWDlSSVpTR1FtUEk2QVFBaldvZnlBSzhuczBxaXltUTZyZXVLT21Cbkc4UXVZUG0zbVlUOHJTLVhfSTZpeGRTRmhVU2cyYVNQVUg0Sld6UjEzeDVodjE?oc=5
+- [영상] 광교호수공원에서 음료도 드론으로…수원시, 배송 서비스 시작 (팍스경제TV, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiaEFVX3lxTE50MDl1aGpQR0RYVVZONUY0eHFzVzFFVWFWWlZqVWw4Q1VnUlhkaGJ4cGNUa1hfZFJobWpLV01BbmE1REdIeEd3QUpkSDlXY0tvaHJqWHpqMDlPc3VfYmgwTXdLZkU3aGRS?oc=5

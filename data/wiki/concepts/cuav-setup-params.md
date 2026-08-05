@@ -52,3 +52,6 @@ CUAV 보드는 **전원 모듈(PMU) 종류에 따라 파라미터가 크게 달�
 
 - CUAV 문서: https://doc.cuav.net/
 - X7+ 매뉴얼: https://doc.cuav.net/flight-controller/x7/en/
+
+## 📰 최근 관련 소식
+- [Joshua Bardwell] Why did Divimath release a 4W ANALOG vTX?! (youtube.com, 2026-08-05) — https://www.youtube.com/watch?v=r6h3y7gFdR8

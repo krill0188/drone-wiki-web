@@ -31,3 +31,6 @@ contradictions: []
 - [[faa-section-927-waiver]] — FAA Section 927 면제 프로세스
 - [[drone-regulations]] — 드론 규제 개요
 - [[uk-caa-airspace-architecture]] — 영국 CAA Airspace Architecture
+
+## 📰 최근 관련 소식
+- 수원특례시, 광교 일원서 ‘하늘편의점’ 드론배송 서비스 본격 시연… 미래형 교통 복지 상용화 첫걸음 (경인종합일보, Wed, 05 Au) — https://news.google.com/rss/articles/CBMib0FVX3lxTE1MS1BEejBRay1zMWNiSVE1MlpkdVRpZ2UzSmF5TC1qVDNNajJmS1YtTWpvRWtHcmJlWTEwTldCUTZMZEVSd3FTM3ExY1BuZjVoWE9qOEZUUmM5M3JqajhWMGhRN3RqSHhSUFFnMHNLONIBckFVX3lxTFBKYUJvd3FUS3RCVGRQUm84OUZrcVVYdDc3SzN6T0IxR3FMRzJXQ29fcmtTdWozUmFmZnFqOGRzR1JZZUFNdXMwNGhpbG1TanktT2NJV1hSRUozb1Y0eGFDMWpPcFVCcGY4Mmd0aEt6aWxLQQ?oc=5

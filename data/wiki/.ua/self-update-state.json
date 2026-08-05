@@ -278,5 +278,145 @@
       "drone-news-ops",
       "brinc-emergency-drone-funding"
     ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE12cjc4MGhSTUt4ZUo2OVo0cHJ3R19PdHZWY09VZ0JMdFdLRUhHVy13cERFdmdpTkl0c1JtbHJ3SUhRYWd6c2tqa1dyUllhekEteGFsT2tiYklsWms?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.001Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "lockheed-martin-morfius"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9FMXROLTRVX0VfS1hCS21XVGhsNGx1OXZGN29uT2ZIa3hpeWxwUzM5Q0hab1VyRG1ZVTdOTmhGQ1huRmM3OWltdjc1a0w0NWt5V1pEbA?oc=5": {
+    "processedAt": "2026-08-05T19:30:41.988Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "sol-one"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CVjlDQXNMRnY0NlF2RE5rU1ZqSkRlbnpHSGJzR0VhZm5LWkJIbHhXR01VQXgzUGM3cVVvYV9vNHV4LVRYS29kRnViSnJsR1BIcFg5TmxUQUJNX2M?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.007Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "sol-one"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMixgFBVV95cUxNLXE2RGRKTHV0TEpfTGsxemxJT1NPVTZMd1ZCdjNKY3I0YzFJRmVwQlJldWdjTm0wWHBOSVdBWURiYUVGR0pWMTQ3Wm9QeTlZTzgtOGxFd3lUMFo2ZUZWa21PZDJUcVlHdnFtQUxGclR5R2ZKVWw0R3FfV19qRWlJWF9YR0E3eU9JT3prMjdIY0RRNkNKVEFubGZJRlFuQk9nalBXY1pNVTQ4VXF1N1A0U1dBN1Fuc0FpdmN5bkRSX2J0QXdRdnc?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.013Z",
+    "matchedSlugs": [
+      "cross-layered-medical-drone-coordination",
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FRWVVMEo2TGJ0UDZjUG5uTlNEd1lDQll1blc3WWYybzZXUUR4YjB6NTFJbG9QaEI1cXFrM1JjMVdYckxnS1hnUC16dEFFTE0?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.015Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE15QURoZlpRSEJmcUlWZ0xmU2JSQTBnMTdYamw4ME5neGkyWlU1Nk8tUC1nV1hreUM3UXo1eFhEeVVDM2hyYmFUamNnVDF5UGEtRUdpZV9Lcm5mS2fSAWBBVV95cUxOQWZvUXNFcWJ2MVFFOVVGQTdRemp2QjhnT0txMW5EVDFNTk9jd3gxd1dGNXRXdlh0M0x3VjlZeXVCMHFiOU9Pci1taDlZaFktZ1JPZ3NXdDdjNlVGWDExdHg?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.016Z",
+    "matchedSlugs": [
+      "drone-news-hardware",
+      "drone-news-ops"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZUDVFQmpKQm5nQzZTX3BWUm5nUzhyYTdaTDctM0trUlYzVEt0cnBwd3FMb0tfZXNBdXI5R1V3U3NpendGVnFIdzljRmNiZEtMc1NoU3lIUjM3SDl5UTNUOVdrcjRDSktUaklwYtIBcEFVX3lxTFBhVVgzRFo1WDJmcGNTSUNIUG5pemhmbWNoOG10OExOZ3g5eTdfa2x0eThmanA0b3BDX1I1SmN0blFxWUNSTTdjNlVCS2JMMExGM2pUeVZmSG5BV3NsMkJDUTdPOWlvWXBpWE8xNlZjV2g?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.018Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "skydio-centralsquare-dfr-integration"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qV01vSHh1bDZpaHl0STh1MlZXT2NZU1llRDd0dnVPRlVUZi0zV3pmSk02Q0w1YWpyMV8yVmt2NWxZMWt5M04yOWQ0M2hkZFo5QWZZMHBPZ0txdlU?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.019Z",
+    "matchedSlugs": [
+      "drone-delivery-news",
+      "drone-news-2026-07-31"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE50MDl1aGpQR0RYVVZONUY0eHFzVzFFVWFWWlZqVWw4Q1VnUlhkaGJ4cGNUa1hfZFJobWpLV01BbmE1REdIeEd3QUpkSDlXY0tvaHJqWHpqMDlPc3VfYmgwTXdLZkU3aGRS?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.022Z",
+    "matchedSlugs": [
+      "cleveland-clinic-drone-delivery",
+      "drone-first-responder-dfr"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9YSk1CeXY4R25wMGpBYUVHdjRTVk91b1lvZTQxV3NmdnpVS3BSV2N2UFJtY2J1Z1VHLTNoYTNQaUlGTDZWSXFiaU02VW9LZ1loOFhYLQ?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.031Z",
+    "matchedSlugs": [
+      "sol-one",
+      "ai-knowledge-workflow"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMib0FVX3lxTE1MS1BEejBRay1zMWNiSVE1MlpkdVRpZ2UzSmF5TC1qVDNNajJmS1YtTWpvRWtHcmJlWTEwTldCUTZMZEVSd3FTM3ExY1BuZjVoWE9qOEZUUmM5M3JqajhWMGhRN3RqSHhSUFFnMHNLONIBckFVX3lxTFBKYUJvd3FUS3RCVGRQUm84OUZrcVVYdDc3SzN6T0IxR3FMRzJXQ29fcmtTdWozUmFmZnFqOGRzR1JZZUFNdXMwNGhpbG1TanktT2NJV1hSRUozb1Y0eGFDMWpPcFVCcGY4Mmd0aEt6aWxLQQ?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.032Z",
+    "matchedSlugs": [
+      "uk-caa-bvlos-scale",
+      "drone-news-2026-08-01"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE5RRUY4MWZqZld2SVNFY21TY3JxOUlRTjJFcXBpaGtUbmh5bjl3WkRJMWJ6RnJNSXdkNl9rbktvdFRpbk42OXY1VHlqb2JqWHpzWk4tZ3NiMVo2eFpLbFk4ZmRlMnVQV3F2NHc?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.032Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "skydio-centralsquare-dfr-integration"
+    ]
+  },
+  "https://www.youtube.com/watch?v=r6h3y7gFdR8": {
+    "processedAt": "2026-08-05T19:30:42.051Z",
+    "matchedSlugs": [
+      "elrs-41-release",
+      "cuav-setup-params"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9KZUtyQ2tOWWpIWW1DM0ZpdXBsUTFodVp0ai12YmU3QmN1Tmd2YXFPOEtINFliTU1SdElZNGpOclBvNGVhVXBXdHl4QUZRX0JKVWxwMThXWnpVX2pOTzJYV9IBeEFVX3lxTE9KRTZneHpFODBaODlfQmx2OTZ5M1IwZzg4dHBvS3FTdjFJY1RKZUd6R0hLQTFCME04dS0tenllelVNSWhnb3lJd0ZNd29Bb0EzQjVuUWNTbkJTY05nX084SkxkWGE3SWlFeEVBRjh3enpYcG1aRkFHXw?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.029Z",
+    "matchedSlugs": [
+      "advanced-mavlink",
+      "px4-pid-tuning"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLdElwUE03UmVsRlpCcEpNSHRBQmtBTGw3ZnFDbEduWTZTbTRZMXk4ZlBwcHYwMi1uQlA3eDR6QjRPT0xOa3l2QVF0NmVUbm5lWG1iQnRNa21lNTDSAWBBVV95cUxQZXFtT1l1WHRQRUFoR1J4amtHeFV6eEJxVjFTSkhzTFYwT1c3dEg0NkZ1RTROZkt1U1FoNHBHZUlJSnBZMmt2bkRxUWc4R1hVWmF2Smo2bzllcDI5RUhsRF8?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.035Z",
+    "matchedSlugs": [
+      "advanced-mavlink",
+      "ardupilot-architecture"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YVXlQQV9mUlhOWHk4bHVTbk53ZkQtREswMExGTWZJMzRKMFJFVUN6OGgwVUd2d2gta3hCT3M1cjBtMVB6dFdBcWZiWGZ3bC03MXhhbkstbk45bkYzczVqMg?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.036Z",
+    "matchedSlugs": [
+      "drone-news-hardware",
+      "lockheed-martin-morfius"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WS0FOM3RRX2JDNEZWTXpCc2lMMDFCaVJ1NmlVOFQ0NXBSZ1M2Q3B1TVlPYy1SMUxPMC0wTThVX01rd2dnQlA5N2o5TTlyNlY1bFF2OEoyTE13UdIBX0FVX3lxTE12bng0UngtcWxZNTRDLWlMWGlVRzFhblk5cDNtcnVzUGg5QmdCNGgxYzFHRm05V0RCRmcxV3JtbDE5bmRBOHN1elp1TEtJRkdvaUxaMF81aHZZYnBTbXJ3?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.040Z",
+    "matchedSlugs": [
+      "drone-regulations",
+      "dronecan-deep"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMib0FVX3lxTE9wNFp1UmoxR3NZY0MwclFYUkpDTkVzNl8wTjZFcmRZb3R5eDllR2k1dW5sRHV5dldyZ21PWW5BOFVwby1hbzlWUDZHNkpULWVWOU1oemNURWNwVnRoVlY3aXk5TDF5QWhBWHduckJBMNIBb0FVX3lxTE9wNFp1UmoxR3NZY0MwclFYUkpDTkVzNl8wTjZFcmRZb3R5eDllR2k1dW5sRHV5dldyZ21PWW5BOFVwby1hbzlWUDZHNkpULWVWOU1oemNURWNwVnRoVlY3aXk5TDF5QWhBWHduckJBMA?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.042Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMia0FVX3lxTE00LVhCQkZ2UFNCWUl5cEVHbndNTVV6bWsyckozM25wMy1IM2NhVUFzaGN1QVY0dVF3VkVJVHNMa2UwM25VM3h5ZUpTWmFVSmtKbVBET0NUT1NjcFBqVHJCWm1jclZOeF84MnM0?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.044Z",
+    "matchedSlugs": [
+      "6g-isac-matlab-usrp",
+      "dji-osmo-nano"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93X2l0RHdKdTRVZzFTaVpMVXg2ZmEybjdlY3RkMUR5dUE2OU5SS055LWV3OFJGMWJVTmFveFZXU0xmNWhFZnJ3WnVwWk8xQm1WbFHSAVNBVV95cUxOdkZBUWZGUW41bUVHNlFlZERmb2h5SXBMUkRzbXVHVFBzc3VldkxoZVNRaXhvVFRJNy1udEtjeGZpcEJyc3dTY0RteHUwOW9NSm9Tbw?oc=5": {
+    "processedAt": "2026-08-05T19:30:42.047Z",
+    "matchedSlugs": [
+      "dji-terra",
+      "dronuum-computing-continuum"
+    ]
   }
 }

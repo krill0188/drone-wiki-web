@@ -32,3 +32,6 @@ contradictions: []
 - [[doordash-air]] — DoorDash 드론 배달 서비스
 - [[dji-osmo-pocket-4]] — DJI Osmo Pocket 4P
 - [[wing-nhs-medical-delivery]] — Wing NHS 의료 배달
+
+## 📰 최근 관련 소식
+- 붉게 달아오른 도심…‘열화상 드론’으로 본 폭염 (news.kbs.co.kr, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qV01vSHh1bDZpaHl0STh1MlZXT2NZU1llRDd0dnVPRlVUZi0zV3pmSk02Q0w1YWpyMV8yVmt2NWxZMWt5M04yOWQ0M2hkZFo5QWZZMHBPZ0txdlU?oc=5

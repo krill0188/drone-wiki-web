@@ -185,3 +185,6 @@ note: "Knowledge-based page - no raw source ingested yet"
 - 각국 최신 규제 업데이트
 - BVLOS 인증 사례 연구
 - UTM 시스템 기술 표준
+
+## 📰 최근 관련 소식
+- 폭발물 싣고 독일 공항 날아든 드론···경찰 “기폭 장치 제거” (경향신문, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WS0FOM3RRX2JDNEZWTXpCc2lMMDFCaVJ1NmlVOFQ0NXBSZ1M2Q3B1TVlPYy1SMUxPMC0wTThVX01rd2dnQlA5N2o5TTlyNlY1bFF2OEoyTE13UdIBX0FVX3lxTE12bng0UngtcWxZNTRDLWlMWGlVRzFhblk5cDNtcnVzUGg5QmdCNGgxYzFHRm05V0RCRmcxV3JtbDE5bmRBOHN1elp1TEtJRkdvaUxaMF81aHZZYnBTbXJ3?oc=5
