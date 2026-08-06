@@ -1,7 +1,7 @@
 ---
 title: 드론 운용 및 미션 동향 2026-07
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-08-06
 type: concept
 tags: [drone, ops-mission]
 sources: [inbox/fetch-2026-07-29-rss-dronelife.md, inbox/fetch-2026-07-29-rss-suasnews.md]
@@ -72,6 +72,10 @@ domain: ops-mission
 - [[swarm-coordination]] — 다중 드론 협업
 - [[drone-safety-failsafe]] — 안전 시스템
 - [[drone-payload-systems]] — 페이로드 통합
+- [[drone-news-2026-07-31]] — 관련 뉴스 아카이브
+- [[drone-news-2026-08-01]] — 관련 뉴스 아카이브
+- [[drone-news-hardware]] — 관련 뉴스 아카이브
+- [[drone-news-regulations]] — 관련 뉴스 아카이브
 
 ## 📰 최근 관련 소식
 - 당진 드론공원, 국토교통부 지정 드론공원에 최종 선정 (충남일보, Tue, 04 Au) — https://news.google.com/rss/articles/CBMic0FVX3lxTFBPb3NPQW9XZjRUS2FvTUMwNTNDLThvWjI4WWhSN1JEYzhValprNjg5OVJQcU9vcF9aMGlLX1U0Qld1enYyVGQ0S3JjR3dGQmd5NFlJSDJHUlQ2VlRFRXM5ZkhkYkpSQTR3UGtTM21WTEc0R0U?oc=5

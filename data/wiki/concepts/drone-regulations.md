@@ -1,7 +1,7 @@
 ---
 title: Drone Regulations
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-08-06
 type: concept
 tags: [drone, regulations, UAS, FAA, EASA, BVLOS, compliance]
 sources: []
@@ -179,6 +179,14 @@ note: "Knowledge-based page - no raw source ingested yet"
 - [[drone-safety-failsafe]] — 안전 시스템
 - [[datalink-communication]] — C2 링크 규제
 - [[swarm-coordination]] — 군집 비행 규제
+
+## 세부 규제 사례
+
+- [[faa-deter-program]] — FAA DETER 프로그램(공항 대응 드론 탐지)
+- [[faa-uas-environmental-assessment]] — FAA UAS 환경영향평가
+- [[uk-caa-bvlos-scale]] — 영국 CAA BVLOS 대규모 운용 규정
+- [[us-dod-cuas-marketplace]] — 미국 국방부 C-UAS 마켓플레이스
+- [[china-drone-export-controls]] — 중국 대미 드론·부품 수출 통제
 
 ## 수집 대상
 

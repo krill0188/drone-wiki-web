@@ -63,7 +63,7 @@
         "flight-controller",
         "HAL"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -171,7 +171,7 @@
         "BVLOS",
         "compliance"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -581,7 +581,7 @@
         "control",
         "multicopter"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -676,7 +676,7 @@
         "micro-ROS",
         "middleware"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -743,7 +743,7 @@
         "formation",
         "coordination"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -821,7 +821,7 @@
         "datalink",
         "drone-sw"
       ],
-      "updated": "2026-07-28",
+      "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -915,7 +915,7 @@
         "drone",
         "drone-hw"
       ],
-      "updated": "2026-07-29",
+      "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -929,7 +929,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-07-29",
+      "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -943,7 +943,7 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-07-29",
+      "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -1862,7 +1862,7 @@
         "ops-mission",
         "hardware"
       ],
-      "updated": "2026-07-31",
+      "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": null
@@ -1876,7 +1876,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-08-01",
+      "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -11244,6 +11244,726 @@
         "inbox/fetch-2026-08-05-rss-suasnews.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "ardupilot-architecture",
+      "target": "ardupilot-plane-4-7",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ardupilot-architecture",
+      "target": "indi-stability-tilt-rotor-vtol",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ardupilot-architecture",
+      "target": "mars-dragonfly-modular-aerial",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ardupilot-architecture",
+      "target": "spatial-dubins-quadrotor-control",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/ardupilot-architecture.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ardupilot-params-by-version",
+      "target": "ardupilot-architecture",
+      "type": "wikilink",
+      "evidence": [
+        "ArduPilot 공식 릴리즈노트 기반 정리"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "agile-quadrotor-learning",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "divide-conquer-uav-detector",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "gnn-uav-anomaly-detection",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "lightweight-safe-rl-uav",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "multi-modal-human-intent-uav",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "neurosymland-landing-assessment",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "rgb-ir-fusion-uav-detection",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "skyjepa-world-models",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "yolo-v8-4-115",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "tekever",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "xtend-ai-robotics",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "divimath-4w-analog-vtx",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "dji-matrice-5-rumor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "dji-mic-mini-2s",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "dji-osmo-pocket-4p-dlog2",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "emlid-corrections",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "hglrc-talon-cinewhoop",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "hoverair-versa",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "radial-impeller-drone",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "rtk-gps-precise-landing",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "event38-tb2-drops-integration",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "ideaforge-yeti-heavy-lift",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "wallefpv",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "6g-isac-matlab-usrp",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "sol-one",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-hw",
+      "target": "eve-air-mobility-transition",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "drone-news-2026-08-01",
+      "type": "related",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "drone-news-hardware",
+      "type": "related",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "drone-news-ops",
+      "type": "related",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-07-31",
+      "target": "drone-news-regulations",
+      "type": "related",
+      "evidence": [
+        "raw/articles/fetch-2026-07-31-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "drone-news-2026-07-31",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "drone-news-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "drone-news-ops",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-08-01",
+      "target": "drone-news-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "drone-news-2026-07-31",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "drone-news-2026-08-01",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "drone-news-ops",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-hardware",
+      "target": "drone-news-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "drone-news-2026-07-31",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "drone-news-2026-08-01",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "drone-news-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-ops",
+      "target": "drone-news-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-regulations",
+      "target": "drone-news-2026-07-31",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-suasnews-regulation.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-regulations",
+      "target": "drone-news-2026-08-01",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-suasnews-regulation.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-regulations",
+      "target": "drone-news-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-suasnews-regulation.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-regulations",
+      "target": "drone-news-ops",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-rss-suasnews-regulation.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "faa-deter-program",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "faa-uas-environmental-assessment",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "uk-caa-bvlos-scale",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "us-dod-cuas-marketplace",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "china-drone-export-controls",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "brinc-emergency-drone-funding",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "cleveland-clinic-drone-delivery",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "dronuum-computing-continuum",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "high-speed-drone-tracking",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "montis-avalanche-faa-approval",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "perceptual-robotics",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "skydio-centralsquare-dfr-integration",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ops-mission",
+      "target": "amazon-mk30-safety-incident",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "param-diff-copter-4-6-0-4-7-0",
+      "target": "ardupilot-architecture",
+      "type": "wikilink",
+      "evidence": [
+        "공식 파라미터 메타데이터 자동 diff"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "param-diff-px4-1-16-0-1-17-0",
+      "target": "px4-tuning-control",
+      "type": "wikilink",
+      "evidence": [
+        "공식 파라미터 메타데이터 자동 diff"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "px4-params-by-version",
+      "target": "px4-tuning-control",
+      "type": "wikilink",
+      "evidence": [
+        "PX4 공식 릴리즈노트 기반 정리"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "px4-tuning-control",
+      "target": "px4-control-tuning",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "px4-tuning-control",
+      "target": "px4-pid-tuning",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "px4-tuning-control",
+      "target": "px4-cicd-pipeline",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "px4-tuning-control",
+      "target": "px4-v1-17",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "px4-tuning-control",
+      "target": "param-diff-px4-1-16-0-1-17-0",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "px4-tuning-control",
+      "target": "param-diff-copter-4-6-0-4-7-0",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ros2-drone-integration",
+      "target": "ros2-advanced",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ros2-drone-integration",
+      "target": "ros2-advanced-integration",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ros2-drone-integration",
+      "target": "ros2-drone-deep",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ros2-drone-integration",
+      "target": "ros2-lyrical",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ros2-drone-integration",
+      "target": "kite-gcs",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-ros2-devnotes.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "distributed-aerial-surveillance-swarm",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "mrope-multi-robot-safety",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "swarm-modes",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "uav-swarm-target-localization",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "cross-layered-medical-drone-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavlink",
+      "target": "advanced-mavlink",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "mavlink-advanced",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "mavlink-advanced-features",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "mavlink2-security",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "mavlink-m-interoperability",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "mavsdk-release",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "dronecan-deep",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "mavlink",
+      "target": "digital-twin-intent-drone-networks",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
     }
   ]
 }

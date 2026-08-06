@@ -1,7 +1,7 @@
 ---
 title: 드론 하드웨어 및 제조사 동향 2026-07
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-08-06
 type: concept
 tags: [drone, drone-hw]
 sources: [inbox/fetch-2026-07-29-rss-dronedj.md]
@@ -43,6 +43,10 @@ domain: hardware
 - [[flight-controller-hardware]] — FC 하드웨어 개요
 - [[drone-payload-systems]] — 페이로드 통합
 - [[drone-regulations]] — 규제 환경
+- [[drone-news-2026-07-31]] — 관련 뉴스 아카이브
+- [[drone-news-2026-08-01]] — 관련 뉴스 아카이브
+- [[drone-news-ops]] — 관련 뉴스 아카이브
+- [[drone-news-regulations]] — 관련 뉴스 아카이브
 
 ## 📰 최근 관련 소식
 - 당진 석문산단 일대 국토부 지정 드론공원 됐다 (문화일보, Tue, 04 Au) — https://news.google.com/rss/articles/CBMiUEFVX3lxTE56SUo3VDI0dkZZM3V0ektxampwZjNPcW05N0c2VG5QVTlUOGtHbTJ6Rm81dXhBLXA4NnpaUS1ESmUtLVBIZHZlYjFBNmdiNTBp?oc=5
