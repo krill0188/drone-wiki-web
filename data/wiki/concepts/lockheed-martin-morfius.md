@@ -28,7 +28,7 @@ contradictions: []
 
 ## 관련 항목
 
-- [[swarm]] — 드론 스웜 기술
+- [[swarm-coordination]] — 드론 스웜 기술
 - [[swarm-coordination]] — 스웜 조정
 - [[drone-safety-failsafe]] — 드론 안전 시스템
 
