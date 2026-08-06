@@ -59,3 +59,4 @@ contradictions: []
 
 ## 📰 최근 관련 소식
 - 붉게 달아오른 도심…‘열화상 드론’으로 본 폭염 (news.kbs.co.kr, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qV01vSHh1bDZpaHl0STh1MlZXT2NZU1llRDd0dnVPRlVUZi0zV3pmSk02Q0w1YWpyMV8yVmt2NWxZMWt5M04yOWQ0M2hkZFo5QWZZMHBPZ0txdlU?oc=5
+- 2.5㎞ 날아 목표물 명중…美 해병대, 한반도 첫 자폭드론 실사격 공개 (newsis.com, Thu, 06 Au) — https://news.google.com/rss/articles/CBMiYEFVX3lxTE9wcjNDZzBqZ1JWa1d1UmNWQkVCNUo4YTRCaHh0Z2ZvT2NIQ1hxYWh6bTZPYlRScDJyUXF2UDgtY2t4Tm41U1d0SWVDdmZrSEQwRnNIeVlMTGxSMGpxWjlpatIBeEFVX3lxTE9Qb1NHdEVnaWQwZC1PMjNoOFc5N1BUN3c5V0RoZGlBbzRfRGhPb3NnYThvUnhEU0NsV3A5UFlJNWMyb2dRNXlzbTBjQUk0MUVWTW9Qa0FwRDdnUnpWV00xOGdjU3Jsd3BIRldKY19fVEJpdG5NSlNJTA?oc=5

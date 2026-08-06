@@ -26,3 +26,9 @@ contradictions: []
 
 - [[fcc-drone-regulations]] — 미국 FCC의 외국산 드론 규제
 - [[drone-regulations]] — 드론 규제 개요
+
+## 📰 최근 관련 소식
+- “한국? 북한보다 드론 못 쓰잖아”…외신의 ‘뼈 때리는’ 지적 나왔다, 이유는? [밀리터리+] (나우뉴스, Wed, 05 Au) — https://news.google.com/rss/articles/CBMicEFVX3lxTE1zc2ZnMTVET2duS1VDTGhkcFJLb1Y2Tm55QTZVaU5OeDVzUEdmeTVxRXo1UUR6X2FqY2l4eDB4T1VjTjFwRmZDQzIwV1cyeUtleXBMNWtFQlNYekRhM3VOLWNYNUltejJIcV9TOG5aVnA?oc=5
+- [니어스랩 IPO] 최재혁 대표 "'면도날 같은' 방산 드론, 2028년 흑자전환 목표" (fetv.co.kr, Thu, 06 Au) — https://news.google.com/rss/articles/CBMiaEFVX3lxTFAtYkFVejA3UjBHTDR0YmwzNk9hRjZXNlg2MTZRVlBVYjY4a0VyZmdSWjU3MXpwRVRWVWlYNFdnUTgxR3R4MlpNMEx1bUZTN0FHZ1BueURJUVVJaFFWZW45T0hlcEQxc25G?oc=5
+- 최재혁 니어스랩 대표 "40개국에서 검증한 드론 기술로 글로벌 방산 공략" (아시아경제, Thu, 06 Au) — https://news.google.com/rss/articles/CBMiYEFVX3lxTE1kQUlvOVp6Und5bUdaYVB0WXFLazhYbV9ERGZ5RGUxTDgzVlpjbjdTNzR5NGxzZTBRMEJWTTNTNHBIWDRsS215OElxbkRLUWxKMUN3ZE55NkZvV2xyZ3FUeg?oc=5
+- 피지컬AI 드론 기업 ＇니어스랩＇...글로벌 방산시장 ＇출격＇ [IPO톡톡] (한국경제TV, Thu, 06 Au) — https://news.google.com/rss/articles/CBMid0FVX3lxTE9sM3NZS2pRdnFBSVpld2x0bzJMVXRhekJFUlFwYlNUb01DSlJ0YVVKZVJkMFphRUJhMnlKR2lkSXNjaWpieVVJWGthV2xVamVYcjBCSkM5VllvWW9QMTBmSC12dnlkZV82YjdfdVZtaHJfZmJiX3k0?oc=5

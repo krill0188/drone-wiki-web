@@ -32,3 +32,6 @@ DJI 엔터프라이즈 라인업의 새로운 동향 — Matrice 30 후속 모�
 
 - [[dji-enterprise]] — DJI 엔터프라이즈 드론
 - [[ground-control-station]] — 지상 관제 시스템
+
+## 📰 최근 관련 소식
+- [DJI] A Pool From Above Looks Like Art | DJI Mavic 4 Pro (youtube.com, 2026-08-06) — https://www.youtube.com/watch?v=5lSrMtkMb8A

@@ -35,3 +35,5 @@ contradictions: []
 
 ## 📰 최근 관련 소식
 - 붉게 달아오른 도심…‘열화상 드론’으로 본 폭염 (news.kbs.co.kr, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qV01vSHh1bDZpaHl0STh1MlZXT2NZU1llRDd0dnVPRlVUZi0zV3pmSk02Q0w1YWpyMV8yVmt2NWxZMWt5M04yOWQ0M2hkZFo5QWZZMHBPZ0txdlU?oc=5
+- 수원시, 광교호수공원서 드론배송 서비스 시연 (nsenior.co.kr, Tue, 04 Au) — https://news.google.com/rss/articles/CBMiY0FVX3lxTE51QjIxRlYxRldxTkVPakZyeERiSVg4RUlVai1WWjBOcUphQzF2cV9vZndmaUZla25PVjN2U1JsYmlxczJVTVVCZmxvSVoxb0xVRXR1WFVJRXU4WDBHT3JrTThJdw?oc=5
+- 우크라 화물기 근처에 폭발물 드론…미확인 물체와 충돌까지 (KBS 뉴스, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiW0FVX3lxTE81NVJZOGFTRXFlY1dSTldCQVJPQm1jN2k1SFdtbWxkYjVfUlowZ3l3S1E0dzFaQ2w3NGlJaDl1ZVN2cWJLUG03bFBwU2dwOXk2Ym9mcnhDREZKeWM?oc=5
