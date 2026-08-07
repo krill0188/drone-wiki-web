@@ -1,10 +1,10 @@
 ---
 title: "Drone as First Responder (DFR)"
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-07
 type: concept
 tags: [drone, ops-mission]
-sources: [inbox/fetch-2026-08-02-rss-dronelife.md]
+sources: [inbox/fetch-2026-08-02-rss-dronelife.md, inbox/fetch-2026-08-07-rss-skydio.md]
 confidence: medium
 contested: false
 contradictions: []
@@ -43,6 +43,10 @@ Drone as First Responder(DFR)는 응급 상황 발생 시 드론을 최초 대�
 - [[geocomm]] — DFR Routing 기술 제공
 - [[skyfireai]] — 자율 드론 플랫폼 제공
 - [[doordash-air]] — FAA 인증 드론 운영
+
+## 최신 도입 사례 (2026-08)
+
+- **호놀룰루 경찰**: 2개 관할구에서 DFR 프로그램 가동 시작^[inbox/fetch-2026-08-07-rss-skydio.md]
 
 ## See Also
 

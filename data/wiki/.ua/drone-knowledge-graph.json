@@ -1120,7 +1120,7 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-07-30",
+      "updated": "2026-08-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2134,7 +2134,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-08-02",
+      "updated": "2026-08-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -2356,7 +2356,7 @@
         "autonomy",
         "security"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2493,7 +2493,7 @@
         "camera",
         "gimbal"
       ],
-      "updated": "2026-08-04",
+      "updated": "2026-08-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2521,7 +2521,7 @@
       "tags": [
         "drone-ai"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2774,7 +2774,7 @@
         "defense",
         "regulations"
       ],
-      "updated": "2026-08-05",
+      "updated": "2026-08-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2899,6 +2899,36 @@
         "defense"
       ],
       "updated": "2026-08-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "dfend-counter-drone-worldcup",
+      "name": "2026 FIFA 월드컵 DFEND 대드론 작전",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-08-07",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "multi-uav-collision-avoidance-survey",
+      "name": "다중 UAV 딥러닝 충돌회피 서베이",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "paper"
+      ],
+      "updated": "2026-08-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -11964,6 +11994,58 @@
       "type": "wikilink",
       "evidence": [],
       "confidence": "high"
+    },
+    {
+      "source": "dfend-counter-drone-worldcup",
+      "target": "us-dod-cuas-marketplace",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dfend-counter-drone-worldcup",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "multi-uav-collision-avoidance-survey",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "multi-uav-collision-avoidance-survey",
+      "target": "lightweight-safe-rl-uav",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-crossref-deep-learning-based-collision-avoidance-techniques-in-multi-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multi-uav-collision-avoidance-survey",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-crossref-deep-learning-based-collision-avoidance-techniques-in-multi-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "us-dod-cuas-marketplace",
+      "target": "dfend-counter-drone-worldcup",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-05-rss-dronelife.md"
+      ],
+      "confidence": "medium"
     }
   ]
 }

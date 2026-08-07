@@ -1,11 +1,11 @@
 ---
 title: "DJI Osmo Nano"
 created: 2026-08-04
-updated: 2026-08-04
+updated: 2026-08-07
 type: concept
 tags: [drone-hw, camera, gimbal]
 domain: hardware
-sources: [inbox/fetch-2026-08-04-yt-pov-flying-through-a-waterfall-dji-osmo-nano.md]
+sources: [inbox/fetch-2026-08-04-yt-pov-flying-through-a-waterfall-dji-osmo-nano.md, inbox/fetch-2026-08-07-yt-whats-under-the-moss-dji-osmo-nano.md]
 confidence: high
 contested: false
 contradictions: []
@@ -19,7 +19,7 @@ DJI의 초소형 액션 카메라 — 52g 무게로 어디에나 클립 가능.
 
 - **무게**: 52g
 - **특징**: 어디에나 클립 가능한 초소형 디자인
-- **내구성**: 방수 및 폭포 통과 촬영 가능
+- **내구성**: 방수 및 폭포 통과 촬영 가능(이끼·얕은 물 등 케이스 없이 직접 침수 촬영 데모 확인)^[inbox/fetch-2026-08-07-yt-whats-under-the-moss-dji-osmo-nano.md]
 
 ## 활용 시나리오
 
