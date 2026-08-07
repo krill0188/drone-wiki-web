@@ -24,6 +24,9 @@ export default async function WikiDetailPage({ params }: Props) {
   const related = allPages
     .filter((p) => p.slug !== slug && (p.domain === page.domain || page.links.includes(p.slug)))
     .slice(0, 5)
+  // Obsidian 벤치마킹(2026-08-07): 그래프 뷰를 열지 않고도 "이 문서를 몇 개가
+  // 참조하는가"를 바로 알 수 있도록 역링크(backlink)를 압축 표시한다.
+  const backlinks = allPages.filter((p) => p.slug !== slug && p.links.includes(slug))
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
@@ -88,6 +91,38 @@ export default async function WikiDetailPage({ params }: Props) {
           )}
 
           <WikiArticleBody html={page.contentHtml} slug={page.slug} title={page.title} />
+
+          {/* 압축형 백링크 카운터 (Obsidian 벤치마킹) — 그래프를 안 열어도 참조 밀도 파악 */}
+          <details className="group mt-6 pt-4 border-t border-slate-200 dark:border-slate-700">
+            <summary className="cursor-pointer list-none text-xs text-slate-400 hover:text-signal-500 flex items-center gap-1.5 select-none">
+              <svg
+                className="w-3 h-3 transition-transform group-open:rotate-90"
+                viewBox="0 0 12 12"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M4 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              {backlinks.length > 0
+                ? `${backlinks.length}개 문서에서 참조됨`
+                : "이 문서를 참조하는 문서 없음"}
+            </summary>
+            {backlinks.length > 0 && (
+              <ul className="mt-2 ml-4 flex flex-col gap-1">
+                {backlinks.map((b) => (
+                  <li key={b.slug}>
+                    <Link
+                      href={`/wiki/${b.slug}`}
+                      className="text-sm text-slate-500 dark:text-slate-400 hover:text-signal-500 hover:underline"
+                    >
+                      <span className="mr-1">{DOMAIN_META[b.domain]?.emoji || "📄"}</span>
+                      {b.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </details>
 
           <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 text-center">
             <Link href="/chat" className="inline-block px-6 py-3 bg-signal-500/100 hover:bg-signal-400 text-white rounded-xl font-semibold transition-colors">
