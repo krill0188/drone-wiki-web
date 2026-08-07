@@ -558,5 +558,144 @@
       "ai-knowledge-workflow",
       "ardupilot-plane-4-7"
     ]
+  },
+  "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4xdHNYLXZmRmpaaWdCcEdHUTBOR0p3MEktTFJvX2dXeXRlSEpZa1hwMG1EQURld19jV09uQWRiWEt0dzRWLU9Qem02dw?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.713Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "sol-one"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE1yNlI4NnpyejdfanZEd0Nfa0tJb3J0TGZnWlZ3dGFNUEN4VFhZdi0zdm82Rm5pZkNuemdZS0g3aVgxRTM5ckJ1a25fODFpLVZFOXNBV3o5UFczTFhJaE0tV3dzWnBHN1BoOWc?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.715Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "ai-personal-knowledge-management"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxOY1ZGcm0xWmFSY19Scjl2ckhiZ1ZMOW52X2lXR3lSOWFIaFNWanZ3OVoxZE4zMG0xM1AtZnBwQTBqTWFZZjhJV2NETVR4dEk4cW1zNGFUREVuY09EMWdHb3FUVWg4VF9HTURJTi1zSFZidzM0ZGl4T0hTcm1PS1RBRlZGbDRnUU0?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.717Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "drone-ai"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iOFZybzhkeTdOdlBSUHgtRnJsbjZFcEVkU2RpUWZFUGF6UDlNcHVsZENYV2dDQmtPWm13TE9ySmFNRGFIUnpHYlBsTFRmQ2ltOXFmS21uRnJTYUdQaHNvTzRTaEdVa2JHaUZES3VQNDhNY2vSAWZBVV95cUxNWDNqd013QV9UcGl6UG1MX2ZPUlJrcjIydllLTWFQcVllYkxCTW85QXVULS1MY0pXY0xzTi1Yb2ZpMWJGMEhaX1lFTTBqX0RLSnFrRTlKVEJyem40VXdyX2xZSkN2cXc?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.724Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "drone-news-hardware"
+    ]
+  },
+  "https://www.youtube.com/watch?v=BtauO-T3GBg": {
+    "processedAt": "2026-08-07T19:30:54.737Z",
+    "matchedSlugs": [
+      "divimath-4w-analog-vtx",
+      "fpv-hardware"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxObnVwUDAtdldxdkZYbHdSaWdRcGtETlVVTTM4R0hFMFB0ak9wcmg2ZEpMYTBiWlJ0LTEtbE95YldVNnY5dmkwSU95OFR6OUFiWVJUbmRBclFIWkdiUE54WGtha3ROckhhNldBYWtrSVY2Y000NW84MHh2TXdBbU55anpPbmoxNW9UdEFZUHFnOGs5UTBPZXozblAyTXFoZw?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.722Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPM0ZHVFo0dm5tTjZ4UGFXU0RRWjJmc213XzJmbEx0c2w3Rk5ic3dzVG5EeWNwYU5vWlgyTXdVTkpjWkllN3FlNlVTemtkWDBCWElLRVdGU3pTRmJwTk02N3JoeXJUVTdmMzZ2eGdRMTBsN0FzX2JLZTFTLWRvMGNvVWxtR3hpdzUw?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.731Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "eve-air-mobility-transition"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbmpqM3hNZTZIbjM3VE9pWGl4T1FhbXRoRlF5QXdnSlRrYkhTemJ0MXFzZTRfTHpjaXp6UnpXMENYcEhlSS1pNDQycGZiMTJnZlkwNDVGRWpkR2NDVElQaXM2cjgwU3pKQldpT25Qb0E5ejg5cXZDcWVnTlZsX2tqVzJSV2xwRV9DTDF2Uw?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.727Z",
+    "matchedSlugs": [
+      "6g-isac-matlab-usrp",
+      "advanced-mavlink"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMieEFVX3lxTFB6LTBDeVpETTlZZlIzM3Rabnp3eDRMRFQxelhGLUt0NzFIaERuaEpWV2ZXRm5MZE5iUmEwYmFsblJUeEZPaDRzYVplUjNYckh0SlhLd05HRWlXU1VWb190RDBLdllOdDBTbHF6c1VTVk82cXhSdlhTbtIBeEFVX3lxTFB6LTBDeVpETTlZZlIzM3Rabnp3eDRMRFQxelhGLUt0NzFIaERuaEpWV2ZXRm5MZE5iUmEwYmFsblJUeEZPaDRzYVplUjNYckh0SlhLd05HRWlXU1VWb190RDBLdllOdDBTbHF6c1VTVk82cXhSdlhTbg?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.730Z",
+    "matchedSlugs": [
+      "drone-delivery-news",
+      "rtk-gps-precise-landing"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMib0FVX3lxTE9jX1cxd1NkZTdyZWV3Sjk3U2MzS0dNd0hfS2NWOU5CcFJQYjJvaWxVbjRlaUM0am1Wd1RnRFJNcHJEZ3F0eEFiaGRES0xKUkl1N1N1MmtvVS1Sby1ZZFFwUFFVZXp4MkstSlhsQjNEa9IBb0FVX3lxTE9jX1cxd1NkZTdyZWV3Sjk3U2MzS0dNd0hfS2NWOU5CcFJQYjJvaWxVbjRlaUM0am1Wd1RnRFJNcHJEZ3F0eEFiaGRES0xKUkl1N1N1MmtvVS1Sby1ZZFFwUFFVZXp4MkstSlhsQjNEaw?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.733Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "dronuum-computing-continuum"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE92WERCcUtpMHY2YkZuX05jUk5UUXoxeTVrTjMtNmEzX0VWellGUnc4OE93Snd1UC02V0UtRDF2SkowU2x2UmJHN1RhNlJLM0lWLUY2N19vbGpLMDJncm1UeWtXeHhrLXFFNFE?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.745Z",
+    "matchedSlugs": [
+      "brinc-emergency-drone-funding",
+      "dfend-counter-drone-worldcup"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0za0dOeHlpZ3drSm9DU2d6RnllVm8ycXFmWmRCOG5LWDlGTFA0bWVUeXVqMkVsS2JWZVFvNXB1US1rOV9Jd1RNb0V6aUlYenNOa1BJZTRR?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.736Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "ai-personal-knowledge-management"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1sejZrMFRDYWNYYXRQR0d2R2Vra2c3MElxWVZjaTZ6eXh2NUJMczJUMTFnYmY4T2x5dnZLUkU1QTRnUHRtdWVodUx2ekhsVUg0aW5lWmwzTWFMZkpVRG10dtIBeEFVX3lxTE5IT2N2anZJSjVmTy13WVZ1cmR2TFhVX0ZST053V1pNemFMaElrUTFMR3ZCQ3I3cTJOZm9UaXlheVN4czhPbWJNb05lS3p0RkdlT1NVdXY1V0V4dnVJRVlreElJU2N5N0JMeWItN0YyTnA5MmQ3MW1odg?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.746Z",
+    "matchedSlugs": [
+      "drone-first-responder-dfr",
+      "drone-news-2026-07-31"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nYktwamxZb1VpQTZMT1BmMjlpN3JaUGVkZmNwREdSYnZmbVMtUExYSWxFY1JOSU1qNzh2MFB3QVBHTldMVlpYYnZEd0xrMlEyVk4tWVhlY2VPVHVpNGg4ZlJZZVhqQ1RRMllib3JaS21qbVEwMnfSAWZBVV95cUxOOFhCUTZQNm4xeVZTLUJkTjNZM3Y5dDd1NWtZbDFvQnNUblVIY2trem1BeWRVZDgtRzAtZURyR2JCcThTd2ZYYUgxazdFbkdOTGN1bHZtaFhGX3hzdnFzWkk4LVVNTVE?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.740Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "drone-news-hardware"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTE96azdkckhNeDIxd1BtR0M2RU5SUlJiOVkwZ0tWbVI0SjJqd0Jra0Y4S2JLd1BRb01SUndHNXZqTk1BQ2JLMzN4SGEwM05rWWc?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.742Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "sol-one"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiekFVX3lxTE8zODJxWDBqWnpLVlVncXpkSXZraFlhR2NiZURHNnVpanRYTnkxdWNxakFnamJ2NzBubVE5dW5ya2VvX2o2UXR6bDd1RG5OeEFQYjZ2U2hnWFduZzM4eHR5YVNGVGtNSHA5QndQZGc5b2prUHhHYXJuTDJ30gF_QVVfeXFMTWR4RU80OHFaRWlWY29lbmFWaGlDRnk1MlVlaVBIdjlNaGE1Sk5jbzFVbVJWMFcxZlpJMmJxTzJPNXlTRm1ydURoM04ybXJvZDZGdE0tdTNkN04yQ0JxbXpieDlqZlppNTY3Q2M4SjZwdTdlQXdIVHRZUE9USVdNNA?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.744Z",
+    "matchedSlugs": [
+      "cleveland-clinic-drone-delivery",
+      "drone-delivery-news"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE56akNTNFFXOXR2V01PZzBaV3JqdGRIV0R6ZU4zRjBtWC13cGJsTG1aREg1cVRzakdMenQ1MElPWVR4QmZqUU13VUduUGd5YWRVWVRtWXdDT0R4MzTSAWBBVV95cUxPT3h1MlQwMFAxY0xha1dYdDVtZmZyVy1XNDRCWVVMYXA4N3pyMHRsUXI4N3JrenlBSUVfYy1nS0JYLUliN0E4THh6bVd2M3JjcTZtOTNNMHdtbmtHaXRXZlQ?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.748Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "ai-personal-knowledge-management"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE50LTk3NTJxWXBWWmxhOXBmN2hJS3lfQ0haekRtNEtsTnFvekE5RUxBV3M2UW8xZnRTemgzWlo2aUJMWmlXWWlEa2t1Q3RGcDlsS1lBdmIxU0x0QdIBX0FVX3lxTE9qdG41WmdVclVUV3doYUxtLVh2OW80VXdNamstX0VtbHVmNVFrUXVpVmkxczBLa1ZDSXEwYWg5VUR1ak42enNQUDc3SW5LOXdjSFJpbGFrQnF4Z2hTNHNZ?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.751Z",
+    "matchedSlugs": [
+      "active-sensing-uav-communication",
+      "ai-knowledge-workflow"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5MQzhtV0NtY1g5TGk4OHpOaTRtUGRDY09oQXd6bFRrVTE1RWNzNldKbF9LQkZFdG8yU2RLUmxwZjRSU3BYNDMwV2otbXJubm5YYlHSAVNBVV95cUxPdFBRSk14NXR0V3NjX2JnV2ZCeWxzelJqcjBfRGFQTEZfOE9zRlpDb2ZaLVlwblRMTmtJN2tLYW5TSWRjQmgyUWRsOUlwTUxIMDFzNA?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.752Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "ai-personal-knowledge-management"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTE5haVpkUFlkeUZjd2hHbmMwb0hwT0xtdWloaXVHVWQxTjY0UHFHQXhaZW9PSDJnLWNObEtyM2pJY3JndENwbndUUHF2a1F0YUNEVWxGMUtHYmNPTGlobkJxSXF6cXhRYmZRTTNKZHh30gFzQVVfeXFMTXZjb2ZLTjJBbDVyTDBXRDlFQ1M0bms2ZF9SbHdIUXZKdVJtTW1yQzFpZE80SEs3ZU5nQVY2Y2tDUG1iek1GSWRCRk9YRndFdlgwT0o3Y25vam9hakJXamw5X2hPLWVJckN3TWlrX2w2SFRnVQ?oc=5": {
+    "processedAt": "2026-08-07T19:30:54.753Z",
+    "matchedSlugs": [
+      "drone-first-responder-dfr"
+    ]
   }
 }

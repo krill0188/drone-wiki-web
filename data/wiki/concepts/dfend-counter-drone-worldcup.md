@@ -25,3 +25,6 @@ contradictions: []
 
 - [[us-dod-cuas-marketplace]] — 미국 국방부 C-UAS 마켓플레이스
 - [[drone-regulations]] — 드론 규제 개요
+
+## 📰 최근 관련 소식
+- 센서뷰, '대드론 방어 시스템 개발' 정부과제 최종 선정 (파이낸스스코프, Fri, 07 Au) — https://news.google.com/rss/articles/CBMiakFVX3lxTE92WERCcUtpMHY2YkZuX05jUk5UUXoxeTVrTjMtNmEzX0VWellGUnc4OE93Snd1UC02V0UtRDF2SkowU2x2UmJHN1RhNlJLM0lWLUY2N19vbGpLMDJncm1UeWtXeHhrLXFFNFE?oc=5
