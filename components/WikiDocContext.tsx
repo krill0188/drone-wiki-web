@@ -2,6 +2,8 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react"
 import type { DocContext } from "@/lib/types"
+import { getSessionStore } from "@/lib/session-store"
+import { getSessionId } from "@/lib/session-id"
 
 interface WikiDocContextValue {
   doc: DocContext | null
@@ -38,14 +40,18 @@ export function useWikiDoc(): WikiDocContextValue {
 
 // 위키 상세 페이지(서버 컴포넌트)에서 렌더링해 현재 문서를 전역 컨텍스트에 등록한다.
 // 페이지를 벗어나면(언마운트) 컨텍스트를 비워 다른 화면에서 잘못된 문서가 딸려가지 않게 한다.
-export function WikiDocSync({ slug, title, content }: DocContext) {
+// 동시에(2026-08-08) 이 문서 열람을 세션 저장소에 기록한다 — "AI에게 더 질문하기"가
+// 이 세션에서 무엇을 봐왔는지 참고할 수 있게 하는 열람 이력의 유일한 수집 지점.
+export function WikiDocSync({ slug, title, content, domain }: DocContext) {
   const { setDoc } = useWikiDoc()
 
   useEffect(() => {
-    setDoc({ slug, title, content })
+    setDoc({ slug, title, content, domain })
+    const sessionId = getSessionId()
+    if (sessionId) getSessionStore().recordDocView(sessionId, { slug, title, domain })
     return () => setDoc(null)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug, title, content])
+  }, [slug, title, content, domain])
 
   return null
 }

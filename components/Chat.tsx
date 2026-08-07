@@ -7,6 +7,10 @@ import { DefaultChatTransport, type UIMessage } from "ai"
 import { useWikiDoc } from "@/components/WikiDocContext"
 import { DOMAIN_META } from "@/lib/types"
 import DroneIcon from "@/components/DroneIcon"
+import { getSessionStore } from "@/lib/session-store"
+import { getSessionId } from "@/lib/session-id"
+
+const CHAT_FEATURE_KEY = "chat"
 
 interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string }[]
@@ -35,10 +39,36 @@ export default function ChatWidget() {
   const [scanLabel, setScanLabel] = useState(0)
   const { doc, pendingAsk, clearPendingAsk } = useWikiDoc()
   const endRef = useRef<HTMLDivElement>(null)
+  const [sessionId, setSessionId] = useState("")
+  const restoredRef = useRef(false)
 
-  const { messages, sendMessage, status, error } = useChat<ChatUIMessage>({
+  const { messages, setMessages, sendMessage, status, error } = useChat<ChatUIMessage>({
     transport: new DefaultChatTransport({ api: "/api/chat" }),
   })
+
+  // 세션 복원(2026-08-08): 이 컴포넌트는 SSR/정적 프리렌더 대상이라, 저장된 대화를
+  // 훅 초기값으로 곧장 넣으면(useState(() => loadSavedMessages())) 서버가 그린 빈
+  // 상태와 클라이언트 첫 렌더가 달라져 하이드레이션 불일치가 난다(실측 확인됨 —
+  // Next.js "Recoverable Error: Hydration failed"). 그래서 서버와 동일한 빈 상태로
+  // 먼저 하이드레이션을 마친 뒤, 마운트 후 effect에서만 복원한다 — 이 컴포넌트가
+  // 항상 정적으로 프리렌더되는 한 하이드레이션 안전을 위해 필요한 예외다.
+  useEffect(() => {
+    const sid = getSessionId()
+    setSessionId(sid)
+    if (sid) {
+      const saved = getSessionStore().loadSnapshot<ChatUIMessage[]>(sid, CHAT_FEATURE_KEY)
+      if (saved && saved.length > 0) setMessages(saved)
+    }
+    restoredRef.current = true
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // 세션 저장: 대화가 바뀔 때마다 localStorage(외부 시스템)에 동기화한다. 복원이
+  // 끝나기 전에는 건너뛴다 — 안 그러면 마운트 직후의 빈 messages가 저장분을 덮어쓴다.
+  useEffect(() => {
+    if (!restoredRef.current || !sessionId) return
+    getSessionStore().saveSnapshot(sessionId, CHAT_FEATURE_KEY, messages)
+  }, [messages, sessionId])
 
   const busy = status === "submitted" || status === "streaming"
   // 첫 토큰이 오기 전(submitted)에만 스캔 상태를 보여준다 — 토큰이 도착하기
@@ -63,7 +93,10 @@ export default function ChatWidget() {
   useEffect(() => {
     if (!pendingAsk) return
     setOpen(true)
-    sendMessage({ text: `다음 내용에 대해 설명해줘:\n\n> ${pendingAsk}` }, { body: { docContext: doc } })
+    sendMessage(
+      { text: `다음 내용에 대해 설명해줘:\n\n> ${pendingAsk}` },
+      { body: { docContext: doc, recentDocs: getSessionStore().getRecentDocs(sessionId, 5) } }
+    )
     clearPendingAsk()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pendingAsk])
@@ -72,7 +105,7 @@ export default function ChatWidget() {
     const text = input.trim()
     if (!text || busy) return
     setInput("")
-    sendMessage({ text }, { body: { docContext: doc } })
+    sendMessage({ text }, { body: { docContext: doc, recentDocs: getSessionStore().getRecentDocs(sessionId, 5) } })
   }
 
   return (

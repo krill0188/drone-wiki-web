@@ -27,6 +27,7 @@ export interface DocContext {
   slug: string
   title: string
   content: string
+  domain: Domain
 }
 
 export interface GraphNode {

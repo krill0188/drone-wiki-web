@@ -30,7 +30,7 @@ export default async function WikiDetailPage({ params }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
-      <WikiDocSync slug={page.slug} title={page.title} content={page.content} />
+      <WikiDocSync slug={page.slug} title={page.title} content={page.content} domain={page.domain} />
 
       {/* 빵부스러기 */}
       <div className="flex items-center gap-2 text-xs text-slate-400 mb-6">

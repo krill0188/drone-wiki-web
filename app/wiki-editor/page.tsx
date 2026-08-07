@@ -1,14 +1,49 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useCompletion } from "@ai-sdk/react"
+import { getSessionStore } from "@/lib/session-store"
+import { getSessionId } from "@/lib/session-id"
+
+const FEATURE_KEY = "wiki-editor"
+
+interface EditorSnapshot {
+  draft: string
+  completion: string
+}
 
 export default function WikiEditorPage() {
   const [draft, setDraft] = useState("")
   const [copied, setCopied] = useState(false)
-  const { completion, complete, isLoading, error, stop } = useCompletion({
+  const [sessionId, setSessionId] = useState("")
+  const restoredRef = useRef(false)
+  const { completion, complete, setCompletion, isLoading, error, stop } = useCompletion({
     api: "/api/wiki-editor",
   })
+
+  // 세션 복원(2026-08-08): 이 페이지는 정적 프리렌더 대상이라, 저장된 값을 훅
+  // 초기값으로 곧장 넣으면 서버가 그린 빈 상태와 클라이언트 첫 렌더가 달라져
+  // 하이드레이션 불일치가 난다(Chat.tsx에서 실측 확인된 것과 동일한 함정). 서버와
+  // 동일한 빈 상태로 먼저 하이드레이션을 마친 뒤, 마운트 후 effect에서만 복원한다.
+  useEffect(() => {
+    const sid = getSessionId()
+    setSessionId(sid)
+    if (sid) {
+      const saved = getSessionStore().loadSnapshot<EditorSnapshot>(sid, FEATURE_KEY)
+      if (saved) {
+        setDraft(saved.draft)
+        setCompletion(saved.completion)
+      }
+    }
+    restoredRef.current = true
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // 세션 저장: 초안·생성 결과가 바뀔 때마다 localStorage(외부 시스템)에 동기화한다.
+  useEffect(() => {
+    if (!restoredRef.current || !sessionId) return
+    getSessionStore().saveSnapshot<EditorSnapshot>(sessionId, FEATURE_KEY, { draft, completion })
+  }, [draft, completion, sessionId])
 
   const generate = () => {
     if (!draft.trim() || isLoading) return

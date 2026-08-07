@@ -11,6 +11,7 @@ import { ragSearch, searchNews, type RagSource, type NewsHit } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import type { DocContext } from "@/lib/types"
+import type { DocViewRecord } from "@/lib/session-store"
 
 export const maxDuration = 60
 
@@ -20,6 +21,7 @@ const DOC_CONTEXT_MAX_CHARS = 4000
 function buildSystemPrompt(
   manifest: string,
   docContext: DocContext | null,
+  recentDocs: DocViewRecord[],
   sources: RagSource[],
   graphBlock: string,
   newsHits: NewsHit[]
@@ -40,11 +42,26 @@ ${docContext.content.slice(0, DOC_CONTEXT_MAX_CHARS)}
 `
     : ""
 
+  // 이 브라우저 세션에서 최근 열람한 문서 목록(익명, 쿠키 세션 기준) — 사용자가
+  // "이 주제로 AI에게 더 질문하기"를 눌렀을 때 이전에 뭘 봤는지 감안해 답변을
+  // 더 개인화된 흐름으로 이어가기 위함. 개인 식별 정보는 포함하지 않는다.
+  const recentDocsBlock = recentDocs.length
+    ? `이 세션에서 최근 열람한 문서(최신순, 현재 문서 제외):
+<recently-viewed>
+${recentDocs
+  .filter((d) => d.slug !== docContext?.slug)
+  .map((d) => `- ${d.title} (${d.domain || "미분류"})`)
+  .join("\n")}
+</recently-viewed>
+
+`
+    : ""
+
   return `당신은 드론 도메인 전문가 AI입니다. 아래 컨텍스트(위키 전체 지도, 현재 보고 있는 문서, RAG로 검색된 지식 베이스, 최신 뉴스)를 근거로 사용자 질문에 완전하고 상세하게 답변하세요.
 
 ${manifest}
 
-${currentDocBlock}<knowledge-base>
+${currentDocBlock}${recentDocsBlock}<knowledge-base>
 ${contextParts.join("\n\n") || "(관련 위키 문서 없음)"}
 </knowledge-base>
 
@@ -58,6 +75,8 @@ ${newsParts.join("\n") || "(관련 최신 뉴스 없음)"}
 - <graph-connections>가 있으면 서로 다른 주제·도메인 사이의 연결고리를 설명할 때
   적극 활용해, 문서 하나로는 안 보이는 융합적 답변을 제공(특정 두 분야로 한정하지 말고
   질문에 실제로 걸리는 모든 영역을 자유롭게 연결)
+- <recently-viewed>가 있으면 참고해 답변 흐름을 이어가되, 억지로 언급하지 말고
+  자연스럽게 걸릴 때만 활용
 - 최신 동향·채용·정부사업·방산 질문이면 <latest-news>를 적극 활용
 - 핵심 개념, 작동 원리, 기술 비교, 실용 정보를 충분히 포함
 - 소제목이나 목록을 활용해 가독성 있게 구성
@@ -76,7 +95,11 @@ function extractQuestion(messages: UIMessage[]): string {
 }
 
 export async function POST(req: NextRequest) {
-  const { messages, docContext }: { messages: UIMessage[]; docContext?: DocContext | null } =
+  const {
+    messages,
+    docContext,
+    recentDocs,
+  }: { messages: UIMessage[]; docContext?: DocContext | null; recentDocs?: DocViewRecord[] } =
     await req.json()
 
   const question = extractQuestion(messages)
@@ -90,7 +113,7 @@ export async function POST(req: NextRequest) {
   const graph = ragQuery ? graphRagSearch(ragQuery, sources.map((s) => s.slug)) : { block: "", usedDiscovery: false }
   const manifest = await buildAgentManifest()
 
-  const system = buildSystemPrompt(manifest, docContext ?? null, sources, graph.block, newsHits)
+  const system = buildSystemPrompt(manifest, docContext ?? null, recentDocs ?? [], sources, graph.block, newsHits)
 
   const result = streamText({
     model: openrouter(MODEL_ID),

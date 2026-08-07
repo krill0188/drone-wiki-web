@@ -1,9 +1,21 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useCompletion } from "@ai-sdk/react"
+import { getSessionStore } from "@/lib/session-store"
+import { getSessionId } from "@/lib/session-id"
 
 type Stage = "idle" | "proposal" | "spec" | "architecture" | "done"
+
+const FEATURE_KEY = "drone-builder"
+
+interface BuilderSnapshot {
+  concept: string
+  stage: Stage
+  proposal: string
+  spec: string
+  architecture: string
+}
 
 const STAGE_META: Record<Exclude<Stage, "idle" | "done">, { title: string; agent: string }> = {
   proposal: { title: "1. 기획서", agent: "기획서 작성 에이전트" },
@@ -20,6 +32,8 @@ const EXAMPLES = [
 export default function AiDroneBuilderPage() {
   const [concept, setConcept] = useState("")
   const [stage, setStage] = useState<Stage>("idle")
+  const [sessionId, setSessionId] = useState("")
+  const restoredRef = useRef(false)
 
   const proposalRef = useRef("")
   const specRef = useRef("")
@@ -59,6 +73,43 @@ export default function AiDroneBuilderPage() {
   const hooks = { proposal: proposalHook, spec: specHook, architecture: archHook } as const
   const busy = proposalHook.isLoading || specHook.isLoading || archHook.isLoading
   const error = proposalHook.error || specHook.error || archHook.error
+
+  // 세션 복원(2026-08-08): 이 페이지는 정적 프리렌더 대상이라, 저장된 값을 훅
+  // 초기값으로 곧장 넣으면 서버가 그린 빈 상태와 클라이언트 첫 렌더가 달라져
+  // 하이드레이션 불일치가 난다(Chat.tsx에서 실측 확인된 것과 동일한 함정). 서버와
+  // 동일한 빈 상태로 먼저 하이드레이션을 마친 뒤, 마운트 후 effect에서만 복원한다.
+  // 진행 중이던 스트리밍 자체는 재개할 수 없으므로(원 요청이 죽음) 텍스트만
+  // 복원하고 "실행" 버튼을 다시 눌러야 이어서 생성된다.
+  useEffect(() => {
+    const sid = getSessionId()
+    setSessionId(sid)
+    if (sid) {
+      const saved = getSessionStore().loadSnapshot<BuilderSnapshot>(sid, FEATURE_KEY)
+      if (saved) {
+        setConcept(saved.concept)
+        setStage(saved.stage)
+        proposalHook.setCompletion(saved.proposal)
+        specHook.setCompletion(saved.spec)
+        archHook.setCompletion(saved.architecture)
+        proposalRef.current = saved.proposal
+        specRef.current = saved.spec
+      }
+    }
+    restoredRef.current = true
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // 세션 저장: 진행 상태가 바뀔 때마다 localStorage(외부 시스템)에 동기화한다.
+  useEffect(() => {
+    if (!restoredRef.current || !sessionId) return
+    getSessionStore().saveSnapshot<BuilderSnapshot>(sessionId, FEATURE_KEY, {
+      concept,
+      stage,
+      proposal: proposalHook.completion,
+      spec: specHook.completion,
+      architecture: archHook.completion,
+    })
+  }, [concept, stage, proposalHook.completion, specHook.completion, archHook.completion, sessionId])
 
   const start = () => {
     if (!concept.trim() || busy) return
