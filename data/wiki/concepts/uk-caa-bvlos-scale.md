@@ -35,3 +35,4 @@ contradictions: []
 ## 📰 최근 관련 소식
 - 수원특례시, 광교 일원서 ‘하늘편의점’ 드론배송 서비스 본격 시연… 미래형 교통 복지 상용화 첫걸음 (경인종합일보, Wed, 05 Au) — https://news.google.com/rss/articles/CBMib0FVX3lxTE1MS1BEejBRay1zMWNiSVE1MlpkdVRpZ2UzSmF5TC1qVDNNajJmS1YtTWpvRWtHcmJlWTEwTldCUTZMZEVSd3FTM3ExY1BuZjVoWE9qOEZUUmM5M3JqajhWMGhRN3RqSHhSUFFnMHNLONIBckFVX3lxTFBKYUJvd3FUS3RCVGRQUm84OUZrcVVYdDc3SzN6T0IxR3FMRzJXQ29fcmtTdWozUmFmZnFqOGRzR1JZZUFNdXMwNGhpbG1TanktT2NJV1hSRUozb1Y0eGFDMWpPcFVCcGY4Mmd0aEt6aWxLQQ?oc=5
 - 수원시, 광교호수공원 드론배송 실증…11월까지 주말 운영 (전자신문, Wed, 05 Au) — https://news.google.com/rss/articles/CBMiTkFVX3lxTE14Y3hjTDhhaGxwZHhPUWVQaTBjZ3JfTWFzaExnVVUycmNTdmQweVBLV0hPZ0VnWFFvNVB4VUJyRHFnN2FXQmpvMDJwdGhBUQ?oc=5
+- 수원시, 광교호수공원 드론배송 시연… 8월부터 주말 운영 (한국사회복지저널, Wed, 05 Au) — https://news.google.com/rss/articles/CBMibEFVX3lxTE1IX0RHdkxyWlRuVzFMNXI1WWNPLXpFQjZ3bkJ1RzJkR2V3MVNlZ3hZSzRFMWlzRFJ2bnpRMWtnMzg2dHd1MEVWZmFOV1dQd2tPc1lqQVlLcnlxdmdGS0hIZmRnLWVMVzlqcE5FZg?oc=5

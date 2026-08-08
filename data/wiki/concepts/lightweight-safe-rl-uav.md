@@ -42,3 +42,6 @@ domain: ai-autonomy
 ## 출처
 
 - Zhang et al., "Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation", arXiv:2607.01794, 2026.
+
+## 📰 최근 관련 소식
+- 명지대 ‘드론봇·대드론 센터’ 출범... 산학군 협력 안보 네트워크 강화 (보안뉴스, Fri, 07 Au) — https://news.google.com/rss/articles/CBMiXkFVX3lxTE5XdUZ2TnIwaktzN3F0dFBmXzZ6UFBqbC1hcFFHS3AxZUYzSmFkNl9IQ1RYQ0VxZlpGX3JRZjJqMzNvbXlLLUNhLV92dk4xaHpUb0xUQWlNVF9oR2xReGc?oc=5
