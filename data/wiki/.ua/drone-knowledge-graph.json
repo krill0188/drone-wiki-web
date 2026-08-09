@@ -171,7 +171,7 @@
         "BVLOS",
         "compliance"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -901,7 +901,7 @@
         "drone-sw",
         "flight-control"
       ],
-      "updated": "2026-08-03",
+      "updated": "2026-08-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1120,7 +1120,7 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-08-07",
+      "updated": "2026-08-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2356,7 +2356,7 @@
         "autonomy",
         "security"
       ],
-      "updated": "2026-08-07",
+      "updated": "2026-08-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2478,7 +2478,7 @@
         "dji",
         "microphone"
       ],
-      "updated": "2026-08-05",
+      "updated": "2026-08-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2774,7 +2774,7 @@
         "defense",
         "regulations"
       ],
-      "updated": "2026-08-07",
+      "updated": "2026-08-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2819,7 +2819,7 @@
         "hardware",
         "company"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2913,7 +2913,7 @@
         "regulations",
         "ops-mission"
       ],
-      "updated": "2026-08-07",
+      "updated": "2026-08-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -2932,6 +2932,82 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "fc-firmware-comparison",
+      "name": "FPV 드론 FC 펌웨어 비교: Betaflight vs INAV vs ArduPilot",
+      "layer": "Comparisons",
+      "domain": "flight-control",
+      "tags": [
+        "comparison",
+        "drone-sw"
+      ],
+      "updated": "2026-08-09",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dji-mavic-4-pro",
+      "name": "DJI Mavic 4 Pro",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "camera",
+        "dji"
+      ],
+      "updated": "2026-08-09",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "faa-249-gram-registration-rule",
+      "name": "FAA 249그램 드론 등록 규정",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "faa"
+      ],
+      "updated": "2026-08-08",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "yolo-v8-4-116",
+      "name": "YOLO v8.4.116 릴리스",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-08-08",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "ondas",
+      "name": "Ondas",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company",
+        "security"
+      ],
+      "updated": "2026-08-08",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     }
   ],
   "edges": [
@@ -12046,6 +12122,155 @@
         "inbox/fetch-2026-08-05-rss-dronelife.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "fc-firmware-comparison",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-09-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fc-firmware-comparison",
+      "target": "ardupilot-architecture",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-09-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "betaflight",
+      "target": "fc-firmware-comparison",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-29-betaflight.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dfend-counter-drone-worldcup",
+      "target": "ondas",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mavic-4-pro",
+      "target": "dji",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-yt-a-pool-from-above-looks-like-art-dji-mavic-4-pro.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mavic-4-pro",
+      "target": "dji-osmo-action-6",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-07-yt-a-pool-from-above-looks-like-art-dji-mavic-4-pro.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "faa-249-gram-registration-rule",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "faa-249-gram-registration-rule",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-yt-the-249-gram-drone-trap-explained.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-249-gram-registration-rule",
+      "target": "fcc-drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-yt-the-249-gram-drone-trap-explained.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "us-dod-cuas-marketplace",
+      "target": "ondas",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-05-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-115",
+      "target": "yolo-v8-4-116",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-02-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-116",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-116",
+      "target": "yolo-v8-4-115",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-116",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji",
+      "target": "dji-mavic-4-pro",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ondas",
+      "target": "dfend-counter-drone-worldcup",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ondas",
+      "target": "us-dod-cuas-marketplace",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-08-rss-dronedj.md"
+      ],
+      "confidence": "high"
     }
   ]
 }

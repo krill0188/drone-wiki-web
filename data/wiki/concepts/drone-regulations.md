@@ -1,7 +1,7 @@
 ---
 title: Drone Regulations
 created: 2026-07-27
-updated: 2026-08-06
+updated: 2026-08-09
 type: concept
 tags: [drone, regulations, UAS, FAA, EASA, BVLOS, compliance]
 sources: []
@@ -187,6 +187,7 @@ note: "Knowledge-based page - no raw source ingested yet"
 - [[uk-caa-bvlos-scale]] — 영국 CAA BVLOS 대규모 운용 규정
 - [[us-dod-cuas-marketplace]] — 미국 국방부 C-UAS 마켓플레이스
 - [[china-drone-export-controls]] — 중국 대미 드론·부품 수출 통제
+- [[faa-249-gram-registration-rule]] — FAA 249그램 드론 등록 규정
 
 ## 수집 대상
 
