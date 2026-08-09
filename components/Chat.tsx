@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import Link from "next/link"
 import { useChat } from "@ai-sdk/react"
 import { DefaultChatTransport, type UIMessage } from "ai"
 import { useWikiDoc } from "@/components/WikiDocContext"
@@ -9,11 +8,12 @@ import { DOMAIN_META } from "@/lib/types"
 import DroneIcon from "@/components/DroneIcon"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
+import { buildTextFragmentUrl } from "@/lib/text-fragment"
 
 const CHAT_FEATURE_KEY = "chat"
 
 interface ChatMetadata {
-  sources?: { slug: string; title: string; domain: string }[]
+  sources?: { slug: string; title: string; domain: string; excerpt?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
 }
 
@@ -212,16 +212,24 @@ export default function ChatWidget() {
                     <div className="px-1 flex flex-wrap gap-1">
                       {meta.sources.map((s) => {
                         const domainMeta = DOMAIN_META[s.domain as keyof typeof DOMAIN_META]
+                        // NotebookLM 벤치마킹(2026-08-09): 인용 클릭 시 문서 맨 위가
+                        // 아니라 근거 문단으로 점프시킨다. 브라우저 네이티브 Text
+                        // Fragment는 완전한 문서 내비게이션에서만 안정적으로
+                        // 동작하므로(SPA pushState론 불안정) 일부러 next/link가
+                        // 아닌 일반 <a>를 쓴다.
+                        const href = s.excerpt
+                          ? buildTextFragmentUrl(`/wiki/${s.slug}`, s.excerpt)
+                          : `/wiki/${s.slug}`
                         return (
-                          <Link
+                          <a
                             key={s.slug}
-                            href={`/wiki/${s.slug}`}
+                            href={href}
                             className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-hud border no-underline"
                             style={{ borderColor: domainMeta?.color ?? "#94a3b8", color: domainMeta?.color ?? "#94a3b8" }}
                           >
                             <span>{domainMeta?.emoji ?? "📄"}</span>
                             <span>{s.title}</span>
-                          </Link>
+                          </a>
                         )
                       })}
                     </div>

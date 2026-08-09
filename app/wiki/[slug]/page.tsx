@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import Link from "next/link"
-import { getAllPages, getPageBySlug } from "@/lib/wiki"
+import { getAllPages, getPageBySlug, extractLinkContext } from "@/lib/wiki"
 import { DOMAIN_META } from "@/lib/types"
 import { WikiDocSync } from "@/components/WikiDocContext"
 import WikiArticleBody from "@/components/WikiArticleBody"
@@ -26,7 +26,11 @@ export default async function WikiDetailPage({ params }: Props) {
     .slice(0, 5)
   // Obsidian 벤치마킹(2026-08-07): 그래프 뷰를 열지 않고도 "이 문서를 몇 개가
   // 참조하는가"를 바로 알 수 있도록 역링크(backlink)를 압축 표시한다.
-  const backlinks = allPages.filter((p) => p.slug !== slug && p.links.includes(slug))
+  // Heptabase 벤치마킹(2026-08-09): 제목만 나열하지 않고 링크가 등장한 주변
+  // 문맥을 함께 보여줘 "왜 연결됐는지"를 클릭 없이 알 수 있게 한다.
+  const backlinks = allPages
+    .filter((p) => p.slug !== slug && p.links.includes(slug))
+    .map((p) => ({ ...p, linkContext: extractLinkContext(p.content, slug) }))
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
@@ -108,7 +112,7 @@ export default async function WikiDetailPage({ params }: Props) {
                 : "이 문서를 참조하는 문서 없음"}
             </summary>
             {backlinks.length > 0 && (
-              <ul className="mt-2 ml-4 flex flex-col gap-1">
+              <ul className="mt-2 ml-4 flex flex-col gap-2.5">
                 {backlinks.map((b) => (
                   <li key={b.slug}>
                     <Link
@@ -118,6 +122,11 @@ export default async function WikiDetailPage({ params }: Props) {
                       <span className="mr-1">{DOMAIN_META[b.domain]?.emoji || "📄"}</span>
                       {b.title}
                     </Link>
+                    {b.linkContext && (
+                      <p className="mt-0.5 text-xs text-slate-400 dark:text-slate-500 leading-relaxed">
+                        {b.linkContext}
+                      </p>
+                    )}
                   </li>
                 ))}
               </ul>

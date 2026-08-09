@@ -127,7 +127,7 @@ export async function POST(req: NextRequest) {
       messageMetadata: ({ part }) => {
         if (part.type === "finish") {
           return {
-            sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain })),
+            sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain, excerpt: s.excerpt })),
             newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
           }
         }

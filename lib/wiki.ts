@@ -28,6 +28,31 @@ function extractWikiLinks(content: string): string[] {
   return matches.map((m) => m.replace(/\[\[([^\]|]+?)(?:\|.+?)?\]\]/, "$1").trim())
 }
 
+const CONTEXT_RADIUS = 60
+
+// Heptabase 벤치마킹(2026-08-09): 백링크를 제목만 나열하지 않고, 그 링크가 실제로
+// 등장한 주변 문장을 함께 보여준다 — "왜 이 문서가 연결됐는지"를 클릭 없이 알 수
+// 있게 한다. 마크다운 문법(헤딩 #, 목록 -, 강조 **) 최소한만 정리해 순수 발췌처럼
+// 보이게 한다.
+export function extractLinkContext(content: string, targetSlug: string): string {
+  const re = new RegExp(`\\[\\[${targetSlug.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\|[^\\]]+)?\\]\\]`)
+  const match = re.exec(content)
+  if (!match) return ""
+
+  const start = Math.max(0, match.index - CONTEXT_RADIUS)
+  const end = Math.min(content.length, match.index + match[0].length + CONTEXT_RADIUS)
+  let snippet = content.slice(start, end)
+
+  snippet = snippet
+    .replace(/\[\[([^\]|]+?)(?:\|([^\]]+))?\]\]/g, (_m, slug, alias) => alias || slug)
+    .replace(/^#{1,6}\s*/gm, "")
+    .replace(/[*_`]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+
+  return `${start > 0 ? "…" : ""}${snippet}${end < content.length ? "…" : ""}`
+}
+
 export async function getAllPages(): Promise<WikiPage[]> {
   const pages: WikiPage[] = []
 

@@ -30,6 +30,12 @@ export default function GraphPage() {
   const [previewLoading, setPreviewLoading] = useState(false)
   const [filterDomain, setFilterDomain] = useState("")
   const [dims, setDims] = useState({ w: 800, h: 600 })
+  // Anytype 벤치마킹(2026-08-09): 전체 그래프는 노드가 많아질수록(현재 180개대)
+  // 탐색성이 떨어진다. Flow 모드는 선택 노드의 1-hop 연결만 남겨 "이 문서와 뭐가
+  // 직접 이어지는지"에 집중하게 하고, 고아 숨기기는 인바운드/아웃바운드가 전혀
+  // 없는 노드를 뷰에서 제외한다.
+  const [flowMode, setFlowMode] = useState(false)
+  const [hideOrphans, setHideOrphans] = useState(false)
 
   useEffect(() => {
     fetch("/api/graph").then((r) => r.json()).then(setGraph)
@@ -59,17 +65,39 @@ export default function GraphPage() {
       .finally(() => setPreviewLoading(false))
   }, [selected])
 
-  const filteredNodes = filterDomain
-    ? graph.nodes.filter((n) => n.domain === filterDomain)
-    : graph.nodes
+  const domainNodes = filterDomain ? graph.nodes.filter((n) => n.domain === filterDomain) : graph.nodes
+  const domainNodeIds = new Set(domainNodes.map((n) => n.id))
+  const domainLinks = graph.edges
+    .filter((e) => domainNodeIds.has(e.source as string) && domainNodeIds.has(e.target as string))
+    .map((e) => ({ source: e.source as string, target: e.target as string, type: e.type }))
 
+  // Flow 모드: 선택 노드가 있으면 그 노드의 1-hop 이웃만 남긴다.
+  let flowNodeIds: Set<string> | null = null
+  if (flowMode && selected) {
+    flowNodeIds = new Set([selected.id])
+    for (const l of domainLinks) {
+      if (l.source === selected.id) flowNodeIds.add(l.target)
+      if (l.target === selected.id) flowNodeIds.add(l.source)
+    }
+  }
+
+  const scopedNodes = flowNodeIds ? domainNodes.filter((n) => flowNodeIds!.has(n.id)) : domainNodes
+  const scopedNodeIds = new Set(scopedNodes.map((n) => n.id))
+  const scopedLinks = domainLinks.filter((l) => scopedNodeIds.has(l.source) && scopedNodeIds.has(l.target))
+
+  // 고아 숨기기: 현재 스코프(도메인/Flow 반영 후) 기준으로 엣지가 하나도 없는 노드를 뺀다.
+  const degree = new Map<string, number>()
+  for (const l of scopedLinks) {
+    degree.set(l.source, (degree.get(l.source) || 0) + 1)
+    degree.set(l.target, (degree.get(l.target) || 0) + 1)
+  }
+  const filteredNodes = hideOrphans ? scopedNodes.filter((n) => (degree.get(n.id) || 0) > 0) : scopedNodes
   const nodeIds = new Set(filteredNodes.map((n) => n.id))
-  const filteredLinks = graph.edges
-    .filter((e) => nodeIds.has(e.source as string) && nodeIds.has(e.target as string))
-    .map((e) => ({ source: e.source, target: e.target, type: e.type }))
+  const filteredLinks = scopedLinks.filter((l) => nodeIds.has(l.source) && nodeIds.has(l.target))
 
   const internalLinkCount = filteredLinks.filter((e) => e.type === "internal-link").length
   const canonicalCount = filteredLinks.length - internalLinkCount
+  const orphanCount = scopedNodes.length - scopedNodes.filter((n) => (degree.get(n.id) || 0) > 0).length
 
   const handleNodeClick = useCallback((node: any) => setSelected(node as GraphNode), [])
 
@@ -88,6 +116,31 @@ export default function GraphPage() {
             <option key={d} value={d}>{m.label}</option>
           ))}
         </select>
+
+        <button
+          onClick={() => setFlowMode((v) => !v)}
+          disabled={!selected}
+          title={selected ? "선택 노드의 1-hop 연결만 표시" : "노드를 먼저 선택하세요"}
+          className={`text-xs px-2.5 py-1 rounded-lg border transition-colors disabled:opacity-40 disabled:cursor-not-allowed ${
+            flowMode
+              ? "bg-signal-500 border-signal-500 text-white"
+              : "border-slate-300 dark:border-slate-600 hover:border-signal-400"
+          }`}
+        >
+          🌊 Flow 모드
+        </button>
+        <button
+          onClick={() => setHideOrphans((v) => !v)}
+          title={`고립 노드 ${orphanCount}개`}
+          className={`text-xs px-2.5 py-1 rounded-lg border transition-colors ${
+            hideOrphans
+              ? "bg-signal-500 border-signal-500 text-white"
+              : "border-slate-300 dark:border-slate-600 hover:border-signal-400"
+          }`}
+        >
+          고아 숨기기{orphanCount > 0 ? ` (${orphanCount})` : ""}
+        </button>
+
         <div className="hidden sm:flex flex-wrap gap-2">
           {Object.entries(DOMAIN_META).map(([d, m]) => (
             <span key={d} className="flex items-center gap-1 text-xs text-slate-500">
