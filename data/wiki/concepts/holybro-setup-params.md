@@ -47,3 +47,6 @@ Holybro는 Pixhawk 표준 라인(6C/6X)과 레이싱 라인(Kakute)의 설정 �
 
 - Holybro 문서 허브: https://docs.holybro.com/
 - Kakute ArduPilot 가이드: https://ardupilot.org/copter/docs/common-holybro-kakuteh7.html
+
+## 📰 최근 관련 소식
+- [Painless360] Setting up NEOPixel LEDs and Sik3 Telemetry radios (Ardupilot Quad Build using a HolyBro X650) (youtube.com, 2026-08-09) — https://www.youtube.com/watch?v=D1L_mOhDvYk
