@@ -1,14 +1,15 @@
 ---
 title: "Lightweight Safe RL for UAV Navigation"
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-10
 type: concept
 tags: [drone, ai-autonomy, reinforcement-learning, safety, collision-avoidance]
-sources: [raw/papers/ai-autonomy/lightweight-safe-rl-uav.md]
-confidence: high
+sources: []
+confidence: medium
 contested: false
 contradictions: []
 domain: ai-autonomy
+note: "Raw source not preserved in repo — found during 2026-08-10 provenance audit, needs recapture"
 ---
 
 # Lightweight Safe RL for UAV Navigation

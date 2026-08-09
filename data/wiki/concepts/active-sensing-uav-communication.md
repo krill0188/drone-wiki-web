@@ -1,14 +1,15 @@
 ---
 title: "Active Sensing-Assisted UAV Communications with Jittering"
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-10
 type: concept
 tags: [drone, datalink, comms-protocol, sensing, cellular]
-sources: [raw/papers/datalink/active-sensing-uav-communication.md]
-confidence: high
+sources: []
+confidence: medium
 contested: false
 contradictions: []
 domain: comms-protocol
+note: "Raw source not preserved in repo — found during 2026-08-10 provenance audit, needs recapture"
 ---
 
 # Active Sensing-Assisted UAV Communications with Jittering

@@ -1,10 +1,10 @@
 ---
 title: "Drone News 2026-07-31"
 created: 2026-07-31
-updated: 2026-08-06
+updated: 2026-08-10
 type: concept
 tags: [drone, regulations, ops-mission, hardware]
-sources: [raw/articles/fetch-2026-07-31-rss-dronedj.md, raw/articles/fetch-2026-07-31-rss-dronelife.md, raw/articles/fetch-2026-07-31-rss-suasnews.md]
+sources: [inbox/fetch-2026-07-31-rss-dronedj.md, inbox/fetch-2026-07-31-rss-dronelife.md, inbox/fetch-2026-07-31-rss-suasnews.md]
 confidence: high
 contested: false
 contradictions: []

@@ -1,14 +1,15 @@
 ---
 title: "Cross-Layered Multi-Drone Coordination for Medical Supply Delivery"
 created: 2026-07-30
-updated: 2026-07-30
+updated: 2026-08-10
 type: concept
 tags: [drone, swarm, flight-control, ai-autonomy, medical-delivery, disaster-response]
-sources: [raw/papers/swarm/cross-layered-medical-drone-coordination.md]
-confidence: high
+sources: []
+confidence: medium
 contested: false
 contradictions: []
 domain: flight-control
+note: "Raw source not preserved in repo — found during 2026-08-10 provenance audit, needs recapture"
 ---
 
 # Cross-Layered Multi-Drone Coordination for Medical Supply Delivery

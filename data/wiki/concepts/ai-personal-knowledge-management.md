@@ -1,7 +1,7 @@
 ---
 title: AI 개인 지식관리
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-08-10
 type: concept
 tags:
   - knowledge-base
@@ -9,15 +9,12 @@ tags:
   - pkm
   - provenance
   - workflow
-sources:
-  - "raw/youtube/📺 How To Build LLM Wiki In Obsidian 🧠 A Memory Layer For Any Agentic AI.md"
-  - "raw/youtube/📺 LLM Wiki를 업그레이드하는 외부 지식 시스템! 연구자를 위한 최강의 조합 Zotero × Notebook × Obsidian x Claude Code.md"
-  - "raw/notebooklm/2026-07-16-all-notes.md"
-  - "raw/notebooklm/understand-anything-github.md"
-confidence: medium
+sources: []
+confidence: low
 domain: ai-autonomy
 contested: false
 contradictions: []
+note: "Raw source not preserved in repo — found during 2026-08-10 provenance audit, needs recapture"
 ---
 
 # AI 개인 지식관리
