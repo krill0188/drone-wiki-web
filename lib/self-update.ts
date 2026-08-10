@@ -101,18 +101,33 @@ export function getSelfUpdateProposals(limit = 20): SelfUpdateProposal[] {
   return proposals.sort((a, b) => b.score - a.score)
 }
 
+// 불릿 "- <title> (<source>, <date>) — <url>"에서 title만 뽑아 비교키로 쓴다.
+function bulletTitleKey(bullet: string): string {
+  const m = bullet.match(/^- (.+?) \(/)
+  return (m ? m[1] : bullet).trim().toLowerCase()
+}
+
 // SECTION_HEADER 섹션에 불릿을 삽입한다. 섹션이 없으면 문서 끝에 새로 만든다.
-// 이미 같은 불릿이 있으면 그대로 반환(멱등 — 같은 제안을 두 번 적용해도 중복 안 생김).
+// 같은 뉴스(정규화한 제목 기준)가 이미 섹션에 있으면 그대로 반환(멱등).
+// 주의: 예전엔 "전체 불릿 문자열이 그대로 있는가"로만 비교했는데, Google News
+// RSS는 같은 기사를 재수집할 때마다 다른 리다이렉트 URL을 발급한다 — URL까지
+// 포함해 비교하면 제목이 같아도 URL만 다르면 중복 삽입된다(2026-08-10 발견,
+// entities/sol-one.md 등 9개 문서에서 중복 확인). 제목 기준 비교로 교체.
 function insertBullet(raw: string, bullet: string): string {
-  if (raw.includes(bullet)) return raw
   const headerIdx = raw.indexOf(SECTION_HEADER)
   if (headerIdx === -1) {
     return `${raw.trimEnd()}\n\n${SECTION_HEADER}\n${bullet}\n`
   }
   const afterHeader = headerIdx + SECTION_HEADER.length
   const nextHeadingIdx = raw.indexOf("\n## ", afterHeader)
-  const insertAt = nextHeadingIdx === -1 ? raw.length : nextHeadingIdx
-  return `${raw.slice(0, insertAt).trimEnd()}\n${bullet}\n${raw.slice(insertAt)}`
+  const sectionEnd = nextHeadingIdx === -1 ? raw.length : nextHeadingIdx
+  const existingSection = raw.slice(afterHeader, sectionEnd)
+  const newKey = bulletTitleKey(bullet)
+  const alreadyPresent = existingSection
+    .split("\n")
+    .some((line) => line.startsWith("- ") && bulletTitleKey(line) === newKey)
+  if (alreadyPresent) return raw
+  return `${raw.slice(0, sectionEnd).trimEnd()}\n${bullet}\n${raw.slice(sectionEnd)}`
 }
 
 export function applyProposal(p: SelfUpdateProposal): { ok: boolean; error?: string } {
