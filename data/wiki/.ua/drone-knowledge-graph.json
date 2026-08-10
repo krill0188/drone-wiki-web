@@ -6,8 +6,8 @@
       "layer": "Comparisons",
       "domain": "",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -36,8 +36,8 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -47,8 +47,8 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -301,8 +301,8 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -527,7 +527,7 @@
         "companion-computer",
         "autonomous"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -607,8 +607,8 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -676,7 +676,7 @@
         "micro-ROS",
         "middleware"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -706,8 +706,8 @@
       "layer": "Concepts",
       "domain": "ai-autonomy",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -807,7 +807,7 @@
         "drone-sw",
         "drone"
       ],
-      "updated": "2026-07-28",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -821,7 +821,7 @@
         "datalink",
         "drone-sw"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -835,7 +835,7 @@
         "drone-hw",
         "drone-sw"
       ],
-      "updated": "2026-07-28",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -849,7 +849,7 @@
         "drone-sw",
         "drone"
       ],
-      "updated": "2026-07-28",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -860,8 +860,8 @@
       "layer": "Queries",
       "domain": "",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -871,8 +871,8 @@
       "layer": "Queries",
       "domain": "",
       "tags": [],
-      "updated": "2026-07-21",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -1077,7 +1077,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-07-29",
+      "updated": "2026-08-11",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1261,7 +1261,7 @@
         "brinc",
         "motorola"
       ],
-      "updated": "2026-07-30",
+      "updated": "2026-08-11",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -1384,8 +1384,8 @@
         "vtol",
         "stability"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-11",
+      "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1509,8 +1509,8 @@
         "sensing",
         "cellular"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1527,8 +1527,8 @@
         "medical-delivery",
         "disaster-response"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1545,8 +1545,8 @@
         "military",
         "counter-uav"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-11",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1562,8 +1562,8 @@
         "digital-twin",
         "reinforcement-learning"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1579,8 +1579,8 @@
         "sim-to-real",
         "reinforcement-learning"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1596,8 +1596,8 @@
         "safety",
         "collision-avoidance"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -1613,8 +1613,8 @@
         "modular-robotics",
         "swarm"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1630,8 +1630,8 @@
         "human-machine-interface",
         "safety"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -1647,8 +1647,8 @@
         "safety",
         "landing"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -1664,8 +1664,8 @@
         "control-theory",
         "px4"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1681,8 +1681,8 @@
         "world-models",
         "sim-to-real"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1698,8 +1698,8 @@
         "parameter",
         "version"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1715,8 +1715,8 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1732,8 +1732,8 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1749,8 +1749,8 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1766,8 +1766,8 @@
         "parameter",
         "setup"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1783,8 +1783,8 @@
         "parameter",
         "version"
       ],
-      "updated": "2026-07-30",
-      "confidence": "medium",
+      "updated": "2026-08-10",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1800,8 +1800,8 @@
         "diff",
         "copter"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1817,8 +1817,8 @@
         "diff",
         "px4"
       ],
-      "updated": "2026-07-30",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -1832,8 +1832,8 @@
         "ai-autonomy",
         "drone-sw"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -1862,7 +1862,7 @@
         "ops-mission",
         "hardware"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": null
@@ -1892,8 +1892,8 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -2000,8 +2000,8 @@
         "swarm",
         "datalink"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -2031,8 +2031,8 @@
         "flight-control",
         "gcs-software"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -2047,8 +2047,8 @@
         "drone-sw",
         "swarm"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -2090,8 +2090,8 @@
         "drone-sw",
         "gcs-software"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -2105,8 +2105,8 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-07-31",
-      "confidence": "high",
+      "updated": "2026-08-10",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -2700,7 +2700,7 @@
         "ai-agent",
         "safety"
       ],
-      "updated": "2026-08-04",
+      "updated": "2026-08-11",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2804,7 +2804,7 @@
         "hardware",
         "company"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-08-11",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2819,7 +2819,7 @@
         "hardware",
         "company"
       ],
-      "updated": "2026-08-09",
+      "updated": "2026-08-11",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3008,6 +3008,67 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "moe-multimodal-uav-detection",
+      "name": "MoE 기반 강건한 UAV 멀티모달 객체 탐지",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "paper"
+      ],
+      "updated": "2026-08-11",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "rigid-covert-gnss-spoofing-swarm",
+      "name": "Rigid-Covert GNSS Spoofing: UAV 군집의 구조적 탐지 사각지대",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "paper",
+        "security"
+      ],
+      "updated": "2026-08-11",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "uav-swarm-air-ground-isac",
+      "name": "교차 지역 협력 기반 Air-Ground ISAC UAV 군집",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "paper"
+      ],
+      "updated": "2026-08-11",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-117",
+      "name": "YOLO v8.4.117 릴리스",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-08-11",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     }
   ],
   "edges": [
@@ -12269,6 +12330,146 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-08-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "decentralized-swarm-gps-denied",
+      "target": "rigid-covert-gnss-spoofing-swarm",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai",
+      "target": "moe-multimodal-uav-detection",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "moe-multimodal-uav-detection",
+      "target": "drone-ai",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/moe-multimodal-uav-detection.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "moe-multimodal-uav-detection",
+      "target": "rgb-ir-fusion-uav-detection",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/moe-multimodal-uav-detection.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "rigid-covert-gnss-spoofing-swarm",
+      "target": "decentralized-swarm-gps-denied",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/rigid-covert-gnss-spoofing-of-uav-swarms-a-structural-blind-spot-its-detection-l.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rigid-covert-gnss-spoofing-swarm",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/rigid-covert-gnss-spoofing-of-uav-swarms-a-structural-blind-spot-its-detection-l.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "uav-swarm-air-ground-isac",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-swarm-air-ground-isac",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/uav-swarming-for-air-ground-isac-via-cross-region-cooperation.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-swarm-air-ground-isac",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/uav-swarming-for-air-ground-isac-via-cross-region-cooperation.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-117",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-10-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-117",
+      "target": "yolo-v8-4-116",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-10-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-117",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-10-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-117",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-116",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-115",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-112",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
       ],
       "confidence": "high"
     }
