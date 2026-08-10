@@ -970,5 +970,145 @@
       "drone-news-ops",
       "gps-uav-imu"
     ]
+  },
+  "https://www.youtube.com/watch?v=E-Pg5OWkidU": {
+    "processedAt": "2026-08-10T19:21:59.943Z",
+    "matchedSlugs": [
+      "dji-mic-mini-2s",
+      "drone-hw"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMizgFBVV95cUxQMWFVakV3U3c3SVAzaTFpd2UtRFRIMzNBS0o1aW9VcU51bXVEY3M4LXhPMFE2NjI3VVJwdk1MS0RhZGdTc3RuZ0dIR21tZlBDa041WHRQbEhOUDRDQ2ZqZTRBREpmOGpON2FwSmU3UVlPQnlzWTF1T19uREUxVTZTcWlzT0pCZGJnX3FfQ1VtWlFyQWZ1dHJrSXJfNVpvV3dqTHIteGZRc1lfeXZuU25ZMkc4OVhiSU11YnhRMF9qZHgtVll6VXhrak01S2pPUQ?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.920Z",
+    "matchedSlugs": [
+      "divide-conquer-uav-detector",
+      "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m"
+    ]
+  },
+  "http://arxiv.org/abs/2607.16471v1": {
+    "processedAt": "2026-08-10T19:21:59.929Z",
+    "matchedSlugs": [
+      "rgb-ir-fusion-uav-detection",
+      "divide-conquer-uav-detector"
+    ]
+  },
+  "https://www.youtube.com/watch?v=EYnuUKPESDw": {
+    "processedAt": "2026-08-10T19:21:59.936Z",
+    "matchedSlugs": [
+      "dji-matrice-5-rumor",
+      "dji-osmo-nano"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54RUFpYV9Cekp3STFmaVZybWtrNHpJdGtkdFlydXZiZHR4OHN2UTgxQzhPcWUybnhHS0dNZHMzQ09mVTJ6MGV6c3U3aENBSWM?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.935Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hSThxUGVhem40OVNfX2R1Y2xXX3VnYVFteFpNV295cy1KeG9nOUllUVJHV0Jrc3FNdmFGS25xRF9FbUpmNFZHekRxVVVQTlM2dklueXo2WmhLQUVR?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.947Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZRDREbVJRQ1pNRWtackV2dWptNzE5MWJuWkVBZFlobkdzNk1nbGtRWGxlcGswc3VReENNTFJTVEpqN2tWMHF2RUxfZHZZRVBXeVZ6UDVkNG9tMW_SAWBBVV95cUxObE9RXzJxU3FLbWxwOW5oeTFCMnJSR3YyM01PTjJHRm5sVFBiN2ZVWDJFX0NKbFJqT3BwemU3R01fVkdxeFNBblBRMjJYVGhzaVBHeTY5OVVNV3RKWEx2VmU?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.950Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "drone-first-responder-dfr"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE93ckxFTzR5b3JJdzlyQ29MOXJuUTMwMWJpR0w1YnZhOUtZQTFvMWZQU1didTlLOGludS1HYmlfeDVfZnhQOFlKRGZOYlZ6c3VNd053cEEzb0FBNFE?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.952Z",
+    "matchedSlugs": [
+      "drone-first-responder-dfr",
+      "uk-caa-bvlos-scale"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4yUUJOb2pHMDl3YVhWWnd0eWFHbURRSjJPb185Y2k1aWRGY2lPcnVIbktNVFZib2prM2NMemNNZ1NwX3l0aWxiSzItN1Q1WEpDQjBfX1Uzd2pEOFVvaEh0V3BtaUc?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.970Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "6g-isac-matlab-usrp"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxNYmxnaTE4RjIxSzhENWtLUGNsZ3FKSnNFNFA2TUpfT1FkRS1LLTNORVRIZlJQZW16NGhraUNDOGRJNUwteE4zMVlvNTl1cXkwR1o1ZFpNZXVXLVVFalJxT2k5XzVycDk1RURNM0YtQk9mRXAtNVFSOE42UlA3RENiTGxBSy1TSE5FSnJtaWRCd2k0V0ZZTlVVOFRIclhEZw?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.946Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85QTBQR1NUdGtDMW9FekNDUF8wXzM1XzVVTFpUenBneVNuNThRVURHRkdLcVVZTGNOOVh6YThKUk1PclFjNzZuaDQtRUJiMElVWkd4R1dTbkpHVGPSAWBBVV95cUxNUC1peEhoa25QSVBUd3E1cDZ5RzFhTjNmYURqVjRrTFVpVVE0SkFOd20xODZJLTlCeDNVWm5IUl9XcDZrbUlvQVdvWVJUT1VDbWduTjdKSUlDTkhsaFRGUUc?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.949Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTE40RmFYamRyTDNnLUcyV0ZCRktFXzhQd0FFd200cEdYOTBDUzkwenplNFNvSVZEX1lrTHM4X3I2RDNSeEFqcGZhc0diTEN6WlU?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.957Z",
+    "matchedSlugs": [
+      "hoverair-versa",
+      "drone-ai"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0wbW54MEdpai1GWlFlTkNKNG1ORW9veUFRYWFzMXVFM3FsQW1lbEpNblNVcEZTX21za09RX2lEcV9WNnhCczdOWmxvSno4UU1PUzVHTFNUbnNpT3pwaHNueg?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.962Z",
+    "matchedSlugs": [
+      "hoverair-versa",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiREFVX3lxTFAwaTJQM1RSZEpyWnJSWWNqZHBvLV9GSUFEWFpKSjdLSU1DX0UwVXhvUGt2SnBuY2YwZFNnZHhDNGJKTnJ1?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.963Z",
+    "matchedSlugs": [
+      "uk-caa-bvlos-scale",
+      "drone-first-responder-dfr"
+    ]
+  },
+  "https://www.youtube.com/watch?v=sYCQltmHn_g": {
+    "processedAt": "2026-08-10T19:21:59.968Z",
+    "matchedSlugs": [
+      "6g-isac-matlab-usrp",
+      "dfend-counter-drone-worldcup"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5XUVNwcHFwSEpDZnU0aWlFQnYyYlZCTHJVQ0JWcmtvREVMNko2NTBGa1VtZTB0M3p3bmtoOUZ4ajBobGRiLVJpdHVuMDFiaVk?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.961Z",
+    "matchedSlugs": [
+      "cleveland-clinic-drone-delivery",
+      "dronuum-computing-continuum"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVS1gzZjNwNERhMmJoTi11aWpwcFZLN0dMRU9tUEE5VE5Yd2ZrYV93cUlNV3RkTlcxdVp1QUNXMVJXWXduQVQzaVRuZE5DM1NjU190UQ?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.965Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "hoverair-versa"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTE5sZGtRRVQzM01ldEZOb0wtdXV6ZnFPNHJIUGRxblBzRnRLa1dEY2N4U2VPUWtjblFoYTRmekM4UTVkVl9oM2JfamU1Sm1USVBTUVhvWE5DV0c4VEdMWlNxUFdaMGkwdElQQ2tfb3ZRTktaRm_SAXdBVV95cUxQcnFIX2xsNnNwWC1iZUowODNpLTE2NXU1bjA4c292ZVF5YkFqdFhPaUEwNktYa3cxYS1zZ3pTV281U05KWVdDdXVmUGZXRlhqdDNDZUgtdlYzeUpwTmpNVjBEZy1KVncya2FfcXN0Q3EtWVlvSzVTOA?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.971Z",
+    "matchedSlugs": [
+      "ondas",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTFBISzhzcWVleV91NmlvVXJsUWp4Ylh5VFpwczhuYkZ4WVFublM5b3Bib1ZZNUo0ZUxUMTRZbnRadlhteXFsUno5ZTFBY3BLNl9Rb0lONWU0X1pIY0Y3N01CNzN6QzRwN2VsMWRnMFh2Mm9lVmtBSW56UlIxX3NWYzg?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.973Z",
+    "matchedSlugs": [
+      "6g-isac-matlab-usrp",
+      "drone-news-ops"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5XTFJOT0pqSjFzYmdmRDlFUjhrOUh2U01oZ0FhQ1pkVXllSkx3MVg4RTV6VFIybFJna3JWOU94SGw4ekNyQlE3bUM1WQ?oc=5": {
+    "processedAt": "2026-08-10T19:21:59.978Z",
+    "matchedSlugs": [
+      "xtend-ai-robotics",
+      "terra-drone"
+    ]
   }
 }
