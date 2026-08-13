@@ -3069,6 +3069,458 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "clustered-randomized-smoothing",
+      "name": "Clustered Randomized Smoothing for Stochastic Prediction",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "ai",
+        "robustness",
+        "safety",
+        "paper"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "curriculum-guided-heterogeneous-multi-agent-isac",
+      "name": "Curriculum-Guided Heterogeneous Multi-Agent Intelligence for Multi-UAV Cooperative ISAC",
+      "layer": "Concepts",
+      "domain": "swarm",
+      "tags": [
+        "drone",
+        "swarm",
+        "drone-ai",
+        "ai-agent",
+        "datalink"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "dji-mini-5-pro",
+      "name": "DJI Mini 5 Pro",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "dji",
+        "mini",
+        "wind-resistant"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dji-neo-2-rth",
+      "name": "DJI Neo 2 Return to Home",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "dji"
+      ],
+      "updated": "2026-08-14",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dji-osmo-mobile-8",
+      "name": "DJI Osmo Mobile 8",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "gimbal",
+        "dji"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dji-osmo-pocket-4p-stabilization",
+      "name": "DJI Osmo Pocket 4P Stabilization",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "dji"
+      ],
+      "updated": "2026-08-14",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "edge-constrained-uav-small-object-detection",
+      "name": "Edge-Constrained UAV Small-Object Detection with P2 Enhancement",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "computer-vision",
+        "yolo",
+        "hardware"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "fcc-drone-approval-revocation",
+      "name": "FCC Drone Approval Revocation Odyssey Robot",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "fcc",
+        "supply-chain"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "fluid-antenna-system",
+      "name": "Fluid Antenna System for UAV Communications",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "comms-protocol",
+        "antenna",
+        "fas",
+        "uav",
+        "beamforming"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "hybrid-beamforming-ntn",
+      "name": "Hybrid Beamforming in Non-Terrestrial Networks",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "comms-protocol",
+        "beamforming",
+        "uav",
+        "satellite"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "insta360-x6",
+      "name": "Insta360 X6",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "camera",
+        "360-camera"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "llm-enabled-uav-natural-language-navigation",
+      "name": "LLM-Enabled UAV Natural Language Navigation via STL",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "voice-control",
+        "ai-agent",
+        "llm",
+        "regulations"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "mbse-uav-sysml",
+      "name": "Model-Based Systems Engineering for UAVs with SysML",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "ai-autonomy",
+        "sysml",
+        "mbse",
+        "ros2",
+        "systems-engineering"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "michigan-aam-projects",
+      "name": "Michigan Advanced Air Mobility Projects",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "aam",
+        "public-safety",
+        "agriculture"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "michigan-drone-lawsuit",
+      "name": "Michigan Drone Lawsuit",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "regulations",
+        "journalism",
+        "legal"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "skydio-dfr-milestone",
+      "name": "Skydio DFR Command Milestone",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "dfr",
+        "public-safety",
+        "skydio",
+        "milestone"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "uav-detr-anti-drone-detection",
+      "name": "UAV-DETR: DETR for Anti-Drone Target Detection",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "computer-vision",
+        "detection",
+        "c-uas"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "uav-task-offloading-traffic-monitoring",
+      "name": "UAV Task Offloading for Traffic Monitoring",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "ai-agent"
+      ],
+      "updated": "2026-08-14",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "ukraine-fight-drone-simulator",
+      "name": "Ukrainian Fight Drone Simulator",
+      "layer": "Concepts",
+      "domain": "drone-sw",
+      "tags": [
+        "drone",
+        "fpv",
+        "simulation"
+      ],
+      "updated": "2026-08-14",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "yolo-v8-4-118",
+      "name": "YOLO v8.4.118",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "yolo",
+        "computer-vision",
+        "object-detection",
+        "llm"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-119",
+      "name": "YOLO v8.4.119",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-agent",
+        "yolo"
+      ],
+      "updated": "2026-08-14",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "airwise-nexus",
+      "name": "Airwise Nexus",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "company",
+        "ops-mission",
+        "utm",
+        "airspace",
+        "sensor-fusion"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "cambridge-aerospace",
+      "name": "Cambridge Aerospace",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "company",
+        "cuas",
+        "defense",
+        "funding"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "epropelled",
+      "name": "ePropelled",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "company",
+        "hardware",
+        "propulsion",
+        "motor",
+        "us-manufacturing"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "flybyops",
+      "name": "FlybyOps",
+      "layer": "Entities",
+      "domain": "ops-mission",
+      "tags": [
+        "company",
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-08-14",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "mbf-group",
+      "name": "MBF Group",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "company",
+        "hardware",
+        "satellite"
+      ],
+      "updated": "2026-08-13",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "radiomaster-gx15",
+      "name": "RadioMaster GX15",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "fpv",
+        "radio",
+        "transmitter",
+        "elrs"
+      ],
+      "updated": "2026-08-12",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     }
   ],
   "edges": [
@@ -12471,6 +12923,708 @@
       "evidence": [
         "inbox/fetch-2026-07-29-yolo.md"
       ],
+      "confidence": "high"
+    },
+    {
+      "source": "clustered-randomized-smoothing",
+      "target": "px4-control-tuning",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-arxiv-clustered-randomized-smoothing-for-stochastic-prediction-fun.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "clustered-randomized-smoothing",
+      "target": "rl-quadrotor-tunable-control",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-arxiv-clustered-randomized-smoothing-for-stochastic-prediction-fun.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "clustered-randomized-smoothing",
+      "target": "ai-knowledge-workflow",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-arxiv-clustered-randomized-smoothing-for-stochastic-prediction-fun.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "curriculum-guided-heterogeneous-multi-agent-isac",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-curriculum-guided-heterogeneous-multi-agent-intelligence-for.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "curriculum-guided-heterogeneous-multi-agent-isac",
+      "target": "uav-isac-cross-region",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-curriculum-guided-heterogeneous-multi-agent-intelligence-for.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "curriculum-guided-heterogeneous-multi-agent-isac",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-curriculum-guided-heterogeneous-multi-agent-intelligence-for.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "curriculum-guided-heterogeneous-multi-agent-isac",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-curriculum-guided-heterogeneous-multi-agent-intelligence-for.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mini-5-pro",
+      "target": "faa-249-gram-registration-rule",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-yt-under-249g-extremely-high-winds-still-stable-dji-mini-5-pro.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-mini-5-pro",
+      "target": "dji-mavic-4-pro",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-yt-under-249g-extremely-high-winds-still-stable-dji-mini-5-pro.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-mini-5-pro",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-yt-under-249g-extremely-high-winds-still-stable-dji-mini-5-pro.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-neo-2-rth",
+      "target": "dji",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-guess-how-the-drone-returns-to-its-starting-point-neo-2.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-neo-2-rth",
+      "target": "dji-mini-5-pro",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-guess-how-the-drone-returns-to-its-starting-point-neo-2.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-neo-2-rth",
+      "target": "visual-positioning-odometry",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-guess-how-the-drone-returns-to-its-starting-point-neo-2.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-osmo-mobile-8",
+      "target": "dji-osmo-nano",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-yt-put-your-thumbs-here-dji-osmo-mobile-8.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-osmo-mobile-8",
+      "target": "dji-osmo-pocket-4",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-yt-put-your-thumbs-here-dji-osmo-mobile-8.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dji-osmo-pocket-4p-stabilization",
+      "target": "dji",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-cutest-stabilization-test-youll-see-today-dji-osmo-pocket-4p.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-osmo-pocket-4p-stabilization",
+      "target": "dji-osmo-pocket-4",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-cutest-stabilization-test-youll-see-today-dji-osmo-pocket-4p.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-osmo-pocket-4p-stabilization",
+      "target": "dji-osmo-nano",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-cutest-stabilization-test-youll-see-today-dji-osmo-pocket-4p.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "edge-constrained-uav-small-object-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-edge-constrained-uav-small-object-detection-with-p2-enhancem.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "edge-constrained-uav-small-object-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-edge-constrained-uav-small-object-detection-with-p2-enhancem.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "edge-constrained-uav-small-object-detection",
+      "target": "companion-computer",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-edge-constrained-uav-small-object-detection-with-p2-enhancem.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "edge-constrained-uav-small-object-detection",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-edge-constrained-uav-small-object-detection-with-p2-enhancem.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fcc-drone-approval-revocation",
+      "target": "fcc-drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "fcc-drone-approval-revocation",
+      "target": "china-drone-export-controls",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "fluid-antenna-system",
+      "target": "hybrid-beamforming-ntn",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-modeling-and-performance-analysis-for-fluid-antenna-system-e.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fluid-antenna-system",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-modeling-and-performance-analysis-for-fluid-antenna-system-e.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fluid-antenna-system",
+      "target": "uav-isac-cross-region",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-modeling-and-performance-analysis-for-fluid-antenna-system-e.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hybrid-beamforming-ntn",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-hybrid-beamforming-in-non-terrestrial-networks-architectures.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hybrid-beamforming-ntn",
+      "target": "uav-isac-cross-region",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-hybrid-beamforming-in-non-terrestrial-networks-architectures.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hybrid-beamforming-ntn",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-hybrid-beamforming-in-non-terrestrial-networks-architectures.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "insta360-x6",
+      "target": "dji-osmo-nano",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "insta360-x6",
+      "target": "drone-payload-systems",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "llm-enabled-uav-natural-language-navigation",
+      "target": "voice-control-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-llm-enabled-low-altitude-uav-natural-language-navigation-via.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "llm-enabled-uav-natural-language-navigation",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-llm-enabled-low-altitude-uav-natural-language-navigation-via.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "llm-enabled-uav-natural-language-navigation",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-llm-enabled-low-altitude-uav-natural-language-navigation-via.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "llm-enabled-uav-natural-language-navigation",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-llm-enabled-low-altitude-uav-natural-language-navigation-via.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mbse-uav-sysml",
+      "target": "ros2-drone-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-model-based-systems-engineering-framework-for-sysml-driven-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mbse-uav-sysml",
+      "target": "px4-system-architecture",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-model-based-systems-engineering-framework-for-sysml-driven-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mbse-uav-sysml",
+      "target": "ardupilot-architecture",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-model-based-systems-engineering-framework-for-sysml-driven-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mbse-uav-sysml",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-model-based-systems-engineering-framework-for-sysml-driven-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "michigan-aam-projects",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "michigan-aam-projects",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "michigan-drone-lawsuit",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "michigan-drone-lawsuit",
+      "target": "faa-deter-program",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio-dfr-milestone",
+      "target": "skydio",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio-dfr-milestone",
+      "target": "skydio-centralsquare-dfr-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio-dfr-milestone",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-detr-anti-drone-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-uav-detr-detr-for-anti-drone-target-detection.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-detr-anti-drone-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-uav-detr-detr-for-anti-drone-target-detection.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-detr-anti-drone-detection",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-uav-detr-detr-for-anti-drone-target-detection.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-detr-anti-drone-detection",
+      "target": "dfend-counter-drone-worldcup",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-uav-detr-detr-for-anti-drone-target-detection.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-task-offloading-traffic-monitoring",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-crossref-dynamic-adaptive-task-offloading-for-uav-based-road-traffic-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-task-offloading-traffic-monitoring",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-crossref-dynamic-adaptive-task-offloading-for-uav-based-road-traffic-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-task-offloading-traffic-monitoring",
+      "target": "computing-continuum",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-crossref-dynamic-adaptive-task-offloading-for-uav-based-road-traffic-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ukraine-fight-drone-simulator",
+      "target": "drone-simulation",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-ukraine-fight-drone-simulator-not-just-a-game.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ukraine-fight-drone-simulator",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-ukraine-fight-drone-simulator-not-just-a-game.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ukraine-fight-drone-simulator",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-ukraine-fight-drone-simulator-not-just-a-game.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-118",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-118",
+      "target": "yolo-v8-4-117",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-118",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-12-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-119",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-119",
+      "target": "yolo-v8-4-118",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-119",
+      "target": "yolo-v8-4-117",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-119",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "airwise-nexus",
+      "target": "flybyops",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "airwise-nexus",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "airwise-nexus",
+      "target": "skydio",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "cambridge-aerospace",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "cambridge-aerospace",
+      "target": "fortem-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "epropelled",
+      "target": "dji",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "epropelled",
+      "target": "skydio",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "epropelled",
+      "target": "auterion",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "flybyops",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "flybyops",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "flybyops",
+      "target": "ground-control-station",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mbf-group",
+      "target": "parrot",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mbf-group",
+      "target": "bitcraze",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "radiomaster-gx15",
+      "target": "ratefpv",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "radiomaster-gx15",
+      "target": "wallefpv",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "radiomaster-gx15",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [],
       "confidence": "high"
     }
   ]
