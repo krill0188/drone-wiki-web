@@ -43,3 +43,6 @@ GPS 및 통신 차단 환경에서 지상 표적 보호를 위한 분산형 UAV 
 ## 출처
 
 - Silveria et al., "Decentralized UAV Swarms for Ground Target Protection in GPS- and Communication-Denied Environments", arXiv:2607.20710, 2026.
+
+## 📰 최근 관련 소식
+- [UAV Coach] 40+ Drones Disrupt Fire Response in Washington (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=Xo74V_HZBuM

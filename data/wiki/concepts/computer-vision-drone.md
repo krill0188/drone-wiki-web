@@ -176,3 +176,5 @@ for waypoint in path:
 ## 📰 최근 관련 소식
 - Army seeks next-gen missile that could shoot down small drones for less than $150K a pop (DefenseScoop, Tue, 04 Au) — https://news.google.com/rss/articles/CBMie0FVX3lxTE5GbzRtdW9TS3Y4b3JkaW9oazVGWW9nUWRxa0hGY25RV2h1UEg1MVVfQnhSUE1xS1VFMzVSUGRyckRva0VEZFV5aWhqeHZsbngwV2FpTDBLMVEwdllFOWVXYVZyU3g2VDNESS1WekhBLXNYOEdhMWZrenRESQ?oc=5
 - Drones Bring Whole Blood Directly to Trauma Scenes (dronelife.com, Mon, 10 Au) — https://dronelife.com/2026/08/10/drones-bring-whole-blood-directly-to-trauma-scenes/
+- Powerful Public Safety Technology Needs Powerful Guardrails: What Flock’s Camera Controversy Means for Drones (dronelife.com, Fri, 14 Au) — https://dronelife.com/2026/08/14/public-safety-technology-drones-flock-guardrails/
+- White House Imposes New Tariffs on Imported Drones and Components (dronelife.com, Fri, 14 Au) — https://dronelife.com/2026/08/14/drone-import-tariffs-us-supply-chain/

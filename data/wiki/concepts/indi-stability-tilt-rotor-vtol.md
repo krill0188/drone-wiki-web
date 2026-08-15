@@ -62,3 +62,7 @@ domain: flight-control
 - [[px4-flight-modes]] — PX4 비행 모드 및 제어 파라미터
 - [[px4-architecture-deep]] — PX4 아키텍처 및 제어 시스템
 - [[drone-safety-failsafe]] — 드론 안전 및 페일세이프 시스템
+
+## 📰 최근 관련 소식
+- [UAV Coach] Drone Prices Are About to Jump (youtube.com, 2026-08-15) — https://www.youtube.com/watch?v=FEiY1ONxd70
+- [UAV Coach] 40+ Drones Disrupt Fire Response in Washington (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=Xo74V_HZBuM

@@ -33,3 +33,5 @@ DJI의 249g 이하 초경량 여행용 드론. 강풍에서도 안정적인 비�
 
 ## 📰 최근 관련 소식
 - [DJI] Under 249g. Extremely High Winds. Still Stable. | DJI Mini 5 Pro (youtube.com, 2026-08-13) — https://www.youtube.com/watch?v=0wabgytrt_U
+- [DJI] Noise Cancellation OFF vs ON | DJI Mic Mini 2S (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=676awyYV3o4
+- [DJI] Total Darkness. Bright Corona. One Frame. | DJI Mavic 4 Pro (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=etlG90Nm8j8
