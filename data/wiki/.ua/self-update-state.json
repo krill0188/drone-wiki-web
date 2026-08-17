@@ -1943,5 +1943,145 @@
       "china-drone-export-controls",
       "dji-matrice-5-rumor"
     ]
+  },
+  "https://dronedj.com/2026/08/14/dji-mavic-4-drone-firmware-2/": {
+    "processedAt": "2026-08-17T19:20:34.771Z",
+    "matchedSlugs": [
+      "dji-mavic-4-pro-firmware-update",
+      "dji-mavic-4-pro"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiekFVX3lxTE1vN2ZBUHpiM3RTYmNpdnZaTEFKazhObTFBOFQ3Q1dDWDhIbDNTSnNXUU5FdDVHTXIxYTFKNmxOWmlPUVZabVFEMmxXaUtpYWpfUnltWHk0YW1wRGtCOU5FWXBpLV93MzV5SjJuNi1kdTFjbHNReE9IM1dn?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.796Z",
+    "matchedSlugs": [
+      "skydio-dock-milestone",
+      "federated-lightweight-intrusion-detection"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWmh3YWdsRUExbEVmWVVaVGFieTFvTTI2dlEtbzhUYUpFdlE3UzJKeEdnUGxMNGZLaUFIcldzOFc3dWM2YThneDNvY3ptRGs2N2VRZkQ5QzJMU0V0bkNxdXJGVGU5am9FcjYycmxKelJmVHZfdkZsN0ptZk9FZlI1azFZVnhmZ2Fa?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.769Z",
+    "matchedSlugs": [
+      "dji-mavic-4-pro",
+      "dji-mini-5-pro"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONGhpWnRjc1RYeEZFTDBHbVRvaWtOTnZzVmxaT19Xb2ZfWC1PRkQxeVVNd19HZDllVURRV2VzdjFwbkcyS25GRGVVcEw3clJuRGJsS1o5S253c3gxZGtGSXl6anRXWTBtQndyMlZQMW5OZ1c4N3Z4LVAyR1E5dEdvczZzVlZUTTN3SXV3?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.773Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "skydio-dock-milestone"
+    ]
+  },
+  "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.120": {
+    "processedAt": "2026-08-17T19:20:34.792Z",
+    "matchedSlugs": [
+      "yolo-v8-4-120",
+      "yolo-v8-4-112"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBiZTZJZnMxVXp3V3hnTV9hVUNDLUlOZFlLZUd6b3hFQXN5RE1hM3VITENiY1NiWjByalNMQXBBS3hGSU1QLWRFN2xiaXV2UDg?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.780Z",
+    "matchedSlugs": [
+      "hoverair-versa",
+      "dronuum-computing-continuum"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1aNkxBOGNTOE9PbVF6NWtLUU1KamNYNzc0UU1odElqM0hYcUpmWDl0VlBLZm1tbEhGZ2VjY1BTbEJqSGxtS0o2WXhKaldESVp4NG1jXzRPQ0wzMlHSAWBBVV95cUxPeE5ueUtsWF9SaWxwVzJXQjBCeHNyZjFxZWVGU3JkZk9oSFdhYmhXSWphQVpqSkF6SkZQbG1qS1VkUmUxWnNJbDdTZ3hWN082a3JSaE5NNEZ0YkMzckxoVHk?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.786Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMid0FVX3lxTE15WUZwa1BYNlNJR1M5NHVwT20yMGpSZmhPcEdMM3pmeVotUmRWeE5faEJrVFR1NnVfS0RVamViWmt6UEJTYUtKWVRxZUQtemcwRkRPYXdKWjFMZVJtZWRzeFk1MHJ5VW5CcjJZRkFZbTRMRExzYVpZ?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.790Z",
+    "matchedSlugs": [
+      "computer-vision-drone",
+      "drone-news-ops"
+    ]
+  },
+  "https://oscarliang.com/motors/": {
+    "processedAt": "2026-08-17T19:20:34.799Z",
+    "matchedSlugs": [
+      "fpv-motor-selection-guide",
+      "drone-power-battery"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQREtpR0Z0WXM4dkhMQmtDSzVoc3h4cnFWVlQzS1pwR0lZNWw2ckJWekc1eWNBdnZmWENpOWFKYkRaay15cWptR2dKTzRSOXpFc1NTVWozZWp1QjYwMUdWYUZDcjNJMGtmUUo0aEZsVHh1Y1FKbTlpVTliVHdvdFRzYTZQZHh2US13b1EtbXJNSmk5ZmU3cjJzdFRsMWZucmZORUctUUhaLWtLYkVYT0FxNHV2a0NIY2h1ZXZHeEtWWmxIY0kzVnM4d180WWNQYk5kcEdSNHdvNzJmMFJIUHNfdEZZbnJFdVJGWUxQUEdFOWxTX3Mt?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.788Z",
+    "matchedSlugs": [
+      "dji-matrice-5-rumor",
+      "dji"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Oa0NpeGJnSmtfZGoxMGgxczZOdWJzVVZpNXAtTXlLVFlxMEdtUFVVZHUwLThoTGpvN0NWcWJCbjNpSzBFWlY5U2NnX0V0S015UG41Q1pOenlfaG1hN3FMOUdR0gFnQVVfeXFMUFlmdE9KUVoxV0ZVLWhDakpfZUdXVjhSd2VNRmphSkJDZm01NXVTRGprakJuOExjVzV0ektXdFpZVkhrYTVyN0kwR0RNTnBZdXpHdkdYQzQyRWhVUUNUcndyUjhPMm5hVQ?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.801Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9IeFZPMzhoUXc1VXpmN3M3MUhCZXB1bFNqSG5fVFpOTmR2ckpRZWNTaGxacjFLeHBpbjljNmJOWEVtS1dxYXBuczNMU2ZyaC1tTWRYT3ZlUm9XV2hvQmNsSHVBd01mY1k?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.802Z",
+    "matchedSlugs": [
+      "dfend-counter-drone-worldcup",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBud2wxaVZOWHZWbkRsSUx1YnFyRy11eEVQR3RNR0dQR2p3REdEcjEtRndCbzRscFRaSFZrWHJrdWRVTTd1amgxV2xSNy1rV1RGMlZNeGI5V1dTTXIzdDUyaHIxRXBiVFE?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.823Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "drone-news-hardware"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMicEFVX3lxTE5vTDlHSi16T2NRc3B5VG5YQWhMejQtUUdxUjZzNzlnZDNKcExEYnRnTHBFZ1MxcldUTVA4OG53WlZLUkltMmdhYWJCeVo4UU8zamlFRHNqdHh0Y25kZXU0Rjd3S3UxWXI1ZFFWQzEyTlY?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.818Z",
+    "matchedSlugs": [
+      "dronuum-computing-continuum",
+      "ai-knowledge-workflow"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BV1pRSzRKc0JNSDJJU0xiZlZtY1VhOWkyQmp2clFNMmJhYkJSWVlkbHh1Y2UwMGJsTWgybHFTLUpSVWN6STRyV09yWExtdkRhZWhmZ2lYOXhtNEpfeWZKdnI1RXphRkJmMGU4NFhYMDZ6NVE?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.815Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WZVFWRmpDNFNnQ09RQ09GZERzclZ5UWRkY1pPemxrWERrZVVmLWFTaGtqdWVOaklYX0N3aUI0QWpRZEkxNW9LWVZob0dPQlhlREpvbXBZUktwVDTSAWBBVV95cUxOWm9ScFlPTS1HWnFNQjFUalZvMTY3Z055Y2FjSmlXdFpQT1N2LV9BQURhM0hnQ0NldzZNam4yZ0tUb1NiWXNGX1JRSl9IbkVwVkxDSUZDOVpweHVpX1dlODU?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.824Z",
+    "matchedSlugs": [
+      "hoverair-versa",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTFByUGlSMXZ1N0ZDTXA4TlZScnhKemxpc0QxU2FuVV9yUURQVW5yMlBfeTA2MEJaUmk2Yjd2RF9wOHBEWDdxaG05Y201V2lEWGYySmFLUEd3Vk54cjR5ZElyVWpkTkt2QWttNmNoYQ?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.822Z",
+    "matchedSlugs": [
+      "drone-news-hardware",
+      "drone-news-ops"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE10SS1VMk9ETlVLVktyUm1OYU9vYjYyTzhkdThVaGJqVUhMZ2lsZTljcGhrbTgzNGlXNkg3QjlncnUxNFhwWV9tdVUtR3VSYVlHM2dSWlRqTXp4eFpicnNHbXIxcG9oYzA?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.827Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "dronuum-computing-continuum"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fSTlnd2xkSWJzZDJRMXh2R2pzbk5OQkdjYW1Ea2VjOE14eWNuWF92ZzVXSHNLZ1NvVUprcjdtS0R5RUVFU3Fid1Y3Z1QzM2VPTFk0SVduNGU1cXJDZjVOcEVMRnFWQnVjWWtrTQ?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.830Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "drone-news-regulations"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiS0FVX3lxTE93aGxUeUdrZlR4aWowOGM1endYWmR3VVJsMjVCU09GY3Y0cndVdHhMWlZkRkE3OXdJM1pVTzlHS0xNb2lSNjZCY3IwOA?oc=5": {
+    "processedAt": "2026-08-17T19:20:34.833Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "china-drone-export-controls"
+    ]
   }
 }

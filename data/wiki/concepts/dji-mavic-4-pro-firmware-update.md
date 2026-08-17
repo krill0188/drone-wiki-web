@@ -33,3 +33,4 @@ DJI Mavic 4 Pro 2026년 8월 펌웨어 업데이트 — 부드러운 비행 경�
 
 ## 📰 최근 관련 소식
 - [DJI] Golden Sand. Dark Water. One Frame. | DJI Mavic 4 Pro (youtube.com, 2026-08-15) — https://www.youtube.com/watch?v=O6rsKqpPq9U
+- DJI Mavic 4 Pro drone gets new firmware update for smoother flights (dronedj.com, Fri, 14 Au) — https://dronedj.com/2026/08/14/dji-mavic-4-drone-firmware-2/

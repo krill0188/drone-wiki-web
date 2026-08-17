@@ -41,3 +41,4 @@ contradictions: []
 - K-방산 ‘초저가 자폭드론’ 어디까지 왔나 (아시아투데이, Thu, 13 Au) — https://news.google.com/rss/articles/CBMibkFVX3lxTE4tZHB6eWp4UFpOZFVYUVNUY0dOcXFWT2lqZzc4VEdaREg4YmY5aVlOajhvMjJiWGFDaEgtYjlQT2hLWGloQnpQc2I1cjJpVjBJVGp5ZWw1MWJxeXIzQnQwRXhlSXEzS0NyLUY5Z3pB?oc=5
 - [UAV Coach] Drone Prices Are About to Jump (youtube.com, 2026-08-15) — https://www.youtube.com/watch?v=FEiY1ONxd70
 - [UAV Coach] FCC “Military Grade” Drone Ban Explained (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=TMJI78x-lyo
+- 아처, 보잉 계열사 3곳 통째로 인수…'방산 드론'까지 품는다 (디지털투데이, Tue, 11 Au) — https://news.google.com/rss/articles/CBMic0FVX3lxTE5BV1pRSzRKc0JNSDJJU0xiZlZtY1VhOWkyQmp2clFNMmJhYkJSWVlkbHh1Y2UwMGJsTWgybHFTLUpSVWN6STRyV09yWExtdkRhZWhmZ2lYOXhtNEpfeWZKdnI1RXphRkJmMGU4NFhYMDZ6NVE?oc=5

@@ -35,3 +35,6 @@ FPV 드론 모터 선택 가이드 — 사이즈, KV 등급, 프로펠러 호환
 - [[fpv-hardware]] — FPV 드론 하드웨어 동향
 - [[flight-controller-hardware]] — FC 하드웨어 가이드
 - [[drone-power-battery]] — 배터리 및 전원 시스템
+
+## 📰 최근 관련 소식
+- How to Choose FPV Drone Motors – Considerations and Best Motor Recommendations (oscarliang.com, Thu, 13 Au) — https://oscarliang.com/motors/
