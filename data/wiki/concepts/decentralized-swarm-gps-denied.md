@@ -1,15 +1,16 @@
 ---
 title: "Decentralized UAV Swarms in GPS/Communication-Denied Environments"
 created: 2026-07-30
-updated: 2026-08-11
+updated: 2026-08-19
 type: concept
 tags: [drone, swarm, datalink, comms-protocol, military, counter-uav]
-sources: []
-confidence: medium
+sources:
+  - raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md
+confidence: high
 contested: false
 contradictions: []
 domain: comms-protocol
-note: "Raw source not preserved in repo — found during 2026-08-10 provenance audit, needs recapture"
+note: "2026-08-19 재수집으로 원문(PDF) 확보, sources 필드 채움. authors: Silveria, Araujo, Nascimento, Givigi"
 ---
 
 # Decentralized UAV Swarms in GPS/Communication-Denied Environments
