@@ -84,3 +84,4 @@ AI 개인 지식관리는 자료를 많이 저장하는 일이 아니라, 원본
 - 폭염철 더 바쁜 드론…논밭 온열질환 살피고 곳곳 피해예방 방송 (매일경제 마켓, Fri, 14 Au) — https://news.google.com/rss/articles/CBMiUkFVX3lxTE5laEhNZ3ZvYW81MWVLMEN3cHVkVmhwM3ZNWWVZT1JqeWkxWlVwbzZSUFA1d3dyLUpxZGJNd1g2X2lpVjY3eUM4dVY4Qm5tdS1xWVE?oc=5
 - 0.3초 만에 레이저 '번쩍', 드론까지 출격…첨단무기 타깃은 '모기'[월드콘] - 머니투데이 (머니투데이, Fri, 14 Au) — https://news.google.com/rss/articles/CBMiaEFVX3lxTFBZMGNIUWpaOXBHdmFBcWttQ0FsWlJiQXo1cFBPZ1E0Zk5oUTZubGNkWmM3c3V0RzUza3lSQUtCWWFtcDRzZ3hWdjFqQU9KQUZFc1JaZG1QUjJvZmI5QnVuRTZqLVZZY01i0gFuQVVfeXFMUHpDamd6bUI5eVZ3NVlRQ0lnRFVXbVktdWI5ejJJMVBlbjd0ODBENEpyTzFVZ0lIeUc2UTlVUUtjWkJJRVQ2N1JFdHdTODcxcFFIbmVkUTVBVTRRbkswUGtuOENORVdZNlo1dThpU1E?oc=5
 - [핑크랩 PinkLAB] PinkLAB Band - drummer (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=OIs7R4QU8Vs
+- [핑크랩 PinkLAB] PinkLAB Band | Drummer (youtube.com, 2026-08-13) — https://www.youtube.com/watch?v=eF9S3rb5Hwk

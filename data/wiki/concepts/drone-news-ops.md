@@ -118,3 +118,5 @@ domain: ops-mission
 - 아처, 보잉 계열사 3곳 통째로 인수…'방산 드론'까지 품는다 (디지털투데이, Tue, 11 Au) — https://news.google.com/rss/articles/CBMic0FVX3lxTE5BV1pRSzRKc0JNSDJJU0xiZlZtY1VhOWkyQmp2clFNMmJhYkJSWVlkbHh1Y2UwMGJsTWgybHFTLUpSVWN6STRyV09yWExtdkRhZWhmZ2lYOXhtNEpfeWZKdnI1RXphRkJmMGU4NFhYMDZ6NVE?oc=5
 - 국토부, 30곳 지자체서 드론 실증…19개 기업엔 상용화 지원 (로봇신문, Wed, 11 Ma) — https://news.google.com/rss/articles/CBMibEFVX3lxTFByUGlSMXZ1N0ZDTXA4TlZScnhKemxpc0QxU2FuVV9yUURQVW5yMlBfeTA2MEJaUmk2Yjd2RF9wOHBEWDdxaG05Y201V2lEWGYySmFLUEd3Vk54cjR5ZElyVWpkTkt2QWttNmNoYQ?oc=5
 - 후티반군 매체 "드론으로 홍해 사우디 아람코 정유시설 타격" (연합뉴스TV, Thu, 13 Au) — https://news.google.com/rss/articles/CBMiZ0FVX3lxTE10SS1VMk9ETlVLVktyUm1OYU9vYjYyTzhkdThVaGJqVUhMZ2lsZTljcGhrbTgzNGlXNkg3QjlncnUxNFhwWV9tdVUtR3VSYVlHM2dSWlRqTXp4eFpicnNHbXIxcG9oYzA?oc=5
+- FlybyOps wants to solve the biggest headache in scaling autonomous drone fleets (dronedj.com, Thu, 13 Au) — https://dronedj.com/2026/08/13/flybyops-autonomous-bvlos-drone-software/
+- [핑크랩 PinkLAB] PinkLAB Band | Drummer (youtube.com, 2026-08-13) — https://www.youtube.com/watch?v=eF9S3rb5Hwk
