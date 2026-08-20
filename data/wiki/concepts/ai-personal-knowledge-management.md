@@ -87,3 +87,4 @@ AI 개인 지식관리는 자료를 많이 저장하는 일이 아니라, 원본
 - [핑크랩 PinkLAB] PinkLAB Band | Drummer (youtube.com, 2026-08-13) — https://www.youtube.com/watch?v=eF9S3rb5Hwk
 - 안양시, 을지연습 연계 ‘드론 복합위협’ 대비 실제훈련 실시 (경기일보, Wed, 19 Au) — https://news.google.com/rss/articles/CBMiW0FVX3lxTE9BaDdjb2tSOVlaeGpvY2lyVWsxVWVWcmtwNUo1WlRsU0NWMm83OHpDTG9saXo1UzlwcDJFMFVIV0tIazB2b2JzY3Q4WmRibkdZRXAyZEpmV1NGaUU?oc=5
 - 전차·장갑차·공중통신까지…K방산, 드론·AI 동맹 확대 (newstomato.com, Wed, 19 Au) — https://news.google.com/rss/articles/CBMiYEFVX3lxTE1acWRjVTNLQ1Q2MTJPdFlmc081eTlMWFJqc3h2UkpZVm81VUxDbFdxcXNnbWJqMTdKLXlrTHVLUkxrU1lFN0U0b3VkWU9YUGNJTlZHYlYtV0UzNExXT0x5TA?oc=5
+- 인천공항공사, 을지연습 연계 드론 테러 대응훈련 (연합뉴스, Thu, 20 Au) — https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZQnRZRldYc212N3N2ck1PcVRxU2ZqaXB0VUcwRGd1RFZXXzhJYUtMQ281am94Uk1hYVd2ckRXakM5eHJhV0p6QXpDWkhXYXVncDlIZ053OUk1bG_SAWBBVV95cUxQRXE3aGhlV1JrRzVmaUJHMUlLTnFRNWRiQnZOSzBrWWdkRm5DM3haOThpWGdoaVd4YlZEb296NUs0dUI0QjZlNGdDWmpUNlYyekU4ekJadEVaVWFNQ3F4LWM?oc=5

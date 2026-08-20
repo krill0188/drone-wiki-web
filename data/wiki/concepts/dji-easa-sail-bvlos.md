@@ -41,3 +41,6 @@ DJI의 유럽항공안전청(EASA) 특정 종류 비행 승인(SAIL)을 통한 B
 - [[drone-regulations]] — 드론 규제 개요 (FAA, EASA, 한국)
 - [[fcc-drone-regulations]] — FCC 외국 제조 드론 규제 정책
 - [[doordash-air]] — DoorDash FAA Part 135 인증 드론 배달
+
+## 📰 최근 관련 소식
+- [DJI] Level Cleared, LiDAR Included | DJI Lito X1 (youtube.com, 2026-08-19) — https://www.youtube.com/watch?v=F2JQLufbhXE

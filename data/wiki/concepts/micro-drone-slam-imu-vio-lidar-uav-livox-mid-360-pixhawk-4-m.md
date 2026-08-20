@@ -43,3 +43,4 @@ contradictions: []
 - [UAV Coach] FCC “Military Grade” Drone Ban Explained (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=TMJI78x-lyo
 - 아처, 보잉 계열사 3곳 통째로 인수…'방산 드론'까지 품는다 (디지털투데이, Tue, 11 Au) — https://news.google.com/rss/articles/CBMic0FVX3lxTE5BV1pRSzRKc0JNSDJJU0xiZlZtY1VhOWkyQmp2clFNMmJhYkJSWVlkbHh1Y2UwMGJsTWgybHFTLUpSVWN6STRyV09yWExtdkRhZWhmZ2lYOXhtNEpfeWZKdnI1RXphRkJmMGU4NFhYMDZ6NVE?oc=5
 - [Joshua Bardwell] Ukraine Fight Drone Simulator // NOT JUST A GAME (youtube.com, 2026-08-13) — https://www.youtube.com/watch?v=_3blDd5NZRM
+- Army Formations Need to Prioritize Drone Dominance (Association of the United States Army, Fri, 31 Ju) — https://news.google.com/rss/articles/CBMigwFBVV95cUxPNjhUSXNQd01IdnFMT19rX0hPbFBrMlM4N0hVRVk3SGxJbldweHAyU2xXSlRwM2RVUmFkRV9xRkZ5a2dEY3RjUXZzVEJlbjBoWFFhRXktY2FQckV6aW5pbHRPcVg4aEtNRGtzdmNwWTZSUDNSeDg0UW5ZUDNPUHdLbnVlTQ?oc=5

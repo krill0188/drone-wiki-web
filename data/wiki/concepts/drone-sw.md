@@ -33,3 +33,4 @@ domain: flight-control
 
 ## 📰 최근 관련 소식
 - Counter-UAS software upgrade demonstrated on U.S. Army air-defense system (Military Embedded Systems, Wed, 12 Au) — https://news.google.com/rss/articles/CBMivgFBVV95cUxOU2pZSUtKcGVoMWpnWnBQdjEzamRZdm9mclZqT0M3SUsxN1RyZHVDSEg4V0oteDE5Q2JDX2NOZWxBa3ZTUlAyX2dIckpuMFk4UXY0bVFySGg5b1J6Q01mRFBKNDk4akFqQkMyV2NubFZIb1VQbGFGVXlhRTdKeXRXWVJVWmhGOWFhTTFRQk5GYlFSQ2ZPRjdkN1N6ZWF4bGZfY3c2T3dqRE02QjU3UFFNSnZvZEY2cTdueGwzSW9n?oc=5
+- [멈춤보단 천천히라도] [자막][3분 자료구조 #3] 스택 (Stack) — 나중에 넣은 게 먼저 나온다 (youtube.com, 2026-08-20) — https://www.youtube.com/watch?v=aJsL2W8wPro
