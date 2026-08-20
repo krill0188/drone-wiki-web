@@ -26,9 +26,16 @@ function buildSystemPrompt(
   graphBlock: string,
   newsHits: NewsHit[]
 ): string {
-  const contextParts = sources.map(
-    (s, i) => `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}`
-  )
+  const contextParts = sources.map((s, i) => {
+    // 2026-08-20 팔란티어 온톨로지 Link 보강 — frontmatter 구조화 속성과
+    // 서브섬션 추론 체인(ontology_subsumption)을 명시적으로 노출한다.
+    // 예전엔 excerpt(본문 앞 600자)만 넘겨 "무게가 몇 그램이야?" 같은 질문에
+    // frontmatter에만 있는 값을 AI가 못 찾았다(실측 확인된 문제).
+    const propsLine = s.properties && Object.keys(s.properties).length
+      ? `\n온톨로지 속성: ${Object.entries(s.properties).map(([k, v]) => `${k}=${v}`).join(", ")}`
+      : ""
+    return `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}${propsLine}`
+  })
   const newsParts = newsHits.map(
     (n, i) => `[N${i + 1}] (${n.type}${n.region ? `/${n.region}` : ""}) ${n.title}${n.excerpt ? ` — ${n.excerpt}` : ""}`
   )
@@ -78,6 +85,9 @@ ${newsParts.join("\n") || "(관련 최신 뉴스 없음)"}
 - <recently-viewed>가 있으면 참고해 답변 흐름을 이어가되, 억지로 언급하지 말고
   자연스럽게 걸릴 때만 활용
 - 최신 동향·채용·정부사업·방산 질문이면 <latest-news>를 적극 활용
+- 문서에 "온톨로지 속성" 줄이 있으면 무게·제조사·MCU 등 수치/사실 질문에 최우선 근거로
+  활용. ontology_subsumption(예: "ComputeUnit ⊑ PhysicalEntity ⊑ Thing")은 클래스 계층
+  추론 결과다 — "이게 무슨 종류의 장치야?" 같은 분류 질문에 이 체인으로 답변
 - 핵심 개념, 작동 원리, 기술 비교, 실용 정보를 충분히 포함
 - 소제목이나 목록을 활용해 가독성 있게 구성
 - 위키 출처는 [1], 뉴스 출처는 [N1] 형식으로 인용

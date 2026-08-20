@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { spawnSync } from "child_process"
 import matter from "gray-matter"
-import { expandQueryClassTerms } from "./ontology"
+import { expandQueryClassTerms, describeOntologyClass } from "./ontology"
 
 function resolveWikiRoot() {
   const envPath = process.env.WIKI_PATH
@@ -34,6 +34,7 @@ export interface RagSource {
   excerpt: string
   score: number
   tags: string[]
+  properties?: Record<string, string>
 }
 
 interface RawDoc {
@@ -43,6 +44,36 @@ interface RawDoc {
   domain: string
   tags: string[]
   content: string
+  properties: Record<string, string>
+}
+
+// 2026-08-20 팔란티어 온톨로지 Link 보강(apply-kinetic-rules.py)으로 entities/
+// frontmatter에 추가된 구조화 속성. RAG의 excerpt는 본문(content)만 슬라이스해
+// frontmatter를 통째로 버리므로, 이 필드들이 있으면 AI Q&A/드론빌더 답변에
+// 실제로 반영되지 않는 문제가 있었다(실측: "Pixhawk 6X 무게" 질문에 AI가
+// "지식베이스에 없음"으로 답변) — 화이트리스트로 필요한 것만 골라 컨텍스트에
+// 태워 보낸다(임의 필드 노출 방지, 새 속성 추가 시 여기에만 추가하면 됨).
+const ONTOLOGY_PROPERTY_KEYS = [
+  "ontology_class", "ontology_subclass", "ontology_status",
+  "manufacturer", "weightKg", "weightG", "maxPayloadKg", "batteryWh",
+  "dimensionsMm", "mcu", "representative_model", "sensorType", "resolutionMp",
+  "imuArray", "deploymentLocation", "parameterCount", "aiModelClass",
+]
+
+function extractOntologyProperties(data: Record<string, unknown>, wikiRoot: string): Record<string, string> {
+  const props: Record<string, string> = {}
+  for (const key of ONTOLOGY_PROPERTY_KEYS) {
+    const v = data[key]
+    if (v !== undefined && v !== null && v !== "") props[key] = String(v)
+  }
+  // 서브섬션 추론: ontology_class가 있으면 class-hierarchy.json으로 조상
+  // 체인을 계산해 함께 태운다 — "이 문서=ComputeUnit"이라는 사실뿐 아니라
+  // "ComputeUnit은 PhysicalEntity의 하위개념"이라는 추론 결과까지 답변 근거로.
+  if (props.ontology_class) {
+    const chain = describeOntologyClass(props.ontology_class, wikiRoot)
+    if (chain) props.ontology_subsumption = chain
+  }
+  return props
 }
 
 // 모듈 레벨 캐시 — 서버리스 콜드스타트당 1회만 디스크를 읽는다(Phase 2).
@@ -69,6 +100,7 @@ function loadAllDocs(): RawDoc[] {
           domain: String(data.domain || ""),
           tags: Array.isArray(data.tags) ? data.tags : [],
           content,
+          properties: extractOntologyProperties(data, WIKI_ROOT),
         })
       } catch { /* skip */ }
     }
@@ -192,6 +224,7 @@ export function ragSearch(query: string, topK = 5): RagSource[] {
       excerpt: doc.content.slice(0, 600).replace(/^#[^\n]+\n/, "").trim(),
       score,
       tags: doc.tags,
+      properties: Object.keys(doc.properties).length ? doc.properties : undefined,
     }))
 }
 

@@ -29,7 +29,12 @@ function buildGroundingBlock(query: string): string {
   const sources = ragSearch(query, 6)
   const graph = graphRagSearch(query, sources.map((s) => s.slug))
   const kb = sources
-    .map((s, i) => `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}`)
+    .map((s, i) => {
+      const propsLine = s.properties && Object.keys(s.properties).length
+        ? `\n온톨로지 속성: ${Object.entries(s.properties).map(([k, v]) => `${k}=${v}`).join(", ")}`
+        : ""
+      return `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}${propsLine}`
+    })
     .join("\n\n")
   return `<knowledge-base>\n${kb || "(관련 위키 문서 없음)"}\n</knowledge-base>\n\n${graph.block}`
 }

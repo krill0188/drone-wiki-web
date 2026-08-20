@@ -54,6 +54,33 @@ export function getDescendants(className: string, hierarchy: Record<string, stri
   return result
 }
 
+/** 2026-08-20 — 서브섬션(subsumption) 추론: 클래스에서 루트(Thing)까지의
+ * 조상 체인을 반환한다(예: ComputeUnit → ["PhysicalEntity", "Thing"]).
+ * agent-workflows(justinjoy) 패턴("A ⊑ B 서브섬션 추론") 응용 — 지금까지는
+ * apply-kinetic-rules.py가 오프라인 배치로 SPARQL 조건매칭만 했는데, 이건
+ * 실시간 질의응답(RAG)에서 "이 문서가 속한 클래스와 그 상위개념"을 답변
+ * 근거로 쓸 수 있게 하는 진짜 클래스 계층 추론이다. */
+export function getAncestors(className: string, hierarchy: Record<string, string | null>): string[] {
+  const chain: string[] = []
+  let current = hierarchy[className]
+  const seen = new Set<string>([className])
+  while (current && !seen.has(current)) {
+    chain.push(current)
+    seen.add(current)
+    current = hierarchy[current]
+  }
+  return chain
+}
+
+/** RAG 문서의 ontology_class(예: "ComputeUnit")를 "ComputeUnit ⊑ PhysicalEntity ⊑ Thing"
+ * 형태의 서브섬션 체인 문자열로 변환. 클래스가 계층에 없으면 null. */
+export function describeOntologyClass(className: string, wikiRoot: string): string | null {
+  const hierarchy = loadHierarchy(wikiRoot)
+  if (!(className in hierarchy)) return null
+  const ancestors = getAncestors(className, hierarchy)
+  return [className, ...ancestors].join(" ⊑ ")
+}
+
 /** 질의에 클래스명이 (대소문자 무관) 포함돼 있으면 하위 클래스명들을 반환.
  * 매칭 없으면 빈 배열 — 억지로 확장하지 않는다. */
 export function expandQueryClassTerms(query: string, wikiRoot: string): string[] {
