@@ -209,7 +209,11 @@ export default function ChatWidget() {
                   )}
 
                   {m.role === "assistant" && meta?.sources && meta.sources.length > 0 && (
-                    <div className="px-1 flex flex-wrap gap-1">
+                    <details className="px-1">
+                      <summary className="text-[11px] font-hud text-ink-dim mb-1 cursor-pointer select-none hover:text-signal-600">
+                        🔗 출처 ({meta.sources.length})
+                      </summary>
+                      <div className="flex flex-wrap gap-1 mt-1">
                       {meta.sources.map((s) => {
                         const domainMeta = DOMAIN_META[s.domain as keyof typeof DOMAIN_META]
                         // NotebookLM 벤치마킹(2026-08-09): 인용 클릭 시 문서 맨 위가
@@ -232,7 +236,8 @@ export default function ChatWidget() {
                           </a>
                         )
                       })}
-                    </div>
+                      </div>
+                    </details>
                   )}
                 </div>
               </div>

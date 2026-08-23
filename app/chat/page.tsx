@@ -101,9 +101,11 @@ export default function ChatPage() {
                 )}
 
                 {m.role === "assistant" && meta?.sources && meta.sources.length > 0 && (
-                  <div className="px-1">
-                    <p className="text-xs text-slate-400 mb-1.5">📚 참고 문서</p>
-                    <div className="flex flex-wrap gap-1.5">
+                  <details className="px-1">
+                    <summary className="text-xs text-slate-400 mb-1.5 cursor-pointer select-none hover:text-signal-600">
+                      📚 출처 ({meta.sources.length})
+                    </summary>
+                    <div className="flex flex-wrap gap-1.5 mt-1.5">
                       {meta.sources.map((s) => {
                         const domainMeta = DOMAIN_META[s.domain as keyof typeof DOMAIN_META]
                         return (
@@ -129,7 +131,7 @@ export default function ChatPage() {
                         )
                       })}
                     </div>
-                  </div>
+                  </details>
                 )}
               </div>
             </div>
