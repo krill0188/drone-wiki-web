@@ -44,3 +44,4 @@ DJI의 유럽항공안전청(EASA) 특정 종류 비행 승인(SAIL)을 통한 B
 
 ## 📰 최근 관련 소식
 - [DJI] Level Cleared, LiDAR Included | DJI Lito X1 (youtube.com, 2026-08-19) — https://www.youtube.com/watch?v=F2JQLufbhXE
+- [DJI] What if these were yours? | DJI Lito X1 (youtube.com, 2026-08-23) — https://www.youtube.com/watch?v=Zb1sF68eUMs
