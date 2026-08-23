@@ -19,7 +19,8 @@
         "raw/articles/mavlink-xml-schema.md",
         "raw/articles/ros2-devnotes.md",
         "raw/papers/datalink/allouch2019-mavsec.md",
-        "raw/papers/datalink/koubaa2019-mavlink-survey.md"
+        "raw/papers/datalink/koubaa2019-mavlink-survey.md",
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
       ]
     },
     {
@@ -55,7 +56,8 @@
         "raw/papers/datalink/koubaa2019-mavlink-survey.md",
         "raw/papers/drone-sw/gupta2026-bcnmpc.md",
         "raw/papers/swarm/cai2026-progress-aware-docking.md",
-        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md"
+        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
       ]
     },
     {
@@ -89,7 +91,10 @@
         "raw/articles/ros2-devnotes.md",
         "raw/papers/datalink/allouch2019-mavsec.md",
         "raw/papers/datalink/koubaa2019-mavlink-survey.md",
-        "raw/papers/drone-sw/jacinto2024-pegasus-simulator.md"
+        "raw/papers/drone-sw/jacinto2024-pegasus-simulator.md",
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
       ]
     },
     {
@@ -1175,7 +1180,8 @@
         "raw/articles/px4-basic-concepts.md",
         "raw/articles/px4-flight-modes-dev.md",
         "raw/articles/px4-hardware-overview.md",
-        "raw/articles/px4-uorb-messaging.md"
+        "raw/articles/px4-uorb-messaging.md",
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
       ]
     },
     {
@@ -2827,7 +2833,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/articles/px4-basic-concepts.md",
-        "raw/articles/px4-hardware-overview.md"
+        "raw/articles/px4-hardware-overview.md",
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
       ]
     },
     {
@@ -2925,7 +2932,13 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/articles/px4-basic-concepts.md",
-        "raw/papers/drone-ai/radwan2024-uav-slam-gpsdenied.md"
+        "raw/papers/drone-ai/radwan2024-uav-slam-gpsdenied.md",
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md",
+        "raw/papers/datalink/ris-secure-uav-communications.md",
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md",
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md",
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
       ]
     },
     {
@@ -5243,7 +5256,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/swarm/li2025-airswarm.md"
+        "raw/papers/swarm/li2025-airswarm.md",
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
       ]
     },
     {
@@ -5580,6 +5595,2074 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md"
+      ]
+    },
+    {
+      "id": "Fpga",
+      "name": "Fpga",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Logistic Map",
+      "name": "Logistic Map",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Rf Channel",
+      "name": "Rf Channel",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Chaos",
+      "name": "Chaos",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Variable Feedback Controller",
+      "name": "Variable Feedback Controller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Correlation Summation",
+      "name": "Correlation Summation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Aerial Base Station",
+      "name": "Aerial Base Station",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Ground Base Station",
+      "name": "Ground Base Station",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Nwachioma, Christian",
+      "name": "Nwachioma, Christian",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Ezuma, Martins",
+      "name": "Ezuma, Martins",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Medaiyese, Olusiji . O.",
+      "name": "Medaiyese, Olusiji . O.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ]
+    },
+    {
+      "id": "Ris",
+      "name": "Ris",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Tdma",
+      "name": "Tdma",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Csi",
+      "name": "Csi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Ao",
+      "name": "Ao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Sca",
+      "name": "Sca",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Sdr",
+      "name": "Sdr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Li Sixian",
+      "name": "Li Sixian",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Duo Bin",
+      "name": "Duo Bin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Marco Di Renzo",
+      "name": "Marco Di Renzo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Tao Meixia",
+      "name": "Tao Meixia",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Yuan Xiaojun",
+      "name": "Yuan Xiaojun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ]
+    },
+    {
+      "id": "Nc2S",
+      "name": "Nc2S",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Ground Control Stations",
+      "name": "Ground Control Stations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Uxvs",
+      "name": "Uxvs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Transport Layer Security",
+      "name": "Transport Layer Security",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Mtls",
+      "name": "Mtls",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Ecdsa",
+      "name": "Ecdsa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Ecdh",
+      "name": "Ecdh",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Hmac",
+      "name": "Hmac",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Rohde&Schwarz Hr-5000H",
+      "name": "Rohde&Schwarz Hr-5000H",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Wi-Fi",
+      "name": "Wi-Fi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "5G",
+      "name": "5G",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ]
+    },
+    {
+      "id": "Elliptic Curve Digital Signature Algorithm",
+      "name": "Elliptic Curve Digital Signature Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Elliptic Curve Diffie-Hellman",
+      "name": "Elliptic Curve Diffie-Hellman",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Hash-Based Message Authentication Codes",
+      "name": "Hash-Based Message Authentication Codes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "name": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Zoomdet",
+      "name": "Zoomdet",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Uav Object Detection",
+      "name": "Uav Object Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md",
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Visdrone",
+      "name": "Visdrone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Uavdt",
+      "name": "Uavdt",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Seadronessee",
+      "name": "Seadronessee",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Faster R-Cnn",
+      "name": "Faster R-Cnn",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Bounding Box Transformation",
+      "name": "Bounding Box Transformation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Non-Uniform Zooming",
+      "name": "Non-Uniform Zooming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Offset Prediction",
+      "name": "Offset Prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Corner-Aligned Bounding Box Transformation",
+      "name": "Corner-Aligned Bounding Box Transformation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Wang, Tao",
+      "name": "Wang, Tao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Lin, Chenyu",
+      "name": "Lin, Chenyu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Tang, Chenwei",
+      "name": "Tang, Chenwei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Zhou, Jizhe",
+      "name": "Zhou, Jizhe",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Xiong, Deng",
+      "name": "Xiong, Deng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Li, Jianan",
+      "name": "Li, Jianan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Zhao, Jian",
+      "name": "Zhao, Jian",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Lv, Jiancheng",
+      "name": "Lv, Jiancheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Pt-Detr",
+      "name": "Pt-Detr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Rt-Detr",
+      "name": "Rt-Detr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md",
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Partially-Aware Detail Focus",
+      "name": "Partially-Aware Detail Focus",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Padf Module",
+      "name": "Padf Module",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Median-Frequency Feature Fusion",
+      "name": "Median-Frequency Feature Fusion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Mfff Module",
+      "name": "Mfff Module",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Focaler-Siou",
+      "name": "Focaler-Siou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Visdrone2019",
+      "name": "Visdrone2019",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Huo, Bingcong",
+      "name": "Huo, Bingcong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ]
+    },
+    {
+      "id": "Wang, Zhiming",
+      "name": "Wang, Zhiming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ]
+    },
+    {
+      "id": "Bingcong Huo",
+      "name": "Bingcong Huo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Zhiming Wang",
+      "name": "Zhiming Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ]
+    },
+    {
+      "id": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "name": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Rgb",
+      "name": "Rgb",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Thermal Lwir",
+      "name": "Thermal Lwir",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Event Camera",
+      "name": "Event Camera",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Vision Transformer",
+      "name": "Vision Transformer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Modality-Aware Gated Exchange",
+      "name": "Modality-Aware Gated Exchange",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Mage",
+      "name": "Mage",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Bidirectional Token Exchange",
+      "name": "Bidirectional Token Exchange",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Bite",
+      "name": "Bite",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Feature Pyramid",
+      "name": "Feature Pyramid",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Two-Stage Detector",
+      "name": "Two-Stage Detector",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Cssa",
+      "name": "Cssa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Gaff",
+      "name": "Gaff",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Iaboni, Craig",
+      "name": "Iaboni, Craig",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Abichandani, Pramod",
+      "name": "Abichandani, Pramod",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ]
+    },
+    {
+      "id": "Uav-Detr",
+      "name": "Uav-Detr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Detr",
+      "name": "Detr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Wtconv",
+      "name": "Wtconv",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Sliding Window Self-Attention",
+      "name": "Sliding Window Self-Attention",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Swsa-Ifi",
+      "name": "Swsa-Ifi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Efficient Cross-Scale Feature Recalibration And Fusion Network",
+      "name": "Efficient Cross-Scale Feature Recalibration And Fusion Network",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Ecfrfn",
+      "name": "Ecfrfn",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Inner-Ciou",
+      "name": "Inner-Ciou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Nwd Loss",
+      "name": "Nwd Loss",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Dut-Anti-Uav",
+      "name": "Dut-Anti-Uav",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Jun Yang",
+      "name": "Jun Yang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Dong Wang",
+      "name": "Dong Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Hongxu Yin",
+      "name": "Hongxu Yin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Hongpeng Li",
+      "name": "Hongpeng Li",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Jianxiong Yu",
+      "name": "Jianxiong Yu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ]
+    },
+    {
+      "id": "Unmanned Aerial Vehicle",
+      "name": "Unmanned Aerial Vehicle",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Ai",
+      "name": "Ai",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Artificial Intelligence",
+      "name": "Artificial Intelligence",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Multi Agent Reinforcement Learning",
+      "name": "Multi Agent Reinforcement Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Marl",
+      "name": "Marl",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Deep Reinforcement Learning",
+      "name": "Deep Reinforcement Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Metaheuristic",
+      "name": "Metaheuristic",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Swarm Intelligence",
+      "name": "Swarm Intelligence",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Large Language Model",
+      "name": "Large Language Model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Generative Ai",
+      "name": "Generative Ai",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Centralized Training With Decentralized Execution",
+      "name": "Centralized Training With Decentralized Execution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Ctde",
+      "name": "Ctde",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Federated Learning",
+      "name": "Federated Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Centralized Control",
+      "name": "Centralized Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Decentralized Execution",
+      "name": "Decentralized Execution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Semi-Decentralized Architecture",
+      "name": "Semi-Decentralized Architecture",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Fully Decentralized Architecture",
+      "name": "Fully Decentralized Architecture",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Multi-Agent System",
+      "name": "Multi-Agent System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Autonomous Collaboration",
+      "name": "Autonomous Collaboration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Sungkyunkwan University",
+      "name": "Sungkyunkwan University",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Kang Gu-Hyun",
+      "name": "Kang Gu-Hyun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ]
+    },
+    {
+      "id": "Tao Wang",
+      "name": "Tao Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Chenyu Lin",
+      "name": "Chenyu Lin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Chenwei Tang",
+      "name": "Chenwei Tang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Jizhe Zhou",
+      "name": "Jizhe Zhou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Deng Xiong",
+      "name": "Deng Xiong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Jianan Li",
+      "name": "Jianan Li",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Jian Zhao",
+      "name": "Jian Zhao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Jiancheng Lv",
+      "name": "Jiancheng Lv",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Aeroeval",
+      "name": "Aeroeval",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Multidisciplinary Design Optimization",
+      "name": "Multidisciplinary Design Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Mdo",
+      "name": "Mdo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Maximum Takeoff Weight",
+      "name": "Maximum Takeoff Weight",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Mtow",
+      "name": "Mtow",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Mean Absolute Percentage Error",
+      "name": "Mean Absolute Percentage Error",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Mape",
+      "name": "Mape",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Rmse",
+      "name": "Rmse",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Commercial Off-The-Shelf",
+      "name": "Commercial Off-The-Shelf",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Multirotor Uav",
+      "name": "Multirotor Uav",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Akshay Gupta Burela",
+      "name": "Akshay Gupta Burela",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ]
+    },
+    {
+      "id": "P. B. Sujit",
+      "name": "P. B. Sujit",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ]
+    },
+    {
+      "id": "Burela, Akshay Gupta",
+      "name": "Burela, Akshay Gupta",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Sujit, P. B.",
+      "name": "Sujit, P. B.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ]
+    },
+    {
+      "id": "Dji",
+      "name": "Dji",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Android",
+      "name": "Android",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Remote Control",
+      "name": "Remote Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Ground Control Station",
+      "name": "Ground Control Station",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "State Estimation",
+      "name": "State Estimation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Obstacle Avoidance",
+      "name": "Obstacle Avoidance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "3D Environment Model",
+      "name": "3D Environment Model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Autonomous Flight",
+      "name": "Autonomous Flight",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Search And Rescue",
+      "name": "Search And Rescue",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ]
+    },
+    {
+      "id": "Tactical Commanders",
+      "name": "Tactical Commanders",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "5G&Beyond",
+      "name": "5G&Beyond",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "T. Rebolo",
+      "name": "T. Rebolo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "A. Grilo",
+      "name": "A. Grilo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "C. Ribeiro",
+      "name": "C. Ribeiro",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ]
+    },
+    {
+      "id": "Sparc-Nart",
+      "name": "Sparc-Nart",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Nart",
+      "name": "Nart",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Path Planning",
+      "name": "Path Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Wireless Links",
+      "name": "Wireless Links",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Decentralised Decision-Making",
+      "name": "Decentralised Decision-Making",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Cooperative Behaviours",
+      "name": "Cooperative Behaviours",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Mission Planning",
+      "name": "Mission Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Exploration Missions",
+      "name": "Exploration Missions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Radio Technology",
+      "name": "Radio Technology",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Soft-Motion Constraints",
+      "name": "Soft-Motion Constraints",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Value Of Movement",
+      "name": "Value Of Movement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Ground Sensing Coverage",
+      "name": "Ground Sensing Coverage",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Conceição, Maria",
+      "name": "Conceição, Maria",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Grilo, António",
+      "name": "Grilo, António",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Basiri, Meysam",
+      "name": "Basiri, Meysam",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
       ]
     }
   ],
@@ -10675,6 +12758,1383 @@
       "type": "PUBLISHED_IN",
       "evidence": [
         "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Fpga",
+      "type": "IMPLEMENTED_ON",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Rf Channel",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chaos",
+      "target": "Logistic Map",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Logistic Map",
+      "target": "Uav",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Variable Feedback Controller",
+      "target": "Uav",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aerial Base Station",
+      "target": "Ground Base Station",
+      "type": "COMMUNICATES_WITH",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Correlation Summation",
+      "target": "Uav",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nwachioma, Christian",
+      "target": "Fpga Prototyping Of Synchronized Chaotic Map For Uav Secure Communication",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ezuma, Martins",
+      "target": "Fpga Prototyping Of Synchronized Chaotic Map For Uav Secure Communication",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Medaiyese, Olusiji . O.",
+      "target": "Fpga Prototyping Of Synchronized Chaotic Map For Uav Secure Communication",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/fpga-prototyping-of-synchronized-chaotic-map-for-uav-secure-communication.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ris",
+      "target": "Uav",
+      "type": "ASSISTS",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tdma",
+      "target": "Uav",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Csi",
+      "target": "Uav",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ao",
+      "target": "Uav",
+      "type": "OPTIMIZATION_METHOD",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sca",
+      "target": "Ao",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sdr",
+      "target": "Ao",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Li Sixian",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Duo Bin",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Marco Di Renzo",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tao Meixia",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yuan Xiaojun",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/ris-secure-uav-communications.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Mtls",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Ecdsa",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Ecdh",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Hmac",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Uxvs",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Ground Control Stations",
+      "type": "MANAGES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uxvs",
+      "target": "Mavlink",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Rohde&Schwarz Hr-5000H",
+      "type": "TESTED_ON",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Wi-Fi",
+      "type": "TESTED_ON",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtls",
+      "target": "Ecdsa",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtls",
+      "target": "Ecdh",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zoomdet",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zoomdet",
+      "target": "Faster R-Cnn",
+      "type": "COMPATIBLE_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zoomdet",
+      "target": "Visdrone",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zoomdet",
+      "target": "Uavdt",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zoomdet",
+      "target": "Seadronessee",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "target": "Offset Prediction",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "target": "Corner-Aligned Bounding Box Transformation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "target": "Non-Uniform Zooming",
+      "type": "APPLIES",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wang, Tao",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lin, Chenyu",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tang, Chenwei",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhou, Jizhe",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xiong, Deng",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Li, Jianan",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhao, Jian",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lv, Jiancheng",
+      "target": "Adaptive Image Zoom-In With Bounding Box Transformation For Uav Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pt-Detr",
+      "target": "Rt-Detr",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pt-Detr",
+      "target": "Padf Module",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pt-Detr",
+      "target": "Mfff Module",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pt-Detr",
+      "target": "Focaler-Siou",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Padf Module",
+      "target": "Partially-Aware Detail Focus",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mfff Module",
+      "target": "Median-Frequency Feature Fusion",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pt-Detr",
+      "target": "Uav Object Detection",
+      "type": "DESIGNED_FOR",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pt-Detr",
+      "target": "Visdrone2019",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Huo, Bingcong",
+      "target": "Pt-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wang, Zhiming",
+      "target": "Pt-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bingcong Huo",
+      "target": "Pt-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhiming Wang",
+      "target": "Pt-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Rgb",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Thermal Lwir",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Event Camera",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Vision Transformer",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Mage",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Bite",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Feature Pyramid",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Two-Stage Detector",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Cssa",
+      "type": "COMPARES_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Gaff",
+      "type": "COMPARES_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Iaboni, Craig",
+      "target": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Abichandani, Pramod",
+      "target": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tri-Modal Fusion Transformers For Uav-Based Object Detection",
+      "target": "Uav Object Detection",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Detr",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Wtconv",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Swsa-Ifi",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Ecfrfn",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Inner-Ciou",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Nwd Loss",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Rt-Detr",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Detr",
+      "target": "Dut-Anti-Uav",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jun Yang",
+      "target": "Uav-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dong Wang",
+      "target": "Uav-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hongxu Yin",
+      "target": "Uav-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hongpeng Li",
+      "target": "Uav-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jianxiong Yu",
+      "target": "Uav-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Unmanned Aerial Vehicle",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ai",
+      "target": "Artificial Intelligence",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Marl",
+      "target": "Multi Agent Reinforcement Learning",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ctde",
+      "target": "Centralized Training With Decentralized Execution",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Multi-Agent System",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi Agent Reinforcement Learning",
+      "target": "Ai",
+      "type": "TYPE_OF",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Deep Reinforcement Learning",
+      "target": "Ai",
+      "type": "TYPE_OF",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarm Intelligence",
+      "target": "Metaheuristic",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Large Language Model",
+      "target": "Ai",
+      "type": "TYPE_OF",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Generative Ai",
+      "target": "Ai",
+      "type": "TYPE_OF",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Centralized Training With Decentralized Execution",
+      "target": "Semi-Decentralized Architecture",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Federated Learning",
+      "target": "Fully Decentralized Architecture",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kang Gu-Hyun",
+      "target": "Sungkyunkwan University",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Autonomous Collaboration",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zoomdet",
+      "target": "Uav",
+      "type": "DESIGNED_FOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tao Wang",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chenyu Lin",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chenwei Tang",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jizhe Zhou",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Deng Xiong",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jianan Li",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jian Zhao",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jiancheng Lv",
+      "target": "Zoomdet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aeroeval",
+      "target": "Multidisciplinary Design Optimization",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aeroeval",
+      "target": "Multirotor Uav",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aeroeval",
+      "target": "Cots",
+      "type": "MAPS_TO",
+      "evidence": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aeroeval",
+      "target": "Maximum Takeoff Weight",
+      "type": "PREDICTS",
+      "evidence": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Akshay Gupta Burela",
+      "target": "Aeroeval",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "P. B. Sujit",
+      "target": "Aeroeval",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mdo",
+      "target": "Multidisciplinary Design Optimization",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aeroeval",
+      "target": "Mtow",
+      "type": "PREDICTS",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtow",
+      "target": "Maximum Takeoff Weight",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mape",
+      "target": "Mean Absolute Percentage Error",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cots",
+      "target": "Commercial Off-The-Shelf",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Burela, Akshay Gupta",
+      "target": "Aeroeval",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sujit, P. B.",
+      "target": "Aeroeval",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dji",
+      "target": "Uav",
+      "type": "MANUFACTURES",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Android",
+      "target": "Remote Control",
+      "type": "RUNS_ON",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "State Estimation",
+      "target": "Autonomous Flight",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Obstacle Avoidance",
+      "target": "Autonomous Flight",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Control Station",
+      "target": "Uav",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Autonomous Flight",
+      "target": "Search And Rescue",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3D Environment Model",
+      "target": "Ground Control Station",
+      "type": "GENERATED_BY",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gnss",
+      "target": "Autonomous Flight",
+      "type": "ALTERNATIVE_TO",
+      "evidence": [
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Ground Control Stations",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nc2S",
+      "target": "Tactical Commanders",
+      "type": "MANAGES",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavlink",
+      "target": "Uxvs",
+      "type": "USED_BY",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rohde&Schwarz Hr-5000H",
+      "target": "Nc2S",
+      "type": "TESTED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wi-Fi",
+      "target": "Nc2S",
+      "type": "TESTED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "5G&Beyond",
+      "target": "Nc2S",
+      "type": "TESTED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "T. Rebolo",
+      "target": "Nc2S",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "A. Grilo",
+      "target": "Nc2S",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "C. Ribeiro",
+      "target": "Nc2S",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Nart",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nart",
+      "target": "Uav",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Path Planning",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nart",
+      "target": "Wireless Links",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Exploration Missions",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Cooperative Behaviours",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Decentralised Decision-Making",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Radio Technology",
+      "type": "CONSIDERS",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Soft-Motion Constraints",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Value Of Movement",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparc-Nart",
+      "target": "Ground Sensing Coverage",
+      "type": "DEMONSTRATES",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Conceição, Maria",
+      "target": "Sparc-Nart",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Grilo, António",
+      "target": "Sparc-Nart",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Basiri, Meysam",
+      "target": "Sparc-Nart",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
       ],
       "confidence": "unverified"
     }
