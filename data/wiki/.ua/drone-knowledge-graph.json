@@ -2123,7 +2123,7 @@
       "updated": "2026-08-01",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "AIModel"
+      "ontologyClass": "PerceptionModel"
     },
     {
       "id": "drone-first-responder-dfr",
