@@ -50,3 +50,7 @@ Recent developments in thermal imaging drones for wildfire monitoring and counte
 ## Source
 
 ^[inbox/fetch-2026-08-24-rss-dronelife.md]
+
+## 📰 최근 관련 소식
+- United Utilities Uses Thermal Drones to Find Hidden Moorland Fire Hotspots (dronelife.com, Thu, 20 Au) — https://dronelife.com/2026/08/20/thermal-drones-wildfire-monitoring/
+- Inside the Counter-UAS Response to Drone Flights Over Spokane Wildfires (dronelife.com, Thu, 20 Au) — https://dronelife.com/2026/08/20/spokane-wildfire-drones-firefighting-aircraft/

@@ -51,3 +51,4 @@ Kang Yan et al., "Curriculum-Guided Heterogeneous Multi-Agent Intelligence for M
 
 ## 📰 최근 관련 소식
 - [freeCodeCamp.org] System Design for AI Agents – Building a Multi-Agent PR Reviewer (youtube.com, 2026-08-14) — https://www.youtube.com/watch?v=iqRcGCah0Kw
+- UNet: A Generic and Reliable Multi-UAV Communication and Networking Architecture for Heterogeneous Applications (arxiv.org, 2024-11-05) — http://arxiv.org/abs/2411.03048v2

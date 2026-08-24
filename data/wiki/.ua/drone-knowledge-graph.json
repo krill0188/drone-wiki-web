@@ -4441,6 +4441,423 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "aero-llm-framework",
+      "name": "Aero-LLM: Distributed Framework for Secure UAV Communication",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "ai-agent",
+        "datalink",
+        "security"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "aitester-uas-testing",
+      "name": "AITester: Automated System-Level Testing for UAS",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "testing",
+        "automation",
+        "px4",
+        "ardupilot"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "codaf-multimodal-detection",
+      "name": "CoDAF: Cross-modal Offset-guided Dynamic Alignment and Fusion",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "computer-vision",
+        "multimodal",
+        "yolo"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "csi-jamming-attack-detection-uav",
+      "name": "Channel State Information Analysis for Jamming Attack Detection in UAV Networks",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "security",
+        "jamming",
+        "csi",
+        "wireless"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dge-yolo-uav-detection",
+      "name": "DGE-YOLO: Dual-Branch Gathering and Attention for UAV Detection",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "computer-vision",
+        "yolo",
+        "multimodal"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "dji-mavic-4-pro-features",
+      "name": "DJI Mavic 4 Pro Camera and Lito X1 ActiveTrack",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "dji",
+        "mavic-4-pro",
+        "camera",
+        "activetrack"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "fpv-battery-maintenance",
+      "name": "FPV Drone Battery Maintenance and ND Filters",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "fpv",
+        "battery",
+        "lipo",
+        "camera"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "holybro-x650-autonomous-mission",
+      "name": "HolyBro X650 Autonomous Mission Planning with ArduPilot",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "ardupilot",
+        "holybro",
+        "mission-planning",
+        "pixhawk"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "mavshield-mavlink-security-cipher",
+      "name": "MAVShield: Novel Cipher for Enhancing MAVLink Security",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "mavlink",
+        "security",
+        "cryptography"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "mtcnet-multimodal-concealment-uav",
+      "name": "MTCNet: Multimodal Time-Sensitive Target Fast Concealment Network for UAV Aerial Imagery",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "computer-vision",
+        "multimodal",
+        "concealment"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "multi-uav-wind-farm-inspection",
+      "name": "Time-Constrained Multi-UAV Collaborative Inspection for Offshore Wind Farms",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "multi-uav",
+        "wind-farm",
+        "inspection",
+        "collaborative"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "physical-adversarial-patch-drone-detection",
+      "name": "Physical Adversarial Patch Attacks on Drone Object Detection: Digital-Physical Domain Gap Analysis",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "adversarial-ml",
+        "security",
+        "computer-vision"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "qgroundcontrol-v5-1-3",
+      "name": "QGroundControl v5.1.3 Release Notes",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "qgroundcontrol",
+        "mavlink"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "rmworld-radio-world-models-uav",
+      "name": "RMWorld: Task-Aware Radio World Models for Multi-UAV Communication Control",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "radio-world-models",
+        "multi-uav",
+        "reinforcement-learning"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "rt-detr-plus-uav-detection",
+      "name": "RT-DETR++ for UAV Object Detection",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "computer-vision",
+        "detr",
+        "transformer"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "skydio-blue-uas-cleared",
+      "name": "Skydio Blue UAS Cleared List Update and Revenue",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "skydio",
+        "blue-uas",
+        "defense",
+        "regulations"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "thermal-drone-wildfire-monitoring",
+      "name": "Thermal Drone Wildfire Monitoring and C-UAS Response",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "thermal",
+        "cuas",
+        "wildfire",
+        "public-safety"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "uav-mining-digital-twin",
+      "name": "UAV Object Detection for Mining Industrial Metaverse",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "lidar",
+        "digital-twin",
+        "mining",
+        "ops-mission"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "uav-resilience-stealthy-attacks",
+      "name": "UAV Resilience Against Stealthy Attacks",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "security",
+        "sel4",
+        "runtime-monitoring"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "uavd-mamba-multimodal-detection",
+      "name": "UAVD-Mamba: Deformable Token Fusion Vision Mamba for Multimodal UAV Detection",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "computer-vision",
+        "mamba",
+        "multimodal"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "unet-multi-uav-networking",
+      "name": "UNet: Generic Multi-UAV Communication and Networking Architecture",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "gcs-software",
+        "datalink",
+        "swarm",
+        "networking"
+      ],
+      "updated": "2026-08-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "wave-detr-multimodal-drone-detector",
+      "name": "WAVE-DETR: Multi-Modal Visible and Acoustic Real-Life Drone Detector",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "computer-vision",
+        "acoustic",
+        "multimodal",
+        "detr"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "xai-uav-relay-6g-terahertz",
+      "name": "XAI-Guided Optimizer Distillation for Real-Time UAV Relay Positioning in Terahertz 6G Networks",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "6g",
+        "terahertz",
+        "xai",
+        "relay"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "yolo-v8-4-126",
+      "name": "YOLO v8.4.126 Release Notes",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "yolo",
+        "computer-vision"
+      ],
+      "updated": "2026-08-23",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     }
   ],
   "edges": [
@@ -16220,6 +16637,771 @@
       "type": "related",
       "evidence": [
         "raw/papers/ai-autonomy/zoomdet-adaptive-image-zoom-uav-detection.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "aero-llm-framework",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-aero-llm-a-distributed-framework-for-secure-uav-communicatio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aero-llm-framework",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-aero-llm-a-distributed-framework-for-secure-uav-communicatio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aero-llm-framework",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-aero-llm-a-distributed-framework-for-secure-uav-communicatio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aero-llm-framework",
+      "target": "px4-flight-stack",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-aero-llm-a-distributed-framework-for-secure-uav-communicatio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aitester-uas-testing",
+      "target": "px4-flight-stack",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-automated-system-level-testing-of-unmanned-aerial-systems.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aitester-uas-testing",
+      "target": "ardupilot",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-automated-system-level-testing-of-unmanned-aerial-systems.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aitester-uas-testing",
+      "target": "drone-simulation",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-automated-system-level-testing-of-unmanned-aerial-systems.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "aitester-uas-testing",
+      "target": "ground-control-station",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-automated-system-level-testing-of-unmanned-aerial-systems.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "codaf-multimodal-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-cross-modal-offset-guided-dynamic-alignment-and-fusion-for-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "codaf-multimodal-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-cross-modal-offset-guided-dynamic-alignment-and-fusion-for-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "codaf-multimodal-detection",
+      "target": "rgb-ir-fusion-uav-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-cross-modal-offset-guided-dynamic-alignment-and-fusion-for-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "codaf-multimodal-detection",
+      "target": "uavd-mamba-multimodal-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-cross-modal-offset-guided-dynamic-alignment-and-fusion-for-w.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "csi-jamming-attack-detection-uav",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-channel-state-information-analysis-for-jamming-attack-detect.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "csi-jamming-attack-detection-uav",
+      "target": "nc2s-secure-c3-system",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-channel-state-information-analysis-for-jamming-attack-detect.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "csi-jamming-attack-detection-uav",
+      "target": "ris-secure-uav-communications",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-channel-state-information-analysis-for-jamming-attack-detect.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "dge-yolo-uav-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-dge-yolo-dual-branch-gathering-and-attention-for-accurate-ua.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dge-yolo-uav-detection",
+      "target": "yolo-v8-4-126",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-dge-yolo-dual-branch-gathering-and-attention-for-accurate-ua.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dge-yolo-uav-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-dge-yolo-dual-branch-gathering-and-attention-for-accurate-ua.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dge-yolo-uav-detection",
+      "target": "codaf-multimodal-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-dge-yolo-dual-branch-gathering-and-attention-for-accurate-ua.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mavic-4-pro-features",
+      "target": "dji-mavic-4-pro",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-from-island-to-street-dji-mavic-4-pro.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mavic-4-pro-features",
+      "target": "dji",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-from-island-to-street-dji-mavic-4-pro.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mavic-4-pro-features",
+      "target": "dji-enterprise",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-from-island-to-street-dji-mavic-4-pro.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji-mavic-4-pro-features",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-from-island-to-street-dji-mavic-4-pro.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fpv-battery-maintenance",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fpv-battery-maintenance",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fpv-battery-maintenance",
+      "target": "drone-payload-systems",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fpv-battery-maintenance",
+      "target": "hglrc-talon-cinewhoop",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "holybro-x650-autonomous-mission",
+      "target": "ardupilot",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-how-to-plan-and-fly-an-autonomous-mission-holybro-x650-build.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "holybro-x650-autonomous-mission",
+      "target": "pixhawk",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-how-to-plan-and-fly-an-autonomous-mission-holybro-x650-build.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "holybro-x650-autonomous-mission",
+      "target": "mission-planning",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-how-to-plan-and-fly-an-autonomous-mission-holybro-x650-build.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "holybro-x650-autonomous-mission",
+      "target": "mission-planner",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-how-to-plan-and-fly-an-autonomous-mission-holybro-x650-build.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "holybro-x650-autonomous-mission",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-yt-how-to-plan-and-fly-an-autonomous-mission-holybro-x650-build.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavshield-mavlink-security-cipher",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-a-novel-cipher-for-enhancing-mavlink-security-design-securit.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavshield-mavlink-security-cipher",
+      "target": "mavlink2-security",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-a-novel-cipher-for-enhancing-mavlink-security-design-securit.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavshield-mavlink-security-cipher",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-a-novel-cipher-for-enhancing-mavlink-security-design-securit.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mtcnet-multimodal-concealment-uav",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-mtcnet-multimodal-time-sensitive-target-fast-concealment-net.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mtcnet-multimodal-concealment-uav",
+      "target": "uavd-mamba-multimodal-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-mtcnet-multimodal-time-sensitive-target-fast-concealment-net.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mtcnet-multimodal-concealment-uav",
+      "target": "wave-detr-multimodal-drone-detector",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-mtcnet-multimodal-time-sensitive-target-fast-concealment-net.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multi-uav-wind-farm-inspection",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-time-constrained-multi-uav-collaborative-inspection-for-offs.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multi-uav-wind-farm-inspection",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-time-constrained-multi-uav-collaborative-inspection-for-offs.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multi-uav-wind-farm-inspection",
+      "target": "perceptual-robotics",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-time-constrained-multi-uav-collaborative-inspection-for-offs.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "physical-adversarial-patch-drone-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-kci-드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "physical-adversarial-patch-drone-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-kci-드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "physical-adversarial-patch-drone-detection",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-kci-드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-3",
+      "target": "qgroundcontrol",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-3",
+      "target": "ground-control-station",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-3",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rmworld-radio-world-models-uav",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-rmworld-task-aware-radio-world-models-with-value-of-informat.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rmworld-radio-world-models-uav",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-rmworld-task-aware-radio-world-models-with-value-of-informat.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rmworld-radio-world-models-uav",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-rmworld-task-aware-radio-world-models-with-value-of-informat.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rt-detr-plus-uav-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rt-detr-plus-uav-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "rt-detr-plus-uav-detection",
+      "target": "pt-detr-small-target-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio-blue-uas-cleared",
+      "target": "skydio",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-skydio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skydio-blue-uas-cleared",
+      "target": "skydio-dock-milestone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-skydio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skydio-blue-uas-cleared",
+      "target": "skydio-centralsquare-dfr-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-skydio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skydio-blue-uas-cleared",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-skydio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "skydio-blue-uas-cleared",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-skydio.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "thermal-drone-wildfire-monitoring",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "thermal-drone-wildfire-monitoring",
+      "target": "dfend-counter-drone-worldcup",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "thermal-drone-wildfire-monitoring",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "thermal-drone-wildfire-monitoring",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-mining-digital-twin",
+      "target": "digital-twin-intent-drone-networks",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-mining-digital-twin",
+      "target": "gnn-uav-anomaly-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-mining-digital-twin",
+      "target": "uav-multispectral-glint-correction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-mining-digital-twin",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-resilience-stealthy-attacks",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-resilience-stealthy-attacks",
+      "target": "mavlink2-security",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-resilience-stealthy-attacks",
+      "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uavd-mamba-multimodal-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-uavd-mamba-deformable-token-fusion-vision-mamba-for-multimod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uavd-mamba-multimodal-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-uavd-mamba-deformable-token-fusion-vision-mamba-for-multimod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uavd-mamba-multimodal-detection",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-uavd-mamba-deformable-token-fusion-vision-mamba-for-multimod.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "unet-multi-uav-networking",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-unet-a-generic-and-reliable-multi-uav-communication-and-netw.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "unet-multi-uav-networking",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-unet-a-generic-and-reliable-multi-uav-communication-and-netw.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "unet-multi-uav-networking",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-unet-a-generic-and-reliable-multi-uav-communication-and-netw.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "unet-multi-uav-networking",
+      "target": "ground-control-station",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-unet-a-generic-and-reliable-multi-uav-communication-and-netw.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "wave-detr-multimodal-drone-detector",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-wave-detr-multi-modal-visible-and-acoustic-real-life-drone-d.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "wave-detr-multimodal-drone-detector",
+      "target": "rt-detr-plus-uav-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-wave-detr-multi-modal-visible-and-acoustic-real-life-drone-d.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "wave-detr-multimodal-drone-detector",
+      "target": "uav-detr-anti-drone-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-arxiv-wave-detr-multi-modal-visible-and-acoustic-real-life-drone-d.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "xai-uav-relay-6g-terahertz",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-xai-guided-optimizer-distillation-for-real-time-uav-relay-po.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "xai-uav-relay-6g-terahertz",
+      "target": "rmworld-radio-world-models-uav",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-xai-guided-optimizer-distillation-for-real-time-uav-relay-po.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "xai-uav-relay-6g-terahertz",
+      "target": "hybrid-beamforming-ntn",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-crossref-xai-guided-optimizer-distillation-for-real-time-uav-relay-po.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-126",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-126",
+      "target": "yolo-v8-4-121",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-126",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-23-yolo.md"
       ],
       "confidence": "high"
     }

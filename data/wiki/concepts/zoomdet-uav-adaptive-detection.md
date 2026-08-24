@@ -48,3 +48,7 @@ UAV-captured 이미지에서 객체 탐지는 작은 객체 크기로 인해 어
 ## 출처
 
 - Wang et al., "Adaptive Image Zoom-in with Bounding Box Transformation for UAV Object Detection", arXiv:2602.07512, 2026.
+
+## 📰 최근 관련 소식
+- DGE-YOLO: Dual-Branch Gathering and Attention for Accurate UAV Object Detection (arxiv.org, 2025-06-29) — http://arxiv.org/abs/2506.23252v2
+- UAV Object Detection and Positioning in a Mining Industrial Metaverse with Custom Geo-Referenced Data (arxiv.org, 2025-06-16) — http://arxiv.org/abs/2506.13505v1

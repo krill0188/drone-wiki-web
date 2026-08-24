@@ -58,3 +58,6 @@ An integrated system architecture combining UAV-based sensing, LiDAR terrain mod
 ## Source
 
 ^[inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md]
+
+## 📰 최근 관련 소식
+- UAV Object Detection and Positioning in a Mining Industrial Metaverse with Custom Geo-Referenced Data (arxiv.org, 2025-06-16) — http://arxiv.org/abs/2506.13505v1

@@ -58,3 +58,6 @@ Practical implementation demonstrated effectiveness across:
 ## Source
 
 ^[inbox/fetch-2026-08-24-arxiv-unet-a-generic-and-reliable-multi-uav-communication-and-netw.md]
+
+## 📰 최근 관련 소식
+- UNet: A Generic and Reliable Multi-UAV Communication and Networking Architecture for Heterogeneous Applications (arxiv.org, 2024-11-05) — http://arxiv.org/abs/2411.03048v2

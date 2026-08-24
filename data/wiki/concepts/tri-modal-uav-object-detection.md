@@ -54,3 +54,6 @@ RGB + 열화상(LWIR) + 이벤트 카메라 데이터를 융합한 UAV 기반 �
 ## 참고
 
 Craig Iaboni, Pramod Abichandani, arXiv:2604.16630 (2026)
+
+## 📰 최근 관련 소식
+- Cross-modal Offset-guided Dynamic Alignment and Fusion for Weakly Aligned UAV Object Detection (arxiv.org, 2025-06-20) — http://arxiv.org/abs/2506.16737v1

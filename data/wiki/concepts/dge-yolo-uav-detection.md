@@ -54,3 +54,6 @@ DGE-YOLO is an enhanced YOLO-based detection framework designed for multi-modal 
 ## Source
 
 ^[inbox/fetch-2026-08-24-arxiv-dge-yolo-dual-branch-gathering-and-attention-for-accurate-ua.md]
+
+## 📰 최근 관련 소식
+- DGE-YOLO: Dual-Branch Gathering and Attention for Accurate UAV Object Detection (arxiv.org, 2025-06-29) — http://arxiv.org/abs/2506.23252v2

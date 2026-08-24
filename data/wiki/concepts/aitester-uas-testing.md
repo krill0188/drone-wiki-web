@@ -54,3 +54,6 @@ Empirical evaluation on core UAS components demonstrated effectiveness:
 ## Source
 
 ^[inbox/fetch-2026-08-24-arxiv-automated-system-level-testing-of-unmanned-aerial-systems.md]
+
+## 📰 최근 관련 소식
+- Automated System-level Testing of Unmanned Aerial Systems (arxiv.org, 2024-03-23) — http://arxiv.org/abs/2403.15857v2

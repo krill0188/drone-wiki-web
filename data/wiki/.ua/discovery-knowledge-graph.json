@@ -20,7 +20,10 @@
         "raw/articles/ros2-devnotes.md",
         "raw/papers/datalink/allouch2019-mavsec.md",
         "raw/papers/datalink/koubaa2019-mavlink-survey.md",
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
       ]
     },
     {
@@ -57,7 +60,8 @@
         "raw/papers/drone-sw/gupta2026-bcnmpc.md",
         "raw/papers/swarm/cai2026-progress-aware-docking.md",
         "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -94,7 +98,9 @@
         "raw/papers/drone-sw/jacinto2024-pegasus-simulator.md",
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -1023,7 +1029,10 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/articles/entity-mavlink-protocol.md",
-        "raw/articles/px4-system-architecture.md"
+        "raw/articles/px4-system-architecture.md",
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
       ]
     },
     {
@@ -1181,7 +1190,8 @@
         "raw/articles/px4-flight-modes-dev.md",
         "raw/articles/px4-hardware-overview.md",
         "raw/articles/px4-uorb-messaging.md",
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -2253,7 +2263,10 @@
         "raw/articles/mastervault-recon-swarm.md",
         "raw/articles/mastervault-swarm-architecture.md",
         "raw/articles/px4-hardware-overview.md",
-        "raw/papers/drone-ai/gaona2026-lidar-odometry.md"
+        "raw/papers/drone-ai/gaona2026-lidar-odometry.md",
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
       ]
     },
     {
@@ -2834,7 +2847,8 @@
       "sources": [
         "raw/articles/px4-basic-concepts.md",
         "raw/articles/px4-hardware-overview.md",
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -2938,7 +2952,15 @@
         "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md",
         "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md",
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
-        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+        "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md",
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md",
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
       ]
     },
     {
@@ -5570,7 +5592,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md"
+        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
       ]
     },
     {
@@ -5871,7 +5895,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5884,7 +5909,8 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5897,7 +5923,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5910,7 +5937,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5923,7 +5951,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5936,7 +5965,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5949,7 +5979,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5962,7 +5993,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5975,7 +6007,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -5988,7 +6021,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -6013,7 +6047,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -6026,7 +6061,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -6039,7 +6075,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -6800,7 +6837,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md",
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
       ]
     },
     {
@@ -7326,7 +7365,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
       ]
     },
     {
@@ -7338,7 +7379,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7350,7 +7392,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7362,7 +7405,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
       ]
     },
     {
@@ -7374,7 +7419,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7386,7 +7432,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7398,7 +7445,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7410,7 +7458,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7422,7 +7471,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Mission",
       "sources": [
-        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md"
+        "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
       ]
     },
     {
@@ -7434,7 +7484,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -7446,7 +7497,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -7458,7 +7510,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -7470,7 +7523,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -7482,7 +7536,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md"
+        "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
       ]
     },
     {
@@ -7663,6 +7718,1286 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ]
+    },
+    {
+      "id": "Slei3D",
+      "name": "Slei3D",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Junfeng Chen",
+      "name": "Junfeng Chen",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Yuxiao Zhu",
+      "name": "Yuxiao Zhu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Xintong Zhang",
+      "name": "Xintong Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Bing Luo",
+      "name": "Bing Luo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Meng Guo",
+      "name": "Meng Guo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Unmanned Aerial Vehicles",
+      "name": "Unmanned Aerial Vehicles",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md",
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Unmanned Ground Vehicles",
+      "name": "Unmanned Ground Vehicles",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Ad-Hoc Wireless Networks",
+      "name": "Ad-Hoc Wireless Networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "3D Exploration",
+      "name": "3D Exploration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Inspection",
+      "name": "Inspection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Mobile Ground Control Station",
+      "name": "Mobile Ground Control Station",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+      ]
+    },
+    {
+      "id": "Chen, Junfeng",
+      "name": "Chen, Junfeng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ]
+    },
+    {
+      "id": "Zhu, Yuxiao",
+      "name": "Zhu, Yuxiao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ]
+    },
+    {
+      "id": "Zhang, Xintong",
+      "name": "Zhang, Xintong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ]
+    },
+    {
+      "id": "Luo, Bing",
+      "name": "Luo, Bing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ]
+    },
+    {
+      "id": "Guo, Meng",
+      "name": "Guo, Meng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ]
+    },
+    {
+      "id": "Kalman Filters",
+      "name": "Kalman Filters",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Uav Swarms",
+      "name": "Uav Swarms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Decentralized Swarm Encirclement",
+      "name": "Decentralized Swarm Encirclement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Onboard Sensors",
+      "name": "Onboard Sensors",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Gps-Denied Environments",
+      "name": "Gps-Denied Environments",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Communication-Denied Environments",
+      "name": "Communication-Denied Environments",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Relative Measurements",
+      "name": "Relative Measurements",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Ground-Target Protection",
+      "name": "Ground-Target Protection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Uav Attacks",
+      "name": "Uav Attacks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Silveria, Dimitria",
+      "name": "Silveria, Dimitria",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Araujo, Paulo Ricardo Marques De",
+      "name": "Araujo, Paulo Ricardo Marques De",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Nascimento, Tiago",
+      "name": "Nascimento, Tiago",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Givigi, Sidney",
+      "name": "Givigi, Sidney",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ]
+    },
+    {
+      "id": "Alqudsi, Yunes",
+      "name": "Alqudsi, Yunes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Drone Light Shows",
+      "name": "Drone Light Shows",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Swarm Robotics",
+      "name": "Swarm Robotics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Unified Assignment And Trajectory Generation",
+      "name": "Unified Assignment And Trajectory Generation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Uatg",
+      "name": "Uatg",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Collision Avoidance",
+      "name": "Collision Avoidance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Trajectory Generation",
+      "name": "Trajectory Generation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ]
+    },
+    {
+      "id": "Large Language Models",
+      "name": "Large Language Models",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Model Context Protocol",
+      "name": "Model Context Protocol",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Mcp",
+      "name": "Mcp",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "W3C Web Of Things",
+      "name": "W3C Web Of Things",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Wot",
+      "name": "Wot",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Web-Of-Drones",
+      "name": "Web-Of-Drones",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Andrea Iannoli",
+      "name": "Andrea Iannoli",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ]
+    },
+    {
+      "id": "Lorenzo Gigli",
+      "name": "Lorenzo Gigli",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ]
+    },
+    {
+      "id": "Luca Sciullo",
+      "name": "Luca Sciullo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ]
+    },
+    {
+      "id": "Angelo Trotta",
+      "name": "Angelo Trotta",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ]
+    },
+    {
+      "id": "Marco Di Felice",
+      "name": "Marco Di Felice",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ]
+    },
+    {
+      "id": "Mission Planner For Uav Battery Replacement",
+      "name": "Mission Planner For Uav Battery Replacement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ]
+    },
+    {
+      "id": "Battery Management System",
+      "name": "Battery Management System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ]
+    },
+    {
+      "id": "Battery Management Stations",
+      "name": "Battery Management Stations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ]
+    },
+    {
+      "id": "Bouček, Zdeněk",
+      "name": "Bouček, Zdeněk",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ]
+    },
+    {
+      "id": "Flídr, Miroslav",
+      "name": "Flídr, Miroslav",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ]
+    },
+    {
+      "id": "Straka, Ondřej",
+      "name": "Straka, Ondřej",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ]
+    },
+    {
+      "id": "Uav Swarm",
+      "name": "Uav Swarm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Agent Core",
+      "name": "Agent Core",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Iannoli, Andrea",
+      "name": "Iannoli, Andrea",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Gigli, Lorenzo",
+      "name": "Gigli, Lorenzo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Sciullo, Luca",
+      "name": "Sciullo, Luca",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Trotta, Angelo",
+      "name": "Trotta, Angelo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Felice, Marco Di",
+      "name": "Felice, Marco Di",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ]
+    },
+    {
+      "id": "Secure Swarm Uav-Assisted Communications With Cooperative Friendly Jamming",
+      "name": "Secure Swarm Uav-Assisted Communications With Cooperative Friendly Jamming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Amplify-And-Forward Relaying",
+      "name": "Amplify-And-Forward Relaying",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Wireless Energy Harvesting",
+      "name": "Wireless Energy Harvesting",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Time-Switching Relaying Protocol",
+      "name": "Time-Switching Relaying Protocol",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Selection Combining",
+      "name": "Selection Combining",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Maximum-Ratio Combining",
+      "name": "Maximum-Ratio Combining",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Secrecy Outage Probability",
+      "name": "Secrecy Outage Probability",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Monte Carlo Simulations",
+      "name": "Monte Carlo Simulations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Eavesdropper Jamming",
+      "name": "Eavesdropper Jamming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Trajectory Optimization",
+      "name": "Trajectory Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ]
+    },
+    {
+      "id": "Wonder",
+      "name": "Wonder",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Jepa",
+      "name": "Jepa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Ppo",
+      "name": "Ppo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Radiodynamics",
+      "name": "Radiodynamics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Stacca",
+      "name": "Stacca",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Huang, Jiahao",
+      "name": "Huang, Jiahao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Li, Rongpeng",
+      "name": "Li, Rongpeng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Zhao, Zhifeng",
+      "name": "Zhao, Zhifeng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Ding, Guoru",
+      "name": "Ding, Guoru",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Zhang, Honggang",
+      "name": "Zhang, Honggang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ]
+    },
+    {
+      "id": "Vision-Language Models",
+      "name": "Vision-Language Models",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Vlms",
+      "name": "Vlms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Vision-Language Navigation",
+      "name": "Vision-Language Navigation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Vln",
+      "name": "Vln",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Test-Time Scaling",
+      "name": "Test-Time Scaling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Feinan Cheng",
+      "name": "Feinan Cheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Dongliang Xu",
+      "name": "Dongliang Xu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Wenli Nong",
+      "name": "Wenli Nong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Zhiheng Zhang",
+      "name": "Zhiheng Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Ang Liu",
+      "name": "Ang Liu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Tianyu Wang",
+      "name": "Tianyu Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Yue Yao",
+      "name": "Yue Yao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ]
+    },
+    {
+      "id": "Self-Correction",
+      "name": "Self-Correction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Cheng, Feinan",
+      "name": "Cheng, Feinan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Xu, Dongliang",
+      "name": "Xu, Dongliang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Nong, Wenli",
+      "name": "Nong, Wenli",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Zhang, Zhiheng",
+      "name": "Zhang, Zhiheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Liu, Ang",
+      "name": "Liu, Ang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Wang, Tianyu",
+      "name": "Wang, Tianyu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Yao, Yue",
+      "name": "Yao, Yue",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ]
+    },
+    {
+      "id": "Dji Mavic 4 Pro",
+      "name": "Dji Mavic 4 Pro",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ]
+    },
+    {
+      "id": "Matrice 4Td",
+      "name": "Matrice 4Td",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ]
+    },
+    {
+      "id": "Landspace",
+      "name": "Landspace",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
       ]
     }
   ],
@@ -14135,6 +15470,1032 @@
       "type": "AUTHOR",
       "evidence": [
         "raw/papers/drone-sw/path-planning-optimisation-for-sparse-aware-and-cooperative-networked-aerial-rob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "3D Exploration",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "Inspection",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "Ad-Hoc Wireless Networks",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Junfeng Chen",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yuxiao Zhu",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xintong Zhang",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bing Luo",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Meng Guo",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Aerial Vehicles",
+      "target": "Lidar",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Aerial Vehicles",
+      "target": "Camera",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Ground Vehicles",
+      "target": "Lidar",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Ground Vehicles",
+      "target": "Camera",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Aerial Vehicles",
+      "target": "Ad-Hoc Wireless Networks",
+      "type": "COMMUNICATES_VIA",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Ground Vehicles",
+      "target": "Ad-Hoc Wireless Networks",
+      "type": "COMMUNICATES_VIA",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Aerial Vehicles",
+      "target": "Mobile Ground Control Station",
+      "type": "REPORTS_TO",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Ground Vehicles",
+      "target": "Mobile Ground Control Station",
+      "type": "REPORTS_TO",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chen, Junfeng",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhu, Yuxiao",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhang, Xintong",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Luo, Bing",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Guo, Meng",
+      "target": "Slei3D",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "Unmanned Aerial Vehicles",
+      "type": "COORDINATES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "Unmanned Ground Vehicles",
+      "type": "COORDINATES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "3D Exploration",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Slei3D",
+      "target": "Inspection",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Aerial Vehicles",
+      "target": "Mobile Ground Control Station",
+      "type": "COMMUNICATES_WITH",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Swarms",
+      "target": "Ground-Target Protection",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kalman Filters",
+      "target": "Uav Swarms",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Decentralized Swarm Encirclement",
+      "target": "Uav Swarms",
+      "type": "TECHNIQUE_FOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Onboard Sensors",
+      "target": "Uav Swarms",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Relative Measurements",
+      "target": "Kalman Filters",
+      "type": "INPUT_FOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gps-Denied Environments",
+      "target": "Uav Swarms",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Communication-Denied Environments",
+      "target": "Uav Swarms",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Silveria, Dimitria",
+      "target": "Decentralized Swarm Encirclement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Araujo, Paulo Ricardo Marques De",
+      "target": "Decentralized Swarm Encirclement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nascimento, Tiago",
+      "target": "Decentralized Swarm Encirclement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Givigi, Sidney",
+      "target": "Decentralized Swarm Encirclement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Alqudsi, Yunes",
+      "target": "Unified Assignment And Trajectory Generation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Light Shows",
+      "target": "Swarm Robotics",
+      "type": "APPLICATION_OF",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Light Shows",
+      "target": "Uav",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unified Assignment And Trajectory Generation",
+      "target": "Drone Light Shows",
+      "type": "DESIGNED_FOR",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uatg",
+      "target": "Unified Assignment And Trajectory Generation",
+      "type": "ABBREVIATION_OF",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unified Assignment And Trajectory Generation",
+      "target": "Trajectory Generation",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unified Assignment And Trajectory Generation",
+      "target": "Collision Avoidance",
+      "type": "ENSURES",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Control Station",
+      "target": "Uav",
+      "type": "COORDINATES",
+      "evidence": [
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Llm",
+      "target": "Uav",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model Context Protocol",
+      "target": "Web-Of-Drones",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "W3C Web Of Things",
+      "target": "Web-Of-Drones",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ardupilot",
+      "target": "Uav",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Andrea Iannoli",
+      "target": "Large Language Models",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lorenzo Gigli",
+      "target": "Large Language Models",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Luca Sciullo",
+      "target": "Large Language Models",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Angelo Trotta",
+      "target": "Large Language Models",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Marco Di Felice",
+      "target": "Large Language Models",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mission Planner For Uav Battery Replacement",
+      "target": "Uav",
+      "type": "MANAGES",
+      "evidence": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mission Planner For Uav Battery Replacement",
+      "target": "Battery Management System",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Battery Management System",
+      "target": "Battery Management Stations",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bouček, Zdeněk",
+      "target": "Mission Planner For Uav Battery Replacement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Flídr, Miroslav",
+      "target": "Mission Planner For Uav Battery Replacement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Straka, Ondřej",
+      "target": "Mission Planner For Uav Battery Replacement",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Llm",
+      "target": "Uav Swarm",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Agent Core",
+      "target": "Llm",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Iannoli, Andrea",
+      "target": "Say The Mission, Execute The Swarm: Agent-Enhanced Llm Reasoning In The Web-Of-Drones",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gigli, Lorenzo",
+      "target": "Say The Mission, Execute The Swarm: Agent-Enhanced Llm Reasoning In The Web-Of-Drones",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sciullo, Luca",
+      "target": "Say The Mission, Execute The Swarm: Agent-Enhanced Llm Reasoning In The Web-Of-Drones",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trotta, Angelo",
+      "target": "Say The Mission, Execute The Swarm: Agent-Enhanced Llm Reasoning In The Web-Of-Drones",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Felice, Marco Di",
+      "target": "Say The Mission, Execute The Swarm: Agent-Enhanced Llm Reasoning In The Web-Of-Drones",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mcp",
+      "target": "Model Context Protocol",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wot",
+      "target": "W3C Web Of Things",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Secure Swarm Uav-Assisted Communications With Cooperative Friendly Jamming",
+      "target": "Amplify-And-Forward Relaying",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Secure Swarm Uav-Assisted Communications With Cooperative Friendly Jamming",
+      "target": "Wireless Energy Harvesting",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Secure Swarm Uav-Assisted Communications With Cooperative Friendly Jamming",
+      "target": "Time-Switching Relaying Protocol",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time-Switching Relaying Protocol",
+      "target": "Wireless Energy Harvesting",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Secrecy Outage Probability",
+      "target": "Selection Combining",
+      "type": "MEASURED_BY",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Secrecy Outage Probability",
+      "target": "Maximum-Ratio Combining",
+      "type": "MEASURED_BY",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Monte Carlo Simulations",
+      "target": "Secrecy Outage Probability",
+      "type": "VALIDATES",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Swarm",
+      "target": "Eavesdropper Jamming",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Secure Swarm Uav-Assisted Communications With Cooperative Friendly Jamming",
+      "target": "Trajectory Optimization",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wonder",
+      "target": "Jepa",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wonder",
+      "target": "Ppo",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wonder",
+      "target": "Uav",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Radiodynamics",
+      "target": "Wonder",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wonder",
+      "target": "Stacca",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Huang, Jiahao",
+      "target": "Wonder",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Li, Rongpeng",
+      "target": "Wonder",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhao, Zhifeng",
+      "target": "Wonder",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ding, Guoru",
+      "target": "Wonder",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhang, Honggang",
+      "target": "Wonder",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vision-Language Models",
+      "target": "Vlms",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vision-Language Navigation",
+      "target": "Vln",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Aerial Vehicle",
+      "target": "Uav",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Test-Time Scaling",
+      "target": "Vision-Language Models",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vision-Language Navigation",
+      "target": "Unmanned Aerial Vehicle",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Feinan Cheng",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dongliang Xu",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wenli Nong",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhiheng Zhang",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ang Liu",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tianyu Wang",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yue Yao",
+      "target": "No Training, Better Flights: Test-Time Scaled Vlms For Uav Navigation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vision-Language Models",
+      "target": "Vlms",
+      "type": "SAME_AS",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vision-Language Navigation",
+      "target": "Vln",
+      "type": "SAME_AS",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Self-Correction",
+      "target": "Vision-Language Navigation",
+      "type": "ENHANCES",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cheng, Feinan",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xu, Dongliang",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nong, Wenli",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhang, Zhiheng",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Liu, Ang",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wang, Tianyu",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yao, Yue",
+      "target": "Test-Time Scaling",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dji",
+      "target": "Dji Mavic 4 Pro",
+      "type": "MANUFACTURES",
+      "evidence": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dji",
+      "target": "Matrice 4Td",
+      "type": "MANUFACTURES",
+      "evidence": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dji Mavic 4 Pro",
+      "target": "Landspace",
+      "type": "USED_BY",
+      "evidence": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Matrice 4Td",
+      "target": "Landspace",
+      "type": "USED_BY",
+      "evidence": [
+        "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
       ],
       "confidence": "unverified"
     }

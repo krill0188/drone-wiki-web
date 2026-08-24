@@ -55,3 +55,6 @@ UAV platform motion and asynchronous imaging cause spatial misalignment between 
 ## Source
 
 ^[inbox/fetch-2026-08-24-arxiv-cross-modal-offset-guided-dynamic-alignment-and-fusion-for-w.md]
+
+## 📰 최근 관련 소식
+- Cross-modal Offset-guided Dynamic Alignment and Fusion for Weakly Aligned UAV Object Detection (arxiv.org, 2025-06-20) — http://arxiv.org/abs/2506.16737v1
