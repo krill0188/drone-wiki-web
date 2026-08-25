@@ -47,3 +47,6 @@ Tests combined effects of constant jammer on recorded CSI parameters and feasibi
 - [[datalink-communication]] — Drone datalink communication
 - [[nc2s-secure-c3-system]] — Secure C3 systems
 - [[ris-secure-uav-communications]] — RIS-secured UAV communications
+
+## 📰 최근 관련 소식
+- Channel State Information Analysis for Jamming Attack Detection in Static and Dynamic UAV Networks -- An Experimental Study (arxiv.org, 2025-04-08) — http://arxiv.org/abs/2504.05832v1

@@ -51,3 +51,6 @@ Four fusion approaches tested:
 - [[computer-vision-drone]] — Drone computer vision overview
 - [[rt-detr-plus-uav-detection]] — RT-DETR for UAV detection
 - [[uav-detr-anti-drone-detection]] — UAV DETR anti-drone detection
+
+## 📰 최근 관련 소식
+- WAVE-DETR Multi-Modal Visible and Acoustic Real-Life Drone Detector (arxiv.org, 2025-09-11) — http://arxiv.org/abs/2509.09859v1

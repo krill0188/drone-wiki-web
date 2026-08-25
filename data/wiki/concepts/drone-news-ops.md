@@ -134,3 +134,5 @@ domain: ops-mission
 - 15분 만에 숨은 적 식별…드론 이어 상업 위성도 ‘전술무기’ 됐다 (중앙일보, Fri, 21 Au) — https://news.google.com/rss/articles/CBMiVkFVX3lxTE8zcEV5M09DZmhRN3dfU0dUNnM1TlAyeHRiOFFfMTJiUjNKR2c3YVYtQ09wdXZQdXlRbmJ1QTVmeGN0aVlROHcxdkotcXJSb0kzUXBTOXB3?oc=5
 - How to use ND Filters on FPV Drones: Creating Cinematic FPV Videos (oscarliang.com, Sun, 09 Au) — https://oscarliang.com/nd-filter-fpv/
 - [Multi-robot Systems Group at FEE-CTU in Prague] MRS Summer School 2026 | Official video (youtube.com, 2026-08-21) — https://www.youtube.com/watch?v=tNvr5b-oJlc
+- Powerus Secures $22.3 Million Commercial Contract to Protect U.S. Oil Interests and Critical Energy Infrastructure in the Middle East (www.suasnews.com, Fri, 21 Au) — https://www.suasnews.com/2026/08/powerus-secures-22-3-million-commercial-contract-to-protect-u-s-oil-interests-and-critical-energy-infrastructure-in-the-middle-east/
+- Cat-Inspired Claws Help Ice Dart Drone Land on Steep Ice (dronelife.com, Fri, 21 Au) — https://dronelife.com/2026/08/21/ice-dart-drone-cat-inspired-claws/

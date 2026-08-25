@@ -43,3 +43,6 @@ Architecture with:
 - [[mavlink-protocol]] — MAVLink protocol
 - [[mavlink2-security]] — MAVLink 2 security
 - [[drone-safety-failsafe]] — Drone safety systems
+
+## 📰 최근 관련 소식
+- UAV Resilience Against Stealthy Attacks (arxiv.org, 2025-03-21) — http://arxiv.org/abs/2503.17298v2

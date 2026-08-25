@@ -49,3 +49,6 @@ Couples two key components:
 - [[datalink-communication]] — Drone datalink communication
 - [[swarm-coordination]] — UAV swarm coordination
 - [[drone-ai-agents]] — AI agents for UAV control
+
+## 📰 최근 관련 소식
+- RMWorld: Task-Aware Radio World Models with Value-of-Information Guided Multi-Trial Learning for Multi-UAV Communication Control (arxiv.org, 2026-08-20) — http://arxiv.org/abs/2608.20126v1

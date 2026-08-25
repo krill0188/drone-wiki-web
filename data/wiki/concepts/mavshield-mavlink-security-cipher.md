@@ -54,3 +54,6 @@ Real drone testbed evaluation (not just theoretical/simulation-based).
 - [[mavlink-protocol]] — MAVLink protocol overview
 - [[mavlink2-security]] — MAVLink 2 security features
 - [[datalink-communication]] — Drone datalink communication
+
+## 📰 최근 관련 소식
+- A Novel Cipher for Enhancing MAVLink Security: Design, Security Analysis, and Performance Evaluation Using a Drone Testbed (arxiv.org, 2025-04-29) — http://arxiv.org/abs/2504.20626v1

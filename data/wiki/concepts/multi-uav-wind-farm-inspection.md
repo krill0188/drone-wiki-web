@@ -38,3 +38,6 @@ Abstract not available in source — refer to linked publication for full detail
 - [[swarm-coordination]] — UAV swarm coordination
 - [[ops-mission]] — Drone operations and missions
 - [[perceptual-robotics]] — Wind turbine inspection drones
+
+## 📰 최근 관련 소식
+- Time-constrained multi-UAV collaborative inspection for offshore wind farms with downtime minimization (doi.org, 2027-1) — https://doi.org/10.1016/j.ress.2026.113306

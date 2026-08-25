@@ -58,3 +58,4 @@ UAV platform motion and asynchronous imaging cause spatial misalignment between 
 
 ## 📰 최근 관련 소식
 - Cross-modal Offset-guided Dynamic Alignment and Fusion for Weakly Aligned UAV Object Detection (arxiv.org, 2025-06-20) — http://arxiv.org/abs/2506.16737v1
+- Powerus Secures $22.3 Million Commercial Contract to Protect U.S. Oil Interests and Critical Energy Infrastructure in the Middle East (www.suasnews.com, Fri, 21 Au) — https://www.suasnews.com/2026/08/powerus-secures-22-3-million-commercial-contract-to-protect-u-s-oil-interests-and-critical-energy-infrastructure-in-the-middle-east/

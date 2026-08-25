@@ -37,3 +37,7 @@ Abstract not available in source — refer to linked publication for full detail
 - [[datalink-communication]] — Drone datalink communication
 - [[rmworld-radio-world-models-uav]] — Radio world models for UAV
 - [[hybrid-beamforming-ntn]] — Hybrid beamforming for non-terrestrial networks
+
+## 📰 최근 관련 소식
+- XAI-guided optimizer distillation for real-time UAV relay positioning in terahertz 6G low-altitude ad hoc networks (doi.org, 2027-1) — https://doi.org/10.1016/j.adhoc.2026.104389
+- MTCNet: Multimodal time-sensitive target fast concealment network for UAV aerial imagery via real-time mask generation (doi.org, 2027-1) — https://doi.org/10.1016/j.eswa.2026.134088

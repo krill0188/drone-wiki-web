@@ -49,3 +49,4 @@ domain: regulations
 - Pennsylvania National Guard Becomes Hub for Pentagon’s Drone Dominance Program (dronelife.com, Fri, 14 Au) — https://dronelife.com/2026/08/14/pennsylvania-national-guard-drone-dominance/
 - Washington National Guard Builds Counter-UAS Partnerships Ahead of World Cup 2026 (National Guard Association of the United States, Wed, 10 Ju) — https://news.google.com/rss/articles/CBMirgFBVV95cUxORFpaOXhJdEhNa3RsV01MaWFNSTBEby1LRFNpZ2xjVHJBdi10WVRZQWtHMTFXbDFrclNWVF9iZzlqcDhSSEw4bVBXdUl2YjlPUmJ2X3loejh6eWpVT1IzbU9LUFhEdnNSc1hwN29MYU1YcExUSkFnN3BvaWluNUNVSUpsM3VkNjlJVFJRTkJRSEJMZnVJMGFtNVNZTjdKTEZIZXFUX1BOT2lkbzBxcUE?oc=5
 - Automated System-level Testing of Unmanned Aerial Systems (arxiv.org, 2024-03-23) — http://arxiv.org/abs/2403.15857v2
+- Motorola Solutions Completes $1.5 Billion Acquisition of D-Fend Solutions (dronelife.com, Fri, 21 Au) — https://dronelife.com/2026/08/21/motorola-solutions-d-fend-acquisition/

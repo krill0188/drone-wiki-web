@@ -44,3 +44,6 @@ ArXiv paper (2025-09-11) introducing RT-DETR++ with enhanced encoder for UAV ima
 - [[computer-vision-drone]] — Drone computer vision applications
 - [[yolo]] — YOLO detection architecture
 - [[pt-detr-small-target-detection]] — RT-DETR for small target detection
+
+## 📰 최근 관련 소식
+- RT-DETR++ for UAV Object Detection (arxiv.org, 2025-09-11) — http://arxiv.org/abs/2509.09157v1

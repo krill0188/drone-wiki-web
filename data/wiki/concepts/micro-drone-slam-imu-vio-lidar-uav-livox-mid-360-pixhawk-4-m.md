@@ -48,3 +48,4 @@ contradictions: []
 - 예멘 후티반군 “사우디아라비아 정찰 드론 격추” (뉴시스, Sun, 23 Au) — https://news.google.com/rss/articles/CBMiYEFVX3lxTE9GVXpnTjY2OUtWNVNadDN4a0tVWU4zTHpTUDR0WHp0LXVuVE5KOFd3eVRSYWRTV2h6dEJfcFRnWEdZS19FRkhhOUFaUTY1bWJjN0NycmdOdUU1OTZhVC1OctIBeEFVX3lxTE9qSFhuUHNqYkxVTmE5QmdpX05oQVBNOV9sYXBTVXVsclFUNi1adDFNcXMxT1ZHR1ZWU19KU2pvNFRVOEhTVnRBREhNOHJkVnVzWVlkUncyRURUN2U3V1dDZG9YYmVuR3JKTDdYWklSS0NYQ3FDSUdqQw?oc=5
 - [UAV Coach] Drone Prices Are About To DOUBLE (youtube.com, 2026-08-21) — https://www.youtube.com/watch?v=3lAYXJQyK3w
 - United Utilities Uses Thermal Drones to Find Hidden Moorland Fire Hotspots (dronelife.com, Thu, 20 Au) — https://dronelife.com/2026/08/20/thermal-drones-wildfire-monitoring/
+- [UAV Coach] Is It Still Worth Starting a Drone Business Today? (youtube.com, 2026-08-20) — https://www.youtube.com/watch?v=Am5-N5FF26A

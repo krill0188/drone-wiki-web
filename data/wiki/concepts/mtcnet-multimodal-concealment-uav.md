@@ -38,3 +38,6 @@ Abstract not available in source — refer to linked publication for full detail
 - [[computer-vision-drone]] — Drone computer vision
 - [[uavd-mamba-multimodal-detection]] — Multimodal UAV detection
 - [[wave-detr-multimodal-drone-detector]] — Multimodal drone detection
+
+## 📰 최근 관련 소식
+- MTCNet: Multimodal time-sensitive target fast concealment network for UAV aerial imagery via real-time mask generation (doi.org, 2027-1) — https://doi.org/10.1016/j.eswa.2026.134088

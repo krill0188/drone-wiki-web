@@ -54,3 +54,5 @@ Recent developments in thermal imaging drones for wildfire monitoring and counte
 ## 📰 최근 관련 소식
 - United Utilities Uses Thermal Drones to Find Hidden Moorland Fire Hotspots (dronelife.com, Thu, 20 Au) — https://dronelife.com/2026/08/20/thermal-drones-wildfire-monitoring/
 - Inside the Counter-UAS Response to Drone Flights Over Spokane Wildfires (dronelife.com, Thu, 20 Au) — https://dronelife.com/2026/08/20/spokane-wildfire-drones-firefighting-aircraft/
+- Purple UAS Opens Certification Portal for Public Safety Drone Manufacturers (www.suasnews.com, Fri, 21 Au) — https://www.suasnews.com/2026/08/purple-uas-opens-certification-portal-for-public-safety-drone-manufacturers/
+- Ondas Opens UAS Training and Operations Hub at Ohio’s NAAMCE (dronelife.com, Fri, 21 Au) — https://dronelife.com/2026/08/21/ondas-uas-training-facility-ohio/

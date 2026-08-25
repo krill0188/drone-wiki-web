@@ -55,3 +55,4 @@ Wagner Comin Sonaglio et al., arXiv:2603.04662 (2026)
 
 ## 📰 최근 관련 소식
 - [Painless360] How the sticks on the radio move the right control on an INAV wing or plane (youtube.com, 2026-08-22) — https://www.youtube.com/watch?v=5X-VrxGZWzI
+- UAV Resilience Against Stealthy Attacks (arxiv.org, 2025-03-21) — http://arxiv.org/abs/2503.17298v2

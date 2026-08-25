@@ -60,3 +60,6 @@ https://github.com/GreatPlum-hnu/UAVD-Mamba.git
 - [[computer-vision-drone]] — Drone computer vision overview
 - [[yolo]] — YOLO detection architecture
 - [[drone-ai-agents]] — AI agents for drones
+
+## 📰 최근 관련 소식
+- UAVD-Mamba: Deformable Token Fusion Vision Mamba for Multimodal UAV Detection (arxiv.org, 2025-07-01) — http://arxiv.org/abs/2507.00849v1
