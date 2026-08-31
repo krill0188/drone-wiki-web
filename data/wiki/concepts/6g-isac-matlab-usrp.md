@@ -55,3 +55,5 @@ contradictions: []
 - 젤렌스키 체제에 첫 공개 도전…‘드론전 영웅’ 페도로우 “전시에도 대선” (문화일보, Wed, 19 Au) — https://news.google.com/rss/articles/CBMiUEFVX3lxTE5TcnFiZk9sXzFkcTQ3X1gwQXQwajFTc2VnWWRkM1ZLeXZIYjFGUTNDOUxFV2w3d0s5ZWNleVpTZjNsRTVTT3ZHb2JWaTd1djR6?oc=5
 - 첨단소재 기술로 방산시장 두드리는 에코텍글로벌 (전북도민일보, Sun, 23 Au) — https://news.google.com/rss/articles/CBMia0FVX3lxTFBLVzlpYUNXX0xXV01ZQWY0bzdtZzVWTFV5bnZ6enpxZUpPQVpyQmxXNDFZUkxnNElkYnpzTld1bnNIQ1F4dEExN1UtZ2RNRFpqcFYzbXFEcnJjbnh4REJ5RzRQRGc2WXNNbG8w?oc=5
 - [MATLAB] What Is Polyspace Code Prover? (youtube.com, 2026-08-20) — https://www.youtube.com/watch?v=m66oMivVL_w
+- 한투AC, 미국 오리건에 ‘K-방산·드론 베이스캠프’ 구축…국내 스타트업 미국 진출 지원 (드론매거진 뉴스, Mon, 31 Au) — https://news.google.com/rss/articles/CBMiZEFVX3lxTE5ZODF5N3NRd3hhWS0zZFF0eVNFcWlNdURLV0VTYV82Z25PcHVQVWpLR0RzSTNQbXpmeldrRG16YW5tRXBlcnhPVG9BeUR1NHpRVkZyRzdqNkhrRlJoNmFIaUhCcDM?oc=5
+- 체면구긴 '한국 자폭드론'...4초 만에 해상으로 추락 (YTN 사이언스, Mon, 31 Au) — https://news.google.com/rss/articles/CBMif0FVX3lxTFBrYnN5bnZxcnFuZ0w4cDh6aDA5VTJTMlBPT1lReG5LdTdVOFc2bWtDQjJhYWh6OUZuQzJfRDJXbFVNWk5heURlblMzekswTGw2Q1JJYnA1OWZ6a1ZjamVoSHFYUGt6Wm9nQTBYdm1GR0Y5dWszbmhCWm5FNkxoSlk?oc=5
