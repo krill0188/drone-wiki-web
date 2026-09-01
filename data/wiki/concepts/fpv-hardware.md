@@ -60,3 +60,4 @@ domain: hardware
 - [Joshua Bardwell] Q&A Livestream - August 23, 2026 (youtube.com, 2026-08-23) — https://www.youtube.com/watch?v=PQGyyYn5CJM
 - [Joshua Bardwell] (Nearly) perfect portable soldering iron: Sequre S99 (youtube.com, 2026-08-20) — https://www.youtube.com/watch?v=kWFIQe2fsWE
 - [Joshua Bardwell] Ascent latency update (youtube.com, 2026-08-25) — https://www.youtube.com/watch?v=9TQLzUFDQVc
+- [Joshua Bardwell] Q&A Livestream - October 12, 2026 (youtube.com, 2026-09-01) — https://www.youtube.com/watch?v=kbmmcxwe4xI

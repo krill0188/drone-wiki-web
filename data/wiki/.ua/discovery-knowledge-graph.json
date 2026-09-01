@@ -100,7 +100,8 @@
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
         "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
         "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
-        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md",
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
       ]
     },
     {
@@ -2266,7 +2267,8 @@
         "raw/papers/drone-ai/gaona2026-lidar-odometry.md",
         "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
         "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
-        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md"
+        "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md",
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
       ]
     },
     {
@@ -2960,7 +2962,12 @@
         "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
         "raw/papers/swarm/wonder-a-radio-world-model-based-negotiation-framework-for-multi-agent-uav-cover.md",
         "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
-        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md"
+        "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md",
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md",
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md",
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md",
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md",
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
       ]
     },
     {
@@ -5910,7 +5917,8 @@
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
         "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
-        "raw/papers/gcs-software/nc2s-secure-c3-system.md"
+        "raw/papers/gcs-software/nc2s-secure-c3-system.md",
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
       ]
     },
     {
@@ -6339,7 +6347,8 @@
       "sources": [
         "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
         "raw/papers/drone-ai/pt-detr-small-target-detection.md",
-        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md",
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
       ]
     },
     {
@@ -7811,7 +7820,8 @@
         "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
         "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
         "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md",
-        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md",
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
       ]
     },
     {
@@ -8998,6 +9008,1820 @@
       "ontologyClass": "Organization",
       "sources": [
         "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ]
+    },
+    {
+      "id": "3D Scene Generation",
+      "name": "3D Scene Generation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Image Segmentation",
+      "name": "Image Segmentation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Semantic Constraint",
+      "name": "Semantic Constraint",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Confidence-Guided Framework",
+      "name": "Confidence-Guided Framework",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Zhaoyang Sheng",
+      "name": "Zhaoyang Sheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Jian Ke",
+      "name": "Jian Ke",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Junjie Zhu",
+      "name": "Junjie Zhu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Fu Ren",
+      "name": "Fu Ren",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ]
+    },
+    {
+      "id": "Cityfly",
+      "name": "Cityfly",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Vision Language Model",
+      "name": "Vision Language Model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Signmark-Guided Navigation",
+      "name": "Signmark-Guided Navigation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Autonomous Navigation",
+      "name": "Autonomous Navigation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Yuan",
+      "name": "Yuan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Jiang",
+      "name": "Jiang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Chuang",
+      "name": "Chuang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Yang",
+      "name": "Yang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Jiaze",
+      "name": "Jiaze",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Li",
+      "name": "Li",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Cong",
+      "name": "Cong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Zhang",
+      "name": "Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "Zhigang",
+      "name": "Zhigang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ]
+    },
+    {
+      "id": "U-Space",
+      "name": "U-Space",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Easa",
+      "name": "Easa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "4D Flight Authorization",
+      "name": "4D Flight Authorization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Probabilistic Spatial-Temporal Envelopes",
+      "name": "Probabilistic Spatial-Temporal Envelopes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Motion Models",
+      "name": "Motion Models",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Control Characteristics",
+      "name": "Control Characteristics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Autonomous Uavs",
+      "name": "Autonomous Uavs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Airspace Reservation",
+      "name": "Airspace Reservation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Vitale, Christian",
+      "name": "Vitale, Christian",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Grigoriou, Yiannis",
+      "name": "Grigoriou, Yiannis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Kolios, Panayiotis",
+      "name": "Kolios, Panayiotis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Ellinas, Georgios",
+      "name": "Ellinas, Georgios",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Mtcnet",
+      "name": "Mtcnet",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Mask Generation",
+      "name": "Mask Generation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Aerial Imagery",
+      "name": "Aerial Imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Real-Time Processing",
+      "name": "Real-Time Processing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Multimodal",
+      "name": "Multimodal",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Ruitao Lu",
+      "name": "Ruitao Lu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Zhanhong Zhuo",
+      "name": "Zhanhong Zhuo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Siyu Wang",
+      "name": "Siyu Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Dingwen Zhang",
+      "name": "Dingwen Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Bobo Xi",
+      "name": "Bobo Xi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ]
+    },
+    {
+      "id": "Uav Lidar",
+      "name": "Uav Lidar",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "Dem",
+      "name": "Dem",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md",
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "Dod",
+      "name": "Dod",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "Twi",
+      "name": "Twi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "Dnbr",
+      "name": "Dnbr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "Aicc",
+      "name": "Aicc",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "국민대학교",
+      "name": "국민대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "안동시",
+      "name": "안동시",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "황세연",
+      "name": "황세연",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ]
+    },
+    {
+      "id": "Chm",
+      "name": "Chm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "Ndvi",
+      "name": "Ndvi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "Tpi",
+      "name": "Tpi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "Slope",
+      "name": "Slope",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "Relief",
+      "name": "Relief",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "다분광 영상",
+      "name": "다분광 영상",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "정사영상",
+      "name": "정사영상",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "서울대학교",
+      "name": "서울대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "신두리 해안사구",
+      "name": "신두리 해안사구",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "제갈갑성",
+      "name": "제갈갑성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ]
+    },
+    {
+      "id": "Xai-Guided Optimizer Distillation",
+      "name": "Xai-Guided Optimizer Distillation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ]
+    },
+    {
+      "id": "Uav Relay Positioning",
+      "name": "Uav Relay Positioning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ]
+    },
+    {
+      "id": "Terahertz 6G",
+      "name": "Terahertz 6G",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ]
+    },
+    {
+      "id": "Low-Altitude Ad Hoc Networks",
+      "name": "Low-Altitude Ad Hoc Networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ]
+    },
+    {
+      "id": "Manan Khan Abdul",
+      "name": "Manan Khan Abdul",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ]
+    },
+    {
+      "id": "K-드론",
+      "name": "K-드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "경상남도",
+      "name": "경상남도",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "통영",
+      "name": "통영",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "K-Uam",
+      "name": "K-Uam",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "드론 비행 경로",
+      "name": "드론 비행 경로",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "호버링",
+      "name": "호버링",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "드론 배송",
+      "name": "드론 배송",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md",
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "물류 시스템",
+      "name": "물류 시스템",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ]
+    },
+    {
+      "id": "군용 드론",
+      "name": "군용 드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "민간 드론",
+      "name": "민간 드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "Dual-Use",
+      "name": "Dual-Use",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "드론 안보 등급제",
+      "name": "드론 안보 등급제",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "Kmtc",
+      "name": "Kmtc",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "Dtims",
+      "name": "Dtims",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "K-Diu",
+      "name": "K-Diu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "경상국립대학교",
+      "name": "경상국립대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "배재영",
+      "name": "배재영",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ]
+    },
+    {
+      "id": "대드론체계",
+      "name": "대드론체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "멀티플랫폼 드론",
+      "name": "멀티플랫폼 드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "Uas",
+      "name": "Uas",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "하드킬",
+      "name": "하드킬",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "국방과학기술획득학과",
+      "name": "국방과학기술획득학과",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "국방대학교",
+      "name": "국방대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "군수사령부",
+      "name": "군수사령부",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "국방전력발전업무 훈령",
+      "name": "국방전력발전업무 훈령",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "문주영",
+      "name": "문주영",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "러-우 전쟁",
+      "name": "러-우 전쟁",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "전력지원체계",
+      "name": "전력지원체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "무기체계",
+      "name": "무기체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "회색지대체계",
+      "name": "회색지대체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "표준화 기반 아키텍처",
+      "name": "표준화 기반 아키텍처",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "여단급 운용개념",
+      "name": "여단급 운용개념",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ]
+    },
+    {
+      "id": "Yolov5",
+      "name": "Yolov5",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "Intel Realsense D435I",
+      "name": "Intel Realsense D435I",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "고려대학교",
+      "name": "고려대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "심상훈",
+      "name": "심상훈",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "드론",
+      "name": "드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "객체 탐지",
+      "name": "객체 탐지",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "적대적 패치 공격",
+      "name": "적대적 패치 공격",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "딥러닝",
+      "name": "딥러닝",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "Nps",
+      "name": "Nps",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "Eot",
+      "name": "Eot",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ]
+    },
+    {
+      "id": "Scpconv",
+      "name": "Scpconv",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "Ema",
+      "name": "Ema",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "Scpconvblock",
+      "name": "Scpconvblock",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "Msffpn",
+      "name": "Msffpn",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "조영복",
+      "name": "조영복",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "국립경국대학교",
+      "name": "국립경국대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "드론 영상 기반 실시간 산불 감시",
+      "name": "드론 영상 기반 실시간 산불 감시",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ]
+    },
+    {
+      "id": "한국외국어대학교",
+      "name": "한국외국어대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "디지털 소비환경 신뢰",
+      "name": "디지털 소비환경 신뢰",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "조건부 안전성 인식",
+      "name": "조건부 안전성 인식",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "안전 거버넌스",
+      "name": "안전 거버넌스",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "Paf/Cfa",
+      "name": "Paf/Cfa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "Ols 회귀분석",
+      "name": "Ols 회귀분석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "부트스트랩 분석",
+      "name": "부트스트랩 분석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "한국 소비생활지표",
+      "name": "한국 소비생활지표",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "김문용",
+      "name": "김문용",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ]
+    },
+    {
+      "id": "Continuous Transformation",
+      "name": "Continuous Transformation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Xtech",
+      "name": "Xtech",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Aewe",
+      "name": "Aewe",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Skyfoundry",
+      "name": "Skyfoundry",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Stp",
+      "name": "Stp",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Agile",
+      "name": "Agile",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Drone Bot Challenge",
+      "name": "Drone Bot Challenge",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Ct-K",
+      "name": "Ct-K",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "K-Csm",
+      "name": "K-Csm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "A-Ctco",
+      "name": "A-Ctco",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Us Army",
+      "name": "Us Army",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Korean Army",
+      "name": "Korean Army",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Ukraine War",
+      "name": "Ukraine War",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Mavshield",
+      "name": "Mavshield",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Aes-Ctr",
+      "name": "Aes-Ctr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Chacha20",
+      "name": "Chacha20",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Speck-Ctr",
+      "name": "Speck-Ctr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Rabbit",
+      "name": "Rabbit",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Nist",
+      "name": "Nist",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Diehard",
+      "name": "Diehard",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Dixit, Bhavya",
+      "name": "Dixit, Bhavya",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "A., Ananthapadmanabhan",
+      "name": "A., Ananthapadmanabhan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Thahsin, Adheeba",
+      "name": "Thahsin, Adheeba",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Pathak, Saketh",
+      "name": "Pathak, Saketh",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Kasbekar, Gaurav S.",
+      "name": "Kasbekar, Gaurav S.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Maity, Arnab",
+      "name": "Maity, Arnab",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
       ]
     }
   ],
@@ -16496,6 +18320,1140 @@
       "type": "USED_BY",
       "evidence": [
         "raw/youtube/dji-mavic-4-thermal-rocket-launch.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Confidence-Guided Framework",
+      "target": "3D Scene Generation",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Image Segmentation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Image Segmentation",
+      "target": "3D Scene Generation",
+      "type": "INPUT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Semantic Constraint",
+      "target": "Confidence-Guided Framework",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhaoyang Sheng",
+      "target": "Confidence-Guided Semantic Constraint Framework For 3D Scene Generation From Uav Image Segmentation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jian Ke",
+      "target": "Confidence-Guided Semantic Constraint Framework For 3D Scene Generation From Uav Image Segmentation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Junjie Zhu",
+      "target": "Confidence-Guided Semantic Constraint Framework For 3D Scene Generation From Uav Image Segmentation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fu Ren",
+      "target": "Confidence-Guided Semantic Constraint Framework For 3D Scene Generation From Uav Image Segmentation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-confidence-guided-semantic-constraint-framework-for-3d-scene-generation-from-u.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cityfly",
+      "target": "Uav",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cityfly",
+      "target": "Vision Language Model",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cityfly",
+      "target": "Signmark-Guided Navigation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cityfly",
+      "target": "Autonomous Navigation",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yuan",
+      "target": "Cityfly",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chuang",
+      "target": "Cityfly",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jiaze",
+      "target": "Cityfly",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cong",
+      "target": "Cityfly",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhigang",
+      "target": "Cityfly",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "U-Space",
+      "target": "Easa",
+      "type": "FRAMEWORK_BY",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "U-Space",
+      "target": "Uav",
+      "type": "GOVERNS",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "4D Flight Authorization",
+      "target": "Autonomous Uavs",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Probabilistic Spatial-Temporal Envelopes",
+      "target": "4D Flight Authorization",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Motion Models",
+      "target": "Autonomous Uavs",
+      "type": "CHARACTERIZES",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Control Characteristics",
+      "target": "Autonomous Uavs",
+      "type": "CHARACTERIZES",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Airspace Reservation",
+      "target": "4D Flight Authorization",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vitale, Christian",
+      "target": "4D Flight Authorization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Grigoriou, Yiannis",
+      "target": "4D Flight Authorization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kolios, Panayiotis",
+      "target": "4D Flight Authorization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ellinas, Georgios",
+      "target": "4D Flight Authorization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtcnet",
+      "target": "Uav",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtcnet",
+      "target": "Mask Generation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtcnet",
+      "target": "Aerial Imagery",
+      "type": "PROCESSES",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtcnet",
+      "target": "Real-Time Processing",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mtcnet",
+      "target": "Multimodal",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ruitao Lu",
+      "target": "Mtcnet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhanhong Zhuo",
+      "target": "Mtcnet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Siyu Wang",
+      "target": "Mtcnet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dingwen Zhang",
+      "target": "Mtcnet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bobo Xi",
+      "target": "Mtcnet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "황세연",
+      "target": "국민대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Lidar",
+      "target": "Dem",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dem",
+      "target": "Dod",
+      "type": "INPUT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aicc",
+      "target": "Dem",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Twi",
+      "target": "Dem",
+      "type": "DERIVED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dnbr",
+      "target": "Uav Lidar",
+      "type": "MEASURED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "제갈갑성",
+      "target": "서울대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Lidar",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "다분광 영상",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lidar",
+      "target": "Dem",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lidar",
+      "target": "Chm",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "다분광 영상",
+      "target": "Ndvi",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lidar",
+      "target": "Tpi",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "제갈갑성",
+      "target": "신두리 해안사구",
+      "type": "RESEARCHED",
+      "evidence": [
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xai-Guided Optimizer Distillation",
+      "target": "Uav Relay Positioning",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Relay Positioning",
+      "target": "Terahertz 6G",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Relay Positioning",
+      "target": "Low-Altitude Ad Hoc Networks",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Manan Khan Abdul",
+      "target": "Xai-Guided Optimizer Distillation",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/xai-guided-optimizer-distillation-for-real-time-uav-relay-positioning-in-teraher.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-드론",
+      "target": "드론 배송",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-드론",
+      "target": "드론 비행 경로",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-드론",
+      "target": "호버링",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송",
+      "target": "경상남도",
+      "type": "DEPLOYED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송",
+      "target": "통영",
+      "type": "DEPLOYED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-드론",
+      "target": "물류 시스템",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-Uam",
+      "target": "드론 배송",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "군용 드론",
+      "target": "Dual-Use",
+      "type": "IS_INSTANCE_OF",
+      "evidence": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "민간 드론",
+      "target": "Dual-Use",
+      "type": "IS_INSTANCE_OF",
+      "evidence": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "배재영",
+      "target": "경상국립대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-Diu",
+      "target": "Kmtc",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-Diu",
+      "target": "Dtims",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 안보 등급제",
+      "target": "군용 드론",
+      "type": "REGULATES",
+      "evidence": [
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "대드론체계",
+      "target": "전력지원체계",
+      "type": "CLASSIFIED_AS",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "멀티플랫폼 드론",
+      "target": "회색지대체계",
+      "type": "EXAMPLE_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uas",
+      "target": "대드론체계",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "문주영",
+      "target": "국방대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "국방대학교",
+      "target": "국방과학기술획득학과",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "군수사령부",
+      "target": "대드론체계",
+      "type": "MANAGES",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "국방전력발전업무 훈령",
+      "target": "전력지원체계",
+      "type": "GOVERNS",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "러-우 전쟁",
+      "target": "대드론체계",
+      "type": "MOTIVATED",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "표준화 기반 아키텍처",
+      "target": "대드론체계",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "여단급 운용개념",
+      "target": "대드론체계",
+      "type": "OPERATIONAL_CONCEPT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "심상훈",
+      "target": "고려대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yolov5",
+      "target": "객체 탐지",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "Yolov5",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "Intel Realsense D435I",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "적대적 패치 공격",
+      "target": "Yolov5",
+      "type": "TARGETS",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nps",
+      "target": "적대적 패치 공격",
+      "type": "MITIGATES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Eot",
+      "target": "적대적 패치 공격",
+      "type": "MITIGATES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "딥러닝",
+      "target": "Yolov5",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rt-Detr",
+      "target": "Scpconvblock",
+      "type": "IMPROVED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Scpconv",
+      "target": "Scpconvblock",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ema",
+      "target": "Scpconvblock",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Msffpn",
+      "target": "Scpconvblock",
+      "type": "APPLIED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "조영복",
+      "target": "국립경국대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Scpconvblock",
+      "target": "드론 영상 기반 실시간 산불 감시",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "김문용",
+      "target": "한국외국어대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송",
+      "target": "디지털 소비환경 신뢰",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송",
+      "target": "조건부 안전성 인식",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "조건부 안전성 인식",
+      "target": "안전 거버넌스",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Paf/Cfa",
+      "target": "디지털 소비환경 신뢰",
+      "type": "MEASURES",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ols 회귀분석",
+      "target": "드론 배송",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "부트스트랩 분석",
+      "target": "조건부 안전성 인식",
+      "type": "VALIDATES",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "한국 소비생활지표",
+      "target": "디지털 소비환경 신뢰",
+      "type": "GOVERNS",
+      "evidence": [
+        "raw/papers/_unclassified/디지털-소비환경-신뢰와-드론-배송-이용의도---조건부-안전성-인식의-역할과-안전-거버넌스-함의--.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Us Army",
+      "target": "Continuous Transformation",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Continuous Transformation",
+      "target": "Xtech",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Continuous Transformation",
+      "target": "Aewe",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Continuous Transformation",
+      "target": "Skyfoundry",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Continuous Transformation",
+      "target": "Stp",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Continuous Transformation",
+      "target": "Agile",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Korean Army",
+      "target": "Drone Bot Challenge",
+      "type": "OPERATES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ct-K",
+      "target": "K-Csm",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Korean Army",
+      "target": "A-Ctco",
+      "type": "ESTABLISHES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ukraine War",
+      "target": "Continuous Transformation",
+      "type": "MOTIVATES",
+      "evidence": [
+        "raw/papers/_unclassified/미한-육군-신속획득-생태계-비교-분석을-통한-한국형-연속적-변혁체계-제안-미-육군-연속적-변혁-전략과-한국-육군-드론봇-챌린지-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Mavlink",
+      "type": "SECURES",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavlink",
+      "target": "Unmanned Aerial Vehicles",
+      "type": "USED_BY",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavlink",
+      "target": "Ground Control Stations",
+      "type": "CONNECTS_TO",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Aes-Ctr",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Chacha20",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Speck-Ctr",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Rabbit",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Nist",
+      "type": "EVALUATED_BY",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavshield",
+      "target": "Diehard",
+      "type": "EVALUATED_BY",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dixit, Bhavya",
+      "target": "Mavshield",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "A., Ananthapadmanabhan",
+      "target": "Mavshield",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Thahsin, Adheeba",
+      "target": "Mavshield",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pathak, Saketh",
+      "target": "Mavshield",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kasbekar, Gaurav S.",
+      "target": "Mavshield",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Maity, Arnab",
+      "target": "Mavshield",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
       ],
       "confidence": "unverified"
     }
