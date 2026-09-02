@@ -23,7 +23,8 @@
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
         "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
         "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
-        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md"
+        "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
       ]
     },
     {
@@ -61,7 +62,8 @@
         "raw/papers/swarm/cai2026-progress-aware-docking.md",
         "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
-        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
       ]
     },
     {
@@ -101,7 +103,8 @@
         "raw/papers/drone-sw/nc2s-secure-c3-uxv.md",
         "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
         "raw/papers/gcs-software/nc2s-secure-c3-system.md",
-        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+        "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md",
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
       ]
     },
     {
@@ -1192,7 +1195,8 @@
         "raw/articles/px4-hardware-overview.md",
         "raw/articles/px4-uorb-messaging.md",
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
-        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
       ]
     },
     {
@@ -2001,7 +2005,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/articles/mastervault-hardware-reference.md"
+        "raw/articles/mastervault-hardware-reference.md",
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
       ]
     },
     {
@@ -2268,7 +2273,8 @@
         "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md",
         "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
         "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md",
-        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md",
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
       ]
     },
     {
@@ -2292,7 +2298,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/articles/mastervault-recon-swarm.md"
+        "raw/articles/mastervault-recon-swarm.md",
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
       ]
     },
     {
@@ -2967,7 +2974,14 @@
         "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md",
         "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md",
         "raw/papers/_unclassified/mtcnet-multimodal-time-sensitive-target-fast-concealment-network-for-uav-aerial-.md",
-        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md",
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md",
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md",
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md",
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md",
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md",
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md",
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
       ]
     },
     {
@@ -4647,7 +4661,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/radwan2024-uav-slam-gpsdenied.md"
+        "raw/papers/drone-ai/radwan2024-uav-slam-gpsdenied.md",
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
       ]
     },
     {
@@ -6124,7 +6139,9 @@
         "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
         "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
         "raw/papers/drone-ai/pt-detr-small-target-detection.md",
-        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md"
+        "raw/papers/drone-ai/tri-modal-fusion-transformers-for-uav-based-object-detection.md",
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md",
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
       ]
     },
     {
@@ -6137,7 +6154,8 @@
       "ontologyClass": "Mission",
       "sources": [
         "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
-        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md",
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
       ]
     },
     {
@@ -6150,7 +6168,9 @@
       "ontologyClass": "Mission",
       "sources": [
         "raw/papers/drone-ai/adaptive-image-zoom-in-with-bounding-box-transformation-for-uav-object-detection.md",
-        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md"
+        "raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md",
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md",
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
       ]
     },
     {
@@ -6348,7 +6368,8 @@
         "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
         "raw/papers/drone-ai/pt-detr-small-target-detection.md",
         "raw/papers/drone-ai/uav-detr-anti-drone-detection.md",
-        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md",
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
       ]
     },
     {
@@ -6426,7 +6447,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/drone-ai/pt-detr-small-target-detection-based-on-partially-aware-detail-focus.md",
-        "raw/papers/drone-ai/pt-detr-small-target-detection.md"
+        "raw/papers/drone-ai/pt-detr-small-target-detection.md",
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
       ]
     },
     {
@@ -6678,7 +6700,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md"
+        "raw/papers/drone-ai/uav-detr-anti-drone-detection.md",
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md",
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
       ]
     },
     {
@@ -7416,7 +7440,9 @@
       "sources": [
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
         "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
-        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md"
+        "raw/papers/swarm/enhancing-drone-light-shows-performances-optimal-allocation-and-trajectories-for.md",
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md",
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
       ]
     },
     {
@@ -9199,7 +9225,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md"
+        "raw/papers/_unclassified/cityfly-signmark-guided-autonomous-uav-navigation-with-vision-language-model.md",
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
       ]
     },
     {
@@ -10257,7 +10284,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md",
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
       ]
     },
     {
@@ -10293,7 +10321,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md"
+        "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md",
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
       ]
     },
     {
@@ -10341,7 +10370,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md"
+        "raw/papers/_unclassified/드론-영상-기반-실시간-산불-감시를-위한-연기-특화-rt-detr-개선-모델-설계-및-성능-분석.md",
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
       ]
     },
     {
@@ -10822,6 +10852,2059 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ]
+    },
+    {
+      "id": "Drone Wall",
+      "name": "Drone Wall",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "Drone-To-Drone",
+      "name": "Drone-To-Drone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "Ai 기반 객체인식",
+      "name": "Ai 기반 객체인식",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "광학 센서",
+      "name": "광학 센서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "지휘통제체계",
+      "name": "지휘통제체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "전자전",
+      "name": "전자전",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "포획",
+      "name": "포획",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "요격",
+      "name": "요격",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "광운대학교",
+      "name": "광운대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "김상혁",
+      "name": "김상혁",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ]
+    },
+    {
+      "id": "Yolov11",
+      "name": "Yolov11",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "Rgb 영상",
+      "name": "Rgb 영상",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "Confusion Matrix",
+      "name": "Confusion Matrix",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "Grad-Cam",
+      "name": "Grad-Cam",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "정사영상 정합",
+      "name": "정사영상 정합",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "국립식량과학원",
+      "name": "국립식량과학원",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "정윤정",
+      "name": "정윤정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "벼 출수 판별",
+      "name": "벼 출수 판별",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ]
+    },
+    {
+      "id": "John Coltrane",
+      "name": "John Coltrane",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Naima",
+      "name": "Naima",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Body And Soul",
+      "name": "Body And Soul",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Giant Steps",
+      "name": "Giant Steps",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "India",
+      "name": "India",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Song Of Praise",
+      "name": "Song Of Praise",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Korean National University Of Arts",
+      "name": "Korean National University Of Arts",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Drone",
+      "name": "Drone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Pedal Point",
+      "name": "Pedal Point",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Indian Classical Music",
+      "name": "Indian Classical Music",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ]
+    },
+    {
+      "id": "Flyblind",
+      "name": "Flyblind",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "5G Standalone",
+      "name": "5G Standalone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Beyond Visual Line Of Sight",
+      "name": "Beyond Visual Line Of Sight",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Uncrewed Aerial Systems",
+      "name": "Uncrewed Aerial Systems",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Command-And-Control",
+      "name": "Command-And-Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "User Plane",
+      "name": "User Plane",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Network Slices",
+      "name": "Network Slices",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Gnb",
+      "name": "Gnb",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Silent State Staleness",
+      "name": "Silent State Staleness",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Guided Mode",
+      "name": "Guided Mode",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Telemetry",
+      "name": "Telemetry",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "One-Way Delay",
+      "name": "One-Way Delay",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ]
+    },
+    {
+      "id": "Isac",
+      "name": "Isac",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md",
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Base Station Uav",
+      "name": "Base Station Uav",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Jammer Uav",
+      "name": "Jammer Uav",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Jamming",
+      "name": "Jamming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Spectrum Resources",
+      "name": "Spectrum Resources",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Secrecy Rate",
+      "name": "Secrecy Rate",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "User Scheduling",
+      "name": "User Scheduling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Time Allocation",
+      "name": "Time Allocation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Transmit Power",
+      "name": "Transmit Power",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Uav Trajectory",
+      "name": "Uav Trajectory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Successive Convex Approximation",
+      "name": "Successive Convex Approximation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Block Coordinate Descent",
+      "name": "Block Coordinate Descent",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Lei",
+      "name": "Lei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Hongjiang",
+      "name": "Hongjiang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Geng",
+      "name": "Geng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Jianshuo",
+      "name": "Jianshuo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Park",
+      "name": "Park",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Ki-Hong",
+      "name": "Ki-Hong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Ye",
+      "name": "Ye",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Jia",
+      "name": "Jia",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Liang",
+      "name": "Liang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Miao",
+      "name": "Miao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Xiaqing",
+      "name": "Xiaqing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Pan",
+      "name": "Pan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Gaofeng",
+      "name": "Gaofeng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ]
+    },
+    {
+      "id": "Sel4",
+      "name": "Sel4",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Runtime Monitoring",
+      "name": "Runtime Monitoring",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Software Isolation",
+      "name": "Software Isolation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Amorim, Arthur",
+      "name": "Amorim, Arthur",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Taylor, Max",
+      "name": "Taylor, Max",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Kann, Trevor",
+      "name": "Kann, Trevor",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Leavens, Gary T.",
+      "name": "Leavens, Gary T.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Harrison, William L.",
+      "name": "Harrison, William L.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Joneckis, Lance",
+      "name": "Joneckis, Lance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ]
+    },
+    {
+      "id": "Uw-Ocdm",
+      "name": "Uw-Ocdm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Ocdm",
+      "name": "Ocdm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Doppler Estimation",
+      "name": "Doppler Estimation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Doppler Compensation",
+      "name": "Doppler Compensation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Timing Synchronization",
+      "name": "Timing Synchronization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Sparse Spatio-Temporal Channel Estimation",
+      "name": "Sparse Spatio-Temporal Channel Estimation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Multi-Target Detection",
+      "name": "Multi-Target Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Multi-Target Tracking",
+      "name": "Multi-Target Tracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Direct-Path Interference Suppression",
+      "name": "Direct-Path Interference Suppression",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Kinematic Prediction",
+      "name": "Kinematic Prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Off-Grid Refinement",
+      "name": "Off-Grid Refinement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Successive Interference Cancellation",
+      "name": "Successive Interference Cancellation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Frequency-Domain Equalization",
+      "name": "Frequency-Domain Equalization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Tao, Yi",
+      "name": "Tao, Yi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Gao, Zhen",
+      "name": "Gao, Zhen",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Wan, Ziwei",
+      "name": "Wan, Ziwei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Lv, Yuezu",
+      "name": "Lv, Yuezu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Wang, Hua",
+      "name": "Wang, Hua",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Huang, Kaibin",
+      "name": "Huang, Kaibin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Chen, Sheng",
+      "name": "Chen, Sheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Low-Altitude Economy",
+      "name": "Low-Altitude Economy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ]
+    },
+    {
+      "id": "Clsc Detr",
+      "name": "Clsc Detr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ]
+    },
+    {
+      "id": "Detection Transformer",
+      "name": "Detection Transformer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ]
+    },
+    {
+      "id": "Cross Layer Local Support",
+      "name": "Cross Layer Local Support",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ]
+    },
+    {
+      "id": "Classification And Localization Consistency Calibration",
+      "name": "Classification And Localization Consistency Calibration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ]
+    },
+    {
+      "id": "Lin, Junyan",
+      "name": "Lin, Junyan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ]
+    },
+    {
+      "id": "Codaf",
+      "name": "Codaf",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Cross-Modal Offset-Guided Dynamic Alignment And Fusion",
+      "name": "Cross-Modal Offset-Guided Dynamic Alignment And Fusion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Offset-Guided Semantic Alignment",
+      "name": "Offset-Guided Semantic Alignment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Osa",
+      "name": "Osa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Dynamic Attention-Guided Fusion Module",
+      "name": "Dynamic Attention-Guided Fusion Module",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Dafm",
+      "name": "Dafm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Deformable Convolution",
+      "name": "Deformable Convolution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Spatial-Channel Dual Attention",
+      "name": "Spatial-Channel Dual Attention",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Multimodal Detection",
+      "name": "Multimodal Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Rgb Imagery",
+      "name": "Rgb Imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Infrared Imagery",
+      "name": "Infrared Imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Dronevehicle Dataset",
+      "name": "Dronevehicle Dataset",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Zongzhen Liu",
+      "name": "Zongzhen Liu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Hui Luo",
+      "name": "Hui Luo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Zhixing Wang",
+      "name": "Zhixing Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Yuxing Wei",
+      "name": "Yuxing Wei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Haorui Zuo",
+      "name": "Haorui Zuo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Jianlin Zhang",
+      "name": "Jianlin Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ]
+    },
+    {
+      "id": "Dge-Yolo",
+      "name": "Dge-Yolo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Efficient Multi-Scale Attention",
+      "name": "Efficient Multi-Scale Attention",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Gather-And-Distribute",
+      "name": "Gather-And-Distribute",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Gd",
+      "name": "Gd",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Drone Vehicle Dataset",
+      "name": "Drone Vehicle Dataset",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Infrared Imaging",
+      "name": "Infrared Imaging",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Visible Imaging",
+      "name": "Visible Imaging",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Multi-Modal Object Detection",
+      "name": "Multi-Modal Object Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Lv, Kunwei",
+      "name": "Lv, Kunwei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Xiao, Zhiren",
+      "name": "Xiao, Zhiren",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Ren, Hang",
+      "name": "Ren, Hang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Lan, Ping",
+      "name": "Lan, Ping",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "name": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Hierarchical Reinforcement Learning",
+      "name": "Hierarchical Reinforcement Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Hybrid Maneuver Modes",
+      "name": "Hybrid Maneuver Modes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Uav Autonomous Navigation",
+      "name": "Uav Autonomous Navigation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Constrained Airspace",
+      "name": "Constrained Airspace",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Kai Kou",
+      "name": "Kai Kou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Gang Yang",
+      "name": "Gang Yang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Wenqi Zhang",
+      "name": "Wenqi Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Yuan Yao",
+      "name": "Yuan Yao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Xingshe Zhou",
+      "name": "Xingshe Zhou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ]
+    },
+    {
+      "id": "Lgi-Detr",
+      "name": "Lgi-Detr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Local Spatial Enhancement Module",
+      "name": "Local Spatial Enhancement Module",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Global Information Injection Module",
+      "name": "Global Information Injection Module",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Chen, Zifa",
+      "name": "Chen, Zifa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Rt-Detr++",
+      "name": "Rt-Detr++",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Csp-Pac",
+      "name": "Csp-Pac",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Channel-Gated Attention-Based Upsampling/Downsampling",
+      "name": "Channel-Gated Attention-Based Upsampling/Downsampling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Shufang Yuan",
+      "name": "Shufang Yuan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ]
+    },
+    {
+      "id": "Sf-Tmat",
+      "name": "Sf-Tmat",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Dsfma",
+      "name": "Dsfma",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Vfst",
+      "name": "Vfst",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Uda",
+      "name": "Uda",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Chen, Hongyu",
+      "name": "Chen, Hongyu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Liu, Jiping",
+      "name": "Liu, Jiping",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Wang, Yong",
+      "name": "Wang, Yong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Zhu, Jun",
+      "name": "Zhu, Jun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Feng, Dejun",
+      "name": "Feng, Dejun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Xie, Yakun",
+      "name": "Xie, Yakun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ]
+    },
+    {
+      "id": "Deep Learning",
+      "name": "Deep Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Object Detection",
+      "name": "Object Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Geo-Referencing",
+      "name": "Geo-Referencing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Digital Twin",
+      "name": "Digital Twin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Industrial Metaverse",
+      "name": "Industrial Metaverse",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Mining",
+      "name": "Mining",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Remote Sensing",
+      "name": "Remote Sensing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Geospatial Data",
+      "name": "Geospatial Data",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Balaska, Vasiliki",
+      "name": "Balaska, Vasiliki",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Papapetros, Ioannis Tsampikos",
+      "name": "Papapetros, Ioannis Tsampikos",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Oikonomou, Katerina Maria",
+      "name": "Oikonomou, Katerina Maria",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Bampis, Loukas",
+      "name": "Bampis, Loukas",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ]
+    },
+    {
+      "id": "Gasteratos, Antonios",
+      "name": "Gasteratos, Antonios",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
       ]
     }
   ],
@@ -19454,6 +21537,1437 @@
       "type": "AUTHOR",
       "evidence": [
         "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Wall",
+      "target": "Drone-To-Drone",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Wall",
+      "target": "Ai 기반 객체인식",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Wall",
+      "target": "광학 센서",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Wall",
+      "target": "지휘통제체계",
+      "type": "INTEGRATES_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "김상혁",
+      "target": "광운대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yolov11",
+      "target": "벼 출수 판별",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rgb 영상",
+      "target": "Yolov11",
+      "type": "INPUT_TO",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "Rgb 영상",
+      "type": "CAPTURES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정윤정",
+      "target": "국립식량과학원",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Grad-Cam",
+      "target": "Yolov11",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Confusion Matrix",
+      "target": "Yolov11",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정사영상 정합",
+      "target": "Rgb 영상",
+      "type": "PROCESSES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "딥러닝",
+      "target": "Yolov11",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "John Coltrane",
+      "target": "Naima",
+      "type": "COMPOSED",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "John Coltrane",
+      "target": "Body And Soul",
+      "type": "COMPOSED",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "John Coltrane",
+      "target": "Giant Steps",
+      "type": "COMPOSED",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "John Coltrane",
+      "target": "India",
+      "type": "COMPOSED",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "John Coltrane",
+      "target": "Song Of Praise",
+      "type": "COMPOSED",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone",
+      "target": "Indian Classical Music",
+      "type": "ORIGINATES_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "John Coltrane",
+      "target": "Drone",
+      "type": "INTEGRATED",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pedal Point",
+      "target": "Drone",
+      "type": "RELATES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Korean National University Of Arts",
+      "target": "John Coltrane",
+      "type": "RESEARCHES",
+      "evidence": [
+        "raw/papers/_unclassified/이종-문화-화성-어법의-융합과-미학적-확장-존-콜트레인의-드론drone-활용을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Flyblind",
+      "target": "5G Standalone",
+      "type": "OPERATES_OVER",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uncrewed Aerial Systems",
+      "target": "5G Standalone",
+      "type": "OPERATES_OVER",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Control Station",
+      "target": "Command-And-Control",
+      "type": "MANAGES",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Flyblind",
+      "target": "Silent State Staleness",
+      "type": "CAUSES",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Network Slices",
+      "target": "User Plane",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Flyblind",
+      "target": "Ground Control Station",
+      "type": "TARGETS",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Telemetry",
+      "target": "Ground Control Station",
+      "type": "TRANSMITTED_TO",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gnb",
+      "target": "5G Standalone",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Isac",
+      "target": "Spectrum Resources",
+      "type": "UTILIZES",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Base Station Uav",
+      "target": "Isac",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jammer Uav",
+      "target": "Isac",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Base Station Uav",
+      "target": "Radar",
+      "type": "TRANSMITS",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jammer Uav",
+      "target": "Jamming",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Trajectory",
+      "target": "Base Station Uav",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Trajectory",
+      "target": "Jammer Uav",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Transmit Power",
+      "target": "Secrecy Rate",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Successive Convex Approximation",
+      "target": "Block Coordinate Descent",
+      "type": "COMBINED_WITH",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lei",
+      "target": "Hongjiang",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Geng",
+      "target": "Jianshuo",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Park",
+      "target": "Ki-Hong",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ye",
+      "target": "Jia",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yang",
+      "target": "Liang",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Miao",
+      "target": "Xiaqing",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pan",
+      "target": "Gaofeng",
+      "type": "SAME_PERSON",
+      "evidence": [
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mavlink",
+      "target": "Uav",
+      "type": "USED_BY",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sel4",
+      "target": "Uav",
+      "type": "SECURES",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Runtime Monitoring",
+      "target": "Uav",
+      "type": "PROTECTS",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Software Isolation",
+      "target": "Uav",
+      "type": "PROTECTS",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Amorim, Arthur",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Taylor, Max",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kann, Trevor",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Leavens, Gary T.",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Harrison, William L.",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Joneckis, Lance",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uw-Ocdm",
+      "target": "Ocdm",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uw-Ocdm",
+      "target": "Isac",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Isac",
+      "target": "Uav",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uw-Ocdm",
+      "target": "Timing Synchronization",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uw-Ocdm",
+      "target": "Doppler Estimation",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uw-Ocdm",
+      "target": "Doppler Compensation",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sparse Spatio-Temporal Channel Estimation",
+      "target": "Uw-Ocdm",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Target Detection",
+      "target": "Uw-Ocdm",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Target Tracking",
+      "target": "Uw-Ocdm",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Direct-Path Interference Suppression",
+      "target": "Multi-Target Detection",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kinematic Prediction",
+      "target": "Multi-Target Detection",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Off-Grid Refinement",
+      "target": "Multi-Target Detection",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Successive Interference Cancellation",
+      "target": "Multi-Target Detection",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Frequency-Domain Equalization",
+      "target": "Uw-Ocdm",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tao, Yi",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gao, Zhen",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wan, Ziwei",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lv, Yuezu",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wang, Hua",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Huang, Kaibin",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chen, Sheng",
+      "target": "Uw-Ocdm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Low-Altitude Economy",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/uw-ocdm-for-low-altitude-uav-communication-and-cooperative-sensing.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clsc Detr",
+      "target": "Detection Transformer",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clsc Detr",
+      "target": "Detr",
+      "type": "VARIANT_OF",
+      "evidence": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clsc Detr",
+      "target": "Cross Layer Local Support",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clsc Detr",
+      "target": "Classification And Localization Consistency Calibration",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clsc Detr",
+      "target": "Uav",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lin, Junyan",
+      "target": "Clsc Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/clsc-detr-reliable-candidate-ranking-via-cross-layer-geometric-support-for-uav-s.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Codaf",
+      "target": "Cross-Modal Offset-Guided Dynamic Alignment And Fusion",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Codaf",
+      "target": "Offset-Guided Semantic Alignment",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Codaf",
+      "target": "Dynamic Attention-Guided Fusion Module",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offset-Guided Semantic Alignment",
+      "target": "Osa",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Attention-Guided Fusion Module",
+      "target": "Dafm",
+      "type": "ALIAS",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offset-Guided Semantic Alignment",
+      "target": "Deformable Convolution",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Attention-Guided Fusion Module",
+      "target": "Spatial-Channel Dual Attention",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Codaf",
+      "target": "Uav Object Detection",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Codaf",
+      "target": "Multimodal Detection",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multimodal Detection",
+      "target": "Rgb Imagery",
+      "type": "FUSES",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multimodal Detection",
+      "target": "Infrared Imagery",
+      "type": "FUSES",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Codaf",
+      "target": "Dronevehicle Dataset",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zongzhen Liu",
+      "target": "Codaf",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hui Luo",
+      "target": "Codaf",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhixing Wang",
+      "target": "Codaf",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yuxing Wei",
+      "target": "Codaf",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Haorui Zuo",
+      "target": "Codaf",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jianlin Zhang",
+      "target": "Codaf",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/cross-modal-offset-guided-dynamic-alignment-and-fusion-for-weakly-aligned-uav-ob.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Yolo",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Efficient Multi-Scale Attention",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Gather-And-Distribute",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Efficient Multi-Scale Attention",
+      "target": "Ema",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gather-And-Distribute",
+      "target": "Gd",
+      "type": "ABBREVIATION",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Multi-Modal Object Detection",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Uav",
+      "type": "DESIGNED_FOR",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Infrared Imaging",
+      "type": "PROCESSES",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Visible Imaging",
+      "type": "PROCESSES",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dge-Yolo",
+      "target": "Drone Vehicle Dataset",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lv, Kunwei",
+      "target": "Dge-Yolo",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xiao, Zhiren",
+      "target": "Dge-Yolo",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ren, Hang",
+      "target": "Dge-Yolo",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lan, Ping",
+      "target": "Dge-Yolo",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/dge-yolo-dual-branch-gathering-and-attention-for-accurate-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kai Kou",
+      "target": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gang Yang",
+      "target": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wenqi Zhang",
+      "target": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yuan Yao",
+      "target": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xingshe Zhou",
+      "target": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hierarchical Reinforcement Learning",
+      "target": "Intent-Guided Hierarchical Reinforcement Learning With Hybrid Maneuver Modes For Uav Autonomous Navigation In Constrained Airspace",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Maneuver Modes",
+      "target": "Uav Autonomous Navigation",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav Autonomous Navigation",
+      "target": "Constrained Airspace",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/drone-ai/intent-guided-hierarchical-reinforcement-learning-with-hybrid-maneuver-modes-for.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lgi-Detr",
+      "target": "Detr",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lgi-Detr",
+      "target": "Local Spatial Enhancement Module",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lgi-Detr",
+      "target": "Global Information Injection Module",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lgi-Detr",
+      "target": "Visdrone2019",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lgi-Detr",
+      "target": "Uavdt",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chen, Zifa",
+      "target": "Lgi-Detr",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rt-Detr++",
+      "target": "Rt-Detr",
+      "type": "ENHANCEMENT_OF",
+      "evidence": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rt-Detr++",
+      "target": "Uav",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rt-Detr++",
+      "target": "Csp-Pac",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rt-Detr++",
+      "target": "Channel-Gated Attention-Based Upsampling/Downsampling",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shufang Yuan",
+      "target": "Rt-Detr++",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/rt-detr-for-uav-object-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sf-Tmat",
+      "target": "Dsfma",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sf-Tmat",
+      "target": "Vfst",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sf-Tmat",
+      "target": "Uda",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sf-Tmat",
+      "target": "Uav Object Detection",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chen, Hongyu",
+      "target": "Sf-Tmat",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Liu, Jiping",
+      "target": "Sf-Tmat",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wang, Yong",
+      "target": "Sf-Tmat",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhu, Jun",
+      "target": "Sf-Tmat",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Feng, Dejun",
+      "target": "Sf-Tmat",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xie, Yakun",
+      "target": "Sf-Tmat",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/teaching-in-adverse-scenes-a-statistically-feedback-driven-threshold-and-mask-ad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Lidar",
+      "type": "COMBINED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Object Detection",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lidar",
+      "target": "3D Reconstruction",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Deep Learning",
+      "target": "Object Detection",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Geo-Referencing",
+      "target": "Geospatial Data",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3D Reconstruction",
+      "target": "Digital Twin",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Object Detection",
+      "target": "Mining",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Remote Sensing",
+      "target": "Geospatial Data",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Remote Sensing",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Balaska, Vasiliki",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Papapetros, Ioannis Tsampikos",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Oikonomou, Katerina Maria",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bampis, Loukas",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gasteratos, Antonios",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
       ],
       "confidence": "unverified"
     }

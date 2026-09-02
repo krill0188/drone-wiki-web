@@ -4863,7 +4863,7 @@
       "id": "a2z-longtail-dual",
       "name": "A2Z Drone Delivery Longtail Dual",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "hardware",
@@ -4871,10 +4871,10 @@
         "bvlos",
         "a2z"
       ],
-      "updated": "2026-09-01",
-      "confidence": "high",
+      "updated": "2026-09-02",
+      "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "dji-osmo-360-ii",
@@ -5063,6 +5063,190 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "drone-rice-heading-detection",
+      "name": "드론 기반 벼 출수 판별 시스템",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "agriculture",
+        "computer-vision",
+        "yolo"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-wall-defense-system",
+      "name": "Drone Wall 기반 대드론 방어체계",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "swarm",
+        "defense",
+        "cuas"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "hierarchical-rl-uav-navigation",
+      "name": "계층적 강화학습 UAV 자율 내비게이션",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "reinforcement-learning",
+        "navigation"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "stl-diffusion-multi-agent-planning",
+      "name": "STL 기반 확산 모델 다중 에이전트 계획",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "swarm",
+        "stl",
+        "diffusion",
+        "planning"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "vision-marker-drone-delivery",
+      "name": "시각 마커 기반 자율 배송 드론 시스템",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "delivery",
+        "computer-vision",
+        "ros2"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "avidrone",
+      "name": "Avidrone",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company",
+        "heavy-lift",
+        "canada"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "dronetag",
+      "name": "Dronetag",
+      "layer": "Entities",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "company",
+        "remote-id"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "emo-mini-drone",
+      "name": "EMO Mini 드론",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "light-show",
+        "249g"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "flowcopter",
+      "name": "Flowcopter",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company",
+        "propulsion",
+        "uk"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "uas-sentry-nexus-observer",
+      "name": "UAS Sentry Nexus Observer",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "cuas",
+        "remote-id",
+        "detection"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "vulcan-drone",
+      "name": "Vulcan 드론",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company",
+        "us-made"
+      ],
+      "updated": "2026-09-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     }
   ],
   "edges": [
@@ -17942,6 +18126,285 @@
         "inbox/fetch-2026-09-01-rss-dronelife.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "drone-rice-heading-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-rice-heading-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-rice-heading-detection",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-wall-defense-system",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-wall-defense-system",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-wall-defense-system",
+      "target": "lockheed-martin-morfius",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hierarchical-rl-uav-navigation",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-crossref-intent-guided-hierarchical-reinforcement-learning-with-hybri.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hierarchical-rl-uav-navigation",
+      "target": "px4-offboard-control",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-crossref-intent-guided-hierarchical-reinforcement-learning-with-hybri.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hierarchical-rl-uav-navigation",
+      "target": "ros2-drone-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-crossref-intent-guided-hierarchical-reinforcement-learning-with-hybri.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "stl-diffusion-multi-agent-planning",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-arxiv-generalizable-multi-agent-planning-from-signal-temporal-logi.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "stl-diffusion-multi-agent-planning",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-arxiv-generalizable-multi-agent-planning-from-signal-temporal-logi.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "stl-diffusion-multi-agent-planning",
+      "target": "mavsdk",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-arxiv-generalizable-multi-agent-planning-from-signal-temporal-logi.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "vision-marker-drone-delivery",
+      "target": "ros2-drone-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vision-marker-drone-delivery",
+      "target": "mavsdk",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vision-marker-drone-delivery",
+      "target": "mission-planning",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "a2z-longtail-dual",
+      "target": "doordash-air",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "a2z-longtail-dual",
+      "target": "matternet",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "avidrone",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "avidrone",
+      "target": "heavy-lift-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dronetag",
+      "target": "airwise-nexus",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dronetag",
+      "target": "uavionix-airwise-utm-partnership",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dronetag",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "emo-mini-drone",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "emo-mini-drone",
+      "target": "drone-light-show-uatg",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "flowcopter",
+      "target": "tekever",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "flowcopter",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uas-sentry-nexus-observer",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uas-sentry-nexus-observer",
+      "target": "dfend-counter-drone-worldcup",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uas-sentry-nexus-observer",
+      "target": "cuas-setup-params",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vulcan-drone",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vulcan-drone",
+      "target": "us-drone-import-tariffs-2026",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-rss-dronedj.md"
+      ],
+      "confidence": "medium"
     }
   ]
 }
