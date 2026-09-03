@@ -26,7 +26,8 @@
         "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
         "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md",
         "raw/papers/_unclassified/고정밀-영상-획득을-위한-경량-무인비행체-플랫폼-개발.md",
-        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
       ]
     },
     {
@@ -67,7 +68,8 @@
         "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
         "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md",
         "raw/papers/_unclassified/고정밀-영상-획득을-위한-경량-무인비행체-플랫폼-개발.md",
-        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
       ]
     },
     {
@@ -110,7 +112,8 @@
         "raw/papers/datalink/a-novel-cipher-for-enhancing-mavlink-security-design-security-analysis-and-perfo.md",
         "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md",
         "raw/papers/_unclassified/고정밀-영상-획득을-위한-경량-무인비행체-플랫폼-개발.md",
-        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
       ]
     },
     {
@@ -1205,7 +1208,8 @@
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
         "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
         "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md",
-        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
       ]
     },
     {
@@ -2999,7 +3003,12 @@
         "raw/papers/drone-ai/wave-detr-multi-modal-visible-and-acoustic-real-life-drone-detector.md",
         "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
         "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md",
-        "raw/papers/drone-sw/automated-system-level-testing-of-unmanned-aerial-systems.md"
+        "raw/papers/drone-sw/automated-system-level-testing-of-unmanned-aerial-systems.md",
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md",
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md",
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md",
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md",
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
       ]
     },
     {
@@ -5151,7 +5160,8 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/drone-sw/jacinto2024-pegasus-simulator.md",
-        "raw/papers/swarm/li2025-airswarm.md"
+        "raw/papers/swarm/li2025-airswarm.md",
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
       ]
     },
     {
@@ -5637,7 +5647,8 @@
         "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
         "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
         "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
-        "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md"
+        "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md",
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
       ]
     },
     {
@@ -6079,7 +6090,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md"
+        "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
       ]
     },
     {
@@ -7105,7 +7117,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md",
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
       ]
     },
     {
@@ -7473,7 +7486,9 @@
         "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md",
         "raw/papers/datalink/uav-resilience-against-stealthy-attacks.md",
         "raw/papers/drone-sw/automated-system-level-testing-of-unmanned-aerial-systems.md",
-        "raw/papers/drone-sw/channel-state-information-analysis-for-jamming-attack-detection-in-static-and-dy.md"
+        "raw/papers/drone-sw/channel-state-information-analysis-for-jamming-attack-detection-in-static-and-dy.md",
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md",
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
       ]
     },
     {
@@ -11511,7 +11526,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md",
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
       ]
     },
     {
@@ -14913,6 +14929,918 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/swarm/rmworld-task-aware-radio-world-models-with-value-of-information-guided-multi-tri.md"
+      ]
+    },
+    {
+      "id": "Matteo Vandelli",
+      "name": "Matteo Vandelli",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Daniele Dragoni",
+      "name": "Daniele Dragoni",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Cplex",
+      "name": "Cplex",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Integer Quadratic Program",
+      "name": "Integer Quadratic Program",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Qubo",
+      "name": "Qubo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Quantum Adiabatic Algorithm",
+      "name": "Quantum Adiabatic Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Flying Ad-Hoc Networks",
+      "name": "Flying Ad-Hoc Networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Quantum Computing",
+      "name": "Quantum Computing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Guo Lili",
+      "name": "Guo Lili",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "School Of Information Science And Technology",
+      "name": "School Of Information Science And Technology",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Nantong University",
+      "name": "Nantong University",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Fixed-Wing Uav",
+      "name": "Fixed-Wing Uav",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Los Channels",
+      "name": "Los Channels",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Energy Efficiency Optimization",
+      "name": "Energy Efficiency Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Trajectory Design",
+      "name": "Trajectory Design",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Transmit Power Control",
+      "name": "Transmit Power Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Time-Slot Scheduling",
+      "name": "Time-Slot Scheduling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ]
+    },
+    {
+      "id": "Cf-Mmimo",
+      "name": "Cf-Mmimo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Kalman Filter",
+      "name": "Kalman Filter",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Sinr",
+      "name": "Sinr",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Hungarian Algorithm",
+      "name": "Hungarian Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Pilot Contamination",
+      "name": "Pilot Contamination",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Trajectory Prediction",
+      "name": "Trajectory Prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Pilot Assignment",
+      "name": "Pilot Assignment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Mahdi Haider Salih",
+      "name": "Mahdi Haider Salih",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "University Of Tabriz",
+      "name": "University Of Tabriz",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ]
+    },
+    {
+      "id": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "name": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ]
+    },
+    {
+      "id": "Bladeless Uav Thruster",
+      "name": "Bladeless Uav Thruster",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ]
+    },
+    {
+      "id": "Adaptive Sampling",
+      "name": "Adaptive Sampling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ]
+    },
+    {
+      "id": "Ata, Turgut",
+      "name": "Ata, Turgut",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ]
+    },
+    {
+      "id": "Vikas, Dhiman",
+      "name": "Vikas, Dhiman",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ]
+    },
+    {
+      "id": "Ahmed, Aboelezz",
+      "name": "Ahmed, Aboelezz",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ]
+    },
+    {
+      "id": "양은석",
+      "name": "양은석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "국방기술품질원",
+      "name": "국방기술품질원",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "군용 무인항공기",
+      "name": "군용 무인항공기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "지상안테나조립체",
+      "name": "지상안테나조립체",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "Bit",
+      "name": "Bit",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "데이터링크",
+      "name": "데이터링크",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "지상통제장비",
+      "name": "지상통제장비",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "Lna",
+      "name": "Lna",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "엔코더",
+      "name": "엔코더",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "방위각",
+      "name": "방위각",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "고각",
+      "name": "고각",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ]
+    },
+    {
+      "id": "Ooda Loop",
+      "name": "Ooda Loop",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Tactical Framework",
+      "name": "Tactical Framework",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Unmanned Carrier",
+      "name": "Unmanned Carrier",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Tactical Orchestrator",
+      "name": "Tactical Orchestrator",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Domain-Specialized Agent",
+      "name": "Domain-Specialized Agent",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Heterogeneous Unmanned Forces",
+      "name": "Heterogeneous Unmanned Forces",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Defense Science And Research Laboratory",
+      "name": "Defense Science And Research Laboratory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Autonomous Decision-Making",
+      "name": "Autonomous Decision-Making",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Multi-Domain Operations",
+      "name": "Multi-Domain Operations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ]
+    },
+    {
+      "id": "Tianyuan Fan",
+      "name": "Tianyuan Fan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ]
+    },
+    {
+      "id": "Lijun Fu",
+      "name": "Lijun Fu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ]
+    },
+    {
+      "id": "Chuangxin Guo",
+      "name": "Chuangxin Guo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ]
+    },
+    {
+      "id": "Yan Zhang",
+      "name": "Yan Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ]
+    },
+    {
+      "id": "Offshore Wind Farms",
+      "name": "Offshore Wind Farms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ]
+    },
+    {
+      "id": "Multi-Uav Collaborative Inspection",
+      "name": "Multi-Uav Collaborative Inspection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ]
+    },
+    {
+      "id": "Unet",
+      "name": "Unet",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Roy, Sanku Kumar",
+      "name": "Roy, Sanku Kumar",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Samshad, Mohamed",
+      "name": "Samshad, Mohamed",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Rajawat, Ketan",
+      "name": "Rajawat, Ketan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Multi-Uav Communication System",
+      "name": "Multi-Uav Communication System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Multi-Protocol Uav Gateway",
+      "name": "Multi-Protocol Uav Gateway",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Mesh Topology",
+      "name": "Mesh Topology",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Star Topology",
+      "name": "Star Topology",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Ad Hoc Network",
+      "name": "Ad Hoc Network",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Infrastructure Network",
+      "name": "Infrastructure Network",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ]
+    },
+    {
+      "id": "Multi-Objective Evolutionary Algorithm",
+      "name": "Multi-Objective Evolutionary Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Multi-Uav Mission Planning",
+      "name": "Multi-Uav Mission Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Constraint Satisfaction Problem",
+      "name": "Constraint Satisfaction Problem",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Task Assignment",
+      "name": "Task Assignment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Weighted Random Generator",
+      "name": "Weighted Random Generator",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Ramirez-Atencia, Cristian",
+      "name": "Ramirez-Atencia, Cristian",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Ser, Javier Del",
+      "name": "Ser, Javier Del",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Camacho, David",
+      "name": "Camacho, David",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
       ]
     }
   ],
@@ -26389,6 +27317,618 @@
       "type": "AUTHOR",
       "evidence": [
         "raw/papers/swarm/rmworld-task-aware-radio-world-models-with-value-of-information-guided-multi-tri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Matteo Vandelli",
+      "target": "Combinatorial Optimization Of Connected Uav Communication Bridges For Emergency Response",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Daniele Dragoni",
+      "target": "Combinatorial Optimization Of Connected Uav Communication Bridges For Emergency Response",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "5G",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Integer Quadratic Program",
+      "target": "Cplex",
+      "type": "SOLVED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Qubo",
+      "target": "Quantum Adiabatic Algorithm",
+      "type": "SOLVED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Flying Ad-Hoc Networks",
+      "type": "FORMS",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quantum Computing",
+      "target": "Quantum Adiabatic Algorithm",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Guo Lili",
+      "target": "School Of Information Science And Technology",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "School Of Information Science And Technology",
+      "target": "Nantong University",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fixed-Wing Uav",
+      "target": "Los Channels",
+      "type": "OPERATES_OVER",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Energy Efficiency Optimization",
+      "target": "Block Coordinate Descent",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Block Coordinate Descent",
+      "target": "Time-Slot Scheduling",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Block Coordinate Descent",
+      "target": "Transmit Power Control",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Block Coordinate Descent",
+      "target": "Trajectory Design",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Cf-Mmimo",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kalman Filter",
+      "target": "Trajectory Prediction",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trajectory Prediction",
+      "target": "Pilot Assignment",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pilot Assignment",
+      "target": "Pilot Contamination",
+      "type": "MITIGATES",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hungarian Algorithm",
+      "target": "Pilot Assignment",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pilot Assignment",
+      "target": "Sinr",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mahdi Haider Salih",
+      "target": "University Of Tabriz",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ata, Turgut",
+      "target": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vikas, Dhiman",
+      "target": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ahmed, Aboelezz",
+      "target": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "target": "Bladeless Uav Thruster",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Surrogate-Assisted Aerodynamic Design Optimization",
+      "target": "Adaptive Sampling",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/surrogate-assisted-aerodynamic-design-optimization-of-a-bladeless-uav-thruster-w.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "양은석",
+      "target": "국방기술품질원",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지상안테나조립체",
+      "target": "Bit",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지상안테나조립체",
+      "target": "Lna",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지상안테나조립체",
+      "target": "엔코더",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "군용 무인항공기",
+      "target": "데이터링크",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "데이터링크",
+      "target": "지상통제장비",
+      "type": "CONNECTS_TO",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지상안테나조립체",
+      "target": "방위각",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지상안테나조립체",
+      "target": "고각",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/_unclassified/군용-무인항공기-지상안테나조립체-bit-오탐-개선-로직-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Llm",
+      "target": "Multi-Agent System",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Agent System",
+      "target": "Tactical Framework",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tactical Framework",
+      "target": "Unmanned Carrier",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tactical Orchestrator",
+      "target": "Tactical Framework",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Domain-Specialized Agent",
+      "target": "Tactical Framework",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ooda Loop",
+      "target": "Autonomous Decision-Making",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unmanned Carrier",
+      "target": "Heterogeneous Unmanned Forces",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Defense Science And Research Laboratory",
+      "target": "Tactical Framework",
+      "type": "DEVELOPS",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Domain Operations",
+      "target": "Unmanned Carrier",
+      "type": "CONTEXT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tianyuan Fan",
+      "target": "Time-Constrained Multi-Uav Collaborative Inspection For Offshore Wind Farms With Downtime Minimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lijun Fu",
+      "target": "Time-Constrained Multi-Uav Collaborative Inspection For Offshore Wind Farms With Downtime Minimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chuangxin Guo",
+      "target": "Time-Constrained Multi-Uav Collaborative Inspection For Offshore Wind Farms With Downtime Minimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yan Zhang",
+      "target": "Time-Constrained Multi-Uav Collaborative Inspection For Offshore Wind Farms With Downtime Minimization",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Offshore Wind Farms",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Uav Collaborative Inspection",
+      "target": "Offshore Wind Farms",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Roy, Sanku Kumar",
+      "target": "Unet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Samshad, Mohamed",
+      "target": "Unet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rajawat, Ketan",
+      "target": "Unet",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unet",
+      "target": "Multi-Uav Communication System",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unet",
+      "target": "Multi-Protocol Uav Gateway",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Unet",
+      "target": "Ground Control Station",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Uav Communication System",
+      "target": "Mesh Topology",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Uav Communication System",
+      "target": "Star Topology",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Uav Communication System",
+      "target": "Ad Hoc Network",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Uav Communication System",
+      "target": "Infrastructure Network",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/unet-a-generic-and-reliable-multi-uav-communication-and-networking-architecture-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Objective Evolutionary Algorithm",
+      "target": "Multi-Uav Mission Planning",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Ground Control Station",
+      "type": "CONTROLLED_BY",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Uav Mission Planning",
+      "target": "Constraint Satisfaction Problem",
+      "type": "MODELED_AS",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Weighted Random Generator",
+      "target": "Multi-Objective Evolutionary Algorithm",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Task Assignment",
+      "target": "Uav",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarm Coordination",
+      "target": "Multi-Uav Mission Planning",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ramirez-Atencia, Cristian",
+      "target": "Multi-Objective Evolutionary Algorithm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ser, Javier Del",
+      "target": "Multi-Objective Evolutionary Algorithm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Camacho, David",
+      "target": "Multi-Objective Evolutionary Algorithm",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
       ],
       "confidence": "unverified"
     }

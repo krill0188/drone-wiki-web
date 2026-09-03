@@ -5399,6 +5399,99 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "drone-news-2026-09-04",
+      "name": "드론 업계 주요 소식 (2026-09-04)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "hardware",
+        "ops-mission"
+      ],
+      "updated": "2026-09-04",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "llm-uav-carrier-tactical-agent",
+      "name": "무인기 모함 LLM 기반 자율 전술 에이전트 프레임워크",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "swarm",
+        "drone-ai"
+      ],
+      "updated": "2026-09-04",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "military-uav-gca-bit-false-alarm",
+      "name": "군용 무인항공기 지상안테나조립체 BIT 오탐 개선 로직",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "drone-hw",
+        "datalink"
+      ],
+      "updated": "2026-09-04",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "uav-cf-mmimo-pilot-assignment",
+      "name": "이동성 인식 파일럿 할당 for UAV-only CF-mMIMO 네트워크",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "comms-protocol"
+      ],
+      "updated": "2026-09-04",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "uav-comm-bridges-qubo-optimization",
+      "name": "재난 대응 UAV 통신 브릿지 조합 최적화 (QUBO/양자 컴퓨팅)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "swarm",
+        "comms-protocol"
+      ],
+      "updated": "2026-09-04",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "uav-uplink-energy-efficiency-los",
+      "name": "UAV 지원 업링크 전송 에너지 효율 최적화 (확률적 LoS 채널)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "comms-protocol"
+      ],
+      "updated": "2026-09-04",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     }
   ],
   "edges": [
@@ -18739,6 +18832,131 @@
       "type": "related",
       "evidence": [],
       "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-04",
+      "target": "dji-enterprise",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-04",
+      "target": "drone-first-responder-dfr",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-04",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-04",
+      "target": "betaflight",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "llm-uav-carrier-tactical-agent",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "llm-uav-carrier-tactical-agent",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "military-uav-gca-bit-false-alarm",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "military-uav-gca-bit-false-alarm",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-cf-mmimo-pilot-assignment",
+      "target": "unet-multi-uav-networking",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-cf-mmimo-pilot-assignment",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-comm-bridges-qubo-optimization",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-comm-bridges-qubo-optimization",
+      "target": "unet-multi-uav-networking",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-uplink-energy-efficiency-los",
+      "target": "unet-multi-uav-networking",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-uplink-energy-efficiency-los",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-denied-remote-autonomy",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "gnss-denied-remote-autonomy",
+      "target": "ground-control-station",
+      "type": "related",
+      "evidence": [
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "slei3d-heterogeneous-fleet-exploration",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "high"
     }
   ]
 }
