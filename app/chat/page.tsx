@@ -7,7 +7,7 @@ import { DefaultChatTransport, type UIMessage } from "ai"
 import { DOMAIN_META } from "@/lib/types"
 
 interface ChatMetadata {
-  sources?: { slug: string; title: string; domain: string }[]
+  sources?: { slug: string; title: string; domain: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
 }
 
@@ -108,6 +108,26 @@ export default function ChatPage() {
                     <div className="flex flex-wrap gap-1.5 mt-1.5">
                       {meta.sources.map((s) => {
                         const domainMeta = DOMAIN_META[s.domain as keyof typeof DOMAIN_META]
+                        // raw(원문·미검증)는 /wiki/[slug] 페이지가 없다 — 원본 출처로
+                        // 링크하거나(있으면), 없으면 링크 없이 라벨만 보여준다.
+                        if (s.origin === "raw") {
+                          const pillStyle = {
+                            display: "inline-flex", alignItems: "center", gap: "0.25rem",
+                            padding: "0.2rem 0.6rem", borderRadius: "9999px", fontSize: "0.7rem",
+                            border: "1px dashed #94a3b8", color: "#64748b", textDecoration: "none",
+                          } as const
+                          return s.sourceUrl ? (
+                            <a key={s.slug} href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={pillStyle}>
+                              <span>📎</span>
+                              <span>{s.title}</span>
+                            </a>
+                          ) : (
+                            <span key={s.slug} style={pillStyle}>
+                              <span>📎</span>
+                              <span>{s.title}</span>
+                            </span>
+                          )
+                        }
                         return (
                           <Link
                             key={s.slug}

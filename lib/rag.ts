@@ -14,6 +14,12 @@ function resolveWikiRoot() {
 
 const WIKI_ROOT = resolveWikiRoot()
 const LAYER_DIRS = ["concepts", "entities", "comparisons", "queries"]
+// raw/ 원문(Layer 1, 미검증 증거) 중 RAG 검색 대상에 포함할 하위 디렉터리(2026-09-04).
+// career-quiz/는 드론과 무관한 커리어 퀴즈 콘텐츠라 제외, papers/files/는 PDF 첨부
+// 바이너리(로컬 전용·git 미추적)라 애초에 .md가 없어 별도 제외 불필요 — 그래도
+// 재귀 스캔 비용을 아끼려 아래 RAW_EXCLUDE_DIRS로 명시 제외한다.
+const RAW_DIRS = ["raw/papers", "raw/articles", "raw/youtube", "raw/videos", "raw/releases"]
+const RAW_EXCLUDE_DIRS = new Set(["files"]) // raw/papers/files/ — PDF 첨부, .md 없음
 
 // Phase 2 하이브리드 검색 상수. venv/embeddings.json은 둘 다 .gitignore
 // 대상이라 Vercel 배포본에는 존재하지 않는다 — 즉 로컬 dev(~/2nd/.venv 실존)
@@ -35,6 +41,9 @@ export interface RagSource {
   score: number
   tags: string[]
   properties?: Record<string, string>
+  // canonical: daily-ingest가 검증·컴파일한 위키 문서(신뢰 계층).
+  // raw: 원문 그대로(Layer 1, 사람 검토 전) — 답변에 쓸 때 출처 표시가 더 필요하다.
+  origin: "canonical" | "raw"
 }
 
 interface RawDoc {
@@ -45,6 +54,28 @@ interface RawDoc {
   tags: string[]
   content: string
   properties: Record<string, string>
+  origin: "canonical" | "raw"
+}
+
+// raw/ frontmatter는 canonical과 스키마가 다르다(SCHEMA.md "raw/ Frontmatter") —
+// title/domain이 없는 파일이 흔하다(예: raw/articles 41개 중 20개가 title 누락,
+// raw/papers 124개 중 103개가 domain 누락, 대신 papers/<domain-subdir>/ 로 표현됨).
+// canonical의 "title 없으면 스킵" 규칙을 그대로 적용하면 raw 절반이 사라지므로
+// 폴백을 둔다.
+function deriveTitle(data: Record<string, unknown>, content: string, filename: string): string {
+  if (data.title) return String(data.title)
+  const heading = content.match(/^#\s+(.+)$/m)
+  if (heading) return heading[1].trim()
+  return filename.replace(/\.md$/, "").replace(/[-_]/g, " ")
+}
+
+function deriveDomain(data: Record<string, unknown>, relPath: string): string {
+  if (data.domain) return String(data.domain)
+  // raw/papers/<domain>/file.md — 서브디렉터리 이름 자체가 domain 택소노미 값인
+  // 경우가 많다. 단 _unclassified/는 "아직 분류 안 됨" 버킷이라 진짜 도메인이
+  // 아니므로 빈 값으로 취급한다(UI에 가짜 도메인 배지가 뜨는 것 방지).
+  const m = relPath.match(/^raw\/papers\/([^/]+)\//)
+  return m && m[1] !== "_unclassified" ? m[1] : ""
 }
 
 // 2026-08-20 팔란티어 온톨로지 Link 보강(apply-kinetic-rules.py)으로 entities/
@@ -59,6 +90,20 @@ const ONTOLOGY_PROPERTY_KEYS = [
   "dimensionsMm", "mcu", "representative_model", "sensorType", "resolutionMp",
   "imuArray", "deploymentLocation", "parameterCount", "aiModelClass",
 ]
+
+// raw 문서 전용 인용 정보 — canonical의 ontology 속성과는 성격이 달라(구조화
+// 스펙이 아니라 출처 추적용) 별도 화이트리스트로 둔다. 논문은 source(arXiv 등
+// URL)·authors가 있어 실제 인용 가능한 근거가 된다.
+const RAW_CITATION_KEYS = ["source", "source_url", "authors", "published", "channel"]
+
+function extractRawCitation(data: Record<string, unknown>): Record<string, string> {
+  const props: Record<string, string> = {}
+  for (const key of RAW_CITATION_KEYS) {
+    const v = data[key]
+    if (v !== undefined && v !== null && v !== "") props[key] = String(v)
+  }
+  return props
+}
 
 function extractOntologyProperties(data: Record<string, unknown>, wikiRoot: string): Record<string, string> {
   const props: Record<string, string> = {}
@@ -82,9 +127,31 @@ function extractOntologyProperties(data: Record<string, unknown>, wikiRoot: stri
 // 안전하다 — 배포마다 새 워커가 뜨면 자동으로 새로 로드된다.
 let _docsCache: RawDoc[] | null = null
 
+// raw/papers는 도메인별 하위 디렉터리로 중첩돼 있어(concepts/entities 등 canonical
+// 4계층과 달리 flat이 아님) 재귀 스캔이 필요하다.
+function walkMarkdownFiles(dirPath: string, relBase: string): { relPath: string; filename: string }[] {
+  const out: { relPath: string; filename: string }[] = []
+  let entries: fs.Dirent[]
+  try {
+    entries = fs.readdirSync(dirPath, { withFileTypes: true })
+  } catch {
+    return out
+  }
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      if (RAW_EXCLUDE_DIRS.has(entry.name)) continue
+      out.push(...walkMarkdownFiles(path.join(dirPath, entry.name), `${relBase}/${entry.name}`))
+    } else if (entry.isFile() && entry.name.endsWith(".md")) {
+      out.push({ relPath: `${relBase}/${entry.name}`, filename: entry.name })
+    }
+  }
+  return out
+}
+
 function loadAllDocs(): RawDoc[] {
   if (_docsCache) return _docsCache
   const docs: RawDoc[] = []
+
   for (const dir of LAYER_DIRS) {
     const dirPath = path.join(WIKI_ROOT, dir)
     if (!fs.existsSync(dirPath)) continue
@@ -101,10 +168,35 @@ function loadAllDocs(): RawDoc[] {
           tags: Array.isArray(data.tags) ? data.tags : [],
           content,
           properties: extractOntologyProperties(data, WIKI_ROOT),
+          origin: "canonical",
         })
       } catch { /* skip */ }
     }
   }
+
+  for (const dir of RAW_DIRS) {
+    const dirPath = path.join(WIKI_ROOT, dir)
+    if (!fs.existsSync(dirPath)) continue
+    for (const { relPath, filename } of walkMarkdownFiles(dirPath, dir)) {
+      try {
+        const raw = fs.readFileSync(path.join(WIKI_ROOT, relPath), "utf-8")
+        const { data, content } = matter(raw)
+        // slug 충돌 방지 — raw는 canonical과 파일명 네임스페이스가 분리돼 있지 않다.
+        const slug = `raw-${relPath.replace(/^raw\//, "").replace(/\.md$/, "").replace(/\//g, "-")}`
+        docs.push({
+          slug,
+          path: relPath,
+          title: deriveTitle(data, content, filename),
+          domain: deriveDomain(data, relPath),
+          tags: Array.isArray(data.tags) ? data.tags : [],
+          content,
+          properties: extractRawCitation(data),
+          origin: "raw",
+        })
+      } catch { /* skip */ }
+    }
+  }
+
   _docsCache = docs
   return docs
 }
@@ -256,6 +348,7 @@ export function ragSearch(query: string, topK = 5, opts?: { diversify?: boolean 
     score,
     tags: doc.tags,
     properties: Object.keys(doc.properties).length ? doc.properties : undefined,
+    origin: doc.origin,
   }))
 }
 

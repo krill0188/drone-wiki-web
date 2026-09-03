@@ -13,7 +13,7 @@ import { buildTextFragmentUrl } from "@/lib/text-fragment"
 const CHAT_FEATURE_KEY = "chat"
 
 interface ChatMetadata {
-  sources?: { slug: string; title: string; domain: string; excerpt?: string }[]
+  sources?: { slug: string; title: string; domain: string; excerpt?: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
 }
 
@@ -216,6 +216,36 @@ export default function ChatWidget() {
                       <div className="flex flex-wrap gap-1 mt-1">
                       {meta.sources.map((s) => {
                         const domainMeta = DOMAIN_META[s.domain as keyof typeof DOMAIN_META]
+                        // raw(원문·미검증)는 /wiki/[slug] 페이지가 없다 — canonical
+                        // 4계층(concepts/entities/comparisons/queries)만 위키 페이지로
+                        // 발행된다. raw는 대신 원본 출처(source/source_url, 있으면)로
+                        // 링크하고, 없으면 링크 없는 라벨로만 표시한다.
+                        if (s.origin === "raw") {
+                          const label = (
+                            <>
+                              <span>📎</span>
+                              <span>{s.title}</span>
+                            </>
+                          )
+                          return s.sourceUrl ? (
+                            <a
+                              key={s.slug}
+                              href={s.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-hud border border-dashed no-underline text-ink-dim"
+                            >
+                              {label}
+                            </a>
+                          ) : (
+                            <span
+                              key={s.slug}
+                              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-hud border border-dashed text-ink-dim"
+                            >
+                              {label}
+                            </span>
+                          )
+                        }
                         // NotebookLM 벤치마킹(2026-08-09): 인용 클릭 시 문서 맨 위가
                         // 아니라 근거 문단으로 점프시킨다. 브라우저 네이티브 Text
                         // Fragment는 완전한 문서 내비게이션에서만 안정적으로

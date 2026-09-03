@@ -31,9 +31,10 @@ function buildGroundingBlock(query: string): string {
   const kb = sources
     .map((s, i) => {
       const propsLine = s.properties && Object.keys(s.properties).length
-        ? `\n온톨로지 속성: ${Object.entries(s.properties).map(([k, v]) => `${k}=${v}`).join(", ")}`
+        ? `\n${s.origin === "raw" ? "출처 정보" : "온톨로지 속성"}: ${Object.entries(s.properties).map(([k, v]) => `${k}=${v}`).join(", ")}`
         : ""
-      return `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}${propsLine}`
+      const originTag = s.origin === "raw" ? " [원문·미검증]" : ""
+      return `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}${originTag}\n${s.excerpt}${propsLine}`
     })
     .join("\n\n")
   return `<knowledge-base>\n${kb || "(관련 위키 문서 없음)"}\n</knowledge-base>\n\n${graph.block}`

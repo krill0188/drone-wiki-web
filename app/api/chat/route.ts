@@ -32,9 +32,12 @@ function buildSystemPrompt(
     // 예전엔 excerpt(본문 앞 600자)만 넘겨 "무게가 몇 그램이야?" 같은 질문에
     // frontmatter에만 있는 값을 AI가 못 찾았다(실측 확인된 문제).
     const propsLine = s.properties && Object.keys(s.properties).length
-      ? `\n온톨로지 속성: ${Object.entries(s.properties).map(([k, v]) => `${k}=${v}`).join(", ")}`
+      ? `\n${s.origin === "raw" ? "출처 정보" : "온톨로지 속성"}: ${Object.entries(s.properties).map(([k, v]) => `${k}=${v}`).join(", ")}`
       : ""
-    return `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}\n${s.excerpt}${propsLine}`
+    // raw는 daily-ingest가 아직 검증·컴파일하지 않은 원문(Layer 1)이다 — canonical과
+    // 신뢰도가 다르므로 컨텍스트에 명시해 모델이 그에 맞게 인용하도록 한다.
+    const originTag = s.origin === "raw" ? " [원문·미검증]" : ""
+    return `[${i + 1}] **${s.title}**${s.domain ? ` (${s.domain})` : ""}${originTag}\n${s.excerpt}${propsLine}`
   })
   const newsParts = newsHits.map(
     (n, i) => `[N${i + 1}] (${n.type}${n.region ? `/${n.region}` : ""}) ${n.title}${n.excerpt ? ` — ${n.excerpt}` : ""}`
@@ -137,7 +140,14 @@ export async function POST(req: NextRequest) {
       messageMetadata: ({ part }) => {
         if (part.type === "finish") {
           return {
-            sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain, excerpt: s.excerpt })),
+            sources: sources.map((s) => ({
+              slug: s.slug,
+              title: s.title,
+              domain: s.domain,
+              excerpt: s.excerpt,
+              origin: s.origin,
+              sourceUrl: s.properties?.source || s.properties?.source_url,
+            })),
             newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
           }
         }
