@@ -5247,6 +5247,158 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "amprius-sicore-battery",
+      "name": "Amprius SiCore 2세대 배터리 셀 (500 Wh/kg)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone-hw",
+        "hardware",
+        "drone"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "betaflight-fc-alignment-wizard",
+      "name": "Betaflight 2026.6 FC Alignment Wizard",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone-hw",
+        "hardware",
+        "drone-sw",
+        "fpv"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "california-drone-concert-restriction",
+      "name": "캘리포니아 AB 2113 드론 공연 제한 (2026)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "regulations",
+        "drone"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "drone-news-2026-09-03",
+      "name": "드론 업계 주요 소식 (2026-09-03)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "hardware",
+        "ops-mission"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-counter-drone-hardkill-engagement-zone",
+      "name": "대드론 하드킬 무인기의 교전영역 계산 알고리즘 개발",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "drone-ai"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-delta-wing-uav-rcs-optimization",
+      "name": "레이더 반사 면적을 고려한 델타형 무인항공기 날개 형상 최적화",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone-hw",
+        "hardware",
+        "drone"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-lightweight-uav-precision-imaging",
+      "name": "고정밀 영상 획득을 위한 경량 무인비행체 플랫폼 개발",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone-hw",
+        "hardware",
+        "drone"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-multi-uav-clustering-path-generation",
+      "name": "다중 무인기 데이터 수집에서 클러스터링 및 경로 생성 기법 특성 연구",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "swarm",
+        "ops-mission",
+        "drone-ai",
+        "drone"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "yolo-v8-4-138",
+      "name": "YOLO v8.4.138 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "heven-aerotech",
+      "name": "Heven AeroTech",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "company",
+        "hardware",
+        "drone-hw",
+        "drone"
+      ],
+      "updated": "2026-09-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     }
   ],
   "edges": [
@@ -18404,6 +18556,188 @@
       "evidence": [
         "inbox/fetch-2026-09-02-rss-dronedj.md"
       ],
+      "confidence": "medium"
+    },
+    {
+      "source": "amprius-sicore-battery",
+      "target": "heven-aerotech",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "amprius-sicore-battery",
+      "target": "drone-power-battery",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "betaflight-fc-alignment-wizard",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "betaflight-fc-alignment-wizard",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "california-drone-concert-restriction",
+      "target": "michigan-drone-lawsuit",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "california-drone-concert-restriction",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "california-drone-concert-restriction",
+      "target": "faa-deter-program",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-03",
+      "target": "heven-aerotech",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-03",
+      "target": "amprius-sicore-battery",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-03",
+      "target": "dronetag",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-03",
+      "target": "airwise-nexus",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-03",
+      "target": "california-drone-concert-restriction",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-03",
+      "target": "dji-matrice-5-rumor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "kci-counter-drone-hardkill-engagement-zone",
+      "target": "drone-wall-defense-system",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-counter-drone-hardkill-engagement-zone",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-delta-wing-uav-rcs-optimization",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-delta-wing-uav-rcs-optimization",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-lightweight-uav-precision-imaging",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-lightweight-uav-precision-imaging",
+      "target": "drone-hw",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-multi-uav-clustering-path-generation",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-multi-uav-clustering-path-generation",
+      "target": "drone-ai",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-138",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-138",
+      "target": "yolo-v8-4-137",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-138",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "heven-aerotech",
+      "target": "epropelled",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "heven-aerotech",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [],
       "confidence": "medium"
     }
   ]
