@@ -194,7 +194,36 @@ function hybridScore(
   return { score: HYBRID_VECTOR_WEIGHT * cos + HYBRID_KEYWORD_WEIGHT * kwNorm, cosine: cos }
 }
 
-export function ragSearch(query: string, topK = 5): RagSource[] {
+// 질의마다 답변이 비슷해지는 원인 중 하나 — 콘텐츠가 몰린 "허브" 문서(예:
+// Pixhawk/PX4류)가 키워드 겹침이 커서 서로 다른 질문에도 반복적으로 top-K를
+// 독점하는 현상. 순위는 그대로 신뢰하되, 같은 domain이 결과 절반을 넘게
+// 차지하지 않도록 그리디하게 골라 담아 매 응답의 근거 자료 자체를 다양화한다.
+// (diversify: false면 기존 동작 그대로 — 상위 호출부에서 옵트인.)
+function selectDiverse<T extends { doc: RawDoc; score: number }>(ranked: T[], topK: number): T[] {
+  const maxPerDomain = Math.max(2, Math.ceil(topK / 3))
+  const domainCount: Record<string, number> = {}
+  const selected: T[] = []
+  const skipped: T[] = []
+  for (const item of ranked) {
+    const d = item.doc.domain || "unknown"
+    if ((domainCount[d] ?? 0) >= maxPerDomain) {
+      skipped.push(item)
+      continue
+    }
+    domainCount[d] = (domainCount[d] ?? 0) + 1
+    selected.push(item)
+    if (selected.length >= topK) return selected
+  }
+  // 도메인 상한 때문에 topK를 못 채웠으면 밀려난 것들로 부족분을 채운다
+  // (원래 순위 그대로 — 다양성 우선이 결과 개수를 줄이지는 않는다).
+  for (const item of skipped) {
+    if (selected.length >= topK) break
+    selected.push(item)
+  }
+  return selected
+}
+
+export function ragSearch(query: string, topK = 5, opts?: { diversify?: boolean }): RagSource[] {
   const docs = loadAllDocs()
   const qTokens = tokenize(query)
   // G3(2026-08-02): 질의가 온톨로지 상위 클래스(예: FlightStack)를 가리키면
@@ -206,7 +235,7 @@ export function ragSearch(query: string, topK = 5): RagSource[] {
   const embeddings = loadEmbeddings()
   const queryVec = embeddings.size > 0 ? embedQuery(query) : null
 
-  return docs
+  const ranked = docs
     .map((doc) => {
       const kw = keywordScore(qTokens, doc)
       const { score, cosine: cos } = hybridScore(kw, qTokens, queryVec, doc, embeddings)
@@ -216,16 +245,18 @@ export function ragSearch(query: string, topK = 5): RagSource[] {
     // (예: "군집 비행" 질의로 영문 전용 문서를 찾아내는 것이 Phase 2 목표).
     .filter((x) => x.kw > 0 || x.cosine >= MIN_COSINE_INCLUDE)
     .sort((a, b) => b.score - a.score)
-    .slice(0, topK)
-    .map(({ doc, score }) => ({
-      slug: doc.slug,
-      title: doc.title,
-      domain: doc.domain,
-      excerpt: doc.content.slice(0, 600).replace(/^#[^\n]+\n/, "").trim(),
-      score,
-      tags: doc.tags,
-      properties: Object.keys(doc.properties).length ? doc.properties : undefined,
-    }))
+
+  const picked = opts?.diversify ? selectDiverse(ranked, topK) : ranked.slice(0, topK)
+
+  return picked.map(({ doc, score }) => ({
+    slug: doc.slug,
+    title: doc.title,
+    domain: doc.domain,
+    excerpt: doc.content.slice(0, 600).replace(/^#[^\n]+\n/, "").trim(),
+    score,
+    tags: doc.tags,
+    properties: Object.keys(doc.properties).length ? doc.properties : undefined,
+  }))
 }
 
 export interface NewsHit {

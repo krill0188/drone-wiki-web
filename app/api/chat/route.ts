@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
   // 현재 보고 있는 문서 제목을 검색어에 섞어 RAG 검색을 문서 맥락에 맞춰 편향시킨다.
   const ragQuery = docContext ? `${docContext.title} ${question}` : question
 
-  const sources = ragQuery ? ragSearch(ragQuery, 5) : []
+  const sources = ragQuery ? ragSearch(ragQuery, 6, { diversify: true }) : []
   const newsHits = ragQuery ? searchNews(ragQuery, 4) : []
   // 벡터/키워드로 찾은 canonical 시드에서 출발해 canonical+discovery 그래프를
   // 함께 멀티홉 탐색 — 드론 지식과 AI 지식을 잇는 연결고리를 찾는 GraphRAG 레이어.

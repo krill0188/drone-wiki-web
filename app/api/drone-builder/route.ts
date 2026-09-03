@@ -26,7 +26,7 @@ interface StageContext {
 }
 
 function buildGroundingBlock(query: string): string {
-  const sources = ragSearch(query, 6)
+  const sources = ragSearch(query, 8, { diversify: true })
   const graph = graphRagSearch(query, sources.map((s) => s.slug))
   const kb = sources
     .map((s, i) => {
