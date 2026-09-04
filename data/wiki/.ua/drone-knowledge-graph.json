@@ -886,7 +886,7 @@
         "drone-sw",
         "flight-control"
       ],
-      "updated": "2026-07-29",
+      "updated": "2026-09-05",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1077,10 +1077,10 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-01",
+      "updated": "2026-09-05",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "dji-everest-mapping",
@@ -4915,7 +4915,7 @@
       "id": "fcc-military-drone-restrictions",
       "name": "FCC Military-Grade Drone Restrictions Proposal",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "regulations",
       "tags": [
         "drone",
         "regulations",
@@ -4923,10 +4923,10 @@
         "import",
         "policy"
       ],
-      "updated": "2026-09-01",
+      "updated": "2026-09-05",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AbstractProcess"
     },
     {
       "id": "ga-asi-fujitsu-mou",
@@ -5492,6 +5492,174 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "aliexpress-125-fpv-drone-build",
+      "name": "AliExpress $125 FPV 드론 조립/리뷰",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "fpv"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "drone-backyard-flight-legality",
+      "name": "이웃집 마당 위 드론 비행의 합법성",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "drone-fluxgate-magnetometer-crossline-correction",
+      "name": "드론 탑재 삼성분 플럭스게이트 자력탐사 교차점 오차 보정",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "drone-hw"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "drone-news-2026-09-05",
+      "name": "드론 업계 주요 소식 (2026-09-05)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "hardware",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "param-diff-copter-4-7-0-4-7-1",
+      "name": "ArduPilot Copter 4.7.0 → 4.7.1 파라미터 변경 전체 목록",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "parameter",
+        "diff",
+        "copter"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "param-diff-plane-4-7-0-4-7-1",
+      "name": "ArduPilot Plane 4.7.0 → 4.7.1 파라미터 변경 전체 목록",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "flight-control",
+        "parameter",
+        "diff",
+        "plane"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "pine-wilt-disease-uav-detection",
+      "name": "UAV 영상 기반 소나무재선충병 탐지 정확도 비교",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "drone-ai"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "uav-imagery-ground-vehicle-localization",
+      "name": "UAV 영상 기반 지상차량 시각 위치추정: 참조DB 구축 vs 질의단계 매칭",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "uav-support-facility-robust-location-planning",
+      "name": "시설 고장을 고려한 UAV 감시 지원시설 강건 입지 계획",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "vit-uavcom-vision-inertial-uav-communication",
+      "name": "VIT-UAVCom: Vision-Inertial Tracking-Assisted UAV Communication",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "comms-protocol",
+        "drone-ai"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "yolo-v8-4-139",
+      "name": "YOLO v8.4.139 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-05",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     }
   ],
   "edges": [
@@ -18955,6 +19123,238 @@
       "type": "related",
       "evidence": [
         "raw/papers/drone-sw/slei3d-heterogeneous-fleet-exploration.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "aliexpress-125-fpv-drone-build",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "aliexpress-125-fpv-drone-build",
+      "target": "fpv-motor-selection-guide",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-backyard-flight-legality",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-backyard-flight-legality",
+      "target": "michigan-drone-lawsuit",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-fluxgate-magnetometer-crossline-correction",
+      "target": "drone-payload-systems",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-fluxgate-magnetometer-crossline-correction",
+      "target": "sensor-calibration",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-05",
+      "target": "fcc-military-drone-restrictions",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-05",
+      "target": "fcc-military-drone-restrictions",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-05",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-05",
+      "target": "wing-nhs-medical-delivery",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "param-diff-copter-4-7-0-4-7-1",
+      "target": "ardupilot-params-by-version",
+      "type": "wikilink",
+      "evidence": [
+        "공식 파라미터 메타데이터 자동 diff"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "param-diff-plane-4-7-0-4-7-1",
+      "target": "ardupilot-params-by-version",
+      "type": "wikilink",
+      "evidence": [
+        "공식 파라미터 메타데이터 자동 diff"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "pine-wilt-disease-uav-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/comparison-of-uav-image-based-detection-accuracy-of-pine-wilt-disease-affected-t.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "pine-wilt-disease-uav-detection",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/comparison-of-uav-image-based-detection-accuracy-of-pine-wilt-disease-affected-t.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "pine-wilt-disease-uav-detection",
+      "target": "drone-lidar-forest-boundary",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/comparison-of-uav-image-based-detection-accuracy-of-pine-wilt-disease-affected-t.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-imagery-ground-vehicle-localization",
+      "target": "visual-positioning-odometry",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-imagery-ground-vehicle-localization",
+      "target": "gps-uav-imu",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-imagery-ground-vehicle-localization",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-support-facility-robust-location-planning",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/시설-고장-상황을-고려한-uav-감시-지원시설의-강건-입지-계획-문제.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-support-facility-robust-location-planning",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/시설-고장-상황을-고려한-uav-감시-지원시설의-강건-입지-계획-문제.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-support-facility-robust-location-planning",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/시설-고장-상황을-고려한-uav-감시-지원시설의-강건-입지-계획-문제.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vit-uavcom-vision-inertial-uav-communication",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vit-uavcom-vision-inertial-uav-communication",
+      "target": "gps-uav-imu",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vit-uavcom-vision-inertial-uav-communication",
+      "target": "active-sensing-uav-communication",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-139",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-139",
+      "target": "yolo-v8-4-138",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-139",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-138",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
       ],
       "confidence": "high"
     }

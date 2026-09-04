@@ -628,7 +628,8 @@
         "raw/articles/mastervault-px4-devnotes.md",
         "raw/articles/px4-architecture.md",
         "raw/articles/px4-system-architecture.md",
-        "raw/papers/drone-ai/gaona2026-lidar-odometry.md"
+        "raw/papers/drone-ai/gaona2026-lidar-odometry.md",
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
       ]
     },
     {
@@ -2873,7 +2874,8 @@
         "raw/articles/px4-basic-concepts.md",
         "raw/articles/px4-hardware-overview.md",
         "raw/papers/drone-sw/gnss-denied-remote-autonomy-sar.md",
-        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md"
+        "raw/papers/gcs-software/gnss-denied-remote-autonomy.md",
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
       ]
     },
     {
@@ -3008,7 +3010,10 @@
         "raw/papers/_unclassified/energy-efficiency-optimization-for-uav-assisted-uplink-transmissions-over-probab.md",
         "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md",
         "raw/papers/swarm/time-constrained-multi-uav-collaborative-inspection-for-offshore-wind-farms-with.md",
-        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+        "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md",
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md",
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md",
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
       ]
     },
     {
@@ -10334,7 +10339,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md",
-        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+        "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md",
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
       ]
     },
     {
@@ -15841,6 +15847,474 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ]
+    },
+    {
+      "id": "Vit-Uavcom",
+      "name": "Vit-Uavcom",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Vision-Inertial Tracking",
+      "name": "Vision-Inertial Tracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Gps-Denied",
+      "name": "Gps-Denied",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Non-Terrestrial Networks",
+      "name": "Non-Terrestrial Networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "K-Means",
+      "name": "K-Means",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Linear Search",
+      "name": "Linear Search",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Binary Search",
+      "name": "Binary Search",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Genetic Search",
+      "name": "Genetic Search",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Ghazy, Abdallah S.",
+      "name": "Ghazy, Abdallah S.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Ammar, Hussein A.",
+      "name": "Ammar, Hussein A.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Bayes, James",
+      "name": "Bayes, James",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Chan, Francois",
+      "name": "Chan, Francois",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Transmission-Line Anomaly Detection",
+      "name": "Transmission-Line Anomaly Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Frozen Rank Consensus",
+      "name": "Frozen Rank Consensus",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Detector Uncertainty",
+      "name": "Detector Uncertainty",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Sample-Preserving Evaluation",
+      "name": "Sample-Preserving Evaluation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Zheng Cao",
+      "name": "Zheng Cao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Zhongjun Fu",
+      "name": "Zhongjun Fu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Keyang Li",
+      "name": "Keyang Li",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Xingyue Zhou",
+      "name": "Xingyue Zhou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Hang Rao",
+      "name": "Hang Rao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ]
+    },
+    {
+      "id": "Ugv",
+      "name": "Ugv",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ]
+    },
+    {
+      "id": "Image-Based Reference Maps",
+      "name": "Image-Based Reference Maps",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ]
+    },
+    {
+      "id": "Ground Vehicle Visual Localization",
+      "name": "Ground Vehicle Visual Localization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ]
+    },
+    {
+      "id": "서울시립대",
+      "name": "서울시립대",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ]
+    },
+    {
+      "id": "공간정보공학과",
+      "name": "공간정보공학과",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ]
+    },
+    {
+      "id": "플럭스게이트 자력계",
+      "name": "플럭스게이트 자력계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "멀티콥터",
+      "name": "멀티콥터",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "스칼라 자력계",
+      "name": "스칼라 자력계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "벡터 자력계",
+      "name": "벡터 자력계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "자세 센서",
+      "name": "자세 센서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "부산대학교",
+      "name": "부산대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "정경서",
+      "name": "정경서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "자력 탐사",
+      "name": "자력 탐사",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "교차점 오차 보정",
+      "name": "교차점 오차 보정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "측선 간 레벨링 보정",
+      "name": "측선 간 레벨링 보정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "점성자화",
+      "name": "점성자화",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "선형 오차",
+      "name": "선형 오차",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "회전 불변량",
+      "name": "회전 불변량",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
       ]
     }
   ],
@@ -27929,6 +28403,303 @@
       "type": "AUTHOR",
       "evidence": [
         "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vit-Uavcom",
+      "target": "Vision-Inertial Tracking",
+      "type": "INCORPORATES",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vit-Uavcom",
+      "target": "Uav",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vit-Uavcom",
+      "target": "Imu",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vision-Inertial Tracking",
+      "target": "Uav",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vit-Uavcom",
+      "target": "Non-Terrestrial Networks",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vit-Uavcom",
+      "target": "Gps-Denied",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Linear Search",
+      "target": "Vit-Uavcom",
+      "type": "OPTIMIZER_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Binary Search",
+      "target": "Vit-Uavcom",
+      "type": "OPTIMIZER_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Genetic Search",
+      "target": "Vit-Uavcom",
+      "type": "OPTIMIZER_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-Means",
+      "target": "Vit-Uavcom",
+      "type": "BENCHMARK_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ghazy, Abdallah S.",
+      "target": "Vit-Uavcom",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ammar, Hussein A.",
+      "target": "Vit-Uavcom",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bayes, James",
+      "target": "Vit-Uavcom",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chan, Francois",
+      "target": "Vit-Uavcom",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Transmission-Line Anomaly Detection",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Frozen Rank Consensus",
+      "target": "Transmission-Line Anomaly Detection",
+      "type": "METHOD_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sample-Preserving Evaluation",
+      "target": "Transmission-Line Anomaly Detection",
+      "type": "EVALUATION_METHOD_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Detector Uncertainty",
+      "target": "Transmission-Line Anomaly Detection",
+      "type": "CHALLENGE_IN",
+      "evidence": [
+        "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Ground Vehicle Visual Localization",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ugv",
+      "target": "Ground Vehicle Visual Localization",
+      "type": "SUBJECT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gnss",
+      "target": "Ground Vehicle Visual Localization",
+      "type": "ALTERNATIVE_TO",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Image-Based Reference Maps",
+      "target": "Ground Vehicle Visual Localization",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Image-Based Reference Maps",
+      "type": "PROVIDES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정진우",
+      "target": "서울시립대",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정경서",
+      "target": "부산대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "플럭스게이트 자력계",
+      "target": "벡터 자력계",
+      "type": "IS_TYPE_OF",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "플럭스게이트 자력계",
+      "target": "드론",
+      "type": "MOUNTED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자세 센서",
+      "target": "드론",
+      "type": "MOUNTED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "자력 탐사",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "멀티콥터",
+      "target": "자력 탐사",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "교차점 오차 보정",
+      "target": "플럭스게이트 자력계",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "측선 간 레벨링 보정",
+      "target": "교차점 오차 보정",
+      "type": "METHOD_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자세 센서",
+      "target": "선형 오차",
+      "type": "CAUSES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
       ],
       "confidence": "unverified"
     }

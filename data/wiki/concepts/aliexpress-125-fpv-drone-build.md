@@ -26,3 +26,6 @@ $125)를 구매해 조립하고 비행 성능을 리뷰하는 2부작 영상. �
 
 - [[fpv-hardware]] — 2026년 FPV 드론 하드웨어 동향
 - [[fpv-motor-selection-guide]] — FPV 드론 모터 선택 가이드
+
+## 📰 최근 관련 소식
+- [Joshua Bardwell] Build a $125 Cheap AliExpress 7" Drone with me (youtube.com, 2026-09-04) — https://www.youtube.com/watch?v=vuYEK0POxi0
