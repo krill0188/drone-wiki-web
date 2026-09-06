@@ -182,3 +182,4 @@ for waypoint in path:
 - From Border Security to Biosecurity: Drones Join the Fight Against New World Screwworm - Dronelife (news.google.com, Tue, 11 Au) — https://news.google.com/rss/articles/CBMid0FVX3lxTE15WUZwa1BYNlNJR1M5NHVwT20yMGpSZmhPcEdMM3pmeVotUmRWeE5faEJrVFR1NnVfS0RVamViWmt6UEJTYUtKWVRxZUQtemcwRkRPYXdKWjFMZVJtZWRzeFk1MHJ5VW5CcjJZRkFZbTRMRExzYVpZ?oc=5
 - [멈춤보단 천천히라도] 윈도우에 NVIDIA GPU( CUDA ) 사용하도록 파이토치 설치하는 방법 (youtube.com, 2026-08-12) — https://www.youtube.com/watch?v=TU_RGWEQBaM
 - SimActive Correlator3D Supports Large-Scale Green Hydrogen Mapping in Chile (dronelife.com, Thu, 13 Au) — https://dronelife.com/2026/08/13/simactive-green-hydrogen-mapping-chile/
+- [멈춤보단 천천히라도] 재귀 — 자기 자신을 부르는 함수 | 3분 알고리즘 #2 (youtube.com, 2026-09-05) — https://www.youtube.com/watch?v=X90eAB-s3lM

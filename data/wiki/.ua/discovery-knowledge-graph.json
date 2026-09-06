@@ -3013,7 +3013,9 @@
         "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md",
         "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md",
         "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md",
-        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
+        "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md",
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md",
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
       ]
     },
     {
@@ -5653,7 +5655,8 @@
         "raw/papers/swarm/fetch-2026-08-19-arxiv-say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoni.md",
         "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
         "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md",
-        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md"
+        "raw/papers/_unclassified/무인기-모함의-llm-기반-자율-전술-에이전트-프레임워크-제안.md",
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
       ]
     },
     {
@@ -6915,7 +6918,8 @@
         "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md",
         "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md",
         "raw/papers/drone-sw/channel-state-information-analysis-for-jamming-attack-detection-in-static-and-dy.md",
-        "raw/papers/swarm/a-safety-driven-architectural-framework-for-fail-operational-drone-swarms-in-cri.md"
+        "raw/papers/swarm/a-safety-driven-architectural-framework-for-fail-operational-drone-swarms-in-cri.md",
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
       ]
     },
     {
@@ -7013,7 +7017,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md",
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
       ]
     },
     {
@@ -10085,7 +10090,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md"
+        "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md",
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
       ]
     },
     {
@@ -16315,6 +16321,210 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ]
+    },
+    {
+      "id": "Consensus-Based Bundle Algorithm",
+      "name": "Consensus-Based Bundle Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ]
+    },
+    {
+      "id": "Cbba",
+      "name": "Cbba",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ]
+    },
+    {
+      "id": "Vnir",
+      "name": "Vnir",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ]
+    },
+    {
+      "id": "U-Net++",
+      "name": "U-Net++",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ]
+    },
+    {
+      "id": "초분광영상",
+      "name": "초분광영상",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ]
+    },
+    {
+      "id": "인천대학교",
+      "name": "인천대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ]
+    },
+    {
+      "id": "최병길",
+      "name": "최병길",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ]
+    },
+    {
+      "id": "Fcpm",
+      "name": "Fcpm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ]
+    },
+    {
+      "id": "초분광 영상",
+      "name": "초분광 영상",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "머신러닝",
+      "name": "머신러닝",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "Knn",
+      "name": "Knn",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "Spad 측정법",
+      "name": "Spad 측정법",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "Two Sample T-Test",
+      "name": "Two Sample T-Test",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "식생지수",
+      "name": "식생지수",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "보리",
+      "name": "보리",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "습해",
+      "name": "습해",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ]
+    },
+    {
+      "id": "김지안",
+      "name": "김지안",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
       ]
     }
   ],
@@ -28700,6 +28910,159 @@
       "type": "CAUSES",
       "evidence": [
         "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Large Language Model",
+      "target": "Consensus-Based Bundle Algorithm",
+      "type": "INTEGRATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Llm",
+      "target": "Cbba",
+      "type": "ABBREVIATION_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Consensus-Based Bundle Algorithm",
+      "target": "Unmanned Aerial Vehicle",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Large Language Model",
+      "target": "Unmanned Aerial Vehicle",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "최병길",
+      "target": "인천대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "U-Net++",
+      "target": "초분광영상",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Vnir",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "초분광영상",
+      "type": "ACQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "초분광 영상",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "초분광 영상",
+      "target": "머신러닝",
+      "type": "INPUT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "머신러닝",
+      "target": "Knn",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Knn",
+      "target": "습해",
+      "type": "DETECTS",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "식생지수",
+      "target": "Knn",
+      "type": "INPUT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Spad 측정법",
+      "target": "습해",
+      "type": "DETECTS",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Two Sample T-Test",
+      "target": "식생지수",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "김지안",
+      "target": "경상국립대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "보리",
+      "target": "습해",
+      "type": "AFFECTED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
       ],
       "confidence": "unverified"
     }

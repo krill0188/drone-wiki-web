@@ -1077,7 +1077,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-05",
+      "updated": "2026-09-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5657,6 +5657,97 @@
         "yolo"
       ],
       "updated": "2026-09-05",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "drone-news-2026-09-06",
+      "name": "드론 업계 주요 소식 (2026-09-06)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-09-06",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-barley-wet-stress-hyperspectral-detection",
+      "name": "UAV 초분광 영상 기반 보리 습해 조기 탐지",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-06",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-hyperspectral-litter-detection-unetpp",
+      "name": "도심 유수지 UAV 초분광영상 기반 배경유형 보조 U-Net++ 쓰레기 후보영역 탐지",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-06",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-llm-cbba-swarm-task-allocation",
+      "name": "LLM 전략 파라미터 생성 기반 상황 적응형 군집 무인기 임무 할당",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "ai-agent",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-06",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "name": "방어적 대공/엄호 작전 유·무인 복합 편대 임무 효과도 분석",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "swarm"
+      ],
+      "updated": "2026-09-06",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "yolo-v8-4-141",
+      "name": "YOLO v8.4.141 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -19352,6 +19443,158 @@
     {
       "source": "yolo",
       "target": "yolo-v8-4-138",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-06",
+      "target": "drone-news-2026-09-05",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-06",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-06",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-barley-wet-stress-hyperspectral-detection",
+      "target": "pine-wilt-disease-uav-detection",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-barley-wet-stress-hyperspectral-detection",
+      "target": "kci-hyperspectral-litter-detection-unetpp",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-barley-wet-stress-hyperspectral-detection",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hyperspectral-litter-detection-unetpp",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hyperspectral-litter-detection-unetpp",
+      "target": "pine-wilt-disease-uav-detection",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hyperspectral-litter-detection-unetpp",
+      "target": "uav-multispectral-glint-correction",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-llm-cbba-swarm-task-allocation",
+      "target": "uav-swarm-ai-trends-kci",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-llm-cbba-swarm-task-allocation",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-llm-cbba-swarm-task-allocation",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/방어적-대공-작전-및-엄호-시나리오에서의-협업-전투용-무인기-통합-유무인-복합-편대-임무-효과도-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "target": "uav-swarm-ai-trends-kci",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/방어적-대공-작전-및-엄호-시나리오에서의-협업-전투용-무인기-통합-유무인-복합-편대-임무-효과도-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/방어적-대공-작전-및-엄호-시나리오에서의-협업-전투용-무인기-통합-유무인-복합-편대-임무-효과도-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-141",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-141",
+      "target": "yolo-v8-4-139",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-141",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-07-29-yolo.md"

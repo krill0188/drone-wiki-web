@@ -55,3 +55,4 @@ Jinquan Yan et al., arXiv:2604.09313 (2026)
 - 러, '시속 600㎞' 제트 엔진 드론 공세 확대…우크라 요격 고전 (v.daum.net, Mon, 31 Au) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE54cEpvaUF1b2hGUkdlSzlmVF9YYUNYUTdFcVpwVDFnT24tOUdwVE01R3YwTnpPUXVIZVBkNXA3dVNTTjl3NVAtTGp5WU0tT0k?oc=5
 - 폴란드 드론공장 방화…'또 러시아 공작' 의심 (v.daum.net, Mon, 31 Au) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OTkdQR2UzdVZ4cGdwVWsyb0pDUUdRaUFmUTViY0FfRURPVDFkcktyYW5pQTJpX0hRMEhTWWtwZXo4UUVoRC1mQ2NabzA3clU?oc=5
 - "차세대 對드론 방산 선도"…인천시, 방산혁신 지역협의회 출범 (v.daum.net, Wed, 02 Se) — https://news.google.com/rss/articles/CBMiVEFVX3lxTE1oWWxGSEZFVHpBcXJoVWlfczNyYXBzaUxQTUdEY0FNYkMyVFE0Y1BrSG95Zk9ZNHJINW5RUmhJT1hXUEd0Y0tKZmVUSS01YmNhUFdzdA?oc=5
+- 인천, 방산혁신 클러스터 조성… ‘ 對드론 기술 개발’에 초점 (v.daum.net, Wed, 02 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FdVEzY3R3c1U4eHFxeUlhQUpoRE9WRDNHcFJ2Mm5tVXAwemwzTTktZHR4bmlmaGRvdGkweTRoMjR0VlAwVTBwVmVMZFQ4Z2s?oc=5

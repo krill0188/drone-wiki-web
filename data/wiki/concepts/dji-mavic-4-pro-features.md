@@ -55,3 +55,4 @@ DJI's latest drone camera capabilities showcasing the Mavic 4 Pro's Hasselblad 1
 ## 📰 최근 관련 소식
 - [DJI] What if these were yours? | DJI Lito X1 (youtube.com, 2026-08-23) — https://www.youtube.com/watch?v=Zb1sF68eUMs
 - [DJI] From Island to Street | DJI Mavic 4 Pro (youtube.com, 2026-08-23) — https://www.youtube.com/watch?v=KCJZrlJoQAQ
+- [DJI] Wait for the Zoom Out | DJI Mavic 4 Pro (youtube.com, 2026-09-05) — https://www.youtube.com/watch?v=dzHZkvgUJ08
