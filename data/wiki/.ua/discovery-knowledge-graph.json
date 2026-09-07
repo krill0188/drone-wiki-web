@@ -16526,6 +16526,150 @@
       "sources": [
         "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
       ]
+    },
+    {
+      "id": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "name": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Visual Servoing Control",
+      "name": "Visual Servoing Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Gimbal-Mounted Cameras",
+      "name": "Gimbal-Mounted Cameras",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Multi-Uav Target Tracking",
+      "name": "Multi-Uav Target Tracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Relative Dynamics",
+      "name": "Relative Dynamics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Distributed Gaussian Processes",
+      "name": "Distributed Gaussian Processes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Observer-Based Control",
+      "name": "Observer-Based Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Kunzhong Miao",
+      "name": "Kunzhong Miao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Chang Wang",
+      "name": "Chang Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Yifeng Niu",
+      "name": "Yifeng Niu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Wei Zhang",
+      "name": "Wei Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Hongbo Yu",
+      "name": "Hongbo Yu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
     }
   ],
   "edges": [
@@ -29063,6 +29207,87 @@
       "type": "AFFECTED_BY",
       "evidence": [
         "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Kunzhong Miao",
+      "target": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chang Wang",
+      "target": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yifeng Niu",
+      "target": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wei Zhang",
+      "target": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hongbo Yu",
+      "target": "Robust Observer-Based Visual Servoing Control Of Gimbal-Mounted Cameras For Multi-Uav Target Tracking Via Relative Dynamics And Distributed Gaussian Processes",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Visual Servoing Control",
+      "target": "Gimbal-Mounted Cameras",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Observer-Based Control",
+      "target": "Visual Servoing Control",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Distributed Gaussian Processes",
+      "target": "Multi-Uav Target Tracking",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Relative Dynamics",
+      "target": "Multi-Uav Target Tracking",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
       ],
       "confidence": "unverified"
     }
