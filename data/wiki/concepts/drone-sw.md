@@ -38,3 +38,5 @@ domain: flight-control
 - [멈춤보단 천천히라도] [3분 자료구조 #6] 덱 (Deque) — 양쪽 끝이 모두 열린 큐 (youtube.com, 2026-08-23) — https://www.youtube.com/watch?v=PFCCdiJMCe4
 - [멈춤보단 천천히라도] [3분 자료구조 #5] 원형 큐 — 나머지 연산으로 배열을 무한히 재활용 (youtube.com, 2026-08-22) — https://www.youtube.com/watch?v=_AZqxG0BS9k
 - [멈춤보단 천천히라도] 재귀 — 자기 자신을 부르는 함수 | 3분 알고리즘 #2 (youtube.com, 2026-09-05) — https://www.youtube.com/watch?v=X90eAB-s3lM
+- [멈춤보단 천천히라도] 버블 정렬 — 거품처럼 떠오르는 최댓값 | 3분 알고리즘 #4 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=GWOCNpTMzdk
+- [멈춤보단 천천히라도] 러스트 Option과 Result — null 없는 언어가 실패를 다루는 법 | 러스트 입문 #6 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=2KI6wW8z0H8

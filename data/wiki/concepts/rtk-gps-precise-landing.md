@@ -1,15 +1,14 @@
 ---
 title: RTK GPS & Precise Landing
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-09
 type: concept
 tags: [drone-hw, rtk, gps, gnss, differential, precision, landing]
-sources: []
+sources: [inbox/fetch-2026-09-09-yt-fix-your-rtk-drone-positioning-step-by-step-base-setup-guide.md]
 confidence: medium
 domain: hardware
 contested: false
 contradictions: []
-note: "Knowledge-based page - no raw source ingested yet"
 ---
 
 # RTK GPS & Precise Landing
@@ -129,6 +128,19 @@ Options:
    - 이동식 base (정확도 감소)
    - 드론 간 상대적 정확도는 유지
 ```
+
+### Emlid Flow Base Position 설정
+
+Self-hosted base 좌표를 Emlid Flow 앱 + Reach 수신기로 결정하는 두 가지 방식:
+
+| 방식 | 설명 |
+|------|------|
+| **Average Fix** | 일정 시간 GNSS 관측을 평균해 base 좌표를 자동 산출 |
+| **Manual Entry (Benchmark)** | 기지측점(benchmark) 등 이미 알려진 좌표를 직접 입력 |
+
+RTK 드론이 "Single" 상태에 고정되어 Fix를 얻지 못하는 문제는 base position 설정 오류가 주요
+원인 중 하나이며, 정확한 base 좌표 확보가 RTK-capable 드론(GNSS 모듈 + 실시간 보정 지원)의
+전제 조건이다.^[inbox/fetch-2026-09-09-yt-fix-your-rtk-drone-positioning-step-by-step-base-setup-guide.md]
 
 ## NTRIP Protocol
 

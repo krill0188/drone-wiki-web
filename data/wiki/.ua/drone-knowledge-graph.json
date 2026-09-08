@@ -1077,7 +1077,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-07",
+      "updated": "2026-09-08",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5763,6 +5763,66 @@
         "yolo"
       ],
       "updated": "2026-09-07",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "game-theoretic-drone-swarm-defense",
+      "name": "게임이론 기반 드론 스웜 방어(차등 게임 응용 사례)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-autonomy",
+        "swarm"
+      ],
+      "updated": "2026-09-08",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "name": "드론 다중분광센서 기반 NDVI를 활용한 한라산 구상나무 개체의 고도·사면향별 활력도 예비평가",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-08",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-light-attack-helicopter-mum-t-verification",
+      "name": "소형무장헬기 유무인복합 운용 통합검증환경 구축 및 비행제어시스템 통합 검증",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "swarm"
+      ],
+      "updated": "2026-09-08",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "yolo-v8-4-143",
+      "name": "YOLO v8.4.143 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-08",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -19633,6 +19693,110 @@
     {
       "source": "yolo",
       "target": "yolo-v8-4-142",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "game-theoretic-drone-swarm-defense",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "game-theoretic-drone-swarm-defense",
+      "target": "distributed-aerial-surveillance-swarm",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "game-theoretic-drone-swarm-defense",
+      "target": "rigid-covert-gnss-spoofing-swarm",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "target": "kci-barley-wet-stress-hyperspectral-detection",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "target": "pine-wilt-disease-uav-detection",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-light-attack-helicopter-mum-t-verification",
+      "target": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-light-attack-helicopter-mum-t-verification",
+      "target": "mavlink",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-light-attack-helicopter-mum-t-verification",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-143",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-143",
+      "target": "yolo-v8-4-142",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-143",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-07-29-yolo.md"

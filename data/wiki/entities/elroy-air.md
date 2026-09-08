@@ -1,11 +1,11 @@
 ---
 title: "Elroy Air US Army Heavy-Lift Contract"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-09
 type: entity
 domain: ops-mission
 tags: [drone, company, heavy-lift, military, vtol, cargo]
-sources: [inbox/fetch-2026-08-19-rss-dronedj.md]
+sources: [inbox/fetch-2026-08-19-rss-dronedj.md, inbox/fetch-2026-09-09-rss-dronedj.md]
 confidence: high
 contested: false
 contradictions: []
@@ -31,6 +31,12 @@ Elroy Air develops autonomous hybrid-electric VTOL (vertical take-off and landin
 - Autonomous operation
 - Heavy-lift cargo capability
 - Designed for military logistics applications
+
+## Chaparral 조종사 없는 첫 비행 (2026-09)
+
+Elroy Air가 FAA eVTOL Integration Pilot Program(eIPP) 승인 하에 Chaparral 기체의 완전 자율,
+조종사 탑승 없는 비행을 최초로 성공했다. 미국 내 상용 헤비카고 드론 운용을 향한 규제·기술적
+이정표로, 향후 실제 물류 임무 배치에 한 걸음 더 다가섰다.^[inbox/fetch-2026-09-09-rss-dronedj.md]
 
 ## Related Concepts
 

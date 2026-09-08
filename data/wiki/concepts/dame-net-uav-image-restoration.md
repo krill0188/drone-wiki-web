@@ -56,3 +56,4 @@ Jinquan Yan et al., arXiv:2604.09313 (2026)
 - 폴란드 드론공장 방화…'또 러시아 공작' 의심 (v.daum.net, Mon, 31 Au) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OTkdQR2UzdVZ4cGdwVWsyb0pDUUdRaUFmUTViY0FfRURPVDFkcktyYW5pQTJpX0hRMEhTWWtwZXo4UUVoRC1mQ2NabzA3clU?oc=5
 - "차세대 對드론 방산 선도"…인천시, 방산혁신 지역협의회 출범 (v.daum.net, Wed, 02 Se) — https://news.google.com/rss/articles/CBMiVEFVX3lxTE1oWWxGSEZFVHpBcXJoVWlfczNyYXBzaUxQTUdEY0FNYkMyVFE0Y1BrSG95Zk9ZNHJINW5RUmhJT1hXUEd0Y0tKZmVUSS01YmNhUFdzdA?oc=5
 - 인천, 방산혁신 클러스터 조성… ‘ 對드론 기술 개발’에 초점 (v.daum.net, Wed, 02 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FdVEzY3R3c1U4eHFxeUlhQUpoRE9WRDNHcFJ2Mm5tVXAwemwzTTktZHR4bmlmaGRvdGkweTRoMjR0VlAwVTBwVmVMZFQ4Z2s?oc=5
+- 참사 열흘 뒤 공개…中경찰 드론에 담긴 네팔 대홍수 (v.daum.net, Mon, 07 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RSGlEaHNJLS1FVlZlWjctUDlCbGJhdUw4ZVRsY1FqMU1sYTNmTzNQZUlCNzNGMWhmOG5WWUh3eUlWajl0VUdyWUpNVUpWV2c?oc=5

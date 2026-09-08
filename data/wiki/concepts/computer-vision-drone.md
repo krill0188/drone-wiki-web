@@ -183,3 +183,5 @@ for waypoint in path:
 - [멈춤보단 천천히라도] 윈도우에 NVIDIA GPU( CUDA ) 사용하도록 파이토치 설치하는 방법 (youtube.com, 2026-08-12) — https://www.youtube.com/watch?v=TU_RGWEQBaM
 - SimActive Correlator3D Supports Large-Scale Green Hydrogen Mapping in Chile (dronelife.com, Thu, 13 Au) — https://dronelife.com/2026/08/13/simactive-green-hydrogen-mapping-chile/
 - [멈춤보단 천천히라도] 재귀 — 자기 자신을 부르는 함수 | 3분 알고리즘 #2 (youtube.com, 2026-09-05) — https://www.youtube.com/watch?v=X90eAB-s3lM
+- [멈춤보단 천천히라도] 버블 정렬 — 거품처럼 떠오르는 최댓값 | 3분 알고리즘 #4 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=GWOCNpTMzdk
+- [멈춤보단 천천히라도] 러스트 Option과 Result — null 없는 언어가 실패를 다루는 법 | 러스트 입문 #6 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=2KI6wW8z0H8

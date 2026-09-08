@@ -9741,7 +9741,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md",
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
       ]
     },
     {
@@ -16669,6 +16670,522 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ]
+    },
+    {
+      "id": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "name": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Insulator Fault Detection",
+      "name": "Insulator Fault Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Edge-Compatible Drone Inspection",
+      "name": "Edge-Compatible Drone Inspection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Sri",
+      "name": "Sri",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Vikash M.",
+      "name": "Vikash M.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "P.",
+      "name": "P.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Pranav Yogesh",
+      "name": "Pranav Yogesh",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Rayappa",
+      "name": "Rayappa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "David Amar Raj",
+      "name": "David Amar Raj",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "S.",
+      "name": "S.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "Manimaran",
+      "name": "Manimaran",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ]
+    },
+    {
+      "id": "M300 Rtk",
+      "name": "M300 Rtk",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ]
+    },
+    {
+      "id": "Micasense Rededge-P",
+      "name": "Micasense Rededge-P",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ]
+    },
+    {
+      "id": "Multispectral Imaging",
+      "name": "Multispectral Imaging",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ]
+    },
+    {
+      "id": "Hallasan",
+      "name": "Hallasan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ]
+    },
+    {
+      "id": "Korean Fir",
+      "name": "Korean Fir",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ]
+    },
+    {
+      "id": "한국항공우주산업",
+      "name": "한국항공우주산업",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "소형무장헬기",
+      "name": "소형무장헬기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "유무인복합체계",
+      "name": "유무인복합체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "무인기 비행제어시스템",
+      "name": "무인기 비행제어시스템",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "통합검증환경",
+      "name": "통합검증환경",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "전장환경장비",
+      "name": "전장환경장비",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "지상통제기",
+      "name": "지상통제기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "공중통제기",
+      "name": "공중통제기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "유인기 시뮬레이터",
+      "name": "유인기 시뮬레이터",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "무인기 시뮬레이터",
+      "name": "무인기 시뮬레이터",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "Stanag 4586",
+      "name": "Stanag 4586",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "자동 이륙",
+      "name": "자동 이륙",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "통제권 변경",
+      "name": "통제권 변경",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "표적 추적",
+      "name": "표적 추적",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "임무 재계획",
+      "name": "임무 재계획",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "자동 착륙",
+      "name": "자동 착륙",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "충돌 회피",
+      "name": "충돌 회피",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "조환희",
+      "name": "조환희",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ]
+    },
+    {
+      "id": "Allen, Ross E.",
+      "name": "Allen, Ross E.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Differential Game Theory",
+      "name": "Differential Game Theory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Drone Swarm",
+      "name": "Drone Swarm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Target Assignment",
+      "name": "Target Assignment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Midcourse Guidance",
+      "name": "Midcourse Guidance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Nash Equilibrium",
+      "name": "Nash Equilibrium",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Monte Carlo Simulation",
+      "name": "Monte Carlo Simulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Bayesian Analysis",
+      "name": "Bayesian Analysis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Evasive Maneuvers",
+      "name": "Evasive Maneuvers",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
       ]
     }
   ],
@@ -29288,6 +29805,366 @@
       "type": "USED_IN",
       "evidence": [
         "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "target": "Insulator Fault Detection",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "target": "Edge-Compatible Drone Inspection",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sri",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vikash M.",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "P.",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pranav Yogesh",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rayappa",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "David Amar Raj",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "S.",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Manimaran",
+      "target": "Parameter-Efficient Entropy-Guided Feature Suppression Framework",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-parameter-efficient-entropy-guided-feature-suppression-framework-for-accurate-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "M300 Rtk",
+      "target": "Ndvi",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micasense Rededge-P",
+      "target": "Multispectral Imaging",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multispectral Imaging",
+      "target": "Ndvi",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ndvi",
+      "target": "Korean Fir",
+      "type": "ASSESSES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "조환희",
+      "target": "한국항공우주산업",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "한국항공우주산업",
+      "target": "무인기 비행제어시스템",
+      "type": "DEVELOPED",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "소형무장헬기",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "통합검증환경",
+      "type": "TESTED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "통합검증환경",
+      "target": "전장환경장비",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "통합검증환경",
+      "target": "지상통제기",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "통합검증환경",
+      "target": "공중통제기",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "통합검증환경",
+      "target": "유인기 시뮬레이터",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "통합검증환경",
+      "target": "무인기 시뮬레이터",
+      "type": "COMPRISES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "통합검증환경",
+      "target": "Stanag 4586",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Stanag 4586",
+      "target": "통신 인터페이스",
+      "type": "DEFINES",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "자동 이륙",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "통제권 변경",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "표적 추적",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "임무 재계획",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "자동 착륙",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "무인기 비행제어시스템",
+      "target": "충돌 회피",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "소형무장헬기",
+      "target": "유무인복합체계",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/소형무장헬기-유무인복합-운용-통합검증환경-구축-및-비행제어시스템-통합-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Allen, Ross E.",
+      "target": "Differential Game Theory",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Differential Game Theory",
+      "target": "Drone Swarm",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Swarm",
+      "target": "Target Assignment",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Swarm",
+      "target": "Midcourse Guidance",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Nash Equilibrium",
+      "target": "Differential Game Theory",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Monte Carlo Simulation",
+      "target": "Differential Game Theory",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bayesian Analysis",
+      "target": "Differential Game Theory",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Evasive Maneuvers",
+      "target": "Drone Swarm",
+      "type": "CAPABILITY_OF",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
       ],
       "confidence": "unverified"
     }
