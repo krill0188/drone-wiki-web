@@ -695,7 +695,7 @@
         "precision",
         "landing"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-09-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1077,7 +1077,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-08",
+      "updated": "2026-09-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4322,7 +4322,7 @@
         "vtol",
         "cargo"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-09-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -5823,6 +5823,36 @@
         "yolo"
       ],
       "updated": "2026-09-08",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "drone-news-2026-09-09",
+      "name": "드론 업계 주요 소식 (2026-09-09)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-09-09",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "yolo-v8-4-144",
+      "name": "YOLO v8.4.144 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -19797,6 +19827,57 @@
     {
       "source": "yolo",
       "target": "yolo-v8-4-143",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-09",
+      "target": "drone-news-2026-09-06",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-09",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-09",
+      "target": "elroy-air",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-09",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-144",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-144",
+      "target": "yolo-v8-4-143",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-144",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-07-29-yolo.md"

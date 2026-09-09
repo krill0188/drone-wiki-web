@@ -3015,7 +3015,8 @@
         "raw/papers/_unclassified/sample-preserving-evaluation-and-frozen-rank-consensus-for-uav-transmission-line.md",
         "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md",
         "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md",
-        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md",
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
       ]
     },
     {
@@ -13044,7 +13045,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/a-differential-evolution-distributionally-robust-sizing-method-for-power-supply-.md"
+        "raw/papers/_unclassified/a-differential-evolution-distributionally-robust-sizing-method-for-power-supply-.md",
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
       ]
     },
     {
@@ -17186,6 +17188,198 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ]
+    },
+    {
+      "id": "Collision Risk Assessment",
+      "name": "Collision Risk Assessment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Position Uncertainty",
+      "name": "Position Uncertainty",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Noncentral Chi-Square Distributions",
+      "name": "Noncentral Chi-Square Distributions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Xiling Luo",
+      "name": "Xiling Luo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Chengpeng Jiang",
+      "name": "Chengpeng Jiang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Gang Wang",
+      "name": "Gang Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Jialing Liu",
+      "name": "Jialing Liu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ]
+    },
+    {
+      "id": "Truck-Drone Collaborative Routing",
+      "name": "Truck-Drone Collaborative Routing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Road Damage",
+      "name": "Road Damage",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Dynamic Demand",
+      "name": "Dynamic Demand",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Humanitarian Logistics",
+      "name": "Humanitarian Logistics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Liang You",
+      "name": "Liang You",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Lei Zhang",
+      "name": "Lei Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Mingfa Zheng",
+      "name": "Mingfa Zheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Chuhan Ma",
+      "name": "Chuhan Ma",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Bowu Wei",
+      "name": "Bowu Wei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
       ]
     }
   ],
@@ -30165,6 +30359,150 @@
       "type": "CAPABILITY_OF",
       "evidence": [
         "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rui Wang",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xiling Luo",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chengpeng Jiang",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gang Wang",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jialing Liu",
+      "target": "Uav",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Collision Risk Assessment",
+      "type": "SUBJECT",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Position Uncertainty",
+      "target": "Collision Risk Assessment",
+      "type": "FACTOR",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Noncentral Chi-Square Distributions",
+      "target": "Collision Risk Assessment",
+      "type": "METHOD",
+      "evidence": [
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Liang You",
+      "target": "Truck-Drone Collaborative Routing",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lei Zhang",
+      "target": "Truck-Drone Collaborative Routing",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mingfa Zheng",
+      "target": "Truck-Drone Collaborative Routing",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chuhan Ma",
+      "target": "Truck-Drone Collaborative Routing",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bowu Wei",
+      "target": "Truck-Drone Collaborative Routing",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Truck-Drone Collaborative Routing",
+      "target": "Road Damage",
+      "type": "ADDRESSES",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Truck-Drone Collaborative Routing",
+      "target": "Dynamic Demand",
+      "type": "ADDRESSES",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Truck-Drone Collaborative Routing",
+      "target": "Humanitarian Logistics",
+      "type": "APPLICATION",
+      "evidence": [
+        "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
       ],
       "confidence": "unverified"
     }
