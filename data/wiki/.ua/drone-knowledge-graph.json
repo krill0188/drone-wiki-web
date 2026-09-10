@@ -5856,6 +5856,21 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-146",
+      "name": "YOLO v8.4.146 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-10",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     }
   ],
   "edges": [
@@ -19883,6 +19898,24 @@
         "inbox/fetch-2026-07-29-yolo.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-146",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-10-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-146",
+      "target": "yolo-v8-4-144",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-10-yolo.md"
+      ],
+      "confidence": "medium"
     }
   ]
 }

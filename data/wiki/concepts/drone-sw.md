@@ -40,3 +40,5 @@ domain: flight-control
 - [멈춤보단 천천히라도] 재귀 — 자기 자신을 부르는 함수 | 3분 알고리즘 #2 (youtube.com, 2026-09-05) — https://www.youtube.com/watch?v=X90eAB-s3lM
 - [멈춤보단 천천히라도] 버블 정렬 — 거품처럼 떠오르는 최댓값 | 3분 알고리즘 #4 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=GWOCNpTMzdk
 - [멈춤보단 천천히라도] 러스트 Option과 Result — null 없는 언어가 실패를 다루는 법 | 러스트 입문 #6 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=2KI6wW8z0H8
+- [멈춤보단 천천히라도] 병합 정렬 — 쪼개서 정복하는 O(n log n) | 3분 알고리즘 #7 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=TZPSTBHIPM4
+- [멈춤보단 천천히라도] 러스트 생명주기 — 허공에 매달린 참조를 잡는 법 | 러스트 입문 #9 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=NwKJrn4NyA0

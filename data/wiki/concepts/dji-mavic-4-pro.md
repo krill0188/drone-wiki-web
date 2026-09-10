@@ -34,3 +34,4 @@ DJI의 소비자용 항공 촬영 드론. 핵심 특징은 100MP 하셀블라드
 - DJI Mavic 4 Pro drone gets new firmware update for smoother flights (dronedj.com, Fri, 14 Au) — https://dronedj.com/2026/08/14/dji-mavic-4-drone-firmware-2/
 - [DJI] From Island to Street | DJI Mavic 4 Pro (youtube.com, 2026-08-23) — https://www.youtube.com/watch?v=KCJZrlJoQAQ
 - [DJI] Wait for the Zoom Out | DJI Mavic 4 Pro (youtube.com, 2026-09-05) — https://www.youtube.com/watch?v=dzHZkvgUJ08
+- [DJI] Bright Water, Full Detail | DJI Mavic 4 Pro (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=p80YZPP9gJQ

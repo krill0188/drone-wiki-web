@@ -38,3 +38,4 @@ DJI의 액션 카메라 시리즈 6세대 모델로, 야간 촬영 성능이 크
 - [DJI] POV: Bicycle Football Gets Real | DJI Osmo 360 (youtube.com, 2026-08-22) — https://www.youtube.com/watch?v=S1_tMMmEGuo
 - [DJI] Blue Water, True Color | DJI Osmo Action 6 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=BTVApyMqWOQ
 - [DJI] The drone threaded every ring in one take at IFA2026 | DJI Avata 360 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=-Wz7CaXBy5c
+- [DJI] You Don't Plan Moments Like This. ｜ DJI Osmo Action 6 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=coKies6gTk4

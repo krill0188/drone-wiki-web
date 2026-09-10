@@ -40,3 +40,4 @@ FPV 드론을 조립할 때 모터·ESC·영상시스템·수신기 선택 못�
 - [Joshua Bardwell] (Nearly) perfect portable soldering iron: Sequre S99 (youtube.com, 2026-08-20) — https://www.youtube.com/watch?v=kWFIQe2fsWE
 - [Joshua Bardwell] Ascent latency update (youtube.com, 2026-08-25) — https://www.youtube.com/watch?v=9TQLzUFDQVc
 - [Joshua Bardwell] Betaflight FINALLY added this feature! FC Alignment Wizard in BF 2026.6 (youtube.com, 2026-09-02) — https://www.youtube.com/watch?v=mHreu_l1FwY
+- [Joshua Bardwell] Walksnail Ascent Firmware Update How-To (youtube.com, 2026-09-09) — https://www.youtube.com/watch?v=yf__frUKreI
