@@ -2290,7 +2290,8 @@
         "raw/papers/drone-sw/slei3d-simultaneous-exploration-and-inspection-via-heterogeneous-fleets-under-li.md",
         "raw/papers/gcs-software/slei3d-heterogeneous-fleet.md",
         "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md",
-        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md"
+        "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md",
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
       ]
     },
     {
@@ -3016,7 +3017,8 @@
         "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md",
         "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md",
         "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md",
-        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md"
+        "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md",
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
       ]
     },
     {
@@ -6920,7 +6922,8 @@
         "raw/papers/voice-control/no-training-better-flights-test-time-scaled-vlms-for-uav-navigation.md",
         "raw/papers/drone-sw/channel-state-information-analysis-for-jamming-attack-detection-in-static-and-dy.md",
         "raw/papers/swarm/a-safety-driven-architectural-framework-for-fail-operational-drone-swarms-in-cri.md",
-        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
+        "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md",
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
       ]
     },
     {
@@ -6982,7 +6985,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md"
+        "raw/papers/drone-ai/uav-군집-ai-기술-동향-인공지능-발전과-다중-에이전트-아키텍처의-진화-관점에서.md",
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
       ]
     },
     {
@@ -7365,7 +7369,8 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/drone-hw/fetch-2026-08-19-arxiv-multi-domain-physics-based-mdo-of-multirotor-uavs-a-determin.md",
-        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md"
+        "raw/papers/drone-hw/multi-domain-physics-based-mdo-of-multirotor-uavs-a-deterministic-framework-for-.md",
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
       ]
     },
     {
@@ -9634,7 +9639,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md",
-        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md"
+        "raw/papers/_unclassified/uav고해상도자료기반신두리해안사구지형피복단위의분류와공간분포정량화.md",
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
       ]
     },
     {
@@ -17380,6 +17386,150 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ]
+    },
+    {
+      "id": "Uav-Lidar",
+      "name": "Uav-Lidar",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ]
+    },
+    {
+      "id": "남서울대학교",
+      "name": "남서울대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ]
+    },
+    {
+      "id": "홍일영",
+      "name": "홍일영",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ]
+    },
+    {
+      "id": "안성천 명당교",
+      "name": "안성천 명당교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ]
+    },
+    {
+      "id": "Multi-Agent Reinforcement Learning",
+      "name": "Multi-Agent Reinforcement Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Wildfire Response",
+      "name": "Wildfire Response",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Autonomous Uav Exploration",
+      "name": "Autonomous Uav Exploration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Fire-Boundary Tracking",
+      "name": "Fire-Boundary Tracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Policy Learning",
+      "name": "Policy Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Reward Design",
+      "name": "Reward Design",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Chandra, Caden",
+      "name": "Chandra, Caden",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "Ng, Jerry",
+      "name": "Ng, Jerry",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
       ]
     }
   ],
@@ -30503,6 +30653,123 @@
       "type": "APPLICATION",
       "evidence": [
         "raw/papers/_unclassified/truck-drone-collaborative-routing-under-road-damage-and-dynamic-demand-for-human.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Lidar",
+      "target": "Dem",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Lidar",
+      "target": "Lidar",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "홍일영",
+      "target": "남서울대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dem",
+      "target": "Rmse",
+      "type": "EVALUATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav-Lidar",
+      "target": "Rmse",
+      "type": "MEASURED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Agent Reinforcement Learning",
+      "target": "Uav",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Deep Reinforcement Learning",
+      "target": "Wildfire Response",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Uav",
+      "target": "Autonomous Uav Exploration",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Autonomous Uav Exploration",
+      "target": "Wildfire Response",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fire-Boundary Tracking",
+      "target": "Deep Reinforcement Learning",
+      "type": "BEHAVIOR_OF",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Reward Design",
+      "target": "Policy Learning",
+      "type": "INFLUENCES",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chandra, Caden",
+      "target": "Multi-Agent Reinforcement Learning",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ng, Jerry",
+      "target": "Multi-Agent Reinforcement Learning",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
       ],
       "confidence": "unverified"
     }

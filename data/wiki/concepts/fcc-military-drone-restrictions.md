@@ -1,7 +1,7 @@
 ---
 title: FCC Military-Grade Drone Restrictions Proposal
 created: 2026-09-01
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 domain: regulations
 tags: [drone, regulations, fcc, import, policy]
@@ -34,6 +34,12 @@ FCC(연방통신위원회)가 외국산 "군사 등급" 드론에 대한 수입 
 
 - Pilot Institute 분석: 읽을 수 있는 의견서 3,824건 중 3,770건(98.6%)이 원안에 반대.
 - 경제적 영향, 공공안전, 농업·상업용 드론 운용에 대한 우려가 주요 반대 사유로 제기됨.
+
+## 업계 반발 (2026-09-10 업데이트)
+
+- DJI, FCC의 제안 범위가 지나치게 넓다고 반발 — 미국에서 이미 판매 중인 Mini 5 Pro·Air 3S 등
+  대중적 소비자용 카메라 드론까지 향후 수입·판매 제한 대상에 포함될 수 있다고 우려 표명
+  (DroneDJ, 2026-09-09).
 
 ## 영향
 
