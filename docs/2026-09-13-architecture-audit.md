@@ -1,3 +1,5 @@
+> **역사적 감사 기록:** 아래 내용은 Stage 0-R 수정 전 기준이다. 현재 sync는 audit-only이며, 예약 self-update는 canonical을 직접 쓴다. GraphRAG는 canonical+discovery를 함께 사용한다. 최신 확인·잔여 blocker는 [Stage 0-R](STAGE_0R_REBASELINE.md)을 따른다.
+
 # drone-wiki-web 아키텍처 감사 (2026-09-13)
 
 ## 요약 (문서와 실제가 가장 크게 다른 3가지)
