@@ -417,7 +417,7 @@ export function loadGraph(): { nodes: GraphNode[]; edges: GraphEdge[] } {
   return { nodes: [], edges: [] }
 }
 
-// 시드 + 1-hop 이웃으로 유도된 서브그래프 (카드뉴스 GraphRAG 시각화용)
+// 시드 + 1-hop 이웃으로 유도된 서브그래프 (/graph 페이지 시각화용)
 export function getSubgraph(seedSlugs: string[], neighborLimit = 8): {
   nodes: { id: string; name: string; domain?: string; seed: boolean }[]
   edges: GraphEdge[]
