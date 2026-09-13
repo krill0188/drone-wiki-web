@@ -2821,7 +2821,8 @@
         "raw/articles/px4-ros2-user-guide.md",
         "raw/articles/px4-uorb-messaging.md",
         "raw/papers/swarm/cai2026-progress-aware-docking.md",
-        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md"
+        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
       ]
     },
     {
@@ -3018,7 +3019,8 @@
         "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md",
         "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md",
         "raw/papers/_unclassified/a-conservative-analytical-framework-for-uav-collision-risk-assessment-under-posi.md",
-        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md",
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
       ]
     },
     {
@@ -8099,7 +8101,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md"
+        "raw/papers/swarm/decentralized-uav-swarms-for-ground-target-protection-in-gps--and-communication-.md",
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
       ]
     },
     {
@@ -8504,7 +8507,8 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/swarm/say-the-mission-execute-the-swarm-agent-enhanced-llm-reasoning-in-the-web-of-dro.md",
-        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+        "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md",
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
       ]
     },
     {
@@ -9374,7 +9378,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+        "raw/papers/_unclassified/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md",
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
       ]
     },
     {
@@ -10354,7 +10359,8 @@
       "sources": [
         "raw/papers/_unclassified/드론-기반-객체-탐지-시스템에-대한-물리적-적대적-패치-공격-디지털-물리-도메인-갭-분석-및-완화.md",
         "raw/papers/_unclassified/드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md",
-        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md",
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
       ]
     },
     {
@@ -17530,6 +17536,510 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ]
+    },
+    {
+      "id": "생활물류서비스산업발전법",
+      "name": "생활물류서비스산업발전법",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Fda",
+      "name": "Fda",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Jarus",
+      "name": "Jarus",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Sora",
+      "name": "Sora",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "자율주행",
+      "name": "자율주행",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Novel Food",
+      "name": "Novel Food",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "싱가포르",
+      "name": "싱가포르",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "미국",
+      "name": "미국",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "유럽",
+      "name": "유럽",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "김채향",
+      "name": "김채향",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "서강대학교",
+      "name": "서강대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "A기관",
+      "name": "A기관",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "B기관",
+      "name": "B기관",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "C기관",
+      "name": "C기관",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "D기관",
+      "name": "D기관",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "E기업",
+      "name": "E기업",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ]
+    },
+    {
+      "id": "Mission Reliability Modeling",
+      "name": "Mission Reliability Modeling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Reconfigurable Uav Swarm",
+      "name": "Reconfigurable Uav Swarm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Phased Missions",
+      "name": "Phased Missions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Dynamic Reconfiguration",
+      "name": "Dynamic Reconfiguration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Mission Abort",
+      "name": "Mission Abort",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Detect-Decide-Engage Loops",
+      "name": "Detect-Decide-Engage Loops",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Node Replacement",
+      "name": "Node Replacement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Link Reorganization",
+      "name": "Link Reorganization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Target Coverage Ratio",
+      "name": "Target Coverage Ratio",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Simulated Annealing Algorithm",
+      "name": "Simulated Annealing Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Mission Success Probability",
+      "name": "Mission Success Probability",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Resource Conservation",
+      "name": "Resource Conservation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ]
+    },
+    {
+      "id": "Swarmnxt",
+      "name": "Swarmnxt",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Omninxt",
+      "name": "Omninxt",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Toumieh, Charbel",
+      "name": "Toumieh, Charbel",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Mistry, Niel",
+      "name": "Mistry, Niel",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Jarvis, Benjamin",
+      "name": "Jarvis, Benjamin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Jeger, Simon",
+      "name": "Jeger, Simon",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Liu, Peize",
+      "name": "Liu, Peize",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Shen, Shaojie",
+      "name": "Shen, Shaojie",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Floreano, Dario",
+      "name": "Floreano, Dario",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Vision-Based Collective Flight",
+      "name": "Vision-Based Collective Flight",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Decentralized Planning",
+      "name": "Decentralized Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Inter-Drone Collision Avoidance",
+      "name": "Inter-Drone Collision Avoidance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Depth Estimation",
+      "name": "Depth Estimation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ]
+    },
+    {
+      "id": "Motion Capture",
+      "name": "Motion Capture",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
       ]
     }
   ],
@@ -30770,6 +31280,276 @@
       "type": "AUTHOR",
       "evidence": [
         "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "김채향",
+      "target": "서강대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "생활물류서비스산업발전법",
+      "type": "REGULATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sora",
+      "target": "Easa",
+      "type": "DEVELOPED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sora",
+      "target": "Jarus",
+      "type": "DEVELOPED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자율주행",
+      "target": "미국",
+      "type": "REGULATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Novel Food",
+      "target": "싱가포르",
+      "type": "APPROVED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fda",
+      "target": "미국",
+      "type": "LOCATED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Easa",
+      "target": "유럽",
+      "type": "LOCATED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Reconfigurable Uav Swarm",
+      "target": "Phased Missions",
+      "type": "EXECUTES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Reconfiguration",
+      "target": "Detect-Decide-Engage Loops",
+      "type": "RESTORES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Reconfiguration",
+      "target": "Node Replacement",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Reconfiguration",
+      "target": "Link Reorganization",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mission Abort",
+      "target": "Target Coverage Ratio",
+      "type": "TRIGGERED_BY",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Simulated Annealing Algorithm",
+      "target": "Mission Abort",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mission Reliability Modeling",
+      "target": "Reconfigurable Uav Swarm",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mission Abort",
+      "target": "Mission Success Probability",
+      "type": "BALANCES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mission Abort",
+      "target": "Resource Conservation",
+      "type": "BALANCES",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarmnxt",
+      "target": "Omninxt",
+      "type": "BUILT_ON",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarmnxt",
+      "target": "Ros 2",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Toumieh, Charbel",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mistry, Niel",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jarvis, Benjamin",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jeger, Simon",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Liu, Peize",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shen, Shaojie",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Floreano, Dario",
+      "target": "Swarmnxt",
+      "type": "AUTHOR",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarmnxt",
+      "target": "Depth Estimation",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarmnxt",
+      "target": "Decentralized Planning",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Swarmnxt",
+      "target": "Inter-Drone Collision Avoidance",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Omninxt",
+      "target": "Uav",
+      "type": "IS_A",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
       ],
       "confidence": "unverified"
     }

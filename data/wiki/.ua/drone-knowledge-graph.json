@@ -1077,7 +1077,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-09",
+      "updated": "2026-09-12",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4923,7 +4923,7 @@
         "import",
         "policy"
       ],
-      "updated": "2026-09-05",
+      "updated": "2026-09-10",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -5867,8 +5867,141 @@
         "ai-autonomy",
         "yolo"
       ],
+      "updated": "2026-09-11",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "drone-news-2026-09-10",
+      "name": "드론 업계 주요 소식 (2026-09-10)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
       "updated": "2026-09-10",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-09-11",
+      "name": "드론 업계 주요 소식 (2026-09-11)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-09-11",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-09-12",
+      "name": "드론 업계 주요 소식 (2026-09-12)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-09-12",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-drone-certification-stepwise-approval-model",
+      "name": "기술기반 제품 상업화의 다기관 인증체계 개선을 위한 단계별 승인 모델 연구(드론 사례)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-09-12",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "name": "UAV-LiDAR 지면점 밀도와 공간 해상도가 DEM 정확도에 미치는 영향",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-09-11",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-uav-swarm-mission-reliability-abort",
+      "name": "재구성형 UAV 스웜의 임무 중단을 고려한 임무 신뢰도 모델링 및 평가",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-12",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "marl-uav-wildfire-exploration",
+      "name": "산불 대응 자율 UAV 탐색을 위한 다중 에이전트 강화학습",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-11",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "swarmnxt-aerial-swarm-platform",
+      "name": "SwarmNxt: 고속 애자일 공중 스웜을 위한 오픈소스 SW-HW 플랫폼",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "ai-autonomy"
+      ],
+      "updated": "2026-09-12",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-148",
+      "name": "YOLO v8.4.148 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-09-12",
+      "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
     }
@@ -19916,6 +20049,227 @@
         "inbox/fetch-2026-09-10-yolo.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-09-10",
+      "target": "drone-news-2026-09-09",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-10",
+      "target": "rtk-gps-precise-landing",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-10",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-11",
+      "target": "drone-news-2026-09-10",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-11",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-11",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-12",
+      "target": "drone-news-2026-09-11",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-12",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-news-2026-09-12",
+      "target": "fcc-military-drone-restrictions",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "kci-drone-certification-stepwise-approval-model",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-drone-certification-stepwise-approval-model",
+      "target": "dji-easa-sail-bvlos",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-drone-certification-stepwise-approval-model",
+      "target": "faa-deter-program",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "target": "rtk-gps-precise-landing",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "target": "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-uav-swarm-mission-reliability-abort",
+      "target": "game-theoretic-drone-swarm-defense",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-swarm-mission-reliability-abort",
+      "target": "swarmnxt-aerial-swarm-platform",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-swarm-mission-reliability-abort",
+      "target": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "marl-uav-wildfire-exploration",
+      "target": "thermal-drone-wildfire-monitoring",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "marl-uav-wildfire-exploration",
+      "target": "drone-wildfire-rt-detr",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "marl-uav-wildfire-exploration",
+      "target": "hierarchical-rl-uav-navigation",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarmnxt-aerial-swarm-platform",
+      "target": "game-theoretic-drone-swarm-defense",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarmnxt-aerial-swarm-platform",
+      "target": "swarm-modes",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarmnxt-aerial-swarm-platform",
+      "target": "decentralized-swarm-gps-denied",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/swarmnxt-open-source-software-hardware-platform-for-fast-and-agile-aerial-swarms.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-148",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-148",
+      "target": "yolo-v8-4-146",
+      "type": "related",
+      "evidence": [],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-148",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-146",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
     }
   ]
 }

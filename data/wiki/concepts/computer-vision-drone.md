@@ -187,3 +187,5 @@ for waypoint in path:
 - [멈춤보단 천천히라도] 러스트 Option과 Result — null 없는 언어가 실패를 다루는 법 | 러스트 입문 #6 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=2KI6wW8z0H8
 - [멈춤보단 천천히라도] 병합 정렬 — 쪼개서 정복하는 O(n log n) | 3분 알고리즘 #7 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=TZPSTBHIPM4
 - [멈춤보단 천천히라도] 러스트 생명주기 — 허공에 매달린 참조를 잡는 법 | 러스트 입문 #9 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=NwKJrn4NyA0
+- [멈춤보단 천천히라도] 러스트 trait — 상속 대신 자격증, derive의 정체 | 러스트 입문 #10 (youtube.com, 2026-09-11) — https://www.youtube.com/watch?v=q-X5UdfCrjE
+- [멈춤보단 천천히라도] 퀵 정렬 — 실전 최강자의 비밀, 피벗 | 3분 알고리즘 #8 (youtube.com, 2026-09-11) — https://www.youtube.com/watch?v=OXNDcpR7HcI
