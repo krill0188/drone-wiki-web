@@ -9,7 +9,7 @@ const ONE_YEAR = 60 * 60 * 24 * 365
 // 있어야 하는데, localStorage는 서버로 전송되지 않아 그 경로가 원천적으로 막힌다.
 // httpOnly는 의도적으로 끈다 — 민감정보가 아닌 익명 UUID라 클라이언트(lib/session-id.ts)가
 // document.cookie로 직접 읽어 localStorage 키로 써야 하기 때문.
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   if (req.cookies.get(COOKIE_NAME)) return NextResponse.next()
 
   const res = NextResponse.next()

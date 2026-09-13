@@ -3,7 +3,7 @@
 //
 // 기본은 dry-run(제안만 출력, 문서 미변경). --apply를 줘야 실제로 .md 파일에 반영된다.
 // ~/2nd/scripts/extract-knowledge-graph.py + .sh 와 같은 패턴(배치 스크립트,
-// 사람이 검토 후 --apply, Hermes cron으로 주기 실행 가능)을 그대로 따른다.
+// 수동 --apply 또는 launchd 운영 래퍼의 예약 --apply 실행)을 그대로 따른다.
 //
 // 실행: npx tsx scripts/self-update-pipeline.ts [--apply] [--limit=20]
 

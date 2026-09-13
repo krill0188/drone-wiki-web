@@ -21,11 +21,11 @@ const LAYER_DIRS = ["concepts", "entities", "comparisons", "queries"]
 const RAW_DIRS = ["raw/papers", "raw/articles", "raw/youtube", "raw/videos", "raw/releases"]
 const RAW_EXCLUDE_DIRS = new Set(["files"]) // raw/papers/files/ — PDF 첨부, .md 없음
 
-// Phase 2 하이브리드 검색 상수. venv/embeddings.json은 둘 다 .gitignore
-// 대상이라 Vercel 배포본에는 존재하지 않는다 — 즉 로컬 dev(~/2nd/.venv 실존)
-// 에서는 자동으로 하이브리드가 켜지고, Vercel에서는 자동으로 기존 키워드
-// 전용 방식으로 폴백한다. 별도 환경 분기 코드 없이 파일 존재 여부만으로
-// 안전하게 갈린다 — scripts/research-search.py와 동일한 원리.
+// Document vectors are deployed in data/wiki/.ua/embeddings.json.
+// Query vectors additionally require WIKI_ROOT/.venv/bin/python + the same model.
+// The current Next.js/Vercel build supplies no Python environment: the code path
+// therefore falls back to keyword retrieval there. Live function logs are unverified.
+// Local hybrid is available only when both the Python/model and vectors are usable.
 const VENV_PYTHON = path.join(WIKI_ROOT, ".venv", "bin", "python")
 const EMBEDDINGS_PATH = path.join(WIKI_ROOT, ".ua", "embeddings.json")
 const EMBED_MODEL = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
