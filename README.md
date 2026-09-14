@@ -1,5 +1,7 @@
 # DroneWiki
 
+[Stage 0-R follow-up verification](docs/STAGE_0R_FOLLOWUP.md)
+
 드론/AI/로보틱스 지식을 제공하는 공개 위키와 AI Q&A 애플리케이션.
 원본은 `~/2nd`; `data/wiki/`는 검토된 공개 발행 snapshot이다.
 
