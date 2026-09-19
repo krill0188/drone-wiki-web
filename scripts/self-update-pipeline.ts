@@ -7,6 +7,7 @@
 //
 // 실행: npx tsx scripts/self-update-pipeline.ts [--apply] [--limit=20]
 
+import { withKnowledgeLock } from "./with-knowledge-lock"
 import { getSelfUpdateProposals, applyProposal, isSelfUpdateWritable } from "../lib/self-update"
 
 async function main() {
@@ -46,7 +47,7 @@ async function main() {
   console.log(`\n✅ ${applied}/${proposals.length}건 문서에 반영 완료`)
 }
 
-main().catch((err) => {
+withKnowledgeLock(process.argv.includes("--apply"), main).catch((err) => {
   console.error("[self-update] 실행 중 오류:", err)
   process.exitCode = 1
 })
