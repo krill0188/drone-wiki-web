@@ -60,3 +60,9 @@ Jinquan Yan et al., arXiv:2604.09313 (2026)
 - 철원 고석정꽃밭 드론으로 촬영한 인생사진 인기 (v.daum.net, Wed, 09 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xbUp1MDZaQ1FDeEVmUlBsSEtZSVJkZHNZd0RlRFVxNlJPSHlCalo0QVpxMUstRVVXdGl5ZHdTNUtiam02U0kwSm0zcVhLdk0?oc=5
 - 노르웨이 "젤렌스키 비행기, 러 드론에 피격될 뻔"…우 "과장"(종합) (v.daum.net, Thu, 10 Se) — https://news.google.com/rss/articles/CBMiRkFVX3lxTE45eXZ0cVY1TFZ5NzRHdzlaY2F2OXI1ejFkZFJIdk51V2hBLUR4em9tVGRxVzA5dXNiV3k3TVNmam80Qk5SSmc?oc=5
 - “드론전쟁 시대…중국의 물량공세 맞설건 오직 한국 공급망뿐” [제27회 세계지식포럼] (v.daum.net, Fri, 11 Se) — https://news.google.com/rss/articles/CBMiRkFVX3lxTFBNUWpJRDR3UWlPNjAxemtLUlJUNmhWQjEwTHpDTWcyallGSDhRbkNUcW5sQW14clVpM1FsNjVHYmozVENCMWc?oc=5
+- "러 정보요원, 독일 입국해 공항 폭탄드론 공작" (v.daum.net, Sat, 12 Se) — https://news.google.com/rss/articles/CBMiRkFVX3lxTE9XVGh0N3ZUTUxpMzlla2hsRTc1SW9DTFNuSlBfTE1OVWhGZlVlVmh6MnBVSWlCQW0wWnNDQXluOE1WcTlNZEE?oc=5
+- 내달 23∼24일 서울 하늘서 드론 레이싱…10개국 60여명 출격 (v.daum.net, Mon, 14 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTFBSc3FhbThwdkRBY1p6WVFYUlNYUTlIM00zcnM4MVN4TFh1bGVMeHJpYnRUQUoxeHhvTDFNTFdxcS1pTkJQeHd3cWlxaFJ6aHM?oc=5
+- [설왕설래] 드론 탈옥 (v.daum.net, Tue, 15 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE9TUmpfUEhEbDhINkZ5ZmxvLVlHQ1IwNlJ4Q3B1OFJtRE1RQVZlTXlSS24tWWhnb0pQOFhnN08zX2ZiaEswcnlyNE1IeDVuVjQ?oc=5
+- “이란 드론 몇 대에 뚫려? 美 속절없이 펀치 맞았다” (v.daum.net, Wed, 16 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yUGlheFA5YnRRbWZsSV9ZY2Fid05BaTdYQUt3RzZZVU5qa1lTX042eml5WFVMbUxVVkw0QjFmYzZEZElHYzM3bWU1enI0SEU?oc=5
+- "드론 공습에 아내 잃고 맨몸으로"…후티 진격에 10만명 피란길 (v.daum.net, Tue, 15 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE5mYlBQTUhQcHdtN1lMZXNNZlVBbXBLTHBHcFh5WGlyeGFxU3BYa2NNVW8tM3U4N2Y1eHVsV194YVYzQXUtOW1SeGpXMGYtR00?oc=5
+- 이륙하자마자 ‘우수수’ 추락…K-드론, UAE·사우디 앞 망신 (v.daum.net, Fri, 18 Se) — https://news.google.com/rss/articles/CBMiT0FVX3lxTFBzWVFvYlpPMU14dUxEZVpoZXJNdXk1anZnN3JjZ0ZiMEdOMHRrWDZOVWdDcUY2eHRfN2Q4NHBVX1lSSlJEalFLVjk5RmtJRGM?oc=5

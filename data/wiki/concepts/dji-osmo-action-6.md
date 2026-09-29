@@ -1,10 +1,10 @@
 ---
 title: DJI Osmo Action 6
 created: 2026-08-03
-updated: 2026-08-16
+updated: 2026-09-24
 type: concept
 tags: [drone, hardware, camera, dji]
-sources: [inbox/fetch-2026-08-03-yt-f28-at-night-the-stars-come-through-dji-osmo-action-6.md, inbox/fetch-2026-08-06-yt-a-water-ring-slowed-all-the-way-down-osmo-action-6.md, inbox/fetch-2026-08-16-yt-six-ocean-scenes-one-sensor-holds-every-color-dji-osmo-actio.md]
+sources: [raw/youtube/fetch-2026-08-03-yt-f28-at-night-the-stars-come-through-dji-osmo-action-6.md, inbox/fetch-2026-08-06-yt-a-water-ring-slowed-all-the-way-down-osmo-action-6.md, inbox/fetch-2026-08-16-yt-six-ocean-scenes-one-sensor-holds-every-color-dji-osmo-actio.md]
 confidence: high
 contested: false
 contradictions: []
@@ -39,3 +39,4 @@ DJI의 액션 카메라 시리즈 6세대 모델로, 야간 촬영 성능이 크
 - [DJI] Blue Water, True Color | DJI Osmo Action 6 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=BTVApyMqWOQ
 - [DJI] The drone threaded every ring in one take at IFA2026 | DJI Avata 360 (youtube.com, 2026-09-07) — https://www.youtube.com/watch?v=-Wz7CaXBy5c
 - [DJI] You Don't Plan Moments Like This. ｜ DJI Osmo Action 6 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=coKies6gTk4
+- [DJI] Walk In. Colors Stay True. | DJI Osmo Action 6 (youtube.com, 2026-09-15) — https://www.youtube.com/watch?v=4I7WWfdqDNc

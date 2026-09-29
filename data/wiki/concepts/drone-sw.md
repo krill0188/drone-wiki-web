@@ -44,3 +44,5 @@ domain: flight-control
 - [멈춤보단 천천히라도] 러스트 생명주기 — 허공에 매달린 참조를 잡는 법 | 러스트 입문 #9 (youtube.com, 2026-09-10) — https://www.youtube.com/watch?v=NwKJrn4NyA0
 - [멈춤보단 천천히라도] 러스트 trait — 상속 대신 자격증, derive의 정체 | 러스트 입문 #10 (youtube.com, 2026-09-11) — https://www.youtube.com/watch?v=q-X5UdfCrjE
 - [멈춤보단 천천히라도] 퀵 정렬 — 실전 최강자의 비밀, 피벗 | 3분 알고리즘 #8 (youtube.com, 2026-09-11) — https://www.youtube.com/watch?v=OXNDcpR7HcI
+- [멈춤보단 천천히라도] DP — 한 번 구한 답은 기억한다 | 3분 알고리즘 #15 (youtube.com, 2026-09-18) — https://www.youtube.com/watch?v=eYO62e2alYA
+- [멈춤보단 천천히라도] 3분 알고리즘 — 애니메이션으로 배우는 알고리즘 기초 (youtube.com, 2026-09-18) — https://www.youtube.com/watch?v=WII-LeqSI58

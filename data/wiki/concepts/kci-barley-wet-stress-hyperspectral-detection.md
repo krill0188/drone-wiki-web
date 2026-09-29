@@ -38,3 +38,6 @@ contradictions: []
 - [[pine-wilt-disease-uav-detection]] — UAV 영상 기반 식생 이상(병해) 탐지 정확도 비교 연구
 - [[kci-hyperspectral-litter-detection-unetpp]] — 동일 초분광 영상 활용 계열의 UAV 탐지 연구
 - [[computer-vision-drone]] — 드론 컴퓨터 비전 응용 전반
+
+## 📰 최근 관련 소식
+- [포착] ‘희귀한’ 북한 다연장로켓, 우크라 드론에 박살…“북한군 2000여명 사망” [영상] (나우뉴스, Sun, 13 Se) — https://news.google.com/rss/articles/CBMicEFVX3lxTFBqbzJoQmhqa2VpRzZnUWVPMGMxRzMycDIwX2FTbjF1SUFBMmo3VkRFMTZOcUtSTHJQMVFfWU40eXJxRXFWbXhnZ1pWSUR2Nk1lWkMyVzg5RWpvRGJyaDNxcTlTMmE0dXdvT0YzZEtVTlE?oc=5

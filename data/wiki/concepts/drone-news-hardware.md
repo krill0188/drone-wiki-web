@@ -1,10 +1,10 @@
 ---
 title: 드론 하드웨어 및 제조사 동향 2026-07
 created: 2026-07-29
-updated: 2026-08-06
+updated: 2026-09-24
 type: concept
 tags: [drone, drone-hw]
-sources: [inbox/fetch-2026-07-29-rss-dronedj.md]
+sources: [raw/articles/fetch-2026-07-29-rss-dronedj.md]
 confidence: medium
 contested: false
 contradictions: []
@@ -96,3 +96,12 @@ domain: hardware
 - 한 발 2000원 ‘드론 킬러’가 장갑차에…한화가 50㎾ 레이저 싣는 이유 [밀리터리+] (나우뉴스, Wed, 09 Se) — https://news.google.com/rss/articles/CBMicEFVX3lxTE1PWmpZVVkyYVZocjhPbjhGaTR5aF9RRmJ3c1UzNi1Qb25GcldhQ0J1aUpsV0lNWGhLVW4tZEpXb01raTRSWFMteFptWW14WjFJeU1LZV8yZ0xWQ21kbFhLenlZZng4T3Jta3NSZ2I5eVk?oc=5
 - 충남도, 첫 드론공원 국토부 공식 인증…드론 레저·교육 거점 도약 (대한경제, Tue, 04 Au) — https://news.google.com/rss/articles/CBMidEFVX3lxTE9xTEh2blp0aHJwOVpLMURoT01vOHVQU3VuXzhrQzJ5QjktejdiNzhlYm9kX0RyZS0wUGdDV255OXQ2NDJpWDlwbGUybVNEbXNCcDVqdlpkOWNVYTJwQ1dYVmoyd2ZDcS1LMk1zNzRRWld5UkxM?oc=5
 - 리퍼 대체 드론 '와일드파이어' 공개…"국방부 요구 능가" (데일리방산, Fri, 11 Se) — https://news.google.com/rss/articles/CBMicEFVX3lxTFB1LXN2UGNiazRqem90RXZmV3NvdHZFQk9lOElTd3hwMUVMV3JkZml3NDlET1lNajlwdVpVT1ZxZTNmQ1dVdTRuLUVRZnpJVHFRVkJFSXVPS24tSWNENmk0SFZuRDhzWkdOQ2VmdHdGUWQ?oc=5
+- ’드론·레이저의 향연’… 광안리 밤하늘 수놓는다 (연합뉴스TV, Sun, 13 Se) — https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52Z1ZRTXZjYThrblpfQjhsRm9ETUNISk1oSGhKbVpZa3I4WHBmdlJqdWMtQzg4Vm1rTTR6aFdDVXBvODdyVWNBX3JqN3lyN1JRMVR4X0VpblNIN0Q4TjVFcDM4MENycms?oc=5
+- 드론 잡을 레이저 찾는 美 방산…핵융합 스타트업에 투자했다 (뉴시스, Mon, 14 Se) — https://news.google.com/rss/articles/CBMieEFVX3lxTE43SnhTTnlNLVNMSkhKRlVKbXp1U2VEMjZHdlBCT0pHbHAyRlVmSmlJS2NUWW1rT0x3QXZrSGJwWDRlUDFsb25xdmMxNW5NRURHSFBXaW9DaTZmNHNoc20zaVFWZm9jRHo5NkVCNW5PSVd0eDZsUENjMdIBeEFVX3lxTE43SnhTTnlNLVNMSkhKRlVKbXp1U2VEMjZHdlBCT0pHbHAyRlVmSmlJS2NUWW1rT0x3QXZrSGJwWDRlUDFsb25xdmMxNW5NRURHSFBXaW9DaTZmNHNoc20zaVFWZm9jRHo5NkVCNW5PSVd0eDZsUENjMQ?oc=5
+- "20분 날던 드론, 수소로 14시간"…투자사들 사로잡은 딥테크 - 머니투데이 (머니투데이, Mon, 14 Se) — https://news.google.com/rss/articles/CBMiakFVX3lxTFBJNkJSOHp6cnNFRlloR1lRLXJ3bHBHOU5DTDlpMG9GT1FncjMwODczTW8tREdURmxIQ1RvZEU2MjZBNXZXajNUMzByLW1sUTZtWmZEQXkyN3k1d0JNQWp2RnpFNmpuMUpiMEHSAW9BVV95cUxPTXEzNE5ZdDVGRmIwLVBld3ZnZHlhSm9PcDU4YU1ydzRJbUpQUkcxZ0phOS1vMFcwbndJS05qN3dhRnZiVllhajZPZFNac3ZCRjZqX0xxWUpmdkg2M2xoejJHY0x2Um1FVFFiWHBxdk0?oc=5
+- 北, 우크라戰처럼 ‘드론 벌떼공격-섞어쏘기’로 방공망 무력화 노려 (동아일보, Mon, 14 Se) — https://news.google.com/rss/articles/CBMid0FVX3lxTE1IdjJqTWZqYWlkWEZ2XzdXNGtVd2lWWkVHd1Fqd01WV3JVdEIxUFA4dDdySHQxbGFFNU9WYUwtZzJqVGxrT0M5a0RmMEhMSmJlTWUzVWo2QS1OMUQybUIxOE9QX2RLaTRJSlQxaEJOUWZ5SmR2aWpF0gFmQVVfeXFMUFM2NjBRVUZWcWpVYzZYM2ZfSFhqVVJURTlaQ2xoYzhpQ1hzeXI4djZUV2NtbEpKUFRSR2lGWGZST09kNkhtMVRkc2lBRzRRdTQwYzhyUTdITTBzVlFBVU16T01jMnRR?oc=5
+- 1200km 날아간 우크라 드론, K-방산 장거리 무인기 자극 (글로벌이코노믹, Mon, 14 Se) — https://news.google.com/rss/articles/CBMihwFBVV95cUxNUnZfRHhLTnBaeFE1ZnZEcGJST0p6V05wOGFXVFBRM25xbkt4WHVqSm9Xa193SVVjMk1iMWtjV0l6bnQyckF5UGNzenp4NEE0ZTQ0dkg2X2RxUmNTZlEzM0xxcU5BZFNib24xcXFBSE9LakpfS1JJemVPRDVQSC1VTlE0b1lKU0k?oc=5
+- 드론 잇단 영공 침범에 긴장 높이는 동유럽…리투아니아·폴란드 방어태세 강화 (munhwa.com, Tue, 15 Se) — https://news.google.com/rss/articles/CBMiUEFVX3lxTE5WbEZVM1NuSFkzUHN4YXU4U2UzdDhueDZuQWU3c2g5OTNiU0dVQWNvR1VZY0EzM1NwSmkxdVQwZXhxN3MyQms0YnZ0a2NWZVcx?oc=5
+- "이란 드론 막아라"...걸프국들, 7조원 방산 러시 (한경매거진&북, Wed, 16 Se) — https://news.google.com/rss/articles/CBMiZ0FVX3lxTE82VlNWUFBRMFpyWjZ0MDRucE5XTDVsbVhDRm05bkFGUGVBQ3pZTGVVR2VUZnRwWkdkMTh2R19Hc2FOVkNlV3c3SU10dmx1emxiSUM0blRub0xsMGhCWjhPWkhxN1h4eFE?oc=5
+- 춘천 '호수 드론라이트쇼' 19일 피날레…2천대 밤하늘 수놓는다 (매일경제 마켓, Thu, 17 Se) — https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ZWWwySTBKTXNXcEpHNjk0b0o2a3NGbGFBWW85UmNvZzZNUEZ5WjUtYnlqS29nNS1tejZaUDdVUEl0RjUtV2trUkg1QnFKdU1FQUE?oc=5
+- '드론 잡는 드론'에 꽂혔다…외교단 눈길 사로잡은 'K-드론' (한국경제, Fri, 18 Se) — https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ESDNqMlk5RjB6QTE3aU5tZEh6d1RyZG5jTHNaMjRjOWdJUjVOaUptSjhyRmJmblM4aEswQk5XQ2VhS0lHWWRqT3NXNHE3YkIyVE0zWXV3ZjlNQQ?oc=5

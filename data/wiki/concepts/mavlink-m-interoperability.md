@@ -54,3 +54,5 @@ MAVLink-M은 군사 및 상업용 드론 간의 상호운용성을 위한 확장
 - [더밀크 스페셜 웨비나] 드론과 AI가 다시 쓰는 방산의 규칙 (The Miilk, Fri, 04 Se) — https://news.google.com/rss/articles/CBMiREFVX3lxTFBnbTBsdkFlYjFzTGdPYnBDSFhxVElVNVNzV2pfYnEyUkpqdzluUzNnWXpOWlozOEpHNG4tRTAwRHFmZUJY?oc=5
 - US Army Adds Group 3 Drones, Payloads & New Selection Tool to UAS Marketplace (executivegov.com, Mon, 17 Au) — https://news.google.com/rss/articles/CBMilAFBVV95cUxOT2o1TDdSMFhRSmk5dE54eTJTTTVOX2QwQkZ4YUdiVUNQSDVXVlNUY083LVdZT1RrMURpajlwdkx5Wk4wczlmcEV3MEktSDlDVHNKelZicXdPZzdxNHBiek5PUFYyaWxQV0F5eEoxdTF1NDNKS1liakRPdS1OdGlUd09hd2lrRTVNcFJ5c3dPdU8wZ2RL?oc=5
 - 드론에서 순항미사일까지...‘저가 대량생산’ 방산 혁명이 온다 (The Miilk, Fri, 11 Se) — https://news.google.com/rss/articles/CBMiUEFVX3lxTE9QeC1rel9WX01oM1FPelhMMkkzS3JEN3J2eTJDaFhtSUVPOTljWVN0bUxCM3BSWWEyOEdiVE0xdlB0WmtTZndOa0Y2TzRBNUxT?oc=5
+- [DJI] Take Ronin 4D to IBC 2026 and explore the exhibition with us. (youtube.com, 2026-09-14) — https://www.youtube.com/watch?v=vKqYtJdzl10
+- [Joshua Bardwell] Why I paid $60 for this AMAZING cable (I'm stupid) (youtube.com, 2026-09-14) — https://www.youtube.com/watch?v=kagyXl1lvtA

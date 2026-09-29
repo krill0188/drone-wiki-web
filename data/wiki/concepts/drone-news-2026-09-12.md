@@ -44,3 +44,7 @@ contradictions: []
 - [[drone-news-2026-09-11]] — 직전 종합된 드론 업계 주요 소식
 - [[drone-regulations]] — 드론 규제 개요(FAA/EASA/BVLOS)
 - [[fcc-military-drone-restrictions]] — FCC 군사 등급 드론 수입 규제 제안(98.6% 반대 여론 등)
+
+## 📰 최근 관련 소식
+- 방산 빗장 푼 미쓰비시UFJ… 군사 AI·드론에 대출 튼다 (글로벌이코노믹, Wed, 16 Se) — https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbC1sQ2dUZEVwYTBfUGRVZDd1MkdZLW9PeWQ0V2tkbW1CYnhYX2lMUWZkbmJmYmFjeExCRzR0SFcyOHVyTWlyTGJUdlVhVlJfVnhDU3E2aDdRZUk3eHRiUEJYT0NKSnNHanlaVTQ4QXlvU1JBOVF2clJOYzNUUlFaN3cwUHUtN01x?oc=5
+- KAI 드론 잇따라 제어 불능 추락…해외 방산 관계자 앞 '망신' (노컷뉴스, Thu, 17 Se) — https://news.google.com/rss/articles/CBMiUkFVX3lxTE9panFTT3B6QkpmMUdsRTRhZTJoOV80RkpJc2lpUVQySERIbkZLSllLU2RiSGdlb042Q0RDMGhIUkRuV1VTa2hROHFVWGE3QW1Hc3c?oc=5
