@@ -85,6 +85,8 @@ export function getSelfUpdateProposals(limit = 20): SelfUpdateProposal[] {
     const hits = ragSearch(query, NEWS_PER_ITEM_MATCHES)
     const newsDate = (item.published || item.fetched || "").slice(0, 10)
     for (const hit of hits) {
+      // raw/ 는 불변 증거 계층이라 뉴스 불릿을 덧붙이지 않는다.
+      if (hit.slug.startsWith("raw-")) continue
       proposals.push({
         newsUrl: item.url,
         newsTitle: item.title,
