@@ -18611,7 +18611,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/papers/_unclassified/a-bayesian-learning-approach-for-drone-coverage-network-a-case-study-on-cardiac-.md"
+        "raw/papers/_unclassified/a-bayesian-learning-approach-for-drone-coverage-network-a-case-study-on-cardiac-.md",
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
       ]
     },
     {
@@ -24941,6 +24942,294 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/youtube/fetch-2026-09-19-yt-who-else-got-locked-onto-this-setup-dji-sdr-transmission-2-d.md"
+      ]
+    },
+    {
+      "id": "Yao, Liang",
+      "name": "Yao, Liang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "DroneWAM",
+      "name": "DroneWAM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "JEPA",
+      "name": "JEPA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "Resampler",
+      "name": "Resampler",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "pretrained encoder",
+      "name": "pretrained encoder",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "Adaptive rollout",
+      "name": "Adaptive rollout",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "Gate",
+      "name": "Gate",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "DroneNav-6D",
+      "name": "DroneNav-6D",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "World-action model",
+      "name": "World-action model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "drone visual navigation",
+      "name": "drone visual navigation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "representation space",
+      "name": "representation space",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "RGB observations",
+      "name": "RGB observations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "6-DoF flight trajectories",
+      "name": "6-DoF flight trajectories",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "control commands",
+      "name": "control commands",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "wind disturbances",
+      "name": "wind disturbances",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "trajectory prediction",
+      "name": "trajectory prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "latent tokens",
+      "name": "latent tokens",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "prediction depth",
+      "name": "prediction depth",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "trajectory accuracy",
+      "name": "trajectory accuracy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "aerial motion",
+      "name": "aerial motion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "encoder features",
+      "name": "encoder features",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "future states",
+      "name": "future states",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "computation efficiency",
+      "name": "computation efficiency",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "observation prediction",
+      "name": "observation prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
       ]
     }
   ],
@@ -44229,6 +44518,321 @@
       "type": "DEMONSTRATED",
       "evidence": [
         "raw/youtube/fetch-2026-09-19-yt-who-else-got-locked-onto-this-setup-dji-sdr-transmission-2-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yao, Liang",
+      "target": "DroneWAM",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "World-action model",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "drone visual navigation",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "JEPA",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "Resampler",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "pretrained encoder",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "Adaptive rollout",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "DroneNav-6D",
+      "type": "TRAINS_ON",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneWAM",
+      "target": "trajectory accuracy",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "JEPA",
+      "target": "representation space",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "JEPA",
+      "target": "future states",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Resampler",
+      "target": "encoder features",
+      "type": "COMPRESSES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Resampler",
+      "target": "latent tokens",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "pretrained encoder",
+      "target": "encoder features",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Adaptive rollout",
+      "target": "Gate",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Adaptive rollout",
+      "target": "trajectory accuracy",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Adaptive rollout",
+      "target": "prediction depth",
+      "type": "REDUCES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gate",
+      "target": "prediction depth",
+      "type": "ALLOCATES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneNav-6D",
+      "target": "RGB observations",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneNav-6D",
+      "target": "6-DoF flight trajectories",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneNav-6D",
+      "target": "control commands",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DroneNav-6D",
+      "target": "wind disturbances",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "World-action model",
+      "target": "trajectory prediction",
+      "type": "PREDICTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "World-action model",
+      "target": "observation prediction",
+      "type": "PREDICTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone",
+      "target": "control commands",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone",
+      "target": "wind disturbances",
+      "type": "EXPERIENCES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone",
+      "target": "drone visual navigation",
+      "type": "ENGAGES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "trajectory prediction",
+      "target": "drone visual navigation",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "6-DoF flight trajectories",
+      "target": "aerial motion",
+      "type": "REPRESENTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "encoder features",
+      "target": "Resampler",
+      "type": "FEEDS_INTO",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "latent tokens",
+      "target": "computation efficiency",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "representation space",
+      "target": "trajectory prediction",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RGB observations",
+      "target": "drone visual navigation",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "control commands",
+      "target": "drone",
+      "type": "DIRECTS",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "aerial motion",
+      "target": "drone",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
       ],
       "confidence": "unverified"
     }

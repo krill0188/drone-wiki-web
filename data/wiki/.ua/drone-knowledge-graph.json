@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "b4dd833354f5b2fc646066887c2aa3693395ad8495dfcc22d81dafd6f5faf656",
+  "source_fingerprint": "f812a1886335c7ac7697a1278f1b931d89f93228318060aaf43b2e9f79e152dc",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -430,7 +430,7 @@
         "drone-ai",
         "datalink"
       ],
-      "updated": "2026-09-29",
+      "updated": "2026-09-30",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -478,7 +478,7 @@
         "drone-ai",
         "swarm"
       ],
-      "updated": "2026-09-17",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -508,7 +508,7 @@
         "reinforcement-learning",
         "safety"
       ],
-      "updated": "2026-09-18",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -878,6 +878,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "diu-low-cost-isr-challenge",
+      "name": "DIU Low-Cost ISR (LC-ISR) Challenge",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-09-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "divide-conquer-uav-detector",
@@ -1254,7 +1268,7 @@
         "research",
         "sensor"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-09-30",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1732,7 +1746,7 @@
         "ops-mission",
         "wildfire"
       ],
-      "updated": "2026-09-18",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -1787,6 +1801,20 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "dronewam-efficient-world-action-model",
+      "name": "DroneWAM: Efficient World Action Model for Drone Visual Navigation",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-09-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "dronuum-computing-continuum",
       "name": "Dronuum: Computing Continuum 기반 스마트 드론 애플리케이션",
       "layer": "Concepts",
@@ -1812,7 +1840,7 @@
         "security",
         "intrusion-detection"
       ],
-      "updated": "2026-09-18",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1924,7 +1952,7 @@
         "rtk",
         "emlid"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-09-30",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2440,7 +2468,7 @@
         "ai-autonomy",
         "swarm"
       ],
-      "updated": "2026-09-08",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2528,7 +2556,7 @@
       "tags": [
         "drone"
       ],
-      "updated": "2026-09-23",
+      "updated": "2026-09-30",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2844,7 +2872,7 @@
         "drone-ai",
         "datalink"
       ],
-      "updated": "2026-09-17",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -3595,7 +3623,7 @@
         "ai-autonomy",
         "paper"
       ],
-      "updated": "2026-08-07",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -3750,7 +3778,7 @@
         "drone",
         "datalink"
       ],
-      "updated": "2026-09-23",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3847,7 +3875,7 @@
         "drone",
         "ai-agent"
       ],
-      "updated": "2026-09-23",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4685,7 +4713,7 @@
         "hardware",
         "company"
       ],
-      "updated": "2026-09-26",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -4824,7 +4852,7 @@
         "drone",
         "drone-ai"
       ],
-      "updated": "2026-09-23",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4909,7 +4937,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-24",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6179,6 +6207,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "yolo-v8-4-166",
+      "name": "YOLO v8.4.166 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-09-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "yolo",
       "name": "YOLO",
       "layer": "Concepts",
@@ -6677,7 +6719,7 @@
         "ops-mission",
         "company"
       ],
-      "updated": "2026-09-29",
+      "updated": "2026-09-30",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -6862,7 +6904,7 @@
         "autonomy",
         "security"
       ],
-      "updated": "2026-08-09",
+      "updated": "2026-09-30",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -6990,6 +7032,21 @@
       ],
       "updated": "2026-09-15",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "wingtraray",
+      "name": "WingtraRAY",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "regulations"
+      ],
+      "updated": "2026-09-30",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -7963,6 +8020,15 @@
       "confidence": "medium"
     },
     {
+      "source": "calibrate-once-fly-any-team-swarm-training",
+      "target": "swarm-modes",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-17-arxiv-calibrate-once-fly-any-team-residual-grounded-low-fidelity-t.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "california-drone-concert-restriction",
       "target": "michigan-drone-lawsuit",
       "type": "wikilink",
@@ -8588,6 +8654,24 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-07-30-arxiv-distributed-continuous-aerial-surveillance-by-uas-swarms-und.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "diu-low-cost-isr-challenge",
+      "target": "us-dod-cuas-marketplace",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "diu-low-cost-isr-challenge",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-rss-dronelife.md"
       ],
       "confidence": "medium"
     },
@@ -10516,6 +10600,33 @@
       "confidence": "high"
     },
     {
+      "source": "dronewam-efficient-world-action-model",
+      "target": "skyjepa-world-models",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-arxiv-dronewam-efficient-world-action-model-for-drone-visual-navig.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dronewam-efficient-world-action-model",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-arxiv-dronewam-efficient-world-action-model-for-drone-visual-navig.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dronewam-efficient-world-action-model",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-arxiv-dronewam-efficient-world-action-model-for-drone-visual-navig.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "dronuum-computing-continuum",
       "target": "drone-ai-agents",
       "type": "related",
@@ -11467,6 +11578,24 @@
     {
       "source": "game-theoretic-drone-swarm-defense",
       "target": "rigid-covert-gnss-spoofing-swarm",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "game-theoretic-drone-swarm-defense",
+      "target": "swarm-modes",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "game-theoretic-drone-swarm-defense",
+      "target": "kci-uav-swarm-mission-reliability-abort",
       "type": "related",
       "evidence": [
         "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
@@ -15635,6 +15764,42 @@
       "confidence": "medium"
     },
     {
+      "source": "swarm-modes",
+      "target": "game-theoretic-drone-swarm-defense",
+      "type": "related",
+      "evidence": [
+        "raw/articles/mastervault-swarm-architecture.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-modes",
+      "target": "swarmnxt-aerial-swarm-platform",
+      "type": "related",
+      "evidence": [
+        "raw/articles/mastervault-swarm-architecture.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-modes",
+      "target": "kci-uav-swarm-mission-reliability-abort",
+      "type": "related",
+      "evidence": [
+        "raw/articles/mastervault-swarm-architecture.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-modes",
+      "target": "calibrate-once-fly-any-team-swarm-training",
+      "type": "related",
+      "evidence": [
+        "raw/articles/mastervault-swarm-architecture.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "swarmnxt-aerial-swarm-platform",
       "target": "game-theoretic-drone-swarm-defense",
       "type": "related",
@@ -17665,6 +17830,33 @@
       "confidence": "medium"
     },
     {
+      "source": "yolo-v8-4-166",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-166",
+      "target": "yolo-v8-4-165",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-166",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "yolo",
       "target": "yolo-v8-4-155",
       "type": "wikilink",
@@ -19027,6 +19219,24 @@
     },
     {
       "source": "skydio",
+      "target": "skydio-f10-megadock",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio",
+      "target": "skydio-f10-megadock",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio",
       "target": "drone-ai-agents",
       "type": "related",
       "evidence": [
@@ -19285,6 +19495,24 @@
         "inbox/fetch-2026-09-15-rss-dronelife.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "wingtraray",
+      "target": "dji-easa-sail-bvlos",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-rss-suasnews.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "wingtraray",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-30-rss-suasnews.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "xtend-ai-robotics",
