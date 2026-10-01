@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "f812a1886335c7ac7697a1278f1b931d89f93228318060aaf43b2e9f79e152dc",
+  "source_fingerprint": "aaad658f1da0a5f9560e62da19421d666cd14b337719f263dc4420b68f02c627",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -147,6 +147,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "agile-vision-multi-uav-state-estimation",
+      "name": "Towards Agile Vision-Based Multi-UAV Flight: Revisiting State Estimation",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "swarm"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "agilepe-uav-pursuit-evasion",
@@ -400,7 +415,7 @@
         "drone-sw",
         "fpv"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -638,7 +653,7 @@
         "tracking",
         "YOLO"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -653,7 +668,7 @@
         "swarm",
         "ops-mission"
       ],
-      "updated": "2026-09-25",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1268,7 +1283,7 @@
         "research",
         "sensor"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1340,7 +1355,7 @@
         "hardware",
         "drone-hw"
       ],
-      "updated": "2026-09-05",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1634,7 +1649,7 @@
         "BVLOS",
         "compliance"
       ],
-      "updated": "2026-09-29",
+      "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2600,7 +2615,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-08-01",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -2805,6 +2820,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "kci-cepstrum-single-microphone-drone-distance",
+      "name": "켑스트럼을 이용한 단일 마이크로폰 기반 드론 거리 추정 (KCI)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "kci-counter-drone-hardkill-engagement-zone",
       "name": "대드론 하드킬 무인기의 교전영역 계산 알고리즘 개발",
       "layer": "Concepts",
@@ -2863,6 +2892,20 @@
       "ontologyClass": "AbstractProcess"
     },
     {
+      "id": "kci-drone-detection-cfar-feature-postprocessing",
+      "name": "드론 탐지를 위한 효과적인 특징 기반 후처리 기법 (KCI)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "kci-dual-nis-sac-gnss-ins-spoofing",
       "name": "이중 NIS 보상 SAC 기반 GNSS/INS 무인기 은닉 기만 기법 (KCI)",
       "layer": "Concepts",
@@ -2873,6 +2916,20 @@
         "datalink"
       ],
       "updated": "2026-09-30",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-ground-target-tracking-retinanet-kalman",
+      "name": "감시 드론을 위한 심층 신경망 기반 지상 표적 추적 기법 (KCI)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2985,6 +3042,20 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-russia-ukraine-war-drone-terror",
+      "name": "러시아ㆍ우크라이나 전쟁이 드론 테러에 미치는 영향과 시사점 (KCI)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "kci-sejong-counter-drone-governance",
       "name": "국가중요시설 초밀집지역의 대드론 거버넌스: 세종 국가상징구역 설계",
       "layer": "Concepts",
@@ -2994,7 +3065,7 @@
         "regulations",
         "ops-mission"
       ],
-      "updated": "2026-09-16",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -3861,7 +3932,7 @@
         "comms-protocol",
         "swarm"
       ],
-      "updated": "2026-09-15",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3977,7 +4048,7 @@
         "object-detection",
         "detr"
       ],
-      "updated": "2026-08-20",
+      "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4958,6 +5029,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "temporal-cascading-quadrotor-mpc",
+      "name": "Temporal Cascading of Planning and Control for Quadrotor MPC",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "terra-drone-deftech",
       "name": "Terra Drone DEFTECH Partnership",
       "layer": "Concepts",
@@ -5408,7 +5493,7 @@
         "fpv",
         "simulation"
       ],
-      "updated": "2026-08-14",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -6221,6 +6306,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "yolo-v8-4-170",
+      "name": "YOLO v8.4.170 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "yolo",
       "name": "YOLO",
       "layer": "Concepts",
@@ -6432,6 +6531,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "digital-force-technologies",
+      "name": "Digital Force Technologies",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "company"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "dji-enterprise",
       "name": "DJI Enterprise",
       "layer": "Entities",
@@ -6513,7 +6627,7 @@
         "ops-mission",
         "company"
       ],
-      "updated": "2026-07-30",
+      "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -6528,7 +6642,7 @@
         "ai-agent",
         "company"
       ],
-      "updated": "2026-07-30",
+      "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6644,7 +6758,7 @@
         "counter-uas",
         "security"
       ],
-      "updated": "2026-08-05",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6765,7 +6879,7 @@
         "counter-uas",
         "security"
       ],
-      "updated": "2026-08-05",
+      "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6832,6 +6946,21 @@
       "ontologyClass": "ComputeUnit"
     },
     {
+      "id": "powerus",
+      "name": "Powerus",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "company"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "px4-flight-stack",
       "name": "PX4 Flight Stack",
       "layer": "Entities",
@@ -6893,6 +7022,21 @@
       "ontologyClass": null
     },
     {
+      "id": "robin-radar",
+      "name": "Robin Radar Systems",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "company"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "skydio",
       "name": "Skydio",
       "layer": "Entities",
@@ -6923,6 +7067,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "smart-shooter",
+      "name": "Smart Shooter",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "ai-agent",
+        "company"
+      ],
+      "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "sol-one",
@@ -7436,6 +7595,33 @@
       "confidence": "medium"
     },
     {
+      "source": "agile-vision-multi-uav-state-estimation",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yt-towards-agile-vision-based-multi-uav-flight-revisiting-state.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "agile-vision-multi-uav-state-estimation",
+      "target": "high-speed-drone-tracking",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yt-towards-agile-vision-based-multi-uav-flight-revisiting-state.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "agile-vision-multi-uav-state-estimation",
+      "target": "visual-positioning-odometry",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yt-towards-agile-vision-based-multi-uav-flight-revisiting-state.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "agilepe-uav-pursuit-evasion",
       "target": "agile-quadrotor-learning",
       "type": "related",
@@ -7865,14 +8051,18 @@
       "source": "betaflight-fc-alignment-wizard",
       "target": "betaflight",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-oscarliang-fpv.md"
+      ],
       "confidence": "high"
     },
     {
       "source": "betaflight-fc-alignment-wizard",
       "target": "flight-controller-hardware",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-oscarliang-fpv.md"
+      ],
       "confidence": "high"
     },
     {
@@ -8247,35 +8437,54 @@
       "source": "computer-vision-drone",
       "target": "drone-ai-agents",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "swarm-coordination",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "px4-offboard-control",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "flight-controller-hardware",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "computer-vision-drone",
       "target": "ros2-drone-integration",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "computer-vision-drone",
+      "target": "kci-ground-target-tracking-retinanet-kalman",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
       "confidence": "medium"
     },
     {
@@ -8299,6 +8508,15 @@
     {
       "source": "counter-drone-queueing-force-sizing",
       "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/대드론-방어체계-소요산정에-관한-확률적-대기행렬-모형-연구.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "counter-drone-queueing-force-sizing",
+      "target": "kci-drone-detection-cfar-feature-postprocessing",
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/대드론-방어체계-소요산정에-관한-확률적-대기행렬-모형-연구.md"
@@ -9329,6 +9547,15 @@
       "confidence": "high"
     },
     {
+      "source": "drone-anomaly-detection-survey",
+      "target": "kci-ground-target-tracking-retinanet-kalman",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-kci-드론-이상-징후-탐지-방법-연구-동향-및-개선-방안-연구.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "drone-assistant-finland-regulatory-tool",
       "target": "drone-regulations",
       "type": "related",
@@ -9462,6 +9689,15 @@
     {
       "source": "drone-fluxgate-magnetometer-crossline-correction",
       "target": "sensor-calibration",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-fluxgate-magnetometer-crossline-correction",
+      "target": "kci-cepstrum-single-microphone-drone-distance",
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md"
@@ -10329,6 +10565,15 @@
     {
       "source": "drone-regulations",
       "target": "us-drone-import-tariffs-2026",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "kci-russia-ukraine-war-drone-terror",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-08-15-rss-dronelife.md"
@@ -11873,6 +12118,15 @@
       "confidence": "medium"
     },
     {
+      "source": "high-speed-drone-tracking",
+      "target": "kci-ground-target-tracking-retinanet-kalman",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-yt-this-drone-can-chase-f1-cars.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "holybro-setup-params",
       "target": "fc-vendor-param-guide",
       "type": "wikilink",
@@ -12157,6 +12411,33 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-cepstrum-single-microphone-drone-distance",
+      "target": "monava",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-cepstrum-single-microphone-drone-distance",
+      "target": "kci-drone-detection-cfar-feature-postprocessing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-cepstrum-single-microphone-drone-distance",
+      "target": "drone-fluxgate-magnetometer-crossline-correction",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "kci-counter-drone-hardkill-engagement-zone",
       "target": "drone-wall-defense-system",
       "type": "related",
@@ -12230,6 +12511,33 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-drone-detection-cfar-feature-postprocessing",
+      "target": "monava",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-drone-detection-cfar-feature-postprocessing",
+      "target": "robin-radar",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-drone-detection-cfar-feature-postprocessing",
+      "target": "pt-detr-small-target-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "kci-dual-nis-sac-gnss-ins-spoofing",
       "target": "rigid-covert-gnss-spoofing-swarm",
       "type": "related",
@@ -12244,6 +12552,33 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-17-kci-이중-nis-보상을-적용한-sac-기반-gnssins-복합항법-무인기-은닉-기만-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-ground-target-tracking-retinanet-kalman",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-ground-target-tracking-retinanet-kalman",
+      "target": "pt-detr-small-target-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-ground-target-tracking-retinanet-kalman",
+      "target": "drone-anomaly-detection-survey",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
       ],
       "confidence": "medium"
     },
@@ -12411,6 +12746,33 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-russia-ukraine-war-drone-terror",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-russia-ukraine-war-drone-terror",
+      "target": "kci-sejong-counter-drone-governance",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-russia-ukraine-war-drone-terror",
+      "target": "ukraine-fight-drone-simulator",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "kci-sejong-counter-drone-governance",
       "target": "kci-airport-drone-incident-location-reporting",
       "type": "related",
@@ -12422,6 +12784,15 @@
     {
       "source": "kci-sejong-counter-drone-governance",
       "target": "kci-counter-drone-hardkill-engagement-zone",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-초밀집지역의-대드론-거버넌스-연구---세종-국가상징구역의-선제적-거버넌스-설계--.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-sejong-counter-drone-governance",
+      "target": "kci-russia-ukraine-war-drone-terror",
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/국가중요시설-초밀집지역의-대드론-거버넌스-연구---세종-국가상징구역의-선제적-거버넌스-설계--.md"
@@ -13844,6 +14215,15 @@
       "confidence": "medium"
     },
     {
+      "source": "path-uav-target-handoff",
+      "target": "kci-ground-target-tracking-retinanet-kalman",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-15-arxiv-path-continuous-target-sensing-among-autonomous-cooperative-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "physai-bench-uav-agentic-benchmark",
       "target": "drone-ai-agents",
       "type": "related",
@@ -14021,6 +14401,24 @@
     {
       "source": "pt-detr-small-target-detection",
       "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "raw/papers/ai-autonomy/pt-detr-small-target-detection.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "pt-detr-small-target-detection",
+      "target": "kci-drone-detection-cfar-feature-postprocessing",
+      "type": "related",
+      "evidence": [
+        "raw/papers/ai-autonomy/pt-detr-small-target-detection.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "pt-detr-small-target-detection",
+      "target": "kci-ground-target-tracking-retinanet-kalman",
       "type": "related",
       "evidence": [
         "raw/papers/ai-autonomy/pt-detr-small-target-detection.md"
@@ -15827,6 +16225,33 @@
       "confidence": "medium"
     },
     {
+      "source": "temporal-cascading-quadrotor-mpc",
+      "target": "px4-control-tuning",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yt-temporal-cascading-of-planning-and-control-for-quadrotor-mpc.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "temporal-cascading-quadrotor-mpc",
+      "target": "time-optimal-quadrotor-waypoints",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yt-temporal-cascading-of-planning-and-control-for-quadrotor-mpc.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "temporal-cascading-quadrotor-mpc",
+      "target": "spatial-dubins-quadrotor-control",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yt-temporal-cascading-of-planning-and-control-for-quadrotor-mpc.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "terra-drone-deftech",
       "target": "dfend-counter-drone-worldcup",
       "type": "related",
@@ -16540,6 +16965,15 @@
     {
       "source": "ukraine-fight-drone-simulator",
       "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-yt-ukraine-fight-drone-simulator-not-just-a-game.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ukraine-fight-drone-simulator",
+      "target": "kci-russia-ukraine-war-drone-terror",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-14-yt-ukraine-fight-drone-simulator-not-just-a-game.md"
@@ -17857,6 +18291,33 @@
       "confidence": "medium"
     },
     {
+      "source": "yolo-v8-4-170",
+      "target": "yolo-v8-4-166",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-170",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-170",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "yolo",
       "target": "yolo-v8-4-155",
       "type": "wikilink",
@@ -18383,6 +18844,33 @@
       "confidence": "high"
     },
     {
+      "source": "digital-force-technologies",
+      "target": "smart-shooter",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "digital-force-technologies",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "digital-force-technologies",
+      "target": "fortem-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "dji-enterprise",
       "target": "dji",
       "type": "related",
@@ -18545,6 +19033,24 @@
       "confidence": "high"
     },
     {
+      "source": "droneshield",
+      "target": "digital-force-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "droneshield",
+      "target": "smart-shooter",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-30-rss-suasnews.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "dronetag",
       "target": "airwise-nexus",
       "type": "related",
@@ -18700,6 +19206,24 @@
     {
       "source": "fortem-technologies",
       "target": "lockheed-martin-morfius",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-05-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fortem-technologies",
+      "target": "powerus",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-05-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fortem-technologies",
+      "target": "robin-radar",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-05-rss-suasnews.md"
@@ -18990,6 +19514,24 @@
       "confidence": "medium"
     },
     {
+      "source": "monava",
+      "target": "kci-cepstrum-single-microphone-drone-distance",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-05-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "monava",
+      "target": "kci-drone-detection-cfar-feature-postprocessing",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-05-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ondas",
       "target": "dfend-counter-drone-worldcup",
       "type": "related",
@@ -19087,6 +19629,33 @@
         "raw/articles/entity-pixhawk-hardware.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "powerus",
+      "target": "fortem-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "powerus",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "powerus",
+      "target": "drone-news-2026-09-09",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "px4-flight-stack",
@@ -19218,6 +19787,42 @@
       "confidence": "medium"
     },
     {
+      "source": "robin-radar",
+      "target": "fortem-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "robin-radar",
+      "target": "monava",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "robin-radar",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "robin-radar",
+      "target": "kci-drone-detection-cfar-feature-postprocessing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "skydio",
       "target": "skydio-f10-megadock",
       "type": "wikilink",
@@ -19295,6 +19900,33 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-02-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "smart-shooter",
+      "target": "digital-force-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "smart-shooter",
+      "target": "droneshield",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "smart-shooter",
+      "target": "fortem-technologies",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-rss-suasnews.md"
       ],
       "confidence": "medium"
     },

@@ -5681,7 +5681,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md"
+        "raw/papers/voice-control/lim2025-taking-flight-with-dialogue.md",
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
       ]
     },
     {
@@ -10361,7 +10362,9 @@
         "raw/papers/_unclassified/드론-탑재-삼성분-플럭스게이트-자력탐사자료의-교차점-오차-분석-및-보정.md",
         "raw/papers/_unclassified/기술기반-제품의-상업화-절차에서-다기관-인증체계-개선을-위한-단계별-승인-모델-연구-드론-사례를-중심으로.md",
         "raw/papers/_unclassified/재난-대응을-위한-드론의-기술적-발전-방향.md",
-        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md"
+        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md",
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md",
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
       ]
     },
     {
@@ -11458,7 +11461,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md",
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
       ]
     },
     {
@@ -12856,7 +12860,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/drone-ai/uav-object-detection-and-positioning-in-a-mining-industrial-metaverse-with-custo.md",
-        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md"
+        "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
       ]
     },
     {
@@ -13302,7 +13307,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/다중-무인기-데이터-수집에서-클러스터링-및-경로-생성-기법의-특성에-대한-연구.md"
+        "raw/papers/_unclassified/다중-무인기-데이터-수집에서-클러스터링-및-경로-생성-기법의-특성에-대한-연구.md",
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
       ]
     },
     {
@@ -13314,7 +13320,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/다중-무인기-데이터-수집에서-클러스터링-및-경로-생성-기법의-특성에-대한-연구.md"
+        "raw/papers/_unclassified/다중-무인기-데이터-수집에서-클러스터링-및-경로-생성-기법의-특성에-대한-연구.md",
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
       ]
     },
     {
@@ -13506,7 +13513,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/레이더-반사-면적을-고려한-델타형-무인항공기의-날개-형상-최적화.md"
+        "raw/papers/_unclassified/레이더-반사-면적을-고려한-델타형-무인항공기의-날개-형상-최적화.md",
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
       ]
     },
     {
@@ -15191,7 +15199,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md"
+        "raw/papers/_unclassified/mobility-aware-pilot-assignment-for-uav-only-cf-mmimo-networks.md",
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
       ]
     },
     {
@@ -20064,7 +20073,8 @@
       "ontologyClass": "Protocol",
       "sources": [
         "raw/papers/_unclassified/uwb-품질-저하-환경에서-uav-군집측위의최소운용조건분석.md",
-        "raw/articles/fetch-2026-08-03-betaflight.md"
+        "raw/articles/fetch-2026-08-03-betaflight.md",
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
       ]
     },
     {
@@ -25230,6 +25240,594 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ]
+    },
+    {
+      "id": "RetinaNet",
+      "name": "RetinaNet",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ]
+    },
+    {
+      "id": "Deep Neural Network",
+      "name": "Deep Neural Network",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ]
+    },
+    {
+      "id": "Surveillance Drone",
+      "name": "Surveillance Drone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ]
+    },
+    {
+      "id": "Ground Target Tracking",
+      "name": "Ground Target Tracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ]
+    },
+    {
+      "id": "3D Virtual Environment",
+      "name": "3D Virtual Environment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ]
+    },
+    {
+      "id": "CFAR",
+      "name": "CFAR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "DSCR",
+      "name": "DSCR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "SCR",
+      "name": "SCR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "도플러 스펙트럼",
+      "name": "도플러 스펙트럼",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "특징 기반 후처리 기법",
+      "name": "특징 기반 후처리 기법",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "오경보율",
+      "name": "오경보율",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "탐지확률",
+      "name": "탐지확률",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "최인오",
+      "name": "최인오",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ]
+    },
+    {
+      "id": "FPV Drone",
+      "name": "FPV Drone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Optical Fiber FPV Drone",
+      "name": "Optical Fiber FPV Drone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Shahed Drone",
+      "name": "Shahed Drone",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Commercial Components",
+      "name": "Commercial Components",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Optical Fiber",
+      "name": "Optical Fiber",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "RF Detection",
+      "name": "RF Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Military Operation",
+      "name": "Military Operation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Drone Terrorism",
+      "name": "Drone Terrorism",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Russia-Ukraine War",
+      "name": "Russia-Ukraine War",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Counter-Terrorism Policy",
+      "name": "Counter-Terrorism Policy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Yongin University",
+      "name": "Yongin University",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Noh Young-ki",
+      "name": "Noh Young-ki",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Low-Cost Manufacturing",
+      "name": "Low-Cost Manufacturing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Distributed Production",
+      "name": "Distributed Production",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Precision Penetration",
+      "name": "Precision Penetration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Hidden Launch",
+      "name": "Hidden Launch",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Defense Evasion",
+      "name": "Defense Evasion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Jamming Resistance",
+      "name": "Jamming Resistance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Long-Range Attack",
+      "name": "Long-Range Attack",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "Proxy Force",
+      "name": "Proxy Force",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ]
+    },
+    {
+      "id": "켑스트럼",
+      "name": "켑스트럼",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "TDOA",
+      "name": "TDOA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "마이크로폰",
+      "name": "마이크로폰",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "마이크로폰배열",
+      "name": "마이크로폰배열",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "음향신호처리",
+      "name": "음향신호처리",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "음원위치추정",
+      "name": "음원위치추정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "거리추정",
+      "name": "거리추정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "직접파",
+      "name": "직접파",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "지면반사파",
+      "name": "지면반사파",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "광대역소음",
+      "name": "광대역소음",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "수평거리",
+      "name": "수평거리",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "고도",
+      "name": "고도",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "주파수영역간섭구조",
+      "name": "주파수영역간섭구조",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "기하학적관계",
+      "name": "기하학적관계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "한양대학교",
+      "name": "한양대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "양원준",
+      "name": "양원준",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
       ]
     }
   ],
@@ -44833,6 +45431,591 @@
       "type": "APPLIES_TO",
       "evidence": [
         "raw/papers/_unclassified/dronewam-efficient-world-action-model-for-drone-visual-navigation.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Surveillance Drone",
+      "target": "RetinaNet",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Surveillance Drone",
+      "target": "Kalman Filter",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RetinaNet",
+      "target": "Deep Neural Network",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RetinaNet",
+      "target": "Object Detection",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Surveillance Drone",
+      "target": "Ground Target Tracking",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Target Tracking",
+      "target": "RetinaNet",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Target Tracking",
+      "target": "Kalman Filter",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Surveillance Drone",
+      "target": "3D Virtual Environment",
+      "type": "VALIDATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Target Tracking",
+      "target": "3D Virtual Environment",
+      "type": "VALIDATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "김상현",
+      "target": "청주대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "특징 기반 후처리 기법",
+      "target": "CFAR",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "특징 기반 후처리 기법",
+      "target": "도플러 스펙트럼",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "특징 기반 후처리 기법",
+      "target": "오경보율",
+      "type": "REDUCES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "특징 기반 후처리 기법",
+      "target": "탐지확률",
+      "type": "MAINTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "CFAR",
+      "target": "SCR",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DSCR",
+      "target": "CFAR",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DSCR",
+      "target": "SCR",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "최인오",
+      "target": "국립부경대학교",
+      "type": "WORKS_AT",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "최인오",
+      "target": "특징 기반 후처리 기법",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "특징 기반 후처리 기법",
+      "target": "드론",
+      "type": "ADDRESSES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quadcopter",
+      "target": "Military Operation",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FPV Drone",
+      "target": "Military Operation",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Fiber FPV Drone",
+      "target": "Military Operation",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shahed Drone",
+      "target": "Military Operation",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Military Operation",
+      "target": "Russia-Ukraine War",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quadcopter",
+      "target": "Drone Terrorism",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FPV Drone",
+      "target": "Drone Terrorism",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Fiber FPV Drone",
+      "target": "Drone Terrorism",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shahed Drone",
+      "target": "Drone Terrorism",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Noh Young-ki",
+      "target": "Yongin University",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Commercial Components",
+      "target": "Quadcopter",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Commercial Components",
+      "target": "FPV Drone",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Fiber",
+      "target": "Optical Fiber FPV Drone",
+      "type": "COMPONENT_OF",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quadcopter",
+      "target": "Low-Cost Manufacturing",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quadcopter",
+      "target": "Distributed Production",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FPV Drone",
+      "target": "Precision Penetration",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FPV Drone",
+      "target": "Low-Cost Manufacturing",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Fiber FPV Drone",
+      "target": "Jamming Resistance",
+      "type": "EXHIBITS",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Fiber FPV Drone",
+      "target": "Hidden Launch",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shahed Drone",
+      "target": "Long-Range Attack",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shahed Drone",
+      "target": "Proxy Force",
+      "type": "DEPLOYED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jamming",
+      "target": "Defense Evasion",
+      "type": "CIRCUMVENTS",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RF Detection",
+      "target": "Quadcopter",
+      "type": "DETECTS",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Terrorism",
+      "target": "Counter-Terrorism Policy",
+      "type": "INFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Russia-Ukraine War",
+      "target": "Counter-Terrorism Policy",
+      "type": "CONTEXT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "켑스트럼",
+      "target": "TDOA",
+      "type": "EXTRACTS",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "켑스트럼",
+      "target": "음향신호처리",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "켑스트럼",
+      "target": "주파수영역간섭구조",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "마이크로폰",
+      "target": "음향신호처리",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "마이크로폰",
+      "target": "거리추정",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "마이크로폰배열",
+      "target": "음원위치추정",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "광대역소음",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "광대역소음",
+      "target": "직접파",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "광대역소음",
+      "target": "지면반사파",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "직접파",
+      "target": "주파수영역간섭구조",
+      "type": "CAUSES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지면반사파",
+      "target": "주파수영역간섭구조",
+      "type": "CAUSES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "주파수영역간섭구조",
+      "target": "TDOA",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TDOA",
+      "target": "거리추정",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TDOA",
+      "target": "음원위치추정",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TDOA",
+      "target": "기하학적관계",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "GPS",
+      "target": "거리추정",
+      "type": "VALIDATES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "거리추정",
+      "target": "수평거리",
+      "type": "ESTIMATES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "거리추정",
+      "target": "고도",
+      "type": "DEPENDS_ON",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "기하학적관계",
+      "target": "수평거리",
+      "type": "DETERMINES",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "양원준",
+      "target": "한양대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
       ],
       "confidence": "unverified"
     }
