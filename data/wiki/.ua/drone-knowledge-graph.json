@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "aaad658f1da0a5f9560e62da19421d666cd14b337719f263dc4420b68f02c627",
+  "source_fingerprint": "9cb4e3571b989a70dc1d58f120c40d00bfeec79baadcf76b33973bbf9407c294",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -653,7 +653,7 @@
         "tracking",
         "YOLO"
       ],
-      "updated": "2026-10-01",
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1253,7 +1253,7 @@
         "decision-making",
         "multi-agent"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1630,7 +1630,7 @@
         "motor",
         "LiPo"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1649,7 +1649,7 @@
         "BVLOS",
         "compliance"
       ],
-      "updated": "2026-10-01",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -1967,7 +1967,7 @@
         "rtk",
         "emlid"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2849,6 +2849,20 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-critical-facility-intrusion-detection-drone-ai",
+      "name": "AI 기반 드론을 활용한 중요시설 비인가 침입 탐지 연구",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-02",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "kci-delta-wing-uav-rcs-optimization",
       "name": "레이더 반사 면적을 고려한 델타형 무인항공기 날개 형상 최적화",
       "layer": "Concepts",
@@ -3042,6 +3056,34 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-natural-monument-plant-ndvi-ndre-seasonal",
+      "name": "다분광 드론 영상 기반 천연기념물 식물유산의 기능형별 NDVI·NDRE 계절 변동 분석",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-rok-army-drone-acquisition-capability",
+      "name": "대한민국 육군의 드론 획득 필수능력 연구: 러-우 전쟁 사례와 미군 전략 분석을 바탕으로",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "kci-russia-ukraine-war-drone-terror",
       "name": "러시아ㆍ우크라이나 전쟁이 드론 테러에 미치는 영향과 시사점 (KCI)",
       "layer": "Concepts",
@@ -3050,7 +3092,7 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-10-01",
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -3098,6 +3140,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-utm-k-flight-path-error-regional-analysis",
+      "name": "다양한 지역 환경에서의 UTM-K 기반 드론 비행경로 오차 분석",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "utm"
+      ],
+      "updated": "2026-10-02",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "kci-uwb-degraded-uav-swarm-positioning",
@@ -3449,7 +3505,21 @@
         "drone",
         "drone-sw"
       ],
-      "updated": "2026-09-29",
+      "updated": "2026-10-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "mavsdk-v4-0-3",
+      "name": "MAVSDK v4.0.3 Release",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "drone-sw"
+      ],
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3466,7 +3536,7 @@
         "API",
         "offboard"
       ],
-      "updated": "2026-09-23",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -4293,10 +4363,26 @@
         "qgroundcontrol",
         "release"
       ],
-      "updated": "2026-09-01",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "qgroundcontrol-v5-1-5",
+      "name": "QGroundControl v5.1.5 Release Notes",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "gcs-software",
+        "qgroundcontrol"
+      ],
+      "updated": "2026-10-02",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "qgroundcontrol",
@@ -4308,7 +4394,7 @@
         "drone-sw",
         "gcs-software"
       ],
-      "updated": "2026-09-01",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": null
@@ -4753,7 +4839,7 @@
         "skydio",
         "milestone"
       ],
-      "updated": "2026-08-13",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -5588,7 +5674,7 @@
         "regulations",
         "utm"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -6314,7 +6400,21 @@
         "drone",
         "drone-ai"
       ],
-      "updated": "2026-10-01",
+      "updated": "2026-10-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-171",
+      "name": "YOLO v8.4.171 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6329,7 +6429,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-18",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6612,7 +6712,7 @@
         "hardware",
         "company"
       ],
-      "updated": "2026-08-11",
+      "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -7048,7 +7148,7 @@
         "autonomy",
         "security"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -8488,6 +8588,15 @@
       "confidence": "medium"
     },
     {
+      "source": "computer-vision-drone",
+      "target": "kci-critical-facility-intrusion-detection-drone-ai",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "counter-drone-queueing-force-sizing",
       "target": "drone-wall-defense-system",
       "type": "related",
@@ -9403,6 +9512,13 @@
     {
       "source": "drone-ai-agents",
       "target": "ros2-drone-integration",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-ai-agents",
+      "target": "kci-critical-facility-intrusion-detection-drone-ai",
       "type": "related",
       "evidence": [],
       "confidence": "medium"
@@ -10456,6 +10572,15 @@
     },
     {
       "source": "drone-power-battery",
+      "target": "amprius-sicore-battery",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-power-battery",
       "target": "drone-safety-failsafe",
       "type": "related",
       "evidence": [
@@ -10475,6 +10600,15 @@
     {
       "source": "drone-power-battery",
       "target": "dronecan-protocol",
+      "type": "related",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-power-battery",
+      "target": "amprius-sicore-battery",
       "type": "related",
       "evidence": [
         "raw/articles/px4-basic-concepts.md"
@@ -10574,6 +10708,15 @@
     {
       "source": "drone-regulations",
       "target": "kci-russia-ukraine-war-drone-terror",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "uk-police-drone-child-injury-incident",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-08-15-rss-dronelife.md"
@@ -12452,6 +12595,24 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-critical-facility-intrusion-detection-drone-ai",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-critical-facility-intrusion-detection-drone-ai",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-delta-wing-uav-rcs-optimization",
       "target": "drone-hw",
       "type": "related",
@@ -12746,6 +12907,42 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-natural-monument-plant-ndvi-ndre-seasonal",
+      "target": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-natural-monument-plant-ndvi-ndre-seasonal",
+      "target": "kci-barley-wet-stress-hyperspectral-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-rok-army-drone-acquisition-capability",
+      "target": "kci-russia-ukraine-war-drone-terror",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-rok-army-drone-acquisition-capability",
+      "target": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "kci-russia-ukraine-war-drone-terror",
       "target": "drone-regulations",
       "type": "related",
@@ -12766,6 +12963,15 @@
     {
       "source": "kci-russia-ukraine-war-drone-terror",
       "target": "ukraine-fight-drone-simulator",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-russia-ukraine-war-drone-terror",
+      "target": "kci-rok-army-drone-acquisition-capability",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
@@ -12841,6 +13047,24 @@
       "type": "related",
       "evidence": [
         "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-utm-k-flight-path-error-regional-analysis",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-utm-k-flight-path-error-regional-analysis",
+      "target": "kci-korea-airspace-eu-uspace",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
       ],
       "confidence": "low"
     },
@@ -13431,6 +13655,15 @@
     },
     {
       "source": "mavsdk-v4-0-1",
+      "target": "mavsdk-v4-0-3",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-29-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-1",
       "target": "mavlink-protocol",
       "type": "related",
       "evidence": [
@@ -13439,8 +13672,53 @@
       "confidence": "medium"
     },
     {
+      "source": "mavsdk-v4-0-3",
+      "target": "mavsdk",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-3",
+      "target": "mavsdk-v4-0-1",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-3",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "mavsdk",
       "target": "mavsdk-v4-0-0",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-09-01-mavsdk.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavsdk",
+      "target": "mavsdk-v4-0-1",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-09-01-mavsdk.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavsdk",
+      "target": "mavsdk-v4-0-3",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-09-01-mavsdk.md"
@@ -14836,6 +15114,15 @@
     },
     {
       "source": "qgroundcontrol-v5-1-4",
+      "target": "qgroundcontrol-v5-1-5",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-01-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-4",
       "target": "px4-flight-stack",
       "type": "related",
       "evidence": [
@@ -14849,6 +15136,42 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-01-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-5",
+      "target": "qgroundcontrol",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-5",
+      "target": "qgroundcontrol-v5-1-4",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol-v5-1-5",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-qgroundcontrol.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "qgroundcontrol",
+      "target": "qgroundcontrol-v5-1-5",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-qgroundcontrol.md"
       ],
       "confidence": "high"
     },
@@ -15684,6 +16007,15 @@
     {
       "source": "skydio-dfr-milestone",
       "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio-dfr-milestone",
+      "target": "skydio-f10-megadock",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-13-rss-skydio.md"
@@ -17155,14 +17487,36 @@
       "source": "utm-system",
       "target": "faa-section-2209-uafr",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "utm-system",
       "target": "uk-caa-airspace-architecture",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "utm-system",
+      "target": "kci-utm-k-flight-path-error-regional-analysis",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "utm-system",
+      "target": "kci-korea-airspace-eu-uspace",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
       "confidence": "medium"
     },
     {
@@ -18301,6 +18655,15 @@
     },
     {
       "source": "yolo-v8-4-170",
+      "target": "yolo-v8-4-171",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-170",
       "target": "yolo",
       "type": "related",
       "evidence": [
@@ -18314,6 +18677,33 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-01-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-171",
+      "target": "yolo-v8-4-170",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-171",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-171",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-yolo.md"
       ],
       "confidence": "medium"
     },
@@ -18473,6 +18863,15 @@
     {
       "source": "yolo",
       "target": "yolo-v8-4-112",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-171",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-07-29-yolo.md"
@@ -18953,6 +19352,15 @@
     },
     {
       "source": "dji",
+      "target": "dji-osmo-360-ii",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/2026-08-11-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji",
       "target": "dji-enterprise",
       "type": "related",
       "evidence": [
@@ -18972,6 +19380,15 @@
     {
       "source": "dji",
       "target": "dji-mavic-4-pro",
+      "type": "related",
+      "evidence": [
+        "raw/articles/2026-08-11-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dji",
+      "target": "dji-osmo-360-ii",
       "type": "related",
       "evidence": [
         "raw/articles/2026-08-11-rss-dronelife.md"
