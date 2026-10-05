@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "9cb4e3571b989a70dc1d58f120c40d00bfeec79baadcf76b33973bbf9407c294",
+  "source_fingerprint": "ad8e5729a6dc26780498ac479402a75d9dd213bc8cfbf790f190b74d9d405a43",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -436,6 +436,37 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "betafpv-meteor65-pro-ii",
+      "name": "BetaFPV Meteor65 Pro II 브러시리스 휘프",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "fpv",
+        "hardware"
+      ],
+      "updated": "2026-10-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "betafpv-p1-digital-fpv-system",
+      "name": "BETAFPV P1 디지털 FPV 시스템 (베타 하드웨어)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "fpv",
+        "hardware"
+      ],
+      "updated": "2026-10-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "bio-inspired-offloading-uav-iov-mec",
       "name": "Bio-Inspired Offloading Algorithms in a UAV-Assisted IoV Network with MEC",
       "layer": "Concepts",
@@ -445,7 +476,7 @@
         "drone-ai",
         "datalink"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-04",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -668,7 +699,7 @@
         "swarm",
         "ops-mission"
       ],
-      "updated": "2026-10-01",
+      "updated": "2026-10-03",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1385,7 +1416,7 @@
         "mapping",
         "survey"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-10-05",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -1559,6 +1590,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "drone-news-2026-10-03",
+      "name": "드론 업계 주요 소식 (2026-10-03)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-03",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "drone-news-hardware",
       "name": "드론 하드웨어 및 제조사 동향 2026-07",
       "layer": "Concepts",
@@ -1630,7 +1676,7 @@
         "motor",
         "LiPo"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-05",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1684,7 +1730,7 @@
         "RTL",
         "geofence"
       ],
-      "updated": "2026-07-27",
+      "updated": "2026-10-05",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2047,6 +2093,21 @@
       ],
       "updated": "2026-08-08",
       "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "faa-airspace-classes-drone-authorization",
+      "name": "FAA 공역 등급별 드론 비행 승인 요건 (Class A–G, LAANC)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-10-03",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
     },
@@ -2564,6 +2625,21 @@
       "ontologyClass": null
     },
     {
+      "id": "hequav-k11-dual-sensor-gimbal",
+      "name": "HEQUAV K11 듀얼 센서 짐벌 + Scepter 15 컨트롤러",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "hardware"
+      ],
+      "updated": "2026-10-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "hermes-evolutionary-uav-path-planning",
       "name": "HERMES: 경험 재생과 연산자 가소성 기반 진화적 UAV 경로계획",
       "layer": "Concepts",
@@ -2784,7 +2860,7 @@
         "security",
         "beamforming"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-10-04",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2857,7 +2933,7 @@
         "drone",
         "drone-ai"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-03",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2920,6 +2996,21 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "kci-drone-pointcloud-bim-registration-extraction",
+      "name": "드론 포인트클라우드–BIM 정합 및 구조부재 추출 (KCI 2건)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "research"
+      ],
+      "updated": "2026-10-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "kci-dual-nis-sac-gnss-ins-spoofing",
       "name": "이중 NIS 보상 SAC 기반 GNSS/INS 무인기 은닉 기만 기법 (KCI)",
       "layer": "Concepts",
@@ -2933,6 +3024,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-fixed-wing-return-feasibility-logic",
+      "name": "전기 추진 고정익 무인기 복귀 가능 여부 판단 로직 (KCI)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "research"
+      ],
+      "updated": "2026-10-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "kci-ground-target-tracking-retinanet-kalman",
@@ -2958,7 +3063,7 @@
         "drone-ai",
         "ai-autonomy"
       ],
-      "updated": "2026-09-08",
+      "updated": "2026-10-03",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2975,6 +3080,21 @@
       ],
       "updated": "2026-09-06",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-lidar-slam-indoor-battery-monitoring-iot-uav",
+      "name": "LiDAR-SLAM 기반 실내 배터리 모니터링 IoT-UAV 플랫폼 (KCI)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "datalink"
+      ],
+      "updated": "2026-10-03",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -3056,6 +3176,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "name": "이종센서 융합 대드론 표적 식별 신뢰도와 교전영역 활용률 분석 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "drone-ai"
+      ],
+      "updated": "2026-10-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "kci-natural-monument-plant-ndvi-ndre-seasonal",
       "name": "다분광 드론 영상 기반 천연기념물 식물유산의 기능형별 NDVI·NDRE 계절 변동 분석",
       "layer": "Concepts",
@@ -3064,7 +3199,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-03",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3078,7 +3213,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-03",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3113,6 +3248,49 @@
       "ontologyClass": "AbstractProcess"
     },
     {
+      "id": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "name": "전차 기능구역별 취약도 평가 기반 선택적 대드론 방호 설계 프레임워크 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-uav-battery-ecm-parameter-estimation",
+      "name": "소형 UAV 리튬이온 배터리 ECM 파라미터 추정 (KCI)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "research"
+      ],
+      "updated": "2026-10-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-uav-ground-secrecy-capacity-closed-form",
+      "name": "UAV-지상 채널 SPSC 확률 폐형 표현 (KCI 2026)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-10-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "kci-uav-lidar-ground-point-density-dem-accuracy",
       "name": "UAV-LiDAR 지면점 밀도와 공간 해상도가 DEM 정확도에 미치는 영향",
       "layer": "Concepts",
@@ -3121,8 +3299,38 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-09-11",
+      "updated": "2026-10-05",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-uav-mec-clustering-offloading",
+      "name": "UAV-MEC 클러스터링 비교 및 PSO-ACO 멀티에이전트 태스크 오프로딩 (KCI 2026)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "drone-ai"
+      ],
+      "updated": "2026-10-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "name": "UAV 기반 강우 유발 지형 변화 분석: 이종 데이터 비교와 탐지한계 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "drone-ai"
+      ],
+      "updated": "2026-10-03",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
     },
@@ -3150,7 +3358,7 @@
         "drone",
         "utm"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-03",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3169,6 +3377,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
+      "name": "UAV LiDAR CHM·그레이스케일 Watershed 개체목 분할 최적 조건 (KCI 2026)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "lapf-llm-agent-pathfinder",
@@ -3520,6 +3742,20 @@
         "drone-sw"
       ],
       "updated": "2026-10-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "mavsdk-v4-0-4",
+      "name": "MAVSDK v4.0.4 Release",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "drone-sw"
+      ],
+      "updated": "2026-10-05",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3896,6 +4132,22 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "opendrone-open-source-hardware",
+      "name": "OpenDrone — 완전 오픈소스 드론 하드웨어 프로젝트",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "fpv",
+        "hardware"
+      ],
+      "updated": "2026-10-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ops-mission",
@@ -4516,7 +4768,7 @@
         "ris",
         "security"
       ],
-      "updated": "2026-08-20",
+      "updated": "2026-10-04",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -5079,7 +5331,7 @@
         "formation",
         "coordination"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-10-03",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5224,7 +5476,7 @@
         "battery",
         "mission-planning"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-10-05",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -5321,7 +5573,7 @@
         "mining",
         "ops-mission"
       ],
-      "updated": "2026-08-24",
+      "updated": "2026-10-05",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5431,7 +5683,7 @@
         "ops-mission",
         "ai-agent"
       ],
-      "updated": "2026-08-14",
+      "updated": "2026-10-04",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -6415,6 +6667,34 @@
         "drone-ai"
       ],
       "updated": "2026-10-02",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-172",
+      "name": "YOLO v8.4.172 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-04",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-173",
+      "name": "YOLO v8.4.173 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-05",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -8211,9 +8491,90 @@
       "confidence": "high"
     },
     {
+      "source": "betafpv-meteor65-pro-ii",
+      "target": "emax-nanoscout-pro-1s-whoop",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yt-betafpv-meteor65-pro-ii-one-of-the-most-fun-gets-upgraded.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-meteor65-pro-ii",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yt-betafpv-meteor65-pro-ii-one-of-the-most-fun-gets-upgraded.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-meteor65-pro-ii",
+      "target": "elrs-41-release",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yt-betafpv-meteor65-pro-ii-one-of-the-most-fun-gets-upgraded.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-meteor65-pro-ii",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yt-betafpv-meteor65-pro-ii-one-of-the-most-fun-gets-upgraded.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-p1-digital-fpv-system",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-100-for-a-digital-hd-vrx-whats-the-catch-betafpv-p1-vrx-revi.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-p1-digital-fpv-system",
+      "target": "hdzero-goggle-2-scroll-fix",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-100-for-a-digital-hd-vrx-whats-the-catch-betafpv-p1-vrx-revi.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-p1-digital-fpv-system",
+      "target": "betafpv-meteor65-pro-ii",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-100-for-a-digital-hd-vrx-whats-the-catch-betafpv-p1-vrx-revi.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-p1-digital-fpv-system",
+      "target": "elrs-41-release",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-100-for-a-digital-hd-vrx-whats-the-catch-betafpv-p1-vrx-revi.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "bio-inspired-offloading-uav-iov-mec",
       "target": "uav-task-offloading-traffic-monitoring",
       "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-09-29-kci-bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-net.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "bio-inspired-offloading-uav-iov-mec",
+      "target": "kci-uav-mec-clustering-offloading",
+      "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-09-29-kci-bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-net.md"
       ],
@@ -8626,6 +8987,24 @@
     {
       "source": "counter-drone-queueing-force-sizing",
       "target": "kci-drone-detection-cfar-feature-postprocessing",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/대드론-방어체계-소요산정에-관한-확률적-대기행렬-모형-연구.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "counter-drone-queueing-force-sizing",
+      "target": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/대드론-방어체계-소요산정에-관한-확률적-대기행렬-모형-연구.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "counter-drone-queueing-force-sizing",
+      "target": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/대드론-방어체계-소요산정에-관한-확률적-대기행렬-모형-연구.md"
@@ -9974,6 +10353,24 @@
       "confidence": "high"
     },
     {
+      "source": "drone-lidar-forest-boundary",
+      "target": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-kci-드론-라이다를-이용한-임야-현황경계-추출-및-분석.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-lidar-forest-boundary",
+      "target": "kci-drone-pointcloud-bim-registration-extraction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-kci-드론-라이다를-이용한-임야-현황경계-추출-및-분석.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "drone-news-2026-07-31",
       "target": "drone-regulations",
       "type": "evidences",
@@ -10355,6 +10752,42 @@
       "confidence": "high"
     },
     {
+      "source": "drone-news-2026-10-03",
+      "target": "drone-news-2026-09-12",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-03",
+      "target": "unauthorized-drones-timber-fire-firefighting",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-03",
+      "target": "fire-foresight-xprize-wildfire-award",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-03",
+      "target": "skydio-f10-megadock",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -10581,7 +11014,34 @@
     },
     {
       "source": "drone-power-battery",
+      "target": "kci-uav-battery-ecm-parameter-estimation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-power-battery",
+      "target": "kci-fixed-wing-return-feasibility-logic",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-power-battery",
       "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-power-battery",
+      "target": "kci-uav-battery-ecm-parameter-estimation",
       "type": "related",
       "evidence": [
         "raw/articles/px4-basic-concepts.md"
@@ -10747,6 +11207,33 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-02-kci-드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-safety-failsafe",
+      "target": "kci-fixed-wing-return-feasibility-logic",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-safety-failsafe",
+      "target": "drone-power-battery",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-safety-failsafe",
+      "target": "kci-fixed-wing-return-feasibility-logic",
+      "type": "related",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
       ],
       "confidence": "high"
     },
@@ -11298,6 +11785,33 @@
         "inbox/fetch-2026-08-08-yt-the-249-gram-drone-trap-explained.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "faa-airspace-classes-drone-authorization",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-yt-can-i-fly-my-drone-here-airspace-classes-explained.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "faa-airspace-classes-drone-authorization",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-yt-can-i-fly-my-drone-here-airspace-classes-explained.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "faa-airspace-classes-drone-authorization",
+      "target": "uk-caa-airspace-architecture",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-yt-can-i-fly-my-drone-here-airspace-classes-explained.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "faa-deter-program",
@@ -12162,6 +12676,33 @@
       "confidence": "high"
     },
     {
+      "source": "hequav-k11-dual-sensor-gimbal",
+      "target": "drone-payload-systems",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-im-installing-a-smart-hequav-k11-gimbal-to-try.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "hequav-k11-dual-sensor-gimbal",
+      "target": "px4-flight-stack",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-im-installing-a-smart-hequav-k11-gimbal-to-try.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "hequav-k11-dual-sensor-gimbal",
+      "target": "ardupilot",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-im-installing-a-smart-hequav-k11-gimbal-to-try.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "hermes-evolutionary-uav-path-planning",
       "target": "time-optimal-quadrotor-waypoints",
       "type": "related",
@@ -12509,6 +13050,15 @@
       "confidence": "high"
     },
     {
+      "source": "isac-uav-security",
+      "target": "kci-uav-ground-secrecy-capacity-closed-form",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-arxiv-improving-physical-layer-security-in-isac-uav-system-beamfor.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "kci-airport-drone-incident-location-reporting",
       "target": "kci-sejong-counter-drone-governance",
       "type": "related",
@@ -12699,6 +13249,33 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-drone-pointcloud-bim-registration-extraction",
+      "target": "drone-lidar-forest-boundary",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-drone-pointcloud-bim-registration-extraction",
+      "target": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-drone-pointcloud-bim-registration-extraction",
+      "target": "uav-mining-digital-twin",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-dual-nis-sac-gnss-ins-spoofing",
       "target": "rigid-covert-gnss-spoofing-swarm",
       "type": "related",
@@ -12715,6 +13292,33 @@
         "inbox/fetch-2026-09-17-kci-이중-nis-보상을-적용한-sac-기반-gnssins-복합항법-무인기-은닉-기만-기법.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kci-fixed-wing-return-feasibility-logic",
+      "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-fixed-wing-return-feasibility-logic",
+      "target": "kci-uav-battery-ecm-parameter-estimation",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-fixed-wing-return-feasibility-logic",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "kci-ground-target-tracking-retinanet-kalman",
@@ -12740,6 +13344,15 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-01-kci-감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "target": "kci-natural-monument-plant-ndvi-ndre-seasonal",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
       ],
       "confidence": "medium"
     },
@@ -12796,6 +13409,33 @@
         "raw/papers/_unclassified/도심-유수지에서-취득한-단일-uav-초분광영상을-이용한-희소-쓰레기-후보영역-선별을-위한-배경유형-보조-u-net의-적용성-평가.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kci-lidar-slam-indoor-battery-monitoring-iot-uav",
+      "target": "flight-ready-lidar-inertial-odometry",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-lidar-slam-indoor-battery-monitoring-iot-uav",
+      "target": "visual-slam-gps-denied-evaluation",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-lidar-slam-indoor-battery-monitoring-iot-uav",
+      "target": "thermal-drone-wildfire-monitoring",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "kci-light-attack-helicopter-mum-t-verification",
@@ -12907,6 +13547,42 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "target": "kci-counter-drone-hardkill-engagement-zone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "target": "counter-drone-queueing-force-sizing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "target": "dfend-counter-drone-worldcup",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "target": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-natural-monument-plant-ndvi-ndre-seasonal",
       "target": "kci-hallasan-fir-ndvi-vitality-assessment",
       "type": "related",
@@ -12936,6 +13612,24 @@
     {
       "source": "kci-rok-army-drone-acquisition-capability",
       "target": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-rok-army-drone-acquisition-capability",
+      "target": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-rok-army-drone-acquisition-capability",
+      "target": "kci-multisensor-fusion-counter-drone-identification-engagement",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
@@ -13006,8 +13700,116 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "target": "kci-russia-ukraine-war-drone-terror",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "target": "kci-rok-army-drone-acquisition-capability",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "target": "kci-counter-drone-hardkill-engagement-zone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "target": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
+      "target": "counter-drone-queueing-force-sizing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-battery-ecm-parameter-estimation",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-battery-ecm-parameter-estimation",
+      "target": "kci-fixed-wing-return-feasibility-logic",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-battery-ecm-parameter-estimation",
+      "target": "uav-battery-replacement-planner",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-ground-secrecy-capacity-closed-form",
+      "target": "isac-uav-security",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-ground-secrecy-capacity-closed-form",
+      "target": "ris-secure-uav-communications",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-ground-secrecy-capacity-closed-form",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-uav-lidar-ground-point-density-dem-accuracy",
       "target": "rtk-gps-precise-landing",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "target": "kci-drone-pointcloud-bim-registration-extraction",
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
@@ -13022,6 +13824,69 @@
         "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kci-uav-mec-clustering-offloading",
+      "target": "bio-inspired-offloading-uav-iov-mec",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-mec-clustering-offloading",
+      "target": "uav-task-offloading-traffic-monitoring",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-mec-clustering-offloading",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "target": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "target": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "target": "drone-lidar-forest-boundary",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "target": "emesent-trimble-lidar-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "kci-uav-swarm-mission-reliability-abort",
@@ -13069,6 +13934,15 @@
       "confidence": "low"
     },
     {
+      "source": "kci-utm-k-flight-path-error-regional-analysis",
+      "target": "drone-delivery-news",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-uwb-degraded-uav-swarm-positioning",
       "target": "decentralized-swarm-gps-denied",
       "type": "related",
@@ -13085,6 +13959,33 @@
         "raw/papers/_unclassified/uwb-품질-저하-환경에서-uav-군집측위의최소운용조건분석.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
+      "target": "drone-lidar-forest-boundary",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
+      "target": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
+      "target": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "lapf-llm-agent-pathfinder",
@@ -13695,6 +14596,33 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-4",
+      "target": "mavsdk-v4-0-3",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-4",
+      "target": "mavsdk",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-4",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-mavsdk.md"
       ],
       "confidence": "medium"
     },
@@ -14312,6 +15240,33 @@
         "inbox/fetch-2026-07-29-opencv.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "opendrone-open-source-hardware",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-his-audacious-plan-to-open-source-every-part-of-a-drone-open.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "opendrone-open-source-hardware",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-his-audacious-plan-to-open-source-every-part-of-a-drone-open.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "opendrone-open-source-hardware",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-his-audacious-plan-to-open-source-every-part-of-a-drone-open.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "ops-mission",
@@ -15421,6 +16376,15 @@
     },
     {
       "source": "ris-secure-uav-communications",
+      "target": "kci-uav-ground-secrecy-capacity-closed-form",
+      "type": "related",
+      "evidence": [
+        "raw/papers/comms-protocol/ris-secure-uav-communications.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "ris-secure-uav-communications",
       "target": "chaotic-map-uav-secure-comms",
       "type": "related",
       "evidence": [
@@ -16458,6 +17422,15 @@
       "confidence": "medium"
     },
     {
+      "source": "swarm-coordination",
+      "target": "kci-llm-cbba-swarm-task-allocation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "swarm-modes",
       "target": "swarm-coordination",
       "type": "related",
@@ -16729,6 +17702,15 @@
     },
     {
       "source": "uav-battery-replacement-planner",
+      "target": "kci-uav-battery-ecm-parameter-estimation",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-arxiv-mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-battery-replacement-planner",
       "target": "mission-planning",
       "type": "related",
       "evidence": [
@@ -16894,6 +17876,15 @@
       "confidence": "medium"
     },
     {
+      "source": "uav-mining-digital-twin",
+      "target": "kci-drone-pointcloud-bim-registration-extraction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "uav-multispectral-glint-correction",
       "target": "computer-vision-drone",
       "type": "related",
@@ -17049,6 +18040,15 @@
     {
       "source": "uav-task-offloading-traffic-monitoring",
       "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-14-crossref-dynamic-adaptive-task-offloading-for-uav-based-road-traffic-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-task-offloading-traffic-monitoring",
+      "target": "kci-uav-mec-clustering-offloading",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-14-crossref-dynamic-adaptive-task-offloading-for-uav-based-road-traffic-.md"
@@ -18704,6 +19704,60 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-172",
+      "target": "yolo-v8-4-171",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-172",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-172",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-04-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-173",
+      "target": "yolo-v8-4-172",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-173",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-173",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yolo.md"
       ],
       "confidence": "medium"
     },

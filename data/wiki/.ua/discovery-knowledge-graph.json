@@ -508,7 +508,8 @@
       "sources": [
         "raw/articles/entity-ardupilot.md",
         "raw/articles/entity-px4-flight-stack.md",
-        "raw/articles/px4-ros2-user-guide.md"
+        "raw/articles/px4-ros2-user-guide.md",
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
       ]
     },
     {
@@ -2312,7 +2313,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/articles/mastervault-recon-swarm.md",
-        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md",
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
       ]
     },
     {
@@ -6101,7 +6103,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
-        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+        "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md",
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
       ]
     },
     {
@@ -9946,7 +9949,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md"
+        "raw/papers/_unclassified/경남-지역의-물류-취약성-문제-해결을-위한-k-드론-기반-섬-배송-실증-연구.md",
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
       ]
     },
     {
@@ -10104,7 +10108,9 @@
       "ontologyClass": "Organization",
       "sources": [
         "raw/papers/_unclassified/군용-드론의-국산화를-위한-민군-협력-방안-연구.md",
-        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md"
+        "raw/papers/_unclassified/무인기-기반-초분광-영상을-이용한-보리-습해-조기-탐지.md",
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md",
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
       ]
     },
     {
@@ -10364,7 +10370,10 @@
         "raw/papers/_unclassified/재난-대응을-위한-드론의-기술적-발전-방향.md",
         "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md",
         "raw/papers/_unclassified/드론-탐지를-위한-효과적인-특징-기반-후처리-기법.md",
-        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md",
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md",
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md",
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
       ]
     },
     {
@@ -13345,7 +13354,9 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/대드론-하드킬-무인기의-교전영역-계산-알고리즘-개발.md"
+        "raw/papers/_unclassified/대드론-하드킬-무인기의-교전영역-계산-알고리즘-개발.md",
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md",
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
       ]
     },
     {
@@ -14045,7 +14056,8 @@
       "sources": [
         "raw/papers/drone-ai/시각-마커-탐지를-이용한-자율-배송-드론-시스템-설계.md",
         "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md",
-        "raw/papers/_unclassified/bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-network-with-mobile-edg.md"
+        "raw/papers/_unclassified/bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-network-with-mobile-edg.md",
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
       ]
     },
     {
@@ -18881,7 +18893,15 @@
         "raw/papers/drone-ai/dynamic-multi-scale-mixture-of-experts-with-cross-scale-feature-enhancement-for-.md",
         "raw/papers/drone-ai/physai-bench-a-benchmark-for-llm-based-agentic-decision-making-in-autonomous-uav.md",
         "raw/papers/drone-ai/이중-nis-보상을-적용한-sac-기반-gnssins-복합항법-무인기-은닉-기만-기법.md",
-        "raw/papers/swarm/hierarchical-optimal-consensus-for-economically-efficient-path-planning-in-multi.md"
+        "raw/papers/swarm/hierarchical-optimal-consensus-for-economically-efficient-path-planning-in-multi.md",
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md",
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md",
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md",
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md",
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md",
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md",
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md",
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
       ]
     },
     {
@@ -18905,7 +18925,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-network-with-mobile-edg.md"
+        "raw/papers/_unclassified/bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-network-with-mobile-edg.md",
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
       ]
     },
     {
@@ -19495,7 +19516,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/_unclassified/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+        "raw/papers/_unclassified/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md",
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
       ]
     },
     {
@@ -20074,7 +20096,8 @@
       "sources": [
         "raw/papers/_unclassified/uwb-품질-저하-환경에서-uav-군집측위의최소운용조건분석.md",
         "raw/articles/fetch-2026-08-03-betaflight.md",
-        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+        "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md",
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
       ]
     },
     {
@@ -20134,7 +20157,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/_unclassified/uwb-품질-저하-환경에서-uav-군집측위의최소운용조건분석.md"
+        "raw/papers/_unclassified/uwb-품질-저하-환경에서-uav-군집측위의최소운용조건분석.md",
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
       ]
     },
     {
@@ -20772,7 +20796,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md"
+        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md",
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
       ]
     },
     {
@@ -20784,7 +20809,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md"
+        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md",
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
       ]
     },
     {
@@ -21712,7 +21738,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/papers/drone-ai/context-aware-operational-security-for-autonomous-drones.md"
+        "raw/papers/drone-ai/context-aware-operational-security-for-autonomous-drones.md",
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
       ]
     },
     {
@@ -25828,6 +25855,3164 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ]
+    },
+    {
+      "id": "객체탐지",
+      "name": "객체탐지",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "객체추적",
+      "name": "객체추적",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "영상수집",
+      "name": "영상수집",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "구역판단",
+      "name": "구역판단",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "항법",
+      "name": "항법",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "통신 보안",
+      "name": "통신 보안",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "침입탐지",
+      "name": "침입탐지",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "개인영상정보 보호",
+      "name": "개인영상정보 보호",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "조성범",
+      "name": "조성범",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ]
+    },
+    {
+      "id": "LiDAR",
+      "name": "LiDAR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md",
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "DTM",
+      "name": "DTM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "TIN",
+      "name": "TIN",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "GCD",
+      "name": "GCD",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Digital Map",
+      "name": "Digital Map",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Landslide",
+      "name": "Landslide",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Topographic Change",
+      "name": "Topographic Change",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Rainfall",
+      "name": "Rainfall",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Contour",
+      "name": "Contour",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Spot Heights",
+      "name": "Spot Heights",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Elevation Difference",
+      "name": "Elevation Difference",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Vertical Offset",
+      "name": "Vertical Offset",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Minimum Level of Detection",
+      "name": "Minimum Level of Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Change Detection",
+      "name": "Change Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Terrain Reconstruction",
+      "name": "Terrain Reconstruction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Pre-event Terrain",
+      "name": "Pre-event Terrain",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Post-event Terrain",
+      "name": "Post-event Terrain",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Measurement Error",
+      "name": "Measurement Error",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Spatial Resolution",
+      "name": "Spatial Resolution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Positional Accuracy",
+      "name": "Positional Accuracy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Sensor Type",
+      "name": "Sensor Type",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Geomorphic Analysis",
+      "name": "Geomorphic Analysis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Acquisition Date",
+      "name": "Acquisition Date",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "강원대학교",
+      "name": "강원대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "윤공현",
+      "name": "윤공현",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ]
+    },
+    {
+      "id": "Multispectral Image",
+      "name": "Multispectral Image",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "NDVI",
+      "name": "NDVI",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "NDRE",
+      "name": "NDRE",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Cubic Spline",
+      "name": "Cubic Spline",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Time Series",
+      "name": "Time Series",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Permutation Test",
+      "name": "Permutation Test",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Non-linear Model",
+      "name": "Non-linear Model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Natural Monument",
+      "name": "Natural Monument",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Plant Heritage",
+      "name": "Plant Heritage",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Deciduous Type",
+      "name": "Deciduous Type",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Evergreen Type",
+      "name": "Evergreen Type",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Vegetation Index",
+      "name": "Vegetation Index",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Seasonal Variation",
+      "name": "Seasonal Variation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Seasonal Trajectory",
+      "name": "Seasonal Trajectory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Seasonal Amplitude",
+      "name": "Seasonal Amplitude",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Monitoring",
+      "name": "Monitoring",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "DOY",
+      "name": "DOY",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "정수호",
+      "name": "정수호",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "Jeonnam Gwangju Agriculture Technology Office",
+      "name": "Jeonnam Gwangju Agriculture Technology Office",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ]
+    },
+    {
+      "id": "UTM-K",
+      "name": "UTM-K",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "K-UAM",
+      "name": "K-UAM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "한국교통안전공단",
+      "name": "한국교통안전공단",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "연암공과대학교",
+      "name": "연암공과대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "정재호",
+      "name": "정재호",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "드론 배송 실증사업 안전 기준",
+      "name": "드론 배송 실증사업 안전 기준",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "직교좌표계",
+      "name": "직교좌표계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "위치 데이터",
+      "name": "위치 데이터",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "공주",
+      "name": "공주",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "여수",
+      "name": "여수",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "울주",
+      "name": "울주",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "포천",
+      "name": "포천",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "드론 배송 시스템",
+      "name": "드론 배송 시스템",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "비행경로 오차 분석",
+      "name": "비행경로 오차 분석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ]
+    },
+    {
+      "id": "대한민국 육군",
+      "name": "대한민국 육군",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "미국 국방부",
+      "name": "미국 국방부",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "미군",
+      "name": "미군",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "러시아",
+      "name": "러시아",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "우크라이나",
+      "name": "우크라이나",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "sUAS",
+      "name": "sUAS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "데이터 중심 소모전",
+      "name": "데이터 중심 소모전",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "플랫폼 중심전",
+      "name": "플랫폼 중심전",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "드론봇 전투체계",
+      "name": "드론봇 전투체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "감시정찰",
+      "name": "감시정찰",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "직접 타격",
+      "name": "직접 타격",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "러시아-우크라이나 전쟁",
+      "name": "러시아-우크라이나 전쟁",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "작전운용성능",
+      "name": "작전운용성능",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "핵심성능지표",
+      "name": "핵심성능지표",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "최소 충족 요건",
+      "name": "최소 충족 요건",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "MOSA",
+      "name": "MOSA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "플러그 앤 플레이",
+      "name": "플러그 앤 플레이",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "LCAAT",
+      "name": "LCAAT",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "Blue UAS",
+      "name": "Blue UAS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "SRR",
+      "name": "SRR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "신속 획득 혁신",
+      "name": "신속 획득 혁신",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "경제성",
+      "name": "경제성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "대량 생산성",
+      "name": "대량 생산성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "혹한기 운용 지속성",
+      "name": "혹한기 운용 지속성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "항재밍",
+      "name": "항재밍",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "데이터 보안성",
+      "name": "데이터 보안성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "시스템 연동성",
+      "name": "시스템 연동성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "신속 전개 능력",
+      "name": "신속 전개 능력",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "전자전 취약성",
+      "name": "전자전 취약성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "배터리 취약성",
+      "name": "배터리 취약성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "진화적 획득",
+      "name": "진화적 획득",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ]
+    },
+    {
+      "id": "Heterogeneous Sensor Fusion",
+      "name": "Heterogeneous Sensor Fusion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Target Identification",
+      "name": "Target Identification",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Optical Sensor",
+      "name": "Optical Sensor",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Dempster-Shafer Theory",
+      "name": "Dempster-Shafer Theory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Confidence Coefficient",
+      "name": "Confidence Coefficient",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Identification Distance",
+      "name": "Identification Distance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Engagement Area Utilization",
+      "name": "Engagement Area Utilization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Engagement Decision",
+      "name": "Engagement Decision",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Anti-Drone System",
+      "name": "Anti-Drone System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Sensor Fusion System",
+      "name": "Sensor Fusion System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Physical Performance",
+      "name": "Physical Performance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Optical Resolution",
+      "name": "Optical Resolution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Weapon Range",
+      "name": "Weapon Range",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Target Scale",
+      "name": "Target Scale",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Evidence Strength",
+      "name": "Evidence Strength",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Engagement Range",
+      "name": "Engagement Range",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "LIG Defense & Aerospace",
+      "name": "LIG Defense & Aerospace",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Overseas Guided Weapon Research Institute",
+      "name": "Overseas Guided Weapon Research Institute",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Sensor Performance",
+      "name": "Sensor Performance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "System-Level Conditions",
+      "name": "System-Level Conditions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Requirements Performance Analysis",
+      "name": "Requirements Performance Analysis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Signal Processing",
+      "name": "Signal Processing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Detection Performance",
+      "name": "Detection Performance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Identification Performance",
+      "name": "Identification Performance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Multi-Sensor Integration",
+      "name": "Multi-Sensor Integration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Weapon System",
+      "name": "Weapon System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Model Verification",
+      "name": "Model Verification",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "Interpretation Conditions",
+      "name": "Interpretation Conditions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ]
+    },
+    {
+      "id": "전차",
+      "name": "전차",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "소형무인기",
+      "name": "소형무인기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "FPV자폭드론",
+      "name": "FPV자폭드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "취약도평가",
+      "name": "취약도평가",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "MonteCarloAnalysis",
+      "name": "MonteCarloAnalysis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "파레토분석",
+      "name": "파레토분석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "선택적대드론방호설계",
+      "name": "선택적대드론방호설계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "방호아키텍처",
+      "name": "방호아키텍처",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "공유대드론기능",
+      "name": "공유대드론기능",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "전차기능구역",
+      "name": "전차기능구역",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "플랫폼수준방호",
+      "name": "플랫폼수준방호",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "제대급방호",
+      "name": "제대급방호",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "손상기제",
+      "name": "손상기제",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "표적화용이성",
+      "name": "표적화용이성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "기능손상가능성",
+      "name": "기능손상가능성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "임무영향도",
+      "name": "임무영향도",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "취약도우선순위지수",
+      "name": "취약도우선순위지수",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "잔여취약도지수",
+      "name": "잔여취약도지수",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "위협통합지표",
+      "name": "위협통합지표",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "잔여위협",
+      "name": "잔여위협",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "방호자원배분",
+      "name": "방호자원배분",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "기능분담",
+      "name": "기능분담",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "조건우",
+      "name": "조건우",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "국방기술진흥연구소",
+      "name": "국방기술진흥연구소",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "획득연구부",
+      "name": "획득연구부",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "전장",
+      "name": "전장",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ]
+    },
+    {
+      "id": "LiDAR-SLAM",
+      "name": "LiDAR-SLAM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "MLX90640",
+      "name": "MLX90640",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "MQ-2",
+      "name": "MQ-2",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "LoRa",
+      "name": "LoRa",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "SQLite",
+      "name": "SQLite",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "Cartographer",
+      "name": "Cartographer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "F550",
+      "name": "F550",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "한국공학대학교",
+      "name": "한국공학대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "임영훈",
+      "name": "임영훈",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "SLAM",
+      "name": "SLAM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "센서노드",
+      "name": "센서노드",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "배터리모니터링",
+      "name": "배터리모니터링",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "화재감지",
+      "name": "화재감지",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ]
+    },
+    {
+      "id": "Multi-agent Reinforcement Learning",
+      "name": "Multi-agent Reinforcement Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
+      ]
+    },
+    {
+      "id": "Daniel Psijas",
+      "name": "Daniel Psijas",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
+      ]
+    },
+    {
+      "id": "Karel Toledo",
+      "name": "Karel Toledo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
+      ]
+    },
+    {
+      "id": "Javier Baladron",
+      "name": "Javier Baladron",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
+      ]
+    },
+    {
+      "id": "Occupation-Measure Mean-Field Control",
+      "name": "Occupation-Measure Mean-Field Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Frank-Wolfe Algorithm",
+      "name": "Frank-Wolfe Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Fully-Corrective Frank-Wolfe",
+      "name": "Fully-Corrective Frank-Wolfe",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Infinite-Dimensional Optimization",
+      "name": "Infinite-Dimensional Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Convex Optimization",
+      "name": "Convex Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Mean-Field Control",
+      "name": "Mean-Field Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Multi-Agent Control",
+      "name": "Multi-Agent Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Optimal Control",
+      "name": "Optimal Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Large Population Control",
+      "name": "Large Population Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Autonomous Agents",
+      "name": "Autonomous Agents",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Occupation Measures",
+      "name": "Occupation Measures",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Interaction Kernel",
+      "name": "Interaction Kernel",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Positive-Semidefiniteness Condition",
+      "name": "Positive-Semidefiniteness Condition",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Satellite Constellation",
+      "name": "Satellite Constellation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "UAVs",
+      "name": "UAVs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Satellites",
+      "name": "Satellites",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Yu, Di",
+      "name": "Yu, Di",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "You, Sixiong",
+      "name": "You, Sixiong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Pei, Chaoying",
+      "name": "Pei, Chaoying",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "arXiv",
+      "name": "arXiv",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ]
+    },
+    {
+      "id": "Canopy Height Model",
+      "name": "Canopy Height Model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Grayscale imagery",
+      "name": "Grayscale imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Gap regions",
+      "name": "Gap regions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Watershed algorithm",
+      "name": "Watershed algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Otsu",
+      "name": "Otsu",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Entropy",
+      "name": "Entropy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Percentile threshold",
+      "name": "Percentile threshold",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Individual Tree Crown Segmentation",
+      "name": "Individual Tree Crown Segmentation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Kangwon National University",
+      "name": "Kangwon National University",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Department of Forest Sciences",
+      "name": "Department of Forest Sciences",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Ah-Ri Shin",
+      "name": "Ah-Ri Shin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Pinus koraiensis",
+      "name": "Pinus koraiensis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Larix kaempferi",
+      "name": "Larix kaempferi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Quercus mongolica",
+      "name": "Quercus mongolica",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ]
+    },
+    {
+      "id": "Physical Layer Security",
+      "name": "Physical Layer Security",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Secrecy Capacity",
+      "name": "Secrecy Capacity",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Strictly Positive Secrecy Capacity",
+      "name": "Strictly Positive Secrecy Capacity",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Double-Shadowing",
+      "name": "Double-Shadowing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Single-Shadowing",
+      "name": "Single-Shadowing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Meijer G-function",
+      "name": "Meijer G-function",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "UAV-to-ground channels",
+      "name": "UAV-to-ground channels",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Fading channels",
+      "name": "Fading channels",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Shadowing",
+      "name": "Shadowing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Hansung University",
+      "name": "Hansung University",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "이후진",
+      "name": "이후진",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ]
+    },
+    {
+      "id": "Ground MEC",
+      "name": "Ground MEC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "Aerial MEC",
+      "name": "Aerial MEC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "Hybrid aerial-ground MEC",
+      "name": "Hybrid aerial-ground MEC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "Clustering algorithms",
+      "name": "Clustering algorithms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "Offloading algorithms",
+      "name": "Offloading algorithms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "UAV-Assisted Networks",
+      "name": "UAV-Assisted Networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "Clustered UAV networks",
+      "name": "Clustered UAV networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "Wireless",
+      "name": "Wireless",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "원광대학교",
+      "name": "원광대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "남채우",
+      "name": "남채우",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ]
+    },
+    {
+      "id": "UAV-MEC",
+      "name": "UAV-MEC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "MAS",
+      "name": "MAS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "IPAA",
+      "name": "IPAA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "PSO",
+      "name": "PSO",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "ACO",
+      "name": "ACO",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "QoS",
+      "name": "QoS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "국립목포대학교",
+      "name": "국립목포대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "이연우",
+      "name": "이연우",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ]
+    },
+    {
+      "id": "곽민슬",
+      "name": "곽민슬",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "BIM",
+      "name": "BIM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md",
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "IFC",
+      "name": "IFC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "Point Cloud",
+      "name": "Point Cloud",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "Drone photogrammetry",
+      "name": "Drone photogrammetry",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "terrestrial LiDAR",
+      "name": "terrestrial LiDAR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "point-to-mesh distance filtering",
+      "name": "point-to-mesh distance filtering",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "elementspecific rule-based processing",
+      "name": "elementspecific rule-based processing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "Ground Truth",
+      "name": "Ground Truth",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "structural element extraction",
+      "name": "structural element extraction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ]
+    },
+    {
+      "id": "Convex Hull-based automatic registration method",
+      "name": "Convex Hull-based automatic registration method",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "Convex Hull",
+      "name": "Convex Hull",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "drone-based point clouds",
+      "name": "drone-based point clouds",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "Z-axis alignment",
+      "name": "Z-axis alignment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "lowest floor boundary",
+      "name": "lowest floor boundary",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "construction status analysis",
+      "name": "construction status analysis",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "임현수",
+      "name": "임현수",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ]
+    },
+    {
+      "id": "김진희",
+      "name": "김진희",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "무인항공기",
+      "name": "무인항공기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "리튬이온 배터리",
+      "name": "리튬이온 배터리",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "등가회로모델(ECM)",
+      "name": "등가회로모델(ECM)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "가우스과정 회귀",
+      "name": "가우스과정 회귀",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "평형전위",
+      "name": "평형전위",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "총 내부저항",
+      "name": "총 내부저항",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "엔트로피 계수",
+      "name": "엔트로피 계수",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "활성화에너지",
+      "name": "활성화에너지",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ]
+    },
+    {
+      "id": "고정익 무인기",
+      "name": "고정익 무인기",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ]
+    },
+    {
+      "id": "전기 추진 시스템",
+      "name": "전기 추진 시스템",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ]
+    },
+    {
+      "id": "복귀 가능 여부 판단 로직",
+      "name": "복귀 가능 여부 판단 로직",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ]
+    },
+    {
+      "id": "RTB",
+      "name": "RTB",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ]
+    },
+    {
+      "id": "전선재",
+      "name": "전선재",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
       ]
     }
   ],
@@ -46016,6 +49201,2895 @@
       "type": "AFFILIATED_WITH",
       "evidence": [
         "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "AI",
+      "target": "침입탐지",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "AI",
+      "target": "객체탐지",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "AI",
+      "target": "객체추적",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "영상수집",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "항법",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "통신 보안",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "영상수집",
+      "target": "객체탐지",
+      "type": "INPUT_TO",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "객체탐지",
+      "target": "객체추적",
+      "type": "PRECEDES",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "객체추적",
+      "target": "구역판단",
+      "type": "INPUT_TO",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "침입탐지",
+      "target": "개인영상정보 보호",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "침입탐지",
+      "target": "드론",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "침입탐지",
+      "target": "AI",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "LiDAR",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LiDAR",
+      "target": "DTM",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LiDAR",
+      "target": "Post-event Terrain",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TIN",
+      "target": "Digital Map",
+      "type": "CONSTRUCTED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TIN",
+      "target": "Contour",
+      "type": "CONSTRUCTED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TIN",
+      "target": "Spot Heights",
+      "type": "CONSTRUCTED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "TIN",
+      "target": "Pre-event Terrain",
+      "type": "RECONSTRUCTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "GCD",
+      "target": "Topographic Change",
+      "type": "DETECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "GCD",
+      "target": "Elevation Difference",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "GCD",
+      "target": "Minimum Level of Detection",
+      "type": "APPLIES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rainfall",
+      "target": "Topographic Change",
+      "type": "CAUSES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rainfall",
+      "target": "Landslide",
+      "type": "TRIGGERS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Landslide",
+      "target": "Topographic Change",
+      "type": "INDUCES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Change Detection",
+      "target": "GCD",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Change Detection",
+      "target": "Landslide",
+      "type": "DETECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pre-event Terrain",
+      "target": "Post-event Terrain",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Elevation Difference",
+      "target": "Change Detection",
+      "type": "MEASURED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vertical Offset",
+      "target": "Elevation Difference",
+      "type": "DERIVED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Measurement Error",
+      "target": "Change Detection",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Terrain Reconstruction",
+      "target": "TIN",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Spatial Resolution",
+      "target": "Change Detection",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Positional Accuracy",
+      "target": "Change Detection",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensor Type",
+      "target": "Change Detection",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Acquisition Date",
+      "target": "Change Detection",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Geomorphic Analysis",
+      "target": "Topographic Change",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Geomorphic Analysis",
+      "target": "Change Detection",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "윤공현",
+      "target": "강원대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Digital Map",
+      "target": "Pre-event Terrain",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DTM",
+      "target": "Terrain Reconstruction",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Change Detection",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pre-event Terrain",
+      "target": "TIN",
+      "type": "DERIVED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Multispectral Image",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multispectral Image",
+      "target": "NDVI",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multispectral Image",
+      "target": "NDRE",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NDVI",
+      "target": "Vegetation Index",
+      "type": "MEASURES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NDRE",
+      "target": "Vegetation Index",
+      "type": "MEASURES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cubic Spline",
+      "target": "Time Series",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Non-linear Model",
+      "target": "Time Series",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time Series",
+      "target": "DOY",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Permutation Test",
+      "target": "Deciduous Type",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Permutation Test",
+      "target": "Evergreen Type",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Deciduous Type",
+      "target": "Seasonal Variation",
+      "type": "EXHIBITS",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Evergreen Type",
+      "target": "Seasonal Variation",
+      "type": "EXHIBITS",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Seasonal Trajectory",
+      "target": "Deciduous Type",
+      "type": "CHARACTERIZES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Seasonal Amplitude",
+      "target": "Evergreen Type",
+      "type": "CHARACTERIZES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NDVI",
+      "target": "Deciduous Type",
+      "type": "CORRELATES_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NDRE",
+      "target": "Evergreen Type",
+      "type": "CORRELATES_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Monitoring",
+      "target": "Vegetation Index",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Monitoring",
+      "target": "Natural Monument",
+      "type": "MONITORS",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Natural Monument",
+      "target": "Plant Heritage",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Non-linear Model",
+      "target": "Seasonal Variation",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정수호",
+      "target": "Jeonnam Gwangju Agriculture Technology Office",
+      "type": "WORKS_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UTM-K",
+      "target": "GPS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-UAM",
+      "target": "드론 배송 시스템",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "한국교통안전공단",
+      "target": "드론 배송 실증사업 안전 기준",
+      "type": "DEFINES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "정재호",
+      "type": "AUTHORED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정재호",
+      "target": "연암공과대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송 시스템",
+      "target": "GPS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송 시스템",
+      "target": "UTM-K",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송 시스템",
+      "target": "드론",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "직교좌표계",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "GPS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "공주",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "여수",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "울주",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "통영",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "포천",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론 배송 시스템",
+      "target": "드론 배송 실증사업 안전 기준",
+      "type": "COMPLIES_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "비행경로 오차 분석",
+      "target": "위치 데이터",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "대한민국 육군",
+      "target": "sUAS",
+      "type": "OPERATES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "대한민국 육군",
+      "target": "드론",
+      "type": "OPERATES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "대한민국 육군",
+      "target": "MOSA",
+      "type": "ADOPTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "대한민국 육군",
+      "target": "신속 획득 혁신",
+      "type": "ADOPTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "미국 국방부",
+      "target": "LCAAT",
+      "type": "DEVELOPS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "미국 국방부",
+      "target": "Blue UAS",
+      "type": "DEVELOPS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "미국 국방부",
+      "target": "SRR",
+      "type": "DEVELOPS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "미국 국방부",
+      "target": "신속 획득 혁신",
+      "type": "DEVELOPS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "미군",
+      "target": "sUAS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "미군",
+      "target": "드론",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "감시정찰",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "직접 타격",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "드론봇 전투체계",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "항재밍",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "데이터 보안성",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "시스템 연동성",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "경제성",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "전자전 취약성",
+      "type": "VULNERABLE_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sUAS",
+      "target": "배터리 취약성",
+      "type": "VULNERABLE_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "감시정찰",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "직접 타격",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "드론봇 전투체계",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론",
+      "target": "전자전 취약성",
+      "type": "VULNERABLE_TO",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "데이터 중심 소모전",
+      "target": "sUAS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "데이터 중심 소모전",
+      "target": "드론",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "플랫폼 중심전",
+      "target": "데이터 중심 소모전",
+      "type": "REPLACED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론봇 전투체계",
+      "target": "데이터 중심 소모전",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론봇 전투체계",
+      "target": "sUAS",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론봇 전투체계",
+      "target": "드론",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "작전운용성능",
+      "target": "sUAS",
+      "type": "SPECIFIES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "핵심성능지표",
+      "target": "sUAS",
+      "type": "MEASURES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "최소 충족 요건",
+      "target": "sUAS",
+      "type": "SPECIFIES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MOSA",
+      "target": "sUAS",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "플러그 앤 플레이",
+      "target": "시스템 연동성",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LCAAT",
+      "target": "신속 획득 혁신",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Blue UAS",
+      "target": "신속 획득 혁신",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "SRR",
+      "target": "신속 획득 혁신",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "신속 획득 혁신",
+      "target": "대한민국 육군",
+      "type": "BENCHMARKS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "경제성",
+      "target": "대량 생산성",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "경제성",
+      "target": "sUAS",
+      "type": "REQUIRED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "대량 생산성",
+      "target": "sUAS",
+      "type": "REQUIRED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "혹한기 운용 지속성",
+      "target": "sUAS",
+      "type": "REQUIRED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "항재밍",
+      "target": "sUAS",
+      "type": "PROTECTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "데이터 보안성",
+      "target": "sUAS",
+      "type": "PROTECTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "시스템 연동성",
+      "target": "sUAS",
+      "type": "REQUIRED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "신속 전개 능력",
+      "target": "sUAS",
+      "type": "REQUIRED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "러시아-우크라이나 전쟁",
+      "target": "sUAS",
+      "type": "DEMONSTRATES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "러시아-우크라이나 전쟁",
+      "target": "드론",
+      "type": "DEMONSTRATES",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "러시아",
+      "target": "러시아-우크라이나 전쟁",
+      "type": "PARTICIPATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "우크라이나",
+      "target": "러시아-우크라이나 전쟁",
+      "type": "PARTICIPATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "신속 획득 혁신",
+      "target": "MOSA",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "신속 획득 혁신",
+      "target": "플러그 앤 플레이",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "진화적 획득",
+      "target": "sUAS",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Heterogeneous Sensor Fusion",
+      "target": "Radar",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Heterogeneous Sensor Fusion",
+      "target": "Optical Sensor",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Target Identification",
+      "target": "Heterogeneous Sensor Fusion",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Anti-Drone System",
+      "target": "Heterogeneous Sensor Fusion",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dempster-Shafer Theory",
+      "target": "Reliability",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Confidence Coefficient",
+      "target": "Reliability",
+      "type": "MEASURES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Identification Distance",
+      "target": "Engagement Area Utilization",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Resolution",
+      "target": "Target Identification",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Weapon Range",
+      "target": "Engagement Area Utilization",
+      "type": "CONSTRAINS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensor Fusion System",
+      "target": "Heterogeneous Sensor Fusion",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Physical Performance",
+      "target": "Confidence Coefficient",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Target Scale",
+      "target": "Identification Distance",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Engagement Decision",
+      "target": "Identification Distance",
+      "type": "DEPENDS_ON",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Requirements Performance Analysis",
+      "target": "Sensor Performance",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Evidence Strength",
+      "target": "Engagement Decision",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensor Performance",
+      "target": "Engagement Area Utilization",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "System-Level Conditions",
+      "target": "Engagement Area Utilization",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Engagement Range",
+      "target": "Weapon Range",
+      "type": "LIMITED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Signal Processing",
+      "target": "Heterogeneous Sensor Fusion",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-Sensor Integration",
+      "target": "Heterogeneous Sensor Fusion",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Radar",
+      "target": "Sensor Fusion System",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Sensor",
+      "target": "Sensor Fusion System",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Weapon System",
+      "target": "Anti-Drone System",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Detection Performance",
+      "target": "Identification Performance",
+      "type": "PRECEDES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Optical Resolution",
+      "target": "Identification Performance",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Anti-Drone System",
+      "target": "Radar",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Anti-Drone System",
+      "target": "Optical Sensor",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dempster-Shafer Theory",
+      "target": "Confidence Coefficient",
+      "type": "CALCULATES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Target Scale",
+      "target": "Optical Resolution",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Interpretation Conditions",
+      "target": "Identification Distance",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model Verification",
+      "target": "Sensor Fusion System",
+      "type": "VALIDATES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LIG Defense & Aerospace",
+      "target": "Anti-Drone System",
+      "type": "DEVELOPS",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Overseas Guided Weapon Research Institute",
+      "target": "Anti-Drone System",
+      "type": "RESEARCHES",
+      "evidence": [
+        "raw/papers/_unclassified/이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "소형무인기",
+      "target": "전차",
+      "type": "THREATENS",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FPV자폭드론",
+      "target": "전차",
+      "type": "THREATENS",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "선택적대드론방호설계",
+      "target": "전차",
+      "type": "PROTECTS",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "MonteCarloAnalysis",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "파레토분석",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "전차기능구역",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "손상기제",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "표적화용이성",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "기능손상가능성",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "임무영향도",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도평가",
+      "target": "선택적대드론방호설계",
+      "type": "INFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "방호아키텍처",
+      "target": "선택적대드론방호설계",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "공유대드론기능",
+      "target": "잔여위협",
+      "type": "MITIGATES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "플랫폼수준방호",
+      "target": "방호아키텍처",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "제대급방호",
+      "target": "방호아키텍처",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "취약도우선순위지수",
+      "target": "선택적대드론방호설계",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "잔여취약도지수",
+      "target": "선택적대드론방호설계",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "위협통합지표",
+      "target": "선택적대드론방호설계",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "방호자원배분",
+      "target": "전차기능구역",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "기능분담",
+      "target": "선택적대드론방호설계",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "조건우",
+      "target": "국방기술진흥연구소",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "전장",
+      "target": "소형무인기",
+      "type": "CONTEXT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "전장",
+      "target": "FPV자폭드론",
+      "type": "CONTEXT_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "잔여위협",
+      "target": "제대급방호",
+      "type": "MANAGED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/전차-기능구역별-취약도-평가를-통한-선택적-대드론-방호-설계-프레임워크.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F550",
+      "target": "Cartographer",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F550",
+      "target": "LiDAR-SLAM",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cartographer",
+      "target": "LiDAR-SLAM",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cartographer",
+      "target": "SLAM",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MLX90640",
+      "target": "LoRa",
+      "type": "TRANSMITS_VIA",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MQ-2",
+      "target": "LoRa",
+      "type": "TRANSMITS_VIA",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LoRa",
+      "target": "SQLite",
+      "type": "CONNECTS_TO",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cartographer",
+      "target": "Gazebo",
+      "type": "TESTED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "임영훈",
+      "target": "한국공학대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cartographer",
+      "target": "F550",
+      "type": "INSTALLED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F550",
+      "target": "UAV",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cartographer",
+      "target": "F550",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MLX90640",
+      "target": "센서노드",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MQ-2",
+      "target": "센서노드",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "센서노드",
+      "target": "LoRa",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LiDAR-SLAM",
+      "target": "배터리모니터링",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MQ-2",
+      "target": "화재감지",
+      "type": "DETECTS",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F550",
+      "target": "배터리모니터링",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F550",
+      "target": "화재감지",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gazebo",
+      "target": "F550",
+      "type": "SIMULATES",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "센서노드",
+      "target": "IoT",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F550",
+      "target": "IoT",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cartographer",
+      "target": "IoT",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/lidar-slam-기반-실내-배터리-모니터링-iot-uav-플랫폼.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Multi-agent Reinforcement Learning",
+      "target": "UAV",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "5G",
+      "type": "DEPLOYED_IN",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yu, Di",
+      "target": "Occupation-Measure Mean-Field Control",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "You, Sixiong",
+      "target": "Occupation-Measure Mean-Field Control",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pei, Chaoying",
+      "target": "Occupation-Measure Mean-Field Control",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "arXiv",
+      "type": "PUBLISHED_IN",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Frank-Wolfe Algorithm",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Fully-Corrective Frank-Wolfe",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Mean-Field Control",
+      "type": "EXTENDS",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Multi-Agent Control",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Occupation Measures",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Interaction Kernel",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Infinite-Dimensional Optimization",
+      "type": "FORMULATES_AS",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "UAV Swarm",
+      "type": "APPLICATION_DOMAIN",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Satellite Constellation",
+      "type": "APPLICATION_DOMAIN",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Large Population Control",
+      "type": "ADDRESSES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Occupation-Measure Mean-Field Control",
+      "target": "Autonomous Agents",
+      "type": "MANAGES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Frank-Wolfe Algorithm",
+      "target": "Convex Optimization",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Frank-Wolfe Algorithm",
+      "target": "Optimal Control",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fully-Corrective Frank-Wolfe",
+      "target": "Convex Optimization",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fully-Corrective Frank-Wolfe",
+      "target": "Optimal Control",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Infinite-Dimensional Optimization",
+      "target": "Convex Optimization",
+      "type": "REDUCES_TO",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Interaction Kernel",
+      "target": "Positive-Semidefiniteness Condition",
+      "type": "REQUIRES",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Swarm",
+      "target": "UAVs",
+      "type": "COMPOSED_OF",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Swarm",
+      "target": "Autonomous Agents",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Satellite Constellation",
+      "target": "Satellites",
+      "type": "COMPOSED_OF",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Satellite Constellation",
+      "target": "Autonomous Agents",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LiDAR",
+      "target": "Canopy Height Model",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Canopy Height Model",
+      "target": "Gap regions",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Grayscale imagery",
+      "target": "Gap regions",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gap regions",
+      "target": "Watershed algorithm",
+      "type": "INPUT_TO",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Canopy Height Model",
+      "target": "Watershed algorithm",
+      "type": "INPUT_TO",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Otsu",
+      "target": "Gap regions",
+      "type": "CLASSIFIES",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Entropy",
+      "target": "Gap regions",
+      "type": "CLASSIFIES",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Percentile threshold",
+      "target": "Gap regions",
+      "type": "CLASSIFIES",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Watershed algorithm",
+      "target": "Individual Tree Crown Segmentation",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ah-Ri Shin",
+      "target": "Kangwon National University",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Department of Forest Sciences",
+      "target": "Kangwon National University",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ah-Ri Shin",
+      "target": "Department of Forest Sciences",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pinus koraiensis",
+      "target": "Individual Tree Crown Segmentation",
+      "type": "STUDIED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Larix kaempferi",
+      "target": "Individual Tree Crown Segmentation",
+      "type": "STUDIED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quercus mongolica",
+      "target": "Individual Tree Crown Segmentation",
+      "type": "STUDIED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Strictly Positive Secrecy Capacity",
+      "target": "Physical Layer Security",
+      "type": "METRIC_OF",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Strictly Positive Secrecy Capacity",
+      "target": "Secrecy Capacity",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Double-Shadowing",
+      "target": "Shadowing",
+      "type": "TYPE_OF",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Single-Shadowing",
+      "target": "Shadowing",
+      "type": "TYPE_OF",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Meijer G-function",
+      "target": "Strictly Positive Secrecy Capacity",
+      "type": "USES_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-to-ground channels",
+      "target": "Fading channels",
+      "type": "EXHIBITS",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fading channels",
+      "target": "Shadowing",
+      "type": "AFFECTED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Physical Layer Security",
+      "target": "UAV-to-ground channels",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이후진",
+      "target": "Hansung University",
+      "type": "AFFILIATES_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "UAV-to-ground channels",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Clustered UAV networks",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "UAV-Assisted Networks",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground MEC",
+      "target": "MEC",
+      "type": "SPECIALIZATION_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aerial MEC",
+      "target": "MEC",
+      "type": "SPECIALIZATION_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid aerial-ground MEC",
+      "target": "MEC",
+      "type": "SPECIALIZATION_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MEC",
+      "target": "Edge Computing",
+      "type": "SPECIALIZATION_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered UAV networks",
+      "target": "Clustering algorithms",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MEC",
+      "target": "Offloading algorithms",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-Assisted Networks",
+      "target": "Wireless",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered UAV networks",
+      "target": "Wireless",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "남채우",
+      "target": "원광대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered UAV networks",
+      "target": "UAV-Assisted Networks",
+      "type": "SPECIALIZATION_OF",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered UAV networks",
+      "target": "Ground MEC",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered UAV networks",
+      "target": "Aerial MEC",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered UAV networks",
+      "target": "Hybrid aerial-ground MEC",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-Assisted Networks",
+      "target": "MEC",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IPAA",
+      "target": "PSO",
+      "type": "COMBINES",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IPAA",
+      "target": "ACO",
+      "type": "COMBINES",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-MEC",
+      "target": "MAS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-MEC",
+      "target": "IPAA",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "UAV-MEC",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Edge Node",
+      "target": "UAV-MEC",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MAS",
+      "target": "QoS",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IPAA",
+      "target": "QoS",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이연우",
+      "target": "국립목포대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이연우",
+      "target": "UAV-MEC",
+      "type": "RESEARCHED",
+      "evidence": [
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "곽민슬",
+      "target": "경상국립대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone photogrammetry",
+      "target": "Point Cloud",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BIM",
+      "target": "IFC",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Point Cloud",
+      "target": "BIM",
+      "type": "REGISTERED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "point-to-mesh distance filtering",
+      "target": "structural element extraction",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "elementspecific rule-based processing",
+      "target": "structural element extraction",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "terrestrial LiDAR",
+      "target": "structural element extraction",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ground Truth",
+      "target": "structural element extraction",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/bim-모델과의-정합을-통한-드론-기반-포인트클라우드에서-구조부재-추출-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Hull-based automatic registration method",
+      "target": "Convex Hull",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Hull-based automatic registration method",
+      "target": "BIM",
+      "type": "REGISTERS",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Hull-based automatic registration method",
+      "target": "drone-based point clouds",
+      "type": "REGISTERS",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Hull-based automatic registration method",
+      "target": "Z-axis alignment",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Hull-based automatic registration method",
+      "target": "lowest floor boundary",
+      "type": "USES_AS_REFERENCE",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Hull-based automatic registration method",
+      "target": "construction status analysis",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "임현수",
+      "target": "경상국립대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/건설현장-드론-포인트클라우드와-bim-간의-convex-hull-기반-자동-정합-방안.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "김진희",
+      "target": "국방과학연구소",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "리튬이온 배터리",
+      "target": "무인항공기",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "등가회로모델(ECM)",
+      "target": "리튬이온 배터리",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "등가회로모델(ECM)",
+      "target": "평형전위",
+      "type": "HAS_PARAMETER",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "등가회로모델(ECM)",
+      "target": "총 내부저항",
+      "type": "HAS_PARAMETER",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "가우스과정 회귀",
+      "target": "평형전위",
+      "type": "ESTIMATES",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "가우스과정 회귀",
+      "target": "총 내부저항",
+      "type": "ESTIMATES",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "평형전위",
+      "target": "엔트로피 계수",
+      "type": "REFLECTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "총 내부저항",
+      "target": "활성화에너지",
+      "type": "REFLECTS",
+      "evidence": [
+        "raw/papers/_unclassified/소형-무인항공기용-리튬이온-배터리-등가회로모델-파라미터-추정에-관한-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "고정익 무인기",
+      "target": "전기 추진 시스템",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "복귀 가능 여부 판단 로직",
+      "target": "고정익 무인기",
+      "type": "DESIGNED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "복귀 가능 여부 판단 로직",
+      "target": "RTB",
+      "type": "ASSESSES_FEASIBILITY_OF",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "고정익 무인기",
+      "target": "RTB",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "전선재",
+      "target": "국방과학연구소",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
       ],
       "confidence": "unverified"
     }
