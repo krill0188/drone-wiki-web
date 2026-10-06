@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local dev server (launchd ai.dronewiki.devserver)
+.ua-devserver.log
+.ua-devserver.error.log
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

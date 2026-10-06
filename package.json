@@ -10,6 +10,7 @@
     "self-update": "tsx scripts/self-update-pipeline.ts"
   },
   "dependencies": {
+    "@ai-sdk/openai-compatible": "^1.0.58",
     "@ai-sdk/react": "^4.0.51",
     "@anthropic-ai/sdk": "^0.115.0",
     "@openrouter/ai-sdk-provider": "^3.0.0",
