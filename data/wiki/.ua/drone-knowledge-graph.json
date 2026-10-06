@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "ad8e5729a6dc26780498ac479402a75d9dd213bc8cfbf790f190b74d9d405a43",
+  "source_fingerprint": "010bc7c0884e69539769a5e99b7971463ecbd70073bdd6e708d6fe9acc37ca7c",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -1357,7 +1357,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-08-01",
+      "updated": "2026-10-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -1712,7 +1712,7 @@
         "computer-vision",
         "yolo"
       ],
-      "updated": "2026-09-02",
+      "updated": "2026-10-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -1792,7 +1792,7 @@
         "defense",
         "cuas"
       ],
-      "updated": "2026-09-02",
+      "updated": "2026-10-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2082,6 +2082,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "faa-12m-drone-research-awards-2026-10",
+      "name": "FAA 드론 연구·시험 $12M 19개 과제 지원 (2026-10)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "utm"
+      ],
+      "updated": "2026-10-06",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "faa-249-gram-registration-rule",
       "name": "FAA 249그램 드론 등록 규정",
       "layer": "Concepts",
@@ -2154,7 +2169,7 @@
         "airspace",
         "utm"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-10-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2236,7 +2251,7 @@
         "fcc",
         "supply-chain"
       ],
-      "updated": "2026-08-13",
+      "updated": "2026-10-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -2267,6 +2282,21 @@
       ],
       "updated": "2026-08-09",
       "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "fcc-dronus-k500l-conditional-approval",
+      "name": "FCC Dronus K500L Covered List 예외(조건부 승인)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-10-06",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
     },
@@ -2925,6 +2955,22 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "name": "국가중요시설 불법 드론 적발 사례 기반 대드론 체계 개선",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations",
+        "swarm"
+      ],
+      "updated": "2026-10-06",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "kci-critical-facility-intrusion-detection-drone-ai",
       "name": "AI 기반 드론을 활용한 중요시설 비인가 침입 탐지 연구",
       "layer": "Concepts",
@@ -2933,7 +2979,7 @@
         "drone",
         "drone-ai"
       ],
-      "updated": "2026-10-03",
+      "updated": "2026-10-06",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -3242,7 +3288,7 @@
         "regulations",
         "ops-mission"
       ],
-      "updated": "2026-10-01",
+      "updated": "2026-10-06",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -3318,6 +3364,21 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-uav-multispectral-apple-ssc-prediction",
+      "name": "UAV 다중분광 영상 기반 사과 수확 전 당도(SSC) 예측",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-10-06",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "kci-uav-rainfall-induced-terrain-change-analysis",
@@ -3825,7 +3886,7 @@
         "public-safety",
         "agriculture"
       ],
-      "updated": "2026-08-13",
+      "updated": "2026-10-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3843,6 +3904,20 @@
       ],
       "updated": "2026-08-13",
       "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "michigan-medical-drone-delivery-pilot-phase2",
+      "name": "미시간 북부 의료 드론 배송 파일럿 2단계",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-06",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
     },
@@ -5590,7 +5665,7 @@
         "image-processing",
         "research"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-10-06",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -6096,6 +6171,21 @@
       ],
       "updated": "2026-07-30",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "wing-walmart-denver-seattle-2027",
+      "name": "Wing·Walmart 덴버/시애틀 2027 드론 배송 확장",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-06",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
     },
@@ -10119,6 +10209,24 @@
       "confidence": "high"
     },
     {
+      "source": "drone-delivery-news",
+      "target": "wing-walmart-denver-seattle-2027",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-delivery-news",
+      "target": "michigan-medical-drone-delivery-pilot-phase2",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-dronedj.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "drone-first-responder-dfr",
       "target": "geocomm",
       "type": "related",
@@ -11211,6 +11319,15 @@
       "confidence": "high"
     },
     {
+      "source": "drone-rice-heading-detection",
+      "target": "kci-uav-multispectral-apple-ssc-prediction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-드론-시계열-rgb-영상과-딥러닝-기반-분류-모델을-이용한-벼-품종군의-출수-판별.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "drone-safety-failsafe",
       "target": "kci-fixed-wing-return-feasibility-logic",
       "type": "wikilink",
@@ -11378,6 +11495,15 @@
     {
       "source": "drone-wall-defense-system",
       "target": "lockheed-martin-morfius",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-02-kci-droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-wall-defense-system",
+      "target": "kci-critical-facility-illegal-drone-counter-uas-zones",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-02-kci-droneto-drone-기반-drone-wall-개념을-적용한-대드론-방어체계-제안.md"
@@ -11769,6 +11895,33 @@
       "confidence": "high"
     },
     {
+      "source": "faa-12m-drone-research-awards-2026-10",
+      "target": "faa-nextgen-drone-integration",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "faa-12m-drone-research-awards-2026-10",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "faa-12m-drone-research-awards-2026-10",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "faa-249-gram-registration-rule",
       "target": "drone-regulations",
       "type": "related",
@@ -11879,6 +12032,15 @@
     {
       "source": "faa-nextgen-drone-integration",
       "target": "dji-easa-sail-bvlos",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "faa-nextgen-drone-integration",
+      "target": "faa-12m-drone-research-awards-2026-10",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-19-rss-dronelife.md"
@@ -12007,6 +12169,15 @@
       "confidence": "high"
     },
     {
+      "source": "fcc-drone-approval-revocation",
+      "target": "fcc-dronus-k500l-conditional-approval",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "fcc-drone-cellular-c2-testing",
       "target": "fcc-drone-regulations",
       "type": "related",
@@ -12050,6 +12221,33 @@
         "inbox/fetch-2026-07-29-rss-dronedj.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "fcc-dronus-k500l-conditional-approval",
+      "target": "fcc-drone-approval-revocation",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "fcc-dronus-k500l-conditional-approval",
+      "target": "fcc-drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "fcc-dronus-k500l-conditional-approval",
+      "target": "fcc-military-drone-restrictions",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "fcc-military-drone-restrictions",
@@ -13145,6 +13343,42 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "target": "drone-wall-defense-system",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "target": "kci-sejong-counter-drone-governance",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "target": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "target": "counter-drone-queueing-force-sizing",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-critical-facility-intrusion-detection-drone-ai",
       "target": "computer-vision-drone",
       "type": "related",
@@ -13156,6 +13390,15 @@
     {
       "source": "kci-critical-facility-intrusion-detection-drone-ai",
       "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-critical-facility-intrusion-detection-drone-ai",
+      "target": "kci-critical-facility-illegal-drone-counter-uas-zones",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-kci-ai-기반-드론을-활용한-중요시설-비인가-침입-탐지-연구.md"
@@ -13700,6 +13943,15 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-sejong-counter-drone-governance",
+      "target": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-초밀집지역의-대드론-거버넌스-연구---세종-국가상징구역의-선제적-거버넌스-설계--.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "kci-tank-zone-vulnerability-selective-counter-drone-protection",
       "target": "kci-russia-ukraine-war-drone-terror",
       "type": "related",
@@ -13849,6 +14101,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-multispectral-apple-ssc-prediction",
+      "target": "drone-rice-heading-detection",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/pre-harvest-prediction-of-apple-soluble-solids-content-using-uav-based-multispec.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-multispectral-apple-ssc-prediction",
+      "target": "kci-lightweight-uav-precision-imaging",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/pre-harvest-prediction-of-apple-soluble-solids-content-using-uav-based-multispec.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-multispectral-apple-ssc-prediction",
+      "target": "drone-lidar-forest-boundary",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/pre-harvest-prediction-of-apple-soluble-solids-content-using-uav-based-multispec.md"
       ],
       "confidence": "low"
     },
@@ -14762,6 +15041,15 @@
       "confidence": "high"
     },
     {
+      "source": "michigan-aam-projects",
+      "target": "michigan-medical-drone-delivery-pilot-phase2",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-13-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "michigan-drone-lawsuit",
       "target": "drone-regulations",
       "type": "related",
@@ -14778,6 +15066,33 @@
         "inbox/fetch-2026-08-13-rss-dronelife.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "michigan-medical-drone-delivery-pilot-phase2",
+      "target": "michigan-aam-projects",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "michigan-medical-drone-delivery-pilot-phase2",
+      "target": "cross-layered-medical-drone-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "michigan-medical-drone-delivery-pilot-phase2",
+      "target": "northern-plains-vantis-bvlos-medical-ag-demo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m",
@@ -17903,6 +18218,15 @@
       "confidence": "high"
     },
     {
+      "source": "uav-multispectral-glint-correction",
+      "target": "kci-uav-multispectral-apple-ssc-prediction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-kci-multi-view-glint-correction-for-uav-multispectral-imagery-in.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "uav-resilience-stealthy-attacks",
       "target": "mavlink-protocol",
       "type": "related",
@@ -18799,6 +19123,33 @@
         "inbox/fetch-2026-07-30-rss-dronedj.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "wing-walmart-denver-seattle-2027",
+      "target": "drone-delivery-news",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "wing-walmart-denver-seattle-2027",
+      "target": "lowes-wing-doordash-drone-delivery-pilot",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "wing-walmart-denver-seattle-2027",
+      "target": "uber-zipline-drone-delivery",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-06-rss-dronelife.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "wonder-uav-coverage-optimization",
