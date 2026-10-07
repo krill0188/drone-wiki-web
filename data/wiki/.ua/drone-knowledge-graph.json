@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "010bc7c0884e69539769a5e99b7971463ecbd70073bdd6e708d6fe9acc37ca7c",
+  "source_fingerprint": "ec3f44487c7bb85eab54155ccc0f3a543af7f2f971fc315c9fa9a5537720f4f1",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -461,7 +461,7 @@
         "fpv",
         "hardware"
       ],
-      "updated": "2026-10-05",
+      "updated": "2026-10-07",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1605,6 +1605,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "drone-news-2026-10-07",
+      "name": "드론 업계 주요 소식 (2026-10-07)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "company"
+      ],
+      "updated": "2026-10-07",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "drone-news-hardware",
       "name": "드론 하드웨어 및 제조사 동향 2026-07",
       "layer": "Concepts",
@@ -1730,7 +1745,7 @@
         "RTL",
         "geofence"
       ],
-      "updated": "2026-10-05",
+      "updated": "2026-10-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1807,7 +1822,7 @@
         "ops-mission",
         "wildfire"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -2013,7 +2028,7 @@
         "rtk",
         "emlid"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2828,6 +2843,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "inav-fixed-wing-servo-direction-checklist",
+      "name": "INAV 고정익 서보 방향 오류 3단계 점검",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "workflow"
+      ],
+      "updated": "2026-10-07",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "indi-stability-tilt-rotor-vtol",
       "name": "INDI Pitch-Rate Controller Stability Analysis for Tilt-Rotor VTOL UAV",
       "layer": "Concepts",
@@ -2840,7 +2870,7 @@
         "vtol",
         "stability"
       ],
-      "updated": "2026-08-11",
+      "updated": "2026-10-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3231,7 +3261,7 @@
         "ops-mission",
         "drone-ai"
       ],
-      "updated": "2026-10-03",
+      "updated": "2026-10-07",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3249,6 +3279,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-quadrotor-compound-fault-accommodation",
+      "name": "쿼드로터 센서·구동기 복합 고장 보완 기법 (KCI)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "research"
+      ],
+      "updated": "2026-10-07",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "kci-rok-army-drone-acquisition-capability",
@@ -3405,7 +3450,7 @@
         "swarm",
         "ai-autonomy"
       ],
-      "updated": "2026-09-12",
+      "updated": "2026-10-07",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -3440,6 +3485,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "kci-vtol-swarm-takeoff-landing-operation",
+      "name": "다수 VTOL 무인기 군집비행 이착륙 운용방안 (KCI)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "swarm",
+        "research"
+      ],
+      "updated": "2026-10-07",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
       "name": "UAV LiDAR CHM·그레이스케일 Watershed 개체목 분할 최적 조건 (KCI 2026)",
       "layer": "Concepts",
@@ -3449,6 +3509,21 @@
         "ops-mission"
       ],
       "updated": "2026-10-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-weather-drone-uam-corridor-wind-validation",
+      "name": "UAM 회랑 바람 관측용 기상드론 유효성 검증 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "research"
+      ],
+      "updated": "2026-10-07",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3610,7 +3685,7 @@
         "drone-ai",
         "ai-autonomy"
       ],
-      "updated": "2026-09-11",
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -3992,7 +4067,7 @@
         "ai-autonomy",
         "paper"
       ],
-      "updated": "2026-08-11",
+      "updated": "2026-10-07",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4435,6 +4510,22 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "pso-uav-bushfire-hazard-management",
+      "name": "PSO 기반 UAV 산불 위험 관리 경로계획 (Natural Hazards Review)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "swarm",
+        "research"
+      ],
+      "updated": "2026-10-07",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "pt-detr-small-target-detection",
       "name": "PT-DETR - Partially-Aware Detail Focus for Small Target Detection",
       "layer": "Concepts",
@@ -4796,7 +4887,7 @@
         "drone-ai",
         "ai-autonomy"
       ],
-      "updated": "2026-08-02",
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5406,7 +5497,7 @@
         "formation",
         "coordination"
       ],
-      "updated": "2026-10-03",
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5421,7 +5512,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6001,7 +6092,7 @@
         "regulations",
         "utm"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -6785,6 +6876,20 @@
         "drone-ai"
       ],
       "updated": "2026-10-05",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-174",
+      "name": "YOLO v8.4.174 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -10896,6 +11001,69 @@
       "confidence": "medium"
     },
     {
+      "source": "drone-news-2026-10-07",
+      "target": "drone-news-2026-10-03",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-07",
+      "target": "powerus",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-07",
+      "target": "auterion",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-07",
+      "target": "xtend-ai-robotics",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-07",
+      "target": "dji-enterprise",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-07",
+      "target": "hermes-evolutionary-uav-path-planning",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-07",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -11356,6 +11524,15 @@
     },
     {
       "source": "drone-safety-failsafe",
+      "target": "kci-quadrotor-compound-fault-accommodation",
+      "type": "related",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-safety-failsafe",
       "target": "px4-flight-modes",
       "type": "related",
       "evidence": [
@@ -11522,6 +11699,15 @@
     {
       "source": "drone-wildfire-detection-network-optimization",
       "target": "marl-uav-wildfire-exploration",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-18-arxiv-rapid-drone-based-wildfire-detection-at-a-fraction-of-curren.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-wildfire-detection-network-optimization",
+      "target": "pso-uav-bushfire-hazard-management",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-18-arxiv-rapid-drone-based-wildfire-detection-at-a-fraction-of-curren.md"
@@ -13158,6 +13344,33 @@
       "confidence": "medium"
     },
     {
+      "source": "inav-fixed-wing-servo-direction-checklist",
+      "target": "fc-firmware-comparison",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-yt-why-cant-i-get-my-servos-moving-in-the-right-direction-inav.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "inav-fixed-wing-servo-direction-checklist",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-yt-why-cant-i-get-my-servos-moving-in-the-right-direction-inav.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "inav-fixed-wing-servo-direction-checklist",
+      "target": "sensor-calibration",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-yt-why-cant-i-get-my-servos-moving-in-the-right-direction-inav.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "indi-stability-tilt-rotor-vtol",
       "target": "px4-flight-modes",
       "type": "related",
@@ -13178,6 +13391,15 @@
     {
       "source": "indi-stability-tilt-rotor-vtol",
       "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-linear-stability-analysis-of-an-indi-pitch-rate-controller-u.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "indi-stability-tilt-rotor-vtol",
+      "target": "kci-vtol-swarm-takeoff-landing-operation",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-07-30-arxiv-linear-stability-analysis-of-an-indi-pitch-rate-controller-u.md"
@@ -13844,6 +14066,51 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-quadrotor-compound-fault-accommodation",
+      "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-quadrotor-compound-fault-accommodation",
+      "target": "calos-lyapunov-safety-layer-quadrotor-rl",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-quadrotor-compound-fault-accommodation",
+      "target": "sensor-calibration",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-quadrotor-compound-fault-accommodation",
+      "target": "kci-uav-swarm-mission-reliability-abort",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-quadrotor-compound-fault-accommodation",
+      "target": "indi-stability-tilt-rotor-vtol",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-rok-army-drone-acquisition-capability",
       "target": "kci-russia-ukraine-war-drone-terror",
       "type": "related",
@@ -14195,6 +14462,24 @@
       "confidence": "low"
     },
     {
+      "source": "kci-uav-swarm-mission-reliability-abort",
+      "target": "kci-quadrotor-compound-fault-accommodation",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-swarm-mission-reliability-abort",
+      "target": "kci-vtol-swarm-takeoff-landing-operation",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-utm-k-flight-path-error-regional-analysis",
       "target": "utm-system",
       "type": "related",
@@ -14240,6 +14525,42 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-vtol-swarm-takeoff-landing-operation",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-vtol-swarm-takeoff-landing-operation",
+      "target": "swarm-modes",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-vtol-swarm-takeoff-landing-operation",
+      "target": "kci-uav-swarm-mission-reliability-abort",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-vtol-swarm-takeoff-landing-operation",
+      "target": "indi-stability-tilt-rotor-vtol",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-watershed-individual-tree-delineation-uav-lidar-chm",
       "target": "drone-lidar-forest-boundary",
       "type": "related",
@@ -14263,6 +14584,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-weather-drone-uam-corridor-wind-validation",
+      "target": "utm-system",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-weather-drone-uam-corridor-wind-validation",
+      "target": "kci-utm-k-flight-path-error-regional-analysis",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-weather-drone-uam-corridor-wind-validation",
+      "target": "drone-regulations",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
       ],
       "confidence": "low"
     },
@@ -14526,6 +14874,15 @@
     {
       "source": "marl-uav-wildfire-exploration",
       "target": "drone-wildfire-rt-detr",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "marl-uav-wildfire-exploration",
+      "target": "pso-uav-bushfire-hazard-management",
       "type": "related",
       "evidence": [
         "raw/papers/drone-ai/multi-agent-reinforcement-learning-for-autonomous-uav-exploration-in-wildfire-re.md"
@@ -15227,6 +15584,15 @@
       "confidence": "low"
     },
     {
+      "source": "moe-multimodal-uav-detection",
+      "target": "wave-detr-multimodal-drone-detector",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/moe-multimodal-uav-detection.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "montis-avalanche-faa-approval",
       "target": "drone-regulations",
       "type": "related",
@@ -15917,6 +16283,33 @@
       "target": "sensor-calibration",
       "type": "wikilink",
       "evidence": [],
+      "confidence": "low"
+    },
+    {
+      "source": "pso-uav-bushfire-hazard-management",
+      "target": "drone-wildfire-detection-network-optimization",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "pso-uav-bushfire-hazard-management",
+      "target": "marl-uav-wildfire-exploration",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "pso-uav-bushfire-hazard-management",
+      "target": "thermal-drone-wildfire-monitoring",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
       "confidence": "low"
     },
     {
@@ -16611,6 +17004,15 @@
     {
       "source": "rgb-ir-fusion-uav-detection",
       "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-02-crossref-etfnet-an-efficient-transformer-based-rgbir-fusion-network-f.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rgb-ir-fusion-uav-detection",
+      "target": "moe-multimodal-uav-detection",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-02-crossref-etfnet-an-efficient-transformer-based-rgbir-fusion-network-f.md"
@@ -17738,6 +18140,15 @@
     },
     {
       "source": "swarm-coordination",
+      "target": "kci-vtol-swarm-takeoff-landing-operation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
       "target": "kci-llm-cbba-swarm-task-allocation",
       "type": "wikilink",
       "evidence": [
@@ -17802,6 +18213,15 @@
     {
       "source": "swarm-modes",
       "target": "kci-uav-swarm-mission-reliability-abort",
+      "type": "related",
+      "evidence": [
+        "raw/articles/mastervault-swarm-architecture.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-modes",
+      "target": "kci-vtol-swarm-takeoff-landing-operation",
       "type": "related",
       "evidence": [
         "raw/articles/mastervault-swarm-architecture.md"
@@ -18809,6 +19229,15 @@
     },
     {
       "source": "utm-system",
+      "target": "kci-weather-drone-uam-corridor-wind-validation",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "utm-system",
       "target": "faa-section-2209-uafr",
       "type": "related",
       "evidence": [
@@ -18837,6 +19266,15 @@
     {
       "source": "utm-system",
       "target": "kci-korea-airspace-eu-uspace",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "utm-system",
+      "target": "kci-weather-drone-uam-corridor-wind-validation",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-kci-다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md"
@@ -20109,6 +20547,33 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-05-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-174",
+      "target": "yolo-v8-4-173",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-174",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-174",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-07-yolo.md"
       ],
       "confidence": "medium"
     },

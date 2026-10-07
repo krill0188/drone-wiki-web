@@ -20688,7 +20688,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md"
+        "raw/papers/_unclassified/저고도-드론의-비가시권-비행-제도화를-위한-법ㆍ정책적-발전방안에-관한-고찰---faa-normalizing-uas-bvlos-nprm을-중심으로.md",
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
       ]
     },
     {
@@ -29313,7 +29314,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md",
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
       ]
     },
     {
@@ -29350,6 +29352,678 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ]
+    },
+    {
+      "id": "UAM",
+      "name": "UAM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "기상드론",
+      "name": "기상드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "WPF",
+      "name": "WPF",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "power-law vertical wind profiles",
+      "name": "power-law vertical wind profiles",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "Korea Meteorological Administration (KMA)",
+      "name": "Korea Meteorological Administration (KMA)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "국립기상과학원",
+      "name": "국립기상과학원",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "기상응용연구부",
+      "name": "기상응용연구부",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "이지선",
+      "name": "이지선",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "UAM 회랑 바람 관측을 위한 기상드론 유효성 검증",
+      "name": "UAM 회랑 바람 관측을 위한 기상드론 유효성 검증",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ]
+    },
+    {
+      "id": "공분산 교차 기법",
+      "name": "공분산 교차 기법",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ]
+    },
+    {
+      "id": "강건 센서 융합",
+      "name": "강건 센서 융합",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ]
+    },
+    {
+      "id": "이원석",
+      "name": "이원석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ]
+    },
+    {
+      "id": "충남대학교",
+      "name": "충남대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ]
+    },
+    {
+      "id": "정재환",
+      "name": "정재환",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "quadrotor UAVs",
+      "name": "quadrotor UAVs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "integrated fault estimation and accommodation scheme",
+      "name": "integrated fault estimation and accommodation scheme",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "neural-network-based sensor fault compensation",
+      "name": "neural-network-based sensor fault compensation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "actuator fault compensation",
+      "name": "actuator fault compensation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "neural-network observer",
+      "name": "neural-network observer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "IMU",
+      "name": "IMU",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "IMU-based thrust and torque calculations",
+      "name": "IMU-based thrust and torque calculations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "measurement correction",
+      "name": "measurement correction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "control input reconfiguration",
+      "name": "control input reconfiguration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ]
+    },
+    {
+      "id": "DMoA",
+      "name": "DMoA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Dynamic Mixture of Adapters",
+      "name": "Dynamic Mixture of Adapters",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Feature-Enhanced Fusion",
+      "name": "Feature-Enhanced Fusion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "UAV Visible-Infrared Object Detection",
+      "name": "UAV Visible-Infrared Object Detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Weiyang, Chen",
+      "name": "Weiyang, Chen",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Hai, Yuan",
+      "name": "Hai, Yuan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Shuaifeng, Li",
+      "name": "Shuaifeng, Li",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Mao, Ye",
+      "name": "Mao, Ye",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ]
+    },
+    {
+      "id": "Particle Swarm Optimization",
+      "name": "Particle Swarm Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "unmanned aerial vehicles (UAVs)",
+      "name": "unmanned aerial vehicles (UAVs)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "bushfire detection and prevention system",
+      "name": "bushfire detection and prevention system",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "rule-based verification framework",
+      "name": "rule-based verification framework",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "metaheuristic optimization algorithm",
+      "name": "metaheuristic optimization algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "mathematical optimization model",
+      "name": "mathematical optimization model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "bushfire detection and prevention",
+      "name": "bushfire detection and prevention",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "path planning of different UAV populations in affected bushfire regions",
+      "name": "path planning of different UAV populations in affected bushfire regions",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "Zakria, Qadir",
+      "name": "Zakria, Qadir",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "Hamza, Zafar Muhammad",
+      "name": "Hamza, Zafar Muhammad",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "Muhammad, Bilal",
+      "name": "Muhammad, Bilal",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "Ehsan, Noroozinejad Farsangi",
+      "name": "Ehsan, Noroozinejad Farsangi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "Maria, Rashidi",
+      "name": "Maria, Rashidi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ]
+    },
+    {
+      "id": "이호진",
+      "name": "이호진",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "LIG디펜스&에어로스페이스",
+      "name": "LIG디펜스&에어로스페이스",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "VTOL fixed-wing UAVs",
+      "name": "VTOL fixed-wing UAVs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "swarm flight",
+      "name": "swarm flight",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "simultaneous vertical takeoff",
+      "name": "simultaneous vertical takeoff",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "altitude separation",
+      "name": "altitude separation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "sequential group departures",
+      "name": "sequential group departures",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "transition",
+      "name": "transition",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "spatial separation",
+      "name": "spatial separation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "sequential swarm exit",
+      "name": "sequential swarm exit",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "reverse transition",
+      "name": "reverse transition",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "landing",
+      "name": "landing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
       ]
     }
   ],
@@ -52643,6 +53317,411 @@
       "type": "USES",
       "evidence": [
         "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이지선",
+      "target": "국립기상과학원",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "기상응용연구부",
+      "target": "국립기상과학원",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM 회랑 바람 관측을 위한 기상드론 유효성 검증",
+      "target": "UAM",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM 회랑 바람 관측을 위한 기상드론 유효성 검증",
+      "target": "기상드론",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM 회랑 바람 관측을 위한 기상드론 유효성 검증",
+      "target": "WPF",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM 회랑 바람 관측을 위한 기상드론 유효성 검증",
+      "target": "power-law vertical wind profiles",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "기상드론",
+      "target": "WPF",
+      "type": "VALIDATED_AGAINST",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "기상드론",
+      "target": "power-law vertical wind profiles",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "강건 센서 융합",
+      "target": "공분산 교차 기법",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "강건 센서 융합",
+      "target": "대드론 체계",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이원석",
+      "target": "충남대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/공분산-교차-기법을-활용한-대드론-체계의-강건-센서-융합.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정재환",
+      "target": "한국항공대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "integrated fault estimation and accommodation scheme",
+      "target": "quadrotor UAVs",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "integrated fault estimation and accommodation scheme",
+      "target": "neural-network-based sensor fault compensation",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "integrated fault estimation and accommodation scheme",
+      "target": "actuator fault compensation",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "neural-network-based sensor fault compensation",
+      "target": "neural-network observer",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "neural-network-based sensor fault compensation",
+      "target": "measurement correction",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "actuator fault compensation",
+      "target": "IMU-based thrust and torque calculations",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IMU-based thrust and torque calculations",
+      "target": "IMU",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "actuator fault compensation",
+      "target": "control input reconfiguration",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DMoA",
+      "target": "Dynamic Mixture of Adapters",
+      "type": "ABBREVIATION_OF",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DMoA",
+      "target": "Feature-Enhanced Fusion",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DMoA",
+      "target": "UAV Visible-Infrared Object Detection",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Weiyang, Chen",
+      "target": "DMoA",
+      "type": "CO_AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hai, Yuan",
+      "target": "DMoA",
+      "type": "CO_AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shuaifeng, Li",
+      "target": "DMoA",
+      "type": "CO_AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mao, Ye",
+      "target": "DMoA",
+      "type": "CO_AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/dmoa-dynamic-mixture-of-adapters-with-feature-enhanced-fusion-for-uav-visible-in.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Particle Swarm Optimization",
+      "target": "metaheuristic optimization algorithm",
+      "type": "IS_A",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "bushfire detection and prevention system",
+      "target": "unmanned aerial vehicles (UAVs)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "bushfire detection and prevention system",
+      "target": "rule-based verification framework",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "rule-based verification framework",
+      "target": "metaheuristic optimization algorithm",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "bushfire detection and prevention system",
+      "target": "bushfire detection and prevention",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "mathematical optimization model",
+      "target": "path planning of different UAV populations in affected bushfire regions",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "path planning of different UAV populations in affected bushfire regions",
+      "target": "unmanned aerial vehicles (UAVs)",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이호진",
+      "target": "LIG디펜스&에어로스페이스",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "swarm flight",
+      "target": "VTOL fixed-wing UAVs",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "simultaneous vertical takeoff",
+      "target": "VTOL fixed-wing UAVs",
+      "type": "OPERATES",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "altitude separation",
+      "target": "simultaneous vertical takeoff",
+      "type": "FOLLOWS",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sequential group departures",
+      "target": "altitude separation",
+      "type": "FOLLOWS",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sequential group departures",
+      "target": "transition",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "transition",
+      "target": "swarm flight",
+      "type": "PRECEDES",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "spatial separation",
+      "target": "landing",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "sequential swarm exit",
+      "target": "spatial separation",
+      "type": "FOLLOWS",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "reverse transition",
+      "target": "sequential swarm exit",
+      "type": "FOLLOWS",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "landing",
+      "target": "reverse transition",
+      "type": "FOLLOWS",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
       ],
       "confidence": "unverified"
     }
