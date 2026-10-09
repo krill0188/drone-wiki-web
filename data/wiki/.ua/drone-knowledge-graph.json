@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "2b31dbe9fc0409e82254cb8c14ed8c869e2f92a0ea9b244d4deecb9e1adb5b6d",
+  "source_fingerprint": "1043c3be63a7e8af5fdd182d5978508602c1871ee5eceb987bb9616257f448c5",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -1636,6 +1636,22 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "drone-news-2026-10-09",
+      "name": "드론 업계 주요 소식 (2026-10-09)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "company",
+        "regulations"
+      ],
+      "updated": "2026-10-09",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "drone-news-hardware",
       "name": "드론 하드웨어 및 제조사 동향 2026-07",
       "layer": "Concepts",
@@ -2044,7 +2060,7 @@
         "rtk",
         "emlid"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-09",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2952,7 +2968,7 @@
         "ops-mission",
         "research"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-09",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3002,6 +3018,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "name": "국가중요시설 3차원 공중방호 대드론 통합 운용: 소프트킬·하드킬 계층적 무력화 모델 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-09",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "kci-counter-drone-hardkill-engagement-zone",
       "name": "대드론 하드킬 무인기의 교전영역 계산 알고리즘 개발",
       "layer": "Concepts",
@@ -3011,7 +3042,7 @@
         "ops-mission",
         "drone-ai"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3027,7 +3058,7 @@
         "regulations",
         "swarm"
       ],
-      "updated": "2026-10-06",
+      "updated": "2026-10-09",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3070,7 +3101,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-09-17",
+      "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3114,6 +3145,21 @@
         "research"
       ],
       "updated": "2026-10-08",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "name": "한반도 백악기 공룡발자국 화석 산지 드론 정사영상·음영기복도 데이터셋 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "research"
+      ],
+      "updated": "2026-10-09",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3324,7 +3370,7 @@
         "ops-mission",
         "drone-ai"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-09",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3338,7 +3384,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-10-03",
+      "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3453,7 +3499,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-10-05",
+      "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3498,7 +3544,22 @@
         "ops-mission",
         "drone-ai"
       ],
-      "updated": "2026-10-03",
+      "updated": "2026-10-09",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-uav-random-walk-debris-flow-reproducibility",
+      "name": "UAV 관측자료 기반 Random Walk 토석류 이동범위 공간적 재현성 평가: 2023 예천 벌방리 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "research"
+      ],
+      "updated": "2026-10-09",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3968,7 +4029,21 @@
         "drone",
         "drone-sw"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-09",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "mavsdk-v4-0-6",
+      "name": "MAVSDK v4.0.6 Release",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "drone-sw"
+      ],
+      "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -4145,7 +4220,7 @@
         "QGC",
         "planning"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -11301,6 +11376,60 @@
       "confidence": "medium"
     },
     {
+      "source": "drone-news-2026-10-09",
+      "target": "drone-news-2026-10-08",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-09",
+      "target": "fcc-drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-09",
+      "target": "faa-12m-drone-research-awards-2026-10",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-09",
+      "target": "drone-delivery-news",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-09",
+      "target": "us-dod-cuas-marketplace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-09",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-rss-dronedj.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -13761,6 +13890,15 @@
       "confidence": "low"
     },
     {
+      "source": "kci-3dgs-flight-path-reconstruction-quality",
+      "target": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-airport-drone-incident-location-reporting",
       "target": "kci-sejong-counter-drone-governance",
       "type": "related",
@@ -13833,6 +13971,42 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "target": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "target": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "target": "kci-counter-drone-hardkill-engagement-zone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "target": "counter-drone-queueing-force-sizing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-counter-drone-hardkill-engagement-zone",
       "target": "drone-wall-defense-system",
       "type": "related",
@@ -13842,6 +14016,13 @@
     {
       "source": "kci-counter-drone-hardkill-engagement-zone",
       "target": "droneshield",
+      "type": "related",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-counter-drone-hardkill-engagement-zone",
+      "target": "kci-counter-drone-3d-air-defense-layered-neutralization",
       "type": "related",
       "evidence": [],
       "confidence": "medium"
@@ -13876,6 +14057,15 @@
     {
       "source": "kci-critical-facility-illegal-drone-counter-uas-zones",
       "target": "counter-drone-queueing-force-sizing",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-critical-facility-illegal-drone-counter-uas-zones",
+      "target": "kci-counter-drone-3d-air-defense-layered-neutralization",
       "type": "related",
       "evidence": [
         "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
@@ -13935,6 +14125,15 @@
     {
       "source": "kci-disaster-response-drone-tech-direction",
       "target": "thermal-drone-wildfire-monitoring",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/재난-대응을-위한-드론의-기술적-발전-방향.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-disaster-response-drone-tech-direction",
+      "target": "kci-uav-random-walk-debris-flow-reproducibility",
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/재난-대응을-위한-드론의-기술적-발전-방향.md"
@@ -14019,6 +14218,33 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-08-kci-지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "target": "mission-planning",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "target": "kci-3dgs-flight-path-reconstruction-quality",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "target": "kci-natural-monument-plant-ndvi-ndre-seasonal",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
       ],
       "confidence": "low"
     },
@@ -14393,8 +14619,26 @@
       "confidence": "low"
     },
     {
+      "source": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "target": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-natural-monument-plant-ndvi-ndre-seasonal",
       "target": "kci-hallasan-fir-ndvi-vitality-assessment",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-natural-monument-plant-ndvi-ndre-seasonal",
+      "target": "kci-drone-orthomosaic-dinosaur-track-dataset",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-kci-다분광-드론-영상-기반-천연기념물-식물유산의-기능형별-ndvindre-계절-변동-분석.md"
@@ -14673,6 +14917,15 @@
     },
     {
       "source": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "target": "kci-uav-random-walk-debris-flow-reproducibility",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/uav-lidar-지면점-밀도와-공간-해상도가-dem-정확도에-미치는-영향.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-uav-lidar-ground-point-density-dem-accuracy",
       "target": "kci-drone-pointcloud-bim-registration-extraction",
       "type": "related",
       "evidence": [
@@ -14776,6 +15029,42 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-03-kci-uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "target": "kci-uav-random-walk-debris-flow-reproducibility",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-03-kci-uav-based-analysis-of-rainfall-induced-terrain-change.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-random-walk-debris-flow-reproducibility",
+      "target": "kci-uav-rainfall-induced-terrain-change-analysis",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-random-walk-debris-flow-reproducibility",
+      "target": "kci-uav-lidar-ground-point-density-dem-accuracy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-random-walk-debris-flow-reproducibility",
+      "target": "kci-disaster-response-drone-tech-direction",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌.md"
       ],
       "confidence": "low"
     },
@@ -15659,6 +15948,42 @@
       "confidence": "medium"
     },
     {
+      "source": "mavsdk-v4-0-5",
+      "target": "mavsdk-v4-0-6",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-6",
+      "target": "mavsdk-v4-0-5",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-6",
+      "target": "mavsdk",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mavsdk-v4-0-6",
+      "target": "mavlink-protocol",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-mavsdk.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "mavsdk",
       "target": "mavsdk-v4-0-0",
       "type": "wikilink",
@@ -15688,6 +16013,15 @@
     {
       "source": "mavsdk",
       "target": "mavsdk-v4-0-5",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-09-01-mavsdk.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "mavsdk",
+      "target": "mavsdk-v4-0-6",
       "type": "wikilink",
       "evidence": [
         "inbox/fetch-2026-09-01-mavsdk.md"
@@ -16008,6 +16342,15 @@
     {
       "source": "mission-planning",
       "target": "kci-3dgs-flight-path-reconstruction-quality",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mission-planning",
+      "target": "kci-drone-orthomosaic-dinosaur-track-dataset",
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-08-kci-서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
