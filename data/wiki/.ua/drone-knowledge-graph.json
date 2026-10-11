@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "1043c3be63a7e8af5fdd182d5978508602c1871ee5eceb987bb9616257f448c5",
+  "source_fingerprint": "51df67980777973b07d3f6a1b7b6230988a713e6ad64f9d67f3a8d58aa93ad34",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -274,6 +274,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "alientek-t90b-soldering-iron",
+      "name": "ALIENTEK T90B 휴대용 납땜 인두 (드론 수리용)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "fpv"
+      ],
+      "updated": "2026-10-10",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "aliexpress-125-fpv-drone-build",
@@ -1652,6 +1667,37 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "drone-news-2026-10-10",
+      "name": "드론 업계 주요 소식 (2026-10-10)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "company",
+        "regulations"
+      ],
+      "updated": "2026-10-10",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-10-11",
+      "name": "드론 업계 주요 소식 (2026-10-11)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "fpv"
+      ],
+      "updated": "2026-10-11",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "drone-news-hardware",
       "name": "드론 하드웨어 및 제조사 동향 2026-07",
       "layer": "Concepts",
@@ -2968,7 +3014,7 @@
         "ops-mission",
         "research"
       ],
-      "updated": "2026-10-09",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3027,7 +3073,7 @@
         "ops-mission",
         "regulations"
       ],
-      "updated": "2026-10-09",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3144,7 +3190,7 @@
         "ops-mission",
         "research"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3159,7 +3205,7 @@
         "ops-mission",
         "research"
       ],
-      "updated": "2026-10-09",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3205,7 +3251,7 @@
         "ops-mission",
         "research"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3223,6 +3269,21 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "kci-geological-outcrop-3d-mesh-dataset",
+      "name": "드론 광학영상 기반 남한 지질 노두 3D 메시 모델 데이터셋 (KCI)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "research"
+      ],
+      "updated": "2026-10-10",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "kci-ground-target-tracking-retinanet-kalman",
@@ -3559,7 +3620,7 @@
         "ops-mission",
         "research"
       ],
-      "updated": "2026-10-09",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3651,6 +3712,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "kh-control-streamdeck-mission-planner",
+      "name": "KH-Control: Stream Deck으로 Mission Planner 조작",
+      "layer": "Concepts",
+      "domain": "gcs-software",
+      "tags": [
+        "drone",
+        "drone-sw"
+      ],
+      "updated": "2026-10-10",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "lapf-llm-agent-pathfinder",
@@ -4170,7 +4245,7 @@
         "drone-sw",
         "research"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -4996,7 +5071,7 @@
         "drone-sw",
         "research"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -6063,7 +6138,7 @@
         "datalink",
         "research"
       ],
-      "updated": "2026-10-08",
+      "updated": "2026-10-10",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -7089,6 +7164,20 @@
         "drone-ai"
       ],
       "updated": "2026-10-07",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-175",
+      "name": "YOLO v8.4.175 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-10",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -8591,6 +8680,33 @@
         "inbox/processed/fetch-2026-09-23-rss-dronelife.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "alientek-t90b-soldering-iron",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yt-no-compromises-my-dream-portable-soldering-iron-is-alientek-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "alientek-t90b-soldering-iron",
+      "target": "flight-controller-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yt-no-compromises-my-dream-portable-soldering-iron-is-alientek-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "alientek-t90b-soldering-iron",
+      "target": "drone-power-battery",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yt-no-compromises-my-dream-portable-soldering-iron-is-alientek-.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "aliexpress-125-fpv-drone-build",
@@ -11430,6 +11546,105 @@
       "confidence": "medium"
     },
     {
+      "source": "drone-news-2026-10-10",
+      "target": "drone-news-2026-10-09",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-10",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-10",
+      "target": "us-dod-cuas-marketplace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-10",
+      "target": "dji-enterprise",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-10",
+      "target": "dji-mini-5-pro",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-10",
+      "target": "thermal-drone-wildfire-monitoring",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-10",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-rss-dji-enterprise.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-news-2026-10-11",
+      "target": "drone-news-2026-10-10",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-11-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-11",
+      "target": "drone-first-responder-dfr",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-11-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-11",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-11-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-11",
+      "target": "betafpv-meteor65-pro-ii",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-11-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -13899,6 +14114,15 @@
       "confidence": "low"
     },
     {
+      "source": "kci-3dgs-flight-path-reconstruction-quality",
+      "target": "kci-geological-outcrop-3d-mesh-dataset",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-airport-drone-incident-location-reporting",
       "target": "kci-sejong-counter-drone-governance",
       "type": "related",
@@ -14000,6 +14224,15 @@
     {
       "source": "kci-counter-drone-3d-air-defense-layered-neutralization",
       "target": "counter-drone-queueing-force-sizing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "target": "kci-sejong-counter-drone-governance",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-09-kci-국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
@@ -14249,6 +14482,15 @@
       "confidence": "low"
     },
     {
+      "source": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "target": "kci-geological-outcrop-3d-mesh-dataset",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-09-kci-한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-drone-pointcloud-bim-registration-extraction",
       "target": "drone-lidar-forest-boundary",
       "type": "related",
@@ -14330,6 +14572,24 @@
       "confidence": "low"
     },
     {
+      "source": "kci-eoir-autonomous-drone-wildfire-suppression",
+      "target": "kci-disaster-response-drone-tech-direction",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-eoir-autonomous-drone-wildfire-suppression",
+      "target": "drone-wildfire-rt-detr",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-fixed-wing-return-feasibility-logic",
       "target": "drone-safety-failsafe",
       "type": "related",
@@ -14353,6 +14613,51 @@
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/전기-추진-시스템을-이용하는-고정익-무인기를-위한-복귀-가능-여부-판단-로직-설계.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-geological-outcrop-3d-mesh-dataset",
+      "target": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-kci-드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-geological-outcrop-3d-mesh-dataset",
+      "target": "kci-3dgs-flight-path-reconstruction-quality",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-kci-드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-geological-outcrop-3d-mesh-dataset",
+      "target": "mission-planning",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-kci-드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-geological-outcrop-3d-mesh-dataset",
+      "target": "kci-drone-orthomosaic-dinosaur-track-dataset",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-kci-드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-geological-outcrop-3d-mesh-dataset",
+      "target": "ops-mission",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-kci-드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도.md"
       ],
       "confidence": "low"
     },
@@ -15245,6 +15550,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kh-control-streamdeck-mission-planner",
+      "target": "mission-planner",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yt-use-a-streamdeck-with-ardupilotmission-planner-using-kh-cont.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kh-control-streamdeck-mission-planner",
+      "target": "ardupilot",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yt-use-a-streamdeck-with-ardupilotmission-planner-using-kh-cont.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kh-control-streamdeck-mission-planner",
+      "target": "ground-control-station",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yt-use-a-streamdeck-with-ardupilotmission-planner-using-kh-cont.md"
       ],
       "confidence": "low"
     },
@@ -16247,6 +16579,15 @@
     {
       "source": "micro-neural-policies-safe-real-time-control",
       "target": "rl-quadrotor-tunable-control",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-arxiv-micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "micro-neural-policies-safe-real-time-control",
+      "target": "quadrotor-wind-fidelity-ppo-robustness",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-08-arxiv-micro-neural-policies-for-safe-real-time-robotic-control.md"
@@ -17704,6 +18045,33 @@
     {
       "source": "quadrotor-wind-fidelity-ppo-robustness",
       "target": "drone-simulation",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-arxiv-statistical-turbulence-and-high-fidelity-disturbance-fields-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "quadrotor-wind-fidelity-ppo-robustness",
+      "target": "micro-neural-policies-safe-real-time-control",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-arxiv-statistical-turbulence-and-high-fidelity-disturbance-fields-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "quadrotor-wind-fidelity-ppo-robustness",
+      "target": "rl-quadrotor-tunable-control",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-arxiv-statistical-turbulence-and-high-fidelity-disturbance-fields-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "quadrotor-wind-fidelity-ppo-robustness",
+      "target": "lightweight-safe-rl-uav",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-08-arxiv-statistical-turbulence-and-high-fidelity-disturbance-fields-.md"
@@ -21479,6 +21847,33 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-07-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-175",
+      "target": "yolo-v8-4-174",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-175",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-175",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-10-yolo.md"
       ],
       "confidence": "medium"
     },

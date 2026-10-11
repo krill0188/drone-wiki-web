@@ -10171,7 +10171,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md"
+        "raw/papers/_unclassified/대드론체계-신속-전력화를-위한-전력지원체계-분류-방안-연구.md",
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
       ]
     },
     {
@@ -13525,7 +13526,8 @@
       "ontologyClass": "Organization",
       "sources": [
         "raw/papers/_unclassified/레이더-반사-면적을-고려한-델타형-무인항공기의-날개-형상-최적화.md",
-        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md",
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
       ]
     },
     {
@@ -18901,7 +18903,9 @@
         "raw/papers/_unclassified/analysis-of-optimal-conditions-for-individual-tree-delineation-using-watershed-a.md",
         "raw/papers/_unclassified/closed-form-expression-of-probability-of-strictly-positive-secrecy-capacity-over.md",
         "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md",
-        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md"
+        "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md",
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md",
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
       ]
     },
     {
@@ -19276,7 +19280,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md",
-        "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md"
+        "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md",
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
       ]
     },
     {
@@ -23232,7 +23237,9 @@
         "raw/articles/fetch-2026-07-29-rss-oscarliang-fpv.md",
         "raw/articles/fetch-2026-09-19-rss-dronedj.md",
         "raw/youtube/fetch-2026-08-03-yt-f28-at-night-the-stars-come-through-dji-osmo-action-6.md",
-        "raw/youtube/fetch-2026-09-19-yt-who-else-got-locked-onto-this-setup-dji-sdr-transmission-2-d.md"
+        "raw/youtube/fetch-2026-09-19-yt-who-else-got-locked-onto-this-setup-dji-sdr-transmission-2-d.md",
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md",
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
       ]
     },
     {
@@ -30024,6 +30031,1364 @@
       "ontologyClass": "Mission",
       "sources": [
         "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ]
+    },
+    {
+      "id": "Data-driven optimization",
+      "name": "Data-driven optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "drone-truck delivery network design",
+      "name": "drone-truck delivery network design",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "stochastic demand",
+      "name": "stochastic demand",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "semi-open queuing network",
+      "name": "semi-open queuing network",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "Hamid, Hosseini Dolatabadi Sayed",
+      "name": "Hamid, Hosseini Dolatabadi Sayed",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "Rakesh, Chowdhury",
+      "name": "Rakesh, Chowdhury",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "Hossain, Bhuiyan Tanveer",
+      "name": "Hossain, Bhuiyan Tanveer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "Wenquan, Dong",
+      "name": "Wenquan, Dong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ]
+    },
+    {
+      "id": "이호준",
+      "name": "이호준",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "경북대학교",
+      "name": "경북대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "자율드론",
+      "name": "자율드론",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "electro-optical(EO) 센서",
+      "name": "electro-optical(EO) 센서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "infrared(IR) 센서",
+      "name": "infrared(IR) 센서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "인공지능",
+      "name": "인공지능",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "컴퓨터비전",
+      "name": "컴퓨터비전",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "EO 영상 분석",
+      "name": "EO 영상 분석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "IR 영상 분석",
+      "name": "IR 영상 분석",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "지리적 위치 추정",
+      "name": "지리적 위치 추정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "지리 좌표 기반 드론 유도",
+      "name": "지리 좌표 기반 드론 유도",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "영상 기반 드론 제어",
+      "name": "영상 기반 드론 제어",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "2단계 자율 비행",
+      "name": "2단계 자율 비행",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "소화탄",
+      "name": "소화탄",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "산불 탐지",
+      "name": "산불 탐지",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "산불 초기 진화",
+      "name": "산불 초기 진화",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ]
+    },
+    {
+      "id": "UAV rescue tasks",
+      "name": "UAV rescue tasks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ]
+    },
+    {
+      "id": "content-based filtering",
+      "name": "content-based filtering",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ]
+    },
+    {
+      "id": "two-stage robust optimization",
+      "name": "two-stage robust optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ]
+    },
+    {
+      "id": "Personalized assignment of UAV rescue tasks",
+      "name": "Personalized assignment of UAV rescue tasks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ]
+    },
+    {
+      "id": "Yin, Xiang",
+      "name": "Yin, Xiang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ]
+    },
+    {
+      "id": "Xinlong, Zheng",
+      "name": "Xinlong, Zheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ]
+    },
+    {
+      "id": "Huang, Xun",
+      "name": "Huang, Xun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "proximal policy optimization (PPO)",
+      "name": "proximal policy optimization (PPO)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "cascaded PID",
+      "name": "cascaded PID",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "geometric SE(3) controllers",
+      "name": "geometric SE(3) controllers",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "discrete 1-cosine gusts",
+      "name": "discrete 1-cosine gusts",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "statistical turbulence",
+      "name": "statistical turbulence",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "synthetic coherent structures",
+      "name": "synthetic coherent structures",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "large-eddy-simulation",
+      "name": "large-eddy-simulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "atmospheric boundary layer",
+      "name": "atmospheric boundary layer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "discrete-gust domain randomization",
+      "name": "discrete-gust domain randomization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "log law",
+      "name": "log law",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "남경훈",
+      "name": "남경훈",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "한국화재보험협회",
+      "name": "한국화재보험협회",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "RWM",
+      "name": "RWM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "토석류 이동범위의 공간적 재현성 평가",
+      "name": "토석류 이동범위의 공간적 재현성 평가",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "토석류",
+      "name": "토석류",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "이동성 매개변수 Ω",
+      "name": "이동성 매개변수 Ω",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "normalized impact frequency (NIF)",
+      "name": "normalized impact frequency (NIF)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "Precision",
+      "name": "Precision",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "Recall",
+      "name": "Recall",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "F1-score",
+      "name": "F1-score",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "intersection over union (IoU)",
+      "name": "intersection over union (IoU)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "축방향 도달범위",
+      "name": "축방향 도달범위",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ]
+    },
+    {
+      "id": "이우철",
+      "name": "이우철",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "경기대학교",
+      "name": "경기대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "소프트킬",
+      "name": "소프트킬",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "국가중요시설 3차원 공중방호",
+      "name": "국가중요시설 3차원 공중방호",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "3차원 공중방호 통합 운용모델",
+      "name": "3차원 공중방호 통합 운용모델",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "3차원 공중방호지대",
+      "name": "3차원 공중방호지대",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "위협 수준별 계층적 무력화 모델",
+      "name": "위협 수준별 계층적 무력화 모델",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "소프트킬 우선·하드킬 최종",
+      "name": "소프트킬 우선·하드킬 최종",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "6단계 교전규칙",
+      "name": "6단계 교전규칙",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Regulation",
+      "sources": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ]
+    },
+    {
+      "id": "이홍진",
+      "name": "이홍진",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md",
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "한국지질자원연구원",
+      "name": "한국지질자원연구원",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md",
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "KIGAM",
+      "name": "KIGAM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "DJI drone platforms",
+      "name": "DJI drone platforms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "drone-based optical 3D mesh models",
+      "name": "drone-based optical 3D mesh models",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "optical imagery",
+      "name": "optical imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "지오빅데이터 오픈플랫폼",
+      "name": "지오빅데이터 오픈플랫폼",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "지질자원주제도 2D/3D 가시화 서비스",
+      "name": "지질자원주제도 2D/3D 가시화 서비스",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "Cretaceous Gyeongsang Basin",
+      "name": "Cretaceous Gyeongsang Basin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "Jeju Island",
+      "name": "Jeju Island",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ]
+    },
+    {
+      "id": "3D Gaussian Splatting(3DGS)",
+      "name": "3D Gaussian Splatting(3DGS)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "COLMAP",
+      "name": "COLMAP",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "PSNR",
+      "name": "PSNR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "SSIM",
+      "name": "SSIM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "LPIPS",
+      "name": "LPIPS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "Holm 보정",
+      "name": "Holm 보정",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "0° 평행 왕복형(A)",
+      "name": "0° 평행 왕복형(A)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "45° 대각 왕복형(B)",
+      "name": "45° 대각 왕복형(B)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "객체 중심 궤도+연결형(C)",
+      "name": "객체 중심 궤도+연결형(C)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "황병연",
+      "name": "황병연",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "한국폴리텍대학 아산캠퍼스",
+      "name": "한국폴리텍대학 아산캠퍼스",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ]
+    },
+    {
+      "id": "문형훈",
+      "name": "문형훈",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ]
+    },
+    {
+      "id": "mixed-integer linear programming (MILP)",
+      "name": "mixed-integer linear programming (MILP)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ]
+    },
+    {
+      "id": "urban drone-human hybrid delivery",
+      "name": "urban drone-human hybrid delivery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ]
+    },
+    {
+      "id": "Model A",
+      "name": "Model A",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ]
+    },
+    {
+      "id": "Model B",
+      "name": "Model B",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ]
+    },
+    {
+      "id": "DJI multirotor unmanned aerial vehicle (UAV) platforms",
+      "name": "DJI multirotor unmanned aerial vehicle (UAV) platforms",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "GeoTIFF",
+      "name": "GeoTIFF",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "orthomosaic",
+      "name": "orthomosaic",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "hillshade imagery",
+      "name": "hillshade imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "Gyeongsang Basin",
+      "name": "Gyeongsang Basin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "Neungju Basin",
+      "name": "Neungju Basin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "Gyeongsang Supergroup",
+      "name": "Gyeongsang Supergroup",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "Jindong Formation",
+      "name": "Jindong Formation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "Haman Formation",
+      "name": "Haman Formation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ]
+    },
+    {
+      "id": "Micro Neural Policies (MNP)",
+      "name": "Micro Neural Policies (MNP)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "Evolution Strategy (ES)",
+      "name": "Evolution Strategy (ES)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "Statistical Model Checking (SMC)",
+      "name": "Statistical Model Checking (SMC)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "Cartpole",
+      "name": "Cartpole",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "zero-shot transfer",
+      "name": "zero-shot transfer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "sim-to-real transfer",
+      "name": "sim-to-real transfer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "microcontrollers",
+      "name": "microcontrollers",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ]
+    },
+    {
+      "id": "BMPO",
+      "name": "BMPO",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "UAV-VLC",
+      "name": "UAV-VLC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "WMNs",
+      "name": "WMNs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "unmanned aerial vehicle",
+      "name": "unmanned aerial vehicle",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "visible light communication",
+      "name": "visible light communication",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "hidden Markov model",
+      "name": "hidden Markov model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "queuing theory",
+      "name": "queuing theory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "three-dimensional node state perception model",
+      "name": "three-dimensional node state perception model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ]
+    },
+    {
+      "id": "Yan Zhao",
+      "name": "Yan Zhao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
       ]
     }
   ],
@@ -53722,6 +55087,1005 @@
       "type": "FOLLOWS",
       "evidence": [
         "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Data-driven optimization",
+      "target": "drone-truck delivery network design",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone-truck delivery network design",
+      "target": "stochastic demand",
+      "type": "CONSIDERS",
+      "evidence": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone-truck delivery network design",
+      "target": "semi-open queuing network",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/data-driven-optimization-for-drone-truck-delivery-network-design-under-stochasti.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이호준",
+      "target": "경북대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자율드론",
+      "target": "electro-optical(EO) 센서",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자율드론",
+      "target": "infrared(IR) 센서",
+      "type": "EQUIPPED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "EO 영상 분석",
+      "target": "인공지능",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "EO 영상 분석",
+      "target": "컴퓨터비전",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "EO 영상 분석",
+      "target": "electro-optical(EO) 센서",
+      "type": "USES_DATA_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IR 영상 분석",
+      "target": "infrared(IR) 센서",
+      "type": "USES_DATA_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "산불 탐지",
+      "target": "EO 영상 분석",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "산불 초기 진화",
+      "target": "IR 영상 분석",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "산불 초기 진화",
+      "target": "지리적 위치 추정",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "산불 초기 진화",
+      "target": "2단계 자율 비행",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "2단계 자율 비행",
+      "target": "지리 좌표 기반 드론 유도",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "2단계 자율 비행",
+      "target": "영상 기반 드론 제어",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자율드론",
+      "target": "2단계 자율 비행",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자율드론",
+      "target": "소화탄",
+      "type": "DEPLOYS",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "자율드론",
+      "target": "산불 초기 진화",
+      "type": "PERFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/eoir-영상-분석-기반-자율-드론을-활용한-산불-초기-진화-기술-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV rescue tasks",
+      "target": "UAV",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Personalized assignment of UAV rescue tasks",
+      "target": "UAV rescue tasks",
+      "type": "ASSIGNS",
+      "evidence": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Personalized assignment of UAV rescue tasks",
+      "target": "content-based filtering",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Personalized assignment of UAV rescue tasks",
+      "target": "two-stage robust optimization",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yin, Xiang",
+      "target": "Personalized assignment of UAV rescue tasks",
+      "type": "DEVELOPED",
+      "evidence": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xinlong, Zheng",
+      "target": "Personalized assignment of UAV rescue tasks",
+      "type": "DEVELOPED",
+      "evidence": [
+        "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Huang, Xun",
+      "target": "proximal policy optimization (PPO)",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Huang, Xun",
+      "target": "cascaded PID",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Huang, Xun",
+      "target": "geometric SE(3) controllers",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "proximal policy optimization (PPO)",
+      "target": "discrete-gust domain randomization",
+      "type": "TRAINED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "discrete-gust domain randomization",
+      "target": "discrete 1-cosine gusts",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "large-eddy-simulation",
+      "target": "atmospheric boundary layer",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "large-eddy-simulation",
+      "target": "log law",
+      "type": "VALIDATED_AGAINST",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "geometric SE(3) controllers",
+      "target": "proximal policy optimization (PPO)",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "cascaded PID",
+      "target": "proximal policy optimization (PPO)",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "남경훈",
+      "target": "한국화재보험협회",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "UAV",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "RWM",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "토석류",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "토석류",
+      "type": "OBSERVES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RWM",
+      "target": "토석류",
+      "type": "SIMULATES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RWM",
+      "target": "이동성 매개변수 Ω",
+      "type": "USES_PARAMETER",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RWM",
+      "target": "normalized impact frequency (NIF)",
+      "type": "USES_PARAMETER",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "Precision",
+      "type": "USES_METRIC",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "Recall",
+      "type": "USES_METRIC",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "F1-score",
+      "type": "USES_METRIC",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "intersection over union (IoU)",
+      "type": "USES_METRIC",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "토석류 이동범위의 공간적 재현성 평가",
+      "target": "축방향 도달범위",
+      "type": "USES_METRIC",
+      "evidence": [
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이우철",
+      "target": "경기대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3차원 공중방호 통합 운용모델",
+      "target": "국가중요시설 3차원 공중방호",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3차원 공중방호 통합 운용모델",
+      "target": "3차원 공중방호지대",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3차원 공중방호 통합 운용모델",
+      "target": "위협 수준별 계층적 무력화 모델",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3차원 공중방호 통합 운용모델",
+      "target": "6단계 교전규칙",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "위협 수준별 계층적 무력화 모델",
+      "target": "소프트킬",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "위협 수준별 계층적 무력화 모델",
+      "target": "하드킬",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "위협 수준별 계층적 무력화 모델",
+      "target": "3차원 공중방호지대",
+      "type": "LINKS_TO",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "소프트킬",
+      "target": "하드킬",
+      "type": "COMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "6단계 교전규칙",
+      "target": "소프트킬 우선·하드킬 최종",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "소프트킬 우선·하드킬 최종",
+      "target": "소프트킬",
+      "type": "PRIORITIZES",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "소프트킬 우선·하드킬 최종",
+      "target": "하드킬",
+      "type": "USES_AS_FINAL_RESPONSE",
+      "evidence": [
+        "raw/papers/_unclassified/국가중요시설-3차원-공중방호를-위한-대드론-통합-운용방안-연구-소프트킬하드킬의-계층적-무력화-모델을-중심으로.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "이홍진",
+      "target": "한국지질자원연구원",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "한국지질자원연구원",
+      "target": "KIGAM",
+      "type": "ABBREVIATED_AS",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "KIGAM",
+      "target": "drone-based optical 3D mesh models",
+      "type": "DEVELOPED",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone-based optical 3D mesh models",
+      "target": "optical imagery",
+      "type": "CONSTRUCTED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "optical imagery",
+      "target": "DJI drone platforms",
+      "type": "ACQUIRED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DJI drone platforms",
+      "target": "DJI",
+      "type": "MANUFACTURED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지질자원주제도 2D/3D 가시화 서비스",
+      "target": "지오빅데이터 오픈플랫폼",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "지질자원주제도 2D/3D 가시화 서비스",
+      "target": "drone-based optical 3D mesh models",
+      "type": "VISUALIZES",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone-based optical 3D mesh models",
+      "target": "Cretaceous Gyeongsang Basin",
+      "type": "REPRESENTS_GEOLOGY_OF",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "drone-based optical 3D mesh models",
+      "target": "Jeju Island",
+      "type": "REPRESENTS_LANDFORMS_OF",
+      "evidence": [
+        "raw/papers/_unclassified/드론-광학영상-기반-남한-지질-노두-3d-메시-모델-데이터셋-구축-현황-지오빅데이터-오픈플랫폼-지질자원주제도-2d3d-가시화-서비스.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3D Gaussian Splatting(3DGS)",
+      "target": "COLMAP",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3D Gaussian Splatting(3DGS)",
+      "target": "PSNR",
+      "type": "EVALUATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3D Gaussian Splatting(3DGS)",
+      "target": "SSIM",
+      "type": "EVALUATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "3D Gaussian Splatting(3DGS)",
+      "target": "LPIPS",
+      "type": "EVALUATED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "0° 평행 왕복형(A)",
+      "target": "3D Gaussian Splatting(3DGS)",
+      "type": "PROVIDES_TRAINING_IMAGES_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "45° 대각 왕복형(B)",
+      "target": "3D Gaussian Splatting(3DGS)",
+      "type": "PROVIDES_TRAINING_IMAGES_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "객체 중심 궤도+연결형(C)",
+      "target": "3D Gaussian Splatting(3DGS)",
+      "type": "PROVIDES_TRAINING_IMAGES_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "45° 대각 왕복형(B)",
+      "target": "PSNR",
+      "type": "ACHIEVES_BEST_RESULT_ON",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "객체 중심 궤도+연결형(C)",
+      "target": "SSIM",
+      "type": "ACHIEVES_BEST_RESULT_ON",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "객체 중심 궤도+연결형(C)",
+      "target": "LPIPS",
+      "type": "ACHIEVES_BEST_RESULT_ON",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Holm 보정",
+      "target": "PSNR",
+      "type": "APPLIED_TO_ANALYSIS_OF",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Holm 보정",
+      "target": "SSIM",
+      "type": "APPLIED_TO_ANALYSIS_OF",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Holm 보정",
+      "target": "LPIPS",
+      "type": "APPLIED_TO_ANALYSIS_OF",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "황병연",
+      "target": "한국폴리텍대학 아산캠퍼스",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/서로-다른-드론-촬영경로-기반-3dgs-모델의-공간-구성요소별-시각적-재현-품질-단일-대상지-탐색적-비교.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "문형훈",
+      "target": "청주대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "mixed-integer linear programming (MILP)",
+      "target": "urban drone-human hybrid delivery",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model A",
+      "target": "urban drone-human hybrid delivery",
+      "type": "CONFIGURES",
+      "evidence": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model B",
+      "target": "urban drone-human hybrid delivery",
+      "type": "CONFIGURES",
+      "evidence": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model A",
+      "target": "Model B",
+      "type": "ALTERNATIVE_TO",
+      "evidence": [
+        "raw/papers/_unclassified/지형적-특성과-충전소-기능-구분을-고려한-드론-인간-혼합배송의-비용-효율적-입지-및-네트워크-최적화-모형.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DJI",
+      "target": "DJI multirotor unmanned aerial vehicle (UAV) platforms",
+      "type": "MANUFACTURES",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "orthomosaic",
+      "target": "DJI multirotor unmanned aerial vehicle (UAV) platforms",
+      "type": "DERIVED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "hillshade imagery",
+      "target": "DJI multirotor unmanned aerial vehicle (UAV) platforms",
+      "type": "DERIVED_FROM",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "orthomosaic",
+      "target": "GeoTIFF",
+      "type": "ENCODED_AS",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "hillshade imagery",
+      "target": "GeoTIFF",
+      "type": "ENCODED_AS",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Jindong Formation",
+      "target": "Gyeongsang Supergroup",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Haman Formation",
+      "target": "Gyeongsang Supergroup",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/한반도-백악기-공룡발자국-화석-산지의-드론-정사영상-및-음영기복도-데이터셋.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro Neural Policies (MNP)",
+      "target": "Evolution Strategy (ES)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro Neural Policies (MNP)",
+      "target": "Statistical Model Checking (SMC)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro Neural Policies (MNP)",
+      "target": "Cartpole",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro Neural Policies (MNP)",
+      "target": "Quadrotor",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro Neural Policies (MNP)",
+      "target": "zero-shot transfer",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "zero-shot transfer",
+      "target": "sim-to-real transfer",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro Neural Policies (MNP)",
+      "target": "microcontrollers",
+      "type": "DEPLOYED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BMPO",
+      "target": "WMNs",
+      "type": "OPTIMIZES_RESOURCE_ALLOCATION_IN",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BMPO",
+      "target": "three-dimensional node state perception model",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-VLC",
+      "target": "WMNs",
+      "type": "ASSISTS",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-VLC",
+      "target": "unmanned aerial vehicle",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV-VLC",
+      "target": "visible light communication",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "three-dimensional node state perception model",
+      "target": "hidden Markov model",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "three-dimensional node state perception model",
+      "target": "queuing theory",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "hidden Markov model",
+      "target": "WMNs",
+      "type": "PREDICTS_INTERFERENCE_IN",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "queuing theory",
+      "target": "WMNs",
+      "type": "ESTIMATES_CONGESTION_RISK_IN",
+      "evidence": [
+        "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
       ],
       "confidence": "unverified"
     }
