@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "51df67980777973b07d3f6a1b7b6230988a713e6ad64f9d67f3a8d58aa93ad34",
+  "source_fingerprint": "16d9f28c1363e54c0d29ae3e79debc0eab0b7c1c27a048cb3215d0a4d96bcc04",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -1693,6 +1693,21 @@
         "fpv"
       ],
       "updated": "2026-10-11",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-10-12",
+      "name": "드론 업계 주요 소식 (2026-10-12)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "hardware"
+      ],
+      "updated": "2026-10-12",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -4494,6 +4509,22 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "oddityrc-echo5-frame-gps",
+      "name": "OddityRC Echo5 5인치 프레임·마이크로 GPS·ELRS 수신기",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "fpv",
+        "hardware"
+      ],
+      "updated": "2026-10-12",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ondas-ohio-drone-hub-2026",
@@ -11645,6 +11676,42 @@
       "confidence": "low"
     },
     {
+      "source": "drone-news-2026-10-12",
+      "target": "drone-news-2026-10-11",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-rss-dji-enterprise.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-12",
+      "target": "dji-enterprise",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-rss-dji-enterprise.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-12",
+      "target": "dji-matrice-5-rumor",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-rss-dji-enterprise.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-12",
+      "target": "drone-wall-defense-system",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-rss-dji-enterprise.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -16982,6 +17049,42 @@
         "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "oddityrc-echo5-frame-gps",
+      "target": "china-drone-export-controls",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-yt-oddityrc-echo5-5-quad-frame-a-gps-and-an-elrs-rx-too.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "oddityrc-echo5-frame-gps",
+      "target": "elrs-41-release",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-yt-oddityrc-echo5-5-quad-frame-a-gps-and-an-elrs-rx-too.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "oddityrc-echo5-frame-gps",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-yt-oddityrc-echo5-5-quad-frame-a-gps-and-an-elrs-rx-too.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "oddityrc-echo5-frame-gps",
+      "target": "flight-controller-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-12-yt-oddityrc-echo5-5-quad-frame-a-gps-and-an-elrs-rx-too.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "ondas-ohio-drone-hub-2026",

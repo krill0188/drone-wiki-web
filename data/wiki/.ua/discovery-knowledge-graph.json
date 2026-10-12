@@ -31390,6 +31390,18 @@
       "sources": [
         "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
       ]
+    },
+    {
+      "id": "네이버",
+      "name": "네이버",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/네이버.md"
+      ]
     }
   ],
   "edges": [
