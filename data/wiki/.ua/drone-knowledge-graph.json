@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "16d9f28c1363e54c0d29ae3e79debc0eab0b7c1c27a048cb3215d0a4d96bcc04",
+  "source_fingerprint": "724982d2527548083d54c7cf4ad157a2920051a645b005005b8544c33454fbef",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -1708,6 +1708,22 @@
         "hardware"
       ],
       "updated": "2026-10-12",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-10-13",
+      "name": "드론 업계 주요 소식 (2026-10-13)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "hardware",
+        "regulations"
+      ],
+      "updated": "2026-10-13",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -7214,6 +7230,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "yolo-v8-4-176",
+      "name": "YOLO v8.4.176 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-13",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "yolo",
       "name": "YOLO",
       "layer": "Concepts",
@@ -11708,6 +11738,78 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/fetch-2026-10-12-rss-dji-enterprise.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "drone-news-2026-10-12",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "rigid-covert-gnss-spoofing-swarm",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "dji",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "betaflight",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "a2z-longtail-dual",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "fortem-technologies",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-13",
+      "target": "uk-caa-airspace-architecture",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-rss-dronedj.md"
       ],
       "confidence": "low"
     },
@@ -21977,6 +22079,24 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-10-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-176",
+      "target": "yolo-v8-4-175",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-176",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-13-yolo.md"
       ],
       "confidence": "medium"
     },

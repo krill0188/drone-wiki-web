@@ -18905,7 +18905,8 @@
         "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md",
         "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md",
         "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md",
-        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md"
+        "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md",
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
       ]
     },
     {
@@ -31401,6 +31402,150 @@
       "ontologyClass": "Organization",
       "sources": [
         "raw/papers/_unclassified/네이버.md"
+      ]
+    },
+    {
+      "id": "Eagle-DEIM",
+      "name": "Eagle-DEIM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ]
+    },
+    {
+      "id": "Shuangbao, Ma",
+      "name": "Shuangbao, Ma",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ]
+    },
+    {
+      "id": "Yutong, Wang",
+      "name": "Yutong, Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ]
+    },
+    {
+      "id": "Yapeng, Zhang",
+      "name": "Yapeng, Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ]
+    },
+    {
+      "id": "Hongliang, Gao",
+      "name": "Hongliang, Gao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ]
+    },
+    {
+      "id": "deep reinforcement learning",
+      "name": "deep reinforcement learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "GPS/GNSS",
+      "name": "GPS/GNSS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "visual perception",
+      "name": "visual perception",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "Hüseyin, Küçükerdem",
+      "name": "Hüseyin, Küçükerdem",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "Cemal, Yılmaz",
+      "name": "Cemal, Yılmaz",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "Tolga, Kahraman H.",
+      "name": "Tolga, Kahraman H.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "Yusuf, Sönmez",
+      "name": "Yusuf, Sönmez",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
       ]
     }
   ],
@@ -56098,6 +56243,69 @@
       "type": "ESTIMATES_CONGESTION_RISK_IN",
       "evidence": [
         "raw/papers/drone-ai/multi-dimensional-optimization-of-blocking-aware-resource-allocation-in-uav-vlc-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Shuangbao, Ma",
+      "target": "Eagle-DEIM",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yutong, Wang",
+      "target": "Eagle-DEIM",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yapeng, Zhang",
+      "target": "Eagle-DEIM",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hongliang, Gao",
+      "target": "Eagle-DEIM",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/eagle-deim-dual-stream-decoupled-transformer-for-air-to-air-tiny-uav-detection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "deep reinforcement learning",
+      "target": "UAV",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "deep reinforcement learning",
+      "target": "GPS/GNSS",
+      "type": "OPERATES_WITHOUT",
+      "evidence": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "deep reinforcement learning",
+      "target": "visual perception",
+      "type": "OPERATES_WITHOUT",
+      "evidence": [
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
       ],
       "confidence": "unverified"
     }
