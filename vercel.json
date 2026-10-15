@@ -6,5 +6,8 @@
     "app/api/chat/route.ts": {
       "maxDuration": 90
     }
-  }
+  },
+  "regions": [
+    "icn1"
+  ]
 }
