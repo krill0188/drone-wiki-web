@@ -1981,7 +1981,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/articles/mastervault-hardware-reference.md"
+        "raw/articles/mastervault-hardware-reference.md",
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
       ]
     },
     {
@@ -18906,7 +18907,9 @@
         "raw/papers/swarm/multi-agent-based-qos-aware-task-offloading-in-single-cell-uav-mec-systems-using.md",
         "raw/papers/_unclassified/personalized-assignment-of-uav-rescue-tasks-an-integrated-framework-of-content-b.md",
         "raw/papers/_unclassified/uav-관측자료를-이용한-random-walk-기반-토석류-이동범위의-공간적-재현성-평가-2023년-예천-벌방리-사례.md",
-        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+        "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md",
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md",
+        "raw/papers/swarm/from-sensor-trust-to-swarm-resilience-tinyml-guided-integrity-aware-communicatio.md"
       ]
     },
     {
@@ -22010,7 +22013,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/physai-bench-a-benchmark-for-llm-based-agentic-decision-making-in-autonomous-uav.md"
+        "raw/papers/drone-ai/physai-bench-a-benchmark-for-llm-based-agentic-decision-making-in-autonomous-uav.md",
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
       ]
     },
     {
@@ -29262,7 +29266,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md"
+        "raw/papers/swarm/국내외-국가중요시설-대상-불법-드론-적발-사례를-통한-대드론-체계-개선-방안-연구.md",
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
       ]
     },
     {
@@ -31546,6 +31551,678 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ]
+    },
+    {
+      "id": "쿼드(QUAD) 드론연구소",
+      "name": "쿼드(QUAD) 드론연구소",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Q250-V3 Opti",
+      "name": "Q250-V3 Opti",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Q500-V2",
+      "name": "Q500-V2",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Q650-V1 자율주행 드론 키트",
+      "name": "Q650-V1 자율주행 드론 키트",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Q950",
+      "name": "Q950",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Star-2 SLAM 자율주행 드론 키트",
+      "name": "Star-2 SLAM 자율주행 드론 키트",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Q250 AI 자율주행드론 플랫폼",
+      "name": "Q250 AI 자율주행드론 플랫폼",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "PX4",
+      "name": "PX4",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "ArduPilot",
+      "name": "ArduPilot",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Jetson Nano",
+      "name": "Jetson Nano",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Raspberry Pi",
+      "name": "Raspberry Pi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "인텔 Realsense T265 VIO 트래킹 카메라",
+      "name": "인텔 Realsense T265 VIO 트래킹 카메라",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "D435i 심도 카메라",
+      "name": "D435i 심도 카메라",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "Google Drive",
+      "name": "Google Drive",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ]
+    },
+    {
+      "id": "UniIA-DET",
+      "name": "UniIA-DET",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ]
+    },
+    {
+      "id": "Xunyang, Su",
+      "name": "Xunyang, Su",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ]
+    },
+    {
+      "id": "Chengjia, Wang",
+      "name": "Chengjia, Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ]
+    },
+    {
+      "id": "Xinghui, Dong",
+      "name": "Xinghui, Dong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ]
+    },
+    {
+      "id": "UAV-based wind turbine inspection",
+      "name": "UAV-based wind turbine inspection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ]
+    },
+    {
+      "id": "DJI Matrice 30",
+      "name": "DJI Matrice 30",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ]
+    },
+    {
+      "id": "드론기반 3D 맵핑 시스템",
+      "name": "드론기반 3D 맵핑 시스템",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ]
+    },
+    {
+      "id": "화재조사",
+      "name": "화재조사",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ]
+    },
+    {
+      "id": "고령소방서",
+      "name": "고령소방서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ]
+    },
+    {
+      "id": "황인하",
+      "name": "황인하",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ]
+    },
+    {
+      "id": "경북소방본부",
+      "name": "경북소방본부",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ]
+    },
+    {
+      "id": "Truck-as-Hub Vehicle Routing Problem with Drones",
+      "name": "Truck-as-Hub Vehicle Routing Problem with Drones",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "branch-price-and-cut algorithm",
+      "name": "branch-price-and-cut algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "mixed-integer quadratic programming model",
+      "name": "mixed-integer quadratic programming model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Gurobi",
+      "name": "Gurobi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "compact formulation",
+      "name": "compact formulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "passive synchronization pads",
+      "name": "passive synchronization pads",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "parallel-computing procedures",
+      "name": "parallel-computing procedures",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Pu, Fan",
+      "name": "Pu, Fan",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Rathinam, Sivakumar",
+      "name": "Rathinam, Sivakumar",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Zhang, Yunlong",
+      "name": "Zhang, Yunlong",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Li, Xiaopeng",
+      "name": "Li, Xiaopeng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Wang, Xiubin",
+      "name": "Wang, Xiubin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "Zhou, Yang",
+      "name": "Zhou, Yang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ]
+    },
+    {
+      "id": "EfficientNet-B3",
+      "name": "EfficientNet-B3",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ]
+    },
+    {
+      "id": "ImageNet",
+      "name": "ImageNet",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ]
+    },
+    {
+      "id": "Geometric-Kinematic",
+      "name": "Geometric-Kinematic",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ]
+    },
+    {
+      "id": "Image-Synthetic fusion",
+      "name": "Image-Synthetic fusion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ]
+    },
+    {
+      "id": "DeepSense 6G Scenario 23",
+      "name": "DeepSense 6G Scenario 23",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ]
+    },
+    {
+      "id": "millimeter-wave",
+      "name": "millimeter-wave",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ]
+    },
+    {
+      "id": "한국 해군",
+      "name": "한국 해군",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ]
+    },
+    {
+      "id": "NATO C-UAS",
+      "name": "NATO C-UAS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ]
+    },
+    {
+      "id": "K-Maritime C-UAS",
+      "name": "K-Maritime C-UAS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ]
+    },
+    {
+      "id": "TEVV",
+      "name": "TEVV",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ]
+    },
+    {
+      "id": "LIG넥스원",
+      "name": "LIG넥스원",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ]
+    },
+    {
+      "id": "함정 복합 대드론체계",
+      "name": "함정 복합 대드론체계",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ]
+    },
+    {
+      "id": "레이더",
+      "name": "레이더",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ]
+    },
+    {
+      "id": "전자광학·적외선 센서",
+      "name": "전자광학·적외선 센서",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ]
+    },
+    {
+      "id": "함정 자체방어",
+      "name": "함정 자체방어",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ]
+    },
+    {
+      "id": "TinyML",
+      "name": "TinyML",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/from-sensor-trust-to-swarm-resilience-tinyml-guided-integrity-aware-communicatio.md"
+      ]
+    },
+    {
+      "id": "Kumar, Lal Vivek",
+      "name": "Kumar, Lal Vivek",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/from-sensor-trust-to-swarm-resilience-tinyml-guided-integrity-aware-communicatio.md"
+      ]
+    },
+    {
+      "id": "Sudeepta, Mishra",
+      "name": "Sudeepta, Mishra",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/from-sensor-trust-to-swarm-resilience-tinyml-guided-integrity-aware-communicatio.md"
       ]
     }
   ],
@@ -56306,6 +56983,393 @@
       "type": "OPERATES_WITHOUT",
       "evidence": [
         "raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Star-2 SLAM 자율주행 드론 키트",
+      "target": "PX4",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Star-2 SLAM 자율주행 드론 키트",
+      "target": "Jetson Nano",
+      "type": "CAN_INCLUDE",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Star-2 SLAM 자율주행 드론 키트",
+      "target": "인텔 Realsense T265 VIO 트래킹 카메라",
+      "type": "CAN_INCLUDE",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Star-2 SLAM 자율주행 드론 키트",
+      "target": "D435i 심도 카메라",
+      "type": "CAN_INCLUDE",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Q250 AI 자율주행드론 플랫폼",
+      "target": "Jetson Nano",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Q250 AI 자율주행드론 플랫폼",
+      "target": "Jetson Orin Nano",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Q250 AI 자율주행드론 플랫폼",
+      "target": "Raspberry Pi",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "Q250-V3 Opti",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "Q500-V2",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "Q650-V1 자율주행 드론 키트",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "Star-2 SLAM 자율주행 드론 키트",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "ArduPilot",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "PX4",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "쿼드(QUAD) 드론연구소",
+      "target": "Google Drive",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xunyang, Su",
+      "target": "UniIA-DET",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Chengjia, Wang",
+      "target": "UniIA-DET",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xinghui, Dong",
+      "target": "UniIA-DET",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UniIA-DET",
+      "target": "UAV-based wind turbine inspection",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/_unclassified/uniia-det-illumination-adaptive-detection-for-uav-based-wind-turbine-inspection.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "드론기반 3D 맵핑 시스템",
+      "target": "화재조사",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DJI Matrice 30",
+      "target": "드론기반 3D 맵핑 시스템",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "황인하",
+      "target": "경북소방본부",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/드론기반-3d-맵핑-시스템의-화재조사-활용방안-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "branch-price-and-cut algorithm",
+      "target": "Truck-as-Hub Vehicle Routing Problem with Drones",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "mixed-integer quadratic programming model",
+      "target": "Truck-as-Hub Vehicle Routing Problem with Drones",
+      "type": "MODELS",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gurobi",
+      "target": "compact formulation",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "parallel-computing procedures",
+      "target": "branch-price-and-cut algorithm",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pu, Fan",
+      "target": "branch-price-and-cut algorithm",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rathinam, Sivakumar",
+      "target": "branch-price-and-cut algorithm",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhang, Yunlong",
+      "target": "branch-price-and-cut algorithm",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Li, Xiaopeng",
+      "target": "branch-price-and-cut algorithm",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wang, Xiubin",
+      "target": "branch-price-and-cut algorithm",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhou, Yang",
+      "target": "branch-price-and-cut algorithm",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/_unclassified/an-exact-branch-price-and-cut-algorithm-for-a-truck-as-hub-vehicle-routing-probl.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "EfficientNet-B3",
+      "target": "ImageNet",
+      "type": "PRETRAINED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "EfficientNet-B3",
+      "target": "Image-Synthetic fusion",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Geometric-Kinematic",
+      "target": "Image-Synthetic fusion",
+      "type": "FUSED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Image-Synthetic fusion",
+      "target": "DeepSense 6G Scenario 23",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DeepSense 6G Scenario 23",
+      "target": "6G",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "millimeter-wave",
+      "target": "UAV",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/_unclassified/efficient-multimodal-beam-prediction-for-real-world-6g-uav-communications-via-im.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NATO",
+      "target": "NATO C-UAS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "한국 해군",
+      "target": "K-Maritime C-UAS",
+      "type": "PROPOSES",
+      "evidence": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "K-Maritime C-UAS",
+      "target": "TEVV",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/병역자원-감소와-미래-해양전장환경-변화에-따른-한국-해군-통합대드론체계-발전-방향-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "함정 복합 대드론체계",
+      "target": "레이더",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "함정 복합 대드론체계",
+      "target": "전자광학·적외선 센서",
+      "type": "INTEGRATES",
+      "evidence": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "전자광학·적외선 센서",
+      "target": "함정 자체방어",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/함정-방어를-위한-복합-대드론체계의-eoir-센서-운용개념-및-해상-환경-고려요소-분석.md"
       ],
       "confidence": "unverified"
     }
