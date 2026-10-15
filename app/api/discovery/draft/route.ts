@@ -1,12 +1,11 @@
 import { NextRequest } from "next/server"
 import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai"
-import { openrouter } from "@openrouter/ai-sdk-provider"
+import { wikiModel } from "@/lib/ai-model"
 import { buildWikiStyleSystemPrompt } from "@/lib/wiki-style-prompt"
 import { readSourceExcerpt } from "@/lib/discovery-review"
 
 export const maxDuration = 60
 
-const MODEL_ID = "anthropic/claude-haiku-4.5"
 
 interface RelatedEdge {
   name: string
@@ -53,7 +52,7 @@ ${relations.join("\n") || "(관계 없음)"}`
   )
 
   const result = streamText({
-    model: openrouter(MODEL_ID),
+    model: wikiModel(),
     system,
     prompt: `다음 자동 추출된 개념을 DroneWiki 문서 형식 초안으로 정제해줘:\n\n${context}`,
   })

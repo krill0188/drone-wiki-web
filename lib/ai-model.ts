@@ -2,7 +2,7 @@ import { createOpenAICompatible } from "@ai-sdk/openai-compatible"
 import { openrouter } from "@openrouter/ai-sdk-provider"
 
 const NVIDIA_NIM_BASE_URL = "https://integrate.api.nvidia.com/v1"
-const DEFAULT_NVIDIA_MODEL = "meta/llama-3.3-70b-instruct"
+const DEFAULT_NVIDIA_MODEL = "deepseek-ai/deepseek-v4.1-flash"
 const DEFAULT_OPENROUTER_MODEL = "anthropic/claude-haiku-4.5"
 
 /**

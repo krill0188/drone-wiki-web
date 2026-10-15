@@ -1,4 +1,4 @@
-import { openrouter } from "@openrouter/ai-sdk-provider"
+import { wikiModel } from "./ai-model"
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible"
 
 // 2026-10-04: 텔레그램 봇 전용 라우트(app/api/bot-*)에서만 쓰는 모델 선택.
@@ -21,7 +21,7 @@ export function botModel() {
     })
     return provider(process.env.LOCAL_LLM_MODEL || "gpt-5.6-sol")
   }
-  return openrouter("anthropic/claude-haiku-4.5")
+  return wikiModel()
 }
 
 /** 봇 전용 라우트 인증 — 아무나 이 엔드포인트를 때릴 수 없게 공유 토큰을 확인한다
