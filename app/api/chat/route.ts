@@ -6,7 +6,7 @@ import {
   toUIMessageStream,
   type UIMessage,
 } from "ai"
-import { openrouter } from "@openrouter/ai-sdk-provider"
+import { wikiModel } from "@/lib/ai-model"
 import { ragSearch, searchNews } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
@@ -16,7 +16,6 @@ import type { DocViewRecord } from "@/lib/session-store"
 
 export const maxDuration = 60
 
-const MODEL_ID = "anthropic/claude-haiku-4.5"
 
 function extractQuestion(messages: UIMessage[]): string {
   const lastUser = [...messages].reverse().find((m) => m.role === "user")
@@ -50,7 +49,7 @@ export async function POST(req: NextRequest) {
   const system = buildSystemPrompt(manifest, docContext ?? null, recentDocs ?? [], sources, graph.block, newsHits)
 
   const result = streamText({
-    model: openrouter(MODEL_ID),
+    model: wikiModel(),
     system,
     messages: await convertToModelMessages(messages),
   })

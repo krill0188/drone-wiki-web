@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server"
 import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai"
-import { openrouter } from "@openrouter/ai-sdk-provider"
+import { wikiModel } from "@/lib/ai-model"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
@@ -15,7 +15,7 @@ import { buildAgentManifest } from "@/lib/agent-manifest"
 
 export const maxDuration = 90
 
-const MODEL_ID = "anthropic/claude-haiku-4.5"
+
 const GROUNDING_EXCERPT_CHARS = 500
 
 type Stage = "proposal" | "spec" | "architecture"
@@ -145,7 +145,7 @@ export async function POST(req: NextRequest) {
         : architectureSystemPrompt(manifest, grounding, context ?? {})
 
   const result = streamText({
-    model: openrouter(MODEL_ID),
+    model: wikiModel(),
     system,
     prompt: `드론 컨셉: ${prompt}`,
   })

@@ -1,11 +1,10 @@
 import { NextRequest } from "next/server"
 import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai"
-import { openrouter } from "@openrouter/ai-sdk-provider"
+import { wikiModel } from "@/lib/ai-model"
 import { buildWikiStyleSystemPrompt } from "@/lib/wiki-style-prompt"
 
 export const maxDuration = 60
 
-const MODEL_ID = "anthropic/claude-haiku-4.5"
 
 export async function POST(req: NextRequest) {
   const { prompt }: { prompt: string } = await req.json()
@@ -21,7 +20,7 @@ export async function POST(req: NextRequest) {
   )
 
   const result = streamText({
-    model: openrouter(MODEL_ID),
+    model: wikiModel(),
     system,
     prompt: `다음 초안을 DroneWiki 문서 형식으로 정제해줘:\n\n${prompt}`,
   })
