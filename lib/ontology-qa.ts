@@ -4,6 +4,7 @@ import relationsFile from "@/data/ontology/relations.json"
 import { loadGraph } from "./rag"
 import { getAncestors, getDescendants, loadHierarchy } from "./ontology"
 import { reasoningBlock } from "./ontology-reason"
+import { synthesisBlock } from "./ontology-create"
 
 // 온톨로지 우선 Q&A(2026-10-16): 질문을 먼저 온톨로지 클래스로 해석하고, 클래스 계층·
 // 클래스 간 관계를 구조로 제공한 뒤 위키 문서를 "근거"로 붙인다. 논문·뉴스 문서를
@@ -192,12 +193,13 @@ export function buildOntologyContext(question: string, docTitle?: string): Ontol
   const facts = semanticFacts(classes)
 
   const inference = reasoningBlock(question, classes, hierarchy)
+  const synthesis = wide ? synthesisBlock(question).block : ""
 
   const block = `<ontology>
 질문을 온톨로지로 해석한 결과 — 답변의 뼈대로 사용할 것.
 관련 클래스: ${classes.join(", ")}
 클래스 계층:
 ${hierLines.join("\n")}
-${rels.length ? `클래스 간 관계(구조 정의 — 개별 제품·수치의 사실이 아님):\n${rels.join("\n")}\n` : ""}${facts.length ? `개체 간 의미 관계(원문에서 자동 추출, 사람 검토 전 — 단정 금지):\n${facts.join("\n")}\n` : ""}${docs.length ? `클래스와 연관된 위키 문서(자동 연결, 근거 확인용):\n${docs.join("\n")}\n` : ""}</ontology>${inference ? `\n${inference}` : ""}`
+${rels.length ? `클래스 간 관계(구조 정의 — 개별 제품·수치의 사실이 아님):\n${rels.join("\n")}\n` : ""}${facts.length ? `개체 간 의미 관계(원문에서 자동 추출, 사람 검토 전 — 단정 금지):\n${facts.join("\n")}\n` : ""}${docs.length ? `클래스와 연관된 위키 문서(자동 연결, 근거 확인용):\n${docs.join("\n")}\n` : ""}</ontology>${inference ? `\n${inference}` : ""}${synthesis ? `\n${synthesis}` : ""}`
   return { block, classes }
 }

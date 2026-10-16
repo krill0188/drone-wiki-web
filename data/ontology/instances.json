@@ -1,0 +1,506 @@
+{
+ "_comment": "HW 제품 인스턴스(자동 파싱, 결정론). 값은 제조사 공식 문서 기반, 비어 있으면 미확인.",
+ "instances": [
+  {
+   "id": "product-battery-amprius-sicore",
+   "class": "Battery",
+   "name": "SiCore Si-anode Cell (Amprius)",
+   "manufacturer": "Amprius",
+   "source": "https://amprius.com/solutions/sicore/",
+   "doc": "product-battery-amprius-sicore.md",
+   "props": {
+    "wh_per_kg": {
+     "value": 390.0,
+     "unit": "Wh/kg",
+     "raw": "에너지 밀도 3종: 390 Wh/kg 860 Wh/L; 450 Wh/kg 1,000 Wh/L; 340 Wh/kg 770 Wh/L"
+    }
+   }
+  },
+  {
+   "id": "product-battery-molicel-inr-21700-p50b",
+   "class": "Battery",
+   "name": "INR-21700-P50B (Molicel)",
+   "manufacturer": "Molicel",
+   "source": "https://www.molicel.com/wp-content/uploads/Product-Data-Sheet-of-INR-21700-P50B-80122.pdf",
+   "doc": "product-battery-molicel-inr-21700-p50b.md",
+   "props": {
+    "capMah": {
+     "value": 5000.0,
+     "unit": "mAh",
+     "raw": "용량: Typical 5000 mAh (18.0 Wh) / Minimum 4850 mAh (17.5 Wh)"
+    },
+    "wh_per_kg": {
+     "value": 260.0,
+     "unit": "Wh/kg",
+     "raw": "에너지 밀도: 714 Wh/l, 260 Wh/kg"
+    },
+    "weightG": {
+     "value": 71.0,
+     "unit": "g",
+     "raw": "크기/무게: 직경 21.55 mm(Max) x 높이 70.15 mm(Max), 71 g(Max)"
+    }
+   }
+  },
+  {
+   "id": "product-battery-tattu-plus-16000mah-6s-15c",
+   "class": "Battery",
+   "name": "Tattu Plus 16000mAh 6S 15C (Tattu / Grepow)",
+   "manufacturer": "Tattu (Grepow)",
+   "source": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
+   "doc": "product-battery-tattu-plus-16000mah-6s-15c.md",
+   "props": {
+    "cRate": {
+     "value": 15.0,
+     "unit": "C",
+     "raw": "방전율: 15C (최대 버스트 30C)"
+    },
+    "weightG": {
+     "value": 1932.0,
+     "unit": "g",
+     "raw": "무게: 1932g (±20g)"
+    },
+    "cells": {
+     "value": 6.0,
+     "unit": "S",
+     "raw": "제목: Tattu Plus 16000mAh 6S 15C (Tattu / Grepow)"
+    },
+    "capMah": {
+     "value": 16000.0,
+     "unit": "mAh",
+     "raw": "제목: Tattu Plus 16000mAh 6S 15C (Tattu / Grepow)"
+    }
+   }
+  },
+  {
+   "id": "product-esc-holybro-tekko32-f4-metal-65a",
+   "class": "ESC",
+   "name": "Tekko32 F4 Metal 4in1 65A ESC (Holybro)",
+   "manufacturer": "Holybro",
+   "source": "https://holybro.com/products/tekko32-f4-metal-4in1-65a-esc-65a",
+   "doc": "product-esc-holybro-tekko32-f4-metal-65a.md",
+   "props": {
+    "maxCells": {
+     "value": 6.0,
+     "unit": "S",
+     "raw": "입력 전압: 4-6S"
+    },
+    "contCurrentA": {
+     "value": 65.0,
+     "unit": "A",
+     "raw": "연속/버스트 전류: 65A x4 / 75A x4"
+    },
+    "peakCurrentA": {
+     "value": 75.0,
+     "unit": "A",
+     "raw": "연속/버스트 전류: 65A x4 / 75A x4"
+    },
+    "weightG": {
+     "value": 15.8,
+     "unit": "g",
+     "raw": "무게: 15.8g"
+    }
+   }
+  },
+  {
+   "id": "product-esc-kde-kde-uas95hvc",
+   "class": "ESC",
+   "name": "KDE-UAS95HVC 95A+ HV ESC (KDE Direct)",
+   "manufacturer": "KDE Direct",
+   "source": "https://www.kdedirect.com/products/kde-uas95hvc",
+   "doc": "product-esc-kde-kde-uas95hvc.md",
+   "props": {
+    "contCurrentA": {
+     "value": 95.0,
+     "unit": "A",
+     "raw": "연속 전류: 95 A (180 s)"
+    },
+    "maxCells": {
+     "value": 12.0,
+     "unit": "S",
+     "raw": "전압 범위: 11.1 V (3S LiPo) - 52.2 V (12S LiHV)"
+    },
+    "weightG": {
+     "value": 78.0,
+     "unit": "g",
+     "raw": "무게: 78 g (114 g with Wires/Bullets)"
+    }
+   }
+  },
+  {
+   "id": "product-esc-tmotor-flame-60a-12s-v2",
+   "class": "ESC",
+   "name": "FLAME 60A 12S V2.0 (T-Motor)",
+   "manufacturer": "T-Motor",
+   "source": "https://store.tmotor.com/product/flame-60a-12s-V2-esc.html",
+   "doc": "product-esc-tmotor-flame-60a-12s-v2.md",
+   "props": {
+    "maxCells": {
+     "value": 12.0,
+     "unit": "S",
+     "raw": "전압: LiPo 6-12S"
+    },
+    "contCurrentA": {
+     "value": 60.0,
+     "unit": "A",
+     "raw": "연속/피크 전류: 60A continuous / 80A peak (10 seconds)"
+    },
+    "peakCurrentA": {
+     "value": 80.0,
+     "unit": "A",
+     "raw": "연속/피크 전류: 60A continuous / 80A peak (10 seconds)"
+    }
+   }
+  },
+  {
+   "id": "product-frame-dji-matrice-350-rtk",
+   "class": "Frame",
+   "name": "Matrice 350 RTK (DJI)",
+   "manufacturer": "DJI",
+   "source": "https://enterprise.dji.com/matrice-350-rtk/specs",
+   "doc": "product-frame-dji-matrice-350-rtk.md",
+   "props": {
+    "maxTakeoffKg": {
+     "value": 9.2,
+     "unit": "kg",
+     "raw": "최대 이륙 중량: 9.2 kg"
+    },
+    "weightG": {
+     "value": 3770.0,
+     "unit": "g",
+     "raw": "무게: 배터리 제외 약 3.77 kg / TB65 2개 포함 약 6.47 kg"
+    },
+    "maxFlightMin": {
+     "value": 55.0,
+     "unit": "min",
+     "raw": "최대 비행시간: 55 minutes"
+    },
+    "wheelbaseMm": {
+     "value": 895.0,
+     "unit": "mm",
+     "raw": "대각 휠베이스: 895 mm"
+    }
+   }
+  },
+  {
+   "id": "product-frame-freefly-alta-x-gen2",
+   "class": "Frame",
+   "name": "Alta X Gen2 (Freefly Systems)",
+   "manufacturer": "Freefly",
+   "source": "https://docs.freeflysystems.com/alta-x-gen2/specs/tech-specs",
+   "doc": "product-frame-freefly-alta-x-gen2.md",
+   "props": {
+    "maxTakeoffKg": {
+     "value": 34.9,
+     "unit": "kg",
+     "raw": "최대 총 이륙 중량: 34.9 kg"
+    },
+    "maxPayloadKg": {
+     "value": 15.1,
+     "unit": "kg",
+     "raw": "최대 페이로드: 15.1 kg"
+    },
+    "weightG": {
+     "value": 11200.0,
+     "unit": "g",
+     "raw": "공칭 중량(Empty): 11.2 kg"
+    }
+   }
+  },
+  {
+   "id": "product-frame-holybro-x500-v2-kit",
+   "class": "Frame",
+   "name": "X500 V2 ARF Kit (Holybro)",
+   "manufacturer": "Holybro",
+   "source": "https://holybro.com/products/x500-v2-kits",
+   "doc": "product-frame-holybro-x500-v2-kit.md",
+   "props": {
+    "wheelbaseMm": {
+     "value": 500.0,
+     "unit": "mm",
+     "raw": "휠베이스: 500mm"
+    },
+    "weightG": {
+     "value": 610.0,
+     "unit": "g",
+     "raw": "프레임 무게: 610g"
+    },
+    "maxFlightMin": {
+     "value": 18.0,
+     "unit": "min",
+     "raw": "비행 시간: ~18 minutes hover, no payload, 5000mAh"
+    }
+   }
+  },
+  {
+   "id": "product-motor-hobbywing-xrotor-x8-g2",
+   "class": "Motor",
+   "name": "XRotor X8 G2 (Hobbywing)",
+   "manufacturer": "Hobbywing",
+   "source": "https://www.hobbywingdirect.com/products/eps-ips-x8-g2",
+   "doc": "product-motor-hobbywing-xrotor-x8-g2.md",
+   "props": {
+    "maxThrustG": {
+     "value": 17500.0,
+     "unit": "g",
+     "raw": "최대 추력: 17.5KG (at sea level)"
+    },
+    "maxCells": {
+     "value": 14.0,
+     "unit": "S",
+     "raw": "정격 전압: 12S-46V / 14S-54V"
+    },
+    "ratedCells": {
+     "value": 12.0,
+     "unit": "S",
+     "raw": "정격 전압: 12S-46V / 14S-54V"
+    },
+    "kv": {
+     "value": 100.0,
+     "unit": "rpm/V",
+     "raw": "KV: 100KV (8120-100KV)"
+    },
+    "ratedCurrentA": {
+     "value": 20.0,
+     "unit": "A",
+     "raw": "정격 전류: 20A"
+    },
+    "weightG": {
+     "value": 1095.0,
+     "unit": "g",
+     "raw": "무게: 1095g (케이블+프롭 포함)"
+    }
+   }
+  },
+  {
+   "id": "product-motor-kde-kde5215xf-435",
+   "class": "Motor",
+   "name": "KDE5215XF-435 (KDE Direct)",
+   "manufacturer": "KDE Direct",
+   "source": "https://www.kdedirect.com/products/kde5215xf-435",
+   "doc": "product-motor-kde-kde5215xf-435.md",
+   "props": {
+    "kv": {
+     "value": 435.0,
+     "unit": "rpm/V",
+     "raw": "Kv: 435 RPM/V"
+    },
+    "maxCurrentA": {
+     "value": 72.0,
+     "unit": "A",
+     "raw": "최대 연속 전류: 72 A (180 s)"
+    },
+    "maxPowerW": {
+     "value": 1595.0,
+     "unit": "W",
+     "raw": "최대 연속 출력: 1595 W (180 s)"
+    },
+    "weightG": {
+     "value": 305.0,
+     "unit": "g",
+     "raw": "무게: 305 g (360 g with Wires/Bullets)"
+    },
+    "maxCells": {
+     "value": 8.0,
+     "unit": "S",
+     "raw": "전압 범위: 14.8 V (4S LiPo) - 34.8 V (8S LiHV)"
+    }
+   }
+  },
+  {
+   "id": "product-motor-scorpion-hkiv-4035-560kv",
+   "class": "Motor",
+   "name": "HKIV-4035-560KV (Scorpion)",
+   "manufacturer": "Scorpion",
+   "source": "https://www.scorpionsystem.com/catalog/helicopter/motors_4/hkiv-40/HKIV_4035_560/",
+   "doc": "product-motor-scorpion-hkiv-4035-560kv.md",
+   "props": {
+    "kv": {
+     "value": 560.0,
+     "unit": "rpm/V",
+     "raw": "Kv: 560KV RPM/Volt"
+    },
+    "maxPowerW": {
+     "value": 4440.0,
+     "unit": "W",
+     "raw": "최대 연속 출력: 4440 Watts"
+    },
+    "maxCells": {
+     "value": 12.0,
+     "unit": "S",
+     "raw": "최대 셀: 12s LiPo"
+    }
+   }
+  },
+  {
+   "id": "product-motor-tmotor-mn505-s-kv320",
+   "class": "Motor",
+   "name": "MN505-S KV320 (T-Motor)",
+   "manufacturer": "T-Motor",
+   "source": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
+   "doc": "product-motor-tmotor-mn505-s-kv320.md",
+   "props": {
+    "kv": {
+     "value": 320.0,
+     "unit": "rpm/V",
+     "raw": "KV: 320"
+    },
+    "maxCells": {
+     "value": 6.0,
+     "unit": "S",
+     "raw": "정격 전압: 6S (LiPo)"
+    },
+    "ratedCells": {
+     "value": 6.0,
+     "unit": "S",
+     "raw": "정격 전압: 6S (LiPo)"
+    },
+    "maxCurrentA": {
+     "value": 55.0,
+     "unit": "A",
+     "raw": "Peak current: 55A (180s)"
+    },
+    "maxPowerW": {
+     "value": 1300.0,
+     "unit": "W",
+     "raw": "Max power: 1300W (180s)"
+    },
+    "weightG": {
+     "value": 225.0,
+     "unit": "g",
+     "raw": "무게(케이블 포함): 225g"
+    },
+    "resistanceMohm": {
+     "value": 38.0,
+     "unit": "mΩ",
+     "raw": "내부 저항: 38mΩ"
+    },
+    "maxThrustG": {
+     "value": 6600.0,
+     "unit": "g",
+     "raw": "최대 추력(하이라이트): 6.6kg"
+    }
+   }
+  },
+  {
+   "id": "product-payload-dji-zenmuse-h30t",
+   "class": "Payload",
+   "name": "Zenmuse H30T (DJI)",
+   "manufacturer": "DJI",
+   "source": "https://enterprise.dji.com/zenmuse-h30-series/specs",
+   "doc": "product-payload-dji-zenmuse-h30t.md",
+   "props": {
+    "weightG": {
+     "value": 920.0,
+     "unit": "g",
+     "raw": "무게: 920 ±5 g"
+    },
+    "powerW": {
+     "value": 28.0,
+     "unit": "W",
+     "raw": "전력: 28 W"
+    }
+   }
+  },
+  {
+   "id": "product-payload-gremsy-t7",
+   "class": "Payload",
+   "name": "Gremsy T7 Gimbal (Gremsy)",
+   "manufacturer": "Gremsy",
+   "source": "https://docs.gremsy.com/gimbals/gremsy-t7/general.md",
+   "doc": "product-payload-gremsy-t7.md",
+   "props": {}
+  },
+  {
+   "id": "product-payload-microhard-pmddl2450",
+   "class": "Payload",
+   "name": "pMDDL2450 (Microhard)",
+   "manufacturer": "Microhard",
+   "source": "https://www.microhardcorp.com/pMDDL2450.php",
+   "doc": "product-payload-microhard-pmddl2450.md",
+   "props": {}
+  },
+  {
+   "id": "product-payload-rfdesign-rfd900x",
+   "class": "Payload",
+   "name": "RFD900x Modem (RFDesign)",
+   "manufacturer": "RFDesign",
+   "source": "https://store.rfdesign.com.au/rfd-900x-modem/",
+   "doc": "product-payload-rfdesign-rfd900x.md",
+   "props": {}
+  },
+  {
+   "id": "product-payload-siyi-a8-mini",
+   "class": "Payload",
+   "name": "A8 mini Gimbal Camera (SIYI)",
+   "manufacturer": "SIYI",
+   "source": "https://siyi.biz/en/product/tri-axis-single-camera-gimbal/a8-mini/spec/",
+   "doc": "product-payload-siyi-a8-mini.md",
+   "props": {
+    "weightG": {
+     "value": 95.0,
+     "unit": "g",
+     "raw": "무게/크기: 95 g / 55 x 55 x 70 mm"
+    },
+    "powerW": {
+     "value": 5.0,
+     "unit": "W",
+     "raw": "소비 전력: 5 W average, 12 W peak"
+    }
+   }
+  },
+  {
+   "id": "product-propeller-apc-10x4-5mr",
+   "class": "Propeller",
+   "name": "10x4.5MR (APC Propellers)",
+   "manufacturer": "APC Propellers",
+   "source": "https://www.apcprop.com/product/10x4-5mr/",
+   "doc": "product-propeller-apc-10x4-5mr.md",
+   "props": {
+    "diameterIn": {
+     "value": 10.0,
+     "unit": "in",
+     "raw": "직경/피치: 10 in. / 4.5 in."
+    },
+    "pitchIn": {
+     "value": 4.5,
+     "unit": "in",
+     "raw": "직경/피치: 10 in. / 4.5 in."
+    }
+   }
+  },
+  {
+   "id": "product-propeller-master-airscrew-mr-series",
+   "class": "Propeller",
+   "name": "MR Series Multirotor Propellers (Master Airscrew)",
+   "manufacturer": "Master Airscrew",
+   "source": "https://www.masterairscrew.com/pages/mr-drone-propellers",
+   "doc": "product-propeller-master-airscrew-mr-series.md",
+   "props": {}
+  },
+  {
+   "id": "product-propeller-tmotor-p22x6-6",
+   "class": "Propeller",
+   "name": "P22*6.6 CF Polish Propeller (T-Motor)",
+   "manufacturer": "T-Motor",
+   "source": "https://store.tmotor.com/product/polish-carbon-fiber-22x6_6-prop.html",
+   "doc": "product-propeller-tmotor-p22x6-6.md",
+   "props": {
+    "diameterIn": {
+     "value": 22.0,
+     "unit": "in",
+     "raw": "크기/피치: 22*6.6 (558.8*167.6mm)"
+    },
+    "pitchIn": {
+     "value": 6.6,
+     "unit": "in",
+     "raw": "크기/피치: 22*6.6 (558.8*167.6mm)"
+    },
+    "weightG": {
+     "value": 45.0,
+     "unit": "g",
+     "raw": "무게(블레이드당): 45±2g"
+    }
+   }
+  }
+ ]
+}

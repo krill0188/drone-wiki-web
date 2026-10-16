@@ -16,6 +16,7 @@ interface Rule {
   kind: Kind
   classes: string[] // 이 규칙이 다루는 온톨로지 클래스
   needs: string[] // 필요 사실
+  unless?: string[] // 이 사실이 이미 있으면 적용하지 않음(더 정확한 입력 우선)
   gives?: string // 새로 도출하는 사실 키
   label: string // 사실/판정 설명
   unit?: string
@@ -158,6 +159,16 @@ const RULES: Rule[] = [
   },
   // ── 비행시간 ──
   {
+    id: "R-F0", kind: "heuristic", classes: ["Motor", "Propeller", "Battery"], needs: ["auwKg", "propIn", "motors"], unless: ["effGPerW"], gives: "hoverW",
+    label: "호버링 총 소비전력(운동량 이론 추정)", unit: "W",
+    derive: (f) => {
+      const T = (f.auwKg * G) / f.motors // 로터 1개당 추력(N)
+      const A = Math.PI * (f.propIn * 0.0254 / 2) ** 2
+      return (f.motors * T ** 1.5) / Math.sqrt(2 * 1.225 * A) / (0.6 * 0.8)
+    },
+    why: "이상 호버링 전력 P=T^1.5/√(2ρA), 성능지수 FM 0.6 × 구동효율(모터·ESC) 0.8 가정 — 제조사 시험표 없이도 쓰는 보수적 추정",
+  },
+  {
     id: "R-F1", kind: "law", classes: ["Motor", "Battery"], needs: ["auwKg", "effGPerW"], gives: "hoverW",
     label: "호버링 총 소비전력", unit: "W", derive: (f) => (f.auwKg * 1000) / f.effGPerW,
     why: "P = 총중량(g) ÷ 추력효율(g/W) — 효율은 해당 모터·프로펠러 시험표 값을 사용",
@@ -246,6 +257,8 @@ export function extractFacts(raw: string): Facts {
   return f
 }
 
+export const physics = { G, MACH07 }
+
 export interface Derivation {
   id: string
   kind: Kind
@@ -277,6 +290,7 @@ export function infer(question: string, classes: string[]): InferenceResult {
     changed = false
     for (const r of active) {
       if (fired.has(r.id)) continue
+      if (r.unless?.some((k) => k in given)) continue
       if (!r.needs.every((k) => k in facts)) continue
       fired.add(r.id)
       changed = true
