@@ -1,11 +1,153 @@
 # DroneWiki
 
+> 드론 비행제어·통신·하드웨어·GCS·법규·AI 자율까지 — **근거가 있는 답만 하는** 드론 지식 플랫폼.
+> 위키 문서를 읽고, 질문하고, 새 드론 프로젝트를 설계한다. 모든 답은 **온톨로지(구조) → 규칙 추론(계산·판정) → 위키 근거(출처)** 순서로 만들어진다.
+
+운영: <https://drone-wiki-web.vercel.app> · 원본 지식 저장소: [2nd-brain-ai-system](https://github.com/krill0188/2nd-brain-ai-system) (`~/2nd`)
+
 [Stage 0-R follow-up verification](docs/STAGE_0R_FOLLOWUP.md)
 
-드론/AI/로보틱스 지식을 제공하는 공개 위키와 AI Q&A 애플리케이션.
-원본은 `~/2nd`; `data/wiki/`는 검토된 공개 발행 snapshot이다.
+---
 
-## 현재 실행 경계 — Stage 0-R, 2026-09-13
+## 1. 기획 — 무엇을 만드는가
+
+드론 지식은 논문·제조사 문서·규정·뉴스·현장 사례에 흩어져 있고, 서로 다른 공학 분야(기계·전기·통신·컴퓨터·제어·SW·ROS)가 얽혀 있다.
+DroneWiki는 이를 **한 곳에서 읽고(위키), 묻고(AI Q&A), 만들어 보는(AI 드론 빌더)** 서비스다.
+
+| 기능 | 경로 | 쓰임새 |
+|---|---|---|
+| **AI Q&A** | `/chat` | 위키 + 지식그래프(GraphRAG) + 온톨로지 추론을 근거로 스트리밍 답변. 텍스트 선택 → 즉시 질문·저장 |
+| **위키 / 그래프 / 뉴스** | `/wiki`, `/graph`, `/news` | 541쪽 발행 문서 열람, 개념 그래프 탐색(노이즈 필터 focus 모드), 일일 브리핑 |
+| **AI 에디터** | `/wiki-editor` | 정리 안 된 메모 → 프론트매터·개요·스펙을 갖춘 문서로 구조화 |
+| **AI 드론 빌더** | `/ai-drone-builder` | 컨셉 한 줄 → 기획 → HW → SW → 기술스펙 → 아키텍처 → 코드·로드맵, 6단계 에이전트가 순차 작성 (단계별 승인/반려/마감) |
+| **검토 도구(로컬 전용)** | `/self-update-review`, `/discovery-review` | 사람이 AI 제안·발견 개념을 검토해 canonical로 승격 |
+| **텔레그램 봇 API** | `/api/bot-chat`, `/api/bot-wiki-editor` | 봇이 같은 RAG·온톨로지 파이프라인을 JSON으로 호출 (`x-bot-token` 인증) |
+
+## 2. 의도 — 왜 이렇게 만드는가
+
+1. **환각을 구조로 막는다.** LLM이 "그럴듯하게" 지어내는 대신, 질문을 먼저 온톨로지 클래스로 해석하고 **규칙 엔진이 계산·판정한 결과를 전제로** 답하게 한다. 수치가 없으면 "확인 필요", 조건이 터무니없으면 "추론상 불가"로 답한다.
+2. **출처와 검증 상태를 분리한다.** 사람이 검토한 canonical 지식, AI가 자동 추출한 미검증(discovery) 관계, 저자 정의 설계 지식을 서로 다르게 표시한다. 미검증 관계는 단정하지 않는다.
+3. **구조를 아는 AI.** 문서 연결을 나열하는 RAG를 넘어, 부품 간 호환(전압·전류·팁속도·기하), 임무 → 필요 능력 → 구성요소, 분야 간 연쇄(진동 → IMU → 항법)를 **계산으로** 추적해 설계 의사결정을 돕는다.
+4. **원본은 한 곳.** 지식의 source of truth는 `~/2nd`. 이 저장소의 `data/wiki/`는 **검토·승인된 공개 발행 snapshot**일 뿐이며, 원문·벡터·뉴스를 무심코 복사하지 않는다.
+
+## 3. 구조
+
+### 3.1 전체 데이터 흐름
+
+```text
+~/2nd (source of truth: raw → canonical → ontology)
+   │  auto-publish (매일 10:30, 정책·해시 게이트)
+   ▼
+data/wiki (공개 snapshot, 541쪽) ──► Next.js 16 (App Router) ──► Vercel (icn1 서울)
+                                          │
+                  ┌───────────────────────┼────────────────────────┐
+                  ▼                       ▼                        ▼
+            RAG / GraphRAG        온톨로지 추론 계층         LLM (NVIDIA NIM
+            (키워드 + 그래프)     (구조·규칙·합성)          deepseek-v4.1-flash)
+```
+
+### 3.2 AI Q&A 요청 파이프라인 (`app/api/chat/route.ts`)
+
+```text
+사용자 질문
+  1) 설계 게이트 ── lib/design-gate.ts
+       · 드론 설계·구성 질문은 필수 4항목(페이로드·비행가능거리·크기·비행시간) 확인
+       · 빠지면 AI 호출 없이 서버가 즉시 재질문 / 물리적으로 불가하면 "추론상 불가" + 가능한 최대치·대안 제시
+  2) 온톨로지 컨텍스트 ── lib/ontology-qa.ts
+       · 클래스 해석(한/영 별칭) → 계층·관계 → 연관 위키 문서 → 미검증 의미 관계(표시)
+       · ontology-reason  : 질문 속 수치 → 규칙 전방추론(PASS/WARN/FAIL), 변경 파급, 필요 입력
+       · ontology-create  : 제품 개체 조합 합성, 셀→팩 합성, 정보 빈틈(수집 우선순위)
+       · ontology-arch    : 17개 주제 HW+SW 기본구조, 임무→능력 제약 선택, 통신·프로토콜, 분야 간 결합
+  3) RAG + GraphRAG + 뉴스 검색 ── lib/rag.ts, lib/graphrag.ts
+  4) 시스템 프롬프트 조립 ── lib/chat-system-prompt.ts  (<ontology> <inference> <synthesis> <architecture> <design-gate> 블록)
+  5) LLM 스트리밍 응답 + 출처·온톨로지 클래스 메타데이터
+```
+
+### 3.3 온톨로지 · 추론 엔진
+
+| 계층 | 파일 | 내용 |
+|---|---|---|
+| 클래스 계층 | `data/wiki/ontology/class-hierarchy.json` (`~/2nd/ontology` 미러) | 58개 클래스. 문서에 `ontology_class`를 일괄 부여하지 않음(논문·뉴스 오분류 방지) — 문서는 클래스와의 **연관 근거**로만 연결 |
+| 관계 | `data/ontology/relations.json` | 33개 (설계서 §2 spec 15 + HW 설계 확장 hw-ext 18). 구조 정의만, 수치 규칙 없음 |
+| 추론 규칙 | `lib/ontology-reason.ts` | 23개 규칙. **물리법칙**(단정 가능)과 **설계 경험칙**(통례, 한정 표기)을 구분. 전압→회전수→팁속도, 호버링 전력(운동량 이론), 프롭 간섭, ESC 전류 여유, 배터리 C율 등 |
+| 제품 개체 | `data/ontology/instances.json` | 제조사 문서 21종을 속성(값·단위·출처 원문)으로 구조화. 파서: `scripts/build-hw-instances.py` (AI 호출 없음, 물리적 타당 범위 검증, 못 읽으면 비움) |
+| 창조형 추론 | `lib/ontology-create.ts` | 모터×ESC×프롭×배터리 조합을 열거해 규칙으로 걸러 점수화, 21700 셀로 직·병렬 팩 합성, 판정을 막은 정보 빈틈을 수집 우선순위로 환원 |
+| 기본구조 | `data/ontology/architecture.json` (원본 `scripts/gen-architecture.py`) | 구성요소 54 · 능력 52 · 분야 간 결합 50 · 주제 17 · 통신 링크 7 · 프로토콜 어댑터 14 · 임무 5. **저자 정의 설계 지식(검토 필요)** |
+| 기본구조 추론 | `lib/ontology-arch.ts` | 임무 → 능력 폐포(★숨은 의존성), 환경 제약 기반 구성요소 선택, 링크 ✓/✗·자유공간 손실·전파 수평선, 이기종 프로토콜 최단 어댑터 경로, 결합 파급 체인 |
+
+> 추론 결과는 **후보(가설)**이며 실기 시험 전 확정이 아니다. 경험칙 수치(추력중량비 2:1, 에너지밀도 등)는 일반 범위이고 제품별로 다르다.
+
+### 3.4 신뢰성 원칙 (환각 방지)
+
+- **설계 게이트**: 4항목 미입력 시 재질문, 입력이 있어도 물리 한계(보수/낙관 두 가정)로 성립하지 않으면 설계안을 만들지 않는다.
+- **스펙 수치는 원문 그대로**: 제품 수치는 문서의 값·단위·측정 조건을 반올림·보간 없이 인용. 엔진 계산값은 "추정"으로 구분. 근거 없으면 "확인 필요".
+- **미검증 표시**: discovery 그래프(원문에서 AI 추출, 사람 미검토)의 관계는 `[AI 추출·미검증]`로만 제공.
+- **구성 검증 질문**(예: "6S 1200kV 15인치면 괜찮아?")은 게이트 대신 규칙 엔진이 PASS/WARN/FAIL을 직접 판정.
+
+### 3.5 AI 드론 빌더 (`app/api/drone-builder`)
+
+6단계: **① 기획 → ② HW 스펙 → ③ SW 스펙 → ④ 기술 스펙 → ⑤ 아키텍처 → ⑥ 코드·로드맵.**
+단계마다 사용자가 승인/반려/마감하고, 반려 사유를 반영해 재생성하며, 스펙 단계는 구성요소 표·의존관계·충돌 검사를 온톨로지로 구조화한다. 최종 문서는 복사 가능.
+
+## 4. 디렉터리 구조
+
+```text
+app/                 Next.js App Router 페이지·API
+  api/chat           AI Q&A (스트리밍) · bot-chat / bot-wiki-editor (봇 JSON)
+  api/drone-builder  6단계 빌더 · api/discovery, self-update (로컬 검토)
+  api/graph|pages|highlights  그래프·문서·하이라이트
+components/          AppSidebar, Chat, WikiArticleBody, TextSelectionPopup …
+lib/                 rag · graphrag · ontology(-qa|-reason|-create|-arch) · design-gate ·
+                     chat-system-prompt · ai-model · bot-model · news · wiki …
+data/wiki/           공개 발행 snapshot (concepts/entities/comparisons/queries, raw, ontology, .ua)
+data/ontology/       relations · instances · architecture (web 소유, 자동발행 rsync 영향 없음)
+scripts/             sync-wiki.sh · build-hw-instances.py · gen-architecture.py · self-update-pipeline
+docs/                Stage 0-R 문서 · 아키텍처 SVG · 감사 기록
+proxy.ts             UUID 세션 쿠키 (Next.js 16 proxy 규약)
+```
+
+## 5. 기술 스택 (GitHub 언어 통계 기준: TypeScript ≈ 309KB · Python ≈ 32KB · CSS · JS · Shell)
+
+- **프레임워크**: Next.js 16.2 · React 19.2 · Tailwind CSS 4 · react-force-graph-2d
+- **AI**: Vercel AI SDK 7(`ai`, `@ai-sdk/react`, OpenAI-compatible) · 기본 모델 NVIDIA NIM `deepseek-ai/deepseek-v4.1-flash` (OpenRouter·로컬 LLM 폴백)
+- **콘텐츠**: gray-matter · remark(GFM)
+- **배포**: Vercel (함수 지역 `icn1`, `/api/chat` maxDuration 90s)
+
+### 환경변수 (이름만 — 값은 저장소에 두지 않는다)
+
+`NVIDIA_NIM_API_KEY` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH`
+
+### 로컬 실행
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # 프로덕션 빌드 (정적 페이지 566쪽)
+```
+
+> 로컬 dev 서버를 상시 켜 두면 `data/wiki`를 오염시켜 자동발행 gate를 막을 수 있다 — 테스트 후에는 끈다.
+
+## 6. 릴리즈 이력 (GitHub Releases)
+
+| 버전 | 일자 | 내용 |
+|---|---|---|
+| v2.13.0 | 2026-10-17 | 온톨로지 추론 엔진 · 제품 개체 지식그래프 · 기본구조 온톨로지 · 설계 게이트 · 드론 빌더 6단계 |
+| v2.10.0 | 2026-10-09 | 텔레그램 봇 브릿지 (AI Q&A + 위키 에디터) |
+| v2.9.0 / v2.8.0 | 2026-09-03 | RAG 검색 범위 확장 / 도메인 다양성 |
+| v2.7.0 | 2026-08-23 | 사이드바 정리 + 출처 클릭 노출 |
+| v2.6.0 | 2026-08-20 | 온톨로지 Link + 서브섹션 추론 연결 |
+
+## 7. 한계와 로드맵
+
+- 제품 개체가 21종뿐이라 조합 후보가 좁다 → HW 제조사(15개 카테고리)·SW(12개 카테고리) 레지스트리 수집 진행, 제품 사양 확장 예정.
+- 논문 방법론(전력 모델, BEMT 추력 추정 등)을 규칙과 연결하는 작업, 유추(analogy) 추론, 군집·통신 규칙 확장은 미구현.
+- 기본구조 온톨로지의 링크·프로토콜 수치는 일반 범위이며 국내 법규(허용 대역·출력)는 판정하지 않는다.
+- 규칙 임계값(경험칙)은 사용 사례 검증으로 보정 필요.
+- 신규 도메인 12개(sensing-perception, navigation-gnss-denied, ros-middleware, rf-datalink-engineering 등) 승인 후 위키 반영 예정.
+
+---
+
+## 운영 경계 — Stage 0-R (2026-09-13 기준 기록) — Stage 0-R, 2026-09-13
 
 ```text
 ~/2nd (source of truth)
