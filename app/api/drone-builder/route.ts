@@ -93,9 +93,9 @@ ${grounding}
 
 # 온톨로지 클래스 (구성요소마다 아래 중 하나를 지정할 것)
 Drone(Multirotor·FixedWing·VTOL) / Sensor(IMU·GNSS·Camera·LiDAR·Barometer·Magnetometer) /
-Actuator(Motor·ESC·Gimbal) / ComputeUnit(FlightController·CompanionComputer) /
-FlightStack(PX4·ArduPilot) / MiddlewareFramework(ROS2) / AIModel / Mission.
-배터리·프로펠러·프레임·데이터링크처럼 위에 없는 요소는 클래스를 "미정의"로 쓰고, 마지막 절의
+Actuator(Motor·ESC·Gimbal·Propeller) / ComputeUnit(FlightController·CompanionComputer) /
+Battery / Frame / Datalink / Payload / FlightStack(PX4·ArduPilot) / MiddlewareFramework(ROS2) /
+AIModel / Mission. 이 목록에 없는 요소는 클래스를 "미정의"로 쓰고, 마지막 절의
 '온톨로지 보강 필요'에 모아라.
 
 # 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
