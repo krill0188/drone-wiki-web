@@ -62,6 +62,52 @@ const ALIASES: [string, RegExp][] = [
 // 기체 설계 질문 신호 — 이 경우 클래스 간 필수 연결(구동계·전원계)을 1홉 더 보여준다.
 const DESIGN_HINT = /설계|구성|선정|선택|사양|스펙|호환|매칭|조합|추천|design|spec|select|sizing/i
 
+// discovery 그래프(raw 원문에서 LLM이 자동 추출, 사람 미검토)의 의미 관계 중 질문 클래스에
+// 걸리는 것만 골라 "AI 추출·미검증"으로 제공한다 — related/wikilink 같은 일반 연결은 제외.
+const SEMANTIC_EDGE_TYPES = new Set([
+  "USES", "IMPLEMENTS", "PART_OF", "COMPONENT_OF", "REQUIRES", "CONTROLS", "ENABLES",
+  "INTEGRATES_WITH", "USED_FOR", "BASED_ON", "INCLUDES", "CONTAINS", "POWERED_BY", "CONNECTED_TO",
+])
+
+interface DiscoveryGraph { nodes: { id: string; name: string }[]; edges: { source: string; target: string; type: string }[] }
+let _discovery: DiscoveryGraph | null = null
+function loadDiscovery(): DiscoveryGraph {
+  if (_discovery) return _discovery
+  try {
+    const p = path.join(resolveWikiRoot(), ".ua", "discovery-knowledge-graph.json")
+    const raw = JSON.parse(fs.readFileSync(p, "utf-8"))
+    _discovery = { nodes: raw.nodes ?? [], edges: raw.edges ?? [] }
+  } catch {
+    _discovery = { nodes: [], edges: [] }
+  }
+  return _discovery
+}
+
+function semanticFacts(classes: string[], limit = 12): string[] {
+  const g = loadDiscovery()
+  if (g.nodes.length === 0) return []
+  const ABSTRACT = new Set(["Drone", "Mission", "MissionPlan", "SwarmCoordinator", "Multirotor"])
+  const rxs = classes.filter((c) => !ABSTRACT.has(c)).map((c) => ALIASES.find(([k]) => k === c)?.[1]).filter((r): r is RegExp => !!r)
+  if (rxs.length === 0) return []
+  const nameOf = new Map(g.nodes.map((n) => [n.id, n.name]))
+  const hit = new Set(g.nodes.filter((n) => rxs.some((rx) => rx.test(n.name))).map((n) => n.id))
+  const lines: string[] = []
+  const seen = new Set<string>()
+  for (const e of g.edges) {
+    if (!SEMANTIC_EDGE_TYPES.has(e.type)) continue
+    if (!hit.has(e.source) && !hit.has(e.target)) continue
+    const a = nameOf.get(e.source)
+    const b = nameOf.get(e.target)
+    if (!a || !b) continue
+    const line = `- ${a} --[${e.type}]--> ${b} [AI 추출·미검증]`
+    if (seen.has(line)) continue
+    seen.add(line)
+    lines.push(line)
+    if (lines.length >= limit) break
+  }
+  return lines
+}
+
 export interface OntologyContext {
   block: string
   classes: string[]
@@ -142,12 +188,13 @@ export function buildOntologyContext(question: string, docTitle?: string): Ontol
     })
   const rels = relationLines(classes, hierarchy, wide)
   const docs = classDocs(classes)
+  const facts = semanticFacts(classes)
 
   const block = `<ontology>
 질문을 온톨로지로 해석한 결과 — 답변의 뼈대로 사용할 것.
 관련 클래스: ${classes.join(", ")}
 클래스 계층:
 ${hierLines.join("\n")}
-${rels.length ? `클래스 간 관계(구조 정의 — 개별 제품·수치의 사실이 아님):\n${rels.join("\n")}\n` : ""}${docs.length ? `클래스와 연관된 위키 문서(자동 연결, 근거 확인용):\n${docs.join("\n")}\n` : ""}</ontology>`
+${rels.length ? `클래스 간 관계(구조 정의 — 개별 제품·수치의 사실이 아님):\n${rels.join("\n")}\n` : ""}${facts.length ? `개체 간 의미 관계(원문에서 자동 추출, 사람 검토 전 — 단정 금지):\n${facts.join("\n")}\n` : ""}${docs.length ? `클래스와 연관된 위키 문서(자동 연결, 근거 확인용):\n${docs.join("\n")}\n` : ""}</ontology>`
   return { block, classes }
 }
