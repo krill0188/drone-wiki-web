@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "02ef7fe3b53b9b22bc2db04f9731480cf282d34a07ad015d4a1215795e9b27c9",
+  "source_fingerprint": "fac2d6c2c55047552e1e6a3098f0d71fa651902a398bf5b30b79ac25da3caebb",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -562,6 +562,22 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "caddx-curve-micro-p18",
+      "name": "Caddx Curve Micro P18 — Ascent HD FPV 웁 (Painless360 리뷰)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "fpv",
+        "hardware"
+      ],
+      "updated": "2026-10-16",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "calibrate-once-fly-any-team-swarm-training",
       "name": "Calibrate Once, Fly Any Team — 저충실도 시뮬레이션 기반 드론 군집 훈련",
       "layer": "Concepts",
@@ -950,7 +966,7 @@
         "digital-twin",
         "reinforcement-learning"
       ],
-      "updated": "2026-08-10",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1787,7 +1803,23 @@
         "hardware",
         "regulations"
       ],
-      "updated": "2026-10-15",
+      "updated": "2026-10-16",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-10-16",
+      "name": "드론 업계 주요 소식 (2026-10-16)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "hardware",
+        "utm"
+      ],
+      "updated": "2026-10-16",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -2170,7 +2202,7 @@
         "drone-hw",
         "fpv"
       ],
-      "updated": "2026-09-15",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2713,7 +2745,7 @@
         "drone",
         "drone-hw"
       ],
-      "updated": "2026-09-24",
+      "updated": "2026-10-16",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2792,7 +2824,7 @@
         "drone",
         "drone-ai"
       ],
-      "updated": "2026-08-01",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2895,7 +2927,7 @@
         "drone",
         "drone-hw"
       ],
-      "updated": "2026-08-01",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -3527,8 +3559,22 @@
         "ops-mission",
         "swarm"
       ],
-      "updated": "2026-09-06",
+      "updated": "2026-10-16",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-military-drone-combat-experiment-continued-use-intention",
+      "name": "군 드론 전투실험 특성 인식과 지속사용 의도 (운용자 신뢰·전술적 유용성 매개)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-16",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
     },
@@ -3562,6 +3608,21 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "kci-multispectral-helipad-night-precision-landing",
+      "name": "다중 스펙트럼 헬리패드 기반 야간 UAV 정밀 착륙 (IR 정렬 + 거리센서 하강)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "drone-ai"
+      ],
+      "updated": "2026-10-16",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "kci-natural-monument-plant-ndvi-ndre-seasonal",
@@ -3616,7 +3677,7 @@
         "drone",
         "ops-mission"
       ],
-      "updated": "2026-10-03",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -3798,6 +3859,21 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "kci-udt-blocedge-uav-digital-twin-military-iot",
+      "name": "UDT-BlocEdge: 블록체인·엣지 기반 UAV 통합 디지털 트윈 (군 IoT 감시)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-10-16",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "kci-utm-k-flight-path-error-regional-analysis",
       "name": "다양한 지역 환경에서의 UTM-K 기반 드론 비행경로 오차 분석",
       "layer": "Concepts",
@@ -3836,7 +3912,7 @@
         "swarm",
         "research"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-16",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -5034,7 +5110,7 @@
         "companion-computer",
         "autonomous"
       ],
-      "updated": "2026-08-10",
+      "updated": "2026-10-16",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -5520,7 +5596,7 @@
         "precision",
         "landing"
       ],
-      "updated": "2026-09-09",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -6185,7 +6261,7 @@
         "mining",
         "ops-mission"
       ],
-      "updated": "2026-10-05",
+      "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -9471,6 +9547,42 @@
       "confidence": "low"
     },
     {
+      "source": "caddx-curve-micro-p18",
+      "target": "emax-nanoscout-pro-1s-whoop",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-yt-brand-new-caddxfpv-curve-hd-fpv-whoop-with-6-mins-plus-fligh.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "caddx-curve-micro-p18",
+      "target": "hglrc-talon-cinewhoop",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-yt-brand-new-caddxfpv-curve-hd-fpv-whoop-with-6-mins-plus-fligh.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "caddx-curve-micro-p18",
+      "target": "betaflight",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-yt-brand-new-caddxfpv-curve-hd-fpv-whoop-with-6-mins-plus-fligh.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "caddx-curve-micro-p18",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-yt-brand-new-caddxfpv-curve-hd-fpv-whoop-with-6-mins-plus-fligh.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "calibrate-once-fly-any-team-swarm-training",
       "target": "swarmnxt-aerial-swarm-platform",
       "type": "related",
@@ -10176,21 +10288,36 @@
       "source": "digital-twin-intent-drone-networks",
       "target": "datalink-communication",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "digital-twin-intent-drone-networks",
       "target": "drone-ai-agents",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "digital-twin-intent-drone-networks",
       "target": "active-sensing-uav-communication",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "digital-twin-intent-drone-networks",
+      "target": "kci-udt-blocedge-uav-digital-twin-military-iot",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
       "confidence": "medium"
     },
     {
@@ -12203,6 +12330,69 @@
       "confidence": "low"
     },
     {
+      "source": "drone-news-2026-10-15",
+      "target": "drone-news-2026-10-16",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-15-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-16",
+      "target": "drone-news-2026-10-15",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-16",
+      "target": "droneshield",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-16",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-16",
+      "target": "dji-enterprise",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-16",
+      "target": "drone-delivery-news",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-16",
+      "target": "utm-system",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -13118,6 +13308,15 @@
       "confidence": "medium"
     },
     {
+      "source": "emax-nanoscout-pro-1s-whoop",
+      "target": "caddx-curve-micro-p18",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-15-yt-rc-news-new-emax-nanoscout-pro-1s-whoop-just-released.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "emax-tinyhawk-aero",
       "target": "emax-nanoscout-pro-1s-whoop",
       "type": "wikilink",
@@ -13974,6 +14173,15 @@
       "confidence": "high"
     },
     {
+      "source": "fpv-hardware",
+      "target": "caddx-curve-micro-p18",
+      "type": "related",
+      "evidence": [
+        "raw/articles/fetch-2026-07-29-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "fpv-motor-selection-guide",
       "target": "fpv-hardware",
       "type": "related",
@@ -14102,6 +14310,15 @@
     {
       "source": "gnn-uav-anomaly-detection",
       "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-crossref-graph-neural-network-driven-anomaly-detection-framework-for-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnn-uav-anomaly-detection",
+      "target": "kci-udt-blocedge-uav-digital-twin-military-iot",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-01-crossref-graph-neural-network-driven-anomaly-detection-framework-for-.md"
@@ -14318,6 +14535,15 @@
     {
       "source": "hglrc-talon-cinewhoop",
       "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-01-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "hglrc-talon-cinewhoop",
+      "target": "caddx-curve-micro-p18",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-01-rss-oscarliang-fpv.md"
@@ -15547,6 +15773,42 @@
       "confidence": "medium"
     },
     {
+      "source": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "target": "kci-military-drone-combat-experiment-continued-use-intention",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/방어적-대공-작전-및-엄호-시나리오에서의-협업-전투용-무인기-통합-유무인-복합-편대-임무-효과도-분석.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-military-drone-combat-experiment-continued-use-intention",
+      "target": "kci-manned-unmanned-teaming-defensive-air-ops",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-군-드론-전투실험-관련-특성에-대한-인식이-지속사용-의도에-미치는-영향과-전력화-정책-시사점-운용자-신뢰성과.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-military-drone-combat-experiment-continued-use-intention",
+      "target": "kci-drone-certification-stepwise-approval-model",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-군-드론-전투실험-관련-특성에-대한-인식이-지속사용-의도에-미치는-영향과-전력화-정책-시사점-운용자-신뢰성과.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-military-drone-combat-experiment-continued-use-intention",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-군-드론-전투실험-관련-특성에-대한-인식이-지속사용-의도에-미치는-영향과-전력화-정책-시사점-운용자-신뢰성과.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-multi-uav-clustering-path-generation",
       "target": "swarm-coordination",
       "type": "related",
@@ -15620,6 +15882,42 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-03-kci-이종센서-융합-기반-대드론-표적-식별-신뢰도와-교전영역-활용률-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multispectral-helipad-night-precision-landing",
+      "target": "rtk-gps-precise-landing",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-다중-스펙트럼-헬리패드를-이용한-야간-uav-정밀-착륙-ir적외선-영상-기반-정렬-및-거리-센서-기반-하강-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multispectral-helipad-night-precision-landing",
+      "target": "px4-offboard-control",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-다중-스펙트럼-헬리패드를-이용한-야간-uav-정밀-착륙-ir적외선-영상-기반-정렬-및-거리-센서-기반-하강-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multispectral-helipad-night-precision-landing",
+      "target": "ros2-drone-integration",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-다중-스펙트럼-헬리패드를-이용한-야간-uav-정밀-착륙-ir적외선-영상-기반-정렬-및-거리-센서-기반-하강-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-multispectral-helipad-night-precision-landing",
+      "target": "kci-vtol-swarm-takeoff-landing-operation",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-다중-스펙트럼-헬리패드를-이용한-야간-uav-정밀-착륙-ir적외선-영상-기반-정렬-및-거리-센서-기반-하강-.md"
       ],
       "confidence": "low"
     },
@@ -15752,6 +16050,15 @@
     {
       "source": "kci-rok-army-drone-acquisition-capability",
       "target": "kci-multisensor-fusion-counter-drone-identification-engagement",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-rok-army-drone-acquisition-capability",
+      "target": "kci-military-drone-combat-experiment-continued-use-intention",
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-02-kci-대한민국-육군의-드론-획득-필수능력-연구-러-우-전쟁-사례와-미군-전략-분석을-바탕으로.md"
@@ -16173,6 +16480,33 @@
       "confidence": "low"
     },
     {
+      "source": "kci-udt-blocedge-uav-digital-twin-military-iot",
+      "target": "digital-twin-intent-drone-networks",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-udt-blocedge-uav-digital-twin-military-iot",
+      "target": "uav-mining-digital-twin",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-udt-blocedge-uav-digital-twin-military-iot",
+      "target": "gnn-uav-anomaly-detection",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-kci-udt-blocedge-uav-integrated-digital-twin-framework-using-blo.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-utm-k-flight-path-error-regional-analysis",
       "target": "utm-system",
       "type": "related",
@@ -16247,6 +16581,15 @@
     {
       "source": "kci-vtol-swarm-takeoff-landing-operation",
       "target": "indi-stability-tilt-rotor-vtol",
+      "type": "related",
+      "evidence": [
+        "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-vtol-swarm-takeoff-landing-operation",
+      "target": "kci-multispectral-helipad-night-precision-landing",
       "type": "related",
       "evidence": [
         "raw/papers/swarm/다수-vtol-무인기의-군집비행을-위한-이착륙-운용방안-및-실비행-적용.md"
@@ -18446,6 +18789,15 @@
       "confidence": "high"
     },
     {
+      "source": "px4-offboard-control",
+      "target": "kci-multispectral-helipad-night-precision-landing",
+      "type": "related",
+      "evidence": [
+        "raw/articles/px4-offboard-control.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "px4-params-by-version",
       "target": "fc-vendor-param-guide",
       "type": "wikilink",
@@ -19468,6 +19820,15 @@
     {
       "source": "rtk-gps-precise-landing",
       "target": "px4-flight-modes",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-09-09-yt-fix-your-rtk-drone-positioning-step-by-step-base-setup-guide.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rtk-gps-precise-landing",
+      "target": "kci-multispectral-helipad-night-precision-landing",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-09-yt-fix-your-rtk-drone-positioning-step-by-step-base-setup-guide.md"
@@ -20712,6 +21073,15 @@
     {
       "source": "uav-mining-digital-twin",
       "target": "kci-drone-pointcloud-bim-registration-extraction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-mining-digital-twin",
+      "target": "kci-udt-blocedge-uav-digital-twin-military-iot",
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-08-24-arxiv-uav-object-detection-and-positioning-in-a-mining-industrial-.md"
