@@ -5,34 +5,58 @@ import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 
-// "AI 드론을 기획하고 개발해줘" 같은 요청을 3개 전문 에이전트가 순차 협업해
-// 무에서 유로 만들어내는 멀티 에이전트 오케스트레이션.
-//   기획서 작성 에이전트 → 스펙 정의 에이전트 → 아키텍처·소스코드 설계 에이전트
-// 오케스트레이션 자체(단계 순서 관리)는 클라이언트(app/ai-drone-builder/page.tsx)가
-// 맡는다 — 이 라우트는 stage 하나를 받아 그 단계의 에이전트만 실행한다. 각 단계는
-// GraphRAG(lib/rag.ts + lib/graphrag.ts)로 지식 베이스를 다시 조회해 근거를 댄다
-// (이전 단계 산출물을 그대로 베끼는 게 아니라, 그 단계에 맞는 새 근거를 찾는다).
+// "AI 드론을 기획하고 개발해줘" 같은 요청을 6개 전문 에이전트가 단계별로 협업해
+// 무에서 유로 만들어내는 멀티 에이전트 오케스트레이션 (2026-10-16 6단계 + 사람 승인 게이트).
+//   1 기획 → 2 HW 스펙 → 3 SW 스펙 → 4 기술 스펙(통합 검증) → 5 아키텍처 → 6 코드·로드맵
+// 단계 사이의 승인/반려/마감은 클라이언트(app/ai-drone-builder/page.tsx)가 관리한다 —
+// 이 라우트는 stage 하나를 받아 그 단계의 에이전트만 실행한다. 반려되면 이전 결과와
+// 사유(context.feedback)를 받아 같은 단계를 다시 쓴다. 각 단계는 단계에 맞는 질의로
+// GraphRAG(lib/rag.ts + lib/graphrag.ts)를 다시 조회해 새 근거를 찾는다.
 
 export const maxDuration = 300
 
+type Stage = "proposal" | "hw" | "sw" | "techspec" | "architecture" | "implementation"
+
+interface StageContext {
+  proposal?: string
+  hw?: string
+  sw?: string
+  techspec?: string
+  architecture?: string
+  // 반려 시: 직전 결과와 사유. 같은 단계를 사유에 맞춰 다시 쓴다.
+  feedback?: { previous?: string; reason?: string }
+}
 
 const GROUNDING_EXCERPT_CHARS = 500
 
-// 2026-10-16: NVIDIA NIM 무료 엔드포인트는 생성 속도가 느리고 들쭉날쭉해서(3단계 합 5~9분),
-// 단계별 분량을 제한해 서버 제한시간(300s) 안에 끝나게 한다. 분량 지시 + 토큰 상한을 함께 둔다.
+// NVIDIA NIM 무료 엔드포인트는 생성 속도가 들쭉날쭉하므로 단계별 분량을 제한해
+// 제한시간 안에 끝나게 한다(분량 지시 + 토큰 상한을 함께 둔다).
 const STAGE_LIMITS: Record<Stage, { chars: number; maxOutputTokens: number }> = {
   proposal: { chars: 2500, maxOutputTokens: 3000 },
-  spec: { chars: 4500, maxOutputTokens: 5000 },
+  hw: { chars: 4000, maxOutputTokens: 5000 },
+  sw: { chars: 3500, maxOutputTokens: 4500 },
+  techspec: { chars: 3500, maxOutputTokens: 4500 },
   architecture: { chars: 3500, maxOutputTokens: 4500 },
   implementation: { chars: 4000, maxOutputTokens: 5000 },
 }
 
-type Stage = "proposal" | "spec" | "architecture" | "implementation"
+// 단계별 검색 편향 키워드 — HW 단계는 부품·전원 문서/논문을, SW 단계는 비행스택·미들웨어를
+// 우선 찾게 해 "위키 요약" 한 덩어리가 되는 것을 막는다.
+const STAGE_QUERY_HINT: Partial<Record<Stage, string>> = {
+  hw: "배터리 모터 ESC 프로펠러 프레임 비행제어기 센서 페이로드 하드웨어",
+  sw: "비행스택 PX4 ArduPilot ROS2 MAVLink GCS 컴패니언 컴퓨터 소프트웨어",
+  techspec: "인터페이스 호환 규정 성능 요구사항",
+}
 
-interface StageContext {
-  proposal?: string
-  spec?: string
-  architecture?: string
+const ONTOLOGY_CLASSES = `# 온톨로지 클래스 (구성요소마다 아래 중 하나를 지정할 것)
+Drone(Multirotor·FixedWing·VTOL) / Sensor(IMU·GNSS·Camera·LiDAR·Barometer·Magnetometer) /
+Actuator(Motor·ESC·Gimbal·Propeller) / ComputeUnit(FlightController·CompanionComputer) /
+Battery / Frame / Datalink / Payload / FlightStack(PX4·ArduPilot) / MiddlewareFramework(ROS2) /
+AIModel / Mission. 이 목록에 없는 요소는 클래스를 "미정의"로 쓰고 '온톨로지 보강 필요'에 모아라.`
+
+function clip(text: string | undefined, max: number, fallback: string): string {
+  const t = (text ?? "").trim()
+  return t ? t.slice(0, max) : fallback
 }
 
 function buildGroundingBlock(query: string): string {
@@ -50,16 +74,18 @@ function buildGroundingBlock(query: string): string {
   return `<knowledge-base>\n${kb || "(관련 위키 문서 없음)"}\n</knowledge-base>\n\n${graph.block}`
 }
 
+const GROUNDING_NOTE = `아래는 DroneWiki 지식 베이스에서 검색된 관련 자료(RAG)와 그래프 탐색으로 찾은 개념 연결고리다 —
+실제 존재하는 이름·파라미터·프로토콜을 근거로 쓰고, 수치를 지어내지 마라(근거가 없으면 "확인 필요").
+[AI 추출·미검증]·[원문·미검증] 항목은 참고만 하고 단정하지 마라.`
+
 function proposalSystemPrompt(manifest: string, grounding: string): string {
-  return `당신은 DroneWiki 소속 '기획서 작성 에이전트'다. 3단계 협업 파이프라인의 1단계를 맡는다
-(2단계: 스펙 정의 에이전트, 3단계: 아키텍처·소스코드 설계 에이전트가 이어받는다).
+  return `당신은 DroneWiki 소속 '기획서 작성 에이전트'다. 6단계 협업 파이프라인의 1단계를 맡는다
+(2단계 HW 스펙 → 3단계 SW 스펙 → 4단계 기술 스펙 → 5단계 아키텍처 → 6단계 코드·로드맵이 이어받는다).
 사용자가 제시한 드론 컨셉을 실행 가능한 프로젝트 기획서로 만드는 것이 임무다.
 
 ${manifest}
 
-아래는 DroneWiki 지식 베이스에서 검색된 관련 자료(RAG)와 그래프 탐색으로 찾은, 서로 다른
-주제를 가로지르는 개념 연결고리다 — 근거로 적극 활용해라. [AI 추출·미검증] 표시가 있는
-항목은 참고만 하고 단정하지 마라.
+${GROUNDING_NOTE}
 
 ${grounding}
 
@@ -74,103 +100,197 @@ ${grounding}
 원문/지식베이스에 없는 사실을 지어내지 말고, 불확실한 부분은 "확인 필요"로 명시해라. 한국어로 작성.`
 }
 
-function specSystemPrompt(manifest: string, grounding: string, context: StageContext): string {
-  return `당신은 DroneWiki 소속 '스펙 정의 에이전트'다. 3단계 협업 파이프라인의 2단계를 맡는다.
-1단계 기획서 작성 에이전트가 만든 아래 기획서를 받아, 그 목표·기능·제약을 충족하는 구체적인
-기술 스펙으로 구체화하는 것이 임무다.
+function hwSystemPrompt(manifest: string, grounding: string, c: StageContext): string {
+  return `당신은 DroneWiki 소속 'HW 스펙 에이전트'다. 6단계 협업 파이프라인의 2단계를 맡는다.
+승인된 기획서를 받아 하드웨어 구성을 구체화하는 것이 임무다. 소프트웨어는 다음 단계가 맡으니 다루지 마라.
 
 ${manifest}
 
 <proposal>
-${context.proposal ?? "(기획서 없음)"}
+${clip(c.proposal, 2500, "(기획서 없음)")}
 </proposal>
 
-아래는 DroneWiki 지식 베이스에서 검색된 관련 하드웨어·프로토콜·파라미터 자료와 그래프
-연결고리다 — 실제 존재하는 하드웨어명·파라미터·프로토콜명을 근거로 스펙을 정하고, 수치를
-지어내지 마라(근거가 없으면 "확인 필요"로 표시). [AI 추출·미검증] 항목은 참고만 해라.
+${GROUNDING_NOTE}
 
 ${grounding}
 
-# 온톨로지 클래스 (구성요소마다 아래 중 하나를 지정할 것)
-Drone(Multirotor·FixedWing·VTOL) / Sensor(IMU·GNSS·Camera·LiDAR·Barometer·Magnetometer) /
-Actuator(Motor·ESC·Gimbal·Propeller) / ComputeUnit(FlightController·CompanionComputer) /
-Battery / Frame / Datalink / Payload / FlightStack(PX4·ArduPilot) / MiddlewareFramework(ROS2) /
-AIModel / Mission. 이 목록에 없는 요소는 클래스를 "미정의"로 쓰고, 마지막 절의
-'온톨로지 보강 필요'에 모아라.
+${ONTOLOGY_CLASSES}
 
 # 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
-## 1. 구성요소 표
+## 1. HW 구성요소 표
 | 구성요소 | 온톨로지 클래스 | 선정안 | 핵심 사양 | 인터페이스 | 근거 |
-(모든 하드웨어·소프트웨어 요소를 한 표로. 근거 칸에는 위 자료의 문서 제목을 쓰고, 자료에 없으면 "근거 없음".)
-## 2. 의존·호환 관계
-"A --관계--> B" 형식으로 5~10줄 (관계 예: powers, controls, interfaces_with, runs_on, requires).
+(기체·프레임, 모터, ESC, 프로펠러, 배터리, 비행제어기, 센서, 통신 HW, 페이로드, 컴패니언 컴퓨터를 한 표로.
+근거 칸에는 위 자료의 문서 제목을 쓰고, 자료에 없으면 "근거 없음".)
+## 2. 중량·전력 예산
+총중량, 추력 대비 중량비, 소비전력, 예상 체공시간을 계산식과 함께 제시. 근거 없는 수치는 "확인 필요".
+## 3. HW 의존·호환 관계
+"A --관계--> B" 형식으로 5~10줄 (관계 예: powers, controls, interfaces_with, mounted_on, requires).
 각 줄 끝에 한 문장으로 그렇게 판단한 이유(추론)를 덧붙여라.
-## 3. 성능 요구와 충돌 검사
-항속거리·체공시간·페이로드 등 요구사항 3~5개를 구성요소 선정안과 대조해 충족/위험/근거 부족으로 판정하고,
-서로 충돌하는 요구(예: 체공시간 vs 페이로드)가 있으면 명시해라.
-## 4. 규정 준수 요건
-## 5. 온톨로지 보강 필요 (클래스 미정의 요소, 근거 없음으로 남은 항목)
+## 4. 온톨로지 보강 필요 (클래스 미정의 요소, 근거 없음으로 남은 항목)
 
 한국어로 작성.`
 }
 
-function architectureSystemPrompt(manifest: string, grounding: string, context: StageContext): string {
-  return `당신은 DroneWiki 소속 '아키텍처·소스코드 설계 에이전트'다. 3단계 협업 파이프라인의
-마지막 단계를 맡는다. 1단계 기획서와 2단계 기술 스펙을 받아 시스템 아키텍처와 초기 구현
-스켈레톤 코드를 설계하는 것이 임무다.
+function swSystemPrompt(manifest: string, grounding: string, c: StageContext): string {
+  return `당신은 DroneWiki 소속 'SW 스펙 에이전트'다. 6단계 협업 파이프라인의 3단계를 맡는다.
+승인된 기획서와 HW 스펙을 받아, 그 하드웨어 위에서 동작할 소프트웨어 스택을 구체화하는 것이 임무다.
 
 ${manifest}
 
 <proposal>
-${context.proposal ?? "(기획서 없음)"}
+${clip(c.proposal, 1500, "(기획서 없음)")}
 </proposal>
 
-<spec>
-${context.spec ?? "(스펙 없음)"}
-</spec>
+<hw-spec>
+${clip(c.hw, 4000, "(HW 스펙 없음)")}
+</hw-spec>
 
-아래는 DroneWiki 지식 베이스의 관련 아키텍처 패턴·파라미터·API 자료와 그래프 연결고리다 —
-실제 프로토콜명·파라미터명·API를 정확히 사용해라. [AI 추출·미검증] 항목은 참고만 해라.
+${GROUNDING_NOTE}
+
+${grounding}
+
+${ONTOLOGY_CLASSES}
+
+# 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
+## 1. SW 구성요소 표
+| 구성요소 | 온톨로지 클래스 | 선정안 | 실행 위치(HW) | 요구 자원 | 근거 |
+(비행 스택, 미들웨어, GCS, 인식·AI 모델, 통신 프로토콜. 실행 위치는 HW 스펙의 구성요소 이름을 그대로 써라.)
+## 2. SW 의존·호환 관계
+"A --관계--> B" 형식 5~10줄 (관계 예: runs_on, depends_on, publishes_to, controls, uses_protocol). 각 줄에 이유 한 문장.
+## 3. HW 대비 자원 적합성
+컴패니언 컴퓨터·FC의 연산·메모리·통신 대역이 SW 요구를 만족하는지 충족/위험/근거 부족으로 판정.
+## 4. 온톨로지 보강 필요
+
+한국어로 작성.`
+}
+
+function techspecSystemPrompt(manifest: string, grounding: string, c: StageContext): string {
+  return `당신은 DroneWiki 소속 '기술 스펙 통합 검증 에이전트'다. 6단계 협업 파이프라인의 4단계를 맡는다.
+승인된 HW 스펙과 SW 스펙을 서로 맞대어 모순·위험을 찾고, 확정 기술 스펙으로 정리하는 것이 임무다.
+
+${manifest}
+
+<proposal>
+${clip(c.proposal, 1500, "(기획서 없음)")}
+</proposal>
+
+<hw-spec>
+${clip(c.hw, 3500, "(HW 스펙 없음)")}
+</hw-spec>
+
+<sw-spec>
+${clip(c.sw, 3500, "(SW 스펙 없음)")}
+</sw-spec>
+
+${GROUNDING_NOTE}
 
 ${grounding}
 
 # 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
-## 1. 시스템 아키텍처 개요 (\`\`\`mermaid 다이어그램 코드블록 포함, 스펙 2절의 의존·호환 관계를 그대로 반영)
-## 2. 모듈별 책임 (모듈 | 담당 구성요소(스펙 1절 표의 이름) | 입력 | 출력 | 사용 프로토콜·토픽)
-## 3. 설계 판단 근거 (스펙의 충돌·위험 항목을 아키텍처로 어떻게 해소했는지 3~5줄)
+## 1. 성능 요구와 대조
+기획서의 요구(항속거리·체공시간·페이로드·통신거리 등) 3~5개를 HW·SW 선정안과 대조해 충족/위험/근거 부족으로 판정(이유 포함).
+## 2. HW↔SW 인터페이스 정합표
+| 연결 | HW 측 | SW 측 | 프로토콜·버스 | 정합 여부 |
+## 3. 충돌·위험 목록
+서로 충돌하는 요구나 선정(예: 체공시간 vs 페이로드)을 명시하고 해소 방안을 한 줄씩.
+## 4. 규정 준수 요건
+## 5. 확정 기술 스펙 요약 (구성요소 이름과 핵심 수치만, 10줄 이내)
 
-코드 스켈레톤과 로드맵은 다음 단계 에이전트가 맡으니 여기서는 쓰지 마라.
 한국어로 작성.`
 }
 
-function implementationSystemPrompt(manifest: string, grounding: string, context: StageContext): string {
-  return `당신은 DroneWiki 소속 '소스코드 설계 에이전트'다. 4단계 협업 파이프라인의 마지막 단계를 맡는다.
-앞 단계의 기획서·스펙·아키텍처를 받아 초기 구현 스켈레톤 코드와 개발 로드맵을 작성하는 것이 임무다.
+function architectureSystemPrompt(manifest: string, grounding: string, c: StageContext): string {
+  return `당신은 DroneWiki 소속 '아키텍처 설계 에이전트'다. 6단계 협업 파이프라인의 5단계를 맡는다.
+승인된 기술 스펙을 받아 시스템 아키텍처를 설계하는 것이 임무다.
 
 ${manifest}
 
 <proposal>
-${(context.proposal ?? "(기획서 없음)").slice(0, 2500)}
+${clip(c.proposal, 1500, "(기획서 없음)")}
 </proposal>
 
-<spec>
-${(context.spec ?? "(스펙 없음)").slice(0, 4500)}
-</spec>
+<tech-spec>
+${clip(c.techspec, 3500, "(기술 스펙 없음)")}
+</tech-spec>
+
+<hw-spec>
+${clip(c.hw, 2500, "(HW 스펙 없음)")}
+</hw-spec>
+
+<sw-spec>
+${clip(c.sw, 2500, "(SW 스펙 없음)")}
+</sw-spec>
+
+${GROUNDING_NOTE}
+
+${grounding}
+
+# 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
+## 1. 시스템 아키텍처 개요 (\`\`\`mermaid 다이어그램 코드블록 포함, HW·SW 스펙의 의존·호환 관계를 그대로 반영)
+## 2. 모듈별 책임 (모듈 | 담당 구성요소(스펙 표의 이름) | 입력 | 출력 | 사용 프로토콜·토픽)
+## 3. 설계 판단 근거 (기술 스펙의 충돌·위험 항목을 아키텍처로 어떻게 해소했는지 3~5줄)
+
+코드 스켈레톤과 로드맵은 다음 단계 에이전트가 맡으니 여기서는 쓰지 마라. 한국어로 작성.`
+}
+
+function implementationSystemPrompt(manifest: string, grounding: string, c: StageContext): string {
+  return `당신은 DroneWiki 소속 '소스코드 설계 에이전트'다. 6단계 협업 파이프라인의 마지막 단계를 맡는다.
+승인된 아키텍처와 기술 스펙을 받아 초기 구현 스켈레톤 코드와 개발 로드맵을 작성하는 것이 임무다.
+
+${manifest}
+
+<tech-spec>
+${clip(c.techspec, 3000, "(기술 스펙 없음)")}
+</tech-spec>
 
 <architecture>
-${context.architecture ?? "(아키텍처 없음)"}
+${clip(c.architecture, 4000, "(아키텍처 없음)")}
 </architecture>
 
-아래는 DroneWiki 지식 베이스의 관련 API·파라미터 자료와 그래프 연결고리다 —
-실제 프로토콜명·파라미터명·API를 정확히 사용해라. [AI 추출·미검증] 항목은 참고만 해라.
+${GROUNDING_NOTE}
 
 ${grounding}
 
 # 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
 ## 1. 핵심 코드 스켈레톤 (아키텍처의 모듈명과 일치시킬 것, 스펙에 맞는 언어 선택, 코드블록)
-## 2. 개발 로드맵 (마일스톤별 완료 기준, 스펙의 위험·근거 부족 항목을 검증하는 단계를 포함)
+## 2. 개발 로드맵 (마일스톤별 완료 기준, 기술 스펙의 위험·근거 부족 항목을 검증하는 단계를 포함)
 
 한국어로 작성.`
+}
+
+const PROMPTS: Record<Stage, (m: string, g: string, c: StageContext) => string> = {
+  proposal: (m, g) => proposalSystemPrompt(m, g),
+  hw: hwSystemPrompt,
+  sw: swSystemPrompt,
+  techspec: techspecSystemPrompt,
+  architecture: architectureSystemPrompt,
+  implementation: implementationSystemPrompt,
+}
+
+// 단계별 검색 질의: 컨셉 + 직전 단계 결과 일부 + 단계 편향 키워드
+function groundingQuery(stage: Stage, prompt: string, c: StageContext): string {
+  const prev: Record<Stage, string | undefined> = {
+    proposal: undefined,
+    hw: c.proposal,
+    sw: c.hw,
+    techspec: `${c.hw ?? ""} ${c.sw ?? ""}`,
+    architecture: c.techspec,
+    implementation: c.architecture,
+  }
+  const excerpt = (prev[stage] ?? "").slice(0, GROUNDING_EXCERPT_CHARS)
+  return `${prompt} ${excerpt} ${STAGE_QUERY_HINT[stage] ?? ""}`.trim()
+}
+
+function feedbackBlock(c: StageContext): string {
+  const reason = (c.feedback?.reason ?? "").trim().slice(0, 1000)
+  const previous = (c.feedback?.previous ?? "").trim().slice(0, 6000)
+  if (!previous && !reason) return ""
+  return `\n\n# 반려 피드백 (검토자가 직전 결과를 반려했다)
+<previous-output>
+${previous || "(없음)"}
+</previous-output>
+반려 사유: ${reason || "(사유 미기재 — 직전 결과의 부족한 점을 스스로 보완해라)"}
+위 사유를 반영해 이 단계 결과를 처음부터 다시 작성하되, 문제 없는 부분은 유지하고 출력 형식은 그대로 따라라.`
 }
 
 export async function POST(req: NextRequest) {
@@ -179,28 +299,15 @@ export async function POST(req: NextRequest) {
   if (!prompt?.trim()) {
     return new Response("concept required", { status: 400 })
   }
+  if (!(stage in STAGE_LIMITS)) {
+    return new Response("unknown stage", { status: 400 })
+  }
 
-  const query =
-    stage === "proposal"
-      ? prompt
-      : stage === "spec"
-        ? `${prompt} ${(context?.proposal ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
-        : stage === "architecture"
-          ? `${prompt} ${(context?.spec ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
-          : `${prompt} ${(context?.architecture ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
-
-  const grounding = buildGroundingBlock(query)
+  const ctx = context ?? {}
+  const grounding = buildGroundingBlock(groundingQuery(stage, prompt, ctx))
   const manifest = await buildAgentManifest()
 
-  const system =
-    stage === "proposal"
-      ? proposalSystemPrompt(manifest, grounding)
-      : stage === "spec"
-        ? specSystemPrompt(manifest, grounding, context ?? {})
-        : stage === "architecture"
-          ? architectureSystemPrompt(manifest, grounding, context ?? {})
-          : implementationSystemPrompt(manifest, grounding, context ?? {})
-
+  const system = PROMPTS[stage](manifest, grounding, ctx) + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const result = streamText({
     model: wikiModel(),
