@@ -5,6 +5,7 @@ import { loadGraph } from "./rag"
 import { getAncestors, getDescendants, loadHierarchy } from "./ontology"
 import { reasoningBlock } from "./ontology-reason"
 import { synthesisBlock } from "./ontology-create"
+import { architectureBlock } from "./ontology-arch"
 
 // 온톨로지 우선 Q&A(2026-10-16): 질문을 먼저 온톨로지 클래스로 해석하고, 클래스 계층·
 // 클래스 간 관계를 구조로 제공한 뒤 위키 문서를 "근거"로 붙인다. 논문·뉴스 문서를
@@ -175,10 +176,12 @@ function classDocs(classes: string[], limit = 3): string[] {
 
 export function buildOntologyContext(question: string, docTitle?: string): OntologyContext {
   const hierarchy = loadHierarchy(resolveWikiRoot())
-  if (Object.keys(hierarchy).length === 0) return { block: "", classes: [] }
   const text = `${docTitle ?? ""} ${question}`
+  // 기본구조·통신·교차 공학 추론은 클래스가 안 잡히는 질문(예: 링크 비교)에서도 동작한다.
+  const arch = architectureBlock(text).block
+  if (Object.keys(hierarchy).length === 0) return { block: arch, classes: [] }
   const classes = detectClasses(text, hierarchy)
-  if (classes.length === 0) return { block: "", classes: [] }
+  if (classes.length === 0) return { block: arch, classes: [] }
 
   const wide = DESIGN_HINT.test(question)
   const hierLines = classes
@@ -200,6 +203,6 @@ export function buildOntologyContext(question: string, docTitle?: string): Ontol
 관련 클래스: ${classes.join(", ")}
 클래스 계층:
 ${hierLines.join("\n")}
-${rels.length ? `클래스 간 관계(구조 정의 — 개별 제품·수치의 사실이 아님):\n${rels.join("\n")}\n` : ""}${facts.length ? `개체 간 의미 관계(원문에서 자동 추출, 사람 검토 전 — 단정 금지):\n${facts.join("\n")}\n` : ""}${docs.length ? `클래스와 연관된 위키 문서(자동 연결, 근거 확인용):\n${docs.join("\n")}\n` : ""}</ontology>${inference ? `\n${inference}` : ""}${synthesis ? `\n${synthesis}` : ""}`
+${rels.length ? `클래스 간 관계(구조 정의 — 개별 제품·수치의 사실이 아님):\n${rels.join("\n")}\n` : ""}${facts.length ? `개체 간 의미 관계(원문에서 자동 추출, 사람 검토 전 — 단정 금지):\n${facts.join("\n")}\n` : ""}${docs.length ? `클래스와 연관된 위키 문서(자동 연결, 근거 확인용):\n${docs.join("\n")}\n` : ""}</ontology>${inference ? `\n${inference}` : ""}${synthesis ? `\n${synthesis}` : ""}${arch ? `\n${arch}` : ""}`
   return { block, classes }
 }

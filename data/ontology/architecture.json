@@ -1,0 +1,1907 @@
+{
+ "_comment": "드론+α 기본구조 온톨로지(저자 정의 설계 지식, 검토 필요). 수치는 일반 범위이며 제품·법규별로 다름. 2026-10-17",
+ "disciplines": {
+  "MECH": "기계공학",
+  "ELEC": "전기공학",
+  "COM": "통신공학",
+  "CS": "컴퓨터공학",
+  "MECHA": "메카트로닉스",
+  "SWE": "SW공학",
+  "CTRL": "제어공학",
+  "ROS": "ROS/ROS2",
+  "AI": "AI/인지"
+ },
+ "capabilities": {
+  "airframe_structure": "기체 구조",
+  "thrust_generation": "추력 생성",
+  "motor_drive": "모터 구동",
+  "power_supply": "전원 공급",
+  "battery_protection": "배터리 보호",
+  "power_distribution": "전원 분배·강압",
+  "attitude_estimation": "자세 측정(IMU)",
+  "altitude_estimation": "고도 측정",
+  "heading_estimation": "방위 측정",
+  "position_gnss": "GNSS 위치",
+  "gnss_correction": "GNSS 보정(RTK)",
+  "position_local": "저고도 국소 위치(광류/거리)",
+  "position_nongnss": "비GNSS 위치추정(VIO/SLAM)",
+  "state_estimation": "상태추정 융합(EKF)",
+  "flight_control": "비행제어",
+  "navigation_planning": "경로·항법 계획",
+  "occupancy_mapping": "점유지도 작성",
+  "visual_sensing": "가시광 영상",
+  "thermal_sensing": "열화상",
+  "sensor_stabilization": "센서 안정화(짐벌)",
+  "ranging_3d": "3D 거리측정(LiDAR)",
+  "ranging_all_weather": "전천후 거리측정(레이더)",
+  "near_obstacle": "근접 장애물 감지",
+  "compute_edge": "온보드 연산",
+  "ai_acceleration": "AI 가속",
+  "target_perception": "표적 인식(DL)",
+  "target_tracking": "표적 추적",
+  "mission_management": "임무 관리",
+  "onboard_middleware": "온보드 미들웨어(ROS2/DDS)",
+  "fc_ros_bridge": "FC↔ROS2 브릿지",
+  "command_link": "지휘통제(C2) 링크",
+  "telemetry_link": "텔레메트리 링크",
+  "video_link": "영상 링크",
+  "mesh_networking": "메시 네트워킹",
+  "wan_link": "광역망 링크(LTE/5G)",
+  "global_link": "위성 링크",
+  "video_streaming": "영상 스트리밍 처리",
+  "rf_radiation": "안테나·RF 복사",
+  "time_sync": "시간 동기",
+  "relative_localization": "상대 위치추정",
+  "swarm_coordination": "군집 조정",
+  "task_allocation": "임무 할당",
+  "link_security": "링크 보안",
+  "ground_control": "지상통제",
+  "payload_release": "투하",
+  "payload_lowering": "윈치 하강·인양",
+  "safety_recovery": "안전 회수(낙하산)",
+  "safety_failsafe": "안전 장치·페일세이프",
+  "simulation_test": "시뮬레이션·시험",
+  "regulatory": "법규 준수(원격식별 등)",
+  "thermal_management": "열관리",
+  "vibration_isolation": "진동 절연"
+ },
+ "components": [
+  {
+   "id": "frame",
+   "name": "기체 프레임",
+   "layer": "HW",
+   "disc": [
+    "MECH"
+   ],
+   "provides": [
+    "airframe_structure"
+   ],
+   "requires": [],
+   "note": "카본/알루미늄, 진동 모드·강성이 센서 품질에 영향"
+  },
+  {
+   "id": "propeller",
+   "name": "프로펠러",
+   "layer": "HW",
+   "disc": [
+    "MECH"
+   ],
+   "provides": [
+    "thrust_generation"
+   ],
+   "requires": [],
+   "note": "직경·피치·재질; 팁속도 한계"
+  },
+  {
+   "id": "motor",
+   "name": "BLDC 모터",
+   "layer": "HW",
+   "disc": [
+    "MECH",
+    "ELEC",
+    "MECHA"
+   ],
+   "provides": [
+    "thrust_generation"
+   ],
+   "requires": [
+    "motor_drive"
+   ],
+   "note": "kV·최대전류·정격 S수"
+  },
+  {
+   "id": "esc",
+   "name": "ESC",
+   "layer": "HW+SW",
+   "disc": [
+    "ELEC",
+    "MECHA"
+   ],
+   "provides": [
+    "motor_drive"
+   ],
+   "requires": [
+    "power_distribution",
+    "flight_control"
+   ],
+   "note": "DShot/PWM 신호, 펌웨어(BLHeli/AM32), 전류·열 한계"
+  },
+  {
+   "id": "battery",
+   "name": "배터리 팩",
+   "layer": "HW",
+   "disc": [
+    "ELEC"
+   ],
+   "provides": [
+    "power_supply"
+   ],
+   "requires": [],
+   "note": "S수·용량·C율·에너지밀도"
+  },
+  {
+   "id": "bms",
+   "name": "BMS",
+   "layer": "HW+SW",
+   "disc": [
+    "ELEC",
+    "SWE"
+   ],
+   "provides": [
+    "battery_protection"
+   ],
+   "requires": [
+    "power_supply"
+   ],
+   "note": "스마트 배터리는 SMBus/CAN 텔레메트리"
+  },
+  {
+   "id": "pdb_bec",
+   "name": "PDB/BEC(강압)",
+   "layer": "HW",
+   "disc": [
+    "ELEC"
+   ],
+   "provides": [
+    "power_distribution"
+   ],
+   "requires": [
+    "power_supply"
+   ],
+   "note": "센서·컴퓨터 전원 노이즈 분리"
+  },
+  {
+   "id": "imu",
+   "name": "IMU",
+   "layer": "HW",
+   "disc": [
+    "ELEC",
+    "MECHA"
+   ],
+   "provides": [
+    "attitude_estimation"
+   ],
+   "requires": [],
+   "note": "자이로/가속도; 진동·온도 드리프트"
+  },
+  {
+   "id": "baro",
+   "name": "기압계",
+   "layer": "HW",
+   "disc": [
+    "ELEC"
+   ],
+   "provides": [
+    "altitude_estimation"
+   ],
+   "requires": [],
+   "note": "프롭워시·온도 영향"
+  },
+  {
+   "id": "mag",
+   "name": "지자기계",
+   "layer": "HW",
+   "disc": [
+    "ELEC"
+   ],
+   "provides": [
+    "heading_estimation"
+   ],
+   "requires": [],
+   "note": "전류·ESC 자기 간섭에 취약"
+  },
+  {
+   "id": "gnss",
+   "name": "GNSS 수신기",
+   "layer": "HW",
+   "disc": [
+    "COM",
+    "ELEC"
+   ],
+   "provides": [
+    "position_gnss"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "재밍·스푸핑 취약"
+  },
+  {
+   "id": "rtk_base",
+   "name": "RTK 기지국/NTRIP",
+   "layer": "HW+SW",
+   "disc": [
+    "COM"
+   ],
+   "provides": [
+    "gnss_correction"
+   ],
+   "requires": [
+    "wan_link|telemetry_link"
+   ],
+   "note": "보정 데이터 링크 필요"
+  },
+  {
+   "id": "optflow_rf",
+   "name": "광류+거리센서",
+   "layer": "HW",
+   "disc": [
+    "ELEC",
+    "MECHA"
+   ],
+   "provides": [
+    "position_local"
+   ],
+   "requires": [],
+   "note": "저고도·질감 있는 바닥 한정"
+  },
+  {
+   "id": "ekf",
+   "name": "EKF 상태추정",
+   "layer": "SW",
+   "disc": [
+    "CTRL",
+    "SWE"
+   ],
+   "provides": [
+    "state_estimation"
+   ],
+   "requires": [
+    "attitude_estimation",
+    "altitude_estimation",
+    "position_gnss|position_nongnss|position_local"
+   ],
+   "note": "PX4 EKF2/ArduPilot EKF3, 센서 융합·이상치 거부"
+  },
+  {
+   "id": "fc",
+   "name": "비행제어기(FC)",
+   "layer": "HW+SW",
+   "disc": [
+    "CTRL",
+    "ELEC",
+    "SWE"
+   ],
+   "provides": [
+    "flight_control"
+   ],
+   "requires": [
+    "state_estimation",
+    "power_distribution",
+    "motor_drive"
+   ],
+   "note": "PX4/ArduPilot 펌웨어, 제어 루프 수백Hz~kHz"
+  },
+  {
+   "id": "camera_eo",
+   "name": "EO 카메라",
+   "layer": "HW",
+   "disc": [
+    "ELEC",
+    "CS"
+   ],
+   "provides": [
+    "visual_sensing"
+   ],
+   "requires": [
+    "power_distribution"
+   ],
+   "note": "해상도·FOV·셔터(글로벌/롤링)"
+  },
+  {
+   "id": "camera_ir",
+   "name": "IR(열화상) 카메라",
+   "layer": "HW",
+   "disc": [
+    "ELEC",
+    "CS"
+   ],
+   "provides": [
+    "thermal_sensing"
+   ],
+   "requires": [
+    "power_distribution"
+   ],
+   "note": "비냉각 마이크로볼로미터; 해상도 낮음, 규제(수출) 확인"
+  },
+  {
+   "id": "gimbal",
+   "name": "짐벌",
+   "layer": "HW+SW",
+   "disc": [
+    "MECHA",
+    "CTRL"
+   ],
+   "provides": [
+    "sensor_stabilization"
+   ],
+   "requires": [
+    "power_distribution"
+   ],
+   "note": "3축 안정화, 진동 절연 겸함"
+  },
+  {
+   "id": "lidar",
+   "name": "LiDAR",
+   "layer": "HW",
+   "disc": [
+    "ELEC",
+    "MECH"
+   ],
+   "provides": [
+    "ranging_3d"
+   ],
+   "requires": [
+    "power_distribution"
+   ],
+   "note": "고정밀 3D, 비·안개·분진에 성능 저하, 질량·전력 큼"
+  },
+  {
+   "id": "radar",
+   "name": "mmWave 레이더",
+   "layer": "HW",
+   "disc": [
+    "COM",
+    "ELEC"
+   ],
+   "provides": [
+    "ranging_all_weather",
+    "near_obstacle"
+   ],
+   "requires": [
+    "power_distribution"
+   ],
+   "note": "비·연기·야간에 강함, 해상도 낮음"
+  },
+  {
+   "id": "tof_us",
+   "name": "ToF/초음파",
+   "layer": "HW",
+   "disc": [
+    "ELEC"
+   ],
+   "provides": [
+    "near_obstacle"
+   ],
+   "requires": [],
+   "note": "근거리 충돌 회피"
+  },
+  {
+   "id": "companion",
+   "name": "컴패니언 컴퓨터",
+   "layer": "HW",
+   "disc": [
+    "CS",
+    "ELEC"
+   ],
+   "provides": [
+    "compute_edge"
+   ],
+   "requires": [
+    "power_distribution"
+   ],
+   "note": "Jetson/RPi/x86; 전력·발열 큼"
+  },
+  {
+   "id": "npu",
+   "name": "AI 가속기(GPU/NPU)",
+   "layer": "HW",
+   "disc": [
+    "CS",
+    "AI"
+   ],
+   "provides": [
+    "ai_acceleration"
+   ],
+   "requires": [
+    "compute_edge"
+   ],
+   "note": "추론 지연·전력 트레이드오프"
+  },
+  {
+   "id": "vio",
+   "name": "VIO/Visual SLAM",
+   "layer": "SW",
+   "disc": [
+    "CS",
+    "AI",
+    "CTRL"
+   ],
+   "provides": [
+    "position_nongnss"
+   ],
+   "requires": [
+    "visual_sensing",
+    "attitude_estimation",
+    "compute_edge"
+   ],
+   "note": "스케일·드리프트, 저조도·무질감에 취약"
+  },
+  {
+   "id": "lidar_slam",
+   "name": "LiDAR SLAM",
+   "layer": "SW",
+   "disc": [
+    "CS",
+    "CTRL"
+   ],
+   "provides": [
+    "position_nongnss",
+    "occupancy_mapping"
+   ],
+   "requires": [
+    "ranging_3d",
+    "attitude_estimation",
+    "compute_edge"
+   ],
+   "note": "기하 퇴화(복도·터널) 주의"
+  },
+  {
+   "id": "mapper",
+   "name": "점유지도(Octomap/ESDF)",
+   "layer": "SW",
+   "disc": [
+    "CS"
+   ],
+   "provides": [
+    "occupancy_mapping"
+   ],
+   "requires": [
+    "ranging_3d|visual_sensing",
+    "state_estimation",
+    "compute_edge"
+   ],
+   "note": ""
+  },
+  {
+   "id": "planner",
+   "name": "경로/궤적 계획",
+   "layer": "SW",
+   "disc": [
+    "CS",
+    "CTRL",
+    "ROS"
+   ],
+   "provides": [
+    "navigation_planning"
+   ],
+   "requires": [
+    "state_estimation",
+    "occupancy_mapping",
+    "onboard_middleware"
+   ],
+   "note": "Nav2/Ego-Planner/MoveIt류"
+  },
+  {
+   "id": "dl_perception",
+   "name": "딥러닝 인식(YOLO 등)",
+   "layer": "SW",
+   "disc": [
+    "AI",
+    "CS"
+   ],
+   "provides": [
+    "target_perception"
+   ],
+   "requires": [
+    "visual_sensing|thermal_sensing",
+    "ai_acceleration"
+   ],
+   "note": "학습 데이터 분포 밖(야간·열화상)에서 성능 저하"
+  },
+  {
+   "id": "tracker",
+   "name": "표적 추적기",
+   "layer": "SW",
+   "disc": [
+    "AI",
+    "CTRL"
+   ],
+   "provides": [
+    "target_tracking"
+   ],
+   "requires": [
+    "target_perception",
+    "sensor_stabilization"
+   ],
+   "note": "짐벌·기체 시선제어 결합"
+  },
+  {
+   "id": "mission_mgr",
+   "name": "임무 관리자",
+   "layer": "SW",
+   "disc": [
+    "SWE",
+    "ROS"
+   ],
+   "provides": [
+    "mission_management"
+   ],
+   "requires": [
+    "flight_control",
+    "navigation_planning"
+   ],
+   "note": "상태기계/BT, 페일세이프 연동"
+  },
+  {
+   "id": "ros2",
+   "name": "ROS2 미들웨어",
+   "layer": "SW",
+   "disc": [
+    "ROS",
+    "CS",
+    "SWE"
+   ],
+   "provides": [
+    "onboard_middleware"
+   ],
+   "requires": [
+    "compute_edge"
+   ],
+   "note": "DDS QoS·도메인 분리, 무선 구간 디스커버리 트래픽 주의"
+  },
+  {
+   "id": "xrce",
+   "name": "micro-XRCE-DDS/MAVROS 브릿지",
+   "layer": "SW",
+   "disc": [
+    "ROS",
+    "SWE"
+   ],
+   "provides": [
+    "fc_ros_bridge"
+   ],
+   "requires": [
+    "onboard_middleware",
+    "flight_control"
+   ],
+   "note": "PX4 uORB↔ROS2 / MAVLink↔ROS"
+  },
+  {
+   "id": "radio_c2",
+   "name": "C2 라디오(ELRS/CRSF 등)",
+   "layer": "HW+SW",
+   "disc": [
+    "COM"
+   ],
+   "provides": [
+    "command_link"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "저지연 소용량, 900MHz/2.4GHz"
+  },
+  {
+   "id": "radio_telem",
+   "name": "텔레메트리 라디오(SiK 등)",
+   "layer": "HW+SW",
+   "disc": [
+    "COM"
+   ],
+   "provides": [
+    "telemetry_link"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "MAVLink 중계, 소용량"
+  },
+  {
+   "id": "radio_video",
+   "name": "영상 송신(아날로그/디지털)",
+   "layer": "HW",
+   "disc": [
+    "COM"
+   ],
+   "provides": [
+    "video_link"
+   ],
+   "requires": [
+    "rf_radiation",
+    "visual_sensing|thermal_sensing"
+   ],
+   "note": "5.8GHz 중심, 지연/화질 트레이드오프"
+  },
+  {
+   "id": "radio_mesh",
+   "name": "IP 메시/MANET 라디오",
+   "layer": "HW+SW",
+   "disc": [
+    "COM",
+    "CS"
+   ],
+   "provides": [
+    "mesh_networking",
+    "video_link",
+    "telemetry_link"
+   ],
+   "requires": [
+    "rf_radiation",
+    "link_security"
+   ],
+   "note": "인프라 불요, 다중 노드, 중량·전력 큼"
+  },
+  {
+   "id": "modem_lte",
+   "name": "LTE/5G 모뎀",
+   "layer": "HW+SW",
+   "disc": [
+    "COM"
+   ],
+   "provides": [
+    "wan_link"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "기지국 인프라 의존, 재난·원거리에서 두절 가능"
+  },
+  {
+   "id": "satcom",
+   "name": "위성 링크",
+   "layer": "HW+SW",
+   "disc": [
+    "COM"
+   ],
+   "provides": [
+    "global_link"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "지연 큼·대역 작음(SBD)~대역 큰 LEO 단말"
+  },
+  {
+   "id": "antenna",
+   "name": "안테나",
+   "layer": "HW",
+   "disc": [
+    "COM",
+    "MECH"
+   ],
+   "provides": [
+    "rf_radiation"
+   ],
+   "requires": [],
+   "note": "이득·편파·장착 위치(기체 차폐), 다이버시티"
+  },
+  {
+   "id": "uwb",
+   "name": "UWB 거리측정",
+   "layer": "HW",
+   "disc": [
+    "COM",
+    "ELEC"
+   ],
+   "provides": [
+    "relative_localization"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "기체 간/앵커 간 거리, GNSS 없이 군집 상대위치"
+  },
+  {
+   "id": "vid_pipeline",
+   "name": "영상 파이프라인(GStreamer/RTSP)",
+   "layer": "SW",
+   "disc": [
+    "CS",
+    "SWE"
+   ],
+   "provides": [
+    "video_streaming"
+   ],
+   "requires": [
+    "video_link",
+    "visual_sensing|thermal_sensing"
+   ],
+   "note": "코덱·비트레이트 적응"
+  },
+  {
+   "id": "time_sync",
+   "name": "시간 동기(PTP/chrony/PPS)",
+   "layer": "SW",
+   "disc": [
+    "CS",
+    "COM"
+   ],
+   "provides": [
+    "time_sync"
+   ],
+   "requires": [],
+   "note": "다기체 센서융합·로그 정렬 필수"
+  },
+  {
+   "id": "sec",
+   "name": "링크 보안(암호·인증)",
+   "layer": "SW",
+   "disc": [
+    "SWE",
+    "COM"
+   ],
+   "provides": [
+    "link_security"
+   ],
+   "requires": [],
+   "note": "MAVLink2 서명, TLS/AES, 키 배포"
+  },
+  {
+   "id": "swarm_ctrl",
+   "name": "군집 제어(편대/합의)",
+   "layer": "SW",
+   "disc": [
+    "CTRL",
+    "CS",
+    "ROS"
+   ],
+   "provides": [
+    "swarm_coordination"
+   ],
+   "requires": [
+    "mesh_networking",
+    "relative_localization",
+    "time_sync",
+    "state_estimation"
+   ],
+   "note": "중앙집중 vs 분산, 통신 두절 시 폴백"
+  },
+  {
+   "id": "task_alloc",
+   "name": "임무 할당(경매/최적화)",
+   "layer": "SW",
+   "disc": [
+    "CS",
+    "AI"
+   ],
+   "provides": [
+    "task_allocation"
+   ],
+   "requires": [
+    "mesh_networking",
+    "mission_management"
+   ],
+   "note": ""
+  },
+  {
+   "id": "failsafe",
+   "name": "페일세이프 관리",
+   "layer": "SW",
+   "disc": [
+    "SWE",
+    "CTRL"
+   ],
+   "provides": [
+    "safety_failsafe"
+   ],
+   "requires": [
+    "command_link|telemetry_link",
+    "state_estimation"
+   ],
+   "note": "링크 상실·저전압·지오펜스 정책"
+  },
+  {
+   "id": "gcs",
+   "name": "지상통제(GCS)",
+   "layer": "HW+SW",
+   "disc": [
+    "SWE",
+    "CS"
+   ],
+   "provides": [
+    "ground_control"
+   ],
+   "requires": [
+    "telemetry_link|mesh_networking|wan_link"
+   ],
+   "note": "QGC/Mission Planner/사용자 GCS"
+  },
+  {
+   "id": "rid",
+   "name": "원격식별/법규 모듈",
+   "layer": "HW+SW",
+   "disc": [
+    "COM",
+    "SWE"
+   ],
+   "provides": [
+    "regulatory"
+   ],
+   "requires": [
+    "rf_radiation"
+   ],
+   "note": "국가별 요건 확인"
+  },
+  {
+   "id": "release",
+   "name": "투하 기구(서보/전자)",
+   "layer": "HW+SW",
+   "disc": [
+    "MECHA",
+    "MECH"
+   ],
+   "provides": [
+    "payload_release"
+   ],
+   "requires": [
+    "flight_control"
+   ],
+   "note": "무게중심 변화·릴리스 신뢰성"
+  },
+  {
+   "id": "winch",
+   "name": "윈치",
+   "layer": "HW+SW",
+   "disc": [
+    "MECHA",
+    "MECH"
+   ],
+   "provides": [
+    "payload_lowering"
+   ],
+   "requires": [
+    "flight_control"
+   ],
+   "note": "하강 중 진동·스윙, 인명 구조용"
+  },
+  {
+   "id": "parachute",
+   "name": "낙하산 회수",
+   "layer": "HW",
+   "disc": [
+    "MECH"
+   ],
+   "provides": [
+    "safety_recovery"
+   ],
+   "requires": [],
+   "note": "트리거 로직과 고도 하한"
+  },
+  {
+   "id": "sim",
+   "name": "SITL/Gazebo 시뮬",
+   "layer": "SW",
+   "disc": [
+    "SWE",
+    "ROS"
+   ],
+   "provides": [
+    "simulation_test"
+   ],
+   "requires": [],
+   "note": "HIL/SITL로 규칙·군집 로직 검증"
+  },
+  {
+   "id": "thermal_mgmt",
+   "name": "열관리(방열/팬)",
+   "layer": "HW",
+   "disc": [
+    "MECH",
+    "ELEC"
+   ],
+   "provides": [
+    "thermal_management"
+   ],
+   "requires": [],
+   "note": "컴퓨터·ESC·배터리 발열"
+  },
+  {
+   "id": "damper",
+   "name": "진동 절연",
+   "layer": "HW",
+   "disc": [
+    "MECH"
+   ],
+   "provides": [
+    "vibration_isolation"
+   ],
+   "requires": [],
+   "note": "IMU/카메라 마운트"
+  }
+ ],
+ "links": [
+  {
+   "id": "sub1g_telem",
+   "name": "900MHz급 텔레메트리/ELRS-900",
+   "freqMHz": 900,
+   "bwMbps": 0.05,
+   "rangeKm": [
+    5,
+    40
+   ],
+   "latencyMs": [
+    20,
+    100
+   ],
+   "infraFree": true,
+   "multiNode": false,
+   "note": "저대역·장거리·투과 우수. 영상 불가. 국내 허용 대역/출력 법규 확인"
+  },
+  {
+   "id": "elrs_24",
+   "name": "2.4GHz C2(ELRS 등)",
+   "freqMHz": 2400,
+   "bwMbps": 0.1,
+   "rangeKm": [
+    1,
+    15
+   ],
+   "latencyMs": [
+    5,
+    30
+   ],
+   "infraFree": true,
+   "multiNode": false,
+   "note": "저지연 조종. 2.4GHz 혼잡"
+  },
+  {
+   "id": "wifi",
+   "name": "Wi-Fi(2.4/5GHz)",
+   "freqMHz": 5800,
+   "bwMbps": 50,
+   "rangeKm": [
+    0.1,
+    1
+   ],
+   "latencyMs": [
+    5,
+    50
+   ],
+   "infraFree": true,
+   "multiNode": false,
+   "note": "짧은 거리 고대역. 이동 시 핸드오버 불안정"
+  },
+  {
+   "id": "video_58",
+   "name": "5.8GHz 영상(아날로그/디지털)",
+   "freqMHz": 5800,
+   "bwMbps": 10,
+   "rangeKm": [
+    1,
+    10
+   ],
+   "latencyMs": [
+    20,
+    60
+   ],
+   "infraFree": true,
+   "multiNode": false,
+   "note": "영상 중심. 자유공간 손실 큼, 장애물에 약함"
+  },
+  {
+   "id": "mesh_manet",
+   "name": "COFDM/MANET 메시(1.x~2.x GHz)",
+   "freqMHz": 2400,
+   "bwMbps": 20,
+   "rangeKm": [
+    5,
+    30
+   ],
+   "latencyMs": [
+    20,
+    100
+   ],
+   "infraFree": true,
+   "multiNode": true,
+   "note": "인프라 불요·다중노드·멀티홉. 중량·전력 큼, 대역은 홉 수·노드 수에 반비례"
+  },
+  {
+   "id": "lte5g",
+   "name": "LTE/5G 셀룰러",
+   "freqMHz": 1800,
+   "bwMbps": 30,
+   "rangeKm": [
+    0,
+    50
+   ],
+   "latencyMs": [
+    30,
+    120
+   ],
+   "infraFree": false,
+   "multiNode": true,
+   "note": "기지국 있는 곳에서 광역. 재난·산악·해상에서 두절. 고도 상승 시 셀 간섭"
+  },
+  {
+   "id": "satcom",
+   "name": "위성(Iridium SBD/LEO)",
+   "freqMHz": 1600,
+   "bwMbps": 0.01,
+   "rangeKm": [
+    1000,
+    40000
+   ],
+   "latencyMs": [
+    1000,
+    10000
+   ],
+   "infraFree": true,
+   "multiNode": false,
+   "note": "전 지구 도달. 대역·지연 열악(SBD), LEO 단말은 대역 개선하나 중량·전력 큼"
+  }
+ ],
+ "protocols": [
+  "MAVLink",
+  "ROS2/DDS",
+  "ROS1",
+  "uORB(PX4)",
+  "DroneCAN",
+  "CRSF/SBUS",
+  "CoT(ATAK)",
+  "STANAG4586",
+  "RTSP/RTP",
+  "MQTT",
+  "Zenoh",
+  "WebSocket(rosbridge)",
+  "DJI-SDK",
+  "OpenDroneID"
+ ],
+ "adapters": [
+  {
+   "a": "uORB(PX4)",
+   "b": "ROS2/DDS",
+   "via": "micro-XRCE-DDS (px4_ros_com)",
+   "maturity": "표준"
+  },
+  {
+   "a": "MAVLink",
+   "b": "ROS2/DDS",
+   "via": "MAVROS / mavlink 패키지",
+   "maturity": "표준"
+  },
+  {
+   "a": "MAVLink",
+   "b": "ROS1",
+   "via": "MAVROS (ROS1)",
+   "maturity": "표준"
+  },
+  {
+   "a": "ROS1",
+   "b": "ROS2/DDS",
+   "via": "ros1_bridge",
+   "maturity": "표준"
+  },
+  {
+   "a": "ROS2/DDS",
+   "b": "Zenoh",
+   "via": "zenoh-bridge-ros2dds",
+   "maturity": "표준"
+  },
+  {
+   "a": "ROS2/DDS",
+   "b": "WebSocket(rosbridge)",
+   "via": "rosbridge_suite",
+   "maturity": "표준"
+  },
+  {
+   "a": "ROS2/DDS",
+   "b": "MQTT",
+   "via": "mqtt_client 등 브릿지 노드",
+   "maturity": "커뮤니티"
+  },
+  {
+   "a": "MAVLink",
+   "b": "CoT(ATAK)",
+   "via": "MAVLink→CoT 게이트웨이",
+   "maturity": "커뮤니티/상용"
+  },
+  {
+   "a": "MAVLink",
+   "b": "STANAG4586",
+   "via": "VSM(Vehicle Specific Module) 개발 필요",
+   "maturity": "상용·맞춤"
+  },
+  {
+   "a": "DroneCAN",
+   "b": "MAVLink",
+   "via": "FC의 DroneCAN 노드 ↔ MAVLink (FC 내장)",
+   "maturity": "표준"
+  },
+  {
+   "a": "MAVLink",
+   "b": "OpenDroneID",
+   "via": "FC/RID 모듈 내장 메시지",
+   "maturity": "표준"
+  },
+  {
+   "a": "CRSF/SBUS",
+   "b": "MAVLink",
+   "via": "FC의 RC 입력 처리·CRSF 텔레메트리 변환",
+   "maturity": "표준"
+  },
+  {
+   "a": "MAVLink",
+   "b": "DJI-SDK",
+   "via": "직접 변환 없음 → ROS2 중계 + DJI OSDK/MSDK 브릿지 맞춤 개발",
+   "maturity": "맞춤"
+  },
+  {
+   "a": "RTSP/RTP",
+   "b": "ROS2/DDS",
+   "via": "image_transport/gscam 노드",
+   "maturity": "표준"
+  }
+ ],
+ "couplings": [
+  {
+   "to": "hover_power",
+   "disc": [
+    "MECH",
+    "ELEC"
+   ],
+   "why": "추력 요구 ↑ → 호버링 전력 ∝ T^1.5",
+   "from": "payload_mass"
+  },
+  {
+   "to": "flight_time",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "에너지 일정 → 비행시간 ↓",
+   "from": "hover_power"
+  },
+  {
+   "to": "esc_motor_heat",
+   "disc": [
+    "ELEC",
+    "MECH"
+   ],
+   "why": "전류 ↑ → 구동계 발열 ↑",
+   "from": "hover_power"
+  },
+  {
+   "to": "frame_stress",
+   "disc": [
+    "MECH"
+   ],
+   "why": "하중 ↑ → 굽힘·고유진동수 변화",
+   "from": "payload_mass"
+  },
+  {
+   "to": "vibration",
+   "disc": [
+    "MECH"
+   ],
+   "why": "공진 근접 시 진동 ↑",
+   "from": "frame_stress"
+  },
+  {
+   "to": "imu_noise",
+   "disc": [
+    "MECHA",
+    "ELEC"
+   ],
+   "why": "IMU 진동 정류·클리핑",
+   "from": "vibration"
+  },
+  {
+   "to": "ekf_drift",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "혁신 증가·자세/위치 드리프트",
+   "from": "imu_noise"
+  },
+  {
+   "to": "image_blur",
+   "disc": [
+    "MECHA",
+    "CS"
+   ],
+   "why": "카메라/짐벌 흔들림 → 블러",
+   "from": "vibration"
+  },
+  {
+   "to": "vio_loss",
+   "disc": [
+    "CS",
+    "AI"
+   ],
+   "why": "특징점 추적 실패",
+   "from": "image_blur"
+  },
+  {
+   "to": "need_nongnss",
+   "disc": [
+    "CTRL",
+    "CS"
+   ],
+   "why": "GNSS 상실 → VIO/LiDAR SLAM/UWB 필요",
+   "from": "gnss_denied"
+  },
+  {
+   "to": "compute_load",
+   "disc": [
+    "CS"
+   ],
+   "why": "SLAM·인식 연산 ↑",
+   "from": "need_nongnss"
+  },
+  {
+   "to": "power_draw",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "컴퓨터 전력 ↑",
+   "from": "compute_load"
+  },
+  {
+   "to": "flight_time",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "보조 전력도 비행시간 감소",
+   "from": "power_draw"
+  },
+  {
+   "to": "soc_heat",
+   "disc": [
+    "ELEC",
+    "MECH"
+   ],
+   "why": "발열 ↑(밀폐·고온에서 심화)",
+   "from": "compute_load"
+  },
+  {
+   "to": "thermal_throttle",
+   "disc": [
+    "CS"
+   ],
+   "why": "클럭 다운",
+   "from": "soc_heat"
+  },
+  {
+   "to": "inference_latency",
+   "disc": [
+    "AI",
+    "CS"
+   ],
+   "why": "추론/SLAM 지연 ↑",
+   "from": "thermal_throttle"
+  },
+  {
+   "to": "control_delay",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "인지→제어 루프 지연 → 안정성·추종 저하",
+   "from": "inference_latency"
+  },
+  {
+   "to": "link_bw_demand",
+   "disc": [
+    "COM"
+   ],
+   "why": "영상 비트레이트 ↑ → 링크 대역 요구 ↑",
+   "from": "video_bitrate"
+  },
+  {
+   "to": "range_loss",
+   "disc": [
+    "COM"
+   ],
+   "why": "고대역 변조 필요 → 수신감도 악화 → 도달거리 ↓",
+   "from": "link_bw_demand"
+  },
+  {
+   "to": "fspl_loss",
+   "disc": [
+    "COM"
+   ],
+   "why": "자유공간 손실 ∝ 20log(d)+20log(f)",
+   "from": "range"
+  },
+  {
+   "to": "link_margin_low",
+   "disc": [
+    "COM"
+   ],
+   "why": "링크 마진 ↓ → 패킷 손실·끊김",
+   "from": "fspl_loss"
+  },
+  {
+   "to": "failsafe_trigger",
+   "disc": [
+    "SWE",
+    "CTRL"
+   ],
+   "why": "링크 상실 → RTL/착륙 발동",
+   "from": "link_margin_low"
+  },
+  {
+   "to": "power_draw",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "RF 송신 전력 ↑ → 전류 ↑",
+   "from": "tx_power"
+  },
+  {
+   "to": "emi",
+   "disc": [
+    "COM",
+    "ELEC"
+   ],
+   "why": "전자기 간섭 ↑",
+   "from": "tx_power"
+  },
+  {
+   "to": "mag_gnss_noise",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "지자기·GNSS 수신 간섭",
+   "from": "emi"
+  },
+  {
+   "to": "mag_gnss_noise",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "대전류 배선의 자계 ↑ → 지자기 오염(배선 트위스트·거리 확보 필요)",
+   "from": "hover_power"
+  },
+  {
+   "to": "mesh_traffic",
+   "disc": [
+    "COM",
+    "CS"
+   ],
+   "why": "방송 트래픽 ∝ N² (설계 따라)",
+   "from": "swarm_size"
+  },
+  {
+   "to": "latency",
+   "disc": [
+    "COM"
+   ],
+   "why": "혼잡 → 지연·패킷 손실 ↑",
+   "from": "mesh_traffic"
+  },
+  {
+   "to": "formation_instability",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "지연된 상대상태 → 편대 진동/충돌 위험",
+   "from": "latency"
+  },
+  {
+   "to": "dds_discovery",
+   "disc": [
+    "ROS",
+    "CS"
+   ],
+   "why": "DDS 디스커버리·노드 수 ↑ → 무선 구간 트래픽 폭증",
+   "from": "swarm_size"
+  },
+  {
+   "to": "latency",
+   "disc": [
+    "ROS",
+    "COM"
+   ],
+   "why": "디폴트 멀티캐스트 설정 시 지연 ↑ (Zenoh/디스커버리 서버로 완화)",
+   "from": "dds_discovery"
+  },
+  {
+   "to": "fusion_error",
+   "disc": [
+    "CS",
+    "CTRL"
+   ],
+   "why": "다기체 시간 불일치 → 상대위치 오차",
+   "from": "time_offset"
+  },
+  {
+   "to": "relative_loc_loss",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "군집 상대위치 상실 → UWB/상호 시각검출 필요",
+   "from": "gnss_denied"
+  },
+  {
+   "to": "formation_instability",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "상대위치 불확실 → 충돌 위험",
+   "from": "relative_loc_loss"
+  },
+  {
+   "to": "battery_resistance",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "저온 내부저항 ↑",
+   "from": "cold"
+  },
+  {
+   "to": "voltage_sag",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "부하 시 전압 강하 ↑",
+   "from": "battery_resistance"
+  },
+  {
+   "to": "brownout_risk",
+   "disc": [
+    "ELEC",
+    "CTRL"
+   ],
+   "why": "저전압 컷오프·컴퓨터 리셋",
+   "from": "voltage_sag"
+  },
+  {
+   "to": "flight_time",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "가용 용량 ↓",
+   "from": "voltage_sag"
+  },
+  {
+   "to": "air_density_low",
+   "disc": [
+    "MECH"
+   ],
+   "why": "고도 ↑ → 공기밀도 ↓",
+   "from": "altitude"
+  },
+  {
+   "to": "hover_power",
+   "disc": [
+    "MECH",
+    "ELEC"
+   ],
+   "why": "추력 유지에 회전수↑ → 전력 ↑",
+   "from": "air_density_low"
+  },
+  {
+   "to": "lidar_degrade",
+   "disc": [
+    "ELEC"
+   ],
+   "why": "산란 → 거리측정 열화",
+   "from": "rain_fog"
+  },
+  {
+   "to": "eo_degrade",
+   "disc": [
+    "CS"
+   ],
+   "why": "가시도 ↓",
+   "from": "rain_fog"
+  },
+  {
+   "to": "radar_robust",
+   "disc": [
+    "COM"
+   ],
+   "why": "mmWave는 상대적으로 견딤(해상도 한계)",
+   "from": "rain_fog"
+  },
+  {
+   "to": "eo_degrade",
+   "disc": [
+    "CS"
+   ],
+   "why": "저조도 → EO·VIO 열화 → 열화상/LiDAR 필요",
+   "from": "night"
+  },
+  {
+   "to": "vio_loss",
+   "disc": [
+    "CS",
+    "AI"
+   ],
+   "why": "저조도/연무에서 VIO 추적 실패",
+   "from": "eo_degrade"
+  },
+  {
+   "to": "detect_miss",
+   "disc": [
+    "AI"
+   ],
+   "why": "표적 미검출 ↑",
+   "from": "eo_degrade"
+  },
+  {
+   "to": "hover_power",
+   "disc": [
+    "MECH",
+    "ELEC"
+   ],
+   "why": "자세 유지 보정 ↑",
+   "from": "wind"
+  },
+  {
+   "to": "position_error",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "외란 → 위치 오차(투하 정확도 ↓)",
+   "from": "wind"
+  },
+  {
+   "to": "cg_shift",
+   "disc": [
+    "MECH",
+    "MECHA"
+   ],
+   "why": "투하 직후 무게중심·질량 급변",
+   "from": "payload_drop"
+  },
+  {
+   "to": "attitude_transient",
+   "disc": [
+    "CTRL"
+   ],
+   "why": "자세 과도응답 → 제어 게인 스케줄링 필요",
+   "from": "cg_shift"
+  }
+ ],
+ "factors": {
+  "payload_mass": "페이로드|탑재.{0,3}(중량|무게)|무거|중량 증가|payload",
+  "gnss_denied": "non.?gps|비.?gps|gps.?(없|불가|거부|음영)|gnss.?denied|재밍|스푸핑|터널|실내|지하",
+  "swarm_size": "군집|swarm|다수.{0,3}(기체|드론)|\\d+\\s*대",
+  "video_bitrate": "영상|fpv|스트리밍|4k|1080|fhd",
+  "tx_power": "송신.?출력|tx.?power|출력\\s*\\d+\\s*(mw|w)",
+  "range": "원거리|장거리|\\d+\\s*km|가시권 ?밖|bvlos",
+  "cold": "저온|한파|겨울|영하",
+  "altitude": "고지대|해발|고고도|고도 ?(가 )?(높|상승)",
+  "rain_fog": "비\\b|우천|안개|연기|분진|연무",
+  "night": "야간|밤|저조도",
+  "wind": "바람|강풍|돌풍|풍속",
+  "payload_drop": "투하|살포|낙하",
+  "compute_load": "slam|vio|딥러닝|추론|yolo|인공지능|\\bai\\b|온보드 ?연산",
+  "time_offset": "시간 ?동기|ptp|chrony|타임스탬프"
+ },
+ "topics": [
+  {
+   "id": "drone",
+   "name": "드론 기본구조",
+   "alias": "드론.{0,6}(기본|구조|구성)|기체 구조|drone architecture",
+   "components": [
+    "frame",
+    "propeller",
+    "motor",
+    "esc",
+    "battery",
+    "pdb_bec",
+    "fc",
+    "imu",
+    "gnss",
+    "radio_c2",
+    "companion",
+    "gcs"
+   ],
+   "summary": "추진계(모터-ESC-프롭) ← 전원(배터리-PDB) / 제어(FC+IMU+EKF) / 항법(GNSS) / 통신(C2·텔레메트리) / 임무(컴패니언·페이로드)"
+  },
+  {
+   "id": "vision",
+   "name": "비전 기본구조",
+   "alias": "비전|vision|영상 ?처리|시각",
+   "components": [
+    "camera_eo",
+    "gimbal",
+    "companion",
+    "npu",
+    "dl_perception",
+    "tracker",
+    "vio"
+   ],
+   "summary": "센서(EO/IR+짐벌) → 연산(컴패니언+가속기) → 인식/추적/VIO → 제어 입력"
+  },
+  {
+   "id": "nongps",
+   "name": "non-GPS 항법 기본구조",
+   "alias": "non.?gps|비.?gps|gnss.?denied|gps.?(없|불가|거부)|재밍",
+   "components": [
+    "imu",
+    "baro",
+    "optflow_rf",
+    "camera_eo",
+    "lidar",
+    "vio",
+    "lidar_slam",
+    "uwb",
+    "ekf",
+    "companion"
+   ],
+   "summary": "IMU 적분 + 외부 상대관측(VIO/LiDAR SLAM/광류/UWB)을 EKF로 융합. 절대 보정이 없으면 드리프트 누적"
+  },
+  {
+   "id": "motor",
+   "name": "모터 기본구조",
+   "alias": "모터|bldc|motor",
+   "components": [
+    "motor",
+    "esc",
+    "propeller",
+    "battery"
+   ],
+   "summary": "BLDC(고정자·회전자·베어링) ← ESC(3상 인버터, 전류·열 한계) ← 배터리. 부하=프롭"
+  },
+  {
+   "id": "propeller",
+   "name": "프로펠러 기본구조",
+   "alias": "프롭|프로펠러|propeller",
+   "components": [
+    "propeller",
+    "motor"
+   ],
+   "summary": "직경·피치·블레이드 수; 디스크 하중이 효율을 좌우, 팁속도 한계"
+  },
+  {
+   "id": "imu",
+   "name": "IMU 기본구조",
+   "alias": "\\bimu\\b|관성|자이로|가속도계",
+   "components": [
+    "imu",
+    "damper",
+    "ekf",
+    "fc"
+   ],
+   "summary": "MEMS 자이로+가속도 → 진동 절연 → EKF. 온도·진동·바이어스 드리프트"
+  },
+  {
+   "id": "eoir",
+   "name": "EO/IR 카메라 기본구조",
+   "alias": "eo/?ir|열화상|적외선|광학 ?카메라|짐벌",
+   "components": [
+    "camera_eo",
+    "camera_ir",
+    "gimbal",
+    "companion",
+    "vid_pipeline",
+    "radio_video"
+   ],
+   "summary": "광학계+센서 → 짐벌 안정화 → 인코딩/인식 → 영상 링크. GSD = 고도×픽셀피치/초점거리"
+  },
+  {
+   "id": "lidar_radar",
+   "name": "LiDAR·레이더 기본구조",
+   "alias": "라이다|lidar|레이더|radar",
+   "components": [
+    "lidar",
+    "radar",
+    "tof_us",
+    "lidar_slam",
+    "mapper"
+   ],
+   "summary": "LiDAR=고정밀 3D(기상 취약), mmWave 레이더=전천후(해상도 낮음) → 점유지도/SLAM"
+  },
+  {
+   "id": "ai",
+   "name": "AI 기본구조",
+   "alias": "\\bai\\b|인공지능|딥러닝|추론|llm|slm",
+   "components": [
+    "companion",
+    "npu",
+    "dl_perception",
+    "tracker",
+    "task_alloc",
+    "mission_mgr"
+   ],
+   "summary": "센서→전처리→추론(엣지)→의사결정(임무)→제어. 지연·전력·열이 제약"
+  },
+  {
+   "id": "battery",
+   "name": "배터리 기본구조",
+   "alias": "배터리|battery|lipo|리튬",
+   "components": [
+    "battery",
+    "bms",
+    "pdb_bec",
+    "thermal_mgmt"
+   ],
+   "summary": "셀(S·P 구성) + BMS + 커넥터/배선. 저온·고방전에서 전압 강하, 에너지밀도↔출력밀도 트레이드오프"
+  },
+  {
+   "id": "multiagent",
+   "name": "멀티에이전트 기본구조",
+   "alias": "멀티.?에이전트|multi.?agent|다중 ?에이전트",
+   "components": [
+    "swarm_ctrl",
+    "task_alloc",
+    "radio_mesh",
+    "time_sync",
+    "ros2",
+    "sec"
+   ],
+   "summary": "분산 합의/경매 + 통신 계층 + 시간동기 + 보안"
+  },
+  {
+   "id": "swarm_ops",
+   "name": "군집드론 운용 기본구조",
+   "alias": "군집|swarm",
+   "components": [
+    "swarm_ctrl",
+    "task_alloc",
+    "radio_mesh",
+    "uwb",
+    "time_sync",
+    "ros2",
+    "failsafe",
+    "gcs",
+    "sec"
+   ],
+   "summary": "상대위치(UWB/시각) + 메시 통신 + 분산 제어 + 두절 폴백 + 지상 감독"
+  },
+  {
+   "id": "recon_ops",
+   "name": "정찰드론 운용 기본구조",
+   "alias": "정찰|감시|reconnaissance|isr",
+   "components": [
+    "camera_eo",
+    "camera_ir",
+    "gimbal",
+    "dl_perception",
+    "tracker",
+    "radio_video",
+    "vid_pipeline",
+    "mission_mgr",
+    "gcs"
+   ],
+   "summary": "장시간 체공+안정화 센서+실시간 인식+영상 링크. 은밀성(소음·RF 방사)도 설계 변수"
+  },
+  {
+   "id": "rescue_ops",
+   "name": "재난구조 드론 운용 기본구조",
+   "alias": "재난|구조|수색|rescue|sar",
+   "components": [
+    "camera_ir",
+    "dl_perception",
+    "radio_mesh",
+    "modem_lte",
+    "radar",
+    "tof_us",
+    "winch",
+    "release",
+    "failsafe"
+   ],
+   "summary": "인프라 두절 가정(메시/위성) + 열화상 탐색 + 연기·분진에서 레이더 + 인양/투하"
+  },
+  {
+   "id": "drop_ops",
+   "name": "투하물 드론 운용 기본구조",
+   "alias": "투하|살포|낙하|drop",
+   "components": [
+    "release",
+    "fc",
+    "gnss",
+    "ekf",
+    "mission_mgr",
+    "parachute",
+    "winch"
+   ],
+   "summary": "투하점 계산(풍·고도·낙하시간) + 정밀 위치 + 무게중심 변화 보상 + 안전(사람 상공 금지)"
+  },
+  {
+   "id": "comms",
+   "name": "드론 통신방식 기본구조",
+   "alias": "통신 ?방식|데이터 ?링크|링크|datalink|c2 ?link",
+   "components": [
+    "radio_c2",
+    "radio_telem",
+    "radio_video",
+    "radio_mesh",
+    "modem_lte",
+    "satcom",
+    "antenna",
+    "sec"
+   ],
+   "summary": "C2(저지연·소용량) / 텔레메트리 / 영상(고대역) 3종 트래픽을 서로 다른 링크로 분리하는 것이 기본"
+  },
+  {
+   "id": "hetero",
+   "name": "이기종 드론 연동 기본구조",
+   "alias": "이기종|heterogene|상호운용|interop|프로토콜",
+   "components": [
+    "radio_mesh",
+    "ros2",
+    "xrce",
+    "sec",
+    "time_sync"
+   ],
+   "summary": "공통 분모(ROS2/DDS, MQTT, CoT) 중계 + 어댑터 + 시간/좌표계 통일"
+  }
+ ],
+ "missions": [
+  {
+   "id": "recon",
+   "name": "정찰",
+   "alias": "정찰|감시|isr|reconnaissance",
+   "requires": [
+    "target_perception",
+    "visual_sensing|thermal_sensing",
+    "sensor_stabilization",
+    "video_link",
+    "state_estimation",
+    "navigation_planning",
+    "mission_management",
+    "ground_control",
+    "safety_failsafe"
+   ]
+  },
+  {
+   "id": "swarm",
+   "name": "군집",
+   "alias": "군집|swarm",
+   "requires": [
+    "swarm_coordination",
+    "mesh_networking",
+    "relative_localization",
+    "time_sync",
+    "task_allocation",
+    "safety_failsafe",
+    "ground_control",
+    "link_security"
+   ]
+  },
+  {
+   "id": "rescue",
+   "name": "재난구조",
+   "alias": "재난|구조|수색|rescue|sar",
+   "requires": [
+    "thermal_sensing",
+    "target_perception",
+    "mesh_networking|global_link",
+    "near_obstacle",
+    "payload_release|payload_lowering",
+    "state_estimation",
+    "safety_failsafe",
+    "ground_control"
+   ]
+  },
+  {
+   "id": "drop",
+   "name": "투하",
+   "alias": "투하|살포|낙하|drop",
+   "requires": [
+    "payload_release",
+    "state_estimation",
+    "position_gnss",
+    "navigation_planning",
+    "mission_management",
+    "safety_recovery",
+    "safety_failsafe"
+   ]
+  },
+  {
+   "id": "nongps",
+   "name": "비GNSS 운용",
+   "alias": "non.?gps|비.?gps|gnss.?denied|gps.?(없|불가|거부)|재밍",
+   "requires": [
+    "position_nongnss",
+    "state_estimation",
+    "compute_edge",
+    "attitude_estimation"
+   ]
+  }
+ ]
+}
