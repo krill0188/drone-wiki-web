@@ -5,7 +5,7 @@ import { useCompletion } from "@ai-sdk/react"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
 
-type Stage = "idle" | "proposal" | "spec" | "architecture" | "done"
+type Stage = "idle" | "proposal" | "spec" | "architecture" | "implementation" | "done"
 
 const FEATURE_KEY = "drone-builder"
 
@@ -15,12 +15,14 @@ interface BuilderSnapshot {
   proposal: string
   spec: string
   architecture: string
+  implementation?: string
 }
 
 const STAGE_META: Record<Exclude<Stage, "idle" | "done">, { title: string; agent: string }> = {
   proposal: { title: "1. 기획서", agent: "기획서 작성 에이전트" },
   spec: { title: "2. 기술 스펙", agent: "스펙 정의 에이전트" },
-  architecture: { title: "3. 아키텍처 · 코드", agent: "아키텍처·소스코드 설계 에이전트" },
+  architecture: { title: "3. 아키텍처 설계", agent: "아키텍처 설계 에이전트" },
+  implementation: { title: "4. 코드 · 로드맵", agent: "소스코드 설계 에이전트" },
 }
 
 const EXAMPLES = [
@@ -37,6 +39,7 @@ export default function AiDroneBuilderPage() {
 
   const proposalRef = useRef("")
   const specRef = useRef("")
+  const archRef = useRef("")
 
   // 3단계를 useCompletion 하나로 재귀 체이닝하면(onFinish 안에서 같은 훅의 complete를
   // 다시 호출) 세 단계가 completionId(=SWR 캐시 키)를 공유해서 상태가 서로 덮어써진다
@@ -67,12 +70,32 @@ export default function AiDroneBuilderPage() {
   const archHook = useCompletion({
     id: "drone-builder-architecture",
     api: "/api/drone-builder",
+    onFinish: (_prompt, text) => {
+      archRef.current = text
+      setStage("implementation")
+      implHook.complete(concept, {
+        body: {
+          stage: "implementation",
+          context: { proposal: proposalRef.current, spec: specRef.current, architecture: text },
+        },
+      })
+    },
+  })
+
+  const implHook = useCompletion({
+    id: "drone-builder-implementation",
+    api: "/api/drone-builder",
     onFinish: () => setStage("done"),
   })
 
-  const hooks = { proposal: proposalHook, spec: specHook, architecture: archHook } as const
-  const busy = proposalHook.isLoading || specHook.isLoading || archHook.isLoading
-  const error = proposalHook.error || specHook.error || archHook.error
+  const hooks = {
+    proposal: proposalHook,
+    spec: specHook,
+    architecture: archHook,
+    implementation: implHook,
+  } as const
+  const busy = proposalHook.isLoading || specHook.isLoading || archHook.isLoading || implHook.isLoading
+  const error = proposalHook.error || specHook.error || archHook.error || implHook.error
 
   // 세션 복원(2026-08-08): 이 페이지는 정적 프리렌더 대상이라, 저장된 값을 훅
   // 초기값으로 곧장 넣으면 서버가 그린 빈 상태와 클라이언트 첫 렌더가 달라져
@@ -91,8 +114,10 @@ export default function AiDroneBuilderPage() {
         proposalHook.setCompletion(saved.proposal)
         specHook.setCompletion(saved.spec)
         archHook.setCompletion(saved.architecture)
+        implHook.setCompletion(saved.implementation ?? "")
         proposalRef.current = saved.proposal
         specRef.current = saved.spec
+        archRef.current = saved.architecture
       }
     }
     restoredRef.current = true
@@ -108,24 +133,36 @@ export default function AiDroneBuilderPage() {
       proposal: proposalHook.completion,
       spec: specHook.completion,
       architecture: archHook.completion,
+      implementation: implHook.completion,
     })
-  }, [concept, stage, proposalHook.completion, specHook.completion, archHook.completion, sessionId])
+  }, [
+    concept,
+    stage,
+    proposalHook.completion,
+    specHook.completion,
+    archHook.completion,
+    implHook.completion,
+    sessionId,
+  ])
 
   const start = () => {
     if (!concept.trim() || busy) return
     proposalRef.current = ""
     specRef.current = ""
+    archRef.current = ""
     proposalHook.setCompletion("")
     specHook.setCompletion("")
     archHook.setCompletion("")
+    implHook.setCompletion("")
     setStage("proposal")
     proposalHook.complete(concept, { body: { stage: "proposal" } })
   }
 
-  const stages: Exclude<Stage, "idle" | "done">[] = ["proposal", "spec", "architecture"]
+  const stages: Exclude<Stage, "idle" | "done">[] = ["proposal", "spec", "architecture", "implementation"]
   const isStageDone = (s: Exclude<Stage, "idle" | "done">) => {
     if (s === "proposal") return stage !== "idle" && stage !== "proposal"
-    if (s === "spec") return stage === "architecture" || stage === "done"
+    if (s === "spec") return stage === "architecture" || stage === "implementation" || stage === "done"
+    if (s === "architecture") return stage === "implementation" || stage === "done"
     return stage === "done"
   }
   const isStageActive = (s: Exclude<Stage, "idle" | "done">) => stage === s
@@ -134,7 +171,7 @@ export default function AiDroneBuilderPage() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-1">🚀 AI 드론 빌더</h1>
       <p className="text-sm text-slate-500 mb-6">
-        드론 컨셉 한 줄을 입력하면 <strong>기획서 작성 → 스펙 정의 → 아키텍처·코드 설계</strong> 3개 에이전트가
+        드론 컨셉 한 줄을 입력하면 <strong>기획서 작성 → 스펙 정의 → 아키텍처 설계 → 코드·로드맵</strong> 4단계 에이전트가
         DroneWiki 지식 베이스(GraphRAG)를 근거로 순차 협업해 결과물을 만듭니다.
       </p>
 
@@ -164,7 +201,7 @@ export default function AiDroneBuilderPage() {
           >
             {busy && stage !== "idle" && stage !== "done"
               ? `${STAGE_META[stage as keyof typeof STAGE_META]?.agent ?? "실행"} 작업 중...`
-              : "🤖 3단계 에이전트 실행"}
+              : "🤖 4단계 에이전트 실행"}
           </button>
         </div>
         {error && (

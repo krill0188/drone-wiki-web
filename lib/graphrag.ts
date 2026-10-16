@@ -162,15 +162,27 @@ function bfsSubgraph(
   return { nodeIds: [...visited], edges: collectedEdges }
 }
 
+const GENERIC_EDGE_TYPES = new Set(["related", "wikilink", "RELATED", "WIKILINK"])
+
 function formatConnections(
   edges: CombinedEdge[],
-  nodeById: Map<string, CombinedNode>
+  nodeById: Map<string, CombinedNode>,
+  focus?: { seedIds: Set<string> }
 ): { lines: string[]; hasUnverified: boolean } {
+  if (focus) {
+    // 설계용(focus) 모드: 시드(질의와 직접 관련된 문서)에 닿는 엣지만 남기고,
+    // 의미 있는 관계(USED_FOR 등)를 일반 관계(related/wikilink)보다 먼저 노출한다.
+    // 도메인이 다른 문서가 2-hop으로 딸려와 근거를 흐리는 노이즈를 줄이는 목적.
+    const touching = edges.filter((e) => focus.seedIds.has(e.source) || focus.seedIds.has(e.target))
+    const typed = touching.filter((e) => !GENERIC_EDGE_TYPES.has(e.type))
+    const generic = touching.filter((e) => GENERIC_EDGE_TYPES.has(e.type))
+    edges = [...typed, ...generic].slice(0, 16)
+  }
   // 서로 다른 주제/도메인을 잇는 엣지("다리")를 우선 노출한다 — 드론↔AI 한 쌍이
   // 아니라 flight-control↔regulations, comms-protocol↔ai-autonomy 등 실제로
   // 갈리는 모든 주제 조합이 대상이다. 둘 다 topic을 모르면(둘 다 discovery에서
   // ontologyClass도 없는 경우 등) origin 차이로라도 폴백해 다리를 잡는다.
-  const bridges = edges.filter((e) => {
+  const bridges = focus ? [] : edges.filter((e) => {
     const s = nodeById.get(e.source)
     const t = nodeById.get(e.target)
     if (!s || !t) return false
@@ -178,7 +190,7 @@ function formatConnections(
     return s.origin !== t.origin
   })
   const rest = edges.filter((e) => !bridges.includes(e))
-  const ordered = [...bridges, ...rest].slice(0, 20)
+  const ordered = [...bridges, ...rest].slice(0, focus ? 16 : 20)
 
   const lines: string[] = []
   let hasUnverified = false
@@ -199,7 +211,11 @@ function formatConnections(
  * 매칭되는 discovery 개념을 출발점으로, canonical/discovery 그래프를 함께
  * 2홉 탐색해 개념 간 연결 경로를 시스템 프롬프트용 텍스트 블록으로 만든다.
  */
-export function graphRagSearch(query: string, canonicalSeedSlugs: string[]): GraphRagResult {
+export function graphRagSearch(
+  query: string,
+  canonicalSeedSlugs: string[],
+  opts?: { focus?: boolean }
+): GraphRagResult {
   const canonical = loadGraph()
   const discovery = loadDiscoveryGraph()
   if (canonical.nodes.length === 0 && discovery.nodes.length === 0) {
@@ -241,12 +257,18 @@ export function graphRagSearch(query: string, canonicalSeedSlugs: string[]): Gra
     adjacency.get(e.target)!.push({ edge: e, neighbor: e.source })
   }
 
-  const discoverySeeds = findDiscoverySeeds(query, discovery.nodes, 6).map(discoveryIdOf)
-  const seeds = [...new Set([...canonicalSeedSlugs, ...discoverySeeds])].filter((id) => nodeById.has(id))
+  const focus = !!opts?.focus
+  const discoverySeeds = findDiscoverySeeds(query, discovery.nodes, focus ? 3 : 6).map(discoveryIdOf)
+  const canonicalSeeds = focus ? canonicalSeedSlugs.slice(0, 5) : canonicalSeedSlugs
+  const seeds = [...new Set([...canonicalSeeds, ...discoverySeeds])].filter((id) => nodeById.has(id))
   if (seeds.length === 0) return { block: "", usedDiscovery: false }
 
-  const subgraph = bfsSubgraph(seeds, adjacency, nodeById, 2, 25)
-  const { lines, hasUnverified } = formatConnections(subgraph.edges, nodeById)
+  const subgraph = focus ? bfsSubgraph(seeds, adjacency, nodeById, 1, 20) : bfsSubgraph(seeds, adjacency, nodeById, 2, 25)
+  const { lines, hasUnverified } = formatConnections(
+    subgraph.edges,
+    nodeById,
+    focus ? { seedIds: new Set(seeds) } : undefined
+  )
   if (lines.length === 0) return { block: "", usedDiscovery: false }
 
   const block = `<graph-connections>

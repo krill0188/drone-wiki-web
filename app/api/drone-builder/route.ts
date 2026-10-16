@@ -22,20 +22,22 @@ const GROUNDING_EXCERPT_CHARS = 500
 // 단계별 분량을 제한해 서버 제한시간(300s) 안에 끝나게 한다. 분량 지시 + 토큰 상한을 함께 둔다.
 const STAGE_LIMITS: Record<Stage, { chars: number; maxOutputTokens: number }> = {
   proposal: { chars: 2500, maxOutputTokens: 3000 },
-  spec: { chars: 3500, maxOutputTokens: 4000 },
-  architecture: { chars: 5000, maxOutputTokens: 6000 },
+  spec: { chars: 4500, maxOutputTokens: 5000 },
+  architecture: { chars: 3500, maxOutputTokens: 4500 },
+  implementation: { chars: 4000, maxOutputTokens: 5000 },
 }
 
-type Stage = "proposal" | "spec" | "architecture"
+type Stage = "proposal" | "spec" | "architecture" | "implementation"
 
 interface StageContext {
   proposal?: string
   spec?: string
+  architecture?: string
 }
 
 function buildGroundingBlock(query: string): string {
   const sources = ragSearch(query, 8, { diversify: true })
-  const graph = graphRagSearch(query, sources.map((s) => s.slug))
+  const graph = graphRagSearch(query, sources.map((s) => s.slug), { focus: true })
   const kb = sources
     .map((s, i) => {
       const propsLine = s.properties && Object.keys(s.properties).length
@@ -89,12 +91,25 @@ ${context.proposal ?? "(기획서 없음)"}
 
 ${grounding}
 
+# 온톨로지 클래스 (구성요소마다 아래 중 하나를 지정할 것)
+Drone(Multirotor·FixedWing·VTOL) / Sensor(IMU·GNSS·Camera·LiDAR·Barometer·Magnetometer) /
+Actuator(Motor·ESC·Gimbal) / ComputeUnit(FlightController·CompanionComputer) /
+FlightStack(PX4·ArduPilot) / MiddlewareFramework(ROS2) / AIModel / Mission.
+배터리·프로펠러·프레임·데이터링크처럼 위에 없는 요소는 클래스를 "미정의"로 쓰고, 마지막 절의
+'온톨로지 보강 필요'에 모아라.
+
 # 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
-## 1. 하드웨어 구성 (FC·센서·통신·배터리·짐벌 등, 표로 정리)
-## 2. 소프트웨어 스택 (비행 스택·GCS·미들웨어·온보드 컴퓨터)
-## 3. 성능 요구사항 (항속거리·체공시간·페이로드·최대속도 등)
-## 4. 통신/프로토콜
-## 5. 규정 준수 요건
+## 1. 구성요소 표
+| 구성요소 | 온톨로지 클래스 | 선정안 | 핵심 사양 | 인터페이스 | 근거 |
+(모든 하드웨어·소프트웨어 요소를 한 표로. 근거 칸에는 위 자료의 문서 제목을 쓰고, 자료에 없으면 "근거 없음".)
+## 2. 의존·호환 관계
+"A --관계--> B" 형식으로 5~10줄 (관계 예: powers, controls, interfaces_with, runs_on, requires).
+각 줄 끝에 한 문장으로 그렇게 판단한 이유(추론)를 덧붙여라.
+## 3. 성능 요구와 충돌 검사
+항속거리·체공시간·페이로드 등 요구사항 3~5개를 구성요소 선정안과 대조해 충족/위험/근거 부족으로 판정하고,
+서로 충돌하는 요구(예: 체공시간 vs 페이로드)가 있으면 명시해라.
+## 4. 규정 준수 요건
+## 5. 온톨로지 보강 필요 (클래스 미정의 요소, 근거 없음으로 남은 항목)
 
 한국어로 작성.`
 }
@@ -120,10 +135,40 @@ ${context.spec ?? "(스펙 없음)"}
 ${grounding}
 
 # 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
-## 1. 시스템 아키텍처 개요 (\`\`\`mermaid 다이어그램 코드블록 포함)
-## 2. 모듈별 책임
-## 3. 핵심 코드 스켈레톤 (스펙에 맞는 언어 선택, 예: PX4 파라미터 스크립트·MAVSDK/ROS2 연동 등, 코드블록으로)
-## 4. 개발 로드맵 (마일스톤)
+## 1. 시스템 아키텍처 개요 (\`\`\`mermaid 다이어그램 코드블록 포함, 스펙 2절의 의존·호환 관계를 그대로 반영)
+## 2. 모듈별 책임 (모듈 | 담당 구성요소(스펙 1절 표의 이름) | 입력 | 출력 | 사용 프로토콜·토픽)
+## 3. 설계 판단 근거 (스펙의 충돌·위험 항목을 아키텍처로 어떻게 해소했는지 3~5줄)
+
+코드 스켈레톤과 로드맵은 다음 단계 에이전트가 맡으니 여기서는 쓰지 마라.
+한국어로 작성.`
+}
+
+function implementationSystemPrompt(manifest: string, grounding: string, context: StageContext): string {
+  return `당신은 DroneWiki 소속 '소스코드 설계 에이전트'다. 4단계 협업 파이프라인의 마지막 단계를 맡는다.
+앞 단계의 기획서·스펙·아키텍처를 받아 초기 구현 스켈레톤 코드와 개발 로드맵을 작성하는 것이 임무다.
+
+${manifest}
+
+<proposal>
+${(context.proposal ?? "(기획서 없음)").slice(0, 2500)}
+</proposal>
+
+<spec>
+${(context.spec ?? "(스펙 없음)").slice(0, 4500)}
+</spec>
+
+<architecture>
+${context.architecture ?? "(아키텍처 없음)"}
+</architecture>
+
+아래는 DroneWiki 지식 베이스의 관련 API·파라미터 자료와 그래프 연결고리다 —
+실제 프로토콜명·파라미터명·API를 정확히 사용해라. [AI 추출·미검증] 항목은 참고만 해라.
+
+${grounding}
+
+# 출력 형식 (마크다운, 이 구조를 그대로 따를 것)
+## 1. 핵심 코드 스켈레톤 (아키텍처의 모듈명과 일치시킬 것, 스펙에 맞는 언어 선택, 코드블록)
+## 2. 개발 로드맵 (마일스톤별 완료 기준, 스펙의 위험·근거 부족 항목을 검증하는 단계를 포함)
 
 한국어로 작성.`
 }
@@ -140,7 +185,9 @@ export async function POST(req: NextRequest) {
       ? prompt
       : stage === "spec"
         ? `${prompt} ${(context?.proposal ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
-        : `${prompt} ${(context?.spec ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
+        : stage === "architecture"
+          ? `${prompt} ${(context?.spec ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
+          : `${prompt} ${(context?.architecture ?? "").slice(0, GROUNDING_EXCERPT_CHARS)}`
 
   const grounding = buildGroundingBlock(query)
   const manifest = await buildAgentManifest()
@@ -150,12 +197,14 @@ export async function POST(req: NextRequest) {
       ? proposalSystemPrompt(manifest, grounding)
       : stage === "spec"
         ? specSystemPrompt(manifest, grounding, context ?? {})
-        : architectureSystemPrompt(manifest, grounding, context ?? {})
+        : stage === "architecture"
+          ? architectureSystemPrompt(manifest, grounding, context ?? {})
+          : implementationSystemPrompt(manifest, grounding, context ?? {})
 
   const limit = STAGE_LIMITS[stage]
   const result = streamText({
     model: wikiModel(),
-    system: `${system}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 20줄 이내로 제한해라.`,
+    system: `${system}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`,
     maxOutputTokens: limit.maxOutputTokens,
     prompt: `드론 컨셉: ${prompt}`,
   })
