@@ -13,7 +13,7 @@ import { buildAgentManifest } from "@/lib/agent-manifest"
 // GraphRAG(lib/rag.ts + lib/graphrag.ts)로 지식 베이스를 다시 조회해 근거를 댄다
 // (이전 단계 산출물을 그대로 베끼는 게 아니라, 그 단계에 맞는 새 근거를 찾는다).
 
-export const maxDuration = 90
+export const maxDuration = 300
 
 
 const GROUNDING_EXCERPT_CHARS = 500
