@@ -3,6 +3,7 @@ import { generateText } from "ai"
 import { ragSearch, searchNews } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildOntologyContext } from "@/lib/ontology-qa"
+import { evaluateDesignGate } from "@/lib/design-gate"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildSystemPrompt } from "@/lib/chat-system-prompt"
 import { botModel, checkBotToken } from "@/lib/bot-model"
@@ -23,12 +24,15 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: "question required" }, { status: 400 })
   }
 
-  const onto = buildOntologyContext(question)
+  const gate = evaluateDesignGate([question])
+  if (gate.reply) return Response.json({ answer: gate.reply, sources: [], newsSources: [] })
+
+  const onto = buildOntologyContext(gate.augment ? `${question}\n${gate.augment}` : question)
   const sources = ragSearch(onto.classes.length ? `${question} ${onto.classes.join(" ")}` : question, 6, { diversify: true })
   const newsHits = searchNews(question, 4)
   const graph = graphRagSearch(question, sources.map((s) => s.slug))
   const manifest = await buildAgentManifest()
-  const system = buildSystemPrompt(manifest, null, [], sources, graph.block, newsHits, onto.block)
+  const system = buildSystemPrompt(manifest, null, [], sources, graph.block, newsHits, gate.block ? `${gate.block}\n${onto.block}` : onto.block)
 
   const result = await generateText({
     model: botModel(),
