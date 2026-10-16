@@ -18,6 +18,14 @@ export const maxDuration = 300
 
 const GROUNDING_EXCERPT_CHARS = 500
 
+// 2026-10-16: NVIDIA NIM 무료 엔드포인트는 생성 속도가 느리고 들쭉날쭉해서(3단계 합 5~9분),
+// 단계별 분량을 제한해 서버 제한시간(300s) 안에 끝나게 한다. 분량 지시 + 토큰 상한을 함께 둔다.
+const STAGE_LIMITS: Record<Stage, { chars: number; maxOutputTokens: number }> = {
+  proposal: { chars: 2500, maxOutputTokens: 3000 },
+  spec: { chars: 3500, maxOutputTokens: 4000 },
+  architecture: { chars: 5000, maxOutputTokens: 6000 },
+}
+
 type Stage = "proposal" | "spec" | "architecture"
 
 interface StageContext {
@@ -144,9 +152,11 @@ export async function POST(req: NextRequest) {
         ? specSystemPrompt(manifest, grounding, context ?? {})
         : architectureSystemPrompt(manifest, grounding, context ?? {})
 
+  const limit = STAGE_LIMITS[stage]
   const result = streamText({
     model: wikiModel(),
-    system,
+    system: `${system}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 20줄 이내로 제한해라.`,
+    maxOutputTokens: limit.maxOutputTokens,
     prompt: `드론 컨셉: ${prompt}`,
   })
 
