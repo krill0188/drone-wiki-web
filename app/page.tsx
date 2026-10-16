@@ -89,7 +89,7 @@ export default async function HomePage() {
             emoji="🚀"
             eyebrow="새 드론 프로젝트를 시작할 때"
             title="AI 드론 빌더"
-            desc="기획서 → 스펙 → 아키텍처, 3단계 에이전트가 순차로 작성"
+            desc="기획 → HW·SW 스펙 → 기술 스펙 → 아키텍처 → 코드·로드맵, 6단계 에이전트가 순차로 작성"
           />
         </div>
 
