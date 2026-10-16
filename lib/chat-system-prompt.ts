@@ -13,7 +13,8 @@ export function buildSystemPrompt(
   recentDocs: DocViewRecord[],
   sources: RagSource[],
   graphBlock: string,
-  newsHits: NewsHit[]
+  newsHits: NewsHit[],
+  ontologyBlock = ""
 ): string {
   const contextParts = sources.map((s, i) => {
     // 2026-08-20 팔란티어 온톨로지 Link 보강 — frontmatter 구조화 속성과
@@ -64,11 +65,15 @@ ${currentDocBlock}${recentDocsBlock}<knowledge-base>
 ${contextParts.join("\n\n") || "(관련 위키 문서 없음)"}
 </knowledge-base>
 
-${graphBlock ? `${graphBlock}\n\n` : ""}<latest-news>
+${ontologyBlock ? `${ontologyBlock}\n\n` : ""}${graphBlock ? `${graphBlock}\n\n` : ""}<latest-news>
 ${newsParts.join("\n") || "(관련 최신 뉴스 없음)"}
 </latest-news>
 
 답변 지침:
+- <ontology>가 있으면 온톨로지 우선으로 답한다: ① 질문이 가리키는 클래스와 계층상 위치 → ② 클래스 간 관계(무엇이 무엇을
+  구동·전원공급·장착·호환 확인해야 하는지) → ③ 위키 문서([1] 등)를 근거로 한 구체 사실·수치 순서로 구성.
+  클래스 관계는 구조 정의일 뿐 개별 제품 수치의 근거가 아니므로, 수치·사양은 반드시 지식 베이스 문서에서 인용하고
+  문서에 없으면 "확인 필요"로 표시. [AI 추출·미검증] 관계는 확정 사실처럼 쓰지 말 것
 - <current-document>가 있으면 그 내용을 최우선 근거로 삼아 답변
 - 지식 베이스와 최신 뉴스를 종합하여 구체적으로 답변
 - <graph-connections>가 있으면 서로 다른 주제·도메인 사이의 연결고리를 설명할 때

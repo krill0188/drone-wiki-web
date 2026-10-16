@@ -2,6 +2,7 @@ import { NextRequest } from "next/server"
 import { generateText } from "ai"
 import { ragSearch, searchNews } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
+import { buildOntologyContext } from "@/lib/ontology-qa"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildSystemPrompt } from "@/lib/chat-system-prompt"
 import { botModel, checkBotToken } from "@/lib/bot-model"
@@ -22,11 +23,12 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: "question required" }, { status: 400 })
   }
 
-  const sources = ragSearch(question, 6, { diversify: true })
+  const onto = buildOntologyContext(question)
+  const sources = ragSearch(onto.classes.length ? `${question} ${onto.classes.join(" ")}` : question, 6, { diversify: true })
   const newsHits = searchNews(question, 4)
   const graph = graphRagSearch(question, sources.map((s) => s.slug))
   const manifest = await buildAgentManifest()
-  const system = buildSystemPrompt(manifest, null, [], sources, graph.block, newsHits)
+  const system = buildSystemPrompt(manifest, null, [], sources, graph.block, newsHits, onto.block)
 
   const result = await generateText({
     model: botModel(),

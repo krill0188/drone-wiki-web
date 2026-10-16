@@ -9,6 +9,7 @@ import {
 import { wikiModel } from "@/lib/ai-model"
 import { ragSearch, searchNews } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
+import { buildOntologyContext } from "@/lib/ontology-qa"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildSystemPrompt } from "@/lib/chat-system-prompt"
 import type { DocContext } from "@/lib/types"
@@ -39,14 +40,17 @@ export async function POST(req: NextRequest) {
   // 현재 보고 있는 문서 제목을 검색어에 섞어 RAG 검색을 문서 맥락에 맞춰 편향시킨다.
   const ragQuery = docContext ? `${docContext.title} ${question}` : question
 
-  const sources = ragQuery ? ragSearch(ragQuery, 6, { diversify: true }) : []
+  // 온톨로지 우선: 질문을 클래스로 해석하고, 클래스명을 검색어에 보태 관련 카탈로그가 올라오게 한다.
+  const onto = buildOntologyContext(question, docContext?.title)
+  const searchQuery = onto.classes.length ? `${ragQuery} ${onto.classes.join(" ")}` : ragQuery
+  const sources = ragQuery ? ragSearch(searchQuery, 6, { diversify: true }) : []
   const newsHits = ragQuery ? searchNews(ragQuery, 4) : []
   // 벡터/키워드로 찾은 canonical 시드에서 출발해 canonical+discovery 그래프를
   // 함께 멀티홉 탐색 — 드론 지식과 AI 지식을 잇는 연결고리를 찾는 GraphRAG 레이어.
   const graph = ragQuery ? graphRagSearch(ragQuery, sources.map((s) => s.slug)) : { block: "", usedDiscovery: false }
   const manifest = await buildAgentManifest()
 
-  const system = buildSystemPrompt(manifest, docContext ?? null, recentDocs ?? [], sources, graph.block, newsHits)
+  const system = buildSystemPrompt(manifest, docContext ?? null, recentDocs ?? [], sources, graph.block, newsHits, onto.block)
 
   const result = streamText({
     model: wikiModel(),
@@ -68,6 +72,7 @@ export async function POST(req: NextRequest) {
               origin: s.origin,
               sourceUrl: s.properties?.source || s.properties?.source_url,
             })),
+            ontologyClasses: onto.classes,
             newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
           }
         }
