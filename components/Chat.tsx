@@ -29,7 +29,7 @@ const EXAMPLES = [
 // 그대로 따르되, 두 가지는 드론 지식베이스 전용 서비스라는 걸 보여주는 지점이라
 // 일부러 다르게 간다: (1) GraphRAG 인용 배지로 "그냥 LLM이 아니다"를 드러내고,
 // (2) 로딩 상태를 레이더 스캔 문구로 바꿔 실제 파이프라인(RAG→그래프→생성)을 보여준다.
-const SCAN_LABELS = ["지식베이스 스캔 중", "그래프 연결고리 탐색 중", "답변 조합 중"]
+const SCAN_LABELS = ["지식베이스 스캔 중", "그래프 연결고리 탐색 중", "추론 중 (복잡한 질문은 10~20초)", "답변 조합 중"]
 
 // 화면 우측에 고정되는 실시간 스트리밍 AI 챗봇. 위키 문서를 보는 중이면
 // WikiDocContext에서 현재 문서를 읽어 매 요청마다 함께 전송한다(문서 기반 대화).
@@ -71,9 +71,12 @@ export default function ChatWidget() {
   }, [messages, sessionId])
 
   const busy = status === "submitted" || status === "streaming"
-  // 첫 토큰이 오기 전(submitted)에만 스캔 상태를 보여준다 — 토큰이 도착하기
-  // 시작하면(streaming) 실제 말풍선이 자라나는 것 자체가 진행 표시라 중복 표시하지 않는다.
-  const scanning = status === "submitted"
+  // 실제 답변 글자가 나오기 전까지 스캔/추론 상태를 보여준다. 추론 모델은 생각하는 동안
+  // 스트림이 이미 시작(streaming)돼 있어도 글자가 없으므로 status만으로는 빈 화면이 된다.
+  const lastMsg = messages[messages.length - 1]
+  const answerStarted =
+    lastMsg?.role === "assistant" && lastMsg.parts.some((p) => p.type === "text" && p.text.trim().length > 0)
+  const scanning = busy && !answerStarted
 
   useEffect(() => {
     if (open) endRef.current?.scrollIntoView({ behavior: "smooth" })
