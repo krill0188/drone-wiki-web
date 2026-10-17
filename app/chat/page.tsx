@@ -196,6 +196,9 @@ export default function ChatPage() {
           전송
         </button>
       </div>
+      <p className="mt-2 rounded-md bg-slate-100 dark:bg-slate-800 px-3 py-2 text-xs text-slate-500 dark:text-slate-400">
+        무료버전이라 응답시간은 느리지만 최대 8초이상 걸릴수 있어요
+      </p>
     </div>
   )
 }

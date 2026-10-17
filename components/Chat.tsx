@@ -318,6 +318,9 @@ export default function ChatWidget() {
               </svg>
             </button>
           </div>
+          <p className="mt-2 rounded-md bg-ink-dim/10 px-2.5 py-1.5 text-[11px] leading-snug text-ink-dim">
+            무료버전이라 응답시간은 느리지만 최대 8초이상 걸릴수 있어요
+          </p>
         </div>
       </aside>
     </>
