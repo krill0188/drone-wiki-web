@@ -2,6 +2,7 @@
 // 그래프 승격 검토(app/api/discovery/draft)가 동일한 frontmatter/섹션 규칙을
 // 써야 하므로 여기 하나로 모았다(두 군데서 따로 유지하면 포맷이 갈릴 위험).
 
+// vendor-registry / software-ecosystem 은 레지스트리 이관 문서 전용이라 에디터 선택지에서 제외한다.
 export const DOMAIN_ENUM = [
   "flight-control",
   "comms-protocol",
@@ -10,6 +11,16 @@ export const DOMAIN_ENUM = [
   "ops-mission",
   "regulations",
   "ai-autonomy",
+  "sensing-perception",
+  "navigation-gnss-denied",
+  "ros-middleware",
+  "rf-datalink-engineering",
+  "mechanical-structures",
+  "electrical-power",
+  "swarm-multiagent",
+  "simulation-test",
+  "edge-ai-compute",
+  "security",
 ]
 
 export function buildWikiStyleSystemPrompt(today: string, roleIntro: string): string {
