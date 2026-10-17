@@ -2,42 +2,52 @@ import { createOpenAICompatible } from "@ai-sdk/openai-compatible"
 import { openrouter } from "@openrouter/ai-sdk-provider"
 
 const NVIDIA_NIM_BASE_URL = "https://integrate.api.nvidia.com/v1"
-const DEFAULT_NVIDIA_MODEL = "deepseek-ai/deepseek-v4.1-flash"
 const DEFAULT_OPENROUTER_MODEL = "anthropic/claude-haiku-4.5"
 
 /**
  * Selects NVIDIA API Catalog when NVIDIA_NIM_API_KEY is configured.
  * OpenRouter remains the safe fallback for local development and rollback.
  */
-// 모델 체인: 주 모델이 첫 글자를 FIRST_CHUNK_MS 안에 안 보내거나 오류(404/410/5xx)면 다음 모델로 넘긴다.
-// (2026-10-17 deepseek-v4.1-flash 무응답으로 60초 상한에서 끊기던 문제 대응)
-// 환경변수 NVIDIA_NIM_FALLBACK_MODELS(쉼표 구분)로 교체 가능. 비우면 기본 체인.
-const DEFAULT_FALLBACKS = ["nvidia/nemotron-3-super-120b-a12b", "openai/gpt-oss-20b"]
-const FIRST_CHUNK_MS = Number(process.env.NVIDIA_NIM_FIRST_CHUNK_MS) || 12000
-const TOTAL_BUDGET_MS = 50000
+// 모델 체인(2026-10-17 순차 실측 기반): 실제 설계 프롬프트(1.8만 자)에서
+//   gpt-oss-20b + reasoning_effort=low → 첫 답 1.7초 / 완료 30초 (추론 짧게 있음)
+//   nemotron-3-super + 추론 끔        → 첫 답 1.1초 / 완료 44초
+// deepseek-v4.1-flash·glm-5.3-flash·step-5(추론 끔 제외)·laguna 는 무응답/미작동/느림으로 제외.
+// 판정 기준은 "추론 글자"가 아니라 "첫 답변 글자(content)" — 추론이 길어지면 다음 모델로 넘긴다.
+type ModelSpec = { id: string; extra: Record<string, unknown> }
+const DEFAULT_CHAIN: ModelSpec[] = [
+  { id: "openai/gpt-oss-20b", extra: { reasoning_effort: "low" } },
+  { id: "nvidia/nemotron-3-super-120b-a12b", extra: { chat_template_kwargs: { enable_thinking: false } } },
+]
+const FIRST_CONTENT_MS = Number(process.env.NVIDIA_NIM_FIRST_CONTENT_MS) || 15000
+const TOTAL_BUDGET_MS = 50000 // 전환 판단에 쓰는 시간 예산(응답 전체 한도는 라우트 maxDuration 120초)
 
-function modelChain(): string[] {
-  const primary = process.env.NVIDIA_NIM_MODEL || DEFAULT_NVIDIA_MODEL
-  const extra = (process.env.NVIDIA_NIM_FALLBACK_MODELS ?? "").split(",").map((m) => m.trim()).filter(Boolean)
-  return [...new Set([primary, ...(extra.length ? extra : DEFAULT_FALLBACKS)])]
+// NVIDIA_NIM_CHAIN(쉼표 구분 모델 id)을 주면 그 순서로, 없으면 기본 체인. 옛 NVIDIA_NIM_MODEL 값은 무시한다.
+function modelChain(): ModelSpec[] {
+  const ids = (process.env.NVIDIA_NIM_CHAIN ?? "").split(",").map((m) => m.trim()).filter(Boolean)
+  if (!ids.length) return DEFAULT_CHAIN
+  return ids.map((id) => DEFAULT_CHAIN.find((m) => m.id === id) ?? { id, extra: {} })
 }
 
-// deepseek 계열은 추론(thinking)을 켠 채 긴 RAG 프롬프트를 받으면 응답이 20~60초까지 늘어난다.
-// 기본은 thinking OFF, NVIDIA_NIM_THINKING=on 이면 켠다. (deepseek 이외 모델에는 넣지 않는다)
-function withModel(body: Record<string, unknown>, model: string): string {
-  const next: Record<string, unknown> = { ...body, model }
-  if (model.includes("deepseek") && process.env.NVIDIA_NIM_THINKING !== "on") {
-    next.chat_template_kwargs = { thinking: false, ...(body.chat_template_kwargs as object | undefined) }
-  }
-  if (model.includes("nemotron")) {
-    // nemotron은 추론 글자를 먼저 흘려 첫 청크는 빨라도 실제 답이 ~20초 늦는다. 추론을 끈다.
-    next.chat_template_kwargs = { enable_thinking: false, ...(body.chat_template_kwargs as object | undefined) }
-  }
-  return JSON.stringify(next)
+function withModel(body: Record<string, unknown>, spec: ModelSpec): string {
+  return JSON.stringify({ ...body, ...spec.extra, model: spec.id })
 }
 
-// 첫 청크를 timeoutMs 안에 받으면 그 청크를 되돌려 붙인 Response를, 아니면 null을 돌려준다.
-async function firstChunkOrNull(
+// SSE 청크에 실제 답변(content) 또는 도구 호출이 들어 있는지 본다. 추론(reasoning) 글자는 세지 않는다.
+function hasAnswer(sseText: string): boolean {
+  for (const line of sseText.split("\n")) {
+    if (!line.startsWith("data:") || line.includes("[DONE]")) continue
+    try {
+      const delta = JSON.parse(line.slice(5)).choices?.[0]?.delta
+      if (delta?.content || delta?.tool_calls) return true
+    } catch {
+      // 청크 경계에서 잘린 줄은 다음 청크와 합쳐져 다시 검사된다
+    }
+  }
+  return false
+}
+
+// 첫 "답변" 글자를 timeoutMs 안에 받으면 지금까지 읽은 청크를 되돌려 붙인 Response를, 아니면 null을 돌려준다.
+async function firstAnswerOrNull(
   input: Parameters<typeof fetch>[0],
   init: RequestInit,
   body: string,
@@ -52,14 +62,28 @@ async function firstChunkOrNull(
     const res = await fetch(input, { ...init, body, signal: ctrl.signal })
     if (!res.ok || !res.body) return null
     const reader = res.body.getReader()
-    const first = await reader.read() // 타이머가 abort하면 여기서 throw
+    const decoder = new TextDecoder()
+    const buffered: Uint8Array[] = []
+    let text = ""
+    let ended = false
+    while (!hasAnswer(text)) {
+      const r = await reader.read() // 타이머가 abort하면 여기서 throw
+      if (r.done) {
+        ended = true
+        break
+      }
+      buffered.push(r.value)
+      text += decoder.decode(r.value, { stream: true })
+    }
     clearTimeout(timer)
-    if (first.done) return null
+    if (ended && !hasAnswer(text)) return null
     const stream = new ReadableStream<Uint8Array>({
       start(c) {
-        c.enqueue(first.value)
+        for (const chunk of buffered) c.enqueue(chunk)
+        if (ended) c.close()
       },
       async pull(c) {
+        if (ended) return
         const r = await reader.read()
         r.done ? c.close() : c.enqueue(r.value)
       },
@@ -88,12 +112,12 @@ const chainFetch: typeof fetch = async (input, init) => {
     const left = TOTAL_BUDGET_MS - (Date.now() - started)
     if (left <= 1000) break
     const last = i === chain.length - 1
-    const res = await firstChunkOrNull(input, init, withModel(parsed, chain[i]), last ? left : Math.min(FIRST_CHUNK_MS, left))
+    const res = await firstAnswerOrNull(input, init, withModel(parsed, chain[i]), last ? left : Math.min(FIRST_CONTENT_MS, left))
     if (res) {
-      if (i > 0) console.warn(`[ai-model] fallback → ${chain[i]} (attempt ${i + 1})`)
+      if (i > 0) console.warn(`[ai-model] fallback → ${chain[i].id} (attempt ${i + 1})`)
       return res
     }
-    console.warn(`[ai-model] ${chain[i]} no first chunk / error → next`)
+    console.warn(`[ai-model] ${chain[i].id} no answer / error → next`)
   }
   throw new Error("모든 AI 모델이 응답하지 않았습니다. 잠시 후 다시 시도해 주세요.")
 }
@@ -107,7 +131,7 @@ export function wikiModel() {
       apiKey,
       fetch: chainFetch,
     })
-    return nvidia(process.env.NVIDIA_NIM_MODEL || DEFAULT_NVIDIA_MODEL)
+    return nvidia(modelChain()[0].id)
   }
 
   return openrouter(process.env.OPENROUTER_MODEL || DEFAULT_OPENROUTER_MODEL)

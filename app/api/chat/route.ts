@@ -17,7 +17,7 @@ import { buildSystemPrompt } from "@/lib/chat-system-prompt"
 import type { DocContext } from "@/lib/types"
 import type { DocViewRecord } from "@/lib/session-store"
 
-export const maxDuration = 60
+export const maxDuration = 120
 
 
 function extractQuestion(messages: UIMessage[]): string {

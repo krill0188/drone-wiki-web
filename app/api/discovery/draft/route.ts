@@ -4,7 +4,7 @@ import { wikiModel } from "@/lib/ai-model"
 import { buildWikiStyleSystemPrompt } from "@/lib/wiki-style-prompt"
 import { readSourceExcerpt } from "@/lib/discovery-review"
 
-export const maxDuration = 60
+export const maxDuration = 120
 
 
 interface RelatedEdge {

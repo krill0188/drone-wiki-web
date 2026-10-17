@@ -3,7 +3,7 @@ import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai
 import { wikiModel } from "@/lib/ai-model"
 import { buildWikiStyleSystemPrompt } from "@/lib/wiki-style-prompt"
 
-export const maxDuration = 60
+export const maxDuration = 120
 
 
 export async function POST(req: NextRequest) {
