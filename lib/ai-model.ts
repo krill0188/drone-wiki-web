@@ -22,9 +22,14 @@ const FIRST_CONTENT_MS = Number(process.env.NVIDIA_NIM_FIRST_CONTENT_MS) || 1500
 const TOTAL_BUDGET_MS = 50000 // 전환 판단에 쓰는 시간 예산(응답 전체 한도는 라우트 maxDuration 120초)
 
 // NVIDIA_NIM_CHAIN(쉼표 구분 모델 id)을 주면 그 순서로, 없으면 기본 체인. 옛 NVIDIA_NIM_MODEL 값은 무시한다.
-function modelChain(): ModelSpec[] {
-  const ids = (process.env.NVIDIA_NIM_CHAIN ?? "").split(",").map((m) => m.trim()).filter(Boolean)
-  if (!ids.length) return DEFAULT_CHAIN
+// 드론 빌더 전용 체인은 NVIDIA_NIM_BUILDER_CHAIN(없으면 BUILDER_DEFAULT_CHAIN). 빌더는 300초 한도라 느려도 큰 모델을 먼저 쓴다.
+export type ModelProfile = "chat" | "builder"
+const BUILDER_DEFAULT_CHAIN: ModelSpec[] = [DEFAULT_CHAIN[1], DEFAULT_CHAIN[0]]
+
+function modelChain(profile: ModelProfile = "chat"): ModelSpec[] {
+  const envKey = profile === "builder" ? "NVIDIA_NIM_BUILDER_CHAIN" : "NVIDIA_NIM_CHAIN"
+  const ids = (process.env[envKey] ?? "").split(",").map((m) => m.trim()).filter(Boolean)
+  if (!ids.length) return profile === "builder" ? BUILDER_DEFAULT_CHAIN : DEFAULT_CHAIN
   return ids.map((id) => DEFAULT_CHAIN.find((m) => m.id === id) ?? { id, extra: {} })
 }
 
@@ -98,7 +103,7 @@ async function firstAnswerOrNull(
   }
 }
 
-const chainFetch: typeof fetch = async (input, init) => {
+const makeChainFetch = (profile: ModelProfile): typeof fetch => async (input, init) => {
   if (typeof init?.body !== "string") return fetch(input, init)
   let parsed: Record<string, unknown>
   try {
@@ -106,7 +111,7 @@ const chainFetch: typeof fetch = async (input, init) => {
   } catch {
     return fetch(input, init)
   }
-  const chain = modelChain()
+  const chain = modelChain(profile)
   const started = Date.now()
   for (let i = 0; i < chain.length; i++) {
     const left = TOTAL_BUDGET_MS - (Date.now() - started)
@@ -122,16 +127,16 @@ const chainFetch: typeof fetch = async (input, init) => {
   throw new Error("모든 AI 모델이 응답하지 않았습니다. 잠시 후 다시 시도해 주세요.")
 }
 
-export function wikiModel() {
+export function wikiModel(profile: ModelProfile = "chat") {
   const apiKey = process.env.NVIDIA_NIM_API_KEY
   if (apiKey) {
     const nvidia = createOpenAICompatible({
       name: "nvidia-nim",
       baseURL: process.env.NVIDIA_NIM_BASE_URL || NVIDIA_NIM_BASE_URL,
       apiKey,
-      fetch: chainFetch,
+      fetch: makeChainFetch(profile),
     })
-    return nvidia(modelChain()[0].id)
+    return nvidia(modelChain(profile)[0].id)
   }
 
   return openrouter(process.env.OPENROUTER_MODEL || DEFAULT_OPENROUTER_MODEL)

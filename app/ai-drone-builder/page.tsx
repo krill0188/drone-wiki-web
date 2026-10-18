@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
+import { isGateStopText } from "@/lib/design-gate"
 
 // 2026-10-16: 6단계 + 단계별 사람 승인 게이트.
 //   1 기획 → 2 HW 스펙 → 3 SW 스펙 → 4 기술 스펙(통합 검증) → 5 아키텍처 → 6 코드·로드맵
@@ -13,7 +14,7 @@ import { getSessionId } from "@/lib/session-id"
 // 독립 요청이고, 진행 상태는 localStorage에 저장돼 새로고침 후에도 이어서 검토할 수 있다.
 
 type StageKey = "proposal" | "hw" | "sw" | "techspec" | "architecture" | "implementation"
-type StageStatus = "pending" | "running" | "review" | "approved" | "error"
+type StageStatus = "pending" | "running" | "review" | "approved" | "error" | "needs-input"
 
 interface Rejection {
   text: string
@@ -57,6 +58,7 @@ const STATUS_LABEL: Record<StageStatus, string> = {
   review: "검토 대기",
   approved: "승인됨",
   error: "오류",
+  "needs-input": "입력 보완 필요",
 }
 
 function emptyStages(): Record<StageKey, StageState> {
@@ -76,7 +78,7 @@ async function streamStage(
   body: unknown,
   onText: (full: string) => void,
   signal: AbortSignal
-): Promise<void> {
+): Promise<string> {
   const res = await fetch("/api/drone-builder", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -121,6 +123,7 @@ async function streamStage(
   if (!finished) {
     throw new Error("서버 응답이 중간에 끊겼습니다(시간 초과 또는 연결 종료).")
   }
+  return full
 }
 
 export default function AiDroneBuilderPage() {
@@ -208,12 +211,13 @@ export default function AiDroneBuilderPage() {
     abortRef.current = controller
     patchStage(key, { text: "", status: "running", error: undefined })
     try {
-      await streamStage(
+      const full = await streamStage(
         { prompt: conceptRef.current, stage: key, context: buildContext(feedback) },
-        (full) => patchStage(key, { text: full }),
+        (text) => patchStage(key, { text }),
         controller.signal
       )
-      patchStage(key, { status: "review" })
+      // 서버 게이트의 재질문·불가 판정이면 승인 단계로 넘기지 않고 컨셉 보완을 요구한다.
+      patchStage(key, { status: isGateStopText(full) ? "needs-input" : "review" })
     } catch (e) {
       if (controller.signal.aborted) return
       patchStage(key, {
@@ -331,12 +335,14 @@ export default function AiDroneBuilderPage() {
                     ? "border-slate-200 dark:border-slate-700"
                     : st.status === "error"
                       ? "border-red-300 dark:border-red-800"
+                      : st.status === "needs-input"
+                        ? "border-amber-400"
                       : "border-dashed border-slate-200 dark:border-slate-700 opacity-50"
               }`}
             >
               <div className="px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center gap-2 text-sm font-semibold">
                 <span>
-                  {st.status === "approved" ? "✅" : st.status === "running" ? "⏳" : st.status === "review" ? "📝" : st.status === "error" ? "⚠️" : "⏸️"}
+                  {st.status === "approved" ? "✅" : st.status === "running" ? "⏳" : st.status === "review" ? "📝" : st.status === "error" ? "⚠️" : st.status === "needs-input" ? "✋" : "⏸️"}
                 </span>
                 <span>{s.title}</span>
                 <span className="text-xs font-normal text-slate-400">— {s.agent}</span>

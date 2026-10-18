@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server"
 import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai"
+import { createUIMessageStream } from "ai"
 import { wikiModel } from "@/lib/ai-model"
+import { evaluateBuilderGate } from "@/lib/design-gate"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
@@ -293,6 +295,22 @@ ${previous || "(없음)"}
 위 사유를 반영해 이 단계 결과를 처음부터 다시 작성하되, 문제 없는 부분은 유지하고 출력 형식은 그대로 따라라.`
 }
 
+// AI를 부르지 않는 서버 즉답(재질문·불가 판정). 클라이언트는 isGateStopText로 일반 결과와 구분한다.
+function instantReply(text: string): Response {
+  const id = "gate"
+  return createUIMessageStreamResponse({
+    stream: createUIMessageStream({
+      execute: ({ writer }) => {
+        writer.write({ type: "start" })
+        writer.write({ type: "text-start", id })
+        writer.write({ type: "text-delta", id, delta: text })
+        writer.write({ type: "text-end", id })
+        writer.write({ type: "finish" })
+      },
+    }),
+  })
+}
+
 export async function POST(req: NextRequest) {
   const { prompt, stage, context }: { prompt: string; stage: Stage; context?: StageContext } = await req.json()
 
@@ -303,14 +321,19 @@ export async function POST(req: NextRequest) {
     return new Response("unknown stage", { status: 400 })
   }
 
+  // 설계 입력 게이트(모든 단계 공통): 필수 4항목이 없으면 AI를 부르지 않고 재질문하고, 물리적으로 성립하지 않으면
+  // "추론상 불가"로 멈춘다. 통과하면 엔진 계산(<design-calc>)을 확정 전제로 각 단계 프롬프트에 넣는다.
+  const gate = evaluateBuilderGate(prompt)
+  if (gate.reply) return instantReply(gate.reply)
+
   const ctx = context ?? {}
   const grounding = buildGroundingBlock(groundingQuery(stage, prompt, ctx))
   const manifest = await buildAgentManifest()
 
-  const system = PROMPTS[stage](manifest, grounding, ctx) + feedbackBlock(ctx)
+  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}` + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const result = streamText({
-    model: wikiModel(),
+    model: wikiModel("builder"),
     system: `${system}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`,
     maxOutputTokens: limit.maxOutputTokens,
     prompt: `드론 컨셉: ${prompt}`,

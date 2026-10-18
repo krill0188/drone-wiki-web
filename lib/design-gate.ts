@@ -3,6 +3,8 @@
 // 성립하지 않으면 "추론상 불가"로 답한다. "무조건 만들어 내는" 동작을 구조적으로 막는 층이다.
 
 export const GATE_MARKER = "[설계 입력 필요]"
+// 서버 즉답(재질문·불가 판정)인지 구분 — 빌더 화면이 결과 승인 단계로 넘기지 않고 입력 보완을 요구하는 데 쓴다.
+export const isGateStopText = (t: string) => /^\*\*(\[설계 입력 필요\]|추론상 불가)/.test(t.trim())
 const G = 9.80665
 
 export interface DesignSpec {
@@ -12,6 +14,7 @@ export interface DesignSpec {
   sizeMm?: number // 휠베이스(대각 모터 간 거리) 또는 크기
   sizeNote?: string
   flightMin?: number
+  maxAuwKg?: number // 사용자가 지정한 총중량(MTOW) 상한 — 4필수항목은 아니지만 추정 총중량과 대조한다
   rotors: number
   platform: "multirotor" | "fixedwing" | "vtol"
   platformExplicit: boolean
@@ -25,6 +28,7 @@ export interface GateResult {
   reply?: string // 서버 즉답(재질문 또는 불가 판정) — 있으면 AI를 호출하지 않는다
   augment?: string // 온톨로지 컨텍스트에 덧붙일 문장(추정 총중량 등)
   block?: string // <design-gate> — AI에게 전달하는 확정 전제·판정
+  calc?: string // <design-calc> — 빌더 2~5단계용 추정 계산 전제
 }
 
 const DRONE_NOUN = /드론|기체|콥터|쿼드|헥사|옥타|vtol|고정익|uav|멀티로터/i
@@ -92,9 +96,13 @@ export function parseSpec(text: string): DesignSpec {
   const fm = ft ?? ft2
   if (fm) { const v = num(fm[1]); spec.flightMin = /시간|h|hr/i.test(fm[2]) ? v * 60 : v }
 
+  // 5) 총중량 상한(선택 입력)
+  const mt = t.match(/(?:최대 ?이륙 ?중량|총 ?중량|이륙 ?중량|MTOW|AUW|기체 ?무게|전체 ?무게|무게)\D{0,6}(\d+(?:\.\d+)?)\s*(kg|킬로|g\b)/i)
+  if (mt) { const v = num(mt[1]); spec.maxAuwKg = /g$/i.test(mt[2]) && !/kg/i.test(mt[2]) ? v / 1000 : v }
+
   // 라벨 없는 단독 단위 보정(재질문 후 "2kg, 10km, 600mm, 30분"처럼 답하는 경우)
   if (spec.payloadKg === undefined) {
-    const m = [...t.matchAll(/(\d+(?:\.\d+)?)\s*kg/gi)].find((x) => !/(총중량|이륙중량|자체|기체|auw|mtow)\D{0,6}$/i.test(t.slice(Math.max(0, x.index! - 10), x.index!)))
+    const m = [...t.matchAll(/(\d+(?:\.\d+)?)\s*kg/gi)].find((x) => !/(총중량|이륙중량|자체|기체|무게|auw|mtow)\D{0,6}$/i.test(t.slice(Math.max(0, x.index! - 10), x.index!)))
     if (m) spec.payloadKg = num(m[1])
   }
   if (spec.rangeKm === undefined) { const m = t.match(/(\d+(?:\.\d+)?)\s*(?:km|㎞)/i); if (m) spec.rangeKm = num(m[1]) }
@@ -103,9 +111,9 @@ export function parseSpec(text: string): DesignSpec {
 }
 
 // ── 실현 가능성(물리 한계 추론) ──
-interface Assump { ef: number; rho: number; fm: number; eta: number; dod: number; vmax: number; ld: number; etaP: number; vtolExtra: number }
-const CONS: Assump = { ef: 0.45, rho: 180, fm: 0.6, eta: 0.8, dod: 0.8, vmax: 15, ld: 9, etaP: 0.65, vtolExtra: 0.1 }
-const OPT: Assump = { ef: 0.3, rho: 280, fm: 0.75, eta: 0.9, dod: 0.9, vmax: 25, ld: 14, etaP: 0.8, vtolExtra: 0.05 }
+interface Assump { ef: number; rho: number; fm: number; eta: number; dod: number; vmax: number; ld: number; etaP: number; vtolExtra: number; dl: number }
+const CONS: Assump = { ef: 0.45, rho: 180, fm: 0.6, eta: 0.8, dod: 0.8, vmax: 15, ld: 9, etaP: 0.65, vtolExtra: 0.1, dl: 60 }
+const OPT: Assump = { ef: 0.3, rho: 280, fm: 0.75, eta: 0.9, dod: 0.9, vmax: 25, ld: 14, etaP: 0.8, vtolExtra: 0.05, dl: 90 }
 
 interface Sol { ok: boolean; auw: number; batKg: number; hoverW: number }
 
@@ -116,7 +124,9 @@ function solveMultirotor(payload: number, wbMm: number, N: number, tMin: number,
   const bat = (auw: number) => (hoverW(auw) * (tMin / 60)) / a.dod / a.rho
   let auw = Math.max(payload, 0.05)
   for (let i = 0; i < 700; i++, auw *= 1.02) {
-    if (auw * (1 - a.ef) - payload - bat(auw) >= 0) return { ok: true, auw, batKg: bat(auw), hoverW: hoverW(auw) }
+    // 추력 한계: 최대추력(총중량의 2배, 추력 대비 중량비 2:1)이 프롭 원판 면적당 현실적 최대 추력(kgf/㎡)을 넘으면 그 크기로는 못 뜬다.
+    const thrustOk = (2 * auw) <= N * A * a.dl
+    if (thrustOk && auw * (1 - a.ef) - payload - bat(auw) >= 0) return { ok: true, auw, batKg: bat(auw), hoverW: hoverW(auw) }
   }
   return { ok: false, auw: 0, batKg: 0, hoverW: 0 }
 }
@@ -176,13 +186,59 @@ export function assess(spec: DesignSpec): Feasibility {
   return { ...base, verdict: "불가", detail: "고정익/VTOL 낙관 가정으로도 에너지 예산을 만족하지 못함." }
 }
 
+
+// 사용자가 총중량(MTOW) 상한을 줬다면 추정 총중량과 대조한다(멀티로터만 — 고정익은 총중량을 구조체로 반환하지 않는다).
+function applyAuwCap(fe: Feasibility, spec: DesignSpec): Feasibility {
+  const cap = spec.maxAuwKg
+  if (cap === undefined || spec.platform !== "multirotor" || fe.verdict === "불가") return fe
+  const cons = fe.cons?.ok ? fe.cons.auw : undefined
+  const opt = fe.opt?.ok ? fe.opt.auw : undefined
+  if (opt !== undefined && opt > cap) {
+    return { ...fe, verdict: "불가", detail: `총중량 상한 ${cap}kg 초과 — 이 크기·페이로드·비행시간을 만족하는 최소 추정 총중량이 낙관 가정에서도 ≈ ${opt.toFixed(1)}kg입니다(보수 ≈ ${cons?.toFixed(1) ?? "성립 불가"}kg).` }
+  }
+  if (cons !== undefined && cons > cap) {
+    return { ...fe, verdict: "한계", detail: `보수 가정 추정 총중량 ${cons.toFixed(1)}kg이 상한 ${cap}kg을 넘고, 낙관 가정(≈ ${opt?.toFixed(1)}kg)에서만 상한 안입니다.` }
+  }
+  return fe
+}
+
+// 빌더 2~5단계에 "확정 전제"로 주입하는 계산 블록. 모델이 숫자를 새로 짓지 않고 이 값에 맞춰 선정·검증하게 한다.
+// 값은 운동량 이론 + 에너지 예산의 추정치이며 제품 확정값이 아니다.
+export function buildCalcBlock(spec: DesignSpec): string {
+  if (spec.platform !== "multirotor" || [spec.payloadKg, spec.sizeMm, spec.flightMin].some((v) => v === undefined)) return ""
+  const c = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, CONS)
+  const o = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, OPT)
+  const ref = c.ok ? c : o.ok ? o : undefined
+  if (!ref) return ""
+  const label = c.ok ? "보수 가정" : "낙관 가정(보수에서는 불성립)"
+  const a = c.ok ? CONS : OPT
+  const batWh = ref.batKg * a.rho
+  const thrustKgf = ref.auw * 2 // 추력 대비 중량비 2:1 이상(기동·여유)
+  const wbMm = spec.sizeMm!
+  const dIn = ((wbMm / 1000) * Math.sin(Math.PI / spec.rotors) * 0.95) / 0.0254
+  return `<design-calc>
+엔진이 사용자 4입력으로 계산한 추정 전제(${label}, 제품 확정값 아님). HW 표의 총중량·배터리·모터·프롭 수치는 이 값과 모순되면 안 된다. 어긋나면 표를 고쳐 쓴 뒤 답하라.
+- 추정 총중량(AUW): ${ref.auw.toFixed(1)}kg (페이로드 ${spec.payloadKg}kg 포함${spec.maxAuwKg !== undefined ? `, 사용자 상한 ${spec.maxAuwKg}kg` : ""})
+- 호버링 전력: ≈ ${ref.hoverW.toFixed(0)}W → ${spec.flightMin}분 비행에 필요한 배터리 에너지 ≈ ${batWh.toFixed(0)}Wh (방전 깊이 ${(a.dod * 100).toFixed(0)}%, 에너지밀도 ${a.rho}Wh/kg 가정), 배터리 질량 ≈ ${ref.batKg.toFixed(1)}kg
+- 필요 총 최대추력: ≈ ${thrustKgf.toFixed(1)}kgf 이상(추력 대비 중량비 2:1) → ${spec.rotors}개 모터 합계 기준, 모터 1개당 ≈ ${(thrustKgf / spec.rotors).toFixed(1)}kgf 이상
+- 프롭 지름 상한: 축거 ${wbMm.toFixed(0)}mm ${spec.rotors}로터 기준 ≈ ${dIn.toFixed(1)}인치 (이보다 큰 프롭은 겹침)
+[HW 표 필수 충족 체크리스트 — 표를 쓴 뒤 하나씩 대조하고, 하나라도 어긋나면 표를 고쳐서 출력하라]
+  1. 배터리 에너지(Wh) ≥ ${batWh.toFixed(0)}Wh 이고, Wh = 전압(V) × 용량(Ah)으로 표의 전압·용량과 일치할 것
+  2. 모터 1개 최대추력 ≥ ${(thrustKgf / spec.rotors).toFixed(1)}kgf (표에 쓴 개수 × 추력 ≥ ${thrustKgf.toFixed(1)}kgf)
+  3. 표의 구성품 무게 합계 ≈ ${ref.auw.toFixed(1)}kg (±15%) 이고 페이로드 ${spec.payloadKg}kg 포함
+  4. 프롭 지름 ≤ ${dIn.toFixed(0)}인치
+  5. 통신 링크: 영상 전송이 필요하면 Mbps급 링크를 따로 둘 것
+- 통신 대역 상식(일반 공학 범위, 위키 확정값 아님): LoRa류 협대역 링크는 수 kbps~수십 kbps급이라 영상 스트림 불가, 영상은 Mbps급 링크가 필요하다. 링크 선정 시 대역·주파수 규정은 "확인 필요"로 표기.
+</design-calc>`
+}
+
 // ── 게이트 ──
 function fmt(spec: DesignSpec) {
   const row = (ok: boolean, name: string, val: string, ex: string) => (ok ? `- ✓ ${name}: ${val}` : `- ✗ ${name}: (미입력) — 예: ${ex}`)
   return [
     row(spec.payloadKg !== undefined, "페이로드", spec.payloadKg === 0 ? "없음" : `${spec.payloadKg}kg`, "2kg / 500g / 없음"),
     row(spec.rangeKm !== undefined, "비행가능거리", `${spec.rangeKm}km${spec.rangeNote ? ` (${spec.rangeNote})` : ""}`, "총 10km / 반경 5km"),
-    row(spec.sizeMm !== undefined, "크기", `${spec.sizeMm}mm${spec.sizeNote ? ` (${spec.sizeNote})` : ""}`, "휠베이스 600mm / 소형"),
+    row(spec.sizeMm !== undefined, "크기", `${Math.round(spec.sizeMm!)}mm${spec.sizeNote ? ` (${spec.sizeNote})` : ""}`, "휠베이스 600mm / 소형"),
     row(spec.flightMin !== undefined, "비행시간", `${spec.flightMin}분`, "30분 / 1시간"),
   ]
 }
@@ -199,7 +255,15 @@ export function evaluateDesignGate(userTexts: string[], lastAssistantText = ""):
   const active = (start >= 0 && start === userTexts.length - 1) || (waiting && start >= 0)
   if (!active) return empty
 
-  const spec = parseSpec(userTexts.slice(start).join("\n"))
+  return judgeSpec(parseSpec(userTexts.slice(start).join("\n")), "chat")
+}
+
+// 드론 빌더용: 컨셉 문장 전체를 설계 입력으로 보고 같은 판정을 한다(설계 의도 감지는 생략 — 빌더는 항상 설계다).
+export function evaluateBuilderGate(concept: string): GateResult {
+  return judgeSpec(parseSpec(concept), "builder")
+}
+
+function judgeSpec(spec: DesignSpec, mode: "chat" | "builder"): GateResult {
   const missing: string[] = []
   if (spec.payloadKg === undefined) missing.push("페이로드")
   if (spec.rangeKm === undefined) missing.push("비행가능거리")
@@ -211,24 +275,25 @@ export function evaluateDesignGate(userTexts: string[], lastAssistantText = ""):
 
 ${fmt(spec).join("\n")}
 
-빠진 항목(**${missing.join(", ")}**)을 한 줄로 알려 주세요. 복사해서 채우셔도 됩니다:
+${mode === "builder" ? `빠진 항목(**${missing.join(", ")}**)을 위 컨셉 입력창 끝에 덧붙인 뒤 다시 시작해 주세요. 복사해서 채우셔도 됩니다:` : `빠진 항목(**${missing.join(", ")}**)을 한 줄로 알려 주세요. 복사해서 채우셔도 됩니다:`}
 \`페이로드 __kg, 비행가능거리 __km, 크기(휠베이스) __mm, 비행시간 __분\`
 
 대략값이어도 됩니다(예: "30분 정도"). 값은 이후 모든 계산의 전제가 되며, 제가 임의로 채우지 않습니다.`
     return { active: true, complete: false, spec, missing, reply }
   }
 
-  const fe = assess(spec)
-  const inputs = fmt(spec).join("\n")
-  if (fe.verdict === "불가") {
-    const reply = `**추론상 불가 — 이 조건으로는 설계안을 만들지 않습니다.**
+  const fe = applyAuwCap(assess(spec), spec)
+  const inputs = [...fmt(spec), ...(spec.maxAuwKg !== undefined ? [`- ✓ 총중량 상한: ${spec.maxAuwKg}kg`] : [])].join("\n")
+  const builderPlatformStop = mode === "builder" && fe.verdict === "한계" && !!fe.platformAdvice
+  if (fe.verdict === "불가" || builderPlatformStop) {
+    const reply = `**${builderPlatformStop ? "추론상 불가(멀티로터 기준) — 이 조건의 멀티로터 설계안은 만들지 않습니다. 기체 형식을 정하거나 조건을 바꿔 주세요." : "추론상 불가 — 이 조건으로는 설계안을 만들지 않습니다."}**
 
 ${inputs}
 
 **판정 근거 (물리 한계 추정, 운동량 이론 + 에너지 예산)**
 - ${fe.detail}
 - 필요 평균 비행속도: ${fe.vReq!.toFixed(1)}m/s (총거리 ${spec.rangeKm}km ÷ ${spec.flightMin}분)
-- 이 크기(${spec.sizeMm}mm)·페이로드(${spec.payloadKg}kg)에서 낙관 가정 최대 비행시간 ≈ ${fe.maxTimeOpt!.toFixed(0)}분 (보수 가정 ≈ ${fe.maxTimeCons!.toFixed(0)}분)
+- 이 크기(${Math.round(spec.sizeMm!)}mm)·페이로드(${spec.payloadKg}kg)에서 낙관 가정 최대 비행시간 ≈ ${fe.maxTimeOpt!.toFixed(0)}분 (보수 가정 ≈ ${fe.maxTimeCons!.toFixed(0)}분)
 - 비행시간 ${spec.flightMin}분을 맞추려면 휠베이스가 낙관 가정에서도 ≈ ${fe.minSizeOpt!.toFixed(0)}mm 이상 필요
 - 이 크기·시간에서 낙관 가정 최대 페이로드 ≈ ${fe.maxPayloadOpt!.toFixed(1)}kg
 ${fe.platformAdvice ? `- ${fe.platformAdvice}\n` : ""}
@@ -238,7 +303,7 @@ ${fe.platformAdvice ? `- ${fe.platformAdvice}\n` : ""}
 
   const N = spec.rotors
   const auw = fe.verdict === "가능" ? fe.cons!.auw : fe.opt!.ok ? fe.opt!.auw : 0
-  const augment = spec.platform === "multirotor" && auw ? `총중량 ${auw.toFixed(1)}kg 축거 ${spec.sizeMm}mm ${N === 6 ? "헥사" : N === 8 ? "옥타" : "쿼드"} 비행시간 ${spec.flightMin}분` : ""
+  const augment = spec.platform === "multirotor" && auw ? `총중량 ${auw.toFixed(1)}kg 축거 ${Math.round(spec.sizeMm!)}mm ${N === 6 ? "헥사" : N === 8 ? "옥타" : "쿼드"} 비행시간 ${spec.flightMin}분` : ""
   const block = `<design-gate>
 설계 전제(사용자 입력 — 바꾸거나 임의 보정 금지):
 ${inputs}
@@ -247,5 +312,5 @@ ${inputs}
 - 필요 평균속도 ${fe.vReq!.toFixed(1)}m/s${spec.sizeNote ? `; 크기는 ${spec.sizeNote}` : ""}
 지침: 판정이 "한계"면 답변 첫머리에 "낙관 가정에서만 성립"임을 밝히고 완화 방안을 함께 제시. 판정이 "가능"이어도 추정 총중량·배터리 질량은 "추정"으로 표기. 4가지 입력과 모순되는 설계는 내지 말 것. 제품 스펙(kV·추력·전류·무게 등)은 위키/카탈로그 원문의 값과 단위·측정조건을 그대로 인용하고 반올림·보간·추정으로 바꾸지 말 것. 근거가 없는 수치는 "확인 필요".
 </design-gate>`
-  return { active: true, complete: true, spec, missing, augment, block }
+  return { active: true, complete: true, spec, missing, augment, block, calc: buildCalcBlock(spec) }
 }
