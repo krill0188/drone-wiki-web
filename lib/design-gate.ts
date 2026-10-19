@@ -204,14 +204,24 @@ function applyAuwCap(fe: Feasibility, spec: DesignSpec): Feasibility {
 
 // 빌더 2~5단계에 "확정 전제"로 주입하는 계산 블록. 모델이 숫자를 새로 짓지 않고 이 값에 맞춰 선정·검증하게 한다.
 // 값은 운동량 이론 + 에너지 예산의 추정치이며 제품 확정값이 아니다.
-export function buildCalcBlock(spec: DesignSpec): string {
-  if (spec.platform !== "multirotor" || [spec.payloadKg, spec.sizeMm, spec.flightMin].some((v) => v === undefined)) return ""
+export interface MultirotorPlan { auw: number; hoverW: number; batKg: number; batWh: number; dod: number; rho: number; label: string; thrustKgfTotal: number }
+// 엔진 추정(보수 가정 우선, 안 되면 낙관 가정)을 한 번에 돌려준다 — 제품 매칭(lib/product-match.ts)이 같은 전제를 쓰도록 공유한다.
+export function planMultirotor(spec: DesignSpec): MultirotorPlan | null {
+  if (spec.platform !== "multirotor" || [spec.payloadKg, spec.sizeMm, spec.flightMin].some((v) => v === undefined)) return null
   const c = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, CONS)
   const o = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, OPT)
   const ref = c.ok ? c : o.ok ? o : undefined
-  if (!ref) return ""
-  const label = c.ok ? "보수 가정" : "낙관 가정(보수에서는 불성립)"
+  if (!ref) return null
   const a = c.ok ? CONS : OPT
+  return { auw: ref.auw, hoverW: ref.hoverW, batKg: ref.batKg, batWh: ref.batKg * a.rho, dod: a.dod, rho: a.rho, label: c.ok ? "보수 가정" : "낙관 가정(보수에서는 불성립)", thrustKgfTotal: ref.auw * 2 }
+}
+
+export function buildCalcBlock(spec: DesignSpec): string {
+  const plan = planMultirotor(spec)
+  if (!plan) return ""
+  const ref = { auw: plan.auw, hoverW: plan.hoverW, batKg: plan.batKg }
+  const a = { dod: plan.dod, rho: plan.rho }
+  const label = plan.label
   const batWh = ref.batKg * a.rho
   const thrustKgf = ref.auw * 2 // 추력 대비 중량비 2:1 이상(기동·여유)
   const wbMm = spec.sizeMm!

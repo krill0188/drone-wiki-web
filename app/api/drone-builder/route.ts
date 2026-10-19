@@ -3,6 +3,7 @@ import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai
 import { createUIMessageStream } from "ai"
 import { wikiModel } from "@/lib/ai-model"
 import { evaluateBuilderGate } from "@/lib/design-gate"
+import { matchProducts } from "@/lib/product-match"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
@@ -330,7 +331,9 @@ export async function POST(req: NextRequest) {
   const grounding = buildGroundingBlock(groundingQuery(stage, prompt, ctx))
   const manifest = await buildAgentManifest()
 
-  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}` + feedbackBlock(ctx)
+  // 멀티로터면 엔진 계산에 맞는 실제 제품 후보(제조사 공식 사양 수집본)를 서버가 골라 확정 전제로 넣는다.
+  const productMatch = gate.spec.platform === "multirotor" && stage !== "proposal" ? matchProducts(gate.spec).block : ""
+  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}` + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const result = streamText({
     model: wikiModel("builder"),
