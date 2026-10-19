@@ -65,10 +65,40 @@ if os.path.exists(os.path.join(D, "paper-claims.json")): claims += load("paper-c
 for r in rules:
     node(f"rule:{r['id']}", "Rule", f"{r['id']} {r['name']}", status=r["status"], sourceStatus=r.get("sourceStatus", "unverified"))
     for c in GOVERNS.get(r["id"], []): edge(f"rule:{r['id']}", "governs", f"class:{c}")
+# claim 주제 → 제품 클래스 (topic은 추출 시 붙인 분류, 규칙 연결은 GOVERNS 경유)
+TOPIC = {"propulsion": ["Motor", "Propeller"], "battery": ["Battery"], "energy": ["Battery"], "structure": ["Frame"], "flight-controller": ["FlightController"],
+         "companion": ["CompanionComputer"], "comms": ["DataLink"], "payload": ["Payload", "Sensor"]}
+# 제품 언급 판정: 제조사명을 뺀 제품명에서 2~3단어 구(예: "orin nx", "mid-360", "pixhawk 6x")를 만들고 claim 본문에 그대로 있으면 연결.
+# 용량·일반어만 있는 구(16gb, brushless motor 등)는 오탐이라 제외.
+GENERIC = {"series", "module", "kit", "brushless", "motor", "battery", "propeller", "props", "frame", "drone", "developer", "version", "lipo", "esc", "the", "and", "with", "for", "pro", "mini", "flight", "controller", "computer", "camera", "sensor", "lidar", "radio", "system"}
+def phrases(p):
+    name = re.sub(r"\(.*?\)", " ", p["name"].lower()).replace(p["manufacturer"].lower(), " ")
+    w = [x for x in re.findall(r"[a-z0-9][a-z0-9\-\.]*", name)]
+    out = {x for x in w if len(x) >= 4 and re.search(r"\d", x) and re.search(r"[a-z]", x) and not re.fullmatch(r"\d+(gb|mb|mah|kv|mm|in)", x)}
+    for n in (2, 3):
+        for i in range(len(w) - n + 1):
+            g = w[i:i + n]
+            if all(x in GENERIC or re.fullmatch(r"\d+(gb|mb|mah|s|v|a|w|kv)?", x) for x in g): continue
+            if not any(re.search(r"[a-z]", x) and x not in GENERIC for x in g): continue
+            ph = " ".join(g)
+            if len(ph) >= 6: out.add(ph)
+    return out
+pphr = {pid: phrases(p) for pid, p in prods.items()}
 for c in claims:
-    node(f"claim:{c['id']}", "Claim", f"{c['subject']}: {c['value']}", status=c["status"], source=c["sourceId"])
+    node(f"claim:{c['id']}", "Claim", f"{c['subject']}: {c['value']}", status=c["status"], source=c["sourceId"],
+         attribute=c.get("attribute", ""), unit=c.get("unit", ""), conditions=c.get("conditions", ""), locator=c.get("locator", ""), quote=c.get("quote", ""))
+    for cls in TOPIC.get(c.get("topic", ""), []): edge(f"claim:{c['id']}", "about", f"class:{cls}")
+    text = re.sub(r"\s+", " ", f"{c['subject']} {c.get('quote', '')}".lower())
+    best = {}
+    for pid, phs in pphr.items():
+        hit = [ph for ph in phs if re.search(r"(?<![a-z0-9])" + re.escape(ph) + r"(?![a-z0-9])", text)]
+        if hit: best[pid] = max(hit, key=len)
+    # 가장 긴 일치만 채택, 같은 길이로 여러 제품이 걸리면(예: "jetson orin"→Nano/NX/AGX) 모호하므로 연결하지 않는다
+    top = max((len(v) for v in best.values()), default=0)
+    win = [pid for pid, v in best.items() if len(v) == top]
+    if len(win) == 1: edge(f"claim:{c['id']}", "mentions", win[0], phrase=best[win[0]])
     pid = f"paper:{c['sourceId']}"
-    node(pid, "Paper" if c["sourceType"] == "paper" else "Source", c["sourceId"], title=(c.get("paper") or {}).get("title", ""))
+    node(pid, "Paper" if c["sourceType"] == "paper" else "Source", c["sourceId"], title=(c.get("paper") or {}).get("title", ""), published=(c.get("paper") or {}).get("published", ""))
     edge(f"claim:{c['id']}", "reportedIn", pid)
     for rid in c.get("rules", []): edge(f"claim:{c['id']}", "supports", f"rule:{rid}")
 

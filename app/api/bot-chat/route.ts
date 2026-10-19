@@ -1,12 +1,11 @@
 import { NextRequest } from "next/server"
 import { generateText } from "ai"
-import { ragSearch, searchNews } from "@/lib/rag"
-import { graphRagSearch } from "@/lib/graphrag"
+import { queryKG } from "@/lib/kg"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { buildAgentManifest } from "@/lib/agent-manifest"
-import { buildSystemPrompt } from "@/lib/chat-system-prompt"
+import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
 import { botModel, checkBotToken } from "@/lib/bot-model"
 
 export const maxDuration = 60
@@ -29,11 +28,10 @@ export async function POST(req: NextRequest) {
   if (gate.reply) return Response.json({ answer: gate.reply, sources: [], newsSources: [] })
 
   const onto = buildOntologyContext(gate.augment ? `${question}\n${gate.augment}` : question)
-  const sources = ragSearch(onto.classes.length ? `${question} ${onto.classes.join(" ")}` : question, 6, { diversify: true })
-  const newsHits = searchNews(question, 4)
-  const graph = graphRagSearch(question, sources.map((s) => s.slug))
+  // 지식그래프 전용(웹 채팅과 동일): 수집 문서 검색·뉴스는 사실 근거로 쓰지 않는다.
+  const kg = queryKG(question)
   const manifest = await buildAgentManifest()
-  const system = buildSystemPrompt(manifest, null, [], sources, graph.block, newsHits, gate.block ? `${designBlocks(gate)}\n${onto.block}` : onto.block)
+  const system = buildKgSystemPrompt(manifest, null, [kg.block, gate.block ? designBlocks(gate) : "", onto.block].filter(Boolean).join("\n\n"))
 
   const result = await generateText({
     model: botModel(),
@@ -43,7 +41,9 @@ export async function POST(req: NextRequest) {
 
   return Response.json({
     answer: result.text,
-    sources: sources.map((s) => ({ slug: s.slug, title: s.title, domain: s.domain, origin: s.origin })),
-    newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
+    // 봇 호출부 호환을 위해 필드는 유지하되 수집 문서·뉴스는 더 이상 근거로 쓰지 않는다
+    sources: [],
+    newsSources: [],
+    kgFacts: kg.facts.map((f) => ({ id: f.id, text: f.text })),
   })
 }

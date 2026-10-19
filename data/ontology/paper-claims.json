@@ -1,0 +1,1541 @@
+{
+ "_comment": "pipeline.py verify 통과 claim. quote는 원문 PDF 텍스트와 코드로 대조됨. 규칙 연결(rules)은 AI 제안이며 코드 상수에는 사람이 검토 후 반영.",
+ "claims": [
+  {
+   "id": "P2303.00132-01",
+   "rules": [],
+   "subject": "Onboard dynamic-object detection/tracking pipeline (RGB-D)",
+   "attribute": "total runtime on Intel NUC vs Xavier NX",
+   "value": "19.12 ms (NUC) and 40.08 ms (Xavier NX)",
+   "unit": "ms",
+   "conditions": "Full pipeline incl. YOLO-MAD learning module; without it detector ~210 Hz NUC / ~60 Hz Xavier NX vs 50 / 25 Hz with it",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2303.00132",
+   "locator": "Sec. IV-B, Table II",
+   "quote": "Notably, the total runtime for the Intel NUC and Xavier NX is 19.12ms and 40.08ms,",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Onboard dynamic-object detection and tracking for autonomous robot navigation with RGB-D camera",
+    "published": "2023-02-28"
+   }
+  },
+  {
+   "id": "P2307.06100-01",
+   "rules": [
+    "R07"
+   ],
+   "subject": "Agilicious quadrotor platform",
+   "attribute": "weight and max speed",
+   "value": "750 g; max speed 131 km/h",
+   "unit": "km/h",
+   "conditions": "Open-source agile quadrotor, >5g acceleration design target",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2307.06100",
+   "locator": "Sec. 1",
+   "quote": "design objectives resulted in creating a lightweight 750 g platform with maximal speed of 131 km/h.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
+    "published": "2023-07-12"
+   }
+  },
+  {
+   "id": "P2307.06100-02",
+   "rules": [
+    "R01",
+    "R03"
+   ],
+   "subject": "Agilicious motor-propeller combination",
+   "attribute": "static thrust and power",
+   "value": "4x 9.5 N continuous static thrust; ~400 W per motor",
+   "unit": "N",
+   "conditions": "5.1 inch three-bladed propeller with brushless DC motor",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2307.06100",
+   "locator": "Sec. hardware",
+   "quote": "The chosen motor-propeller combination achieves a continuous static thrust of 4× 9.5 N on the quadrotor and consumes about 400 W of power per motor.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
+    "published": "2023-07-12"
+   }
+  },
+  {
+   "id": "P2307.06100-03",
+   "rules": [
+    "R05",
+    "C02"
+   ],
+   "subject": "Agilicious LiPo battery",
+   "attribute": "capacity, C rating, peak current",
+   "value": "1800 mAh, 120C; total peak current 110 A vs 216 A battery limit",
+   "unit": "mAh",
+   "conditions": "Powers four motors in the 750 g platform",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2307.06100",
+   "locator": "Sec. hardware",
+   "quote": "a lithium-polymer battery with 1800 mA h and a rating of 120C is used. Therefore, the total peak current of 110 A is well within the 216 A limit of the battery.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
+    "published": "2023-07-12"
+   }
+  },
+  {
+   "id": "P2307.06100-04",
+   "rules": [],
+   "subject": "Agilicious flight controller thrust command latency",
+   "attribute": "latency",
+   "value": "agiNuttx 35 ms; Betaflight 40.15 ms",
+   "unit": "ms",
+   "conditions": "Delay between high-level controller collective thrust command and measured force change",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2307.06100",
+   "locator": "Sec. results, Fig. 3C",
+   "quote": "The results show that both agiNuttx has the lowest latency at 35ms, with BetaFlight slightly slower at 40.15 ms.",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
+    "published": "2023-07-12"
+   }
+  },
+  {
+   "id": "P2309.03678-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Nano-UAV swarm platform (Crazyflie 2.1 + 4x VL53L5CX ToF + flow-deck v2)",
+   "attribute": "take-off weight",
+   "value": "34.8 g",
+   "unit": "g",
+   "conditions": "Swarm mapping platform; commercial Crazyflie 2.1 extended with four VL53L5CX ToF sensors and flow-deck v2",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.03678",
+   "locator": "Fig. 1",
+   "quote": "is based on a commercial Crazyflie 2.1 extended with four VL53L5CX ToF ranging sensors and the flow-deck v2. Total weight at the take-off is 34.8 g.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Fully Onboard SLAM for Distributed Mapping with a Swarm of Nano-Drones",
+    "published": "2023-09-07"
+   }
+  },
+  {
+   "id": "P2309.03678-02",
+   "rules": [],
+   "subject": "Comparison LiDAR (related work)",
+   "attribute": "mass and power",
+   "value": "210 g, 8.4 W nominal; 62x62x87.5 mm",
+   "unit": "g",
+   "conditions": "LiDAR used on DJI Phantom 3 with desktop-class Intel i5 in a cited prior work",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.03678",
+   "locator": "Sec. II related work",
+   "quote": "The LiDAR sensor used is 62 mm×62 mm×87.5 mm in size and weighs 210 g, while nominally consuming 8.4 W of power.",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "Fully Onboard SLAM for Distributed Mapping with a Swarm of Nano-Drones",
+    "published": "2023-09-07"
+   }
+  },
+  {
+   "id": "P2312.14453-01",
+   "rules": [
+    "R05"
+   ],
+   "subject": "Dualrotor Arkbird VTOL tail-sitter (modified, quad-rotor)",
+   "attribute": "total mass and battery",
+   "value": "0.83 kg; 3S 2,200-mAh LiPo",
+   "unit": "kg",
+   "conditions": "Indoor Vicon experiment; four Sunnysky R2207 KV2580 motors, PixRacer autopilot, LattePanda Alpha",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2312.14453",
+   "locator": "Sec. real-world experiment",
+   "quote": "resulting in a total mass of 0.83 kg. The UAV was equipped with a 3S 2,200-mAh",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "paper": {
+    "title": "Hybrid Aerodynamics-Based Model Predictive Control for a Tail-Sitter UAV",
+    "published": "2023-12-22"
+   }
+  },
+  {
+   "id": "P2312.14453-02",
+   "rules": [],
+   "subject": "HMPC on LattePanda Alpha",
+   "attribute": "OCP solve time",
+   "value": "<15 ms (~20% CPU load)",
+   "unit": "ms",
+   "conditions": "100 Hz update, 20 x 0.05 s horizon",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2312.14453",
+   "locator": "Sec. HMPC implementation",
+   "quote": "The MPC ran with a 100-Hz update frequency and 20 × 0.05s horizon, as shown in Table III, which yielded an OCP solving time of less than 15 ms with an approximately 20% CPU load.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Hybrid Aerodynamics-Based Model Predictive Control for a Tail-Sitter UAV",
+    "published": "2023-12-22"
+   }
+  },
+  {
+   "id": "P2403.18149-01",
+   "rules": [],
+   "subject": "Benchmark MCU for conic MPC (STM32F405 Feather)",
+   "attribute": "CPU/flash/RAM",
+   "value": "Cortex-M4 168 MHz, 1 MB flash, 128 kB RAM",
+   "unit": "MHz",
+   "conditions": "Similar to Crazyflie 2.1 compute hardware; used for solver benchmarks",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2403.18149",
+   "locator": "Sec. benchmark",
+   "quote": "which has an ARM Cortex-M4 operating at 168 MHz with 1 MB of flash memory and 128 kB of RAM, very similar to computational hardware on the Crazyflie 2.1",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Code Generation and Conic Constraints for Model-Predictive Control on Microcontrollers with Conic-TinyMPC",
+    "published": "2024-03-26"
+   }
+  },
+  {
+   "id": "P2408.10843-01",
+   "rules": [],
+   "subject": "Wildfire smoke segmentation on NVIDIA Jetson Orin NX",
+   "attribute": "inference frame rate",
+   "value": "~25 fps inference",
+   "unit": "fps",
+   "conditions": "UAV-carried Jetson Orin NX; 63.3% mIoU model",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2408.10843",
+   "locator": "Abstract/Conclusion",
+   "quote": "The inference could run at ∼25 fps on the lightweight NVIDIA Jetson Orin NX com- puter",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Detecting Wildfires on UAVs with Real-time Segmentation Trained by Larger Teacher Models",
+    "published": "2024-08-19"
+   }
+  },
+  {
+   "id": "P2410.12979-01",
+   "rules": [],
+   "subject": "BlabberSeg (optimized CLIPSeg) on Jetson Orin NX 16G",
+   "attribute": "segmentation frequency",
+   "value": "14.79 Hz vs 1.490 Hz original CLIPSeg",
+   "unit": "Hz",
+   "conditions": "Table II comparison; Orin Nano 8G 12.63 Hz vs 0.47 Hz",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2410.12979",
+   "locator": "Sec. results, Table II",
+   "quote": "NVIDIA Jetson Orin NX 16GB was able to increase its speed by 2205.01% and perform segmentation at 14.79Hz, compared to the origi- nal CLIPSeg at 1.490Hz (Table II).",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "BlabberSeg: Real-Time Embedded Open-Vocabulary Aerial Segmentation",
+    "published": "2024-10-16"
+   }
+  },
+  {
+   "id": "P2410.12979-02",
+   "rules": [],
+   "subject": "BlabberSeg vs original CLIPSeg",
+   "attribute": "approx max GPU power draw",
+   "value": "3.6 W vs 33 W (45 C vs 68 C)",
+   "unit": "W",
+   "conditions": "Estimated GPU measurements on Jetson",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2410.12979",
+   "locator": "Sec. results",
+   "quote": "(approximate maximum GPU utilization at 33W and temper- ature at 68°C) with BlabberSeg (approximate maximum GPU utilization at 3.6W and temperature at 45°C).",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "BlabberSeg: Real-Time Embedded Open-Vocabulary Aerial Segmentation",
+    "published": "2024-10-16"
+   }
+  },
+  {
+   "id": "P2412.20860-01",
+   "rules": [],
+   "subject": "Jetson Orin Nano edge device",
+   "attribute": "power consumption",
+   "value": "7-15 W",
+   "unit": "W",
+   "conditions": "Nvidia Jetson Orin Nano (1024 CUDA cores, 8 GB RAM) as described in paper; used as on-board or base-station edge compute",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.20860",
+   "locator": "Sec. 1",
+   "quote": "8 GB RAM shared by CPU and GPU, consumes 7–15 W of power, measures just 100 × 79 mm",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Adaptive Heuristics for Scheduling DNN Inferencing on Edge and Cloud for Personalized UAV Fleets",
+    "published": "2024-12-30"
+   }
+  },
+  {
+   "id": "P2412.20860-02",
+   "rules": [],
+   "subject": "DJI/Ryze Tello nano quad-copter",
+   "attribute": "mass with battery",
+   "value": "80 g",
+   "unit": "g",
+   "conditions": "Tello used in the paper's campus field validation; onboard 720p camera streaming 30 FPS",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.20860",
+   "locator": "Sec. field validation",
+   "quote": "which has an onboard 720p HD monocular camera that generates live video feeds at 30 FPS and weighs just 80 g with battery",
+   "status": "verified",
+   "topic": "other",
+   "note": "",
+   "paper": {
+    "title": "Adaptive Heuristics for Scheduling DNN Inferencing on Edge and Cloud for Personalized UAV Fleets",
+    "published": "2024-12-30"
+   }
+  },
+  {
+   "id": "P2501.05880-01",
+   "rules": [],
+   "subject": "TakuNet CNN on Jetson Orin",
+   "attribute": "inference throughput at 15 W",
+   "value": "more than 650 fps",
+   "unit": "fps",
+   "conditions": "TakuNet aerial image classifier, Jetson Orin board in 15 W mode; also tested on Raspberry Pi",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2501.05880",
+   "locator": "Abstract",
+   "quote": "achieving more than 650 fps on the 15W Jetson",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "TakuNet: an Energy-Efficient CNN for Real-Time Inference on Embedded UAV systems in Emergency Response Scenarios",
+    "published": "2025-01-10"
+   }
+  },
+  {
+   "id": "P2501.05880-02",
+   "rules": [],
+   "subject": "TakuNet on Jetson Orin at 7 W TDP",
+   "attribute": "performance vs TinyEmergencyNet at 15 W",
+   "value": "3.5x improvement",
+   "unit": "x",
+   "conditions": "Jetson Orin power limited to TDP 7 W; compared with TinyEmergencyNet running at 15 W",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2501.05880",
+   "locator": "Sec. embedded results",
+   "quote": "power (TDP) set to 7W, achieving a 3.5× performance improvement compared to TinyEmergencyNet operating at 15W",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "TakuNet: an Energy-Efficient CNN for Real-Time Inference on Embedded UAV systems in Emergency Response Scenarios",
+    "published": "2025-01-10"
+   }
+  },
+  {
+   "id": "P2501.12869-01",
+   "rules": [],
+   "subject": "Electric catamaran drone carrier (USV)",
+   "attribute": "size, deck, capacity",
+   "value": "4 m by 7 m hull, 4 m by 6 m deck, 4 DJI M300 drones, 10 kg-payload manipulator, up to sea level 3",
+   "unit": "m",
+   "conditions": "Offshore drone-carrier system for automated takeoff/landing",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2501.12869",
+   "locator": "Abstract",
+   "quote": "an electric catamaran measuring 4m by 7m, features a 4m by 6m deck supporting automated takeoff and landing for four DJI M300 drones, along with a 10kg-payload manipulator operable in up to level 3 sea conditions.",
+   "status": "verified",
+   "topic": "other",
+   "note": "",
+   "paper": {
+    "title": "Drone Carrier: An Integrated Unmanned Surface Vehicle for Autonomous Inspection and Intervention in GNSS-Denied Maritime Environment",
+    "published": "2025-01-22"
+   }
+  },
+  {
+   "id": "P2503.16587-01",
+   "rules": [
+    "R05"
+   ],
+   "subject": "Butane-fueled thermoelectric generator prototype",
+   "attribute": "avg power / energy generated / butane used",
+   "value": "4.6 W for 2.6 h = 12 Wh from 121.7 g butane",
+   "unit": "W",
+   "conditions": "Bench test, TE module hot side held at 340 C, fuel flow 46.3 g/hr; device efficiency 1.8%",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.16587",
+   "locator": "Sec. 3 Results",
+   "quote": "During the test, the device generated an average 4.6 W for 2.6 hours totaling 12 Wh of energy using 121.7 grams of butane",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
+    "published": "2025-03-20"
+   }
+  },
+  {
+   "id": "P2503.16587-02",
+   "rules": [
+    "R05"
+   ],
+   "subject": "Butane TE generator prototype",
+   "attribute": "total device weight and fuel mass fraction",
+   "value": "746 g incl. 227 g butane; fuel mass fraction 30%",
+   "unit": "g",
+   "conditions": "Prototype with 8 oz butane canister; 23% fraction needed for parity with lithium battery using a 12%-efficient TE module",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.16587",
+   "locator": "Sec. 3 Results",
+   "quote": "The total device weight is 746 grams including 227 grams of butane fuel. This demonstrates a fuel mass fraction of 30%",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
+    "published": "2025-03-20"
+   }
+  },
+  {
+   "id": "P2503.16587-03",
+   "rules": [
+    "R05"
+   ],
+   "subject": "Butane TE generator prototype",
+   "attribute": "specific energy and specific power",
+   "value": "30 Wh/kg and 6 W/kg",
+   "unit": "Wh/kg",
+   "conditions": "Measured at 1.8% device efficiency; projected 200 Wh/kg and 40 W/kg with a 12% efficient TE module",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.16587",
+   "locator": "Sec. 3 Results",
+   "quote": "specific energy and power of 30 Wh/kg and 6 W/kg, respectively.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
+    "published": "2025-03-20"
+   }
+  },
+  {
+   "id": "P2506.14065-01",
+   "rules": [],
+   "subject": "Adaptive helical antenna on fast UAV",
+   "attribute": "VSWR under Doppler shift vs static helix",
+   "value": "adaptive helix VSWR 1.15-1.25; static ~2.3 at 180 mph",
+   "unit": "VSWR",
+   "conditions": "Doppler detuning at 2.4 GHz, speeds tested up to 180 mph",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2506.14065",
+   "locator": "Sec. results",
+   "quote": "By 180 mph, the static VSWR average was ∼2.3, consistent with >3 dB of mismatch loss. The adaptive helix, however, kept VSWR near 1.15–1.25 across all speeds tested.",
+   "status": "verified",
+   "topic": "comms",
+   "note": "",
+   "paper": {
+    "title": "Dynamically Tunable Helical Antenna",
+    "published": "2025-06-16"
+   }
+  },
+  {
+   "id": "P2506.14065-02",
+   "rules": [],
+   "subject": "Helix antenna pitch actuator servos",
+   "attribute": "mean latency per movement / position error",
+   "value": "~47 ms mean latency per movement",
+   "unit": "ms",
+   "conditions": "Closed-loop servo adjustment of helix pitch",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2506.14065",
+   "locator": "Sec. actuator evaluation",
+   "quote": "The mean latency per movement was ∼47 ms, negligible compared to the ∼1 s rate of major flight changes.",
+   "status": "verified",
+   "topic": "comms",
+   "note": "",
+   "paper": {
+    "title": "Dynamically Tunable Helical Antenna",
+    "published": "2025-06-16"
+   }
+  },
+  {
+   "id": "P2509.11481-01",
+   "rules": [],
+   "subject": "Foundation quadrotor control policy test fleet",
+   "attribute": "real quadrotor mass range tested",
+   "value": "10 quadrotors from 32 g to 2.4 kg",
+   "unit": "g",
+   "conditions": "Single end-to-end neural policy; vehicles differ in motor type, frame type, propellers",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2509.11481",
+   "locator": "Abstract",
+   "quote": "We test 10 different real quadrotors from 32 g to 2.4 kg that also",
+   "status": "verified",
+   "topic": "other",
+   "note": "",
+   "paper": {
+    "title": "RAPTOR: A Foundation Policy for Quadrotor Control",
+    "published": "2025-09-15"
+   }
+  },
+  {
+   "id": "P2511.17765-01",
+   "rules": [],
+   "subject": "Crazyflie-based quadrotor with 4 VL53L5CX ToF sensors",
+   "attribute": "size and mass",
+   "value": "9.2 cm, 47 g",
+   "unit": "g",
+   "conditions": "Real-world multi-robot platform with nRF51822 radio for neighbor state exchange",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2511.17765",
+   "locator": "Fig. 2 caption",
+   "quote": "Each quadrotor is 9.2cm in size and weighs merely 47g.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "LEARN: Learning End-to-End Aerial Resource-Constrained Multi-Robot Navigation",
+    "published": "2025-11-21"
+   }
+  },
+  {
+   "id": "P2512.14450-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Crazyflie 2.1 Brushless nano-drone",
+   "attribute": "total mass incl. battery",
+   "value": "45 g",
+   "unit": "g",
+   "conditions": "Crazyflie 2.1 Brushless with Flow-deck v2 and AI-deck, system-identification benchmark platform",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2512.14450",
+   "locator": "Sec. platform description",
+   "quote": "The total mass of the platform, includ- ing the battery, amounts to m = 45 g.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Nonlinear System Identification Nano-drone Benchmark",
+    "published": "2025-12-16"
+   }
+  },
+  {
+   "id": "P2512.14450-02",
+   "rules": [
+    "R05"
+   ],
+   "subject": "Crazyflie 2.1 Brushless battery",
+   "attribute": "battery capacity / nominal voltage",
+   "value": "350 mA h, 3.7 V",
+   "unit": "mAh",
+   "conditions": "1S LiPo powering the whole platform",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2512.14450",
+   "locator": "Sec. platform description",
+   "quote": "A 1S 350 mA h LiPo battery powers the platform at a nominal voltage of 3.7 V.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Nonlinear System Identification Nano-drone Benchmark",
+    "published": "2025-12-16"
+   }
+  },
+  {
+   "id": "P2601.07476-01",
+   "rules": [],
+   "subject": "Crazyflie nano-quadrotor",
+   "attribute": "mass and compute class",
+   "value": "27 g",
+   "unit": "g",
+   "conditions": "Bitcraze Crazyflie with STM32 MCU and AI-deck expansion, as characterized in this survey/paper intro",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.07476",
+   "locator": "Sec. 1",
+   "quote": "Crazyflie, a 27 g open-source nano-quadrotor built around a programmable STM32 MCU",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "NanoCockpit: Performance-optimized Application Framework for AI-based Autonomous Nanorobotics",
+    "published": "2026-01-12"
+   }
+  },
+  {
+   "id": "P2601.07476-02",
+   "rules": [],
+   "subject": "Nano-drone onboard compute",
+   "attribute": "power budget of onboard MCUs",
+   "value": "sub-100 mW",
+   "unit": "mW",
+   "conditions": "Nano-drones of a few tens of grams form factor",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.07476",
+   "locator": "Sec. 1",
+   "quote": "limits their onboard computational resources to sub-100 mW microcontroller units (MCUs)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "NanoCockpit: Performance-optimized Application Framework for AI-based Autonomous Nanorobotics",
+    "published": "2026-01-12"
+   }
+  },
+  {
+   "id": "P2601.15486-01",
+   "rules": [],
+   "subject": "LLM-UAV MCP safety pipeline (server-side)",
+   "attribute": "median added latency per call",
+   "value": "0.12 ms median (95th percentile 0.21 ms); client round trip 211 ms ArduPilot, 377 ms PX4",
+   "unit": "ms",
+   "conditions": "Across 80,551 audited server-side calls of two N=5 campaigns, ArduPilot and PX4 arms",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.15486",
+   "locator": "Sec. 4 / discussion",
+   "quote": "the safety pipeline’s median contribution is 0.12 ms (95th percentile 0.21 ms), under 0.1% of the median client-observed round trip of a call a model issued (211 ms over the ArduPilot arm’s 14,769 such calls, 377 ms over PX4’s 16,304)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "An LLM-Agnostic, MAVLink-Based Drone Command and Control Interface and Agentic Harness Using the Model Context Protocol",
+    "published": "2026-01-21"
+   }
+  },
+  {
+   "id": "P2603.02936-01",
+   "rules": [],
+   "subject": "Pose-estimation network on Crazyflie 2.1 Brushless",
+   "attribute": "inference time",
+   "value": "30.4 ms (33 fps)",
+   "unit": "ms",
+   "conditions": "Lightweight network deployed aboard the nano-drone; trained with self-supervised domain adaptation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.02936",
+   "locator": "Abstract",
+   "quote": "models with an inference time of 30.4ms (33 fps) when deployed aboard the Crazyflie 2.1 Brushless nano-drone",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Self-supervised Domain Adaptation for Visual 3D Pose Estimation of Nano-drone Racing Gates by Enforcing Geometric Consistency",
+    "published": "2026-03-03"
+   }
+  },
+  {
+   "id": "P2603.05944-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Crazyflie 2.1 Brushless vs Crazyflie 2.1",
+   "attribute": "thrust-to-weight ratio",
+   "value": "around 3:1 vs 2:1",
+   "unit": "ratio",
+   "conditions": "Brushless motors+ESCs in CFB versus brushed motors in CF 2.1, as stated by authors",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.05944",
+   "locator": "Sec. I",
+   "quote": "the CFB boasts a significantly higher thrust-to-weight ratio of around 3:1 compared to the 2:1 ratio of the CF 2.1",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "How to Model Your Crazyflie Brushless",
+    "published": "2026-03-06"
+   }
+  },
+  {
+   "id": "P2603.08863-01",
+   "rules": [],
+   "subject": "Crazyflie adaptive controller under wind",
+   "attribute": "tracking error under wind up to 2 m/s",
+   "value": "RMSE 17.6 cm / MAE 13.7 cm circular; RMSE 12.2 cm / MAE 10.5 cm lemniscate",
+   "unit": "cm",
+   "conditions": "Real flights with fans blowing up to 2 m/s from four directions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.08863",
+   "locator": "Abstract/Conclusion",
+   "quote": "trajectories, achieving a low RMSE of 17.6 cm, MAE of 13.7 cm on circular trajectory, and RMSE of 12.2 cm, MAE of 10.5 cm on lemniscate trajectory.",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "Adaptive SINDy: Residual Force System Identification Based UAV Disturbance Rejection",
+    "published": "2026-03-09"
+   }
+  },
+  {
+   "id": "P2603.08926-01",
+   "rules": [],
+   "subject": "Crazyflie 2.1 with magnetic receiving coil (MagneticDeck)",
+   "attribute": "total weight and coil added mass",
+   "value": "47 g total, 9 g added by coil and holder",
+   "unit": "g",
+   "conditions": "Magnetic-field-based landing/localization on legged robot landing pad",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.08926",
+   "locator": "Sec. hardware",
+   "quote": "The total weight of the Crazyflie is 47 g, of which 9 g are added by the coil and the holder.",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "Fly, Track, Land: Infrastructure-less Magnetic Localization for Heterogeneous UAV-UGV Teaming",
+    "published": "2026-03-09"
+   }
+  },
+  {
+   "id": "P2603.09342-01",
+   "rules": [],
+   "subject": "Crazyflie 2.1 nano-quadcopter MCU",
+   "attribute": "compute platform",
+   "value": "STM32F405 Cortex-M4 168 MHz, 196 kB SRAM, 1 MB flash",
+   "unit": "MHz",
+   "conditions": "Control and EKF executed onboard; mass 29 g; tests started with fully charged stock 250 mAh batteries",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.09342",
+   "locator": "Sec. 4.1",
+   "quote": "using an STM32F405 Cortex-M4 168 MHz MCU with 196kB of SRAM and 1MB Flash.",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "On Real-Time Feasibility of High-Rate MPC using an Active-Set Method on Nano-Quadcopters",
+    "published": "2026-03-10"
+   }
+  },
+  {
+   "id": "P2603.09908-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Crazyflie 2.1 nano-quadrotor (stock)",
+   "attribute": "mass, peak thrust, thrust-to-weight",
+   "value": "0.6 N peak thrust; TWR 2.2 stock, 1.5 as flown (40.85 g)",
+   "unit": "g",
+   "conditions": "Stock config with 250 mAh single-cell LiPo, four 7x16 mm coreless motors with 46 mm props at 4.2 V full charge; NanoBench flown with markers and charging deck (40.85 g)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.09908",
+   "locator": "Sec. hardware platform",
+   "quote": "combined peak thrust is approximately 0.6 N. All NanoBench recordings were flown in an instru- mented configuration that adds retroreflective markers and the wireless-charging deck, raising the measured flying mass to 40.85 g. The thrust-to-weight ratio is therefore ≈2.2 for the stock airframe but ≈1.5 as flown",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "NanoBench: A Multi-Task Benchmark Dataset for Nano-Quadrotor System Identification, Control, and State Estimation",
+    "published": "2026-03-10"
+   }
+  },
+  {
+   "id": "P2603.09908-02",
+   "rules": [],
+   "subject": "Crazyflie 2.1 nano-quadrotor",
+   "attribute": "size and mass",
+   "value": "92 x 92 x 29 mm, 27 g",
+   "unit": "g",
+   "conditions": "Stock configuration with 250 mAh single-cell LiPo",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.09908",
+   "locator": "Sec. hardware platform",
+   "quote": "The vehicle measures 92 × 92 × 29 mm and weighs 27 g in the stock configuration with a 250 mA h single-cell LiPo installed.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "NanoBench: A Multi-Task Benchmark Dataset for Nano-Quadrotor System Identification, Control, and State Estimation",
+    "published": "2026-03-10"
+   }
+  },
+  {
+   "id": "P2603.22502-01",
+   "rules": [],
+   "subject": "MapForest sensor payload (Livox Mid-360, GoPro, Emlid M2, Jetson Orin Nano)",
+   "attribute": "mass, size, battery and endurance",
+   "value": "1.1 kg; 13x13x15 cm; 3300 mAh; 3-4 hours",
+   "unit": "kg",
+   "conditions": "Payload supports UAV, bicycle, handheld, backpack configurations; endurance is per charge of the payload battery, not of a UAV",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.22502",
+   "locator": "Sec. payload description",
+   "quote": "The system is powered by a 3300 mAh battery and operates for approximately 3-4 hours per charge. The payload measures 13 cm × 13 cm × 15 cm and weighs 1.1 kg (2.4 lb).",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "MapForest: A Modular Field Robotics System for Forest Mapping and Invasive Species Localization",
+    "published": "2026-03-23"
+   }
+  },
+  {
+   "id": "P2603.26250-01",
+   "rules": [],
+   "subject": "DEFOM-PrunePlus stereo depth model on Jetson Orin Super 16 GB",
+   "attribute": "inference rate",
+   "value": "3.3 FPS",
+   "unit": "FPS",
+   "conditions": "TensorRT FP16 on NVIDIA Jetson Orin Super 16 GB mounted on pruning UAV; UAV approach speed 0.3 m/s",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.26250",
+   "locator": "Sec. conclusions",
+   "quote": "For the pruning UAV, DEFOM-PrunePlus at 3.3 FPS pro- vides the recommended onboard model: at the UAV’s 0.3 m/s approach speed",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Real-Time Branch-to-Tool Distance Estimation for Autonomous UAV Pruning: Benchmarking Five DEFOM-Stereo Variants from Simulation to Jetson Deployment",
+    "published": "2026-03-27"
+   }
+  },
+  {
+   "id": "P2603.26250-02",
+   "rules": [],
+   "subject": "DEFOM-Stereo ViT-S on Jetson",
+   "attribute": "inference speed",
+   "value": "2.2 FPS (450 ms per frame)",
+   "unit": "FPS",
+   "conditions": "TensorRT FP16 on Jetson; too slow for closed-loop tool control per authors",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.26250",
+   "locator": "Sec. results",
+   "quote": "its Jetson inference speed of ∼2.2 FPS (∼450 ms per frame with TensorRT FP16)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Real-Time Branch-to-Tool Distance Estimation for Autonomous UAV Pruning: Benchmarking Five DEFOM-Stereo Variants from Simulation to Jetson Deployment",
+    "published": "2026-03-27"
+   }
+  },
+  {
+   "id": "P2603.28149-01",
+   "rules": [],
+   "subject": "BlankSkip early-exit detector on Crazyflie 2.1 GAP8 SoC",
+   "attribute": "throughput and accuracy",
+   "value": "1.86 FPS avg, mAP 0.588 (vs 1.50 FPS baseline)",
+   "unit": "FPS",
+   "conditions": "8-bit quantized model on GAP8 SoC (AI-deck); 0.015 mAP drop vs baseline",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.28149",
+   "locator": "Contributions",
+   "quote": "achieving a mAP of 0.588 at 1.86 average Frames Per Second (FPS), a 24% throughput improvement over the baseline (1.50 FPS)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "BlankSkip: Early-exit Object Detection onboard Nano-drones",
+    "published": "2026-03-30"
+   }
+  },
+  {
+   "id": "P2603.28149-02",
+   "rules": [],
+   "subject": "Nano-drone onboard compute platform",
+   "attribute": "memory and power budget",
+   "value": "about 10 MiB memory, about 1 W",
+   "unit": "W",
+   "conditions": "Nano-sized drones' computational platforms, per authors",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.28149",
+   "locator": "Abstract",
+   "quote": "of their computational platforms (≈10 MiB mem- ory, ≈1 W power budget)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "BlankSkip: Early-exit Object Detection onboard Nano-drones",
+    "published": "2026-03-30"
+   }
+  },
+  {
+   "id": "P2604.23074-01",
+   "rules": [],
+   "subject": "Crazyflie 2.0 with corkscrew adhesion mechanism",
+   "attribute": "added mass",
+   "value": "just over 10 g (budget 20 g)",
+   "unit": "g",
+   "conditions": "Toggleable adhesion mechanism for landing on tilting hook-and-loop platform; powered from onboard 1S 250 mAh LiPo",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.23074",
+   "locator": "Sec. III hardware",
+   "quote": "A mass budget of 20 g was allocated to limit changes in flight dynamics; the assembled mechanism added just over 10 g.",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "A Lightweight Toggleable Adhesion Prototype for Multirotor UAV Landing on Tilting Platforms",
+    "published": "2026-04-24"
+   }
+  },
+  {
+   "id": "P2604.23442-01",
+   "rules": [],
+   "subject": "Weed detection models on Jetson AGX Orin / AGX Xavier / Orin Nano",
+   "attribute": "inference latency",
+   "value": "10-20 ms (AGX Orin); 15-40 ms (AGX Xavier); 25-80 ms (Orin Nano)",
+   "unit": "ms",
+   "conditions": "YOLO/RT-DETR family models, UAV weed detection benchmark; range across models",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.23442",
+   "locator": "Sec. results",
+   "quote": "The Jetson AGX Orin delivers the fastest inference, with most models operating within 10–20 ms. The AGX Xavier demonstrates moderate performance, with inference times ranging from approximately 15–40 ms. In contrast, the Orin Nano exhibits the slowest performance, with latency spanning roughly 25–80 ms.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Resource-Constrained UAV-Based Weed Detection for Site-Specific Management on Edge Devices",
+    "published": "2026-04-25"
+   }
+  },
+  {
+   "id": "P2605.00146-01",
+   "rules": [],
+   "subject": "YOLOv8-based detector on GAP9 MCU",
+   "attribute": "latency/power/energy per inference",
+   "value": "16.9 ms, 94.1 mW, 1.59 mJ",
+   "unit": "ms",
+   "conditions": "30% mAP@0.5:0.5 on Pascal VOC; result cited from another work [47], not measured here",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.00146",
+   "locator": "Sec. related work",
+   "quote": "a YOLOv8-based model on GAP9 achieved 30% mAP@0.5:0.5 on Pascal VOC with 16.9 ms latency, 94.1 mW power, and 1.59 mJ energy per inference",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Real-Time Frame- and Event-based Object Detection with Spiking Neural Networks on Edge Neuromorphic Hardware: Design, Deployment and Benchmark",
+    "published": "2026-04-30"
+   }
+  },
+  {
+   "id": "P2605.13748-01",
+   "rules": [],
+   "subject": "TinySDP MPC solver on Crazyflie 2.1 Brushless (STM32F405)",
+   "attribute": "MPC solve time",
+   "value": "14.842 ms of 40 ms period",
+   "unit": "ms",
+   "conditions": "25 Hz, 20-step horizon, ADMM capped at 5 iterations, onboard STM32F405 168 MHz 192 KB SRAM",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.13748",
+   "locator": "Sec. real-world deployment",
+   "quote": "the solver executed all 5 iterations and reported a total MPC solve time of 14.842 ms, leaving approximately 25.2 ms of margin within the 40 ms control period",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "TinySDP: Real Time Semidefinite Optimization for Certifiable and Agile Edge Robotics",
+    "published": "2026-05-13"
+   }
+  },
+  {
+   "id": "P2605.13748-02",
+   "rules": [],
+   "subject": "TinySDP firmware on Crazyflie",
+   "attribute": "memory footprint",
+   "value": "272.4 KB flash, 139.0 KB RAM",
+   "unit": "KB",
+   "conditions": "Compiled firmware on STM32F405 (192 KB SRAM)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.13748",
+   "locator": "Sec. real-world deployment",
+   "quote": "The compiled firmware footprint is 272.4 KB of flash and 139.0 KB of on-chip RAM",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "TinySDP: Real Time Semidefinite Optimization for Certifiable and Agile Edge Robotics",
+    "published": "2026-05-13"
+   }
+  },
+  {
+   "id": "P2605.24301-01",
+   "rules": [],
+   "subject": "Quadrotor test platform for ACRORL bidirectional-thrust inversion",
+   "attribute": "motors/battery/compute",
+   "value": "2507-1850KV motors, 6S 1700 mAh battery",
+   "unit": "",
+   "conditions": "Real-world platform for learned inversion policy; TBS Lucid H7 FC, 60A AM32 ESC",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.24301",
+   "locator": "App. B.1",
+   "quote": "The motors are Brotherhobby Avenger V2 2507-1850KV with T-Motor T6143 propellers powered using a 6S Tattu 1700 mAh",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "AcroRL: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust",
+    "published": "2026-05-23"
+   }
+  },
+  {
+   "id": "P2605.24301-02",
+   "rules": [],
+   "subject": "ACRORL onboard control loop rates",
+   "attribute": "policy inference / position / orientation rate",
+   "value": "50 Hz / 100 Hz / 1 kHz (DShot at 1 kHz)",
+   "unit": "Hz",
+   "conditions": "NVIDIA Orin NX with ONNX Runtime TensorRT EP; Betaflight FC over UART",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.24301",
+   "locator": "App. B.2",
+   "quote": "Policy inference operated at a rate of 50 Hz using ONNX Runtime’s TensorRT Execution Provider [46], position control at 100 Hz, and orientation control at 1 kHz.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "AcroRL: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust",
+    "published": "2026-05-23"
+   }
+  },
+  {
+   "id": "P2606.27603-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Custom quadrotor for cable-suspended payload release",
+   "attribute": "mass, arm length, thrust-to-weight",
+   "value": "0.21 kg; arm 19.4 cm; propeller radius 3.81 cm; T/W 6.8",
+   "unit": "kg",
+   "conditions": "Custom research quadrotor controlled via CTBR commands",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2606.27603",
+   "locator": "Sec. III-A",
+   "quote": "the custom quadrotor used has a mass of 0.21 kg and arm length 19.4 cm, with propeller radius of 3.81 cm and a thrust-to-weight ratio of 6.8.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Learning to Throw: Agile and Accurate Cable-Suspended Payload Delivery with a Quadrotor",
+    "published": "2026-06-25"
+   }
+  },
+  {
+   "id": "P2607.12593-01",
+   "rules": [],
+   "subject": "Crazyflie 2.1 with AI-deck (GAP8)",
+   "attribute": "total power budget and motor share",
+   "value": "motors 7.3 W; rest of drone electronics 277 mW",
+   "unit": "W",
+   "conditions": "Nano-UAV in four exploration configurations; AI-deck power varies with exploration parameters",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.12593",
+   "locator": "Sec. power analysis",
+   "quote": "the four motors consume the vast majority of the total power budget, i.e., 7.3 W, while the rest of the drone’s electronics accounts for 277 mW in all four configurations",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
+    "published": "2026-07-14"
+   }
+  },
+  {
+   "id": "P2607.12593-02",
+   "rules": [],
+   "subject": "GAP8 vs STM32H723VE (Cortex-M7) for CNN inference",
+   "attribute": "compute efficiency",
+   "value": "1.44 GMAC/s @ 102 mW (NEMO/DORY)",
+   "unit": "GMAC/s",
+   "conditions": "GAP8 at CL@175 MHz; STM32H723VE with CMSIS-NN at 550 MHz",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.12593",
+   "locator": "Sec. platform comparison",
+   "quote": "The GAP8, at the maxi- mum frequency of CL@175 MHz, achieves 1.44 GMAC/s @ 102 mW and 1.14 GMAC/s @ 119 mW with NEMO/DORY and GAPflow, respectively.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
+    "published": "2026-07-14"
+   }
+  },
+  {
+   "id": "P2607.12593-03",
+   "rules": [],
+   "subject": "Crazyflie 2.1 nano-quadrotor",
+   "attribute": "mass, diameter, payload capacity",
+   "value": "27 g, ~10 cm, ~15 g payload",
+   "unit": "g",
+   "conditions": "Stock COTS platform used with STM32F405 flight MCU",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.12593",
+   "locator": "Sec. platform",
+   "quote": "This tiny UAV weighs 27 g, has a diameter of ∼10 cm, and a total payload of ∼15 g.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
+    "published": "2026-07-14"
+   }
+  },
+  {
+   "id": "P2607.16282-01",
+   "rules": [],
+   "subject": "Detection pipeline on Raspberry Pi Zero 2W",
+   "attribute": "end-to-end throughput and latency",
+   "value": "31.85 FPS, 31.4 ms/frame",
+   "unit": "FPS",
+   "conditions": "1,000 real-world UAV videos; YOLOv8n baseline on same hardware 1.95 FPS (512.4 ms/frame)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.16282",
+   "locator": "Sec. on-device deployment",
+   "quote": "the measured end-to-end latency of 31.4 ms/frame (31.85 FPS) lands within 6% of the 29.6 ms scaling-based budget",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Moving Like a Human: Ego-Motion-Normalized Temporal Signatures for Real-Time Aerial Person Tracking on Milliwatt-Class Hardware",
+    "published": "2026-07-09"
+   }
+  },
+  {
+   "id": "P2607.16282-02",
+   "rules": [],
+   "subject": "YOLOv8n on Raspberry Pi Zero 2W",
+   "attribute": "throughput",
+   "value": "1.95 FPS (512.4 ms/frame)",
+   "unit": "FPS",
+   "conditions": "Same 1,000 UAV-video corpus on Pi Zero 2W",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.16282",
+   "locator": "Sec. on-device deployment",
+   "quote": "YOLOv8n on the same hardware runs 16× slower (512.4 ms/frame, 1.95 FPS)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Moving Like a Human: Ego-Motion-Normalized Temporal Signatures for Real-Time Aerial Person Tracking on Milliwatt-Class Hardware",
+    "published": "2026-07-09"
+   }
+  },
+  {
+   "id": "P2607.18936-01",
+   "rules": [],
+   "subject": "NGPS GPS-denied navigation on Jetson Orin NX",
+   "attribute": "position accuracy",
+   "value": "2.94 m RMSE; worst-case ATE 6.04 m",
+   "unit": "m",
+   "conditions": "Five flights 60-150 m AGL; worst case at 150 m AGL and 2 m/s; 3.5x better than standalone monocular VIO; runs real time on Jetson Orin NX",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.18936",
+   "locator": "Abstract",
+   "quote": "NGPS achieves 2.94 m position RMSE, with worst-case ATE 6.04 m at 150 m AGL and 2 m/s, yielding a 3.5× improvement over standalone monocular VIO",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "NGPS: GPS-Denied Aerial Geo-Localization and 2.5D Reconstruction via Deep Satellite Image Matching and Multi-Rate Sensor Fusion",
+    "published": "2026-07-21"
+   }
+  },
+  {
+   "id": "P2607.22145-01",
+   "rules": [],
+   "subject": "Livox Mid-360 LiDAR odometry on Pixhawk 4 Mini / Jetson Orin NX",
+   "attribute": "odometry output rate",
+   "value": "~10 Hz",
+   "unit": "Hz",
+   "conditions": "FAST-LIO-style IESKF accumulating 10 packets per cycle at 100 Hz sensor rate; flight-test validation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22145",
+   "locator": "Sec. method",
+   "quote": "For the Livox Mid-360 sensor at 100 Hz, an accumula- tor collecting 10 packets per IESKF cycle yields a ∼10 Hz publishing rate.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Flight-Ready LiDAR-Inertial Odometry for Embedded Drone Platforms",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2608.00635-01",
+   "rules": [],
+   "subject": "FlowPilot perception-to-action pipeline on Jetson Orin NX",
+   "attribute": "end-to-end latency and speed",
+   "value": "under 18 ms; 5.5 m/s",
+   "unit": "ms",
+   "conditions": "Physical quadrotor, onboard sensing and computation only, cluttered indoor and forest environments",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.00635",
+   "locator": "Abstract",
+   "quote": "the full perception-to-action pipeline runs in under 18 ms on a Jetson Orin NX and reaches 5.5 m/s in cluttered indoor and forest environments using only onboard sensing and computation.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "FlowPilot: Real-Time World-Action Modeling for Agile UAV Navigation",
+    "published": "2026-08-01"
+   }
+  },
+  {
+   "id": "P2608.06707-01",
+   "rules": [
+    "R06"
+   ],
+   "subject": "Hoverflie (Crazyflie with thermoformed rotor shrouds)",
+   "attribute": "net mass increase",
+   "value": "+15.8 g (21.2 g added, 5.4 g removed)",
+   "unit": "g",
+   "conditions": "Conversion of Crazyflie to shrouded multi-modal hovercraft, propeller guards removed",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.06707",
+   "locator": "Sec. D, Table I",
+   "quote": "the added structural elements contribute 21.2 g and 5.4 g is reduced from removed components, resulting in a net mass increase of 15.8 g",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Hoverflie: An empirical investigation of rotor shrouds to transform micro air vehicles into multi-modal hovercraft",
+    "published": "2026-08-07"
+   }
+  },
+  {
+   "id": "P2608.06707-02",
+   "rules": [],
+   "subject": "Hoverflie vs stock Crazyflie 2.1 Brushless",
+   "attribute": "hover/flight endurance",
+   "value": "889 s vs 561 s (in-ground-effect hover); 382 s vs 544 s (free flight)",
+   "unit": "s",
+   "conditions": "Battery voltage decay test; Hoverflie hovering in ground effect vs stock Crazyflie hovering near ground; free-flight",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.06707",
+   "locator": "Sec. E, Fig. 13",
+   "quote": "In-ground-effect hovering, Hoverflie achieved a flight du- ration of 889 s, compared to 561 s for the Crazyflie hovering near the ground. In contrast, during free-flight, Hoverflie operated for 382 s, whereas the stock Crazyflie achieved 544 s.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Hoverflie: An empirical investigation of rotor shrouds to transform micro air vehicles into multi-modal hovercraft",
+    "published": "2026-08-07"
+   }
+  },
+  {
+   "id": "P2609.09380-01",
+   "rules": [],
+   "subject": "AccelMPC FPGA board on Crazyflie",
+   "attribute": "board size, mass, FPGA",
+   "value": "4x3 cm PCB with AMD Artix-7 100T FPGA",
+   "unit": "g",
+   "conditions": "Mounted via Crazyflie expansion interface; 1 kHz onboard constrained MPC",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.09380",
+   "locator": "Abstract / Fig. 3",
+   "quote": "The 4×3 cm four-layer PCB hosts an AMD Artix- 7 100T FPGA and mounts directly on the Crazyflie through the standard expansion interface.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "AccelMPC: High-Rate, Low-Power FPGA-Accelerated Model Predictive Control for Tiny Drones",
+    "published": "2026-09-08"
+   }
+  },
+  {
+   "id": "P2609.09380-02",
+   "rules": [],
+   "subject": "TinyMPC on Crazyflie STM32F405 MCU",
+   "attribute": "active-mode current",
+   "value": "87 mA at 168 MHz, 3.3 V",
+   "unit": "mA",
+   "conditions": "Nominal compute power profile used for energy-per-solve comparison with FPGA",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.09380",
+   "locator": "Sec. energy evaluation",
+   "quote": "(87 mA at 168 MHz, 3.3 V), establishing a nominal compute power profile for the STM32F405.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "AccelMPC: High-Rate, Low-Power FPGA-Accelerated Model Predictive Control for Tiny Drones",
+    "published": "2026-09-08"
+   }
+  },
+  {
+   "id": "P2609.17198-01",
+   "rules": [],
+   "subject": "TIO-Former ToF-inertial odometry on RISC-V companion",
+   "attribute": "P95 latency and peak memory",
+   "value": "10.466 ms; 6.324 MiB",
+   "unit": "ms",
+   "conditions": "LicheeRV Nano edge RISC-V companion computer on Crazyflie nano-UAV; < 5% system RAM",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.17198",
+   "locator": "Abstract",
+   "quote": "TIO-FORMER achieves a P95 latency of 10.466 ms and peak resident memory of 6.324 MiB (< 5% system RAM)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
+    "published": "2026-09-15"
+   }
+  },
+  {
+   "id": "P2609.17198-02",
+   "rules": [],
+   "subject": "Six-array ToF sensor payload on Crazyflie",
+   "attribute": "mass",
+   "value": "2.5 g per module, 15 g total",
+   "unit": "g",
+   "conditions": "Six TOFSense-M 8x8 arrays at 15 Hz, IMU 200 Hz, nano-UAV platform",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.17198",
+   "locator": "Sec. dataset",
+   "quote": "Each sensor module has a mass of 2.5 g, contributing an aggregate exteroceptive payload of only 15 g.",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
+    "published": "2026-09-15"
+   }
+  },
+  {
+   "id": "P2609.21690-01",
+   "rules": [],
+   "subject": "RAYA recovery controller on Crazyflie 2.1 Brushless STM32F405",
+   "attribute": "worst-case control-step latency",
+   "value": "44.32 ms (aero mismatch); 44.52 ms (motor loss)",
+   "unit": "ms",
+   "conditions": "Onboard MCU at 20 Hz, five ADMM iterations, 50 ms control deadline; nominal MPC 30.40 ms",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.21690",
+   "locator": "Sec. embedded hardware deployment",
+   "quote": "Under aerodynamic mismatch, the worst observed control- step latency is 30.40 ms for nominal MPC, 31.55 ms for in- solver CBF, 42.95 ms for the post hoc learned controller, and 44.32 ms for RAYA . Under motor loss, the corresponding values are 29.35, 33.79, 42.46, and 44.52 ms.",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "RAYA: Learning Where and When to Intervene for Robot Recovery",
+    "published": "2026-09-18"
+   }
+  },
+  {
+   "id": "P2609.30358-01",
+   "rules": [],
+   "subject": "TinyCVIO camera deck on Crazyflie",
+   "attribute": "deck mass and frame rate",
+   "value": "5.1 g",
+   "unit": "g",
+   "conditions": "Complete deck including 3D-printed camera shroud; 320x320 images, IMU 400 Hz",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.30358",
+   "locator": "Sec. hardware",
+   "quote": "including the 3D-printed camera shroud, weighs 5.1 g.",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
+    "published": "2026-09-24"
+   }
+  },
+  {
+   "id": "P2609.30358-02",
+   "rules": [],
+   "subject": "TinyCVIO VIO system onboard Crazyflie",
+   "attribute": "accuracy and latency",
+   "value": "3.5-3.7 cm ATE; 15.7-16.3 ms mean estimate latency",
+   "unit": "cm",
+   "conditions": "Nine flights at three speeds, constellation-aided; onboard Crazyflie",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.30358",
+   "locator": "Abstract",
+   "quote": "achieving 3.5 cm to 3.7 cm mean absolute trajectory error and 0.50–0.60% relative pose error over 10 m segments, with mean estimate latency of 15.7 ms to 16.3 ms.",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
+    "published": "2026-09-24"
+   }
+  },
+  {
+   "id": "P2609.31699-01",
+   "rules": [],
+   "subject": "Ego-noise keyword-spotting pipeline on Jetson Orin NX",
+   "attribute": "compute cost",
+   "value": "3.2 ms per 100 ms hop",
+   "unit": "ms",
+   "conditions": "On-device on UAV flight computer Jetson Orin NX; includes front-end; BC-ResNet-8 costs 8.6 ms; TensorRT FP16 1.2-1.5 ms per network",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.31699",
+   "locator": "Sec. on-device results",
+   "quote": "pipeline costs 3.2 ms per 100 ms hop including the front-end (3 % of the hop)",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Normalise or condition? Noise-floor front-ends for on-board keyword spotting under UAV rotor ego-noise",
+    "published": "2026-09-19"
+   }
+  },
+  {
+   "id": "P2609.37316-01",
+   "rules": [],
+   "subject": "Crazyflie Brushless (guardless) with SD logging deck",
+   "attribute": "mass",
+   "value": "38 g",
+   "unit": "g",
+   "conditions": "Including SD logging deck and card",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.37316",
+   "locator": "Sec. platform",
+   "quote": "The guardless Crazyflie Brushless weighs 38 g including its SD logging deck and card.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Battery-Aware Reinforcement Learning for Aggressive Quadrotor Flight",
+    "published": "2026-09-29"
+   }
+  },
+  {
+   "id": "P2609.37316-02",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Crazyflie Brushless RL policy thrust cap",
+   "attribute": "host-requested thrust limit",
+   "value": "0.732 N (Stock) and 0.916 N (High)",
+   "unit": "N",
+   "conditions": "Host cap; actual thrust depends on battery and motor loading",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.37316",
+   "locator": "Training hyperparameter table note",
+   "quote": "The host cap limits requested thrust to 0.732 N for Stock and 0.916 N for High, although actual thrust depends on battery and motor loading.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Battery-Aware Reinforcement Learning for Aggressive Quadrotor Flight",
+    "published": "2026-09-29"
+   }
+  },
+  {
+   "id": "P2610.05007-01",
+   "rules": [],
+   "subject": "Jetson/B210/RM500Q-GL aerial 5G gNB DU electronics",
+   "attribute": "mass and power draw",
+   "value": "657.4 g; about 28 W",
+   "unit": "g",
+   "conditions": "Jetson Orin Nano as 5G DU with USRP B210 and 5G modem, sustained traffic; 757.4 g with integration allowance; paper does not convert to flight time",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.05007",
+   "locator": "Abstract",
+   "quote": "The validated Jetson/B210/RM500Q-GL electronics weigh 657.4 g and draw about 28 W under sustained traffic (757.4 g with integration allowance).",
+   "status": "verified",
+   "topic": "payload",
+   "note": "",
+   "paper": {
+    "title": "Toward Lightweight Aerial 5G gNBs: Reproducible OAI Testbed on Commodity ARM Platforms",
+    "published": "2026-10-04"
+   }
+  },
+  {
+   "id": "P2610.12411-01",
+   "rules": [],
+   "subject": "GLIO2 GPU pipeline on Jetson Orin NX / desktop",
+   "attribute": "per-scan processing time",
+   "value": "7.43 ms (Switch), 20.41 ms (Urban)",
+   "unit": "ms",
+   "conditions": "10 Hz LiDAR scans (100 ms budget); CPU numbers on Intel Core Ultra 7 265KF desktop",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.12411",
+   "locator": "Sec. runtime / Table 6",
+   "quote": "The GPU pipeline, by contrast, averages 7.43 ms per scan on Switch and 20.41 ms on Urban while retaining full accuracy",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "GLIO2: A GPU-Parallelized Tightly-Coupled LiDAR-Inertial-GNSS System for Robust and Real-Time Global Localization and Mapping",
+    "published": "2026-10-08"
+   }
+  },
+  {
+   "id": "P2610.15560-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Stereo-MAV compact quadrotor",
+   "attribute": "takeoff weight and wheelbase",
+   "value": "420 g; wheelbase 112 mm",
+   "unit": "g",
+   "conditions": "Compact airframe with NVIDIA Orin NX running Stereo-Planner",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.15560",
+   "locator": "Sec. hardware, Fig. 15",
+   "quote": "which has a takeoff weight of 420g and a compact wheelbase measuring only 112mm.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Stereo-Planner: Learning Stereo-to-Trajectory Planning for Zero-Shot Sim-to-Real Quadrotor Navigation",
+    "published": "2026-10-11"
+   }
+  },
+  {
+   "id": "P2610.15560-02",
+   "rules": [],
+   "subject": "Stereo-Planner on NVIDIA Orin NX",
+   "attribute": "Stereo-Planner network inference time",
+   "value": "network inference 336.16 ms -> 18.99 ms (TensorRT FP16)",
+   "unit": "ms",
+   "conditions": "Onboard on Orin NX, state estimation pinned to two CPU cores, trajectory updates at 30 Hz",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.15560",
+   "locator": "Sec. onboard deployment",
+   "quote": "reducing the average network inference time from 336.16ms to 18.99 ms.",
+   "status": "verified",
+   "topic": "companion",
+   "note": "",
+   "paper": {
+    "title": "Stereo-Planner: Learning Stereo-to-Trajectory Planning for Zero-Shot Sim-to-Real Quadrotor Navigation",
+    "published": "2026-10-11"
+   }
+  },
+  {
+   "id": "P2610.15560-03",
+   "rules": [
+    "R07"
+   ],
+   "subject": "Stereo-MAV autonomous flight",
+   "attribute": "max flight speed",
+   "value": "up to 7 m/s",
+   "unit": "m/s",
+   "conditions": "Real-world flight with Orin NX onboard stereo-RGB planner",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.15560",
+   "locator": "Abstract",
+   "quote": "autonomous flight at speeds of up to 7 m/s, with a mean onboard vision-to-action inference time of 24.27 ms.",
+   "status": "verified",
+   "topic": "flight-controller",
+   "note": "",
+   "paper": {
+    "title": "Stereo-Planner: Learning Stereo-to-Trajectory Planning for Zero-Shot Sim-to-Real Quadrotor Navigation",
+    "published": "2026-10-11"
+   }
+  }
+ ]
+}

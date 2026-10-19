@@ -15,6 +15,7 @@ const CHAT_FEATURE_KEY = "chat"
 interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; excerpt?: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
+  kgFacts?: { id: string; text: string; source?: string }[]
   evidence?: { id: string; name: string; formula: string; sourceStatus: string; claims: { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string }[] }[]
 }
 
@@ -210,6 +211,21 @@ export default function ChatWidget() {
                         ))}
                       </div>
                     </div>
+                  )}
+
+                  {m.role === "assistant" && meta?.kgFacts && (
+                    <details className="px-1" open={meta.kgFacts.length > 0 && meta.kgFacts.length <= 6}>
+                      <summary className="text-[11px] font-hud text-ink-dim mb-1 cursor-pointer select-none hover:text-signal-600">
+                        🕸 지식그래프 근거 {meta.kgFacts.length ? `(${meta.kgFacts.length})` : "— 연결된 지식 없음"}
+                      </summary>
+                      <div className="flex flex-col gap-0.5 mt-1">
+                        {meta.kgFacts.map((f) => (
+                          <p key={f.id + f.text.slice(0, 20)} className="text-[11px] text-ink-dim">
+                            <code className="text-[10px]">KG:{f.id}</code> {f.text}
+                          </p>
+                        ))}
+                      </div>
+                    </details>
                   )}
 
                   {m.role === "assistant" && meta?.evidence && meta.evidence.length > 0 && (
