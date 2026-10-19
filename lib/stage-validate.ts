@@ -74,6 +74,17 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
     matched.push({ row: r, cand, k })
     if (cand.massG) knownMassG += cand.massG * k
   }
+  // R1b 후보가 있는데 '후보 없음'으로 쓴 행(모델이 목록을 무시): 모터·ESC·배터리는 서버 후보가 있으면 반드시 그중에서 고르거나 논문 구성품이어야 한다
+  const hadCand = (cat: string) => d.cands.some((c) => c.category === cat)
+  const skipped: string[] = []
+  for (const r of rows) {
+    const name = colOf(r, /구성요소/), sel = colOf(r, /선정안/)
+    if (!/후보 없음/.test(sel)) continue
+    const cat = /^(모터|motor)/i.test(name) ? "motor" : /^(esc)/i.test(name) ? "esc" : /^(배터리|battery)/i.test(name) ? "battery" : ""
+    if (cat && hadCand(cat)) skipped.push(`${name}(후보 ${d.cands.filter((c) => c.category === cat).slice(0, 2).map((c) => c.name.slice(0, 40)).join(" / ")})`)
+  }
+  checks.push({ ok: skipped.length === 0, label: "서버 후보가 있는 분류를 '후보 없음'으로 쓰지 않음", detail: skipped.length ? skipped.join(" ; ") : undefined })
+  if (skipped.length) issues.push(`서버가 후보를 제시했는데 '카탈로그 후보 없음'으로 썼다: ${skipped.join(" ; ")}. <product-match>의 해당 [후보] 목록에서 골라 쓴다.`)
   checks.push({ ok: outside.length === 0, label: "선정안은 모두 카탈로그 후보이거나 '후보 없음'", detail: outside.length ? `카탈로그 후보에 없는 선정: ${outside.join(" / ")}` : undefined })
   if (outside.length) issues.push(`카탈로그 후보에 없는 제품을 선정했다(목록 밖 제품 금지, 없으면 '카탈로그 후보 없음 — 확인 필요'로 쓴다): ${outside.join(" / ")}`)
 

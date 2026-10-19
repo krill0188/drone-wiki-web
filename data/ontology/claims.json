@@ -359,6 +359,23 @@
       "quote": "predicts Maximum Takeoff Weight (MTOW) within 7.2% Mean Absolute Percentage Error",
       "status": "verified",
       "note": "3개 구조 계수만 DIY 20기종에서 맞춘 뒤 고정하고 상업용에 적용(비순환 검증). 우리 엔진은 이런 기종별 대조를 아직 안 했음 — Table IV 19기종 실제 MTOW 사용 가능"
+    },
+    {
+      "id": "CL22",
+      "rules": [
+        "R06"
+      ],
+      "subject": "비배터리·비페이로드 질량비(구조·추진·전장 합) 실측 역산",
+      "attribute": "ef = 1 − 배터리비 − 페이로드비",
+      "value": "페이로드 맞춤 배달 기체 0.42(2.57kg급)·0.29(24kg급); 페이로드 없는 범용 기체 F450 0.68·X500 0.56·T650 0.71·X650 0.63",
+      "unit": "-",
+      "conditions": "배달 기체 값은 Zhang 2021 표를 P2604.07514가 인용한 2차 데이터. 범용 기체 값은 CL13·CL14의 총중량과 배터리 Wh(Wh/150 가정)에서 역산해 오차가 큼. 두 집단은 설계 목적이 다름(페이로드 맞춤 대 범용)",
+      "sourceType": "derived",
+      "sourceId": "P2604.07514-01+CL13+CL14",
+      "locator": "scratchpad 계산",
+      "quote": "",
+      "status": "derived",
+      "note": "우리 ef 보수 0.45·낙관 0.30은 페이로드 맞춤 기체 범위(0.29~0.42) 안. 범용 기체(0.56~0.71)는 탑재 여유를 가진 구성이라 높게 나옴. 2026-10-20 검토 결과 상수 유지"
     }
   ]
 }
