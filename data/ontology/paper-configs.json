@@ -1,0 +1,295 @@
+{
+  "_comment": "논문이 직접 밝힌 기체 구성(2026-10-19). 모든 quote는 arXiv 원문 PDF에서 대조됨. reported는 논문 표/본문에 보고된 값이며 시험 조건은 논문 표기에 따른다. 구성품 이름 외 값(무게 등)은 이 파일의 reportedQuote 근거 범위만 사용한다.",
+  "configs": [
+    {
+      "id": "mrs-f450",
+      "name": "MRS Drone — DJI F450 기반 (군집 연구용 소형)",
+      "aliases": [
+        "f450",
+        "mrs f450"
+      ],
+      "source": {
+        "id": "arXiv:2306.07229",
+        "title": "MRS Drone: A Modular Platform for Real-World Deployment of Aerial Multi-Robot Systems",
+        "url": "https://arxiv.org/abs/2306.07229"
+      },
+      "rotors": 4,
+      "reported": {
+        "weightKg": 1.7,
+        "flightMin": 15,
+        "wheelbaseMm": 450,
+        "propIn": 9.4,
+        "batteryWh": 99.9,
+        "payloadKg": 0.5
+      },
+      "reportedQuote": "Weight (kg) 2.5 1.7 3.5 5.5 10 7",
+      "components": [
+        {
+          "category": "frame",
+          "name": "DJI F450",
+          "keyTokens": [
+            "f450"
+          ],
+          "quote": "The first and smallest basic frame is the DJI F450"
+        },
+        {
+          "category": "motor",
+          "name": "2212 KV920",
+          "keyTokens": [
+            "2212",
+            "kv920"
+          ],
+          "quote": "equipped with 2212 KV920 motors and plastic 9.4-inch propellers"
+        },
+        {
+          "category": "propeller",
+          "name": "9.4인치 플라스틱",
+          "keyTokens": [
+            "9.4"
+          ],
+          "quote": "equipped with 2212 KV920 motors and plastic 9.4-inch propellers"
+        },
+        {
+          "category": "battery",
+          "name": "4S 6750 mAh LiPo (99.9 Wh)",
+          "keyTokens": [
+            "4s",
+            "6750"
+          ],
+          "quote": "4S 6750 mAh lithium polymer battery"
+        }
+      ]
+    },
+    {
+      "id": "mrs-x500",
+      "name": "MRS Drone — Holybro X500 기반 (중형, 기본 연구 플랫폼)",
+      "aliases": [
+        "x500",
+        "mrs x500"
+      ],
+      "source": {
+        "id": "arXiv:2306.07229",
+        "title": "MRS Drone: A Modular Platform for Real-World Deployment of Aerial Multi-Robot Systems",
+        "url": "https://arxiv.org/abs/2306.07229"
+      },
+      "rotors": 4,
+      "reported": {
+        "weightKg": 2.5,
+        "flightMin": 25,
+        "wheelbaseMm": 500,
+        "propIn": 13,
+        "batteryWh": 199.8,
+        "payloadKg": 1.5
+      },
+      "reportedQuote": "Flight time (min) 25 15 20 7 10 10",
+      "components": [
+        {
+          "category": "frame",
+          "name": "Holybro X500",
+          "keyTokens": [
+            "x500"
+          ],
+          "quote": "The mid-sized Holybro X500 frame"
+        },
+        {
+          "category": "motor",
+          "name": "3510 KV700",
+          "keyTokens": [
+            "3510",
+            "kv700"
+          ],
+          "quote": "Its 3510 KV700 motors and 13-inch carbon fiber composite propellers"
+        },
+        {
+          "category": "propeller",
+          "name": "13인치 카본",
+          "keyTokens": [
+            "13"
+          ],
+          "quote": "Its 3510 KV700 motors and 13-inch carbon fiber composite propellers"
+        },
+        {
+          "category": "battery",
+          "name": "4S 6750 mAh LiPo ×1~2 (병렬)",
+          "keyTokens": [
+            "4s",
+            "6750"
+          ],
+          "quote": "one or two 4S 6750 mAh lithium polymer batteries"
+        },
+        {
+          "category": "compute",
+          "name": "Intel NUC i7-10710U",
+          "keyTokens": [
+            "nuc",
+            "10710u"
+          ],
+          "quote": "the main Intel NUC i7-10710U computer, Pixhawk flight controller"
+        },
+        {
+          "category": "fc",
+          "name": "Pixhawk",
+          "keyTokens": [
+            "pixhawk"
+          ],
+          "quote": "the main Intel NUC i7-10710U computer, Pixhawk flight controller"
+        },
+        {
+          "category": "link",
+          "name": "Mobilicom MCU-30 Lite (2.3GHz)",
+          "keyTokens": [
+            "mobilicom",
+            "mcu-30"
+          ],
+          "quote": "2.3 GHz Mobilicom MCU-30 Lite unit"
+        }
+      ]
+    },
+    {
+      "id": "mrs-t650",
+      "name": "MRS Drone — Tarot T650 기반 (대형, 고중량 페이로드)",
+      "aliases": [
+        "t650",
+        "mrs t650"
+      ],
+      "source": {
+        "id": "arXiv:2306.07229",
+        "title": "MRS Drone: A Modular Platform for Real-World Deployment of Aerial Multi-Robot Systems",
+        "url": "https://arxiv.org/abs/2306.07229"
+      },
+      "rotors": 4,
+      "reported": {
+        "weightKg": 3.5,
+        "flightMin": 20,
+        "wheelbaseMm": 650,
+        "propIn": 15,
+        "batteryWh": 177.6,
+        "payloadKg": 2.5
+      },
+      "reportedQuote": "Battery capacity (Wh) 199.8 99.9 177.6 355.2 355.2 355.2",
+      "components": [
+        {
+          "category": "frame",
+          "name": "Tarot T650",
+          "keyTokens": [
+            "t650"
+          ],
+          "quote": "The Tarot T650, displayed in Fig. 4, is the largest frame chosen for the project."
+        },
+        {
+          "category": "motor",
+          "name": "4114 KV320",
+          "keyTokens": [
+            "4114",
+            "kv320"
+          ],
+          "quote": "It features 4114 KV320 motors, carbon fiber 15-inch propellers, and a 6S 8000 mAh lithium polymer battery."
+        },
+        {
+          "category": "propeller",
+          "name": "15인치 카본",
+          "keyTokens": [
+            "15"
+          ],
+          "quote": "It features 4114 KV320 motors, carbon fiber 15-inch propellers, and a 6S 8000 mAh lithium polymer battery."
+        },
+        {
+          "category": "battery",
+          "name": "6S 8000 mAh LiPo",
+          "keyTokens": [
+            "6s",
+            "8000"
+          ],
+          "quote": "It features 4114 KV320 motors, carbon fiber 15-inch propellers, and a 6S 8000 mAh lithium polymer battery."
+        }
+      ]
+    },
+    {
+      "id": "race-5inch",
+      "name": "Race Against the Machine — 5인치 오픈디자인 레이싱 쿼드",
+      "aliases": [
+        "race against the machine",
+        "레이싱 쿼드",
+        "레이싱 드론 데이터셋"
+      ],
+      "source": {
+        "id": "arXiv:2311.02667",
+        "title": "Race Against the Machine: A Fully-Annotated, Open-Design Dataset of Autonomous and Piloted High-speed Flight",
+        "url": "https://arxiv.org/abs/2311.02667"
+      },
+      "rotors": 4,
+      "reported": {
+        "weightKg": 0.87,
+        "wheelbaseMm": 215
+      },
+      "reportedQuote": "weighs ∼870g, has a thrust-to-weight ratio of 7.5",
+      "components": [
+        {
+          "category": "esc",
+          "name": "T-MOTOR F55A PROII 6S 4IN1",
+          "keyTokens": [
+            "f55a"
+          ],
+          "quote": "ESC T-MOTOR F55A PROII 6S 4IN1"
+        },
+        {
+          "category": "fc",
+          "name": "Holybro Kakute H7 v1.3",
+          "keyTokens": [
+            "kakute"
+          ],
+          "quote": "FCU Holybro Kakute H7 v1.3"
+        },
+        {
+          "category": "battery",
+          "name": "Tattu R-Line v5.0 1400mAh 22.2V 150C",
+          "keyTokens": [
+            "1400"
+          ],
+          "quote": "Battery Tattu R-Line v5.0 1400mAh 22.2V 150C"
+        },
+        {
+          "category": "compute",
+          "name": "NVIDIA Orin NX 16GB",
+          "keyTokens": [
+            "orin"
+          ],
+          "quote": "Computer NVIDIA Orin NX 16GB Module"
+        },
+        {
+          "category": "frame",
+          "name": "Pyrodrone Hyperlite Floss 3.0 5인치",
+          "keyTokens": [
+            "floss"
+          ],
+          "quote": "Frame Pyrodrone Hyperlite Floss 3.0 Race Frame 5”"
+        },
+        {
+          "category": "motor",
+          "name": "T-MOTOR F60 PRO V 2020KV",
+          "keyTokens": [
+            "f60",
+            "2020"
+          ],
+          "quote": "Motors T-MOTOR F60 PRO V 2020KV"
+        },
+        {
+          "category": "propeller",
+          "name": "T-MOTOR T5147",
+          "keyTokens": [
+            "t5147"
+          ],
+          "quote": "Propellers T-MOTOR T5147"
+        },
+        {
+          "category": "software",
+          "name": "Betaflight 4.3.1",
+          "keyTokens": [
+            "betaflight"
+          ],
+          "quote": "firmware we used is Betaflight 4.3.1"
+        }
+      ]
+    }
+  ]
+}

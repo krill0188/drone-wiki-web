@@ -49,7 +49,7 @@ function qtyOf(text: string): number {
 }
 
 // ── 2단계 HW ──
-export function validateHw(md: string, d: MatchData): Validation {
+export function validateHw(md: string, d: MatchData, allow?: (selection: string) => boolean): Validation {
   const checks: Check[] = []
   const issues: string[] = []
   const rows = parseTable(md, /구성요소/)
@@ -64,6 +64,7 @@ export function validateHw(md: string, d: MatchData): Validation {
     if (SKIP_ROW.test(name) || !sel) continue
     if (NONE.test(sel)) continue
     const cand = matchCand(sel, d.cands)
+    if (!cand && allow?.(sel)) continue // 논문 구성품은 카탈로그 밖이어도 허용(출처가 논문)
     if (!cand) { outside.push(`${name}: "${sel.slice(0, 50)}"`); continue }
     const k = /배터리|battery/i.test(name) ? qtyOf(`${sel} ${colOf(r, /사양/)}`) : /모터|motor/i.test(name) ? d.n : 1
     matched.push({ row: r, cand, k })

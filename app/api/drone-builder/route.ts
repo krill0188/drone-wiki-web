@@ -2,7 +2,8 @@ import { NextRequest } from "next/server"
 import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai"
 import { createUIMessageStream } from "ai"
 import { wikiModel } from "@/lib/ai-model"
-import { evaluateBuilderGate } from "@/lib/design-gate"
+import { evaluateBuilderGate, parseSpec } from "@/lib/design-gate"
+import { isPaperComponent, matchPaperConfig, paperBlock, specHint, validatePaperConfig } from "@/lib/paper-config"
 import { matchProducts, type MatchData } from "@/lib/product-match"
 import { validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
 import { ragSearch } from "@/lib/rag"
@@ -325,7 +326,9 @@ export async function POST(req: NextRequest) {
 
   // 설계 입력 게이트(모든 단계 공통): 필수 4항목이 없으면 AI를 부르지 않고 재질문하고, 물리적으로 성립하지 않으면
   // "추론상 불가"로 멈춘다. 통과하면 엔진 계산(<design-calc>)을 확정 전제로 각 단계 프롬프트에 넣는다.
-  const gate = evaluateBuilderGate(prompt)
+  // 논문 구성 재현 모드: 사용자가 논문/기체를 지목했으면 논문이 보고한 값으로 빈 필수 입력을 채워 게이트에 넘긴다.
+  const paper = matchPaperConfig(prompt)
+  const gate = evaluateBuilderGate(paper ? `${prompt} ${specHint(paper, parseSpec(prompt))}` : prompt)
   if (gate.reply) return instantReply(gate.reply)
 
   const ctx = context ?? {}
@@ -335,7 +338,7 @@ export async function POST(req: NextRequest) {
   // 멀티로터면 엔진 계산에 맞는 실제 제품 후보(제조사 공식 사양 수집본)를 서버가 골라 확정 전제로 넣는다.
   const match = gate.spec.platform === "multirotor" && stage !== "proposal" ? matchProducts(gate.spec) : null
   const productMatch = match?.block ?? ""
-  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}` + feedbackBlock(ctx)
+  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}${paper ? `\n${paperBlock(paper)}` : ""}` + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const fullSystem = (extra = "") => `${system}${extra}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`
 
@@ -345,7 +348,12 @@ export async function POST(req: NextRequest) {
     const data = match.data
     const validate = (text: string): Validation => {
       switch (stage) {
-        case "hw": return validateHw(text, data)
+        case "hw": {
+          const v = validateHw(text, data, paper ? (sel) => isPaperComponent(sel, paper) : undefined)
+          if (!paper) return v
+          const pv = validatePaperConfig(text, paper)
+          return { checks: [...pv.checks, ...v.checks], issues: [...pv.issues, ...v.issues] }
+        }
         case "sw": return validateSw(text, ctx.hw ?? "")
         case "techspec": return validateTechspec(text, ctx.hw ?? "", data)
         case "architecture": return validateArchitecture(text, ctx.hw ?? "", data)
