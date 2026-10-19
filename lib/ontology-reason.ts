@@ -1,5 +1,6 @@
 import relationsFile from "@/data/ontology/relations.json"
 import { getAncestors } from "./ontology"
+import { K } from "./rules"
 
 // 온톨로지 추론 엔진(2026-10-17): LLM이 "알아서 추론"하게 두지 않고, 질문에서 뽑은 사실(fact)에
 // 규칙(rule)을 고정점까지 전방 적용해 결론·판정·근거 체인을 결정론적으로 만든다.
@@ -55,8 +56,8 @@ const RULES: Rule[] = [
   },
   {
     id: "R-E2", kind: "heuristic", classes: ["Battery", "Frame"], needs: ["energyWh"], gives: "batMassG",
-    label: "배터리 추정 질량", unit: "g", derive: (f) => (f.energyWh / 180) * 1000,
-    why: "LiPo 에너지밀도 150~200Wh/kg 중간값 180 적용(경험칙, 제품별 상이)",
+    label: "배터리 추정 질량", unit: "g", derive: (f) => (f.energyWh / K("R05", "e_pack_cons_Wh_kg")) * 1000,
+    why: `카탈로그 배터리 40개 실측 중앙값 ${K("R05", "e_pack_cons_Wh_kg")}Wh/kg 적용(rules.json R05, 제품별 상이)`,
   },
   {
     id: "R-E3", kind: "heuristic", classes: ["Battery", "Frame"], needs: ["batMassG", "auwKg"],

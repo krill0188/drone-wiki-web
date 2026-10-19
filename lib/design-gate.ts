@@ -1,3 +1,4 @@
+import { K } from "./rules"
 // 설계 질문 게이트(2026-10-17): 드론 설계·구성 질문은 필수 4항목(페이로드·비행가능거리·크기·비행시간)이
 // 모두 있어야 답한다. 빠지면 AI를 부르지 않고 서버가 즉시 재질문하고, 4항목이 있어도 물리적으로
 // 성립하지 않으면 "추론상 불가"로 답한다. "무조건 만들어 내는" 동작을 구조적으로 막는 층이다.
@@ -112,8 +113,8 @@ export function parseSpec(text: string): DesignSpec {
 
 // ── 실현 가능성(물리 한계 추론) ──
 interface Assump { ef: number; rho: number; fm: number; eta: number; dod: number; vmax: number; ld: number; etaP: number; vtolExtra: number; dl: number }
-const CONS: Assump = { ef: 0.45, rho: 180, fm: 0.6, eta: 0.8, dod: 0.8, vmax: 15, ld: 9, etaP: 0.65, vtolExtra: 0.1, dl: 60 }
-const OPT: Assump = { ef: 0.3, rho: 280, fm: 0.75, eta: 0.9, dod: 0.9, vmax: 25, ld: 14, etaP: 0.8, vtolExtra: 0.05, dl: 90 }
+const CONS: Assump = { ef: K("R06", "ef_cons"), rho: K("R05", "e_pack_cons_Wh_kg"), fm: K("R01", "FM_cons"), eta: K("R01", "eta_cons"), dod: K("R05", "DoD_cons"), vmax: K("R07", "vmax_cons"), ld: K("R08", "LD_cons"), etaP: K("R08", "etaP_cons"), vtolExtra: K("R08", "vtolExtra_cons"), dl: K("R04", "DL_cons_kgf_m2") }
+const OPT: Assump = { ef: K("R06", "ef_opt"), rho: K("R05", "e_pack_opt_Wh_kg"), fm: K("R01", "FM_opt"), eta: K("R01", "eta_opt"), dod: K("R05", "DoD_opt"), vmax: K("R07", "vmax_opt"), ld: K("R08", "LD_opt"), etaP: K("R08", "etaP_opt"), vtolExtra: K("R08", "vtolExtra_opt"), dl: K("R04", "DL_opt_kgf_m2") }
 
 interface Sol { ok: boolean; auw: number; batKg: number; hoverW: number }
 
@@ -176,7 +177,7 @@ export function assess(spec: DesignSpec): Feasibility {
   const explicitMR = spec.platform === "multirotor" && spec.platformExplicit
   if (spec.platform === "multirotor") {
     if (okMrC) return { ...base, verdict: "가능", detail: `보수 가정에서 성립: 추정 총중량 ${mrC.auw.toFixed(1)}kg, 추정 배터리 ${mrC.batKg.toFixed(1)}kg(${((mrC.batKg / mrC.auw) * 100).toFixed(0)}%), 호버링 전력 ≈ ${mrC.hoverW.toFixed(0)}W` }
-    if (okMrO) return { ...base, verdict: "한계", detail: `보수 가정에서는 불성립, 낙관 가정(에너지밀도 280Wh/kg, 효율 상향)에서만 성립: 추정 총중량 ${mrO.auw.toFixed(1)}kg, 배터리 ${mrO.batKg.toFixed(1)}kg(${((mrO.batKg / mrO.auw) * 100).toFixed(0)}%)` }
+    if (okMrO) return { ...base, verdict: "한계", detail: `보수 가정에서는 불성립, 낙관 가정(에너지밀도 ${OPT.rho}Wh/kg, 효율 상향)에서만 성립: 추정 총중량 ${mrO.auw.toFixed(1)}kg, 배터리 ${mrO.batKg.toFixed(1)}kg(${((mrO.batKg / mrO.auw) * 100).toFixed(0)}%)` }
     if ((fwC.ok || fwO.ok) && !explicitMR) return { ...base, verdict: "한계", platformAdvice: fwAdv, detail: `멀티로터로는 성립하지 않음(${vReq > OPT.vmax ? `필요 평균속도 ${vReq.toFixed(1)}m/s가 멀티로터 현실 상한 초과` : "에너지 예산 초과"}). ${fwAdv}` }
     return { ...base, verdict: "불가", platformAdvice: fwAdv, detail: `멀티로터 낙관 가정으로도 성립하지 않음(${mrO.ok ? `필요 평균속도 ${vReq.toFixed(1)}m/s > 상한 ${OPT.vmax}m/s` : "배터리 질량이 가용 질량을 초과"}).` }
   }
@@ -307,7 +308,7 @@ ${inputs}
 - 비행시간 ${spec.flightMin}분을 맞추려면 휠베이스가 낙관 가정에서도 ≈ ${fe.minSizeOpt!.toFixed(0)}mm 이상 필요
 - 이 크기·시간에서 낙관 가정 최대 페이로드 ≈ ${fe.maxPayloadOpt!.toFixed(1)}kg
 ${fe.platformAdvice ? `- ${fe.platformAdvice}\n` : ""}
-**어떻게 바꾸면 되나요?** 위 한계 안에서 비행시간을 줄이거나, 크기를 키우거나, 페이로드를 줄이거나, 거리/속도 요구를 낮춰 다시 알려 주세요. (추정 가정: 에너지밀도 180~280Wh/kg, 추력 효율·구성품 질량비는 일반 범위 — 실제 제품으로 확정된 값이 아닙니다.)`
+**어떻게 바꾸면 되나요?** 위 한계 안에서 비행시간을 줄이거나, 크기를 키우거나, 페이로드를 줄이거나, 거리/속도 요구를 낮춰 다시 알려 주세요. (추정 가정: 에너지밀도 ${CONS.rho}~${OPT.rho}Wh/kg, 추력 효율·구성품 질량비는 일반 범위 — 실제 제품으로 확정된 값이 아닙니다.)`
     return { active: true, complete: true, spec, missing, reply }
   }
 

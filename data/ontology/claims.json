@@ -1,0 +1,209 @@
+{
+  "_comment": "근거 주장(claim) 목록(2026-10-19, 2단계). verified=arXiv 원문 PDF에서 인용문을 직접 대조함. derived=수집 카탈로그에서 계산한 값(제조사 표기 무게·용량·전압 기반, 원문 대조 아님). 논문 요약본(hw-collection/20261016/research)이 아니라 원문을 읽고 작성했다. 인용문은 원문 그대로의 짧은 구절이며 위치는 논문 내 절·식 번호다. 논문의 시험 대상은 특정 기체이므로 conditions를 벗어난 일반화는 금지한다.",
+  "claims": [
+    {
+      "id": "CL01",
+      "rules": [
+        "R03"
+      ],
+      "subject": "멀티로터 추력비",
+      "attribute": "γ = T_hover/T_max",
+      "value": 0.5,
+      "unit": "-",
+      "conditions": "일반적인 멀티로터에서 선택하는 값(설계 선택값이지 물리 상수가 아님)",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "II-A (식 (1)(2) 직후 본문)",
+      "quote": "usually γ = 0.5 is selected for common multicopters",
+      "status": "verified",
+      "note": "T_max = 2·T_hover. 코드의 추력 대비 중량비 2:1과 일치"
+    },
+    {
+      "id": "CL02",
+      "rules": [
+        "R05"
+      ],
+      "subject": "LiPo 배터리 팩",
+      "attribute": "에너지밀도",
+      "value": 140,
+      "unit": "Wh/kg",
+      "conditions": "2018년 논문의 통계적 근사값. 현재 제품은 더 높을 수 있음",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "III 배터리 절, 식 (44) 직후",
+      "quote": "ρb≈140 Wh/kg for LiPo batteries",
+      "status": "verified",
+      "note": "코드의 보수 가정 180Wh/kg보다 낮음. CL10 참조"
+    },
+    {
+      "id": "CL03",
+      "rules": [
+        "R05"
+      ],
+      "subject": "배터리 사용 가능 용량",
+      "attribute": "사용 비율",
+      "value": 0.85,
+      "unit": "-",
+      "conditions": "과방전 방지용 15% 잔량",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "III 배터리 절, 식 (38)",
+      "quote": "the coefficient 0.85 denotes a 15% remaining capacity to avoid over discharge",
+      "status": "verified",
+      "note": "코드의 방전 깊이 0.8(보수)/0.9(낙관)과 같은 범위"
+    },
+    {
+      "id": "CL04",
+      "rules": [
+        "C03"
+      ],
+      "subject": "대기 밀도",
+      "attribute": "ρ(고도, 온도)",
+      "value": "ρ = 273/(273+Tt)·(1−0.0065·h/(273+Tt))^5.2561·ρ0, ρ0=1.293kg/m³(0°C)",
+      "unit": "kg/m³",
+      "conditions": "국제표준대기(ISA) 모델. Tt는 °C, h는 m",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "III, 식 (9)",
+      "quote": "According to the international standard atmosphere model",
+      "status": "verified",
+      "note": "15°C·해면에서 1.2257 — 코드의 ρ=1.225와 일치(계산 확인)"
+    },
+    {
+      "id": "CL05",
+      "rules": [
+        "C02"
+      ],
+      "subject": "ESC와 모터 정격",
+      "attribute": "ESC 정격 ≥ 모터 최대",
+      "value": "U_eMax ≥ U_mMax, I_eMax ≥ I_mMax",
+      "unit": "V, A",
+      "conditions": "직렬 연결된 ESC·모터의 안전 조건. 논문 예시는 모터 최대 전류에 별도 안전 여유를 둠",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "IV-G, 식 (66)",
+      "quote": "UeMax ≥ UmMaxOpt, IeMax ≥ ImMaxOpt",
+      "status": "verified",
+      "note": "논문은 여유 계수 1.2를 제시하지 않음. 1.2는 근거 없는 수치였으므로 규칙에서 제거"
+    },
+    {
+      "id": "CL06",
+      "rules": [
+        "R06"
+      ],
+      "subject": "멀티로터 질량 구성",
+      "attribute": "추진계/배터리 비중",
+      "value": "추진계 > 70%, 그중 배터리 > 60%",
+      "unit": "-",
+      "conditions": "논문이 인용한 통계 모델([12]). 일반 멀티로터 기준, 페이로드 정의가 불분명",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "II-D",
+      "quote": "usually more than 70%",
+      "status": "verified",
+      "note": "구조 질량 비율 ef(0.45/0.3)와 직접 대응하지 않음 — 추진계에 모터·ESC·프롭이 포함되므로 정의가 다름"
+    },
+    {
+      "id": "CL07",
+      "rules": [
+        "C01"
+      ],
+      "subject": "LiPo 셀 전압",
+      "attribute": "충방전 범위와 환산 평균",
+      "value": "4.2V → 3.7V, 환산 평균 4.0V/셀",
+      "unit": "V/cell",
+      "conditions": "용량이 가득→소진으로 감소하는 범위",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1809.02472",
+      "locator": "II-B",
+      "quote": "the average voltage 4.0 V is adopted for the unit conversion",
+      "status": "verified",
+      "note": "제조사 공칭 3.7V/셀(14.8V=4S)과 달라 Wh 계산 기준 불일치 가능. 코드는 공칭 전압 사용"
+    },
+    {
+      "id": "CL08",
+      "rules": [
+        "R01"
+      ],
+      "subject": "멀티로터 호버링 전력",
+      "attribute": "P_hover = P_profile + (1+k)·W^1.5/√(2nρA)",
+      "value": "유도 동력항 W^{3/2}/√(2nρA), 보정계수 k",
+      "unit": "W",
+      "conditions": "n개 로터 합산. 논문의 시뮬레이션 값: k=0.11, δ=0.011, 솔리디티 s=0.045, ρ=1.168 (특정 기체 한 대의 값)",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2209.04128",
+      "locator": "III, 식 (5)",
+      "quote": "(1 +k) W 3/2 √2nρA",
+      "status": "verified",
+      "note": "코드의 운동량 이론 유도항과 같은 형태. 코드는 프로파일 동력을 1/(FM·η) 한 계수로 뭉뚱그림 — FM, η 값 자체는 논문에 없음"
+    },
+    {
+      "id": "CL09",
+      "rules": [
+        "C04"
+      ],
+      "subject": "전진 비행 전력",
+      "attribute": "전진 vs 호버 전력",
+      "value": "대부분의 속도에서 호버보다 작고, 약 11m/s 이상에서 크게 증가",
+      "unit": "-",
+      "conditions": "논문의 실험 기체 한 대, 고도 20m, 0~15m/s. 호버 약 317W",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2209.04128",
+      "locator": "실험 결과 절, Fig.7(a) 설명",
+      "quote": "the required power for forward flight is smaller in most situations",
+      "status": "verified",
+      "note": "호버링 전력만으로 거리 임무를 계산하면 비행시간을 과소평가함(보수 방향). 11m/s는 해당 기체 한정"
+    },
+    {
+      "id": "CL10",
+      "rules": [
+        "R05"
+      ],
+      "subject": "수집 카탈로그의 팩 에너지밀도",
+      "attribute": "Wh/kg = (mAh/1000·V_nom)/(kg)",
+      "value": "전체 40개 중앙값 155, 300g 이상 28개 중앙값 163, 최소 90, 최대 311",
+      "unit": "Wh/kg",
+      "conditions": "제조사 표기 무게·용량·공칭 전압으로 계산. 311·285는 대용량·저방전율 팩으로 특이값. 팩 무게에 케이블·커넥터 포함 여부는 제조사 표기에 따름",
+      "sourceType": "catalog",
+      "sourceId": "data/ontology/products-catalog.json",
+      "locator": "category=battery, 무게·용량·전압 모두 있는 40개",
+      "quote": "",
+      "status": "derived",
+      "note": "코드의 보수 가정 180이 실제 중앙값(155~163)보다 높음. 낙관 280은 상위 2개 특이값 수준"
+    },
+    {
+      "id": "CL11",
+      "rules": [
+        "C04"
+      ],
+      "subject": "멀티로터 최적 전진 에너지",
+      "attribute": "미터당 에너지(EPM)와 질량의 관계",
+      "value": "최적 속도에서 EPM/m는 질량과 무관한 상수 → 최적 EPM은 질량에 비례",
+      "unit": "-",
+      "conditions": "정속 전진 비행, 에너지 최적 속도에서만 성립. 임의 속도에서는 성립하지 않음. 1차 원리 모델 기반 해석·시뮬레이션",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2501.03102",
+      "locator": "I 서론 요약, VI 결론, 식 (30)(31)",
+      "quote": "EPM/m remains constant with respect to mass under the energy-optimal velocity",
+      "status": "verified",
+      "note": "페이로드가 늘면 최적 거리당 에너지가 질량에 비례해 증가"
+    },
+    {
+      "id": "CL12",
+      "rules": [
+        "C04"
+      ],
+      "subject": "멀티로터 최적 순항 속도",
+      "attribute": "v_opt와 질량의 관계",
+      "value": "v_opt ∝ √m, 최적 피치각은 질량과 무관",
+      "unit": "-",
+      "conditions": "CL11과 동일",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2501.03102",
+      "locator": "VI 결론",
+      "quote": "the optimal velocity is proportional to the square root of the mass",
+      "status": "verified",
+      "note": ""
+    }
+  ]
+}

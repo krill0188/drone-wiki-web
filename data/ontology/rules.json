@@ -1,0 +1,347 @@
+{
+  "_comment": "공학 규칙 목록(2026-10-19, 1단계). status=implemented는 코드에 이미 있는 규칙, candidate는 추가 후보. sourceStatus: unverified=출처 미연결(코드 작성자의 가정 또는 일반 공학 상식), candidate-source=연결 후보 논문/교과서 지정됨(원문 대조 전), verified=원문 대조 완료. verified/partially-verified는 claims.json 인용문을 원문 PDF와 대조한 것만 해당한다(2026-10-19). 상수는 코드의 값을 그대로 옮긴 것이며 이 파일이 아직 코드를 구동하지는 않는다. 2026-10-19 3단계: 이 파일의 constants가 lib/rules.ts를 통해 lib/design-gate.ts의 엔진 상수를 구동한다(R01,R04~R08).",
+  "rules": [
+    {
+      "id": "R01",
+      "name": "호버링 전력(운동량 이론)",
+      "formula": "P = N·(m·g/N)^1.5 / sqrt(2·ρ_air·A) / (FM·η)",
+      "status": "implemented",
+      "where": "lib/design-gate.ts solveMultirotor",
+      "constants": {
+        "rho_air": 1.225,
+        "FM_cons": 0.6,
+        "FM_opt": 0.75,
+        "eta_cons": 0.8,
+        "eta_opt": 0.9
+      },
+      "sourceStatus": "partially-verified",
+      "sourceCandidates": [
+        "교과서: 헬리콥터 운동량 이론(Leishman 등)",
+        "paper-multirotor-power-model-gong-2022"
+      ],
+      "note": "유도 동력항 형태는 Gong 2022 식(5)로 확인. FM·η 값과 프로파일 동력 처리는 논문에 없어 가정으로 남음",
+      "claims": [
+        "CL08"
+      ]
+    },
+    {
+      "id": "R02",
+      "name": "로터 원판 면적",
+      "formula": "D = wheelbase·sin(π/N)·0.95, A = π(D/2)²",
+      "status": "implemented",
+      "where": "lib/design-gate.ts, lib/product-match.ts",
+      "constants": {
+        "clearance": 0.95
+      },
+      "sourceStatus": "unverified",
+      "note": "인접 프롭 겹침 방지 기하. 0.95는 가정",
+      "claims": []
+    },
+    {
+      "id": "R03",
+      "name": "추력 대비 중량비",
+      "formula": "T_max ≥ 2·m·g",
+      "status": "implemented",
+      "where": "lib/design-gate.ts, lib/product-match.ts",
+      "constants": {
+        "twr": 2
+      },
+      "sourceStatus": "verified",
+      "note": "Dai 2019: 일반 멀티로터 γ=0.5 선택 → T_max=2·T_hover. 관행 값이지 물리 상수는 아님",
+      "claims": [
+        "CL01"
+      ]
+    },
+    {
+      "id": "R04",
+      "name": "디스크 로딩 한계",
+      "formula": "2·m ≤ N·A·DL",
+      "status": "implemented",
+      "where": "lib/design-gate.ts",
+      "constants": {
+        "DL_cons_kgf_m2": 60,
+        "DL_opt_kgf_m2": 90
+      },
+      "sourceStatus": "unverified",
+      "note": "현실적 최대 추력 면적밀도 가정",
+      "claims": []
+    },
+    {
+      "id": "R05",
+      "name": "배터리 에너지 수지",
+      "formula": "m_bat = P·t / (DoD·e_pack)",
+      "status": "implemented",
+      "where": "lib/design-gate.ts",
+      "constants": {
+        "DoD_cons": 0.8,
+        "DoD_opt": 0.9,
+        "e_pack_cons_Wh_kg": 155,
+        "e_pack_opt_Wh_kg": 207
+      },
+      "sourceStatus": "verified-with-derived",
+      "note": "2026-10-19 조정: 보수 155=카탈로그 40개 중앙값(CL10, 300g 이상 163), 낙관 207=카탈로그 상위 5번째 값. 논문 140(CL02)은 하한 참고값. 이전 값 180/280은 근거 없는 가정이었음",
+      "claims": [
+        "CL02",
+        "CL03",
+        "CL10"
+      ],
+      "previousConstants": {
+        "e_pack_cons_Wh_kg": 180,
+        "e_pack_opt_Wh_kg": 280
+      }
+    },
+    {
+      "id": "R06",
+      "name": "구조 질량 비율",
+      "formula": "m_struct+avionics = ef·m",
+      "status": "implemented",
+      "where": "lib/design-gate.ts",
+      "constants": {
+        "ef_cons": 0.45,
+        "ef_opt": 0.3
+      },
+      "sourceStatus": "unverified",
+      "note": "논문 통계(CL06)와 정의가 달라 직접 검증 불가. 카탈로그 부품 실제 질량으로 대체 권장",
+      "claims": [
+        "CL06"
+      ]
+    },
+    {
+      "id": "R07",
+      "name": "평균 속도 상한",
+      "formula": "v_req = R/t ≤ v_max",
+      "status": "implemented",
+      "where": "lib/design-gate.ts",
+      "constants": {
+        "vmax_cons": 15,
+        "vmax_opt": 25
+      },
+      "sourceStatus": "unverified",
+      "claims": []
+    },
+    {
+      "id": "R08",
+      "name": "고정익 순항 에너지",
+      "formula": "b_f = g·v·t / (L/D·η_p·DoD·e_pack)",
+      "status": "implemented",
+      "where": "lib/design-gate.ts solveFixedWing",
+      "constants": {
+        "LD_cons": 9,
+        "LD_opt": 14,
+        "etaP_cons": 0.65,
+        "etaP_opt": 0.8,
+        "vtolExtra_cons": 0.1,
+        "vtolExtra_opt": 0.05,
+        "CLmax": 1.2
+      },
+      "sourceStatus": "candidate-source",
+      "sourceCandidates": [
+        "교과서: 항공기 항속 방정식(Breguet 계열)",
+        "paper-forward-flight-efficiency-patnaik-2025"
+      ],
+      "claims": []
+    },
+    {
+      "id": "R09",
+      "name": "배터리 Wh = V×Ah",
+      "formula": "Wh = V·Ah",
+      "status": "implemented",
+      "where": "lib/product-match.ts, lib/stage-validate.ts",
+      "constants": {
+        "tolerance": 0.98
+      },
+      "sourceStatus": "unverified",
+      "note": "정의식이라 출처 불필요. 허용오차 0.98만 가정",
+      "claims": []
+    },
+    {
+      "id": "R10",
+      "name": "시험표 추력-전류 보간",
+      "formula": "선형 보간, 시험 범위 밖 외삽 금지",
+      "status": "implemented",
+      "where": "lib/product-match.ts interp",
+      "constants": {
+        "extrapolation_low": 0.8
+      },
+      "sourceStatus": "unverified",
+      "note": "제조사 시험표 데이터에 의존. 시험 조건(전압·프롭) 일치 시에만 유효",
+      "claims": []
+    },
+    {
+      "id": "R11",
+      "name": "C-rate 방전 한계",
+      "formula": "I_max ≤ C·Ah",
+      "status": "implemented",
+      "where": "lib/product-match.ts",
+      "constants": {
+        "margin": 1.05
+      },
+      "sourceStatus": "unverified",
+      "note": "제조사 표기 C값 신뢰 가정",
+      "claims": []
+    },
+    {
+      "id": "R12",
+      "name": "프롭 지름 ≤ 축거 한계",
+      "formula": "d_prop ≤ D_max + 0.5in",
+      "status": "implemented",
+      "where": "lib/product-match.ts, lib/stage-validate.ts",
+      "constants": {
+        "tolerance_in": 0.5
+      },
+      "sourceStatus": "unverified",
+      "claims": []
+    },
+    {
+      "id": "R13",
+      "name": "부품 질량 합 한계",
+      "formula": "Σm_parts ≤ 1.15·AUW",
+      "status": "implemented",
+      "where": "lib/stage-validate.ts",
+      "constants": {
+        "tolerance": 1.15
+      },
+      "sourceStatus": "unverified",
+      "claims": []
+    },
+    {
+      "id": "R14",
+      "name": "프레임 질량 상한",
+      "formula": "m_frame ≤ 0.45·AUW",
+      "status": "implemented",
+      "where": "lib/product-match.ts",
+      "constants": {
+        "cap": 0.45
+      },
+      "sourceStatus": "unverified",
+      "claims": []
+    },
+    {
+      "id": "R15",
+      "name": "체공시간 판정 일관성",
+      "formula": "HW 배터리 Wh ≥ 필요 Wh 이면 충족",
+      "status": "implemented",
+      "where": "lib/stage-validate.ts validateTechspec",
+      "constants": {},
+      "sourceStatus": "unverified",
+      "claims": []
+    },
+    {
+      "id": "R16",
+      "name": "통신 대역 상식",
+      "formula": "협대역(LoRa류)은 영상 불가, 영상은 Mbps급",
+      "status": "implemented",
+      "where": "lib/design-gate.ts buildCalcBlock (문구)",
+      "constants": {},
+      "sourceStatus": "unverified",
+      "note": "현재는 프롬프트 문구일 뿐 코드 판정 아님",
+      "claims": []
+    },
+    {
+      "id": "C01",
+      "name": "전압 강하·방전 곡선",
+      "formula": "V_load = V_oc − I·R_int, 저전압 컷오프",
+      "status": "candidate",
+      "reason": "배터리 용량 가정이 공칭 전압 기준이라 실제 비행시간 과대평가 가능",
+      "needsSource": "셀 데이터시트(수집 필요), 교과서",
+      "claims": [
+        "CL07"
+      ],
+      "sourceStatus": "partially-verified",
+      "note": "셀 전압 4.2→3.7V, 환산 평균 4.0V(CL07). 방전곡선·내부저항 수식은 미확보"
+    },
+    {
+      "id": "C02",
+      "name": "ESC 전류 마진",
+      "formula": "I_ESC_rated ≥ I_motor_max (논문 식 66). 여유 계수는 논문에 없음",
+      "status": "candidate",
+      "reason": "매칭이 모터 전류만 보고 ESC 정격은 확인하지 않음",
+      "needsSource": "제조사 지침, 관행",
+      "claims": [
+        "CL05"
+      ],
+      "sourceStatus": "verified"
+    },
+    {
+      "id": "C03",
+      "name": "고도·온도에 따른 공기밀도",
+      "formula": "ρ = 273/(273+T)·(1−0.0065h/(273+T))^5.2561·ρ0 (ρ0=1.293)",
+      "status": "candidate",
+      "reason": "ρ_air가 해면 고정. 고지대·고온 임무 오판",
+      "needsSource": "ISA 표준 대기(표준)",
+      "claims": [
+        "CL04"
+      ],
+      "sourceStatus": "verified"
+    },
+    {
+      "id": "C04",
+      "name": "전진 비행 전력(속도별)",
+      "formula": "P(v) 곡선, 최적 순항 속도",
+      "status": "candidate",
+      "reason": "현재는 호버링만 계산. 거리 임무는 순항이 지배",
+      "needsSource": "paper-multirotor-power-model-gong-2022 (원문 대조 필요)",
+      "claims": [
+        "CL09",
+        "CL11",
+        "CL12"
+      ],
+      "sourceStatus": "partially-verified",
+      "note": "전진 비행이 호버보다 전력이 낮은 구간 존재(CL09), 최적 속도에서 EPM∝질량·v_opt∝√m(CL11,12). 전력 곡선 수식 자체는 아직 코드화 안 함"
+    },
+    {
+      "id": "C05",
+      "name": "모터 토크-KV-전압 관계",
+      "formula": "RPM ≈ KV·V·부하계수, τ = Kt·I",
+      "status": "candidate",
+      "reason": "프롭 선정(지름·피치)과 모터 KV 정합성 검사 부재",
+      "needsSource": "교과서(BLDC 모터)",
+      "claims": []
+    },
+    {
+      "id": "C06",
+      "name": "무게중심·질량 분포",
+      "formula": "Σ(m_i·r_i)/Σm_i 범위 내",
+      "status": "candidate",
+      "reason": "부품 배치 정보가 없어 현재 판정 불가",
+      "needsSource": "교과서",
+      "claims": []
+    },
+    {
+      "id": "C07",
+      "name": "전원 배선 전류·전선 굵기",
+      "formula": "I ≤ 허용전류(AWG)",
+      "status": "candidate",
+      "reason": "고전류 구성의 안전 검사 부재",
+      "needsSource": "표준(AWG 허용전류표)",
+      "claims": []
+    },
+    {
+      "id": "C08",
+      "name": "통신 링크 예산",
+      "formula": "Pr = Pt+Gt+Gr−FSPL−손실, 마진 ≥ 10dB",
+      "status": "candidate",
+      "reason": "거리·주파수·출력으로 링크 성립 여부를 판정 못 함",
+      "needsSource": "교과서(Friis), 데이터링크 제조사 사양(수집됨)",
+      "claims": []
+    },
+    {
+      "id": "C09",
+      "name": "단위·차원 일관성",
+      "formula": "모든 수치의 단위 변환 검사",
+      "status": "candidate",
+      "reason": "제조사 값은 g/kg, mAh/Ah, V 혼재",
+      "needsSource": "정의(SI)",
+      "claims": []
+    },
+    {
+      "id": "C10",
+      "name": "규칙 간 모순 검사",
+      "formula": "서로 다른 규칙이 같은 양을 다르게 예측하면 경고",
+      "status": "candidate",
+      "reason": "R05 에너지밀도 가정과 C01 방전 곡선 등이 충돌할 수 있음",
+      "needsSource": "해당 없음(메타 규칙)",
+      "claims": []
+    }
+  ]
+}
