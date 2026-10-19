@@ -72,7 +72,7 @@ export function queryKG(question: string): KgResult {
     const c = byId.get(cid)
     if (!c) return
     const paper = (out.get(cid) ?? []).find((e) => e.p === "reportedIn")?.o ?? ""
-    add(cid, `${c.label}${c.unit ? ` ${c.unit}` : ""} — 조건: ${c.conditions || "-"} (${c.source}, ${c.locator || ""}) 원문: "${String(c.quote ?? "").slice(0, 220)}"`, paper)
+    add(cid, `${c.label}${c.unit ? ` ${c.unit}` : ""}${c.attribute ? ` [양: ${c.attribute}]` : ""} — 조건: ${c.conditions || "-"} (${c.source}, ${c.locator || ""}) 원문: "${String(c.quote ?? "").slice(0, 220)}"`, paper)
   }
 
   for (const p of products) {

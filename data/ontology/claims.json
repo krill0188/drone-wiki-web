@@ -262,10 +262,10 @@
         "R05"
       ],
       "subject": "리튬 배터리 팩 실효 에너지밀도",
-      "attribute": "셀 비에너지 ÷ 패키징 계수 ηpkg",
-      "value": "LiPo 셀 180Wh/kg, ηpkg 1.04(대형)~최대 1.32(4000mAh 미만 소형)",
+      "attribute": "LiPo 팩 실효 비에너지 = 셀 비에너지 ÷ 패키징 계수 ηpkg",
+      "value": "팩 실효 약 136~173Wh/kg (셀 180Wh/kg ÷ ηpkg 1.04~1.32, 나눗셈이며 곱하지 않음)",
       "unit": "Wh/kg",
-      "conditions": "MDO 엔진(AeroEval)의 모델 설정값. 시험 측정값이 아니라 저자가 설정한 모델 계수. 셀 180은 Table III에서 읽은 값",
+      "conditions": "MDO 엔진(AeroEval)의 모델 설정값(측정 아님). 셀 180Wh/kg·ηpkg 기준 1.04(대형), 4000mAh 미만 소형은 최대 +0.28까지 가산되어 1.32. 셀 180은 Table III에서 읽은 값",
       "sourceType": "paper",
       "sourceId": "arXiv:2607.22768",
       "locator": "VI-D, Table III",
