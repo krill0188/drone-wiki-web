@@ -17,7 +17,7 @@ interface Item {
 }
 const ITEMS = (catalogFile as { items: Item[] }).items
 
-export interface Cand { category: string; name: string; modelKey: string | null; keys?: string[]; massG: number | null; whPerUnit?: number; capMah?: number; cells?: number; maxThrustG?: number; ratedOnly?: boolean }
+export interface Cand { category: string; name: string; modelKey: string | null; keys?: string[]; massG: number | null; whPerUnit?: number; capMah?: number; cells?: number; maxThrustG?: number; ratedOnly?: boolean; maxA?: number; contA?: number }
 export interface MatchData { cands: Cand[]; needWh: number | null; auwKg: number; n: number; maxPropIn: number; maxThrustG: number; hoverG: number; payloadG: number }
 export interface MatchResult { block: string; found: boolean; data?: MatchData }
 
@@ -203,7 +203,7 @@ export function matchProducts(spec: DesignSpec, opts?: { fixed?: Partial<Pick<Mo
   }
 
   const lines: string[] = [`<product-match>`, head, `아래는 수집 카탈로그(제조사 공식 페이지 원문, 2026-10-19)에서 서버가 고른 후보다. HW 표의 모터·배터리·ESC는 이 목록에서 고르고, 사양 칸의 수치는 아래 값을 그대로 인용하라(근거 칸에 URL). 목록에 없는 부품은 "카탈로그 후보 없음 — 확인 필요".`]
-  top.forEach((p) => cands.push({ category: "motor", name: `${p.item.name} ${p.kv}`, modelKey: modelKeyOf(p.item.name), massG: p.weightG ?? null, maxThrustG: p.maxThrustG, cells: p.cells }))
+  top.forEach((p) => cands.push({ category: "motor", name: `${p.item.name} ${p.kv}`, modelKey: modelKeyOf(p.item.name), massG: p.weightG ?? null, maxThrustG: p.maxThrustG, cells: p.cells, maxA: p.maxA }))
   ratedOnly.forEach((m) => cands.push({ category: "motor", name: m.name, modelKey: modelKeyOf(m.name), massG: m.variants?.[0]?.weight_g?.value ?? null, maxThrustG: (m.max_thrust_kg_page ?? 0) * 1000, ratedOnly: true }))
   if (top.length) {
     lines.push("\n[모터 후보 — 시험표 보간(공식 페이지 추력 시험)]")
@@ -238,7 +238,7 @@ export function matchProducts(spec: DesignSpec, opts?: { fixed?: Partial<Pick<Mo
     // ESC: 시험표 100% 전류 이상, 셀 수 포함
     const escs = ITEMS.filter((i) => i.category === "esc" && i.continuous_A && i.continuous_A >= best.maxA && (!i.cells || (i.cells.min <= best.cells && i.cells.max >= best.cells)))
       .sort((a, b) => a.continuous_A! - b.continuous_A!).slice(0, 2)
-    escs.forEach((e) => cands.push({ category: "esc", name: e.name, modelKey: modelKeyOf(e.name), massG: null }))
+    escs.forEach((e) => cands.push({ category: "esc", name: e.name, modelKey: modelKeyOf(e.name), massG: null, contA: e.continuous_A ?? undefined }))
     lines.push(`\n[ESC 후보 — 모터 최대 시험전류 ${best.maxA}A 이상, ${best.cells}S 지원]`)
     if (!escs.length) lines.push("조건을 만족하는 ESC 카탈로그 후보 없음 — 확인 필요")
     escs.forEach((e, i) => lines.push(`${i + 1}. ${e.manufacturer} ${e.name}: 연속 ${e.continuous_A}A${e.peak_A ? ` / 피크 ${e.peak_A}A` : ""}${e.cells ? `, ${e.cells.min}~${e.cells.max}S` : ""} — ${e.url}`))

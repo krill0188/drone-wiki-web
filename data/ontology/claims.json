@@ -67,7 +67,7 @@
       "locator": "III, 식 (9)",
       "quote": "According to the international standard atmosphere model",
       "status": "verified",
-      "note": "15°C·해면에서 1.2257 — 코드의 ρ=1.225와 일치(계산 확인)"
+      "note": "15°C·해면에서 1.2257 — 코드의 ρ=1.225와 일치(계산 확인) | 코드는 고도>0에서 논문 식을 그대로 쓰지 않는다: 압력비는 논문 식, 밀도는 고도 기온(T−0.0065h)으로 계산(논문 식 단독은 3000m에서 0.848로 ISA 0.909보다 7% 낮음)"
     },
     {
       "id": "CL05",

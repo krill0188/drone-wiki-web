@@ -111,6 +111,15 @@ export function validateHw(md: string, d: MatchData): Validation {
       if (!ok) issues.push(`프롭 지름 ${dia}인치가 축거 기준 상한 ${d.maxPropIn.toFixed(1)}인치를 넘는다.`)
     }
   }
+
+  // R6 ESC 연속 전류 ≥ 모터 최대 시험전류 (rules.json C02, Dai 2019 식 66 — 여유 계수는 논문에 없다)
+  const esc = matched.find((m) => m.cand.category === "esc")
+  const mot = matched.find((m) => m.cand.category === "motor")
+  if (esc?.cand.contA != null && mot?.cand.maxA != null) {
+    const ok = esc.cand.contA >= mot.cand.maxA
+    checks.push({ ok, label: "ESC 연속 전류 ≥ 모터 최대 시험전류", detail: `${esc.cand.name} ${esc.cand.contA}A vs ${mot.cand.name} ${mot.cand.maxA}A` })
+    if (!ok) issues.push(`ESC ${esc.cand.name}의 연속 전류 ${esc.cand.contA}A가 모터 최대 시험전류 ${mot.cand.maxA}A보다 작다. 후보 목록의 ESC 중에서 고른다.`)
+  }
   return { checks, issues }
 }
 

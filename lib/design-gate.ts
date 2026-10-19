@@ -15,6 +15,7 @@ export interface DesignSpec {
   sizeMm?: number // 휠베이스(대각 모터 간 거리) 또는 크기
   sizeNote?: string
   flightMin?: number
+  altitudeM?: number // 운용 고도(해발 m, 선택 입력). 없으면 해면
   maxAuwKg?: number // 사용자가 지정한 총중량(MTOW) 상한 — 4필수항목은 아니지만 추정 총중량과 대조한다
   rotors: number
   platform: "multirotor" | "fixedwing" | "vtol"
@@ -97,6 +98,10 @@ export function parseSpec(text: string): DesignSpec {
   const fm = ft ?? ft2
   if (fm) { const v = num(fm[1]); spec.flightMin = /시간|h|hr/i.test(fm[2]) ? v * 60 : v }
 
+  // 4-1) 운용 고도(선택 입력)
+  const alt = t.match(/(?:고도|해발|운용 ?고도|altitude)\D{0,6}(\d+(?:\.\d+)?)\s*(m\b|미터|km)/i)
+  if (alt) { const v = num(alt[1]); spec.altitudeM = /km/i.test(alt[2]) ? v * 1000 : v }
+
   // 5) 총중량 상한(선택 입력)
   const mt = t.match(/(?:최대 ?이륙 ?중량|총 ?중량|이륙 ?중량|MTOW|AUW|기체 ?무게|전체 ?무게|무게)\D{0,6}(\d+(?:\.\d+)?)\s*(kg|킬로|g\b)/i)
   if (mt) { const v = num(mt[1]); spec.maxAuwKg = /g$/i.test(mt[2]) && !/kg/i.test(mt[2]) ? v / 1000 : v }
@@ -111,6 +116,16 @@ export function parseSpec(text: string): DesignSpec {
   return spec
 }
 
+// ISA 공기밀도(rules.json C03). 해면(h=0)은 Dai 2019 식 (9)와 같다. 고도에서는 논문 식을 그대로 쓰면
+// 기온 하강이 빠져 밀도를 과소평가(3000m에서 0.848 vs ISA 0.909)하므로, 압력비는 논문 식으로, 밀도는 고도 기온으로 계산한다.
+export function airDensity(altM = 0, tGroundC = K("C03", "T_default_C")): number {
+  const Tg = 273 + tGroundC
+  const L = K("C03", "lapse_K_per_m")
+  const pRatio = Math.pow(1 - (L * altM) / Tg, K("C03", "exponent"))
+  const rhoGround = (273 / Tg) * K("C03", "rho0_0C")
+  return rhoGround * pRatio * (Tg / (Tg - L * altM))
+}
+
 // ── 실현 가능성(물리 한계 추론) ──
 interface Assump { ef: number; rho: number; fm: number; eta: number; dod: number; vmax: number; ld: number; etaP: number; vtolExtra: number; dl: number }
 const CONS: Assump = { ef: K("R06", "ef_cons"), rho: K("R05", "e_pack_cons_Wh_kg"), fm: K("R01", "FM_cons"), eta: K("R01", "eta_cons"), dod: K("R05", "DoD_cons"), vmax: K("R07", "vmax_cons"), ld: K("R08", "LD_cons"), etaP: K("R08", "etaP_cons"), vtolExtra: K("R08", "vtolExtra_cons"), dl: K("R04", "DL_cons_kgf_m2") }
@@ -118,10 +133,10 @@ const OPT: Assump = { ef: K("R06", "ef_opt"), rho: K("R05", "e_pack_opt_Wh_kg"),
 
 interface Sol { ok: boolean; auw: number; batKg: number; hoverW: number }
 
-function solveMultirotor(payload: number, wbMm: number, N: number, tMin: number, a: Assump): Sol {
+function solveMultirotor(payload: number, wbMm: number, N: number, tMin: number, a: Assump, rhoAir = airDensity()): Sol {
   const D = (wbMm / 1000) * Math.sin(Math.PI / N) * 0.95
   const A = Math.PI * (D / 2) ** 2
-  const hoverW = (auw: number) => (N * ((auw * G) / N) ** 1.5) / Math.sqrt(2 * 1.225 * A) / (a.fm * a.eta)
+  const hoverW = (auw: number) => (N * ((auw * G) / N) ** 1.5) / Math.sqrt(2 * rhoAir * A) / (a.fm * a.eta)
   const bat = (auw: number) => (hoverW(auw) * (tMin / 60)) / a.dod / a.rho
   let auw = Math.max(payload, 0.05)
   for (let i = 0; i < 700; i++, auw *= 1.02) {
@@ -132,13 +147,13 @@ function solveMultirotor(payload: number, wbMm: number, N: number, tMin: number,
   return { ok: false, auw: 0, batKg: 0, hoverW: 0 }
 }
 
-function solveFixedWing(payload: number, vReq: number, tMin: number, a: Assump, vtol: boolean) {
+function solveFixedWing(payload: number, vReq: number, tMin: number, a: Assump, vtol: boolean, rhoAir = airDensity()) {
   const v = Math.max(vReq, 12)
   const bf = (G * v * (tMin / 60)) / (a.ld * a.etaP * a.dod * a.rho)
   const denom = 1 - a.ef - (vtol ? a.vtolExtra : 0) - bf
   if (denom <= 0.02) return { ok: false, auw: 0, spanM: 0, v }
   const auw = Math.max(payload, 0.05) / denom
-  const S = (2 * auw * G) / (1.225 * v * v * 1.2)
+  const S = (2 * auw * G) / (rhoAir * v * v * K("R08", "CLmax"))
   return { ok: true, auw, spanM: Math.sqrt(8 * S), v }
 }
 
@@ -158,18 +173,19 @@ export interface Feasibility {
 export function assess(spec: DesignSpec): Feasibility {
   const { payloadKg: P, rangeKm: R, sizeMm: S, flightMin: T, rotors: N } = spec as Required<Pick<DesignSpec, "payloadKg" | "rangeKm" | "sizeMm" | "flightMin">> & DesignSpec
   const vReq = (R * 1000) / (T * 60)
-  const mrC = solveMultirotor(P, S, N, T, CONS)
-  const mrO = solveMultirotor(P, S, N, T, OPT)
+  const rhoA = airDensity(spec.altitudeM)
+  const mrC = solveMultirotor(P, S, N, T, CONS, rhoA)
+  const mrO = solveMultirotor(P, S, N, T, OPT, rhoA)
   const okMrC = mrC.ok && vReq <= CONS.vmax
   const okMrO = mrO.ok && vReq <= OPT.vmax
-  const fwC = solveFixedWing(P, vReq, T, CONS, spec.platform === "vtol")
-  const fwO = solveFixedWing(P, vReq, T, OPT, spec.platform === "vtol")
+  const fwC = solveFixedWing(P, vReq, T, CONS, spec.platform === "vtol", rhoA)
+  const fwO = solveFixedWing(P, vReq, T, OPT, spec.platform === "vtol", rhoA)
 
   const bisect = (f: (x: number) => boolean, lo: number, hi: number) => { for (let i = 0; i < 40; i++) { const mid = (lo + hi) / 2; f(mid) ? (lo = mid) : (hi = mid) } return lo }
-  const maxTimeOpt = bisect((t) => solveMultirotor(P, S, N, t, OPT).ok, 1, 600)
-  const maxTimeCons = bisect((t) => solveMultirotor(P, S, N, t, CONS).ok, 1, 600)
-  const minSizeOpt = bisect((wb) => !solveMultirotor(P, wb, N, T, OPT).ok, 100, 6000)
-  const maxPayloadOpt = bisect((p) => solveMultirotor(p, S, N, T, OPT).ok, 0, 300)
+  const maxTimeOpt = bisect((t) => solveMultirotor(P, S, N, t, OPT, rhoA).ok, 1, 600)
+  const maxTimeCons = bisect((t) => solveMultirotor(P, S, N, t, CONS, rhoA).ok, 1, 600)
+  const minSizeOpt = bisect((wb) => !solveMultirotor(P, wb, N, T, OPT, rhoA).ok, 100, 6000)
+  const maxPayloadOpt = bisect((p) => solveMultirotor(p, S, N, T, OPT, rhoA).ok, 0, 300)
 
   const base: Feasibility = { verdict: "불가", vReq, cons: mrC, opt: mrO, detail: "", maxTimeOpt, maxTimeCons, minSizeOpt, maxPayloadOpt }
   const fwAdv = fwC.ok || fwO.ok ? `고정익/VTOL 구조는 ${fwC.ok ? "보수" : "낙관"} 가정에서 성립 가능(순항 ${fwO.v.toFixed(0)}m/s, 필요 날개폭 ≈ ${(fwC.ok ? fwC : fwO).spanM.toFixed(1)}m — 크기 입력이 날개폭이면 비교 필요)` : undefined
@@ -209,8 +225,8 @@ export interface MultirotorPlan { auw: number; hoverW: number; batKg: number; ba
 // 엔진 추정(보수 가정 우선, 안 되면 낙관 가정)을 한 번에 돌려준다 — 제품 매칭(lib/product-match.ts)이 같은 전제를 쓰도록 공유한다.
 export function planMultirotor(spec: DesignSpec): MultirotorPlan | null {
   if (spec.platform !== "multirotor" || [spec.payloadKg, spec.sizeMm, spec.flightMin].some((v) => v === undefined)) return null
-  const c = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, CONS)
-  const o = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, OPT)
+  const c = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, CONS, airDensity(spec.altitudeM))
+  const o = solveMultirotor(spec.payloadKg!, spec.sizeMm!, spec.rotors, spec.flightMin!, OPT, airDensity(spec.altitudeM))
   const ref = c.ok ? c : o.ok ? o : undefined
   if (!ref) return null
   const a = c.ok ? CONS : OPT
@@ -231,7 +247,7 @@ export function buildCalcBlock(spec: DesignSpec): string {
 엔진이 사용자 4입력으로 계산한 추정 전제(${label}, 제품 확정값 아님). HW 표의 총중량·배터리·모터·프롭 수치는 이 값과 모순되면 안 된다. 어긋나면 표를 고쳐 쓴 뒤 답하라.
 - 추정 총중량(AUW): ${ref.auw.toFixed(1)}kg (페이로드 ${spec.payloadKg}kg 포함${spec.maxAuwKg !== undefined ? `, 사용자 상한 ${spec.maxAuwKg}kg` : ""})
 - 호버링 전력: ≈ ${ref.hoverW.toFixed(0)}W → ${spec.flightMin}분 비행에 필요한 배터리 에너지 ≈ ${batWh.toFixed(0)}Wh (방전 깊이 ${(a.dod * 100).toFixed(0)}%, 에너지밀도 ${a.rho}Wh/kg 가정), 배터리 질량 ≈ ${ref.batKg.toFixed(1)}kg
-- 필요 총 최대추력: ≈ ${thrustKgf.toFixed(1)}kgf 이상(추력 대비 중량비 2:1) → ${spec.rotors}개 모터 합계 기준, 모터 1개당 ≈ ${(thrustKgf / spec.rotors).toFixed(1)}kgf 이상
+${spec.altitudeM ? `- 운용 고도 ${spec.altitudeM}m: ISA 공기밀도 ${airDensity(spec.altitudeM).toFixed(3)}kg/m³(해면 ${airDensity().toFixed(3)} 대비 ${((airDensity(spec.altitudeM) / airDensity() - 1) * 100).toFixed(0)}%) 적용\n` : ""}- 필요 총 최대추력: ≈ ${thrustKgf.toFixed(1)}kgf 이상(추력 대비 중량비 2:1) → ${spec.rotors}개 모터 합계 기준, 모터 1개당 ≈ ${(thrustKgf / spec.rotors).toFixed(1)}kgf 이상
 - 프롭 지름 상한: 축거 ${wbMm.toFixed(0)}mm ${spec.rotors}로터 기준 ≈ ${dIn.toFixed(1)}인치 (이보다 큰 프롭은 겹침)
 [HW 표 필수 충족 체크리스트 — 표를 쓴 뒤 하나씩 대조하고, 하나라도 어긋나면 표를 고쳐서 출력하라]
   1. 배터리 에너지(Wh) ≥ ${batWh.toFixed(0)}Wh 이고, Wh = 전압(V) × 용량(Ah)으로 표의 전압·용량과 일치할 것

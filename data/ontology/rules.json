@@ -19,7 +19,7 @@
         "교과서: 헬리콥터 운동량 이론(Leishman 등)",
         "paper-multirotor-power-model-gong-2022"
       ],
-      "note": "유도 동력항 형태는 Gong 2022 식(5)로 확인. FM·η 값과 프로파일 동력 처리는 논문에 없어 가정으로 남음",
+      "note": "유도 동력항 형태는 Gong 2022 식(5)로 확인. FM·η 값과 프로파일 동력 처리는 논문에 없어 가정으로 남음 | 공기밀도는 C03 ISA 식으로 계산(해면 15°C = 1.2257, 이전 고정값 1.225)",
       "claims": [
         "CL08"
       ]
@@ -266,13 +266,21 @@
       "id": "C03",
       "name": "고도·온도에 따른 공기밀도",
       "formula": "ρ = 273/(273+T)·(1−0.0065h/(273+T))^5.2561·ρ0 (ρ0=1.293)",
-      "status": "candidate",
+      "status": "implemented",
       "reason": "ρ_air가 해면 고정. 고지대·고온 임무 오판",
       "needsSource": "ISA 표준 대기(표준)",
       "claims": [
         "CL04"
       ],
-      "sourceStatus": "verified"
+      "sourceStatus": "verified",
+      "where": "lib/design-gate.ts airDensity",
+      "constants": {
+        "rho0_0C": 1.293,
+        "lapse_K_per_m": 0.0065,
+        "exponent": 5.2561,
+        "T_default_C": 15
+      },
+      "note": "고도 입력(선택)이 있으면 호버링 전력·고정익 날개폭에 반영. 디스크 로딩 한계 DL은 밀도 보정하지 않음(근거 없음). 고도 미입력은 해면 15°C(≈1.2257)"
     },
     {
       "id": "C04",
