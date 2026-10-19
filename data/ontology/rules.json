@@ -9,20 +9,29 @@
       "where": "lib/design-gate.ts solveMultirotor",
       "constants": {
         "rho_air": 1.225,
-        "FM_cons": 0.6,
-        "FM_opt": 0.75,
+        "FM_cons": 0.45,
+        "FM_opt": 0.6,
         "eta_cons": 0.8,
-        "eta_opt": 0.9
+        "eta_opt": 0.8
       },
       "sourceStatus": "partially-verified",
       "sourceCandidates": [
         "교과서: 헬리콥터 운동량 이론(Leishman 등)",
         "paper-multirotor-power-model-gong-2022"
       ],
-      "note": "유도 동력항 형태는 Gong 2022 식(5)로 확인. FM·η 값과 프로파일 동력 처리는 논문에 없어 가정으로 남음 | 공기밀도는 C03 ISA 식으로 계산(해면 15°C = 1.2257, 이전 고정값 1.225)",
+      "note": "유도 동력항 형태는 Gong 2022 식(5)로 확인. 종합효율 FM·η는 실제 기체 4종에서 역산(CL15: 0.32~0.47)해 보수 0.36(0.45×0.8), 낙관 0.48(0.6×0.8)로 조정(2026-10-19, 이전 0.48/0.675). n=4라 표본 작음 — 기체 데이터가 늘면 재보정. 공기밀도는 C03 ISA 식",
       "claims": [
-        "CL08"
-      ]
+        "CL08",
+        "CL13",
+        "CL14",
+        "CL15"
+      ],
+      "previousConstants": {
+        "FM_cons": 0.6,
+        "eta_cons": 0.8,
+        "FM_opt": 0.75,
+        "eta_opt": 0.9
+      }
     },
     {
       "id": "R02",

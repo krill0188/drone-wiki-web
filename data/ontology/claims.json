@@ -204,6 +204,57 @@
       "quote": "the optimal velocity is proportional to the square root of the mass",
       "status": "verified",
       "note": ""
+    },
+    {
+      "id": "CL13",
+      "rules": [
+        "R01"
+      ],
+      "subject": "MRS Drone 표준 기체 3종(4로터)",
+      "attribute": "무게·프롭·배터리·비행시간",
+      "value": "X500: 2.5kg/13in/199.8Wh/25분; F450: 1.7kg/9.4in/99.9Wh/15분; T650: 3.5kg/15in/177.6Wh/20분 (X500 풀센서 3.3kg은 20분)",
+      "unit": "-",
+      "conditions": "논문 표의 값. 시험 조건(탑재물·바람·방전 종지)은 표에 명시되지 않음. 연구용 기체 한 그룹의 보고",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2306.07229",
+      "locator": "Table (Platform X500/F450/T650…)",
+      "quote": "Flight time (min) 25 15 20 7 10 10",
+      "status": "verified",
+      "note": "8로터 3종(Dronument 등)은 비행시간 7~10분으로 임무 특화(대형 페이로드 추정)라 효율 역산에서 제외"
+    },
+    {
+      "id": "CL14",
+      "rules": [
+        "R01"
+      ],
+      "subject": "Holybro X650 V2 (제조사)",
+      "attribute": "키트 무게·프롭·배터리·공칭 호버 시간",
+      "value": "키트 2000g(배터리 제외), 15인치 프롭(Gemfan 1555), 6S 10000mAh(1200g) 호버 30분(페이로드 없음), 축거 650mm",
+      "unit": "-",
+      "conditions": "제조사 공칭값(낙관 방향). AUW는 키트+배터리≈3.2kg로 우리가 합산(FC 등 제외)",
+      "sourceType": "manufacturer",
+      "sourceId": "hw-collection/20261019/products/product-frame-holybro-x650-v2.md",
+      "locator": "스펙 표",
+      "quote": "",
+      "status": "derived",
+      "note": ""
+    },
+    {
+      "id": "CL15",
+      "rules": [
+        "R01"
+      ],
+      "subject": "호버 종합 효율 FM·η (역산)",
+      "attribute": "이상 운동량 호버 전력 ÷ (배터리 Wh×DoD0.8 ÷ 보고 비행시간)",
+      "value": "X500 0.35, F450 0.32, T650 0.45, X650(공칭) 0.47",
+      "unit": "-",
+      "conditions": "n=4 (논문 3 + 제조사 1). 탑재물·바람·방전 종지 조건 불명이라 오차 방향이 불확실. 프롭 지름은 논문/제조사 표기값으로 원판 면적 계산",
+      "sourceType": "derived",
+      "sourceId": "CL13+CL14",
+      "locator": "scratchpad valid2.ts 계산",
+      "quote": "",
+      "status": "derived",
+      "note": "코드 이전 값: 보수 0.48(FM0.6×η0.8), 낙관 0.675 — 관측 최대 0.47보다 높음"
     }
   ]
 }
