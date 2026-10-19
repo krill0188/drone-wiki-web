@@ -28,6 +28,7 @@ const RULE_ALIAS: Record<string, RegExp> = {
   R08: /고정익|양항비|l\/d|vtol/i, C04: /순항|전진\s*비행|forward flight|cruise/i, C02: /esc.*(전류|정격)|전류\s*정격/i, C03: /고도|공기\s*밀도|altitude/i,
 }
 
+const mfrOf = (id?: string) => byId.get((out.get(id ?? "") ?? []).find((e) => e.p === "madeBy")?.o ?? "")?.label ?? "?"
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ")
 const GENERIC = new Set(["series", "module", "kit", "brushless", "motor", "battery", "propeller", "frame", "drone", "developer", "version", "lipo", "esc", "the", "and", "with", "for", "pro", "mini", "flight", "controller", "computer", "camera", "sensor", "lidar", "radio", "system"])
 
@@ -47,7 +48,7 @@ function phrases(n: KNode): string[] {
 }
 const PRODUCT_PHRASES = G.nodes.filter((n) => n.type === "Product").map((n) => ({ n, ph: phrases(n) }))
 
-export interface KgResult { block: string; empty: boolean; facts: { id: string; text: string; source?: string }[]; matched: string[] }
+export interface KgResult { block: string; empty: boolean; facts: { id: string; text: string; source?: string }[]; matched: string[]; table?: string }
 
 export function queryKG(question: string): KgResult {
   const q = norm(question)
@@ -113,16 +114,33 @@ export function queryKG(question: string): KgResult {
     if (!products.length && !mfrs.length) for (const e of (inc.get(c) ?? []).filter((e) => e.p === "about").slice(0, 8)) claimLine(e.s)
   }
 
+  // 호환 표는 코드가 완성해 제공한다 — 모델이 표를 다시 쓰다 셀 범위·전류를 틀리는 문제를 막는다(2026-10-19 E2E에서 확인).
+  let table = ""
+  const target = products.find((p) => ["Motor", "ESC"].includes(String(p.cls)))
+  if (target) {
+    const rows = [...(out.get(target.id) ?? []), ...(inc.get(target.id) ?? [])].filter((e) => e.p === "powersWith")
+    if (rows.length) {
+      const motorSide = target.cls === "Motor"
+      const head = motorSide ? "| ESC | 제조사 | 연속전류 | ESC 셀 범위 | 모터 셀 범위 | 함께 쓸 수 있는 셀 | 출처 |" : "| 모터 | 제조사 | 모터 최대전류 | 모터 셀 범위 | ESC 셀 범위 | 함께 쓸 수 있는 셀 | 출처 |"
+      table = [head, "|---|---|---|---|---|---|---|", ...rows.slice(0, 20).map((e) => {
+        const o = byId.get(motorSide ? e.s : e.o)
+        return motorSide
+          ? `| ${o?.label} | ${mfrOf(o?.id)} | ${e.contA}A | ${e.escCells} | ${e.motorCells} | ${e.sharedCells} | [KG:${o?.id}] |`
+          : `| ${o?.label} | ${mfrOf(o?.id)} | ${e.motorMaxA}A | ${e.motorCells} | ${e.escCells} | ${e.sharedCells} | [KG:${o?.id}] |`
+      })].join("\n")
+    }
+  }
+
   const limited = facts.slice(0, 40)
   const block = limited.length
     ? `<knowledge-graph>
 지식그래프(제조사 공식 사양 + 원문 대조된 논문 claim + 공학 규칙)에서 질문과 연결된 사실이다. 각 줄의 [KG:id]를 인용 표기로 쓴다.
-${limited.map((f) => `[KG:${f.id}] ${f.text}`).join("\n")}
+${limited.map((f) => `[KG:${f.id}] ${f.text}`).join("\n")}${table ? `\n\n[호환 표 — 코드가 생성한 완성본. 답변에 이 표를 한 글자도 바꾸지 말고 그대로 붙여 넣는다]\n${table}` : ""}
 </knowledge-graph>`
     : `<knowledge-graph>
 (질문과 연결된 노드가 지식그래프에 없음)
 </knowledge-graph>`
-  return { block, empty: limited.length === 0, facts: limited, matched: [...matched] }
+  return { block, empty: limited.length === 0, facts: limited, matched: [...matched], table }
 }
 
 // 프롬프트에 넣는 그래프 규모 요약(위키 문서 지도 대신). 무엇이 그래프에 있고 없는지 모델이 알게 한다.
