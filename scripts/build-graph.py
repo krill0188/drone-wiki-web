@@ -64,6 +64,21 @@ for m in (q for q in items if q["category"] == "motor"):
                  sharedCells=f"{max(er[0], min(r[0] for r in mr))}-{min(er[1], max(r[1] for r in mr))}S")
             cnt["powersWith(ESC≥모터전류)"] += 1
 
+# 2nd 제조사 레지스트리 병합: 웹 카탈로그 제조사와 이름 매핑된 곳은 국가·공식 URL을 붙이고, 레지스트리에만 있는 제조사는 분야(hasCategory)와 함께 노드로 추가
+RCLS = {"motor": "Motor", "esc": "ESC", "propeller": "Propeller", "battery": "Battery", "frame": "Frame", "fc": "FlightController", "compute": "CompanionComputer",
+        "datalink": "DataLink", "camera": "Sensor", "lidar": "Sensor", "radar": "Sensor", "gnss-imu": "Sensor", "payload-mech": "Payload"}
+mp = load("manufacturer-map.json")
+web2reg = {x["web"]: x["registry"] for x in mp["matched"]}
+for web, regname in web2reg.items():
+    nd = next((n for n in nodes if n["id"] == f"mfr:{slug(web)}"), None)
+    r = mp["registry"].get(regname)
+    if nd and r: nd.update(registryName=regname, country=r["country"], countryVerified=r["countryVerified"], officialUrl=r["url"])
+regdone = set(web2reg.values())
+for name, r in mp["registry"].items():
+    mid = next((f"mfr:{slug(w)}" for w, rn in web2reg.items() if rn == name), f"mfr:{slug(name)}")
+    node(mid, "Manufacturer", name, registryName=name, country=r["country"], countryVerified=r["countryVerified"], officialUrl=r["url"], inRegistry=True)
+    for c in r["cats"]:
+        if c in RCLS: edge(mid, "hasCategory", f"class:{RCLS[c]}")
 rules = load("rules.json"); rules = rules.get("rules", rules)
 claims = load("claims.json")["claims"]
 if os.path.exists(os.path.join(D, "paper-claims.json")): claims += load("paper-claims.json")["claims"]

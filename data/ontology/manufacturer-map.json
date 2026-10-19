@@ -1,0 +1,2405 @@
+{
+ "matched": [
+  {
+   "web": "Gens Ace",
+   "registry": "Tattu / Gens ace (Grepow 계열)",
+   "products": 2,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Herewin",
+   "registry": "Herewin",
+   "products": 6,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "iFlight",
+   "registry": "iFlight",
+   "products": 14,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "MaxAmps",
+   "registry": "MaxAmps",
+   "products": 2,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Molicel",
+   "registry": "Molicel",
+   "products": 1,
+   "country": "대만(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Tattu",
+   "registry": "Tattu / Gens ace (Grepow 계열)",
+   "products": 12,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Tattu (Grepow)",
+   "registry": "Tattu / Gens ace (Grepow 계열)",
+   "products": 24,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Auterion",
+   "registry": "Auterion",
+   "products": 1,
+   "country": "미국/스위스(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Hailo",
+   "registry": "Hailo",
+   "products": 2,
+   "country": "이스라엘(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "ModalAI",
+   "registry": "ModalAI",
+   "products": 2,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "NVIDIA",
+   "registry": "NVIDIA (Jetson)",
+   "products": 5,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Radxa",
+   "registry": "Radxa",
+   "products": 2,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Raspberry Pi",
+   "registry": "Raspberry Pi",
+   "products": 5,
+   "country": "영국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "CubePilot",
+   "registry": "CubePilot",
+   "products": 6,
+   "country": "호주(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Doodle Labs",
+   "registry": "Doodle Labs",
+   "products": 2,
+   "country": "싱가포르/미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Holybro",
+   "registry": "Holybro",
+   "products": 30,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Iridium",
+   "registry": "Iridium",
+   "products": 1,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Microhard",
+   "registry": "Microhard Systems",
+   "products": 1,
+   "country": "캐나다(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Persistent Systems",
+   "registry": "Persistent Systems",
+   "products": 1,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Quectel",
+   "registry": "Quectel",
+   "products": 1,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "RFDesign",
+   "registry": "RFDesign",
+   "products": 1,
+   "country": "호주(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Silvus",
+   "registry": "Silvus Technologies",
+   "products": 2,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "SIYI",
+   "registry": "SIYI",
+   "products": 5,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Castle Creations",
+   "registry": "Castle Creations",
+   "products": 5,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Hobbywing",
+   "registry": "Hobbywing",
+   "products": 63,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "KDE Direct",
+   "registry": "KDE Direct",
+   "products": 22,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "T-MOTOR",
+   "registry": "T-MOTOR",
+   "products": 64,
+   "country": "중국 난창(페이지 명시)",
+   "countryVerified": true
+  },
+  {
+   "web": "Zubax Robotics",
+   "registry": "Zubax Robotics",
+   "products": 1,
+   "country": "에스토니아(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "ARK Electronics",
+   "registry": "ARK Electronics",
+   "products": 3,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Radiolink",
+   "registry": "Radiolink",
+   "products": 1,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "SpeedyBee",
+   "registry": "SpeedyBee",
+   "products": 1,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Freefly Systems",
+   "registry": "Freefly Systems",
+   "products": 6,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Quantum-Systems",
+   "registry": "Quantum-Systems",
+   "products": 1,
+   "country": "독일(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Cobra Motors",
+   "registry": "Cobra Motors",
+   "products": 1,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "MicaSense",
+   "registry": "EagleNXT / MicaSense",
+   "products": 2,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Teledyne FLIR",
+   "registry": "Teledyne FLIR OEM",
+   "products": 5,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "APC Propellers",
+   "registry": "APC Propellers",
+   "products": 1,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Gemfan",
+   "registry": "Gemfan",
+   "products": 1,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Master Airscrew",
+   "registry": "Master Airscrew",
+   "products": 1,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Benewake",
+   "registry": "Benewake",
+   "products": 2,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Echodyne",
+   "registry": "Echodyne",
+   "products": 1,
+   "country": "미국 시애틀 인근(페이지 명시)",
+   "countryVerified": true
+  },
+  {
+   "web": "Emlid",
+   "registry": "Emlid",
+   "products": 1,
+   "country": "헝가리/미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Hesai",
+   "registry": "Hesai Technology",
+   "products": 1,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "LightWare",
+   "registry": "Lightware",
+   "products": 1,
+   "country": "남아공(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Livox",
+   "registry": "Livox (DJI 계열)",
+   "products": 3,
+   "country": "중국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Ouster",
+   "registry": "Ouster (Velodyne 합병)",
+   "products": 2,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Septentrio",
+   "registry": "Septentrio",
+   "products": 1,
+   "country": "벨기에(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Texas Instruments",
+   "registry": "Texas Instruments",
+   "products": 2,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "u-blox",
+   "registry": "u-blox",
+   "products": 2,
+   "country": "스위스(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "VectorNav",
+   "registry": "VectorNav",
+   "products": 1,
+   "country": "미국(일반지식)",
+   "countryVerified": false
+  },
+  {
+   "web": "Xsens",
+   "registry": "Xsens (Movella)",
+   "products": 1,
+   "country": "네덜란드(일반지식)",
+   "countryVerified": false
+  }
+ ],
+ "web_only": [
+  {
+   "web": "Lumenier",
+   "products": 7
+  },
+  {
+   "web": "BETAFPV",
+   "products": 1
+  },
+  {
+   "web": "DJI",
+   "products": 31
+  },
+  {
+   "web": "Team BlackSheep",
+   "products": 2
+  },
+  {
+   "web": "Walksnail",
+   "products": 2
+  },
+  {
+   "web": "APD (Power Drives)",
+   "products": 1
+  },
+  {
+   "web": "Skyfront",
+   "products": 1
+  },
+  {
+   "web": "Resonon",
+   "products": 2
+  },
+  {
+   "web": "Specim",
+   "products": 1
+  },
+  {
+   "web": "Epson",
+   "products": 1
+  }
+ ],
+ "registry_only_count": 169,
+ "registry": {
+  "Tattu / Gens ace (Grepow 계열)": {
+   "cats": [
+    "battery"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.genstattu.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Grepow": {
+   "cats": [
+    "battery"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.grepow.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Amprius": {
+   "cats": [
+    "battery"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://amprius.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Molicel": {
+   "cats": [
+    "battery"
+   ],
+   "country": "대만(일반지식)",
+   "url": "https://www.molicel.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Epsilor": {
+   "cats": [
+    "battery"
+   ],
+   "country": "이스라엘(일반지식)",
+   "url": "https://www.epsilor.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Sion Power": {
+   "cats": [
+    "battery"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.sionpower.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "EaglePicher Technologies": {
+   "cats": [
+    "battery"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.eaglepicher.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Samsung SDI": {
+   "cats": [
+    "battery"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.samsungsdi.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "LG Energy Solution": {
+   "cats": [
+    "battery"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.lgensol.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "MaxAmps": {
+   "cats": [
+    "battery",
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.maxamps.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Intelligent Energy": {
+   "cats": [
+    "battery"
+   ],
+   "country": "영국(일반지식)",
+   "url": "https://www.intelligent-energy.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Solid Power": {
+   "cats": [
+    "battery"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.solidpowerbattery.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Kokam": {
+   "cats": [
+    "battery"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.kokam.com",
+   "countryVerified": false,
+   "method": "WF-리다이렉트(energystorage.solaredge.com)"
+  },
+  "Saft": {
+   "cats": [
+    "battery"
+   ],
+   "country": "프랑스(일반지식)",
+   "url": "https://www.saftbatteries.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(인증서 오류)"
+  },
+  "Ultralife": {
+   "cats": [
+    "battery"
+   ],
+   "country": "미국(일반지식)",
+   "url": "http://ultralifecorporation.com/",
+   "countryVerified": false,
+   "method": "WF-리다이렉트 미열람"
+  },
+  "Herewin": {
+   "cats": [
+    "battery"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.herewinbattery.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(DNS)"
+  },
+  "DJI Enterprise (Zenmuse)": {
+   "cats": [
+    "camera"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://enterprise.dji.com/zenmuse-h30-series",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Gremsy": {
+   "cats": [
+    "camera"
+   ],
+   "country": "베트남(일반지식)",
+   "url": "https://www.gremsy.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Teledyne FLIR OEM": {
+   "cats": [
+    "camera"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://oem.flir.com/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "SIYI": {
+   "cats": [
+    "camera",
+    "fc",
+    "gnss-imu",
+    "power-charger"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.siyi.biz",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Workswell": {
+   "cats": [
+    "camera"
+   ],
+   "country": "체코(일반지식)",
+   "url": "https://www.workswell.eu",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Phase One": {
+   "cats": [
+    "camera"
+   ],
+   "country": "덴마크(일반지식)",
+   "url": "https://www.phaseone.com/industrial",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Sentera": {
+   "cats": [
+    "camera"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.sentera.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "EagleNXT / MicaSense": {
+   "cats": [
+    "camera"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://eaglenxt.com/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "HIKMICRO": {
+   "cats": [
+    "camera"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.hikmicrotech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Optris": {
+   "cats": [
+    "camera"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.optris.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "LUCID Vision Labs": {
+   "cats": [
+    "camera"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://thinklucid.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Allied Vision": {
+   "cats": [
+    "camera"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.alliedvision.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Sony Semiconductor Solutions": {
+   "cats": [
+    "camera"
+   ],
+   "country": "일본(일반지식)",
+   "url": "https://www.sony-semicon.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hikrobot": {
+   "cats": [
+    "camera"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.hikrobotics.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "InfiRay": {
+   "cats": [
+    "camera"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.infiray.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(인증서 만료)"
+  },
+  "Skydroid": {
+   "cats": [
+    "camera"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.skydroid.xin",
+   "countryVerified": false,
+   "method": "WF-제품 미수신"
+  },
+  "Basler": {
+   "cats": [
+    "camera"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.baslerweb.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(406)"
+  },
+  "NVIDIA (Jetson)": {
+   "cats": [
+    "compute"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Raspberry Pi": {
+   "cats": [
+    "compute"
+   ],
+   "country": "영국(일반지식)",
+   "url": "https://www.raspberrypi.com/products/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "ModalAI": {
+   "cats": [
+    "compute",
+    "fc"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.modalai.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "ARK Electronics": {
+   "cats": [
+    "compute",
+    "esc",
+    "fc",
+    "gnss-imu",
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://arkelectron.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hailo": {
+   "cats": [
+    "compute"
+   ],
+   "country": "이스라엘(일반지식)",
+   "url": "https://www.hailo.ai",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Seeed Studio": {
+   "cats": [
+    "compute"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.seeedstudio.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Connect Tech": {
+   "cats": [
+    "compute"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://connecttech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Auvidea": {
+   "cats": [
+    "compute"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.auvidea.eu",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Luxonis": {
+   "cats": [
+    "compute"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.luxonis.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Khadas": {
+   "cats": [
+    "compute"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.khadas.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hardkernel": {
+   "cats": [
+    "compute"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.hardkernel.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Axiomtek": {
+   "cats": [
+    "compute"
+   ],
+   "country": "대만 뉴타이베이(페이지 명시)",
+   "url": "https://www.axiomtek.com",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "Advantech": {
+   "cats": [
+    "compute"
+   ],
+   "country": "대만(일반지식)",
+   "url": "https://www.advantech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Rockchips.net": {
+   "cats": [
+    "compute"
+   ],
+   "country": "-",
+   "url": "https://www.rockchips.net",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "Radxa": {
+   "cats": [
+    "compute"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.radxa.com",
+   "countryVerified": false,
+   "method": "WF-제품 미수신"
+  },
+  "Qualcomm Drones/Robotics": {
+   "cats": [
+    "compute"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.qualcomm.com/drones-robotics",
+   "countryVerified": false,
+   "method": "WF-접근실패(404)"
+  },
+  "Orange Pi": {
+   "cats": [
+    "compute"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.orangepi.org",
+   "countryVerified": false,
+   "method": "WF-접근실패(ECONNREFUSED)"
+  },
+  "Microhard Systems": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://www.microhardcorp.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "RFDesign": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://www.rfdesign.com.au",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Doodle Labs": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "싱가포르/미국(일반지식)",
+   "url": "https://doodlelabs.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Mobilicom": {
+   "cats": [
+    "datalink",
+    "gcs-hw"
+   ],
+   "country": "이스라엘(일반지식)",
+   "url": "https://www.mobilicom.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Silvus Technologies": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://silvustechnologies.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Persistent Systems": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.persistentsystems.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Digi International": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.digi.com/products/embedded-systems/rf-modules",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "RadioMaster": {
+   "cats": [
+    "datalink",
+    "gcs-hw"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.radiomasterrc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "ExpressLRS (오픈소스 프로젝트)": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "-",
+   "url": "https://www.expresslrs.org",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "Quectel": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.quectel.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Telit Cinterion": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "미국/독일(일반지식)",
+   "url": "https://www.telit.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "CubePilot (Herelink)": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://cubepilot.org/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Caddx (Walksnail)": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.caddxfpv.com/",
+   "countryVerified": false,
+   "method": "리다이렉트 미열람"
+  },
+  "Iridium": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.iridium.com/products/",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Taoglas": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "아일랜드(일반지식)",
+   "url": "https://www.taoglas.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Ubiquiti": {
+   "cats": [
+    "datalink"
+   ],
+   "country": "-",
+   "url": "https://www.ui.com",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "Hobbywing": {
+   "cats": [
+    "esc",
+    "motor",
+    "propeller"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.hobbywing.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "T-MOTOR": {
+   "cats": [
+    "esc",
+    "motor",
+    "propeller"
+   ],
+   "country": "중국 난창(페이지 명시)",
+   "url": "https://uav-en.tmotor.com/",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "KDE Direct": {
+   "cats": [
+    "esc",
+    "motor",
+    "propeller"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.kdedirect.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Scorpion": {
+   "cats": [
+    "esc",
+    "motor"
+   ],
+   "country": "중국/미국(일반지식)",
+   "url": "https://www.scorpionsystem.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Kontronik": {
+   "cats": [
+    "esc",
+    "motor"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.kontronik.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Neu Motors": {
+   "cats": [
+    "esc",
+    "motor"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.neumotors.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Cobra Motors": {
+   "cats": [
+    "esc",
+    "motor"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.cobramotorsusa.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "JETI model": {
+   "cats": [
+    "esc"
+   ],
+   "country": "체코(일반지식)",
+   "url": "https://www.jetimodel.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "YGE": {
+   "cats": [
+    "esc"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.yge.de",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Holybro": {
+   "cats": [
+    "esc",
+    "fc",
+    "frame",
+    "gnss-imu",
+    "power-charger"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.holybro.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Vertiq": {
+   "cats": [
+    "esc"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.vertiq.co",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Zubax Robotics": {
+   "cats": [
+    "esc"
+   ],
+   "country": "에스토니아(일반지식)",
+   "url": "https://zubax.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "SKYRC": {
+   "cats": [
+    "esc",
+    "power-charger"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.skyrc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Matek Systems": {
+   "cats": [
+    "esc",
+    "fc",
+    "gnss-imu",
+    "power-charger"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.mateksys.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Castle Creations": {
+   "cats": [
+    "esc"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.castlecreations.com",
+   "countryVerified": false,
+   "method": "WF-본문 없음"
+  },
+  "CUAV": {
+   "cats": [
+    "fc"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.cuav.net",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "CubePilot": {
+   "cats": [
+    "fc"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://cubepilot.org",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Auterion": {
+   "cats": [
+    "fc"
+   ],
+   "country": "미국/스위스(일반지식)",
+   "url": "https://www.auterion.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Radiolink": {
+   "cats": [
+    "fc"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.radiolink.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "SpeedyBee": {
+   "cats": [
+    "fc"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.speedybee.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "MicroPilot": {
+   "cats": [
+    "fc"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://www.micropilot.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "UAV Navigation (Grupo Oesía)": {
+   "cats": [
+    "fc"
+   ],
+   "country": "스페인(일반지식)",
+   "url": "https://www.uavnavigation.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Embention (Veronte)": {
+   "cats": [
+    "fc"
+   ],
+   "country": "스페인(일반지식)",
+   "url": "https://www.embention.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Flywoo": {
+   "cats": [
+    "fc"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.flywoo.net",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Foxtech": {
+   "cats": [
+    "fc",
+    "gcs-hw"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.foxtechfpv.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Sky-Drones": {
+   "cats": [
+    "fc"
+   ],
+   "country": "영국(일반지식)",
+   "url": "https://www.sky-drones.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "DJI Enterprise": {
+   "cats": [
+    "frame",
+    "gcs-hw",
+    "payload-mech"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.dji.com/products/enterprise",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Skydio": {
+   "cats": [
+    "frame"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.skydio.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Parrot": {
+   "cats": [
+    "frame"
+   ],
+   "country": "프랑스(일반지식)",
+   "url": "https://www.parrot.com/en/drones",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Freefly Systems": {
+   "cats": [
+    "frame"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.freeflysystems.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Flyability": {
+   "cats": [
+    "frame"
+   ],
+   "country": "스위스(일반지식)",
+   "url": "https://www.flyability.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Wingtra": {
+   "cats": [
+    "frame"
+   ],
+   "country": "스위스(일반지식)",
+   "url": "https://www.wingtra.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "EagleNXT (senseFly/AgEagle)": {
+   "cats": [
+    "frame"
+   ],
+   "country": "미국/스위스(일반지식)",
+   "url": "https://eaglenxt.com/",
+   "countryVerified": false,
+   "method": "WF (ageagle.com 301 리다이렉트)"
+  },
+  "Inspired Flight Technologies": {
+   "cats": [
+    "frame"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.inspiredflight.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Draganfly": {
+   "cats": [
+    "frame"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://www.draganfly.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "AeroVironment": {
+   "cats": [
+    "frame"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.avinc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "유콘시스템(Uconsystem)": {
+   "cats": [
+    "frame"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.uconsystem.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "ACSL": {
+   "cats": [
+    "frame"
+   ],
+   "country": "일본(일반지식)",
+   "url": "https://www.acsl.co.jp/en/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "파블로항공(Pablo Air)": {
+   "cats": [
+    "frame"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.pabloair.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Vantage Robotics": {
+   "cats": [
+    "frame"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.vantagerobotics.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Delair": {
+   "cats": [
+    "frame"
+   ],
+   "country": "프랑스(일반지식)",
+   "url": "https://www.delair.aero",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hylio": {
+   "cats": [
+    "frame",
+    "payload-mech"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://hyl.io/",
+   "countryVerified": false,
+   "method": "미확인"
+  },
+  "Autel Robotics": {
+   "cats": [
+    "frame",
+    "gcs-hw"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.autelrobotics.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Quantum-Systems": {
+   "cats": [
+    "frame"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.quantum-systems.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Tarot": {
+   "cats": [
+    "frame"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.tarotrc.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(ECONNREFUSED)"
+  },
+  "FrSky": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.frsky-rc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Jumper": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.jumper-rc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "FlySky": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.flysky-cn.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Spektrum (Horizon Hobby)": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.spektrumrc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Futaba": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "일본(일반지식)",
+   "url": "https://www.futabausa.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Getac": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "대만(일반지식)",
+   "url": "https://www.getac.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Samsung Business": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "한국(일반지식)",
+   "url": "https://www.samsung.com/us/business/mobile/rugged-devices/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Panasonic Connect": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "일본(일반지식)",
+   "url": "https://na.panasonic.com/us/computers-tablets-handhelds/computers-tablets",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Southwest Antennas": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.southwestantennas.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "CubePilot Herelink": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://cubepilot.org/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Yuneec": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "중국/독일(일반지식)",
+   "url": "https://www.yuneec.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "RF-HD": {
+   "cats": [
+    "gcs-hw"
+   ],
+   "country": "-",
+   "url": "https://www.rfhd.com",
+   "countryVerified": true,
+   "method": "WF-접근실패(인증서)"
+  },
+  "Advanced Navigation": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://www.advancednavigation.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "SBG Systems": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "프랑스(일반지식)",
+   "url": "https://www.sbg-systems.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "VectorNav": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.vectornav.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Inertial Labs": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://inertiallabs.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Xsens (Movella)": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "네덜란드(일반지식)",
+   "url": "https://www.xsens.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Emlid": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "헝가리/미국(일반지식)",
+   "url": "https://www.emlid.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "SparkFun": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.sparkfun.com/categories/tags/gnss",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Tersus GNSS": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.tersus-gnss.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Unicore (和芯星通)": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.unicore.com/en",
+   "countryVerified": false,
+   "method": "WF-404(홈 템플릿만)"
+  },
+  "Bosch Sensortec": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.bosch-sensortec.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "TDK InvenSense": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "일본/미국(일반지식)",
+   "url": "https://invensense.tdk.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Benewake": {
+   "cats": [
+    "gnss-imu",
+    "lidar"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.benewake.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "u-blox": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "스위스(일반지식)",
+   "url": "https://www.u-blox.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(Header overflow)"
+  },
+  "Septentrio": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "벨기에(일반지식)",
+   "url": "https://www.septentrio.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "NovAtel (Hexagon)": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://novatel.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "ArduSimple": {
+   "cats": [
+    "gnss-imu"
+   ],
+   "country": "스페인(일반지식)",
+   "url": "https://www.ardusimple.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Ouster (Velodyne 합병)": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://ouster.com",
+   "countryVerified": false,
+   "method": "WF (velodynelidar.com이 ouster.com으로 301)"
+  },
+  "Livox (DJI 계열)": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.livoxtech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hesai Technology": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.hesaitech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "RIEGL": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "오스트리아(일반지식)",
+   "url": "https://www.riegl.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "YellowScan": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "프랑스(일반지식)",
+   "url": "https://www.yellowscan.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Phoenix LiDAR Systems": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://phoenixlidar.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Teledyne Optech": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "캐나다(일반지식)",
+   "url": "https://www.teledyneoptech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "RoboSense": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.robosense.ai",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Seyond (Innovusion)": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "중국/미국(일반지식)",
+   "url": "https://www.seyond.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Blickfeld": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.blickfeld.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Emesent": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://www.emesent.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Slamtec": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.slamtec.com/en",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hokuyo": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "일본(일반지식)",
+   "url": "https://www.hokuyo-aut.jp",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Leica Geosystems": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "스위스(일반지식)",
+   "url": "https://www.leica-geosystems.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Lightware": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "남아공(일반지식)",
+   "url": "https://lightwarelidar.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Freefly Flux LiDAR / DJI Zenmuse L2·L3": {
+   "cats": [
+    "lidar"
+   ],
+   "country": "-",
+   "url": "https://www.freeflysystems.com",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "EMRAX": {
+   "cats": [
+    "motor"
+   ],
+   "country": "슬로베니아(일반지식)",
+   "url": "https://emrax.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "SunnySky": {
+   "cats": [
+    "motor"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.sunnyskyusa.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "EMAX": {
+   "cats": [
+    "motor"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.emaxmodel.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hacker Motor": {
+   "cats": [
+    "motor"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.hacker-motor.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "maxon": {
+   "cats": [
+    "motor"
+   ],
+   "country": "스위스(일반지식)",
+   "url": "https://www.maxongroup.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Plettenberg": {
+   "cats": [
+    "motor"
+   ],
+   "country": "독일(일반지식)",
+   "url": "http://plettenberg-motoren.net/",
+   "countryVerified": false,
+   "method": "WF-리다이렉트 미열람"
+  },
+  "iFlight": {
+   "cats": [
+    "motor"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.iflight-rc.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(인증서)"
+  },
+  "MAD Components": {
+   "cats": [
+    "motor",
+    "propeller"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.unmannedsystemstechnology.com/company/mad-components/drone-propellers/",
+   "countryVerified": false,
+   "method": "제3자 디렉토리"
+  },
+  "Fruity Chutes": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.fruitychutes.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "ParaZero": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "이스라엘(검색 결과 기재)",
+   "url": "https://parazero.com",
+   "countryVerified": true,
+   "method": "WF + WebSearch"
+  },
+  "A2Z Drone Delivery": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://a2zdronedelivery.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "XAG": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.xa.com/en",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "EAVISION": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.eavision.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "DJI Agriculture": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://ag.dji.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "DRONE VOLT": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "프랑스(일반지식)",
+   "url": "https://www.dronevolt.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Dropcopter": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.dropcopter.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "JOUAV": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "중국 청두(페이지 명시)",
+   "url": "https://www.jouav.com",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "Indemnis": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "미국 앵커리지(검색 결과)",
+   "url": "https://www.indemnis.com",
+   "countryVerified": true,
+   "method": "WF-접근실패(404)"
+  },
+  "AVSS": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "캐나다(검색 결과)",
+   "url": "https://avss.co/",
+   "countryVerified": true,
+   "method": "WF-리다이렉트 미열람"
+  },
+  "Drone Rescue Systems": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "오스트리아 그라츠(검색 결과)",
+   "url": "미확인",
+   "countryVerified": true,
+   "method": "WebSearch(CB Insights 목록)"
+  },
+  "MRC Systems": {
+   "cats": [
+    "payload-mech"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.mrcsystems.de",
+   "countryVerified": false,
+   "method": "WF-접근실패(SSL)"
+  },
+  "Mauch Electronic": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.mauch-electronic.com",
+   "countryVerified": false,
+   "method": "WF (www.mauch.com은 인증서 만료)"
+  },
+  "ISDT": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.isdt.co",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Hitec RCD": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "한국/미국(일반지식)",
+   "url": "https://www.hitecrcd.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Thunder Power RC": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.thunderpowerrc.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "JIKONG (JK BMS)": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.jikongbms.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "REC BMS": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "슬로베니아(일반지식)",
+   "url": "https://www.rec-bms.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Batrium": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "호주(일반지식)",
+   "url": "https://www.batrium.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Ewert Energy (Orion BMS)": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.orionbms.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Texas Instruments": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.ti.com/power-management/battery-management/overview.html",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Revolectrix": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.revolectrix.com",
+   "countryVerified": false,
+   "method": "WF-도메인 placeholder"
+  },
+  "Analog Devices": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.analog.com/en/product-category/battery-management.html",
+   "countryVerified": false,
+   "method": "WF-접근실패(타임아웃)"
+  },
+  "HobbyKing / XT-XINTE": {
+   "cats": [
+    "power-charger"
+   ],
+   "country": "-",
+   "url": "https://www.hobbyking.com",
+   "countryVerified": true,
+   "method": "WF-접근실패(403)"
+  },
+  "APC Propellers": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.apcprop.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Master Airscrew": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.masterairscrew.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "XOAR International": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.xoarintl.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "HQProp": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.hqprop.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Mejzlik Propellers": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "체코(일반지식)",
+   "url": "https://www.mejzlik.eu",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Falcon Propellers": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "미국 플로리다 Deland(페이지 명시)",
+   "url": "https://www.falconpropellers.com",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "THINKCHANGE Composite": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "대만(일반지식)",
+   "url": "https://www.thinkchange.com.tw",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Gemfan": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.gemfanhobby.com",
+   "countryVerified": false,
+   "method": "WF-접근실패(403)"
+  },
+  "Lighter Propeller": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "미확인",
+   "url": "https://www.unmannedsystemstechnology.com/company/lighter-propeller/efb-series-drone-propellers/",
+   "countryVerified": true,
+   "method": "제3자 디렉토리(WebSearch)"
+  },
+  "Flyber": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "영국(디렉토리 기재: UK/Europe 제조)",
+   "url": "https://www.unmannedsystemstechnology.com/company/flyber/custom-drone-propellers-rotors/",
+   "countryVerified": true,
+   "method": "제3자 디렉토리(WebSearch)"
+  },
+  "Dalprop": {
+   "cats": [
+    "propeller"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.dalprop.com",
+   "countryVerified": false,
+   "method": "WF-도메인 매각 페이지로 리다이렉트"
+  },
+  "Echodyne": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국 시애틀 인근(페이지 명시)",
+   "url": "https://www.echodyne.com",
+   "countryVerified": true,
+   "method": "WF"
+  },
+  "Texas Instruments mmWave": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.ti.com/sensors/mmwave-radar/overview.html",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Infineon": {
+   "cats": [
+    "radar"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.infineon.com/cms/en/product/sensor/radar-sensors/",
+   "countryVerified": false,
+   "method": "WF (페이지 일부만 읽음)"
+  },
+  "Acconeer": {
+   "cats": [
+    "radar"
+   ],
+   "country": "스웨덴(일반지식)",
+   "url": "https://www.acconeer.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Ainstein": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.ainstein.ai",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "smartmicro": {
+   "cats": [
+    "radar"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.smartmicro.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Fortem Technologies": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.fortemtech.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Robin Radar Systems": {
+   "cats": [
+    "radar"
+   ],
+   "country": "네덜란드(일반지식)",
+   "url": "https://www.robinradar.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Nanoradar": {
+   "cats": [
+    "radar"
+   ],
+   "country": "중국(일반지식)",
+   "url": "https://www.nanoradar.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Sensrad": {
+   "cats": [
+    "radar"
+   ],
+   "country": "스웨덴(일반지식)",
+   "url": "https://www.sensrad.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Blighter Surveillance Systems": {
+   "cats": [
+    "radar"
+   ],
+   "country": "영국(일반지식)",
+   "url": "https://www.blighter.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Weibel Scientific": {
+   "cats": [
+    "radar"
+   ],
+   "country": "덴마크(일반지식)",
+   "url": "https://www.weibelradars.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Spotter Global": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.spotterglobal.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Dedrone": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국/독일(일반지식)",
+   "url": "https://www.dedrone.com",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "HENSOLDT": {
+   "cats": [
+    "radar"
+   ],
+   "country": "독일(일반지식)",
+   "url": "https://www.hensoldt.net",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "NXP": {
+   "cats": [
+    "radar"
+   ],
+   "country": "네덜란드(일반지식)",
+   "url": "https://www.nxp.com/products/radio-frequency/radar",
+   "countryVerified": false,
+   "method": "WF-접근실패(404)"
+  },
+  "Arbe Robotics": {
+   "cats": [
+    "radar"
+   ],
+   "country": "이스라엘(일반지식)",
+   "url": "https://www.arbe.com",
+   "countryVerified": false,
+   "method": "WF-도메인 매각 페이지"
+  },
+  "uAvionix": {
+   "cats": [
+    "radar"
+   ],
+   "country": "미국(일반지식)",
+   "url": "https://www.uavionix.com/products/",
+   "countryVerified": false,
+   "method": "WF"
+  },
+  "Magos Systems": {
+   "cats": [
+    "radar"
+   ],
+   "country": "이스라엘(일반지식)",
+   "url": "https://magossystems.com/",
+   "countryVerified": false,
+   "method": "WF-리다이렉트 미열람"
+  }
+ },
+ "_comment": "2nd/concepts/vendor-registry-*.md(2026-10-17 수집, 공식 페이지 확인 WF 또는 일반지식 표기)와 웹 카탈로그 제조사의 이름 매핑. 국가가 '(일반지식)'이면 countryVerified=false. 생성: 2026-10-20 읽기 전용 파싱"
+}

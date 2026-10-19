@@ -97,7 +97,9 @@ export function queryKG(question: string): KgResult {
   for (const m of mfrs.slice(0, 4)) {
     matched.add(m.id)
     const prods = (inc.get(m.id) ?? []).filter((e) => e.p === "madeBy").map((e) => byId.get(e.s)!).filter(Boolean)
-    add(m.id, `제조사 ${m.label} — 지식그래프 등록 제품 ${prods.length}개: ${prods.slice(0, 8).map((p) => `${p.label}(${p.cls})`).join(", ")}${prods.length > 8 ? " 외" : ""}`)
+    const cats = (out.get(m.id) ?? []).filter((e) => e.p === "hasCategory").map((e) => e.o.slice(6))
+    const meta = [m.country ? `국가/본사 ${m.country}${m.countryVerified === false ? " (일반지식 표기 — 공식 페이지 미확인)" : " (공식 페이지 확인)"}` : "", cats.length ? `레지스트리 분야 ${[...new Set(cats)].join("·")}` : "", m.officialUrl ? `공식 ${m.officialUrl}` : ""].filter(Boolean).join(", ")
+    add(m.id, `제조사 ${m.label} — ${meta ? meta + "; " : ""}지식그래프 등록 제품 ${prods.length}개${prods.length ? ": " + prods.slice(0, 8).map((p) => `${p.label}(${p.cls})`).join(", ") + (prods.length > 8 ? " 외" : "") : "(제품 사양은 아직 미수집, 제조사 레지스트리만 등록)"}`)
   }
   for (const r of rules) {
     const n = byId.get(r)
@@ -111,6 +113,10 @@ export function queryKG(question: string): KgResult {
     matched.add(c)
     const prods = (inc.get(c) ?? []).filter((e) => e.p === "isA").length
     add(c, `클래스 ${c.slice(6)} — 등록 제품 ${prods}개`)
+    if (!products.length && !mfrs.length) {
+      const ms = (inc.get(c) ?? []).filter((e) => e.p === "hasCategory").map((e) => byId.get(e.s)!).filter(Boolean)
+      if (ms.length) add(`${c}|vendors`, `${c.slice(6)} 분야 제조사 ${ms.length}곳(2nd 제조사 레지스트리): ${ms.slice(0, 20).map((m) => `${m.label}${m.countryVerified === false ? "*" : ""}`).join(", ")}${ms.length > 20 ? " 외" : ""} (* = 국가는 일반지식 표기, 공식 확인 아님)`)
+    }
     if (!products.length && !mfrs.length) for (const e of (inc.get(c) ?? []).filter((e) => e.p === "about").slice(0, 8)) claimLine(e.s)
   }
 
@@ -148,7 +154,7 @@ export function kgSummary(): string {
   const c = (t: string) => G.nodes.filter((n) => n.type === t).length
   const e = (p: string) => G.edges.filter((x) => x.p === p).length
   return `<kg-scope>
-지식그래프 범위: 제조사 ${c("Manufacturer")}, 제품 ${c("Product")}(클래스 ${c("Class")}종), 공학 규칙 ${c("Rule")}, 원문 대조 claim ${c("Claim")}(논문 ${c("Paper")}편).
+지식그래프 범위: 제조사 ${c("Manufacturer")}(제품 사양 보유 61곳 + 레지스트리 전용), 제품 ${c("Product")}(클래스 ${c("Class")}종), 공학 규칙 ${c("Rule")}, 원문 대조 claim ${c("Claim")}(논문 ${c("Paper")}편).
 관계: 제조(madeBy) ${e("madeBy")}, ESC-모터 구동 호환 ${e("powersWith")}, 배터리 셀 호환 ${e("packFits")}, claim→규칙 ${e("supports")}, claim→제품 언급 ${e("mentions")}.
 범위 밖: 역사·정책·뉴스·일반 개념 설명은 그래프에 없다.
 </kg-scope>`
