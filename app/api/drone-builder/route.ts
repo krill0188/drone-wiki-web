@@ -3,7 +3,8 @@ import { streamText, createUIMessageStreamResponse, toUIMessageStream } from "ai
 import { createUIMessageStream } from "ai"
 import { wikiModel } from "@/lib/ai-model"
 import { evaluateBuilderGate } from "@/lib/design-gate"
-import { matchProducts } from "@/lib/product-match"
+import { matchProducts, type MatchData } from "@/lib/product-match"
+import { validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
@@ -332,12 +333,60 @@ export async function POST(req: NextRequest) {
   const manifest = await buildAgentManifest()
 
   // 멀티로터면 엔진 계산에 맞는 실제 제품 후보(제조사 공식 사양 수집본)를 서버가 골라 확정 전제로 넣는다.
-  const productMatch = gate.spec.platform === "multirotor" && stage !== "proposal" ? matchProducts(gate.spec).block : ""
+  const match = gate.spec.platform === "multirotor" && stage !== "proposal" ? matchProducts(gate.spec) : null
+  const productMatch = match?.block ?? ""
   const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}` + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
+  const fullSystem = (extra = "") => `${system}${extra}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`
+
+  // 검증 모드(멀티로터 2~6단계): 쓰기 → 코드 검증 → 위반 시 1회 재작성 → 결과 끝에 검증 결과 공개.
+  // 첫 글자는 검증 뒤에 나가므로 느리지만(최대 2회 생성), 출력의 규칙 위반을 서버가 보증/공개한다.
+  if (match?.data) {
+    const data = match.data
+    const validate = (text: string): Validation => {
+      switch (stage) {
+        case "hw": return validateHw(text, data)
+        case "sw": return validateSw(text, ctx.hw ?? "")
+        case "techspec": return validateTechspec(text, ctx.hw ?? "", data)
+        case "architecture": return validateArchitecture(text, ctx.hw ?? "", data)
+        default: return validateImplementation(text, ctx.architecture ?? "")
+      }
+    }
+    return createUIMessageStreamResponse({
+      stream: createUIMessageStream({
+        execute: async ({ writer }) => {
+          writer.write({ type: "start" })
+          try {
+            const gen = async (extra: string) => {
+              const r = streamText({ model: wikiModel("builder"), system: fullSystem(extra), maxOutputTokens: limit.maxOutputTokens, prompt: `드론 컨셉: ${prompt}` })
+              return (await r.text).trim()
+            }
+            let text = await gen("")
+            let v = validate(text)
+            let retried = false
+            if (v.issues.length) {
+              retried = true
+              const fix = `\n\n# 서버 검증 위반 (코드가 판정한 사실 — 반드시 고쳐서 다시 쓴다)\n<previous-output>\n${text.slice(0, 6000)}\n</previous-output>\n${v.issues.map((x, i) => `${i + 1}. ${x}`).join("\n")}\n위 위반을 모두 해소해 이 단계 결과를 처음부터 다시 작성하되, 위반이 아닌 부분은 유지하고 출력 형식은 그대로 따른다.`
+              const second = await gen(fix)
+              if (second) { text = second; v = validate(text) }
+            }
+            const out = text + renderValidation(v, retried)
+            const id = "stage"
+            writer.write({ type: "text-start", id })
+            for (let i = 0; i < out.length; i += 600) writer.write({ type: "text-delta", id, delta: out.slice(i, i + 600) })
+            writer.write({ type: "text-end", id })
+            writer.write({ type: "finish" })
+          } catch (e) {
+            writer.write({ type: "error", errorText: e instanceof Error ? e.message : "AI 생성 중 오류가 발생했습니다." })
+          }
+        },
+      }),
+    })
+  }
+
   const result = streamText({
     model: wikiModel("builder"),
-    system: `${system}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`,
+    system: fullSystem(),
     maxOutputTokens: limit.maxOutputTokens,
     prompt: `드론 컨셉: ${prompt}`,
   })
