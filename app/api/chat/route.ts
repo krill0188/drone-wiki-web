@@ -12,6 +12,8 @@ import { ragSearch, searchNews } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { evaluateDesignGate } from "@/lib/design-gate"
+import { designBlocks } from "@/lib/design-context"
+import { designEvidence } from "@/lib/evidence"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildSystemPrompt } from "@/lib/chat-system-prompt"
 import type { DocContext } from "@/lib/types"
@@ -82,7 +84,7 @@ export async function POST(req: NextRequest) {
   const graph = ragQuery ? graphRagSearch(ragQuery, sources.map((s) => s.slug)) : { block: "", usedDiscovery: false }
   const manifest = await buildAgentManifest()
 
-  const system = buildSystemPrompt(manifest, docContext ?? null, recentDocs ?? [], sources, graph.block, newsHits, gate.block ? `${gate.block}\n${onto.block}` : onto.block)
+  const system = buildSystemPrompt(manifest, docContext ?? null, recentDocs ?? [], sources, graph.block, newsHits, gate.block ? `${designBlocks(gate)}\n${onto.block}` : onto.block)
 
   const result = streamText({
     model: wikiModel(),
@@ -105,6 +107,7 @@ export async function POST(req: NextRequest) {
               sourceUrl: s.properties?.source || s.properties?.source_url,
             })),
             ontologyClasses: onto.classes,
+            evidence: gate.block ? designEvidence() : undefined,
             newsSources: newsHits.map((n) => ({ title: n.title, url: n.url, type: n.type })),
           }
         }

@@ -255,6 +255,110 @@
       "quote": "",
       "status": "derived",
       "note": "코드 이전 값: 보수 0.48(FM0.6×η0.8), 낙관 0.675 — 관측 최대 0.47보다 높음"
+    },
+    {
+      "id": "CL16",
+      "rules": [
+        "R05"
+      ],
+      "subject": "리튬 배터리 팩 실효 에너지밀도",
+      "attribute": "셀 비에너지 ÷ 패키징 계수 ηpkg",
+      "value": "LiPo 셀 180Wh/kg, ηpkg 1.04(대형)~최대 1.32(4000mAh 미만 소형)",
+      "unit": "Wh/kg",
+      "conditions": "MDO 엔진(AeroEval)의 모델 설정값. 시험 측정값이 아니라 저자가 설정한 모델 계수. 셀 180은 Table III에서 읽은 값",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "VI-D, Table III",
+      "quote": "For LiPo it starts at a base of 1.04 and accrues additive terms",
+      "status": "verified",
+      "note": "180/1.04=173, 180/1.32=136 → 팩 136~173Wh/kg. 우리 보수값 155는 이 범위 안, 낙관값 207은 LiPo 범위를 넘음(LiHV 195/1.04=188, NCA 260/1.15=226 수준이어야 도달) — 낙관값은 LiPo 한정이면 과대"
+    },
+    {
+      "id": "CL17",
+      "rules": [
+        "R01"
+      ],
+      "subject": "설치 상태 호버 효율 저하",
+      "attribute": "FoM_installed = FoM_isolated/κ",
+      "value": "κ: 소비자 1.20, 기업용 1.25, 마이크로 1.30, 산업용 1.46",
+      "unit": "-",
+      "conditions": "저자 모델 계수. FoM_max 값은 본문에서 찾지 못함",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "IV-F",
+      "quote": "FoMinstalled = FoMisolated/κ, with κ ∈ {1.20consumer, 1.25enterprise, 1.30MicroAIO, 1.46industrial}",
+      "status": "verified",
+      "note": "설치 후 FoM이 단독 시험값보다 17~32% 낮다는 근거. 우리 FM 0.45/0.6과 같은 방향의 보정"
+    },
+    {
+      "id": "CL18",
+      "rules": [
+        "R03"
+      ],
+      "subject": "기준 설계의 추력 대비 중량비",
+      "attribute": "T/W (호버 스로틀 60% 기준)",
+      "value": "2.78",
+      "unit": "-",
+      "conditions": "저자 엔진의 기본 기준 실행(null role). 역할별로는 호버 스로틀 목표에 따라 달라짐",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "III-D",
+      "quote": "the baseline hover throttle target defaults to 60%, yielding T/W = 1/0.602 ≈2.78 universally",
+      "status": "verified",
+      "note": "우리 R03(2:1)은 Dai의 γ=0.5 관행. 이 논문 기준은 2.78로 더 높음 — 2:1은 최소선, 실제 설계는 이보다 높은 여유가 흔하다는 참고"
+    },
+    {
+      "id": "CL19",
+      "rules": [
+        "R06",
+        "R05"
+      ],
+      "subject": "탑재량 민감도(질량 눈덩이 효과)",
+      "attribute": "dMTOW/dPayload",
+      "value": "+1.692 kg/kg (비행시간 −1.703 min/kg)",
+      "unit": "kg/kg",
+      "conditions": "저자 MDO 엔진의 시뮬레이션 결과(실측 아님). 나머지 파라미터 고정, COTS 이산 부품 매칭 포함",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "Table VI",
+      "quote": "Payload mass +1.692 kg/kg −1.703 min/kg",
+      "status": "verified",
+      "note": "우리 엔진은 같은 조건(900mm, 15분)에서 탑재 0.5→1→2kg일 때 +3.0, +4.8 kg/kg로 훨씬 가파름 → 구조비 ef 보수값 0.45가 과대일 가능성. 단 저자 모델 값이라 직접 보정에는 쓰지 않음"
+    },
+    {
+      "id": "CL20",
+      "rules": [
+        "C04"
+      ],
+      "subject": "전진 비행 전력",
+      "attribute": "P_fwd(V) 최소점 V_md 존재, 25.5m/s 초과 시 발산",
+      "value": "V_md = argmin P_fwd(V), 발산 속도 25.5",
+      "unit": "m/s",
+      "conditions": "저자 모델(Glauert 유도속도 + 기생항력). Class 1 표준 구성",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "IV-E, Abstract",
+      "quote": "forward velocity diverges beyond 25.5 m/s due to cubic parasite power growth",
+      "status": "verified",
+      "note": "C04의 두 번째 독립 근거(첫째는 Gong, 단일 기체). 속도별 전력 곡선 코드화에 필요한 구조(유도속도 Newton-Raphson + 기생항력 ½ρV²CdS)는 확인, 상수(fscale 0.004/0.012/0.05)도 본문에 있음"
+    },
+    {
+      "id": "CL21",
+      "rules": [
+        "R05",
+        "R06"
+      ],
+      "subject": "모델 정확도 보고",
+      "attribute": "MTOW 예측 MAPE",
+      "value": "7.2% (상업용 19기종 블라인드), DIY 20기종 26.1%",
+      "unit": "%",
+      "conditions": "저자가 보고한 검증. 상업용 19기종 377g~76kg",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "Abstract, Table IV",
+      "quote": "predicts Maximum Takeoff Weight (MTOW) within 7.2% Mean Absolute Percentage Error",
+      "status": "verified",
+      "note": "3개 구조 계수만 DIY 20기종에서 맞춘 뒤 고정하고 상업용에 적용(비순환 검증). 우리 엔진은 이런 기종별 대조를 아직 안 했음 — Table IV 19기종 실제 MTOW 사용 가능"
     }
   ]
 }

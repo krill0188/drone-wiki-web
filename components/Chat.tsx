@@ -15,6 +15,7 @@ const CHAT_FEATURE_KEY = "chat"
 interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; excerpt?: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
+  evidence?: { id: string; name: string; formula: string; sourceStatus: string; claims: { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string }[] }[]
 }
 
 type ChatUIMessage = UIMessage<ChatMetadata>
@@ -209,6 +210,28 @@ export default function ChatWidget() {
                         ))}
                       </div>
                     </div>
+                  )}
+
+                  {m.role === "assistant" && meta?.evidence && meta.evidence.length > 0 && (
+                    <details className="px-1">
+                      <summary className="text-[11px] font-hud text-ink-dim mb-1 cursor-pointer select-none hover:text-signal-600">
+                        📐 설계 근거 · 공학 규칙 {meta.evidence.length}개 (논문 인용 {meta.evidence.reduce((n, r) => n + r.claims.length, 0)}건)
+                      </summary>
+                      <div className="flex flex-col gap-1.5 mt-1">
+                        {meta.evidence.map((r) => (
+                          <div key={r.id} className="text-[11px] text-ink-dim border-l-2 border-dashed pl-2">
+                            <p>
+                              <b>{r.id}</b> {r.name} <code>{r.formula}</code> · 근거 상태: <b>{r.sourceStatus}</b>
+                            </p>
+                            {r.claims.map((c) => (
+                              <p key={c.id} className="ml-2">
+                                · {c.subject}: {c.value} ({c.source}, {c.locator}, {c.status}){c.quote ? ` — “${c.quote}”` : ""}
+                              </p>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    </details>
                   )}
 
                   {m.role === "assistant" && meta?.sources && meta.sources.length > 0 && (

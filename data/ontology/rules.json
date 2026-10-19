@@ -24,7 +24,8 @@
         "CL08",
         "CL13",
         "CL14",
-        "CL15"
+        "CL15",
+        "CL17"
       ],
       "previousConstants": {
         "FM_cons": 0.6,
@@ -58,7 +59,8 @@
       "sourceStatus": "verified",
       "note": "Dai 2019: 일반 멀티로터 γ=0.5 선택 → T_max=2·T_hover. 관행 값이지 물리 상수는 아님",
       "claims": [
-        "CL01"
+        "CL01",
+        "CL18"
       ]
     },
     {
@@ -92,7 +94,10 @@
       "claims": [
         "CL02",
         "CL03",
-        "CL10"
+        "CL10",
+        "CL16",
+        "CL19",
+        "CL21"
       ],
       "previousConstants": {
         "e_pack_cons_Wh_kg": 180,
@@ -112,7 +117,9 @@
       "sourceStatus": "unverified",
       "note": "논문 통계(CL06)와 정의가 달라 직접 검증 불가. 카탈로그 부품 실제 질량으로 대체 권장",
       "claims": [
-        "CL06"
+        "CL06",
+        "CL19",
+        "CL21"
       ]
     },
     {
@@ -301,7 +308,8 @@
       "claims": [
         "CL09",
         "CL11",
-        "CL12"
+        "CL12",
+        "CL20"
       ],
       "sourceStatus": "partially-verified",
       "note": "전진 비행이 호버보다 전력이 낮은 구간 존재(CL09), 최적 속도에서 EPM∝질량·v_opt∝√m(CL11,12). 전력 곡선 수식 자체는 아직 코드화 안 함"
