@@ -2,6 +2,168 @@
  "_comment": "pipeline.py verify 통과 claim. quote는 원문 PDF 텍스트와 코드로 대조됨. 규칙 연결(rules)은 AI 제안이며 코드 상수에는 사람이 검토 후 반영.",
  "claims": [
   {
+   "id": "P2301.00730-01",
+   "rules": [],
+   "subject": "Lifting-wing quadcopter (RflyLW2-type hybrid UAV)",
+   "attribute": "mass, wing geometry and rotor coefficients",
+   "value": "span 0.94 m; chord 0.17 m; Km = 5.875e-07; Kf = 2.824e-05",
+   "unit": "kg, deg, m",
+   "conditions": "Platform parameters used in the paper's model (Table 2) Aircraft mass 1.92 kg, wing installation 34 deg, motor tilt 10 deg (same table).",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.00730",
+   "locator": "Table 2",
+   "quote": "𝑏 Wingspan of the lifting-wing aircraft 0.94 m 𝑐 Mean chord of the lifting wing 0.17 m 𝐾𝑚 Drag moment coeﬃcient 5.875e-07 kg · m2 𝐾𝑓 Lift force coeﬃcient 2.824e-05 kg · m2",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Lifting-wing Quadcopter Modeling and Unified Control",
+    "published": "2023-01-02"
+   }
+  },
+  {
+   "id": "P2301.00730-02",
+   "rules": [],
+   "subject": "Lifting-wing quadcopter (1.92 kg) motor power model",
+   "attribute": "identified throttle-to-motor-power fit coefficients",
+   "value": "p1 = 563.7, p2 = −147.4, p3 = 15, p4 = 1.05, p5 = 4, p6 = 1, p7 = 0.05538; servo power 0.2 W",
+   "unit": "W (fit coefficients)",
+   "conditions": "Identified from sinusoidal throttle test of the authors' motor (Eq. 30); servo measured with 100 g suspended on ailerons",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.00730",
+   "locator": "Sec. V-B, Eq. 30",
+   "quote": "With the given lifting-wing quadcopter platform, 𝑝1 = 563.7, 𝑝2 = −147.4, 𝑝3 = 15, 𝑝4 = 1.05, 𝑝5 = 4, 𝑝6 = 1, 𝑝7 = 0.05538. With respect to the servo, its power is negligible, because the power of servo is only 0.2W",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Lifting-wing Quadcopter Modeling and Unified Control",
+    "published": "2023-01-02"
+   }
+  },
+  {
+   "id": "P2301.12316-01",
+   "rules": [],
+   "subject": "University of Michigan QuadPlane (lift+cruise sUAS prototype)",
+   "attribute": "vehicle mass, battery and propulsion module",
+   "value": "1.6840 kg; 4S LiPo 2650 mAh; 9.5 x 4.5 in propeller",
+   "unit": "kg, mAh",
+   "conditions": "Authors' wind-tunnel prototype (Table 1); same module for 4 vertical pushers and 1 forward puller Motor 920 KV with 30 A ESC (Sec. III-A).",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.12316",
+   "locator": "Table 1 / Sec. III-A",
+   "quote": "Vehicle Mass (𝑀) 3.713 𝑙𝑏 1.6840 𝑘𝑔 Quadrotor Arm-length (𝑙𝑄) 19 𝑖𝑛 0.4826 𝑚 Fuselage length (𝑙𝑓) 35.3 𝑖𝑛 0.8966 𝑚 Propeller diameter 9.5 𝑖𝑛 0.2413 𝑚 Propeller pitch 4.5 𝑖𝑛 0.1143 𝑚 Battery 4𝑆LiPo, 2650 𝑚𝐴ℎ",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
+    "published": "2023-01-29"
+   }
+  },
+  {
+   "id": "P2301.12316-02",
+   "rules": [],
+   "subject": "QuadPlane wing",
+   "attribute": "wing span/chord and stall speed",
+   "value": "span 1.2192 m; chord 0.1524 m; stall speed 10.09 m/s; stall angle 15.07°",
+   "unit": "m, m/s, deg",
+   "conditions": "Design parameters, NACA4415 airfoil, AR 8, 5° incidence; 1.684 kg vehicle",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.12316",
+   "locator": "Table 1",
+   "quote": "Span (𝑏) 48 𝑖𝑛 1.2192 𝑚 Chord (𝑐) 6 𝑖𝑛 0.1524 𝑚 Incidence angle (𝛼𝑖) 5° 0.0873 𝑟𝑎𝑑 Dihedral angle (Γ) 0° 0 𝑟𝑎𝑑 Stall speed (𝑣𝑠𝑡𝑎𝑙𝑙) 33.10 𝑓𝑡/𝑠 10.09 𝑚/𝑠 Stall angle (𝛼𝑠𝑡𝑎𝑙𝑙) 15.07°",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
+    "published": "2023-01-29"
+   }
+  },
+  {
+   "id": "P2301.12316-03",
+   "rules": [],
+   "subject": "QuadPlane vertical propulsion modules in edgewise flow",
+   "attribute": "rear vs front rotor thrust loss due to flow interaction",
+   "value": "single module 5.69 N; rear modules 27.5% lower thrust",
+   "unit": "N, %",
+   "conditions": "Wind tunnel, vehicle AoA 0°, airspeed 11 m/s, hybrid mode; rear deficit inferred from 1.56 N m net pitching moment",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.12316",
+   "locator": "Sec. VI-B, Fig. 10",
+   "quote": "Dynamic thrust tests show at this airspeed and 𝛼𝑉a single propulsion module produces 5.69𝑁of thrust. Rear propulsion modules generate 27.5% lower thrust than front modules for this test case.",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
+    "published": "2023-01-29"
+   }
+  },
+  {
+   "id": "P2301.12316-04",
+   "rules": [],
+   "subject": "QuadPlane forward propeller (920 KV, 9.5x4.5) in axial flow",
+   "attribute": "throttle needed for net positive thrust at max test airspeed",
+   "value": "15 m/s; at or above 50% throttle",
+   "unit": "m/s, %",
+   "conditions": "Dynamometer in 2' x 2' wind tunnel, propeller AoA 0°, powered from bench supply at nominal 4S",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.12316",
+   "locator": "Sec. V, Fig. 7",
+   "quote": "At the maximum test airspeed (15𝑚/𝑠), a net positive thrust from the propeller is observed only at or above 50% throttle.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
+    "published": "2023-01-29"
+   }
+  },
+  {
+   "id": "P2301.12905-01",
+   "rules": [],
+   "subject": "Multicopter bi-level co-design (plant + structured H-inf control)",
+   "attribute": "energy and mass change vs reference design",
+   "value": "min-energy: energy -37%, mass -10%; min-mass: energy -14%, mass -14%",
+   "unit": "% relative change",
+   "conditions": "Numerical co-design optimization with sizing models (motor, rotor radius/pitch, battery, arm) for a standard mission; compared with a non-optimal reference design; not flight-tested",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.12905",
+   "locator": "Sec. 5.1, Table 2",
+   "quote": "When the objective is to minimize the energy consumed, the latter is signiﬁcantly reduced by 37% compared to the reference, while the mass decreased by 10%. When the objective is to minimize the mass of the multicopter, the optimized multicopter is lighter, the mass decreases by 14%, but is less energy-efﬁcient. The energy is only reduced by 14%.",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "A bi-level co-design approach for multicopters",
+    "published": "2023-01-30"
+   }
+  },
+  {
+   "id": "P2301.12905-02",
+   "rules": [
+    "R06"
+   ],
+   "subject": "Reference multicopter in co-design study",
+   "attribute": "mass share of design-independent components (frame, payload, ...)",
+   "value": "57% of total mass",
+   "unit": "%",
+   "conditions": "Reference model of the paper's sizing framework; fraction lumps frame AND payload etc. (not airframe alone); battery mass reduced 36% (energy-optimal) vs 26% (mass-optimal)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2301.12905",
+   "locator": "Sec. 5.1, Fig. 9",
+   "quote": "It includes for instance the frame, the payload...and represents 57% of the total mass in the reference model",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "A bi-level co-design approach for multicopters",
+    "published": "2023-01-30"
+   }
+  },
+  {
    "id": "P2303.00132-01",
    "rules": [],
    "subject": "Onboard dynamic-object detection/tracking pipeline (RGB-D)",
@@ -19,6 +181,46 @@
    "paper": {
     "title": "Onboard dynamic-object detection and tracking for autonomous robot navigation with RGB-D camera",
     "published": "2023-02-28"
+   }
+  },
+  {
+   "id": "P2306.17087-01",
+   "rules": [],
+   "subject": "Micro air vehicle 2-blade micro-propeller with surface roughness on suction side",
+   "attribute": "thrust and power change vs smooth baseline",
+   "value": "2% increase in thrust; 5% decrease in power; Rec = 6500",
+   "unit": "%",
+   "conditions": "Large eddy simulation at same chord Reynolds number 6500 (held by rotational speed), corroborated qualitatively by thrust-stand tests of identical 3D-printed propellers; low-Re regime only",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2306.17087",
+   "locator": "Abstract / Conclusion",
+   "quote": "Our results indicate that roughness produces a 2% increase in thrust and a 5% decrease in power relative to a baseline smooth propeller operating at the same Reynolds number of Rec = 6500, held constant by rotational speed.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Numerical and Experimental Study on the Addition of Surface Roughness to Micro-Propellers",
+    "published": "2023-06-29"
+   }
+  },
+  {
+   "id": "P2306.17087-02",
+   "rules": [],
+   "subject": "Baseline smooth micro-propeller (LES)",
+   "attribute": "predicted thrust at rotational speed",
+   "value": "13,260 RPM; approximately 1.8 g of thrust",
+   "unit": "RPM, g",
+   "conditions": "LES prediction for authors' two-blade micro-propeller; compared with literature design predicting 4 g at Re ≈ 10,000",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2306.17087",
+   "locator": "Results, thrust section",
+   "quote": "Our two-blade propeller operating at a lower 13,260 RPM predicts an approximate 1.8 g of thrust, giving confidence to the results of the simulation.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Numerical and Experimental Study on the Addition of Surface Roughness to Micro-Propellers",
+    "published": "2023-06-29"
    }
   },
   {
@@ -152,6 +354,342 @@
    }
   },
   {
+   "id": "P2309.10631-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "HorizonUAM quadcopter air taxi main-rotor electric drive (PMSM)",
+   "attribute": "motor efficiency: direct drive vs geared (5:1) drive",
+   "value": "direct drive 85 %-92 %; geared 92 %-96 %",
+   "unit": "%",
+   "conditions": "From efficiency maps of COTS motors (internal market study) at low-RPM/high-torque main rotor operating points; conceptual design",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3, Fig. 11-12",
+   "quote": "The eﬃciency of the direct drive lies between 85 %−92 % as indi- cated in Fig. 11 whereas the geared drive is able to operate between 92 % −96 % as indicated in Fig.12.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-02",
+   "rules": [],
+   "subject": "Rotor-speed-controlled eVTOL quadcopter",
+   "attribute": "electric motor mass share of vehicle weight",
+   "value": "15−16 %",
+   "unit": "% of total vehicle weight",
+   "conditions": "Cited literature result for direct drive when motors are sized for handling-quality torque (twice the power-based mass)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 1/2 (literature)",
+   "quote": "the motor becomes twice as heavy as initially sized. The sum of all electric motors might reach 15−16 % of the total vehicle weight in case a direct drive is used.",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-03",
+   "rules": [],
+   "subject": "HorizonUAM main propulsion system (motors + controllers + gearbox)",
+   "attribute": "propulsion system weight: geared vs direct drive",
+   "value": "374 kg geared vs 400 kg direct",
+   "unit": "kg",
+   "conditions": "Conceptual sizing for 4-rotor 1954 kg design-gross-weight air taxi",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3, Fig. 13",
+   "quote": "the geared propulsion architecture exhibits a weight of 374 kg compared to 400 kg for the direct drive.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-04",
+   "rules": [
+    "C01"
+   ],
+   "subject": "Panasonic NCR18650PF cell (HorizonUAM battery sizing)",
+   "attribute": "cell discharge rate used for pack power sizing",
+   "value": "10 A / 2.9 Ah = 3.448 1/h",
+   "unit": "1/h (C-rate)",
+   "conditions": "Rated cell current and capacity used in conceptual sizing; pack voltage 600 V",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3 battery sizing",
+   "quote": "ξ = iBatt cNenn = 10 A 2.9 Ah = 3.448 1 h.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-05",
+   "rules": [
+    "R05"
+   ],
+   "subject": "HorizonUAM main rotor battery pack",
+   "attribute": "cell configuration and pack mass",
+   "value": "15 parallel, 167 series, 2505 cells; 120 kg per pack",
+   "unit": "cells, kg",
+   "conditions": "Sized for 43.5 Ah (90 kW failure-case power) at 600 V; battery degradation not considered",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3 battery sizing",
+   "quote": "speciﬁcations can be composed of 15 of the Pana- sonic cells connected in parallel and 167 in series, so that in total 2505 cells17 are used. Each battery pack then weighs 120 kg.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-06",
+   "rules": [
+    "R05"
+   ],
+   "subject": "HorizonUAM main rotor battery pack (43.5 Ah)",
+   "attribute": "state of charge remaining after mission",
+   "value": "discharged down to 25 %; 9.2 min flight time available at failure",
+   "unit": "%, min",
+   "conditions": "Normal operations after 3 flights (50 km) plus 20 min reserve; simulation-based conceptual design",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3 battery sizing",
+   "quote": "Under normal operat- ing conditions a pack with this capacity will be discharged down to 25 % after having completed the ﬂight mission and used 20 min reserve ﬂight time and will have 9.2 min of ﬂight time avail- able",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-07",
+   "rules": [
+    "R05"
+   ],
+   "subject": "HorizonUAM push-propulsion battery pack",
+   "attribute": "capacity, cell count, power and remaining SOC",
+   "value": "88.8 Ah / 54.1 kWh required; 31P x 167S = 5177 cells; 90 Ah; 186 kW; discharged down to 37 %",
+   "unit": "Ah, kWh, kW, %",
+   "conditions": "Sized by failure-case energy requirement; 37% remaining after normal mission with 20 min loiter",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3 battery sizing",
+   "quote": "the battery is sized with a capacity of at least 88.8 Ah18 respectively 54.1 kWh, which results in having 31 parallel cells and 167 cells connected in series. In total 5177 cells are required, which results in a capacity of 90 Ah, with 186 kW available power. During normal operation the battery pack is discharged down to 37 %",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-08",
+   "rules": [],
+   "subject": "HorizonUAM multirotor concept",
+   "attribute": "propulsion system weights incl. batteries",
+   "value": "battery packs 480 + 248 kg; total propulsion system 1144 kg",
+   "unit": "kg",
+   "conditions": "Conceptual design; excludes power distribution and thermal management; design gross weight 1954 kg (Table 11)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Table 10",
+   "quote": "Battery packs 2 120 / 248 480 + 248 Total propul- sion system 1144",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-09",
+   "rules": [
+    "R04"
+   ],
+   "subject": "HorizonUAM multirotor concept vehicle",
+   "attribute": "design gross weight, payload, rotor count and radius",
+   "value": "1954 kg DGW; 360 kg payload; 4 rotors; 2.64 m radius",
+   "unit": "kg, m",
+   "conditions": "Conceptual design parameters (Table 11); design range 3 x 16.7 km + 20 min loiter",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Table 11 (Appendix A)",
+   "quote": "Design Gross Weight 1954 kg Payload Capacity 360 kg Number of Rotors 4 Rotor Radius 2.64 m",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.10631-10",
+   "rules": [],
+   "subject": "HorizonUAM main rotor battery pack",
+   "attribute": "mission energy requirement (two drive units, normal ops)",
+   "value": "19.7 kWh; 32.8 Ah",
+   "unit": "kWh, V, Ah",
+   "conditions": "From initial sizing, validated with authors' simulation model; per pack powering two drive units Capacity computed at 600 V system voltage.",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.10631",
+   "locator": "Sec. 3 battery sizing",
+   "quote": "Based on the energy requirement of 19.7 kWh14 for powering two drive units during normal opera- tion for the total ﬂight mission EBS, the required battery pack capacity CBP,E amounts to 32.8 Ah.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
+    "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2310.04857-01",
+   "rules": [
+    "R06"
+   ],
+   "subject": "Rotary-wing aerial base station (heavy RWD) mass budget",
+   "attribute": "assumed structural mass, payload and battery specific energy",
+   "value": "payload up to 20 kg; structural mass 8 kg",
+   "unit": "kg, Wh/kg",
+   "conditions": "Model assumptions of service-time analysis (Zeng-type rotary-wing power model, R = 0.4 m), not measurements; picocell 3 kg / microcell 12 kg payload",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2310.04857",
+   "locator": "Sec. III-A",
+   "quote": "For heavy payloads, such as up to 20 kg [13], the mass budget must be allocated among the battery size, BS weight, and solar panel mass, and the structural mass is assumed as 8 kg where total take-off mass is the sum of the structural mass and payload.",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Aerial Base Stations: Practical Considerations for Power Consumption and Service Time",
+    "published": "2023-10-07"
+   }
+  },
+  {
+   "id": "P2310.04857-02",
+   "rules": [
+    "R05"
+   ],
+   "subject": "Rotary-wing aerial base station battery",
+   "attribute": "battery specific energy levels assumed",
+   "value": "5 kg to 9 kg battery; {50, 180, 350} Wh/kg",
+   "unit": "kg, Wh/kg",
+   "conditions": "Parametric model assumption 'according to battery technologies'; nominal energy per unit mass",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2310.04857",
+   "locator": "Sec. III-A",
+   "quote": "battery mass is varied from 5 kg to 9 kg, with 1 kg increment, and the specific energy (Ed) of the battery is changed to {50, 180, 350} Wh/kg according to battery technologies [14].",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Aerial Base Stations: Practical Considerations for Power Consumption and Service Time",
+    "published": "2023-10-07"
+   }
+  },
+  {
+   "id": "P2310.04857-03",
+   "rules": [],
+   "subject": "Rotary-wing aerial base station with solar panels",
+   "attribute": "maximum service-time gain from solar panels",
+   "value": "up to 5 minutes (picocell); a minute (microcell)",
+   "unit": "min",
+   "conditions": "Model result, solar area 0.5-1 m2 on RWD; location/irradiance per paper's model",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2310.04857",
+   "locator": "Sec. III-A, Fig. 3",
+   "quote": "The maximum gain in service time that can be achieved with the installation of solar panels is only up to 5 minutes for RWD-picocell and a minute for RWD-microcell",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Aerial Base Stations: Practical Considerations for Power Consumption and Service Time",
+    "published": "2023-10-07"
+   }
+  },
+  {
+   "id": "P2312.09981-01",
+   "rules": [],
+   "subject": "KDE Direct KDE2315XF-885 (885 Kv) motor with 9x4.5 propeller",
+   "attribute": "static thrust coefficient kt0 (F = kt0 * omega^2)",
+   "value": "kt0 = 1.08e-5",
+   "unit": "N s2/rad2",
+   "conditions": "Fit to manufacturer steady-state data at 16 V, static (no inflow) conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2312.09981",
+   "locator": "Sec. IV-A, Fig. 4",
+   "quote": "The solid line is a fit Eq. 1, which identifies 𝑘𝑡0 = 1.08 × 10−5. The fit is good over the entire range, indicating that the propeller is well matched to the motor.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Digital Twin of a DC Brushless Electric Motor-Propeller System with Application to Drone Dynamics",
+    "published": "2023-12-15"
+   }
+  },
+  {
+   "id": "P2312.09981-02",
+   "rules": [],
+   "subject": "KDE2315XF-885 ESC-BLDC-propeller system",
+   "attribute": "best-fit PX4 thrust model factor THR_MDL_FAC",
+   "value": "0.6",
+   "unit": "dimensionless",
+   "conditions": "Fit of PX4 motor model to manufacturer static thrust vs throttle data; authors note incorrect scaling at small T and near 1",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2312.09981",
+   "locator": "Sec. IV-A",
+   "quote": "We also fit the data to the PX4 motor model (Eq. 2, with the best fit obtained for THR_MDL_FAC = 0.6.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Digital Twin of a DC Brushless Electric Motor-Propeller System with Application to Drone Dynamics",
+    "published": "2023-12-15"
+   }
+  },
+  {
+   "id": "P2312.09981-03",
+   "rules": [],
+   "subject": "Holybro ESC + AIR 2216/880 KV motor + 1045 propeller",
+   "attribute": "identified electro-mechanical model parameters",
+   "value": "alpha=800 rad/s; omega_max=1144 rad/s at 16 V; R=0.35 Ω; kq=1.2e-7 N m s2/rad2; ke=8.16e-3 V s/rad",
+   "unit": "various",
+   "conditions": "Fitted to Tyto 1585 test-stand step response (14.8 V in transient experiment, 16 V steady-state data); static conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2312.09981",
+   "locator": "Fig. 6 caption",
+   "quote": "The Holybro model parameters are: 𝛼=800 rad/s, 𝜔𝑚𝑎𝑥=1144 rad/s at 𝑉𝑏𝑎𝑡𝑡= 16 V used in the Holybro steady-state thrust measurements, 𝑉𝑏𝑎𝑡𝑡= 14.8 V in the experiment recording the transient behavior, 𝑅= 0.35 Ω, 𝐿/𝐽𝑚= 172 H/kg m2, 𝑘𝑞= 1.2 × 10−7 N m s2/rad2, and 𝑘𝑒= 8.16 × 10−3 V s/rad.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Digital Twin of a DC Brushless Electric Motor-Propeller System with Application to Drone Dynamics",
+    "published": "2023-12-15"
+   }
+  },
+  {
    "id": "P2312.14453-01",
    "rules": [
     "R05"
@@ -194,6 +732,152 @@
    }
   },
   {
+   "id": "P2401.02541-01",
+   "rules": [],
+   "subject": "Micro quadcopter hub plate (balsa core sandwiched in 3-ply CFRP)",
+   "attribute": "hub plate weight and cost reduction vs solid carbon plate",
+   "value": "weight -33%, cost -42%",
+   "unit": "%",
+   "conditions": "Compared with a carbon-fiber plate of the same thickness; authors' <2 kg payload-delivery quadcopter (SunnySky X2212 1400kv, 200 g payload)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2401.02541",
+   "locator": "Sec. 3.5 (materials)",
+   "quote": "This effectively reduces the weight of the hub plate by 33% and cost by 42% comparing with a carbon-fiber plate with same thickness.",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
+    "published": "2024-01-04"
+   }
+  },
+  {
+   "id": "P2401.02541-02",
+   "rules": [],
+   "subject": "Micro quadcopter frame arms (Hybrid X / H / Hybrid H)",
+   "attribute": "FEM tip deflection under arm-tip load",
+   "value": "13 N load; 2.381e-4 m (Hybrid X), 1.957e-4 m (H), 1.109e-3 m (Hybrid H)",
+   "unit": "N, m",
+   "conditions": "SOLIDWORKS FEM; 13 N = motor max thrust x safety factor applied at arm tips; simulation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2401.02541",
+   "locator": "Sec. 3.6.1",
+   "quote": "A load of 13 N is applied at the tips of the arms, determined as the product of the motor's maximum thrust and safety factor. The resulting deflections are 2.381× 10-4 m, 1.957× 10-4 m, and 1.109× 10-3 m for Hybrid X, H, and Hybrid H, respectively.",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
+    "published": "2024-01-04"
+   }
+  },
+  {
+   "id": "P2401.02541-03",
+   "rules": [],
+   "subject": "Micro payload-delivery quadcopter design requirements",
+   "attribute": "take-off weight limit and payload",
+   "value": "take-off weight < 2 kg; payload 200 grams",
+   "unit": "kg, g",
+   "conditions": "Design requirement table (target values, not measured)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2401.02541",
+   "locator": "Table 1",
+   "quote": "Multirotor Micro UAS (Take-off weight < 2kg) 2. Payload Capacity 200 grams",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
+    "published": "2024-01-04"
+   }
+  },
+  {
+   "id": "P2403.06533-01",
+   "rules": [
+    "C02"
+   ],
+   "subject": "Powerline-recharging quadcopter (Tarot 650 Sport)",
+   "attribute": "propulsion/battery build and total mass",
+   "value": "33 cm props, 6S 380 KV motors, 30 A ESCs, 7000 mAh 30C six-cell LiPo",
+   "unit": "cm, KV, A, mAh, kg",
+   "conditions": "Authors' build incl. 800 g current-transformer charger and gripper Overall system 4.3 kg including battery (Sec. II).",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2403.06533",
+   "locator": "Sec. I-II",
+   "quote": "is a Tarot 650 Sport [6] equipped with a generic quad- copter propulsion system consisting of 33 cm carbon fiber propellers, 6S 380 KV BLDC motors, 30 A ESCs, and a 7000 mAh 30C six-cell LiPo battery.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Autonomous Overhead Powerline Recharging for Uninterrupted Drone Operations",
+    "published": "2024-03-11"
+   }
+  },
+  {
+   "id": "P2403.06533-02",
+   "rules": [
+    "R05"
+   ],
+   "subject": "4.3 kg powerline-recharging quadcopter, 7 Ah 6S LiPo",
+   "attribute": "airborne time and usable battery fraction",
+   "value": "7.5 min airborne; below 45% battery insufficient thrust for lift-off; 55% capacity used",
+   "unit": "min, %",
+   "conditions": "Measured on authors' 4.3 kg drone (incl. 800 g current transformer); usable fraction limited by voltage sag reducing thrust",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2403.06533",
+   "locator": "Sec. IV-B",
+   "quote": "The 4.3 kg drone with components described in Section I is able stay airborne for 7.5 minutes. When the battery level drops below 45%, the reduced voltage leads to insufficient thrust from the motors, making it difficult for the drone to achieve lift-off. Therefore, the charging time is only calcu- lated for charging 55% of the battery capacity.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Autonomous Overhead Powerline Recharging for Uninterrupted Drone Operations",
+    "published": "2024-03-11"
+   }
+  },
+  {
+   "id": "P2403.06533-03",
+   "rules": [],
+   "subject": "Current-transformer powerline energy harvester on drone",
+   "attribute": "charging power vs line current",
+   "value": "15 W at 100 A; 181 W at 1000 A; charging time 346 min to 28 min",
+   "unit": "W, A, min",
+   "conditions": "Measured 100-300 A, values above 300 A extrapolated linearly; 50 Hz AC line; charging 55% of 7 Ah 6S battery",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2403.06533",
+   "locator": "Sec. IV-B, Fig. 12",
+   "quote": "The charging power strongly depends on the power line’s current level, managing only 15 W at 100 A but reaching 181 W at 1000 A. The charging time reduces significantly from 346 minutes (5.8 hours) to only 28 minutes when the power line current is increased from 100 A to 1000 A.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Autonomous Overhead Powerline Recharging for Uninterrupted Drone Operations",
+    "published": "2024-03-11"
+   }
+  },
+  {
+   "id": "P2403.16696-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Crazyflie nano-drone (34 g base, 350 mAh LiPo) with BatDeck",
+   "attribute": "drone power draw vs ultrasonic sensor power",
+   "value": "sensor <1 mW; drone ∼11 W",
+   "unit": "W",
+   "conditions": "Authors' Crazyflie setup in flight (approximate total); 34 g base configuration with Flow-deck v2",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2403.16696",
+   "locator": "Sec. IV",
+   "quote": "sumes <1 mW, which is negligible on a drone using ∼11 W.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "BatDeck: Advancing Nano-drone Navigation with Low-power Ultrasound-based Obstacle Avoidance",
+    "published": "2024-03-25"
+   }
+  },
+  {
    "id": "P2403.18149-01",
    "rules": [],
    "subject": "Benchmark MCU for conic MPC (STM32F405 Feather)",
@@ -211,6 +895,199 @@
    "paper": {
     "title": "Code Generation and Conic Constraints for Model-Predictive Control on Microcontrollers with Conic-TinyMPC",
     "published": "2024-03-26"
+   }
+  },
+  {
+   "id": "P2404.02920-01",
+   "rules": [],
+   "subject": "Solar-powered UAV path-planning simulation",
+   "attribute": "assumed power and solar harvesting parameters",
+   "value": "12 m/s; P(v) 30 W; climb 34 W; descend 26 W; 380 W/m2; 20% cell efficiency; 0.3 m2 panel; 670 J battery",
+   "unit": "m/s, W, W/m2, %, m2, J",
+   "conditions": "Simulation parameters (model assumptions) for Section 4 path planning, not measured; battery capacity is a toy value for the simulation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2404.02920",
+   "locator": "Table III",
+   "quote": "Flying speed, v 12 m/s Minimum height, zmin 40 m Maximum height, zmax 200 m Power at constant speed, P(v) 30 W Power when climbing up, Pup 34 W Power when descending down, Pdown 26 W Solar spectral density, Psd 380 W/m2 Solar cell efficiency, η 20% Solar panel area, S 0.3 m2 Battery Capacity, EBatt 670 J",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Advanced Algorithms for Autonomous Guidance of Solar-powered UAVs",
+    "published": "2024-03-28"
+   }
+  },
+  {
+   "id": "P2405.00055-01",
+   "rules": [],
+   "subject": "Offshore wind-turbine inspection drone battery",
+   "attribute": "battery pack configuration and capacity",
+   "value": "6S, 30000 mAh Li-Po",
+   "unit": "cells, mAh",
+   "conditions": "Inspection drones in authors' dataset (33 flights across three years); study focuses on single cell of this pack; current measured with ACS758 Hall sensor",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2405.00055",
+   "locator": "Sec. 4",
+   "quote": "These drones are all equipped with Li-Po batteries, and the focus of this research is on a single-cell of 6S, 30000 mAh, Li-Po battery.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "A Hybrid Probabilistic Battery Health Management Approach for Robust Inspection Drone Operations",
+    "published": "2024-04-24"
+   }
+  },
+  {
+   "id": "P2406.19009-01",
+   "rules": [
+    "R01",
+    "R04"
+   ],
+   "subject": "Rotary-wing UAV energy model (eMUAVE simulator)",
+   "attribute": "model parameters incl. hover blade profile and induced power",
+   "value": "W = 20 N; R = 0.4 m; A = 0.503 m2; Utip = 120 m/s",
+   "unit": "N, m, m2, m/s, W (units not printed for Pb/Pind)",
+   "conditions": "Simulation parameters (model assumptions, Zeng-type rotary-wing power model), not measurements",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2406.19009",
+   "locator": "Table I",
+   "quote": "Rotary-wing UAV weight (W) 20 N Rotor radius (R) 0.4 m Blade angular velocity (Ω) 300 rad/s Incremental correction factor to induced power (k) 0.1 Profile drag coefficient (δ) 0.012 Air density (ρ) 1.225 kg/m3 Gravitational acceleration (g) 9.8 m/s2 Rotor disc area (A) 0.503 m2 Tip speed of the rotor blade (Utip) 120 m/s",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
+    "published": "2024-06-27"
+   }
+  },
+  {
+   "id": "P2406.19009-02",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Rotary-wing UAV energy model (eMUAVE)",
+   "attribute": "hover power components",
+   "value": "v0 = 4.03; Pb = 79.86; Pind = 88.63",
+   "unit": "m/s, W (as used in model)",
+   "conditions": "Model assumption values for 20 N rotary-wing UAV in simulation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2406.19009",
+   "locator": "Table I",
+   "quote": "Mean rotor induced velocity in hovering state (v0) 4.03 Rotor solidity (s) 0.05 Blade profile power in hovering state (Pb) 79.86 Induced power in hovering state (Pind) 88.63",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
+    "published": "2024-06-27"
+   }
+  },
+  {
+   "id": "P2406.19009-03",
+   "rules": [],
+   "subject": "Fixed-wing vs rotary-wing UAV as flying access point",
+   "attribute": "energy consumption per hour (circular trajectory, 2 ground users)",
+   "value": "rotary-wing 483 kJ vs fixed-wing 1067 kJ",
+   "unit": "kJ per hour",
+   "conditions": "eMUAVE simulation, SUPPLY trajectory, 2 GUs in 100 x 100 m; fixed-wing c1 = 9.26e-4, c2 = 2250 (min power 100 W at 30 m/s), rotary configured for 126 W min power; model result",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2406.19009",
+   "locator": "Sec. V-A, Fig. 2",
+   "quote": "The energy consumption per hour for rotary-wing and fixed- wing UAVs was 483 kJ and 1067 kJ, respectively, showing an increase of more than 100% when using a fixed-wing UAV.",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
+    "published": "2024-06-27"
+   }
+  },
+  {
+   "id": "P2407.00578-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "UniQuad Uni127C (127 mm wheelbase quadrotor)",
+   "attribute": "weight, battery, thrust-to-weight ratio, flight duration",
+   "value": "468 g, 4S 3000 mAh 30C, TWR ≈2.77, 7 min",
+   "unit": "g, mAh, ratio, min",
+   "conditions": "Authors' platform spec table; F1404 KV3800 + Gemfan 3016, RealSense D430; TWR computed from T-MOTOR website motor test data (not measured); flight duration conditions not stated",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2407.00578",
+   "locator": "Table I",
+   "quote": "Uni127C 127mm F1404 KV3800 Gemfan 3016 468g 4S 3000mAh 30C Intel RealSense D430 ≈2.77 7min",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
+    "published": "2024-06-30"
+   }
+  },
+  {
+   "id": "P2407.00578-02",
+   "rules": [
+    "R03"
+   ],
+   "subject": "UniQuad Uni250C (250 mm wheelbase quadrotor)",
+   "attribute": "weight, battery, thrust-to-weight ratio, flight duration",
+   "value": "848 g, 4S 2200 mAh 45C, TWR ≈7.03, 8.5 min",
+   "unit": "g, mAh, ratio, min",
+   "conditions": "Authors' spec table; F60PRO KV2550 + Gemfan 5043, RealSense D435; TWR from T-MOTOR test report data",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2407.00578",
+   "locator": "Table I",
+   "quote": "Uni250C 250mm F60PRO KV2550 Gemfan 5043 848g 4S 2200mAh 45C Intel RealSense D435 ≈7.03 8.5min",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
+    "published": "2024-06-30"
+   }
+  },
+  {
+   "id": "P2407.00578-03",
+   "rules": [
+    "R03"
+   ],
+   "subject": "UniQuad Uni250L (250 mm, LiDAR)",
+   "attribute": "weight, battery, thrust-to-weight ratio, flight duration",
+   "value": "1258 g, 6S 3300 mAh 50C, TWR ≈5.46, 12 min",
+   "unit": "g, mAh, ratio, min",
+   "conditions": "Authors' spec table; F60PRO KV1750 + Gemfan 5043, Livox Mid-360; TWR from T-MOTOR test report data",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2407.00578",
+   "locator": "Table I",
+   "quote": "Uni250L 250mm F60PRO KV1750 Gemfan 5043 1258g 6S 3300mAh 50C Livox LiDAR Mid-360 ≈5.46 12min",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
+    "published": "2024-06-30"
+   }
+  },
+  {
+   "id": "P2407.00578-04",
+   "rules": [
+    "R03"
+   ],
+   "subject": "UniQuad Uni350CL (350 mm, camera + LiDAR)",
+   "attribute": "weight, battery, thrust-to-weight ratio, flight duration",
+   "value": "1526 g, 6S 3300 mAh 50C, TWR ≈5.54, 15.5 min",
+   "unit": "g, mAh, ratio, min",
+   "conditions": "Authors' spec table; F90 KV1300 + Sunnysky EOLO8, D435 & Mid-360; TWR from T-MOTOR test report data",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2407.00578",
+   "locator": "Table I",
+   "quote": "Uni350CL 350mm F90 KV1300 Sunnysky EOLO8 1526g 6S 3300mAh 50C D435 & Mid-360 ≈5.54 15.5min",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
+    "published": "2024-06-30"
    }
   },
   {
@@ -274,6 +1151,130 @@
    }
   },
   {
+   "id": "P2410.17585-01",
+   "rules": [],
+   "subject": "Octorotor UAV waypoint mission (3D)",
+   "attribute": "energy difference between energy-optimal order and minimum-distance (TSP) order",
+   "value": "up to 14.9%; average 1.6%-3.3%; 90th percentile 3.7%-6.5%; differ in up to 95% of cases",
+   "unit": "%",
+   "conditions": "Model-based (first-principle octorotor energy model) planning study; depends on range and number of waypoints; hover stop at each waypoint",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2410.17585",
+   "locator": "Abstract / Sec. V",
+   "quote": "We found that in majority of the cases (up to 95%) the solutions of the energy-optimal planning are different from those of the traditional traveling salesman problem which minimizes the total distance. The difference can be as high as 14.9%, with the average at 1.6%-3.3% and 90th percentile at 3.7%-6.5%",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Energy-Optimal Planning of Waypoint-Based UAV Missions -- Does Minimum Distance Mean Minimum Energy?",
+    "published": "2024-10-23"
+   }
+  },
+  {
+   "id": "P2412.02874-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "250 mm and 500 mm PX4 quadrotors (Pixhawk 6C, 4S 7200 mAh)",
+   "attribute": "total weight and thrust-to-weight ratio",
+   "value": "≈1100 g, 34.98 N/kg; ≈2900 g, 22.48 N/kg",
+   "unit": "g, N/kg",
+   "conditions": "Authors' test platforms (Table I): 250 mm with DSMX MT2204 2300KV + 5045 3-blade; 500 mm with T-Motor MN3510 700KV + P13x4.4; 51A DSHOT ESCs First pair = 250 mm vehicle, second pair = 500 mm vehicle.",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.02874",
+   "locator": "Table I",
+   "quote": "Total weight ≈1100g ≈2900g Thrust-to-Weight ratio 34.98N/kg 22.48N/kg",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "A Generalized Thrust Estimation and Control Approach for Multirotors Micro Aerial Vehicles",
+    "published": "2024-12-03"
+   }
+  },
+  {
+   "id": "P2412.02874-02",
+   "rules": [],
+   "subject": "250 mm and 500 mm PX4 quadrotors",
+   "attribute": "battery charge consumed: thrust-to-speed map vs thrust-estimation control",
+   "value": "250 mm: 416.3 vs 491.5 mAh (+15.30%); 500 mm: 653.2 vs 822.7 mAh (+20.60%)",
+   "unit": "mAh, %",
+   "conditions": "Measured over experimental trajectory flights (16 trials per method per vehicle); increase caused by more aggressive rotor commands; wind present",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.02874",
+   "locator": "Sec. V, Fig. 7",
+   "quote": "with the 250mm, the average power consumption with thrust- to-speed was 416.3mAh, while with thrust control, it was 491.5mAh, an increase of 15.30%. This trend is repeated for the 500mm UAV, with 653.2mAh for thrust-to-speed and 822.7mAh for thrust control, an increase of 20.60%.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "A Generalized Thrust Estimation and Control Approach for Multirotors Micro Aerial Vehicles",
+    "published": "2024-12-03"
+   }
+  },
+  {
+   "id": "P2412.10048-01",
+   "rules": [],
+   "subject": "Crazyflie 2.1 nano-drone base configuration",
+   "attribute": "take-off mass with battery and motors",
+   "value": "7x16 mm 19000 KV motors, 350 mAh LiPo, 34 g",
+   "unit": "g",
+   "conditions": "Authors' Crazyflie configuration with Flow-deck v2, Bitcraze 47-17 propellers, Tattu 350 mAh LiPo; excludes BatDeck (+3 g single sensor, ~4.25 g dual)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.10048",
+   "locator": "Sec. III-C",
+   "quote": "In addition, we use 7×16 mm 19000 KV motors from betafpv, 47-17 propeller from Bitcraze, and an 350 mAh LiPo battery from Tattu. This base configuration weighs 34 g.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
+    "published": "2024-12-13"
+   }
+  },
+  {
+   "id": "P2412.10048-02",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Crazyflie nano-drone with BatDeck ultrasonic sensing",
+   "attribute": "total drone power usage vs sensor power",
+   "value": "sensor less than 1 mW; drone total approximately 11 W",
+   "unit": "W",
+   "conditions": "Reported by authors for their Crazyflie-based setup in flight; total power approximate",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.10048",
+   "locator": "Sec. V-A",
+   "quote": "less than 1 mW, a negligible amount compared to the drone’s total power usage of approximately 11 W.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
+    "published": "2024-12-13"
+   }
+  },
+  {
+   "id": "P2412.10048-03",
+   "rules": [],
+   "subject": "Crazyflie nano-drone with BatDeck (office obstacle-avoidance flights)",
+   "attribute": "average flight time and distance",
+   "value": "68 m, 4 min 22 s average; 8 min 43 s and 136 m excluding battery changes",
+   "unit": "m, min:s",
+   "conditions": "10 test flights in office with obstacles; 50% ended in crash, others at battery depletion; 350 mAh LiPo",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2412.10048",
+   "locator": "Sec. V-B, Table II",
+   "quote": "On average, each flight covered 68 m with a flight time of 4 min 22 s. Excluding battery changes, the average time and distance before a crash were 8 min 43 s and 136 m, respectively.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
+    "published": "2024-12-13"
+   }
+  },
+  {
    "id": "P2412.20860-01",
    "rules": [],
    "subject": "Jetson Orin Nano edge device",
@@ -311,6 +1312,72 @@
    "paper": {
     "title": "Adaptive Heuristics for Scheduling DNN Inferencing on Edge and Cloud for Personalized UAV Fleets",
     "published": "2024-12-30"
+   }
+  },
+  {
+   "id": "P2501.03102-01",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Octorotor UAV (BEMT + motor/ESC electromechanical model)",
+   "attribute": "minimum energy per meter and corresponding optimal speed vs mass",
+   "value": "67.47 J/m @ 14.14 m/s (8 kg) ... 197.71 J/m @ 24.22 m/s (24 kg)",
+   "unit": "J/m, m/s",
+   "conditions": "Model-based simulation of steady horizontal flight, total mass 8 to 24 kg in 2 kg steps (labels listed in figure order), constant body drag coefficient; not flight measurement",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2501.03102",
+   "locator": "Sec. III, Fig. 5",
+   "quote": "67.47 J/m @ 14.14 m/s 84.17 J/m @ 15.70 m/s 99.52 J/m @ 17.50 m/s 115.35 J/m @ 18.58 m/s 131.84 J/m @ 19.78 m/s 148.48 J/m @ 21.10 m/s 164.79 J/m @ 22.18 m/s 181.19 J/m @ 23.26 m/s 197.71 J/m @ 24.22 m/s 8 kg",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Enhancing Multirotor Drone Efficiency: Exploring Minimum Energy Consumption Rate of Forward Flight under Varying Payload",
+    "published": "2025-01-06"
+   }
+  },
+  {
+   "id": "P2501.03102-02",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Octorotor UAV",
+   "attribute": "optimal energy per meter per unit mass (constant across mass)",
+   "value": "~8.24 J/m/kg",
+   "unit": "J/m/kg",
+   "conditions": "Model-based simulation, octorotor, mass 8-24 kg; optimum identical for all masses while optimal speed rises (scales with sqrt(m))",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2501.03102",
+   "locator": "Sec. III, Fig. 6",
+   "quote": "Opt. val ~8.24 J/m/kg",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Enhancing Multirotor Drone Efficiency: Exploring Minimum Energy Consumption Rate of Forward Flight under Varying Payload",
+    "published": "2025-01-06"
+   }
+  },
+  {
+   "id": "P2501.03102-03",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Octorotor UAV",
+   "attribute": "pitch angle at energy-optimal speed",
+   "value": "~15.5 deg",
+   "unit": "deg",
+   "conditions": "Model-based simulation; same pitch at respective optimal velocities for masses 8-24 kg",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2501.03102",
+   "locator": "Fig. 7",
+   "quote": "Opt. val ~15.5* at respective optimal velocities",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Enhancing Multirotor Drone Efficiency: Exploring Minimum Energy Consumption Rate of Forward Flight under Varying Payload",
+    "published": "2025-01-06"
    }
   },
   {
@@ -440,6 +1507,135 @@
    }
   },
   {
+   "id": "P2504.07802-01",
+   "rules": [
+    "R01",
+    "C04"
+   ],
+   "subject": "Tethered quadrotor (Holybro X500 V2, 2216 KV920 motors, 10 in props, 75 V tether stepped to 16 V)",
+   "attribute": "hover and forward-flight electrical power with tether",
+   "value": "tether mass 0.55 kg; system mass 2.26 kg; 405 W hover; 445 W at 30 km/h",
+   "unit": "kg, W",
+   "conditions": "Result of the authors' cable-optimization/power model using manufacturer motor curve and fitted drag model (model output, not a direct measurement); 30 m flight height",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2504.07802",
+   "locator": "Sec. IV/V cable selection result",
+   "quote": "This results in a tether mass of 0.55kg for a combined system mass of 2.26kg with 405W power draw in hover and 445W at 30km/h flight speed.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
+    "published": "2025-04-10"
+   }
+  },
+  {
+   "id": "P2504.07802-02",
+   "rules": [],
+   "subject": "Tethered X500 V2 quadrotor",
+   "attribute": "system mass and step-down converter efficiency",
+   "value": "1.71 kg tethered (excl. cable), 1.55 kg standalone; converter efficiency 90% (assumed)",
+   "unit": "kg, %",
+   "conditions": "Authors' system; 90% is an assumed efficiency of off-the-shelf DC-DC module, not measured",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2504.07802",
+   "locator": "Sec. III",
+   "quote": "For the step-down converter, we use an off-the-shelf module with an assumed efficiency of 90%. We use a Pixhawk 6c running ArduCopter firmware as a flight controller, but the proposed solutions should work on most other platforms. The complete system has a mass of 1.71kg in the tethered configuration (without the cable mass) and 1.55kg in the standalone configuration.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
+    "published": "2025-04-10"
+   }
+  },
+  {
+   "id": "P2504.07802-03",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Multirotor thrust sizing rule",
+   "attribute": "thrust headroom (thrust-to-weight)",
+   "value": "hover at half the maximum thrust (factor two)",
+   "unit": "ratio",
+   "conditions": "Rule of thumb stated by authors for dimensioning; lower hover fraction for more agility; applied to tether cable mass selection",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2504.07802",
+   "locator": "Sec. IV-A",
+   "quote": "Since motor efficiency decreases at higher throttle, a more general metric would be to ensure hover at half the maximum thrust. This approach can be directly applied to tethered multirotors by choosing a cable mass to have a thrust headroom of factor two.",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
+    "published": "2025-04-10"
+   }
+  },
+  {
+   "id": "P2504.07802-04",
+   "rules": [
+    "C04"
+   ],
+   "subject": "X500 V2 quadrotor body drag model",
+   "attribute": "fitted drag model parameters",
+   "value": "Af = 1.492e-2 m2 (±3.07%); At = 1.368e-2 m2 (±3.18%); j = 19.43 m/s (±4.35%)",
+   "unit": "m2, m/s",
+   "conditions": "Nonlinear least squares fit to flight data, FD = 1/2 rho A(theta) ((v-w)^2 + j(v-w)); low wind; airspeed not measured directly",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2504.07802",
+   "locator": "Sec. V-B, Eq. 13",
+   "quote": "Af = 1.492 ∗10−2m2 ±3.07% At = 1.368 ∗10−2m2 ±3.18% j = 19.43m/s ±4.35%",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
+    "published": "2025-04-10"
+   }
+  },
+  {
+   "id": "P2504.15129-01",
+   "rules": [
+    "R07"
+   ],
+   "subject": "X152b quadrotor (152 mm diagonal, racing frame, RK3588s + RealSense)",
+   "attribute": "maximum flying speed",
+   "value": "more than 35 m/s (FPV mode); over 11 m/s (sim-to-real mode); weight under 400 g excl. battery",
+   "unit": "m/s, g",
+   "conditions": "Reported by authors for their own platform; FPV manual mode vs learned-policy mode; weight excludes battery",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2504.15129",
+   "locator": "Appendix D.1",
+   "quote": "the weight is strictly kept under 400g (excluding the battery). We report a more than 35m·s−1 maximum flying speed under first personal view (FPV) mode and over 11m·s−1 speed under sim-to-real mode.",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Towards Task-Oriented Flying: Framework, Infrastructure, and Principles",
+    "published": "2025-04-21"
+   }
+  },
+  {
+   "id": "P2506.08386-01",
+   "rules": [],
+   "subject": "5G Aero UAV (5G-enabled research quadrotor)",
+   "attribute": "flight time with given battery",
+   "value": "83 Wh battery; 5 min 2 s without 5G; 4 min 59 s with 5G (~1% decrease)",
+   "unit": "Wh, min",
+   "conditions": "Measured average over authors' flight tests; battery capacity as stated by authors; 5G module (Sierra Wireless) on vs off",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2506.08386",
+   "locator": "Sec. V, Battery Consumption",
+   "quote": "Battery Consumption: In our tests, the 5G Aero battery, with a capacity of 83Wh, provides an average of 5 minutes and 2 seconds of flight time without the 5G module turned on. When 5G transmissions are active, the average flight duration decreases by approximately 1%, resulting in an average flight time of roughly 4 minutes and 59 seconds.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "5G Aero: A Prototyping Platform for Evaluating Aerial 5G Communications",
+    "published": "2025-06-10"
+   }
+  },
+  {
    "id": "P2506.14065-01",
    "rules": [],
    "subject": "Adaptive helical antenna on fast UAV",
@@ -480,6 +1676,150 @@
    }
   },
   {
+   "id": "P2506.19424-01",
+   "rules": [],
+   "subject": "Quadrotor rotors near ground (ground effect)",
+   "attribute": "change of thrust coefficient kT vs torque coefficients when descending to ground",
+   "value": "kT change around 30%; torque coefficients change less than 10%",
+   "unit": "% (normalized to out-of-ground-effect value)",
+   "conditions": "Quadrotor fixed on 6-axis force/torque platform above a 1.2 m x 1.2 m resin ground board; normalized k(h)/k(inf)-1; authors attribute part of change to near-ground vibration measurement error",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2506.19424",
+   "locator": "Sec. V, Fig. 7",
+   "quote": "the ground board, the change in torque coefficient (kT X and kI) generated by the rotor speed difference is negligible (less 7 than 10%), compared to the change in thrust coefficient kT (around 30%).",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Ground-Effect-Aware Modeling and Control for Multicopters",
+    "published": "2025-06-24"
+   }
+  },
+  {
+   "id": "P2507.03869-01",
+   "rules": [],
+   "subject": "Propeller of low-cost multirotor hybrid aerial-underwater vehicle",
+   "attribute": "thrust coefficient CT in air vs in water",
+   "value": "CTa = 1.5e-9 (h < -50 mm); CTw = 1.3e-6 (h > 100 mm)",
+   "unit": "thrust coefficient (paper units, T = CT * speed^2)",
+   "conditions": "CFD-derived data-driven model vs immersion depth h for the authors' propeller; log-linear interpolation in the hybrid zone; simulation, not flight measurement",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2507.03869",
+   "locator": "Sec. II, Eq. 23",
+   "quote": "Among them, as shown in the air area, when h < −50mm, CT is stable at about 1.5*10-9; , as shown in the water zone, When h > 100mm, CT size stabilizes to about 1.3*10-6.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Modeling and control of a low-cost multirotor hybrid aerial underwater vehicle",
+    "published": "2025-07-05"
+   }
+  },
+  {
+   "id": "P2508.01965-01",
+   "rules": [],
+   "subject": "ModalAI Starling 2 Max (indoor inspection quadrotor)",
+   "attribute": "airframe weight / payload capacity / flight time",
+   "value": "500 g airframe, 500 g payload, 55 min",
+   "unit": "g, min",
+   "conditions": "Manufacturer-style specifications quoted in a review paper (Fig. 1 caption); not measured by the authors; flight time condition (payload) not stated",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2508.01965",
+   "locator": "Sec. 1 / Fig. 1",
+   "quote": "ModalAI Starling 2 Max (500g, 55-minute, custom SoC) balances computation with weight compli- ance.",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "From Photons to Physics: Autonomous Indoor Drones and the Future of Objective Property Assessment",
+    "published": "2025-08-04"
+   }
+  },
+  {
+   "id": "P2508.01965-02",
+   "rules": [],
+   "subject": "Skydio X10 / Crazyflie 2.1+",
+   "attribute": "mass and flight time",
+   "value": "Skydio X10 2.1 kg, 40 min; Crazyflie 2.1+ 29 g, 7 min",
+   "unit": "kg/g, min",
+   "conditions": "Platform specifications cited in review Fig. 1 caption; not measured; Crazyflie figure is with 30 g GAP8 accelerator mentioned alongside",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2508.01965",
+   "locator": "Fig. 1 caption",
+   "quote": "Skydio X10 (2.1kg, 40-minute, Jetson Orin) prior- itizes computing/endurance but exceeds indoor limits. Crazyflie 2.1+ (29g, 7-minute, STM32 MCU + 30g GAP8 accelerator)",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "From Photons to Physics: Autonomous Indoor Drones and the Future of Objective Property Assessment",
+    "published": "2025-08-04"
+   }
+  },
+  {
+   "id": "P2509.09024-01",
+   "rules": [
+    "R06"
+   ],
+   "subject": "3DFiT single-tow CFRP lattice quadrotor frame (F450-class)",
+   "attribute": "frame mass vs DJI F450 frame",
+   "value": "260 g vs 290 g",
+   "unit": "g; %",
+   "conditions": "Measured frame mass; authors state 10% reduction vs commercial DJI F450 frame; fiber volume fraction 31.2% (Table 1 rubric)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2509.09024",
+   "locator": "Table 1 / Sec. 3",
+   "quote": "frames (260g vs \n290g).",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
+    "published": "2025-09-10"
+   }
+  },
+  {
+   "id": "P2509.09024-02",
+   "rules": [
+    "R06"
+   ],
+   "subject": "Assembled F450-class quadrotor with 3DFiT CFRP frame",
+   "attribute": "frame mass and total takeoff weight",
+   "value": "takeoff weight 1108 g",
+   "unit": "g",
+   "conditions": "Single built prototype incl. propulsion, electronics, battery and GPS; with the 260 g frame (stated elsewhere) frame ≈23.5% of takeoff mass (derived)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2509.09024",
+   "locator": "Sec. 3, Fig. 4",
+   "quote": "integrates the propulsion systems, electronic components, battery, and GPS module, resulting \nin a total takeoff weight of 1108 g.",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
+    "published": "2025-09-10"
+   }
+  },
+  {
+   "id": "P2509.09024-03",
+   "rules": [],
+   "subject": "3DFiT CFRP lattice frame vs F450 frame",
+   "attribute": "claimed flight time increase from 10% lighter frame",
+   "value": "three minutes",
+   "unit": "min",
+   "conditions": "Authors' claim; test conditions/baseline endurance not detailed; treat as unverified single comparison",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2509.09024",
+   "locator": "Sec. 3",
+   "quote": "The manufactured frame has a 10% reduction in weight than the F450 \nframe which contributed to a three minutes of flight time increase.",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
+    "published": "2025-09-10"
+   }
+  },
+  {
    "id": "P2509.11481-01",
    "rules": [],
    "subject": "Foundation quadrotor control policy test fleet",
@@ -497,6 +1837,66 @@
    "paper": {
     "title": "RAPTOR: A Foundation Policy for Quadrotor Control",
     "published": "2025-09-15"
+   }
+  },
+  {
+   "id": "P2510.24245-01",
+   "rules": [],
+   "subject": "Bask Aerospace MR4 quadrotor with 1 kg radiation-detection payload",
+   "attribute": "battery configuration and flight endurance",
+   "value": "two 8,000 mAh 14.8 V LiPo; up to 15 minutes with 1 kg payload",
+   "unit": "mAh; V; min",
+   "conditions": "Operator-stated endurance for this platform with the 1 kg NaIL payload (≈237 Wh total nominal, derived); vehicle mass not stated",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2510.24245",
+   "locator": "Sec. II-B",
+   "quote": "The MR4 aerial platform featured two 8,000\nmAh 14.8 V LiPo batteries, supporting flight for up to 15\nminutes (with the 1 kg payload)",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Development and Flight Trial of a UAV-based Gamma Ray and Neutron Detection System for Large-Area Radioactivity Mapping and Source Activity Estimation",
+    "published": "2025-10-28"
+   }
+  },
+  {
+   "id": "P2511.13122-01",
+   "rules": [],
+   "subject": "Commercial battery-powered rotor-based UAVs (review)",
+   "attribute": "typical flight duration",
+   "value": "approximately 20-40 minutes",
+   "unit": "min",
+   "conditions": "Literature review statement citing [3]; general commercial multirotors with Li-ion/LiPo, not a measurement",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2511.13122",
+   "locator": "Sec. 1 Introduction",
+   "quote": "The flight durations of most\ncommercial rotor-based UAVs are restricted to approximately 20-40 minutes",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "A Comprehensive Review of Advancements in Powering and Charging Systems for Unmanned Aerial Vehicles",
+    "published": "2025-11-17"
+   }
+  },
+  {
+   "id": "P2511.13122-02",
+   "rules": [],
+   "subject": "Wireless power transfer for UAV charging (review comparison)",
+   "attribute": "inductive (IPT) wireless charging transfer efficiency",
+   "value": ">90%",
+   "unit": "%",
+   "conditions": "Qualitative review table; near-field (cm to m); laser (<15%) and microwave (<10%) far-field rated much lower in same table",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2511.13122",
+   "locator": "Sec. 3, wireless charging comparison table",
+   "quote": "Near-field\n(cm to m)\nHigh\n(>90%)\nHigh\n(kW)",
+   "status": "verified",
+   "topic": "other",
+   "note": "",
+   "paper": {
+    "title": "A Comprehensive Review of Advancements in Powering and Charging Systems for Unmanned Aerial Vehicles",
+    "published": "2025-11-17"
    }
   },
   {
@@ -564,6 +1964,46 @@
    }
   },
   {
+   "id": "P2512.22588-01",
+   "rules": [],
+   "subject": "UAV power tether (aluminum cable, 32 m, 430 g) in flight",
+   "attribute": "identified tether drag coefficient",
+   "value": "1.16",
+   "unit": "-",
+   "conditions": "Quasi-static system identification from inline load-cell tension at 30 m flight height, low wind; a corrected value 1.13 was identified when inertial dynamics were added",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2512.22588",
+   "locator": "Sec. V (experiments)",
+   "quote": "The identified drag coefficient was 1.16, which lies\nwithin the expected range.",
+   "status": "verified",
+   "topic": "other",
+   "note": "",
+   "paper": {
+    "title": "Low-Latency Quasi-Static Modeling of UAV Tether Aerodynamics",
+    "published": "2025-12-27"
+   }
+  },
+  {
+   "id": "P2512.22588-02",
+   "rules": [],
+   "subject": "Tethered multirotor test setup",
+   "attribute": "tether length, mass and flight height",
+   "value": "32 m; 430 g; 30 m",
+   "unit": "m; g; m",
+   "conditions": "Single test flight configuration (aluminum cable ≈13.4 g/m, derived)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2512.22588",
+   "locator": "Sec. V",
+   "quote": "A test flight was conducted with an aluminum cable of\nlength 32 m and mass 430 g at a flight height of 30 m.",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Low-Latency Quasi-Static Modeling of UAV Tether Aerodynamics",
+    "published": "2025-12-27"
+   }
+  },
+  {
    "id": "P2601.07476-01",
    "rules": [],
    "subject": "Crazyflie nano-quadrotor",
@@ -604,6 +2044,46 @@
    }
   },
   {
+   "id": "P2601.13088-01",
+   "rules": [],
+   "subject": "Solar-harvesting lighter-than-air micro-drone (100 cm foil envelope, 282.5 g platform)",
+   "attribute": "charging ratio for flight and active hovering",
+   "value": "4:1 flying; 3:1 hovering",
+   "unit": "ratio; min",
+   "conditions": "Measured under 80000 lux illumination with ANYSOLAR panels + MPPT; 3.7 V 250 mAh LiPo; indoor LTA platform; authors estimate ~18 min flight per hour of daylight recharging",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.13088",
+   "locator": "Sec. 5.1",
+   "quote": "our platform obtain a charging ratio of 4:1 for flying,\nthat is, to fly for a time period 𝑡, the platform needs to charge for 4𝑡. The charging ratio\nfor stabilization (active hovering) is 3:1.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Exploiting Light To Enhance The Endurance and Navigation of Lighter-Than-Air Micro-Drones",
+    "published": "2026-01-19"
+   }
+  },
+  {
+   "id": "P2601.13088-02",
+   "rules": [],
+   "subject": "Solar-harvesting LTA micro-drone component mass budget",
+   "attribute": "battery mass and total platform mass",
+   "value": "250mAh LiPo 7.0 g; total 282.5 g",
+   "unit": "g",
+   "conditions": "Table 3 platform specification (ballast excluded); envelope 116.8 g dominates mass",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.13088",
+   "locator": "Sec. 4, Table 3",
+   "quote": "Battery\n3.7V, 250mAh Lithium Polymer (LiPo)\n1\n7.0\nTotal Weight (Platform Weight)\n282.5",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Exploiting Light To Enhance The Endurance and Navigation of Lighter-Than-Air Micro-Drones",
+    "published": "2026-01-19"
+   }
+  },
+  {
    "id": "P2601.15486-01",
    "rules": [],
    "subject": "LLM-UAV MCP safety pipeline (server-side)",
@@ -621,6 +2101,26 @@
    "paper": {
     "title": "An LLM-Agnostic, MAVLink-Based Drone Command and Control Interface and Agentic Harness Using the Model Context Protocol",
     "published": "2026-01-21"
+   }
+  },
+  {
+   "id": "P2602.15242-01",
+   "rules": [],
+   "subject": "Control co-design of quadrotor rotor blade (BEM/CCBlade, 0.266 m rotor, notional 1.4 kg quadrotor)",
+   "attribute": "trade-off between attitude-recovery LQR cost and steady hover power",
+   "value": "LQR cost -10% for +3% hover power",
+   "unit": "%",
+   "conditions": "Numerical optimization (chord/twist b-splines), not flight test; chord bounded 5-35% radius",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2602.15242",
+   "locator": "Sec. 5 (quadrotor rotor example), Fig. 6",
+   "quote": "The larger chord and twist allow the rotors\nto generate higher thrust under the same control inputs, enabling\nquicker attitude recovery. This lowers the LQR cost by 10% while\ncompromising on the hovering power by 3%.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Efficient Adjoint-based Design Optimization with Optimal Control",
+    "published": "2026-02-16"
    }
   },
   {
@@ -768,6 +2268,135 @@
    }
   },
   {
+   "id": "P2603.12791-01",
+   "rules": [
+    "R05",
+    "C01"
+   ],
+   "subject": "4S1P LiPo pack on S500 quadrotor (battery health study)",
+   "attribute": "capacity, nominal voltage, max C-rate, pack mass",
+   "value": "2.2 Ah; 14.8 V; 35 C; 235 g",
+   "unit": "Ah; V; C; g",
+   "conditions": "Manufacturer pack specification (Table II); implies ≈139 Wh/kg pack-level (2.2 Ah × 14.8 V / 0.235 kg, derived)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.12791",
+   "locator": "Sec. III, Table II",
+   "quote": "Capacity\n2.2 Ah\nVoltage\n14.8 V\nMax C-rate\n35\nWeight\n235 g\nConfiguration\n4S1P",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Motion-Specific Battery Health Assessment for Quadrotors Using High-Fidelity Battery Models",
+    "published": "2026-03-13"
+   }
+  },
+  {
+   "id": "P2603.12791-02",
+   "rules": [],
+   "subject": "S500 quadrotor test platform",
+   "attribute": "motor, propeller and vehicle weight",
+   "value": "DJI NAZA 2212 920KV; DJI 1045; 975 g",
+   "unit": "KV; in; g",
+   "conditions": "Platform specification (Table II); whether 975 g includes the 235 g pack is not stated",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.12791",
+   "locator": "Table II",
+   "quote": "Motor\nDJI NAZA 2212 Brushless Motor 920KV\nPropeller\nDJI 1045 propeller\nWeight\n975 g",
+   "status": "verified",
+   "topic": "build",
+   "note": "",
+   "paper": {
+    "title": "Motion-Specific Battery Health Assessment for Quadrotors Using High-Fidelity Battery Models",
+    "published": "2026-03-13"
+   }
+  },
+  {
+   "id": "P2603.12791-03",
+   "rules": [
+    "C01"
+   ],
+   "subject": "S500 quadrotor flight current (hover, horizontal, vertical motion profiles) on 4S 2.2 Ah pack",
+   "attribute": "average discharge current range of motion-specific profiles",
+   "value": "16 A to 22 A",
+   "unit": "A",
+   "conditions": "Measured in real flights with custom current sensor; constant-current baselines at 16 A and 22 A chosen to cover average currents (≈7-10C on 2.2 Ah, derived)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.12791",
+   "locator": "Sec. IV-B",
+   "quote": "the as-\nsessment includes constant current baselines at 16 A and\n22 A, which cover average current values, i.e., the average\nenergy consumptions, of the motion-specific profiles.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Motion-Specific Battery Health Assessment for Quadrotors Using High-Fidelity Battery Models",
+    "published": "2026-03-13"
+   }
+  },
+  {
+   "id": "P2603.15604-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Rotor power model used in EAAE (following Bauersfeld & Scaramuzza [7])",
+   "attribute": "fitted per-rotor electrical power polynomial in rotor angular velocity ω",
+   "value": "P = 6.088 × 10^-3 ω + 1.875 × 10^-8 ω^3 + 7.700 × 10^-20 ω^6",
+   "unit": "W (ω in rad/s)",
+   "conditions": "MODEL (fitted constants taken from prior work) used in simulation of a 0.752 kg quadrotor; valid only for that vehicle class",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.15604",
+   "locator": "Sec. III-D, Eq. (5)",
+   "quote": "Pi(t) = 6.088 × 10−3ωi(t) + 1.875 × 10−8ω3\ni (t)\n+ 7.700 × 10−20ω6\ni (t),",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
+    "published": "2026-03-16"
+   }
+  },
+  {
+   "id": "P2603.15604-02",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Simulated 0.752 kg quadrotor exploring 3D environments (max 5.0 m/s, 4.0 m/s^2)",
+   "attribute": "average electrical power during exploration by method",
+   "value": "EAAE 139.24 W / 133.70 W; Nearest 167.23 / 168.36 W; Classic 136.33 / 134.80 W (Simple / Pillars)",
+   "unit": "W",
+   "conditions": "Simulation with rotor-speed-based power model, 5 runs per environment; not flight measurement",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.15604",
+   "locator": "Sec. IV-B, Table II-III",
+   "quote": "EAAE (ours)\n139.24\n133.70\nNearest\n167.23\n168.36\nClassic Frontier\n136.33\n134.80",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
+    "published": "2026-03-16"
+   }
+  },
+  {
+   "id": "P2603.15604-03",
+   "rules": [],
+   "subject": "Energy-aware frontier exploration (EAAE) vs baselines",
+   "attribute": "total mission energy and reduction",
+   "value": "21.2 kJ (Simple), 45.0 kJ (Pillars); -12.5% vs Classic Frontier, -21.1% vs Nearest in Pillars",
+   "unit": "kJ; %",
+   "conditions": "Simulation, 0.752 kg quadrotor, cluttered Pillars scene for percentages",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.15604",
+   "locator": "Sec. IV-B, Fig. 7",
+   "quote": "consuming 21.2 kJ in Simple and 45.0 kJ in Pillars,\ndemonstrated in Fig. 7. The advantage is particularly pro-\nnounced in the more cluttered Pillars scene, where EAAE\nreduces total energy by 12.5% relative to Classic Frontier and\nby 21.1% relative to Nearest.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
+    "published": "2026-03-16"
+   }
+  },
+  {
    "id": "P2603.22502-01",
    "rules": [],
    "subject": "MapForest sensor payload (Livox Mid-360, GoPro, Emlid M2, Jetson Orin Nano)",
@@ -865,6 +2494,116 @@
    "paper": {
     "title": "BlankSkip: Early-exit Object Detection onboard Nano-drones",
     "published": "2026-03-30"
+   }
+  },
+  {
+   "id": "P2604.00496-01",
+   "rules": [
+    "R05",
+    "R06"
+   ],
+   "subject": "QuadSoft soft-arm actuated quadrotor (980 g, 3S LiPo)",
+   "attribute": "mass budget: propulsion, battery, chassis shares",
+   "value": "motors+props 126 g (11%); 3S LiPo 250 g (22%); chassis 81 g (7.1%)",
+   "unit": "g; %",
+   "conditions": "Prototype mass budget (Table II), stated total 980 g; listed component masses sum to 844 g, so percentages are as reported by authors",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.00496",
+   "locator": "Sec. III-B, Table II",
+   "quote": "4 × (Motors and propellers)\n126\n11\n3S LiPo battery\n250\n22\nChassis\n81\n7.1",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "The QuadSoft: Design, Construction, and Experimental Validation of a Soft and Actuated Quadrotor",
+    "published": "2026-04-01"
+   }
+  },
+  {
+   "id": "P2604.07514-01",
+   "rules": [
+    "R05",
+    "R06"
+   ],
+   "subject": "Small vs large delivery multirotor mass breakdown (data of Zhang et al. 2021, cited)",
+   "attribute": "total, tare, battery and payload mass",
+   "value": "small: total 2.57 kg, tare 1.07 kg, battery 1 kg, payload 0.5 kg; large: total 24 kg, tare 7 kg, battery 10 kg, payload 7 kg",
+   "unit": "kg",
+   "conditions": "Secondary data cited from Zhang et al. (2021) Tables 6-7, not measured by the authors; implies battery ≈39% (small) and ≈42% (large) of total mass (derived)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.07514",
+   "locator": "Sec. 3, footnote 3",
+   "quote": "per meter of travel (Epm) for a small drone with a total weight of 2.57 kg (tare mass 1.07 kg, battery mass 1kg, payload \nmass 0.5 kg) and for a large drone with a total weight of 24 kg (tare mass 7 kg, battery mass 10 kg, payload mass 7 \nkg).",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
+    "published": "2026-04-08"
+   }
+  },
+  {
+   "id": "P2604.07514-02",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Level-flight energy coefficient per unit total weight (small 2.57 kg vs large 24 kg drone)",
+   "attribute": "ef derived from Zhang et al. (2021) linear models LD and R2",
+   "value": "small 4.20 (LD), 10.97 (R2); large 3.99 (LD), 8.81 (R2)",
+   "unit": "energy per km per kg (unit not explicitly stated; Table 3 uses Wh/(kg×km))",
+   "conditions": "Derived by authors dividing cited energy-per-meter by total weight; steady level flight; supports large drones having lower per-kg cruise energy",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.07514",
+   "locator": "Sec. 3, footnote 3",
+   "quote": "Calculations show that 𝑒𝑒𝑓𝑓\n𝑆𝑆 is 4.20 (LD) and 10.97 \n(R2), while 𝑒𝑒𝑓𝑓\n𝐿𝐿is 3.99 (LD) and 8.81 (R2).",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
+    "published": "2026-04-08"
+   }
+  },
+  {
+   "id": "P2604.07514-03",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Heterogeneous delivery fleet baseline parameters (small type 1, large type 2)",
+   "attribute": "takeoff/hover/landing and level-flight energy coefficients, battery energy, max total weight",
+   "value": "el1 = 0.3, el2 = 1 Wh/kg; ef1 = 10, ef2 = 5 Wh/(kg×km); E1 = 300, E2 = 1,500 Wh; W1 = 5, W2 = 20 kg",
+   "unit": "Wh/kg; Wh/(kg×km); Wh; kg",
+   "conditions": "MODEL ASSUMPTION baseline values for numerical experiments; small drone level flight at 6 m/s (21.6 km/h); self-weights 3 and 10 kg",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.07514",
+   "locator": "Sec. 4.1, Table 3",
+   "quote": "𝑒𝑒𝑙𝑙1 = 0.3, 𝑒𝑒𝑙𝑙2 = 1  \nWh/kg \n𝑒𝑒𝑓𝑓𝑓𝑓  \nLevel flight energy coefficient for type 𝑘𝑘 \n𝑒𝑒𝑓𝑓1 = 10, 𝑒𝑒𝑓𝑓2 = 5  \nWh/(kg×km) \n𝐸𝐸𝑘𝑘  \nBattery energy capacity of drone type 𝑘𝑘 \n𝐸𝐸1 = 300, 𝐸𝐸2 = 1,500  Wh \n𝑊𝑊𝑘𝑘  \nMaximum total weight of drone type 𝑘𝑘 \n𝑊𝑊1 = 5, 𝑊𝑊2 = 20",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
+    "published": "2026-04-08"
+   }
+  },
+  {
+   "id": "P2604.07514-04",
+   "rules": [],
+   "subject": "Payload-dependent green drone routing vs minimum-distance routing",
+   "attribute": "energy saving",
+   "value": "saving in 67% of instances; average 2.17%; maximum 5.97%",
+   "unit": "%",
+   "conditions": "Numerical routing experiments with the linear weight-distance energy model (assumed coefficients)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.07514",
+   "locator": "Abstract",
+   "quote": "shows energy savings in 67% of the instances. For these cases, the average energy saving is 2.17%, with a \nmaximum saving of 5.97%, compared to minimum distance routing.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
+    "published": "2026-04-08"
    }
   },
   {
@@ -968,6 +2707,112 @@
    }
   },
   {
+   "id": "P2605.19431-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "LEGION modular aerial robot module - PA6-CF 3D-printed duct around 5-inch tri-blade rotor",
+   "attribute": "thrust improvement of ducted vs non-ducted rotor",
+   "value": "~20%",
+   "unit": "%",
+   "conditions": "Static thrust testing of this ducted vectorable rotor; 5-inch polycarbonate tri-blade propeller",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.19431",
+   "locator": "Methods, Hardware (rotor/duct)",
+   "quote": "Thrust testing confirmed that the\nduct improved thrust by approximately 20% compared to the non-ducted configura-\ntion.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
+    "published": "2026-05-19"
+   }
+  },
+  {
+   "id": "P2605.19431-02",
+   "rules": [
+    "R03"
+   ],
+   "subject": "LEGION module ducted rotor (5-inch tri-blade)",
+   "attribute": "max thrust per rotor and total lift of three rotors",
+   "value": "21 N per rotor; 63 N total",
+   "unit": "N",
+   "conditions": "Module main body 3.9 kg (≈38 N weight, so T/W ≈1.6, derived); thrust vectoring rotors",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.19431",
+   "locator": "Methods, Hardware",
+   "quote": "Each rotor with 5 inch polycarbonate tri-blade propeller can generate a maximum\nthrust of 21 N, and thus the maximum lifting force generated by three rotors is 63 N.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
+    "published": "2026-05-19"
+   }
+  },
+  {
+   "id": "P2605.19431-03",
+   "rules": [],
+   "subject": "LEGION module (CFRP + PA6-CF airframe)",
+   "attribute": "mass, flight time, battery",
+   "value": "3.9 kg; 6 min; 2 × 6S LiPo, 6000 mAh total",
+   "unit": "kg; min; mAh",
+   "conditions": "Single module, continuous flight time; Tab. S3 specs",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.19431",
+   "locator": "Methods, Airframe",
+   "quote": "The whole\nweight of the main body is 3.9 kg, and the total flight time is 6 min achieved by a\n20\n\npair of 6S LiPo batteries with the total capacity of 6000 mAh.",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
+    "published": "2026-05-19"
+   }
+  },
+  {
+   "id": "P2605.19431-04",
+   "rules": [
+    "R06"
+   ],
+   "subject": "LEGION self-assembling aerial robot",
+   "attribute": "docking-mechanism mass fraction Dmass = mdock/mtotal",
+   "value": "0.12",
+   "unit": "-",
+   "conditions": "Measured design ratio; authors state comparable to average of self-assembling and multi-link aerial robots",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.19431",
+   "locator": "Discussion",
+   "quote": "LEGION\nexhibited a Dmass of 0.12 and a continuous flight time of 6 minutes.",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
+    "published": "2026-05-19"
+   }
+  },
+  {
+   "id": "P2605.19431-05",
+   "rules": [],
+   "subject": "LEGION rotor sizing trade-off",
+   "attribute": "ideal thrust gain from enlarging rotor 5 to 6 inch",
+   "value": "~70% (ideal)",
+   "unit": "%",
+   "conditions": "Authors' ideal estimate (not measured), enabled by reducing yaw joint range by 20 degrees",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.19431",
+   "locator": "Discussion",
+   "quote": "diameter to increase from 5 inches to 6 inches, which ideally enhances thrust by about\n17\n\n70%.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
+    "published": "2026-05-19"
+   }
+  },
+  {
    "id": "P2605.24301-01",
    "rules": [],
    "subject": "Quadrotor test platform for ACRORL bidirectional-thrust inversion",
@@ -1008,6 +2853,51 @@
    }
   },
   {
+   "id": "P2606.08738-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "DJI Matrice 100 with TB47D battery (delivery modelling inputs)",
+   "attribute": "battery energy and hover time by payload",
+   "value": "99.9 Wh; 22 min no payload; 17 min with 500 g payload; average 19.5 min",
+   "unit": "Wh; min",
+   "conditions": "Manufacturer specifications used as model inputs (not measured by authors)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2606.08738",
+   "locator": "Sec. III-D, Table III",
+   "quote": "Drone Battery-Energy\n99.9 Wh\nHovering Time-No payload\n22 min\nHovering Time-500gr payload\n17 min\nHovering Time-Average\n19.5 min",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Systems-Level Planning and Coordination of Truck-Drone Collaborative Delivery Networks",
+    "published": "2026-06-07"
+   }
+  },
+  {
+   "id": "P2606.08738-02",
+   "rules": [
+    "C04",
+    "R05"
+   ],
+   "subject": "DJI Matrice 100 delivery drone model (truck-drone study)",
+   "attribute": "cruise energy per km and max cruise range",
+   "value": "15.25 Wh/km at 8 m/s; range 6.55 km; ascend 40.66 Wh/km; descend 48.79 Wh/km",
+   "unit": "Wh/km; km",
+   "conditions": "MODEL ESTIMATE from 19.5 min hover endurance with 30% battery degradation factor, 0.5 kg payload, 8 m/s, no wind; ascent 3 m/s, descent 2.5 m/s",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2606.08738",
+   "locator": "Table III",
+   "quote": "Battery Degradation Factor\n30%\nMax cruise range at 8m/s\n6.55 km\nDrone Energy at cruise\n15.25 Wh/km\nDrone Energy at ascend\n40.66 Wh/km\nDrone Energy at descend\n48.79 Wh/km",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Systems-Level Planning and Coordination of Truck-Drone Collaborative Delivery Networks",
+    "published": "2026-06-07"
+   }
+  },
+  {
    "id": "P2606.27603-01",
    "rules": [
     "R03"
@@ -1027,6 +2917,48 @@
    "paper": {
     "title": "Learning to Throw: Agile and Accurate Cable-Suspended Payload Delivery with a Quadrotor",
     "published": "2026-06-25"
+   }
+  },
+  {
+   "id": "P2607.01528-01",
+   "rules": [
+    "C04"
+   ],
+   "subject": "Simulated 2.59 kg quadrotor (arm 0.25 m) for wind-aware RL control",
+   "attribute": "effective drag area (quadratic body drag)",
+   "value": "CdA_xy = 0.038 m^2; CdA_z = 0.10 m^2",
+   "unit": "m^2",
+   "conditions": "MODEL ASSUMPTION in 6-DOF simulation at ρ = 1.225 kg/m^3; collective thrust limited to 0.3-2.5 × hover",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.01528",
+   "locator": "Sec. II (simulated platform)",
+   "quote": "effective drag coefficients 𝐶𝑑𝐴𝑥𝑦= 0.038 m2 in the horizontal plane\nand 𝐶𝑑𝐴𝑧= 0.10 m2 along the vertical axis at air density 𝜌= 1.225 kg m−3",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Wind-Aware Reinforcement Learning Control of a Small Quadrotor Using Learned Onboard Wind Estimation in Simulated Atmospheric Turbulence",
+    "published": "2026-07-01"
+   }
+  },
+  {
+   "id": "P2607.10099-01",
+   "rules": [],
+   "subject": "Load-cell thrust-feedback rotor controller vs classical RPM controller (dual-rotor see-saw rig)",
+   "attribute": "maximum pitch deviation under vertical inflow disturbance",
+   "value": "RPM controller ±30°; thrust-feedback controller within ±10°",
+   "unit": "deg",
+   "conditions": "Test rig, two rotors each ~60 g thrust, vertical inflow disturbance; identical PID gains; not free flight",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.10099",
+   "locator": "Sec. V-A",
+   "quote": "maximum deviation of\n±30◦. In contrast, the thrust feedback controller demonstrates\nsignificantly more stable pitch control, with thrust demand\nchanging to suite the local flow environment at each rotor,\nlimiting deviations to within ±10◦.",
+   "status": "verified",
+   "topic": "other",
+   "note": "",
+   "paper": {
+    "title": "Direct Rotor Thrust Sensing and Feedback Control for Disturbance Rejection of Multirotors Using Load-cells",
+    "published": "2026-07-11"
    }
   },
   {
@@ -1170,6 +3102,333 @@
    }
   },
   {
+   "id": "P2607.22768-01",
+   "rules": [
+    "R05"
+   ],
+   "subject": "AeroEval MDO sizing engine - battery chemistry profiles",
+   "attribute": "cell specific energy assumed per chemistry",
+   "value": "LiPo 180; LiHV 195; Li-ion NCA 260; Li-ion NMC 240; Solid State 400; Li-S 500",
+   "unit": "Wh/kg",
+   "conditions": "MODEL ASSUMPTION (Table III Tremblay-Dessaint profile parameters); cell-level, before packaging multiplier ηpkg",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. VI-A, Table III",
+   "quote": "LiPo\n180\n3.70\n4.20\n5.5\n0.046\n5.0\nLiHV\n195\n3.80\n4.35\n10.0 0.040\n4.0\nLi-ion NCA\n260\n3.60\n4.20\n12.0 0.040\n20.0\nLi-ion NMC\n240\n3.60\n4.20\n8.0\n0.060\n15.0\nSolid State\n400\n3.60\n4.20\n15.0 0.030\n35.0\nLi-S\n500",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-02",
+   "rules": [
+    "R05"
+   ],
+   "subject": "AeroEval battery packaging multiplier ηpkg (cell to flight-ready pack mass)",
+   "attribute": "LiPo base packaging factor and increments",
+   "value": "base 1.04; +0.012 per series cell above 6S; +0.06 per additional parallel pack",
+   "unit": "-",
+   "conditions": "MODEL ASSUMPTION calibrated on commercial platforms; additional small-cell penalty up to +0.28(1 − Cpack/4000) below 4000 mAh; see separate claim for ≥14S and cylindrical packs",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. VI-D",
+   "quote": "For\nLiPo it starts at a base of 1.04 and accrues additive terms:\n+0.012 per series cell above 6S; +0.06 per additional parallel\npack;",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-03",
+   "rules": [
+    "R05"
+   ],
+   "subject": "AeroEval battery packaging multiplier ηpkg",
+   "attribute": "packaging factor for high-capacity enterprise and cylindrical Li-ion packs",
+   "value": "≥14S enterprise 1.03; NCA/NMC and exotic 1.15",
+   "unit": "-",
+   "conditions": "MODEL ASSUMPTION; 1.15 reflects cell holders and fire-safety spacing",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. VI-D",
+   "quote": "Highly integrated high-capacity enterprise packs\n(≥14S) use 1.03, and cylindrical Li-ion (NCA/NMC) and\nexotic chemistries use 1.15 to reflect cell holders and fire-\nsafety spacing.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-04",
+   "rules": [
+    "R06"
+   ],
+   "subject": "AeroEval structural sizing (CFRP arms)",
+   "attribute": "minimum structural mass fraction rule",
+   "value": "fstruct,min = max(0.06, min(0.20, 0.05+0.05 W))",
+   "unit": "- (W = frame width, m)",
+   "conditions": "MODEL ASSUMPTION; class overhead γ 0.15 ConsumerFolding, 0.50 EnterpriseRugged, 1.20 Agricultural; Cbody 1.5",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. V-A",
+   "quote": "A size-dependent minimum structural\nmass fraction fstruct,min = max(0.06, min(0.20, 0.05+0.05 W))\nis imposed",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-05",
+   "rules": [
+    "R06"
+   ],
+   "subject": "AeroEval structural overhead multiplier γ",
+   "attribute": "class-specific body/landing-gear overhead on spar mass",
+   "value": "0.15 ConsumerFolding; 0.50 EnterpriseRugged; 1.20 Agricultural",
+   "unit": "-",
+   "conditions": "MODEL ASSUMPTION fitted on held-out commercial cohort; Mframe = Mspar(1+γ)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. V-A",
+   "quote": "class-specific structural overhead multiplier γ (0.15\nConsumerFolding, 0.50 EnterpriseRugged, 1.20 Agricultural),\ngiving Mframe = Mspar(1 + γ)",
+   "status": "verified",
+   "topic": "structure",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-06",
+   "rules": [
+    "R01"
+   ],
+   "subject": "AeroEval rotor power model",
+   "attribute": "installed vs isolated Figure of Merit penalty κ and FM floor",
+   "value": "κ 1.20 consumer, 1.25 enterprise, 1.30 MicroAIO, 1.46 industrial",
+   "unit": "-",
+   "conditions": "MODEL ASSUMPTION; further Reynolds scaling FoM(Re) = FoMmax(1 − e^(−Re/Reref)) with Reref 20,000 and minimum FM 0.38",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. IV-F",
+   "quote": "The installed Figure of Merit\nis reduced by a class-specific penalty κ relative to the\nisolated lab value, FoMinstalled = FoMisolated/κ, with κ ∈\n{1.20consumer, 1.25enterprise, 1.30MicroAIO, 1.46industrial}",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-07",
+   "rules": [
+    "R03"
+   ],
+   "subject": "AeroEval mission role taxonomy",
+   "attribute": "baseline hover throttle and resulting T/W",
+   "value": "60% hover throttle; T/W ≈ 2.78",
+   "unit": "%",
+   "conditions": "MODEL ASSUMPTION for the baseline (role-free) run; role-specific thrust margins (Table II: imaging 45%, delivery/agri/mapping 40%, inspection 50%, racing 80%) set T/W = 1/θhvr^2",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. II-E, Table II",
+   "quote": "baseline hover\nthrottle target defaults to 60%, yielding T/W = 1/0.602 ≈2.78",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-08",
+   "rules": [
+    "R03"
+   ],
+   "subject": "AeroEval racing role",
+   "attribute": "design T/W target vs achieved max static T/W with COTS hardware",
+   "value": "design T/W 25.0 at 20% hover throttle; COTS max static T/W ≈9.8-13.8",
+   "unit": "-",
+   "conditions": "Model design target for FPV freestyle/racing quads; discrete COTS matching under G-load constraints",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. II-E",
+   "quote": "The racing role’s 80% thrust margin (θhvr = 0.20) yields a\ncontinuous design target T/W = 25.0, consistent with First-\nPerson View (FPV) freestyle quads operating at 20% hover\nthrottle. In discrete COTS matching the selected hardware pro-\nvides a validated maximum static T/W ≈9.8–13.8",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-09",
+   "rules": [],
+   "subject": "AeroEval MTOW prediction validation",
+   "attribute": "MTOW and battery-mass prediction error on 19 commercial platforms",
+   "value": "MTOW MAPE 7.2% (95% CI 5.1-9.3%), median 6.6%, RMSE 1.59 kg",
+   "unit": "%; kg",
+   "conditions": "Held-out 19 commercial platforms 377 g to 76 kg; battery mass MAPE 7.9% on 16 single-pack platforms, multi-battery enterprise packs underpredicted ≈50%",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. VII-B, Table IV",
+   "quote": "engine achieves a MTOW MAPE of 7.2% (95% CI: 5.1%–\n9.3%), median absolute error 6.6%, RMSEMTOW = 1.59 kg,",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.22768-10",
+   "rules": [
+    "C04",
+    "R07"
+   ],
+   "subject": "AeroEval forward-flight power model",
+   "attribute": "speed beyond which forward-flight power diverges",
+   "value": "V > 25.5 m/s",
+   "unit": "m/s",
+   "conditions": "Model sensitivity result for standard Class 1 configurations; sweep 1.0-30.0 m/s",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.22768",
+   "locator": "Sec. IV-E",
+   "quote": "ity analysis shows Pfwd diverges for V > 25.5 m/s on standard\nClass 1 configurations.",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
+    "published": "2026-07-24"
+   }
+  },
+  {
+   "id": "P2607.23867-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Emax ECOII 2807 1700kV motor + Gemfan 7040 tri-blade propeller",
+   "attribute": "max static thrust on bench supply vs practical max with battery",
+   "value": "20 N at 16.8 V (bench); 17 N practical with battery",
+   "unit": "N",
+   "conditions": "Static thrust stand, 11.0-16.8 V; 17 N limit due to 4S LiPo internal-resistance voltage sag with all four motors at full throttle",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.23867",
+   "locator": "Sec. III-B",
+   "quote": "up to 20 N of thrust at 16.8 V with the bench power supply,\nbut later testing revealed a practical maximum thrust of 17 N\nwhen coupled with the battery, since the battery’s internal\nresistance limits the usable voltage",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
+    "published": "2026-07-26"
+   }
+  },
+  {
+   "id": "P2607.23867-02",
+   "rules": [
+    "C02"
+   ],
+   "subject": "Agile 300 mm quadrotor propulsion (2807 1700kV, 4S)",
+   "attribute": "peak electrical power per motor",
+   "value": "800 W per motor (50 A at 16.0 V)",
+   "unit": "W; A; V",
+   "conditions": "Peak consumption used to justify neglecting transmission and onboard-computer power in circuit model",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.23867",
+   "locator": "Sec. III-A",
+   "quote": "peak power\nconsumption of 800 W per motor (50 A at 16.0 V)",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
+    "published": "2026-07-26"
+   }
+  },
+  {
+   "id": "P2607.23867-03",
+   "rules": [
+    "C01"
+   ],
+   "subject": "Gaoneng GNB 4S 3.3 Ah LiPo (100C) in agile quadrotor",
+   "attribute": "maximum in-flight discharge current used for battery characterization",
+   "value": "120 A",
+   "unit": "A",
+   "conditions": "Chosen from flight telemetry of 3.5 g acceleration trajectories (≈36C on 3.3 Ah, derived); pack rated 100C",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.23867",
+   "locator": "Sec. III-C",
+   "quote": "we used a Gaoneng GNB 4S 3.3 A h\nLiPo battery rated at 100C discharge with an XT90 con-\nnector. Based on the flight telemetry for our aircraft during\n3.5 g trajectories, a discharge current of 120 A was chosen",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
+    "published": "2026-07-26"
+   }
+  },
+  {
+   "id": "P2607.23867-04",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Custom agile quadrotor (300 mm motor-to-motor)",
+   "attribute": "flight mass",
+   "value": "1.2 kg (usual 1.54 kg with Livox LiDAR)",
+   "unit": "kg",
+   "conditions": "Mass reduced for end-of-battery agile flights at 3.5 g; per-motor fmax 17 N in NMPC (≈5.8 T/W, derived)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.23867",
+   "locator": "Sec. V",
+   "quote": "The quadrotor measures 300 mm diagonally (motor-to-\nmotor) and weighs 1.2 kg, as shown in Figure 1. Due to the\nuncertain nature of these experiments where the UAV was\nflown to the end of the battery limit, the mass was lowered\nfrom the usual 1.54 kg",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
+    "published": "2026-07-26"
+   }
+  },
+  {
+   "id": "P2607.23867-05",
+   "rules": [],
+   "subject": "BC-NMPC (battery-constrained NMPC) vs battery-unaware controller",
+   "attribute": "reduction in mean position error by end of battery capacity",
+   "value": "25% without replanning; 88% with replanning",
+   "unit": "%",
+   "conditions": "Agile high-speed flights to end of battery on the 1.2 kg quadrotor (real and simulation)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.23867",
+   "locator": "Abstract",
+   "quote": "an unaware controller, our novel controller achieved a 25 %\nreduction in mean position error without replanning, and an\n88 % reduction with replanning.",
+   "status": "verified",
+   "topic": "battery",
+   "note": "",
+   "paper": {
+    "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
+    "published": "2026-07-26"
+   }
+  },
+  {
    "id": "P2608.00635-01",
    "rules": [],
    "subject": "FlowPilot perception-to-action pipeline on Jetson Orin NX",
@@ -1232,6 +3491,176 @@
    }
   },
   {
+   "id": "P2608.17819-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "Tiltable-quadrotor aerial manipulator (4 rotors, Rp = 0.114 m, m = 3.039 kg)",
+   "attribute": "per-rotor thrust limit and resulting max body-Z force/torque",
+   "value": "23 N per rotor; 90 N force; >22 N·m torque",
+   "unit": "N; N·m",
+   "conditions": "Wrench-envelope analysis for this platform; with m = 3.039 kg (Table IV) the 90 N implies total T/W ≈ 3 (derived, not stated)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.17819",
+   "locator": "Sec. III-C, Fig. 7",
+   "quote": "thrust limit of 23 N per rotor, the robot can generate 90 N of\nforce and more than 22 N·m of torque.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Effector-Centric NMPC of Tiltable-Multirotors for Offset-Free Omnidirectional Aerial Manipulation",
+    "published": "2026-08-18"
+   }
+  },
+  {
+   "id": "P2608.17819-02",
+   "rules": [],
+   "subject": "Tiltable-quadrotor aerial manipulator",
+   "attribute": "arm length, propeller radius, mass",
+   "value": "l = 0.275 m; Rp = 0.114 m; m = 3.039 kg",
+   "unit": "m; m; kg",
+   "conditions": "Model parameters from CAD/identification (Table IV), single platform",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.17819",
+   "locator": "Table IV",
+   "quote": "l\n0.275 m\nRp\n0.114 m\nm\n3.039 kg",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "Effector-Centric NMPC of Tiltable-Multirotors for Offset-Free Omnidirectional Aerial Manipulation",
+    "published": "2026-08-18"
+   }
+  },
+  {
+   "id": "P2608.23163-01",
+   "rules": [],
+   "subject": "Spinning quadrotor with passive rotating lifting surfaces, four-wing config (960 g)",
+   "attribute": "fraction of weight lifted by rotating wings in steady hover (measured)",
+   "value": "214 g (22.3%) of 960 g; motor thrust 758 g",
+   "unit": "g; %",
+   "conditions": "Hardware hover tests, mean of N = 5 trials with 10 s steady windows; motors tilted 10°; lift inferred from force equilibrium",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.23163",
+   "locator": "Sec. V, Table II, Fig. 14",
+   "quote": "At this operating point, the motors generated 758 g of total\nthrust, corresponding to 746 g of vertical force after accounting\nfor the 10° tilt. For a 960 g vehicle, the remaining 214 g\n(22.3%) of lift was supplied by the rotating wings",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces",
+    "published": "2026-08-24"
+   }
+  },
+  {
+   "id": "P2608.23163-02",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Spinning quadrotor hover power model (simulation)",
+   "attribute": "assumed constant motor/propeller efficiency",
+   "value": "ηm = 0.65",
+   "unit": "-",
+   "conditions": "MODEL ASSUMPTION: ideal actuator disks, efficiency independent of thrust/RPM/inflow; ESC, wiring and mechanical losses omitted",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.23163",
+   "locator": "Sec. IV (simulation framework)",
+   "quote": "Motors and propellers are represented as ideal actuator disks\nwith constant efficiency ηm = 0.65, independent of thrust\nlevel, rotational speed, or inflow conditions.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces",
+    "published": "2026-08-24"
+   }
+  },
+  {
+   "id": "P2608.23163-03",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Spinning-wing quadrotor vs motor-only quadrotor in hover (simulation, 7.85 N vehicle)",
+   "attribute": "idealized electrical hover power",
+   "value": "122.0 W baseline; 57.1% reduction",
+   "unit": "W; %",
+   "conditions": "Idealized momentum-theory estimate with ηm = 0.65 (spinning config total 52.3 W); authors state it is an upper-bound; hardware showed ~21-22% thrust reduction",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.23163",
+   "locator": "Sec. IV, Eq. (23), Fig. 10",
+   "quote": "which evaluates to a baseline electrical power of 122.0 W.\nUnder the idealized modeling assumptions described above,\nthe resulting electrical power estimate corresponds to a 57.1%\nreduction relative to a motor-only hover baseline.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces",
+    "published": "2026-08-24"
+   }
+  },
+  {
+   "id": "P2608.25150-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Small-scale 3-blade propeller (Gemfan 51466, R = 0.05 m) with wing in hover (CFD)",
+   "attribute": "maximum figure of merit",
+   "value": "FM = 42.8%",
+   "unit": "%",
+   "conditions": "CFD (LES-type) simulation of propeller-wing VTOL configuration in hover, 8,900-24,200 RPM, wing at dY/R, dX/R 0.5-1.0; authors note small-rotor FM is often below 50%",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.25150",
+   "locator": "Sec. 4 (hover), Fig. 17a",
+   "quote": "The figure of merit of small-scale rotors is often below 50% due to increased\nviscous, induced, and profile-related power losses [40]. It is consistent with the results presented in\nFig. 17a, where the maximum figure of merit is FM = 42.8%.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
+    "published": "2026-08-25"
+   }
+  },
+  {
+   "id": "P2608.25150-02",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Gemfan 51466 propeller-wing configuration in hover (CFD)",
+   "attribute": "variation of FM and CT over rotational speed range",
+   "value": "FM varies only 9.5%, CT 8%, over 8,900 to 24,200 RPM",
+   "unit": "%",
+   "conditions": "CFD, hover (U=0), all wing positions studied; FM weakly dependent on RPM and wing position",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.25150",
+   "locator": "Sec. 4 (hover), Fig. 17",
+   "quote": "their minimum and maximum values are only 9.5% for FM and 8% for CT. These variations occur\nover a 63% increase in rotational speed, from Ω= 8,900 to 24,200 RPM.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
+    "published": "2026-08-25"
+   }
+  },
+  {
+   "id": "P2608.25150-03",
+   "rules": [],
+   "subject": "Gemfan 51466 propeller (R = 0.05 m, P/D 0.90) ahead of wing in cruise (CFD)",
+   "attribute": "propulsive efficiency at advance ratio J = 0.7",
+   "value": "50%, 58%, 61% (3429, 6857, 10286 RPM)",
+   "unit": "%",
+   "conditions": "CFD cruise configuration at J = 0.7 for freestream 4, 8, 12 m/s respectively; peak efficiency near J ≈ 0.7 (J = 0.6 at 4 m/s)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.25150",
+   "locator": "Sec. 3 (cruise), Fig. 8",
+   "quote": "Under the operating condition of J = 0.7, the present study reports operating efficiencies of 50%,\n58%, and 61% for the considered freestream velocities, corresponding to Ωof 3429 RPM, 6857 RPM,\nand 10286 RPM, respectively.",
+   "status": "verified",
+   "topic": "forward-flight",
+   "note": "",
+   "paper": {
+    "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
+    "published": "2026-08-25"
+   }
+  },
+  {
    "id": "P2609.09380-01",
    "rules": [],
    "subject": "AccelMPC FPGA board on Crazyflie",
@@ -1272,6 +3701,48 @@
    }
   },
   {
+   "id": "P2609.12188-01",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Simulated 1.8 kg quadrotor with 4-cell Li-ion 5 Ah pack (battery-aware planning study)",
+   "attribute": "assumed effective motor-propulsion efficiency",
+   "value": "0.82",
+   "unit": "-",
+   "conditions": "MODEL ASSUMPTION in simulation (not measured); arm 0.23 m, max rotor speed 1050 rad/s, initial SOC 92%",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.12188",
+   "locator": "Sec. V-A",
+   "quote": "max = 1050 rad/s, and the propulsion efficiency is\nηm = 0.82. The vehicle is powered by a four-cell lithium-\nion battery with a rated capacity of Qb = 5 Ah.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Battery-Aware Predictive Trajectory Planning and Control for Multirotors Under Disturbances",
+    "published": "2026-09-10"
+   }
+  },
+  {
+   "id": "P2609.12188-02",
+   "rules": [],
+   "subject": "Battery-aware vs disturbance-aware baseline trajectory (simulated 1.8 kg quadrotor)",
+   "attribute": "mission energy and position RMSE",
+   "value": "14.1078 to 13.0552 Wh (7.46% reduction); RMSE 15.5226 to 4.3461 m",
+   "unit": "Wh; m",
+   "conditions": "Simulation with spatially localized wind disturbance field (up to 6 m/s components); closed-loop vehicle-motor-battery propagation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.12188",
+   "locator": "Sec. V, Eq. (72) discussion / Table II",
+   "quote": "jectory reduces mission energy from 14.1078 to 13.0552 Wh,\ncorresponding to a 7.46% reduction, while decreasing the\nposition-tracking RMSE from 15.5226 to 4.3461 m",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "Battery-Aware Predictive Trajectory Planning and Control for Multirotors Under Disturbances",
+    "published": "2026-09-10"
+   }
+  },
+  {
    "id": "P2609.17198-01",
    "rules": [],
    "subject": "TIO-Former ToF-inertial odometry on RISC-V companion",
@@ -1309,6 +3780,114 @@
    "paper": {
     "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
     "published": "2026-09-15"
+   }
+  },
+  {
+   "id": "P2609.20965-01",
+   "rules": [
+    "R03"
+   ],
+   "subject": "AeRove bimodal aerial-terrestrial micro drone (12.8 cm H-frame, 11000 KV motors, Gemfan 2023-3 props)",
+   "attribute": "maximum vs operating thrust-to-weight ratio",
+   "value": "max 2.7:1; normal operation limited to 2:1",
+   "unit": "-",
+   "conditions": "175 g total mass with 2S 1000 mAh battery; 2:1 chosen to reduce power while keeping control authority",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.20965",
+   "locator": "Sec. II-C-3",
+   "quote": "capable of a maximum thrust-to-weight ratio of\napproximately 2.7:1; however, normal operation is limited to\napproximately 2:1 to reduce unnecessary power consumption",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
+    "published": "2026-09-17"
+   }
+  },
+  {
+   "id": "P2609.20965-02",
+   "rules": [
+    "R01"
+   ],
+   "subject": "15° converging propeller guard (AeRove, Gemfan 2023-3)",
+   "attribute": "thrust efficiency improvement vs 0° guard",
+   "value": "~35% at hover thrust (~43 g); ~26% at 2:1 T/W point",
+   "unit": "%",
+   "conditions": "Static bench test of four guard convergence angles (0,10,15,30°) on this micro propeller; 30° degraded efficiency",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.20965",
+   "locator": "Sec. II-C-3, Fig. 5",
+   "quote": "At\na hover thrust setting (approximately 43 g), the 15◦guard\nimproved thrust efficiency by approximately 35% relative to\nthe 0◦configuration. At the 2:1 thrust-to-weight operating\npoint, the improvement was approximately 26%.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
+    "published": "2026-09-17"
+   }
+  },
+  {
+   "id": "P2609.20965-03",
+   "rules": [
+    "R05"
+   ],
+   "subject": "AeRove platform",
+   "attribute": "dry mass, battery mass, total mass",
+   "value": "130 g; 45 g; 175 g",
+   "unit": "g",
+   "conditions": "Table II physical specifications; 2S 1000 mAh LiPo; battery is ~26% of total mass",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.20965",
+   "locator": "Table II",
+   "quote": "Dry Weight\n130 g\nBattery Mass\n45 g\nTotal Mass\n175 g",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
+    "published": "2026-09-17"
+   }
+  },
+  {
+   "id": "P2609.20965-04",
+   "rules": [
+    "C04"
+   ],
+   "subject": "AeRove flight mode vs drive mode",
+   "attribute": "current draw, estimated time and range",
+   "value": "flight 40 cm/s: 10 A, 6.0 min, 144 m; flight 8 m/s: 20 A, 3.0 min, 1440 m; drive 40 cm/s: 0.7 A, 85.7 min",
+   "unit": "A; min; m",
+   "conditions": "Estimated from average measured current of each mode on 7.4 V 2S 1000 mAh pack, not full-discharge trials (authors' caveat)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.20965",
+   "locator": "Table III",
+   "quote": "Inspection (Flight)\n40 cm/s\n10 A\n6.0 min\n144 m\nMax Speed (Drive)\n40 cm/s\n0.7 A\n85.7 min\n2057 m\nMax Speed (Flight)\n8 m/s\n20 A\n3.0 min\n1440 m",
+   "status": "verified",
+   "topic": "energy",
+   "note": "",
+   "paper": {
+    "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
+    "published": "2026-09-17"
+   }
+  },
+  {
+   "id": "P2609.20965-05",
+   "rules": [],
+   "subject": "AeRove flight-only configuration vs full hybrid",
+   "attribute": "mass and estimated flight endurance",
+   "value": "175 g to 130 g; 6 min to 12.5 min",
+   "unit": "g; min",
+   "conditions": "Removing terrestrial drivetrain/transition hardware; endurance estimated from average measured current, not measured discharge",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.20965",
+   "locator": "Sec. IV",
+   "quote": "reduces the vehicle mass from 175 g to 130 g and increases\nestimated flight endurance from 6 min to 12.5 min.",
+   "status": "verified",
+   "topic": "sizing",
+   "note": "",
+   "paper": {
+    "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
+    "published": "2026-09-17"
    }
   },
   {
@@ -1451,6 +4030,128 @@
    "paper": {
     "title": "Toward Lightweight Aerial 5G gNBs: Reproducible OAI Testbed on Commodity ARM Platforms",
     "published": "2026-10-04"
+   }
+  },
+  {
+   "id": "P2610.08177-01",
+   "rules": [],
+   "subject": "Propulsion unit test article (Xnova 2208 V2 1500KV + Graupner 3D-Prop 8x4.5 + Aikon AKC 70A 8S ESC)",
+   "attribute": "motor KV, listed winding resistance and motor mass",
+   "value": "1500 rpm/V; 0.078 Ω; 36.5 g",
+   "unit": "rpm/V; Ω; g",
+   "conditions": "Manufacturer-listed motor characteristics for the single tested unit (Table II); not a measured value",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08177",
+   "locator": "Sec. V-A, Table II",
+   "quote": "1500 rpm/V; listed resistance 0.078 Ω; mass 36.5 g",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
+    "published": "2026-10-06"
+   }
+  },
+  {
+   "id": "P2610.08177-02",
+   "rules": [],
+   "subject": "Graupner 3D-Prop 8x4.5 propeller",
+   "attribute": "diameter, pitch and measured mass",
+   "value": "8 in; 4.5 in; 7.81 g",
+   "unit": "in; in; g",
+   "conditions": "Measured mass of the single propeller used in the test campaign",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08177",
+   "locator": "Sec. V-A, Table II",
+   "quote": "8-in diameter; 4.5-in pitch; measured mass 7.81 g",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
+    "published": "2026-10-06"
+   }
+  },
+  {
+   "id": "P2610.08177-03",
+   "rules": [],
+   "subject": "Graupner 8x4.5 propeller (two blades + hub)",
+   "attribute": "rotational inertia (independent, destructive measurement)",
+   "value": "1.8820 × 10^-5",
+   "unit": "kg m^2",
+   "conditions": "Measured by cutting one blade into eight segments, ~2% cut loss corrected; propeller only (motor rotor 1.921e-6, shaft 1.04e-8 kg m^2 separate)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08177",
+   "locator": "Sec. V-B-1",
+   "quote": "The two blades and hub yielded\n𝐽prop = 1.8820 × 10−5 kg m2.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
+    "published": "2026-10-06"
+   }
+  },
+  {
+   "id": "P2610.08177-04",
+   "rules": [],
+   "subject": "Graupner 8x4.5 propeller on 2208 1500KV motor",
+   "attribute": "aerodynamic drag-torque coefficient (torque = c*omega^2), independent force-torque measurement",
+   "value": "7.14821 × 10^-8",
+   "unit": "N m/(rad/s)^2",
+   "conditions": "Static force-torque measurement of this specific motor-propeller unit; per-Hz value 2.8220e-6 N m Hz^-2",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08177",
+   "locator": "Sec. V-B-2, Eq. (23)",
+   "quote": "= 7.14821 × 10−8 N m/(rad/s)2.",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
+    "published": "2026-10-06"
+   }
+  },
+  {
+   "id": "P2610.08177-05",
+   "rules": [
+    "R01"
+   ],
+   "subject": "Speed-only quadratic aerodynamic power model P1 vs nested model P4 (inertia + torque-loss + speed-proportional loss)",
+   "attribute": "held-out RMSE / R^2 of source-side electrical power",
+   "value": "P1 RMSE 103.320 W, R2 0.18044; P4 RMSE 17.388 W, R2 0.97679",
+   "unit": "W; -",
+   "conditions": "Single 2208/8x4.5/70A ESC unit on test rig, rotor frequency 60-195 Hz, frequency rates up to ~2000 Hz/s, source power -16.60 to 841.76 W; 140,508 validation samples",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08177",
+   "locator": "Sec. VI-A, Table III",
+   "quote": "𝑃1\n103.320\n61.785\n0.18044\n53.945\n𝑃2\n42.457\n26.602\n0.86161\n16.579\n𝑃3\n19.799\n12.465\n0.96991\n14.687\n𝑃4\n17.388\n9.651\n0.97679",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
+    "published": "2026-10-06"
+   }
+  },
+  {
+   "id": "P2610.08177-06",
+   "rules": [],
+   "subject": "Speed-only vs kinetic-energy-rate propulsion power model",
+   "attribute": "RMSE reduction when adding reversible kinetic-energy rate (P1 to P2)",
+   "value": "58.9%",
+   "unit": "%",
+   "conditions": "Held-out validation on transient ramp experiments of one motor-propeller unit; shows speed-only power models miss acceleration-dependent power",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08177",
+   "locator": "Sec. VI-A",
+   "quote": "transition from 𝑃1 to 𝑃2 reduces RMSE by 58.9%",
+   "status": "verified",
+   "topic": "propulsion",
+   "note": "",
+   "paper": {
+    "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
+    "published": "2026-10-06"
    }
   },
   {

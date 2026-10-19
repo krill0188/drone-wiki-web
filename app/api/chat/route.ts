@@ -8,12 +8,11 @@ import {
   type UIMessage,
 } from "ai"
 import { wikiModel } from "@/lib/ai-model"
-import { queryKG } from "@/lib/kg"
+import { kgSummary, queryKG } from "@/lib/kg"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { designEvidence } from "@/lib/evidence"
-import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
 import type { DocContext } from "@/lib/types"
 import type { DocViewRecord } from "@/lib/session-store"
@@ -72,9 +71,9 @@ export async function POST(req: NextRequest) {
   if (gate.reply) return instantReply(gate.reply)
   // 지식그래프 전용(2026-10-19): 수집 문서 검색(RAG)·뉴스·문서 연결 그래프는 사실 근거로 쓰지 않는다.
   // 사실은 지식그래프(queryKG)·규칙 엔진(onto)·설계 엔진(designBlocks)에서만 나온다.
-  const onto = buildOntologyContext(gate.augment ? `${question}\n${gate.augment}` : question, docContext?.title)
+  const onto = buildOntologyContext(gate.augment ? `${question}\n${gate.augment}` : question, docContext?.title, { kgOnly: true })
   const kg = queryKG(docContext ? `${docContext.title} ${question}` : question)
-  const manifest = await buildAgentManifest()
+  const manifest = kgSummary()
   const blocks = [kg.block, gate.block ? designBlocks(gate) : "", onto.block].filter(Boolean).join("\n\n")
   const system = buildKgSystemPrompt(manifest, docContext ?? null, blocks)
 

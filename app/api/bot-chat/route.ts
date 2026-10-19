@@ -1,10 +1,9 @@
 import { NextRequest } from "next/server"
 import { generateText } from "ai"
-import { queryKG } from "@/lib/kg"
+import { kgSummary, queryKG } from "@/lib/kg"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
-import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
 import { botModel, checkBotToken } from "@/lib/bot-model"
 
@@ -27,10 +26,10 @@ export async function POST(req: NextRequest) {
   const gate = evaluateDesignGate([question])
   if (gate.reply) return Response.json({ answer: gate.reply, sources: [], newsSources: [] })
 
-  const onto = buildOntologyContext(gate.augment ? `${question}\n${gate.augment}` : question)
+  const onto = buildOntologyContext(gate.augment ? `${question}\n${gate.augment}` : question, undefined, { kgOnly: true })
   // 지식그래프 전용(웹 채팅과 동일): 수집 문서 검색·뉴스는 사실 근거로 쓰지 않는다.
   const kg = queryKG(question)
-  const manifest = await buildAgentManifest()
+  const manifest = kgSummary()
   const system = buildKgSystemPrompt(manifest, null, [kg.block, gate.block ? designBlocks(gate) : "", onto.block].filter(Boolean).join("\n\n"))
 
   const result = await generateText({

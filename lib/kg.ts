@@ -87,7 +87,7 @@ export function queryKG(question: string): KgResult {
       .slice(0, 8)
     for (const e of comp) {
       const other = byId.get(e.s === p.id ? e.o : e.s)
-      const why = e.p === "powersWith" ? `ESC 연속 ${e.contA}A ≥ 모터 최대 ${e.motorMaxA}A` : `셀 ${e.cells}S가 허용 범위 안(셀 수만 비교한 느슨한 호환)`
+      const why = e.p === "powersWith" ? `ESC 연속 ${e.contA}A ≥ 모터 최대 ${e.motorMaxA}A, ESC 셀 범위 ${e.escCells} / 모터 ${e.motorCells} → 함께 쓸 수 있는 셀 ${e.sharedCells}` : `셀 ${e.cells}S가 허용 범위 안(셀 수만 비교한 느슨한 호환)`
       add(`${e.s}|${e.p}|${e.o}`, `호환: ${byId.get(e.s)?.label} —${e.p}→ ${byId.get(e.o)?.label} (${why})`)
       if (other) matched.add(other.id)
     }
@@ -123,4 +123,15 @@ ${limited.map((f) => `[KG:${f.id}] ${f.text}`).join("\n")}
 (질문과 연결된 노드가 지식그래프에 없음)
 </knowledge-graph>`
   return { block, empty: limited.length === 0, facts: limited, matched: [...matched] }
+}
+
+// 프롬프트에 넣는 그래프 규모 요약(위키 문서 지도 대신). 무엇이 그래프에 있고 없는지 모델이 알게 한다.
+export function kgSummary(): string {
+  const c = (t: string) => G.nodes.filter((n) => n.type === t).length
+  const e = (p: string) => G.edges.filter((x) => x.p === p).length
+  return `<kg-scope>
+지식그래프 범위: 제조사 ${c("Manufacturer")}, 제품 ${c("Product")}(클래스 ${c("Class")}종), 공학 규칙 ${c("Rule")}, 원문 대조 claim ${c("Claim")}(논문 ${c("Paper")}편).
+관계: 제조(madeBy) ${e("madeBy")}, ESC-모터 구동 호환 ${e("powersWith")}, 배터리 셀 호환 ${e("packFits")}, claim→규칙 ${e("supports")}, claim→제품 언급 ${e("mentions")}.
+범위 밖: 역사·정책·뉴스·일반 개념 설명은 그래프에 없다.
+</kg-scope>`
 }

@@ -57,7 +57,12 @@ for m in (q for q in items if q["category"] == "motor"):
         a = e.get("continuous_A")
         if not a: continue
         ok = [v for v, r, i in vs if overlap(r, rng(e["cells"])) and a >= i]
-        if ok: edge(e["id"], "powersWith", m["id"], contA=a, motorMaxA=min((v.get("max_current_A") or {}).get("value") for v in ok)); cnt["powersWith(ESC≥모터전류)"] += 1
+        if ok:
+            er, mr = rng(e["cells"]), [r for v, r, i in vs if v in ok]
+            edge(e["id"], "powersWith", m["id"], contA=a, motorMaxA=min((v.get("max_current_A") or {}).get("value") for v in ok),
+                 escCells=f"{er[0]}-{er[1]}S", motorCells=f"{min(r[0] for r in mr)}-{max(r[1] for r in mr)}S",
+                 sharedCells=f"{max(er[0], min(r[0] for r in mr))}-{min(er[1], max(r[1] for r in mr))}S")
+            cnt["powersWith(ESC≥모터전류)"] += 1
 
 rules = load("rules.json"); rules = rules.get("rules", rules)
 claims = load("claims.json")["claims"]

@@ -174,7 +174,8 @@ function classDocs(classes: string[], limit = 3): string[] {
   return lines
 }
 
-export function buildOntologyContext(question: string, docTitle?: string): OntologyContext {
+// opts.kgOnly: 지식그래프 전용 답변 경로에서는 자동 추출 의미관계(사람 검토 전)와 연관 위키 문서 목록을 넣지 않는다.
+export function buildOntologyContext(question: string, docTitle?: string, opts?: { kgOnly?: boolean }): OntologyContext {
   const hierarchy = loadHierarchy(resolveWikiRoot())
   const text = `${docTitle ?? ""} ${question}`
   // 기본구조·통신·교차 공학 추론은 클래스가 안 잡히는 질문(예: 링크 비교)에서도 동작한다.
@@ -192,8 +193,8 @@ export function buildOntologyContext(question: string, docTitle?: string): Ontol
       return `- ${chain}${kids.length ? `  (하위: ${kids.join(", ")})` : ""}`
     })
   const rels = relationLines(classes, hierarchy, wide)
-  const docs = classDocs(classes)
-  const facts = semanticFacts(classes)
+  const docs = opts?.kgOnly ? [] : classDocs(classes)
+  const facts = opts?.kgOnly ? [] : semanticFacts(classes)
 
   const inference = reasoningBlock(question, classes, hierarchy)
   const synthesis = wide ? synthesisBlock(question).block : ""
