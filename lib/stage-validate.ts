@@ -57,6 +57,7 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
 
   // R1 카탈로그 외 제품
   const outside: string[] = []
+  let paperBat: number | null = null
   let knownMassG = 0
   const matched: { row: Row; cand: Cand; k: number }[] = []
   for (const r of rows) {
@@ -64,7 +65,10 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
     if (SKIP_ROW.test(name) || !sel) continue
     if (NONE.test(sel)) continue
     const cand = matchCand(sel, d.cands)
-    if (!cand && allow?.(sel)) continue // 논문 구성품은 카탈로그 밖이어도 허용(출처가 논문)
+    if (!cand && allow?.(sel)) { // 논문 구성품은 카탈로그 밖이어도 허용(출처가 논문)
+      if (/배터리|battery/i.test(name)) paperBat = paperBatteryWh(`${sel} ${colOf(r, /사양/)}`)
+      continue
+    }
     if (!cand) { outside.push(`${name}: "${sel.slice(0, 50)}"`); continue }
     const k = /배터리|battery/i.test(name) ? qtyOf(`${sel} ${colOf(r, /사양/)}`) : /모터|motor/i.test(name) ? d.n : 1
     matched.push({ row: r, cand, k })
@@ -76,7 +80,11 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
   // R2 배터리 에너지
   const bat = matched.find((m) => m.cand.category === "battery")
   if (d.needWh != null) {
-    if (bat && bat.cand.whPerUnit) {
+    if (!bat && paperBat != null) {
+      const ok = paperBat >= d.needWh * 0.98
+      checks.push({ ok, label: `논문 배터리 에너지 ≥ 엔진 필요 ${d.needWh.toFixed(0)}Wh`, detail: `논문 구성 ${paperBat.toFixed(0)}Wh(셀수×3.7V×용량×수량, 계산)` })
+      if (!ok) issues.push(`논문 배터리 ${paperBat.toFixed(0)}Wh가 엔진 필요 에너지 ${d.needWh.toFixed(0)}Wh에 못 미친다. 논문 구성을 바꾸지 말고 표 아래에 이 차이(논문 구성으로는 입력 조건을 만족하지 못함)를 그대로 공개한다.`)
+    } else if (bat && bat.cand.whPerUnit) {
       const wh = bat.cand.whPerUnit * bat.k
       const ok = wh >= d.needWh * 0.98
       checks.push({ ok, label: `배터리 에너지 ≥ 필요 ${d.needWh.toFixed(0)}Wh`, detail: `${bat.cand.name} × ${bat.k} = ${wh.toFixed(0)}Wh(전압×용량, 계산)` })
@@ -122,6 +130,13 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
     if (!ok) issues.push(`ESC ${esc.cand.name}의 연속 전류 ${esc.cand.contA}A가 모터 최대 시험전류 ${mot.cand.maxA}A보다 작다. 후보 목록의 ESC 중에서 고른다.`)
   }
   return { checks, issues }
+}
+
+// 논문 배터리 선정안 문자열("4S 6750 mAh LiPo ×2")에서 공칭 에너지 계산: 셀수 × 3.7V × 용량 × 수량
+function paperBatteryWh(t: string): number | null {
+  const sc = /(\d{1,2})\s*S\b/i.exec(t), mah = /(\d{3,6})\s*mAh/i.exec(t)
+  if (!sc || !mah) return null
+  return parseInt(sc[1], 10) * 3.7 * (parseInt(mah[1], 10) / 1000) * qtyOf(t)
 }
 
 // HW 표에서 확정된(카탈로그 일치) 제품 모델 키들

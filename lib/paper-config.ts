@@ -8,7 +8,7 @@ export interface PaperComponent { category: string; name: string; keyTokens: str
 export interface PaperConfig {
   id: string; name: string; aliases: string[]; rotors: number
   source: { id: string; title: string; url: string }
-  reported: { weightKg?: number; flightMin?: number; wheelbaseMm?: number; propIn?: number; batteryWh?: number; payloadKg?: number }
+  reported: { weightKg?: number; flightMin?: number; flightMinWithPayload?: number; wheelbaseMm?: number; propIn?: number; batteryWh?: number; payloadKg?: number }
   reportedQuote: string
   components: PaperComponent[]
 }
@@ -24,18 +24,18 @@ export function matchPaperConfig(concept: string): PaperConfig | null {
   return CONFIGS.find((c) => c.aliases.some((a) => t.includes(a))) ?? null
 }
 
-// 사용자가 이미 준 항목은 건드리지 않고, 비어 있는 필수 입력 중 논문이 보고한 값만 게이트 입력에 보탠다(비행거리는 논문에 없어 사용자에게 묻는다).
+// 사용자가 이미 준 항목은 건드리지 않고, 비어 있는 필수 입력 중 논문이 보고한 값만 게이트 입력에 보탠다. 비행시간은 논문이 페이로드와 연결해 말한 값만 쓰고, 비행거리는 논문에 없어 사용자에게 묻는다.
 export function specHint(cfg: PaperConfig, parsed: DesignSpec): string {
   const r = cfg.reported, parts: string[] = [`${cfg.rotors === 4 ? "쿼드콥터" : `${cfg.rotors}로터`}`]
   if (parsed.payloadKg === undefined && r.payloadKg !== undefined) parts.push(`페이로드 ${r.payloadKg}kg`)
   if (parsed.sizeMm === undefined && r.wheelbaseMm !== undefined) parts.push(`휠베이스 ${r.wheelbaseMm}mm`)
-  if (parsed.flightMin === undefined && r.flightMin !== undefined) parts.push(`비행시간 ${r.flightMin}분`)
+  if (parsed.flightMin === undefined && r.flightMinWithPayload !== undefined) parts.push(`비행시간 ${r.flightMinWithPayload}분`)
   return parts.join(" ")
 }
 
 export function paperBlock(cfg: PaperConfig): string {
   const r = cfg.reported
-  const rep = [r.weightKg != null && `기체 무게 ${r.weightKg}kg`, r.wheelbaseMm != null && `축거 ${r.wheelbaseMm}mm`, r.propIn != null && `프롭 ${r.propIn}인치`, r.batteryWh != null && `배터리 ${r.batteryWh}Wh`, r.flightMin != null && `비행시간 ${r.flightMin}분`, r.payloadKg != null && `페이로드 ${r.payloadKg}kg`].filter(Boolean).join(", ")
+  const rep = [r.weightKg != null && `기체 무게 ${r.weightKg}kg`, r.wheelbaseMm != null && `축거 ${r.wheelbaseMm}mm`, r.propIn != null && `프롭 ${r.propIn}인치`, r.batteryWh != null && `배터리 ${r.batteryWh}Wh`, r.flightMin != null && `표 비행시간 ${r.flightMin}분(탑재 조건 불명)`, r.flightMinWithPayload != null && `페이로드 만재 시 비행시간 ${r.flightMinWithPayload}분(본문)`, r.payloadKg != null && `페이로드 ${r.payloadKg}kg`].filter(Boolean).join(", ")
   return `<paper-config>
 사용자가 논문 구성을 지목했다. 아래는 논문 원문에서 직접 확인된 구성이다(출처: ${cfg.source.title}, ${cfg.source.url}).
 기체: ${cfg.name}
