@@ -43,3 +43,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 파생 산출물: scripts/build-sqlite.py로 재생성 (웹은 graph.json 사용)
+data/ontology/knowledge.sqlite

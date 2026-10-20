@@ -121,6 +121,11 @@ for c in claims:
     node(pid, "Paper" if c["sourceType"] == "paper" else "Source", c["sourceId"], title=(c.get("paper") or {}).get("title", ""), published=(c.get("paper") or {}).get("published", ""))
     edge(f"claim:{c['id']}", "reportedIn", pid)
     for rid in c.get("rules", []): edge(f"claim:{c['id']}", "supports", f"rule:{rid}")
+# rules.json의 claims 목록(수동 큐레이션 연결)도 supports 엣지로 반영 — claim 쪽 rules에 없어도 규칙 쪽에서 지정한 근거를 놓치지 않는다
+_have = {(e["s"], e["o"]) for e in edges if e["p"] == "supports"}
+for r in rules:
+    for cid in r.get("claims", []):
+        if f"claim:{cid}" in seen and (f"claim:{cid}", f"rule:{r['id']}") not in _have: edge(f"claim:{cid}", "supports", f"rule:{r['id']}")
 
 stats = {"nodes": Counter(n["type"] for n in nodes), "edges": Counter(e["p"] for e in edges), "compat": cnt}
 json.dump({"_comment": "scripts/build-graph.py가 생성(결정론). 수정은 입력 JSON에서.", "nodes": nodes, "edges": edges,

@@ -32,7 +32,8 @@
         "eta_cons": 0.8,
         "FM_opt": 0.75,
         "eta_opt": 0.9
-      }
+      },
+      "kind": "empirical"
     },
     {
       "id": "R02",
@@ -45,7 +46,8 @@
       },
       "sourceStatus": "unverified",
       "note": "인접 프롭 겹침 방지 기하. 0.95는 가정",
-      "claims": []
+      "claims": [],
+      "kind": "definition"
     },
     {
       "id": "R03",
@@ -61,7 +63,8 @@
       "claims": [
         "CL01",
         "CL18"
-      ]
+      ],
+      "kind": "empirical"
     },
     {
       "id": "R04",
@@ -75,7 +78,8 @@
       },
       "sourceStatus": "unverified",
       "note": "현실적 최대 추력 면적밀도 가정",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "R05",
@@ -102,7 +106,8 @@
       "previousConstants": {
         "e_pack_cons_Wh_kg": 180,
         "e_pack_opt_Wh_kg": 280
-      }
+      },
+      "kind": "empirical"
     },
     {
       "id": "R06",
@@ -121,7 +126,8 @@
         "CL19",
         "CL21",
         "CL22"
-      ]
+      ],
+      "kind": "empirical"
     },
     {
       "id": "R07",
@@ -134,7 +140,8 @@
         "vmax_opt": 25
       },
       "sourceStatus": "unverified",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "R08",
@@ -156,7 +163,8 @@
         "교과서: 항공기 항속 방정식(Breguet 계열)",
         "paper-forward-flight-efficiency-patnaik-2025"
       ],
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "R09",
@@ -169,7 +177,8 @@
       },
       "sourceStatus": "unverified",
       "note": "정의식이라 출처 불필요. 허용오차 0.98만 가정",
-      "claims": []
+      "claims": [],
+      "kind": "definition"
     },
     {
       "id": "R10",
@@ -182,7 +191,8 @@
       },
       "sourceStatus": "unverified",
       "note": "제조사 시험표 데이터에 의존. 시험 조건(전압·프롭) 일치 시에만 유효",
-      "claims": []
+      "claims": [],
+      "kind": "definition"
     },
     {
       "id": "R11",
@@ -195,7 +205,8 @@
       },
       "sourceStatus": "unverified",
       "note": "제조사 표기 C값 신뢰 가정",
-      "claims": []
+      "claims": [],
+      "kind": "definition"
     },
     {
       "id": "R12",
@@ -207,7 +218,8 @@
         "tolerance_in": 0.5
       },
       "sourceStatus": "unverified",
-      "claims": []
+      "claims": [],
+      "kind": "heuristic"
     },
     {
       "id": "R13",
@@ -219,7 +231,8 @@
         "tolerance": 1.15
       },
       "sourceStatus": "unverified",
-      "claims": []
+      "claims": [],
+      "kind": "heuristic"
     },
     {
       "id": "R14",
@@ -231,7 +244,12 @@
         "cap": 0.45
       },
       "sourceStatus": "unverified",
-      "claims": []
+      "claims": [
+        "P2509.09024-02",
+        "P2604.00496-01"
+      ],
+      "kind": "heuristic",
+      "note": "2026-10-20: 실측 프레임 질량비 7.1%(QuadSoft 섀시)·약 23.5%(3DFiT F450급)로 상한 0.45는 느슨하지만 모순 없음(상한 용도)"
     },
     {
       "id": "R15",
@@ -241,7 +259,8 @@
       "where": "lib/stage-validate.ts validateTechspec",
       "constants": {},
       "sourceStatus": "unverified",
-      "claims": []
+      "claims": [],
+      "kind": "definition"
     },
     {
       "id": "R16",
@@ -252,7 +271,8 @@
       "constants": {},
       "sourceStatus": "unverified",
       "note": "현재는 프롬프트 문구일 뿐 코드 판정 아님",
-      "claims": []
+      "claims": [],
+      "kind": "heuristic"
     },
     {
       "id": "C01",
@@ -265,7 +285,8 @@
         "CL07"
       ],
       "sourceStatus": "partially-verified",
-      "note": "셀 전압 4.2→3.7V, 환산 평균 4.0V(CL07). 방전곡선·내부저항 수식은 미확보"
+      "note": "셀 전압 4.2→3.7V, 환산 평균 4.0V(CL07). 방전곡선·내부저항 수식은 미확보",
+      "kind": "empirical"
     },
     {
       "id": "C02",
@@ -277,7 +298,8 @@
       "claims": [
         "CL05"
       ],
-      "sourceStatus": "verified"
+      "sourceStatus": "verified",
+      "kind": "empirical"
     },
     {
       "id": "C03",
@@ -297,7 +319,8 @@
         "exponent": 5.2561,
         "T_default_C": 15
       },
-      "note": "고도 입력(선택)이 있으면 호버링 전력·고정익 날개폭에 반영. 디스크 로딩 한계 DL은 밀도 보정하지 않음(근거 없음). 고도 미입력은 해면 15°C(≈1.2257)"
+      "note": "고도 입력(선택)이 있으면 호버링 전력·고정익 날개폭에 반영. 디스크 로딩 한계 DL은 밀도 보정하지 않음(근거 없음). 고도 미입력은 해면 15°C(≈1.2257)",
+      "kind": "empirical"
     },
     {
       "id": "C04",
@@ -313,7 +336,8 @@
         "CL20"
       ],
       "sourceStatus": "partially-verified",
-      "note": "전진 비행이 호버보다 전력이 낮은 구간 존재(CL09), 최적 속도에서 EPM∝질량·v_opt∝√m(CL11,12). 전력 곡선 수식 자체는 아직 코드화 안 함"
+      "note": "전진 비행이 호버보다 전력이 낮은 구간 존재(CL09), 최적 속도에서 EPM∝질량·v_opt∝√m(CL11,12). 전력 곡선 수식 자체는 아직 코드화 안 함",
+      "kind": "empirical"
     },
     {
       "id": "C05",
@@ -322,7 +346,8 @@
       "status": "candidate",
       "reason": "프롭 선정(지름·피치)과 모터 KV 정합성 검사 부재",
       "needsSource": "교과서(BLDC 모터)",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "C06",
@@ -331,7 +356,8 @@
       "status": "candidate",
       "reason": "부품 배치 정보가 없어 현재 판정 불가",
       "needsSource": "교과서",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "C07",
@@ -340,7 +366,8 @@
       "status": "candidate",
       "reason": "고전류 구성의 안전 검사 부재",
       "needsSource": "표준(AWG 허용전류표)",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "C08",
@@ -349,7 +376,8 @@
       "status": "candidate",
       "reason": "거리·주파수·출력으로 링크 성립 여부를 판정 못 함",
       "needsSource": "교과서(Friis), 데이터링크 제조사 사양(수집됨)",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "C09",
@@ -358,7 +386,8 @@
       "status": "candidate",
       "reason": "제조사 값은 g/kg, mAh/Ah, V 혼재",
       "needsSource": "정의(SI)",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     },
     {
       "id": "C10",
@@ -367,7 +396,8 @@
       "status": "candidate",
       "reason": "R05 에너지밀도 가정과 C01 방전 곡선 등이 충돌할 수 있음",
       "needsSource": "해당 없음(메타 규칙)",
-      "claims": []
+      "claims": [],
+      "kind": "empirical"
     }
   ]
 }
