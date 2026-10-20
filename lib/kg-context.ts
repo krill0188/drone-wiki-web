@@ -91,5 +91,6 @@ ${JSON.stringify(sendable)}
 4. evidence_kind가 model-assumption·simulation·cited-secondary인 값은 "실측이 아님"을 함께 씁니다. origin이 wiki인 항목은 "위키 요약 기반"이라고 밝히고 단독 근거로 쓰지 않습니다.
 5. limitations에 적힌 한계를 답변 끝에 "한계" 항목으로 요약합니다.
 6. 계산 예시·추정·날짜를 새로 만들지 않습니다. 근거가 부족하면 부족하다고 씁니다.
-${mode === "json" ? `7. 출력은 JSON 하나만: {"answer": "...", "used_claims": ["C1"...], "used_relations": ["R1"...], "used_pages": ["P1"...]} (코드 블록 없이).` : "7. 한국어 마크다운으로 간결하게 답합니다: 결론 → 근거(출처 ID 포함) → 관계 → 한계."}${table}`
+7. 관계 attrs의 키는 사용자에게 보이는 말로 풀어 씁니다: contA=ESC 연속 전류(A), motorMaxA=모터 최대 전류(A), escCells·motorCells·sharedCells=ESC·모터·함께 쓸 수 있는 셀 수 범위, cells=셀 수. 키 이름(영문 약어)을 그대로 노출하지 않습니다.
+${mode === "json" ? `8. 출력은 JSON 하나만: {"answer": "...", "used_claims": ["C1"...], "used_relations": ["R1"...], "used_pages": ["P1"...]} (코드 블록 없이).` : "8. 한국어 마크다운으로 간결하게 답합니다: 결론 → 근거(출처 ID 포함) → 관계 → 한계."}${table}`
 }
