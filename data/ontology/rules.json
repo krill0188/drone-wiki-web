@@ -49,7 +49,13 @@
         ],
         "humanVerified": null
       },
-      "literatureConflict": "**FM 불일치**: 규칙 0.45~0.6, 문헌 0.5~0.8 / η 0.8 일치"
+      "literatureConflict": "**FM 불일치**: 규칙 0.45~0.6, 문헌 0.5~0.8 / η 0.8 일치",
+      "reviewDecision": {
+        "date": "2026-10-21",
+        "decision": "keep",
+        "rationale": "유지. 규칙의 FM·η는 이상 로터 문헌값(FM 0.5~0.8)이 아니라 실제 기체 4종 역산 종합효율(CL15 0.32~0.47)에 맞춘 값이라, 보수 0.36·낙관 0.48이 문헌 이상값보다 낮은 것은 의도된 보수 편향. 기체 데이터 추가 시 재보정.",
+        "decidedBy": "assistant-recommendation (마스터 위임: '권장대로 진행')"
+      }
     },
     {
       "id": "R02",
@@ -182,7 +188,13 @@
         ],
         "humanVerified": null
       },
-      "literatureConflict": "**불일치**: 실측 사례 18~20%, 직접 지지 출처 없음"
+      "literatureConflict": "**불일치**: 실측 사례 18~20%, 직접 지지 출처 없음",
+      "reviewDecision": {
+        "date": "2026-10-21",
+        "decision": "keep",
+        "rationale": "유지. 실측 비교는 정의가 다르다: 여기서 구조 비율은 '프레임·암·랜딩기어·항전(FC·배선) 질량 ÷ AUW'이며 모터·ESC·프롭·배터리·페이로드는 제외. 페이로드 맞춤 기체 역산 0.29~0.42(CL22)와 보수 0.45·낙관 0.30이 같은 범위. 18~20%는 소형 레이싱 계열 단일 사례라 범용 상한으로 부적합.",
+        "decidedBy": "assistant-recommendation (마스터 위임: '권장대로 진행')"
+      }
     },
     {
       "id": "R07",
@@ -251,7 +263,13 @@
         ],
         "humanVerified": null
       },
-      "literatureConflict": "**부분 불일치**: L/D 6.9~17 범위(설계별 편차 큼), VTOL 비용 미확인"
+      "literatureConflict": "**부분 불일치**: L/D 6.9~17 범위(설계별 편차 큼), VTOL 비용 미확인",
+      "reviewDecision": {
+        "date": "2026-10-21",
+        "decision": "keep",
+        "rationale": "유지. L/D 보수 9·낙관 14는 실측 9.83·7.10과 모델 13.5 사이. VTOL 추가 질량 10%/5%는 근거 부족이므로 출처 확보 전까지 '가정'으로 표기하고 값은 보수 쪽 유지.",
+        "decidedBy": "assistant-recommendation (마스터 위임: '권장대로 진행')"
+      }
     },
     {
       "id": "R09",
@@ -379,7 +397,13 @@
         ],
         "humanVerified": null
       },
-      "literatureConflict": "**간접 지지**: 7.2% MAPE 오차 2배 수준, 직접 명시 없음"
+      "literatureConflict": "**간접 지지**: 7.2% MAPE 오차 2배 수준, 직접 명시 없음",
+      "reviewDecision": {
+        "date": "2026-10-21",
+        "decision": "keep",
+        "rationale": "유지. 질량 합 검증의 허용 오차(AUW 대비 +15%)는 카탈로그 값 누락·반올림을 흡수하는 검증용 여유로, 설계 상수가 아니다. 문헌은 질량 추정 MAPE 7.2%를 보고해 그 약 2배 수준. 직접 근거가 없으므로 unverified 유지.",
+        "decidedBy": "assistant-recommendation (마스터 위임: '권장대로 진행')"
+      }
     },
     {
       "id": "R14",
@@ -409,7 +433,13 @@
         ],
         "humanVerified": null
       },
-      "literatureConflict": "**불일치**: 실측 18%, 고정익 10~20%, 45% 직접 지지 없음"
+      "literatureConflict": "**불일치**: 실측 18%, 고정익 10~20%, 45% 직접 지지 없음",
+      "reviewDecision": {
+        "date": "2026-10-21",
+        "decision": "keep",
+        "rationale": "유지. 프레임 질량 상한 0.45는 '이보다 크면 비현실'을 거르는 느슨한 상한으로, 실측 7~24%와 모순되지 않는다. 상한 용도라 조일 근거가 생기기 전까지 유지.",
+        "decidedBy": "assistant-recommendation (마스터 위임: '권장대로 진행')"
+      }
     },
     {
       "id": "R15",
