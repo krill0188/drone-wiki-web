@@ -26,6 +26,7 @@ export interface Plan {
   excluded: { unverified: number; blocked: number; unreviewedRelations: number }
   suggestions: string[]
   status: "ready" | "insufficient_evidence"
+  basis: "ontology" | "wiki-sourced" | "none" // ontology: 개체·관계·검증 claim이 근거 / wiki-sourced: 온톨로지 미연결, 출처 확인된 위키 요약이 근거
   confidence: "high" | "medium" | "low"
   contested: boolean
 }
@@ -93,7 +94,7 @@ function linkEntities(question: string): { id: string; alias: string }[] {
 }
 
 const tokenize = (t: string) => t.toLowerCase().match(/[a-z][a-z0-9\-]{2,}|[가-힣]{2,}/g) ?? []
-const STOP = new Set(["알려줘", "알려", "무엇", "어떻게", "대한", "관련", "에서", "얼마", "정보", "the", "and", "for", "with", "논문", "어떤", "무슨", "하는", "하기", "있는", "관한", "위한", "대해", "같은", "되는", "된다", "따라", "변해", "달라", "다른", "있나", "있어", "인가", "일까", "해줘", "보여줘", "근거", "얼마나", "어느", "정도"])
+const STOP = new Set(["알려줘", "알려", "무엇", "어떻게", "대한", "관련", "에서", "얼마", "정보", "the", "and", "for", "with", "논문", "어떤", "무슨", "하는", "하기", "있는", "관한", "위한", "대해", "같은", "되는", "된다", "따라", "변해", "달라", "다른", "있나", "있어", "인가", "일까", "해줘", "보여줘", "근거", "얼마나", "어느", "정도", "무엇인가요", "무엇인지", "무엇이", "인가요", "알려주세요", "설명해줘", "설명해주세요", "차이점", "비교", "종류", "장단점", "개요", "정의", "원리", "뭐야", "뭔가요", "대해서"])
 
 function ftsQuery(question: string): string {
   const toks = tokenize(question).filter((t) => !STOP.has(t))
@@ -106,7 +107,7 @@ function ftsQuery(question: string): string {
 }
 
 // ── 관련성 게이트: 흔한 단어(드론·비행…)만 겹친 claim/문서를 근거로 삼지 않는다 ──
-const GENERIC_Q = new Set(["드론", "비행", "uav", "uavs", "drone", "drones", "flight", "방법", "역사", "설명", "정리", "특징", "종류", "최신", "동향", "기술", "시스템", "system", "차이", "사용", "대해", "이란", "무엇인가"])
+const GENERIC_Q = new Set(["드론", "비행", "uav", "uavs", "drone", "drones", "flight", "방법", "역사", "설명", "정리", "특징", "종류", "최신", "동향", "기술", "시스템", "system", "차이", "사용", "대해", "이란", "무엇인가", "연동", "연결", "통합", "적용", "활용", "이용", "구성", "설정", "구현", "선택", "조건", "영향", "현황", "동향", "관련해서"])
 const PARTICLE = /(을|를|은|는|이|가|의|에|에서|로|으로|과|와|도|만|인|란|이란|에서의|에는|으로는)$/
 const stem = (t: string) => (/[가-힣]/.test(t) ? t.replace(PARTICLE, "") : t)
 const dfCache = new Map<string, number>()
@@ -119,7 +120,7 @@ function rareToken(t: string): boolean {
   return df >= 1 && df <= 25 // 코퍼스에 아예 없는 단어(df=0)는 희귀가 아니라 '해당 없음'
 }
 function contentTokens(question: string, ignore?: Set<string>): { orig: string; variants: string[] }[] {
-  return tokenize(question).filter((t) => !STOP.has(t) && !GENERIC_Q.has(t) && !GENERIC_Q.has(stem(t)) && !ignore?.has(stem(t))).map((orig) => {
+  return tokenize(question).filter((t) => !STOP.has(t) && !STOP.has(stem(t)) && !GENERIC_Q.has(t) && !GENERIC_Q.has(stem(t)) && !ignore?.has(stem(t))).map((orig) => {
     const st = stem(orig)
     const vs = new Set<string>([st])
     for (const [ko, ens] of Object.entries(KO_EN)) if (st.startsWith(ko)) ens.forEach((e) => vs.add(e))
@@ -141,12 +142,15 @@ function relevant(question: string, text: string, ignore?: Set<string>): boolean
   return hits / toks.length >= 0.75 && (hits >= 2 || rare)
 }
 
+// 개념·비교·절차형 질문: 텍스트로만 걸린 논문 claim(예: PX4·ArduPilot이 같이 언급된 지연 시간 측정)을 '차이점'의 근거로 쓰면 오답이 된다
+const CONCEPTUAL = /차이|비교|vs\.?|versus|무엇|뭐야|뭔가요|이란|설명|개요|정의|원리|기준|절차|방법|종류|장단점|특징|어떻게/i
+
 const PRED_RANK: Record<string, number> = { madeBy: 0, isA: 1, powersWith: 2, hasCategory: 3, mentions: 4, packFits: 9 }
 
 export function planQuery(question: string, opts?: { domains?: string[] }): Plan {
   const plan: Plan = {
     question, domainFilter: [], domainSource: "none", classes: [], entities: [], relations: [], claims: [], evidence: [], pages: [], limitations: [],
-    excluded: { unverified: 0, blocked: 0, unreviewedRelations: 0 }, suggestions: [], status: "insufficient_evidence", confidence: "low", contested: false,
+    excluded: { unverified: 0, blocked: 0, unreviewedRelations: 0 }, suggestions: [], status: "insufficient_evidence", basis: "none", confidence: "low", contested: false,
   }
   if (!kdb()) { plan.limitations.push("지식 DB를 불러오지 못했습니다."); return plan }
 
@@ -154,6 +158,8 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
   const dd = detectDomains(question, opts?.domains)
   plan.domainFilter = dd.domains; plan.domainSource = dd.source
 
+  // domain 필터 정책: 사용자가 명시한 domain만 하드 필터. 질문에서 추정한 domain은 문서 domain 값이 일관되지 않아(예: ROS2 문서가 gcs-software) 필터로 쓰면 정답 문서가 탈락하므로 우선순위 가산으로만 쓴다.
+  const hardDomain = plan.domainSource === "explicit" ? plan.domainFilter : []
   // 이미 domain 필터로 반영된 단어(예: '하드웨어')는 내용어 일치 계산에서 뺀다
   const domainWords = new Set(plan.domainFilter.flatMap((d) => (DOMAIN_META[d]?.label ?? "").split(/[^가-힣A-Za-z]+/).filter((w) => w.length >= 2)))
 
@@ -230,9 +236,10 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
       if (!r) continue
       if (r.status === "unverified") { plan.excluded.unverified++; continue }
       if (r.status === "blocked") { plan.excluded.blocked++; continue }
+      if (CONCEPTUAL.test(question) && ftsOnly.has(r.id) && r.origin !== "wiki") continue // 개념·비교형 질문에 단어만 겹친 논문 측정값을 근거로 쓰지 않는다
       if (ftsOnly.has(r.id) && !relevant(question, `${r.subject_text ?? ""} ${r.predicate} ${r.object_value} ${r.conditions ?? ""}`, domainWords)) continue
       // domain 필터는 문서에 속한 위키 claim에만 적용한다(온톨로지·논문 claim은 domain이 없다 = 필터 대상이 아님)
-      if (plan.domainFilter.length && r.origin === "wiki" && !(r.domain && plan.domainFilter.includes(r.domain))) continue
+      if (hardDomain.length && r.origin === "wiki" && !(r.domain && hardDomain.includes(r.domain))) continue
       plan.claims.push({ id: r.id, subject: r.subject_id ?? "", subjectText: r.subject_text ?? "", predicate: r.predicate, value: r.object_value, unit: r.unit, conditions: r.conditions, origin: r.origin, status: r.status, confidence: r.confidence, contested: !!r.contested, evidenceKind: r.evidence_kind, documentPath: r.dpath, domain: r.domain, rules: rulesOf(r.id) })
     }
     // 비위키(온톨로지·논문) claim이 앞, 위키 요약은 뒤
@@ -251,22 +258,54 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
       .map((e) => ({ id: e.id, claimId: e.claim_id, sourcePath: e.spath ?? e.ref ?? "", sourceUrl: e.surl ?? "", locator: e.locator ?? "", quote: e.quote.slice(0, 500), verified: !!e.verified, method: e.method ?? "", evidenceType: e.etype, resolved: e.resolved }))
   }
 
-  // 6. canonical 문서 — 선택된 위키 claim의 문서 + domain 필터를 적용한 전문검색(보강용)
-  const pagePaths = new Set(plan.claims.filter((c) => c.documentPath).map((c) => c.documentPath as string))
+  // 6. canonical 문서 — ① 질문의 핵심어가 제목·경로에 있는 문서 ② 선택된 위키 claim의 문서 ③ domain 필터를 적용한 전문검색. 모두 보강용이며 단독 근거로 쓰는 경우는 7단계 기준을 따른다.
+  const pagePaths: string[] = []
+  const addPage = (path: string) => { if (!pagePaths.includes(path) && pagePaths.length < 6) pagePaths.push(path) }
+  // ① 핵심어가 슬러그·제목에 있는 문서를 단어별로 직접 고른다(비교 질문은 두 대상의 문서를 각각 가져와야 하므로 한 문서에 둘이 함께 있을 필요가 없다).
+  //    제목에 너무 많은 문서가 걸리는 일반어(drone·protocol 등)는 건너뛰고, 슬러그 일치를 제목 일치보다 먼저, 신뢰도 high를 먼저 둔다.
+  const titleTokens = [...new Set(contentTokens(question, domainWords).flatMap((t) => t.variants).filter((v) => /^[a-z0-9][a-z0-9\-]{2,}$/.test(v)))].slice(0, 8)
+  for (const tk of titleTokens) {
+    // domain 필터가 있으면 제목 일치 문서에도 그대로 적용한다(위키 문서에 한정되는 필터)
+    const domSql = hardDomain.length ? ` AND domain IN (${hardDomain.map(() => "?").join(",")})` : ""
+    const soft = plan.domainSource === "keyword" && plan.domainFilter.length ? `(domain IN (${plan.domainFilter.map(() => "?").join(",")})) DESC, ` : ""
+    const hits = all<{ path: string; bypath: number }>(`SELECT path, (lower(path) LIKE ?) bypath FROM documents WHERE (lower(title) LIKE ? OR lower(path) LIKE ?)${domSql} ORDER BY bypath DESC, ${soft}(confidence = 'high') DESC, length(path) LIMIT 40`, `%${tk}%`, `%${tk}%`, `%${tk}%`, ...hardDomain, ...(soft ? plan.domainFilter : []))
+    if (hits.length > 0 && hits.length < 40) for (const h of hits.slice(0, 3)) addPage(h.path)
+  }
+  for (const c of plan.claims) if (c.documentPath) addPage(c.documentPath)
   if (fq) {
     try {
-      const dom = plan.domainFilter.length ? ` AND domain IN (${plan.domainFilter.map(() => "?").join(",")})` : ""
-      const rows = all<{ document_id: string }>(`SELECT document_id FROM document_fts WHERE document_fts MATCH ?${dom} ORDER BY bm25(document_fts) LIMIT 14`, fq, ...plan.domainFilter)
+      const dom = hardDomain.length ? ` AND domain IN (${hardDomain.map(() => "?").join(",")})` : ""
+      const rows = all<{ document_id: string }>(`SELECT document_id FROM document_fts WHERE document_fts MATCH ?${dom} ORDER BY bm25(document_fts) LIMIT 14`, fq, ...hardDomain)
       for (const r of rows) {
         const path = r.document_id.replace(/^doc:/, "")
         const d0 = all<{ title: string; body: string }>("SELECT title, body FROM documents WHERE path = ?", path)[0]
-        if (d0 && pagePaths.size < 6 && relevant(question, `${d0.title} ${d0.body.slice(0, 3000)}`, domainWords)) pagePaths.add(path)
+        if (d0 && relevant(question, `${d0.title} ${d0.body.slice(0, 3000)}`, domainWords)) addPage(path)
       }
     } catch { /* FTS 질의 오류는 보강 자료만 빠지는 것이라 무시 */ }
   }
-  for (const path of [...pagePaths].slice(0, 6)) {
+  // 문서 순위: 질문 핵심어(한·영 변형)가 제목·경로에 몇 개 나오는지로 매기고, 핵심어가 하나도 없는 문서는 일치 문서가 2개 이상이면 버린다(본문에 우연히 언급만 된 문서가 답변을 흐리는 것을 막음)
+  const anchors = contentTokens(question, domainWords)
+  const anchorScore = (path: string) => {
+    const r = all<{ title: string; path: string }>("SELECT title, path FROM documents WHERE path = ?", path)[0]
+    const hay = `${r?.title ?? ""} ${r?.path ?? ""}`.toLowerCase()
+    const base = anchors.filter((t) => t.variants.some((v) => hay.includes(v))).length
+    // 인접한 두 질문어를 영어 변형으로 이은 구절(flight controller·flight stack 등)이 제목·경로에 있으면 크게 가산한다 — 일반어 하나(controller)만 겹친 제어이론 문서와 구분
+    const toks = tokenize(question).map((w) => stem(w))
+    const vs = (w: string) => [w, ...Object.entries(KO_EN).filter(([ko]) => w.startsWith(ko)).flatMap(([, ens]) => ens)]
+    let bonus = 0
+    for (let i = 0; i + 1 < toks.length; i++) for (const a of vs(toks[i])) for (const b of vs(toks[i + 1])) if (/^[a-z0-9]/.test(a) && /^[a-z0-9]/.test(b) && new RegExp(`${esc(a)}[ \\-_]${esc(b)}`).test(hay)) bonus = 3
+    return base + bonus
+  }
+  const scored = pagePaths.map((path, i) => ({ path, s: anchorScore(path), i }))
+  const top = Math.max(0, ...scored.map((x) => x.s))
+  // 구절 일치(점수 3 이상)가 있으면 그 문서와 점수가 절반 이상인 문서만 남긴다 — 일반어 하나만 겹친 문서가 답변을 흐리지 않게
+  const minKeep = top >= 3 ? Math.ceil(top / 2) : 1
+  const keep = scored.filter((x) => x.s >= minKeep).length >= 1 && top >= 3 ? scored.filter((x) => x.s >= minKeep) : scored.filter((x) => x.s > 0).length >= 2 ? scored.filter((x) => x.s > 0) : scored
+  pagePaths.length = 0
+  for (const x of keep.sort((a, b) => b.s - a.s || a.i - b.i).slice(0, 5)) pagePaths.push(x.path)
+  for (const path of pagePaths) {
     const d = all<{ title: string; domain: string | null; confidence: string | null; body: string }>("SELECT title, domain, confidence, body FROM documents WHERE path = ?", path)[0]
-    if (d) plan.pages.push({ path, title: d.title, domain: d.domain, confidence: d.confidence, excerpt: d.body.replace(/^#.*$/gm, "").replace(/\s+/g, " ").trim().slice(0, 600), supplementary: true })
+    if (d) plan.pages.push({ path, title: d.title, domain: d.domain, confidence: d.confidence, excerpt: d.body.replace(/^#.*$/gm, "").replace(/\s+/g, " ").trim().slice(0, 1200), supplementary: true })
   }
 
   // 7. 판정 — 온톨로지에 연결된 근거가 있어야 답변 가능(위키 단독 근거 금지)
@@ -274,23 +313,49 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
   const hasEntityFacts = plan.entities.length > 0 && (plan.relations.length > 0 || plan.entities.some((e) => Object.keys(e.attributes).length > 0))
   const wikiClaims = plan.claims.filter((c) => c.origin === "wiki")
   plan.contested = plan.claims.some((c) => c.contested)
+  const wikiSourced = wikiClaims.filter((c) => c.status === "sourced" || c.status === "contested")
   if (groundedClaims.length || hasEntityFacts) {
-    plan.status = "ready"
+    plan.status = "ready"; plan.basis = "ontology"
     const hi = groundedClaims.some((c) => c.confidence === "high") || plan.relations.some((r) => r.predicate === "powersWith" && r.confidence === "high")
     const mid = groundedClaims.length > 0 || plan.entities.length > 0
     plan.confidence = plan.contested ? "low" : hi ? "high" : mid ? "medium" : "low"
+  } else if (wikiSourced.length >= 1 || (plan.pages.length >= 1 && plan.pages.some((p) => p.confidence === "high" || p.confidence === "medium"))) {
+    // 2단계: 온톨로지 개체·관계·검증 claim은 없지만 출처 파일이 확인된 위키 요약이 있다 → 답변하되 '위키 요약 기반'으로 명시하고 신뢰도는 medium을 넘지 않는다
+    // 질문의 희귀한 핵심 개념(위키 문서 15개 이하에만 나오는 말)이 선택된 근거 어디에도 없으면, 위키가 그 주제를 다루지 않는 것이므로 거절한다
+    const hay2 = (plan.pages.map((p) => `${p.title} ${p.path} ${p.excerpt}`).join(" ") + " " + wikiClaims.map((c) => `${c.value}`).join(" ")).toLowerCase()
+    const missingCore = contentTokens(question, domainWords).filter((t) => {
+      if (t.variants.some((v) => hay2.includes(v))) return false
+      const q = t.variants.map((v) => `"${v.replace(/"/g, "")}"`).join(" OR ")
+      let df = 0
+      try { df = all<{ n: number }>("SELECT count(*) n FROM document_fts WHERE document_fts MATCH ?", q)[0]?.n ?? 0 } catch { df = 99 }
+      return df <= 15
+    }).map((t) => t.orig)
+    if (missingCore.length) {
+      plan.limitations.push(`위키가 '${missingCore.join("', '")}' 주제를 직접 다루는 문서를 갖고 있지 않아 답변하지 않습니다.`)
+      const cls0 = plan.classes[0]
+      if (cls0) plan.suggestions = all<{ example_question: string }>("SELECT q.example_question FROM query_candidates q JOIN ontology_nodes n ON n.id = q.node_id WHERE n.class_name = ? ORDER BY q.id LIMIT 3", cls0).map((r) => r.example_question)
+      return plan
+    }
+    plan.status = "ready"; plan.basis = "wiki-sourced"
+    const strongPage = plan.pages.some((p) => p.confidence === "high")
+    plan.confidence = plan.contested ? "low" : strongPage && wikiSourced.length >= 2 ? "medium" : "low"
+    plan.limitations.unshift("온톨로지의 개체·관계·검증 claim과 연결되지 않은 질문입니다. 아래 답변은 출처 파일이 확인된 위키 요약에 근거하며(원문 인용과 문자 단위로 대조되지는 않음) 신뢰도를 높게 두지 않았습니다.")
   } else {
-    plan.limitations.push(wikiClaims.length || plan.pages.length
-      ? "위키 문서에만 근거가 있고 온톨로지의 개체·관계·검증 claim과 연결되지 않아 확정 답변을 만들지 않습니다."
-      : "질문과 연결된 온톨로지 개체·관계·claim이 없습니다.")
+    plan.limitations.push("질문과 연결된 온톨로지 개체·관계·claim, 출처가 확인된 위키 문서가 없습니다.")
     const cls = plan.classes[0]
     if (cls) plan.suggestions = all<{ example_question: string }>("SELECT q.example_question FROM query_candidates q JOIN ontology_nodes n ON n.id = q.node_id WHERE n.class_name = ? ORDER BY q.id LIMIT 3", cls).map((r) => r.example_question)
+  }
+  // 질문의 내용어 중 선택된 근거(문서 발췌·claim·개체)에서 한 번도 나오지 않은 말은 숨기지 않고 한계로 알린다(예: '한국' 관련 내용이 없음)
+  if (plan.status === "ready") {
+    const hay = (plan.pages.map((p) => `${p.title} ${p.path} ${p.excerpt}`).join(" ") + " " + plan.claims.map((c) => `${c.subjectText} ${c.value} ${c.conditions ?? ""}`).join(" ") + " " + plan.entities.map((e) => e.label).join(" ")).toLowerCase()
+    const unc = contentTokens(question, domainWords).filter((t) => !t.variants.some((v) => hay.includes(v))).map((t) => t.orig)
+    if (unc.length) plan.limitations.push(`질문의 '${unc.slice(0, 4).join("', '")}'에 해당하는 내용은 선택된 근거에서 찾지 못했습니다. 그 부분은 답하지 않습니다.`)
   }
   if (plan.excluded.unverified || plan.excluded.blocked) plan.limitations.push(`근거가 확인되지 않은 claim ${plan.excluded.unverified + plan.excluded.blocked}건은 답변에서 제외했습니다.`)
   if (plan.excluded.unreviewedRelations) plan.limitations.push(`사람 검토 전 관계 ${plan.excluded.unreviewedRelations}건은 사용하지 않았습니다.`)
   if (plan.relations.some((r) => r.predicate === "packFits")) plan.limitations.push("packFits는 셀 수만 비교한 느슨한 호환이라 확정 호환이 아닙니다.")
   if (plan.claims.some((c) => ["model-assumption", "simulation", "cited-secondary"].includes(c.evidenceKind))) plan.limitations.push("일부 claim은 모델 가정값·시뮬레이션·2차 인용이라 실측이 아닙니다.")
   if (plan.claims.some((c) => c.origin === "wiki")) plan.limitations.push("위키 요약 기반 claim은 출처 파일은 확인되지만 원문 인용과 문자 단위로 대조되지 않았습니다.")
-  if (plan.domainFilter.length) plan.limitations.push(`domain 필터(${plan.domainSource === "explicit" ? "지정" : "질문에서 식별"}): ${plan.domainFilter.join(", ")} — 위키 문서에만 적용, 논문·제품 claim은 domain이 없어 포함됩니다.`)
+  if (plan.domainFilter.length) plan.limitations.push(plan.domainSource === "explicit" ? `domain 필터(지정): ${plan.domainFilter.join(", ")} — 위키 문서에만 적용, 논문·제품 claim은 domain이 없어 포함됩니다.` : `질문에서 식별한 domain(${plan.domainFilter.join(", ")})은 검색 우선순위에만 반영했습니다(문서의 domain 값이 일관되지 않아 필터로 쓰지 않음).`)
   return plan
 }

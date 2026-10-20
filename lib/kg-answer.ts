@@ -16,6 +16,7 @@ export interface KgAnswer {
   claims: { id: string; subject: string; predicate: string; value: string; status: string; confidence: string; evidence_kind: string; contested: boolean; origin: string }[]
   evidence: { source_path: string; source_url: string; locator: string; quote: string; claim_id: string; verified: boolean }[]
   canonical_pages: { path: string; title: string; domain: string | null }[]
+  basis: "ontology" | "wiki-sourced" | "none"
   confidence: "high" | "medium" | "low"
   contested: boolean
   blocked: boolean
@@ -61,6 +62,7 @@ function contract(plan: Plan, ctx: NimContext | null, answer: string, status: Kg
     claims: wantClaims.map((c) => ({ id: c.id, subject: c.subjectText || c.subject, predicate: c.predicate, value: c.value, status: c.status, confidence: c.confidence, evidence_kind: c.evidenceKind, contested: c.contested, origin: c.origin })),
     evidence: plan.evidence.filter((e) => claimIds.has(e.claimId)).map((e) => ({ source_path: e.sourcePath, source_url: e.sourceUrl, locator: e.locator, quote: e.quote, claim_id: e.claimId, verified: e.verified })),
     canonical_pages: plan.pages.filter((p) => !used.pages.length || used.pages.includes(p.path)).map((p) => ({ path: p.path, title: p.title, domain: p.domain })),
+    basis: plan.basis,
     confidence: conf,
     contested: plan.contested,
     blocked,
@@ -73,9 +75,9 @@ function contract(plan: Plan, ctx: NimContext | null, answer: string, status: Kg
 }
 
 export function insufficientMessage(plan: Plan): string {
-  const wiki = plan.pages.length ? ` 참고로 관련 위키 문서 ${plan.pages.length}건이 있으나 보강 자료일 뿐이라 확정 답변의 근거로 쓰지 않았습니다(${plan.pages.slice(0, 3).map((p) => p.title).join(", ")}).` : ""
+  const why = plan.limitations.find((l) => l.includes("다루는 문서") || l.includes("연결된 온톨로지")) ?? "질문과 연결된 온톨로지 개체·관계·claim, 출처가 확인된 위키 문서가 없습니다."
   const sug = plan.suggestions.length ? ` 이런 질문은 답할 수 있습니다: ${plan.suggestions.join(" / ")}` : ""
-  return `이 질문은 아직 지식그래프에 검증된 근거가 없습니다.${wiki}${sug}`
+  return `이 질문은 지식그래프와 출처가 확인된 위키에서 답할 근거를 찾지 못했습니다. ${why}${sug}`
 }
 
 export async function answerQuestion(question: string, opts: { domains?: string[]; strict?: boolean; generate?: Generate } = {}): Promise<KgAnswer> {
@@ -92,14 +94,15 @@ export async function answerQuestion(question: string, opts: { domains?: string[
   let text = await gen(system, question)
   let parsed = parseJson(text)
   let answer = parsed?.answer ?? text
-  let ver = verifyAnswer(answer, ctx)
+  const ext = (o: typeof parsed) => ((o?.used_claims ?? []).filter((h) => ctx.ids.claims.includes(h)).length + (o?.used_relations ?? []).filter((h) => ctx.ids.relations.includes(h)).length + (o?.used_pages ?? []).filter((h) => ctx.ids.pages.includes(h)).length)
+  let ver = verifyAnswer(answer, ctx, ext(parsed))
   if (!ver.ok) {
     retried = true
     const fix = `\n\n# 서버 검증 위반 (코드가 판정한 사실 — 반드시 고쳐서 다시 쓴다)\n<previous-answer>\n${answer.slice(0, 4000)}\n</previous-answer>\n위반: ${ver.violations.map((v) => `${v.code}(${v.detail})`).join(", ")}\ncontext에 없는 숫자·ID·내용을 모두 빼고, context에 있는 내용으로만 다시 쓴다.`
     text = await gen(system + fix, question)
     parsed = parseJson(text)
     answer = parsed?.answer ?? text
-    ver = verifyAnswer(answer, ctx)
+    ver = verifyAnswer(answer, ctx, ext(parsed))
   }
   const real = (hs: string[], allow: string[]) => [...new Set(hs)].filter((h) => allow.includes(h)).map((h) => ctx.handleMap[h])
   const used = {

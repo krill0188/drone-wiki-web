@@ -10,11 +10,12 @@ const ANSWERABLE = [
   "호버 전력이 무게에 따라 어떻게 변해?", "고정익 양항비 근거", "Hobbywing 제품 뭐 있어?", "Amprius 배터리 에너지밀도", "전진 비행 시 전력 소비는 호버보다 낮아?",
   "고정익 VTOL 엔진 제조사", "ESC 연속전류와 모터 최대전류 관계", "Desert Aircraft DA-35 엔진 사양", "SunnySky 모터 제품",
 ]
-const INSUFFICIENT = ["드론 군집 비행의 역사 알려줘", "김치찌개 레시피", "양자 컴퓨터로 비행제어를 하는 방법", "PX4 오프보드 제어 모드", "한화에어로스페이스 채용 일정", "드론 보험료 비교"]
+const WIKI = ["MAVLink 프로토콜이란 무엇인가요?", "PX4와 ArduPilot의 차이점은?", "드론 비행 컨트롤러 선택 기준", "한국 드론 비행 허가 절차", "PX4 오프보드 제어 모드", "ROS2와 드론 연동 방법"]
+const INSUFFICIENT = ["드론 군집 비행의 역사 알려줘", "김치찌개 레시피", "양자 컴퓨터로 비행제어를 하는 방법", "한화에어로스페이스 채용 일정", "드론 보험료 비교"]
 async function main() {
   const { answerQuestion } = await import("../lib/kg-answer")
   const rows: { q: string; kind: string; status: string; ms: number; nim: boolean; json: boolean | undefined; retried: boolean; viol: string[]; conf: string; claims: number }[] = []
-  for (const [kind, list] of [["answerable", ANSWERABLE], ["insufficient", INSUFFICIENT]] as const) {
+  for (const [kind, list] of [["answerable", ANSWERABLE], ["wiki-tier", WIKI], ["insufficient", INSUFFICIENT]] as const) {
     for (const q of list) {
       const t0 = Date.now()
       try {
@@ -31,7 +32,7 @@ async function main() {
   const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0)
   const ms = nimRows.map((r) => r.ms).sort((a, b) => a - b)
   const q = (p: number) => ms[Math.min(ms.length - 1, Math.floor(ms.length * p))]
-  const ans = rows.filter((r) => r.kind === "answerable"), ins = rows.filter((r) => r.kind === "insufficient")
+  const ans = rows.filter((r) => r.kind !== "insufficient"), ins = rows.filter((r) => r.kind === "insufficient")
   console.log("\n요약")
   console.log(`  NIM 호출 ${nimRows.length}건 · 지연 p50 ${q(0.5)}ms · p95 ${q(0.95)}ms · 최대 ${ms[ms.length - 1]}ms`)
   console.log(`  JSON 계약 준수(첫 시도 파싱 성공): ${nimRows.filter((r) => r.json).length}/${nimRows.length} (${pct(nimRows.filter((r) => r.json).length, nimRows.length)}%)`)

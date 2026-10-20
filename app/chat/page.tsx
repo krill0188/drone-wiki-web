@@ -44,7 +44,7 @@ export default function ChatPage() {
     <div className="max-w-3xl mx-auto px-4 py-8 flex flex-col" style={{ minHeight: "calc(100vh - 120px)" }}>
       <h1 className="text-2xl font-bold mb-1">AI Q&amp;A</h1>
       <p className="text-sm text-slate-500 mb-6">
-        드론 위키 지식 베이스를 RAG로 검색하여 실시간 스트리밍으로 답변합니다
+        온톨로지 지식그래프(제품·논문·공학 규칙)를 우선 근거로, 출처가 확인된 위키 요약을 보강 근거로 답하며 근거 수준을 함께 표시합니다
       </p>
 
       <div className="flex-1 overflow-y-auto space-y-4 mb-4 min-h-[300px]">

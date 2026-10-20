@@ -42,17 +42,18 @@ async function main() {
 
   await t("S0 SQLite가 실제로 호출됨(적재·지문)", () => `fingerprint=${(info as { fingerprint: string }).fingerprint} load=${(info as { loadMs: number }).loadMs}ms`)
 
-  await t("S1 domain 기반 일반 질의: domain 식별 + wiki 문서에만 필터", () => {
+  await t("S1 domain 식별은 우선순위 가산만(필터 아님): 첫 문서가 식별 domain", () => {
     const p = planQuery("하드웨어 배터리 에너지 밀도 근거")
-    ok(p.domainFilter.includes("hardware"), `domain=${p.domainFilter}`)
+    ok(p.domainFilter.includes("hardware") && p.domainSource === "keyword", `domain=${p.domainFilter}/${p.domainSource}`)
     ok(p.status === "ready", p.status)
-    ok(p.pages.every((x) => x.domain === "hardware"), "문서가 domain 필터를 지키지 않음")
+    ok(p.pages[0]?.domain === "hardware", `첫 문서 domain=${p.pages[0]?.domain}`)
     return `domain=${p.domainFilter} 문서=${p.pages.length}`
   })
 
   await t("S1b 명시 domain 지정이 키워드 식별보다 우선", () => {
     const p = planQuery("배터리 에너지 밀도 근거", { domains: ["electrical-power"] })
     ok(p.domainSource === "explicit" && p.domainFilter.join() === "electrical-power", `${p.domainSource}:${p.domainFilter}`)
+    ok(p.pages.every((x) => x.domain === "electrical-power"), `명시 domain은 하드 필터: ${p.pages.map((x) => x.domain)}`)
   })
 
   await t("S2 ontology class 명시 질의: ontology가 위키보다 먼저", () => {
@@ -107,13 +108,16 @@ async function main() {
     const dp = path.join(os.homedir(), "2nd", ".ua", "discovery-knowledge-graph.json")
     if (!fs.existsSync(dp)) { results.push({ name: "S7(skip)", status: "NOT RUN", note: "discovery 파일 없음" }); return }
     const g = JSON.parse(fs.readFileSync(dp, "utf-8")) as { nodes: { label?: string; name?: string; id?: string }[] }
-    // DB 어디에도 없는 discovery 노드명을 찾는다
+    // 위키 본문·제목·claim·별칭 어디에도 전혀 나오지 않는 discovery 노드명을 찾는다(위키가 실제로 다루는 주제는 위키 요약 기반 답변이 정당하므로 제외)
     let picked = ""
     for (const n of g.nodes) {
       const label = String(n.label ?? n.name ?? n.id ?? "")
-      if (label.length < 6 || !/^[A-Za-z][A-Za-z0-9 \-]+$/.test(label)) continue
-      const hit = all<{ n: number }>("SELECT (SELECT count(*) FROM ontology_aliases WHERE alias = ?) + (SELECT count(*) FROM documents WHERE lower(title) LIKE ?) n", label.toLowerCase(), `%${label.toLowerCase()}%`)[0].n
-      if (hit === 0) { picked = label; break }
+      if (label.length < 6 || !/^[A-Za-z][A-Za-z0-9]+$/.test(label)) continue
+      const tokq = `"${label.toLowerCase()}"`
+      const inDocs = all<{ n: number }>("SELECT count(*) n FROM document_fts WHERE document_fts MATCH ?", tokq)[0].n
+      const inClaims = all<{ n: number }>("SELECT count(*) n FROM claim_fts WHERE claim_fts MATCH ?", tokq)[0].n
+      const inAlias = all<{ n: number }>("SELECT count(*) n FROM ontology_aliases WHERE alias = ?", label.toLowerCase())[0].n
+      if (inDocs + inClaims + inAlias === 0) { picked = label; break }
     }
     ok(picked, "DB에 없는 discovery 노드를 찾지 못함")
     const a = await answerQuestion(`${picked} 설명해줘`, { generate: never })
@@ -128,10 +132,50 @@ async function main() {
     }
   })
 
-  await t("S8b 위키에만 근거가 있는 질문은 확정 답변 금지(보강 자료로만 안내)", async () => {
-    const a = await answerQuestion("PX4 오프보드 제어 모드", { generate: never })
-    ok(a.status === "insufficient_evidence" && !a.nim_called, `status=${a.status}`)
-    ok(/보강 자료/.test(a.answer) || a.canonical_pages.length === 0, "위키 문서 안내가 보강 자료로 표기되지 않음")
+  await t("S8b 위키에만 근거가 있는 질문: 위키 요약 기반으로 답하되 신뢰도 high 금지·표기 필수", async () => {
+    const p = planQuery("PX4 오프보드 제어 모드")
+    ok(p.status === "ready" && p.basis === "wiki-sourced", `status=${p.status} basis=${p.basis}`)
+    ok(p.confidence !== "high", "위키 단독 근거인데 high")
+    ok(p.limitations.some((l) => l.includes("온톨로지") && l.includes("위키 요약")), "위키 요약 기반 한계가 표기되지 않음")
+    const ctx = buildNimContext(p)
+    ok(ctx.basis === "wiki-sourced", "context에 basis가 전달되지 않음")
+  })
+
+  await t("W1 MAVLink란 무엇인가요: mavlink 문서를 찾아 위키 요약 기반으로 답변 가능", () => {
+    const p = planQuery("MAVLink 프로토콜이란 무엇인가요?")
+    ok(p.status === "ready" && p.basis === "wiki-sourced" && p.confidence !== "high", `${p.status}/${p.basis}/${p.confidence}`)
+    ok(p.pages.some((x) => /mavlink/.test(x.path)), `문서=${p.pages.map((x) => x.path)}`)
+  })
+
+  await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
+    const p = planQuery("PX4와 ArduPilot의 차이점은?")
+    ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)
+    ok(p.pages.some((x) => /px4/.test(x.path)) && p.pages.some((x) => /ardupilot/.test(x.path)), `문서=${p.pages.map((x) => x.path)}`)
+    ok(!p.claims.some((c) => c.id === "P2601.15486-01"), "지연 시간 측정 claim이 '차이점'의 근거로 쓰임(오답 사례)")
+  })
+
+  await t("W2b ROS2 연동: domain을 필터로 쓰지 않아 ros2 문서(gcs-software)를 찾음", () => {
+    const p = planQuery("ROS2와 드론 연동 방법")
+    ok(p.status === "ready" && p.pages.some((x) => /ros2/.test(x.path)), `${p.status} 문서=${p.pages.map((x) => x.path)}`)
+  })
+
+  await t("W3 비행 컨트롤러 선택 기준: flight-controller 문서가 맨 앞", () => {
+    const p = planQuery("드론 비행 컨트롤러 선택 기준")
+    ok(p.pages[0]?.path.includes("flight-controller"), `첫 문서=${p.pages[0]?.path}`)
+  })
+
+  await t("W4 위키가 다루지 않는 핵심 개념(양자)은 거절하고 이유를 공개", async () => {
+    const a = await answerQuestion("양자 컴퓨터로 비행제어를 하는 방법", { generate: never })
+    ok(a.status === "insufficient_evidence" && !a.nim_called, a.status)
+    ok(/양자/.test(a.answer), "거절 사유에 누락 개념이 없음")
+  })
+
+  await t("W5 근거 표기가 하나도 없는 답변은 위반(missing_citation)", () => {
+    const p = planQuery("MAVLink 프로토콜이란 무엇인가요?")
+    const ctx = buildNimContext(p)
+    ok(verifyAnswer("MAVLink는 통신 프로토콜입니다.", ctx).violations.some((v) => v.code === "missing_citation"), "인용 없는 답변이 통과됨")
+    const h = ctx.ids.pages[0]
+    ok(!verifyAnswer(`MAVLink는 통신 프로토콜입니다 [${h}].`, ctx).violations.some((v) => v.code === "missing_citation"), "인용 있는 답변이 위반 처리됨")
   })
 
   await t("S9 임베딩 실패와 무관: kg-plan은 임베딩·RAG 모듈을 쓰지 않음", () => {

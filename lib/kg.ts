@@ -82,7 +82,7 @@ export function queryKG(question: string): KgResult {
   // 2) 제조사
   const mfrs = G.nodes.filter((n) => n.type === "Manufacturer" && n.label.length >= 3 && has(norm(n.label)))
   // 3) 클래스·규칙
-  const classes = Object.entries(CLASS_ALIAS).filter(([, re]) => re.test(question)).map(([c]) => `class:${c}`)
+  const classes = Object.entries(CLASS_ALIAS).filter(([, re]) => re.test(question)).map(([c]) => `class:${c}`).filter((c) => byId.has(c))
   const rules = Object.entries(RULE_ALIAS).filter(([, re]) => re.test(question)).map(([r]) => `rule:${r}`)
 
   const facts: KgResult["facts"] = []

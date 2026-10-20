@@ -5,7 +5,7 @@ import type { NimContext } from "./kg-context"
 //  V2 답변의 숫자는 모두 context(또는 질문)에 있는 숫자
 //  V3 충돌(contested) claim이 있으면 충돌을 언급
 //  V4 insufficient 판정이면 사실 진술 금지(호출부에서 처리)
-export interface Violation { code: "unknown_id" | "unsupported_number" | "contested_not_flagged" | "empty_answer"; detail: string }
+export interface Violation { code: "unknown_id" | "unsupported_number" | "contested_not_flagged" | "empty_answer" | "missing_citation"; detail: string }
 export interface VerifyResult { ok: boolean; violations: Violation[]; citedClaims: string[]; citedRelations: string[]; citedPages: string[] }
 
 // 핸들 인용: [C1] [R3] [P2]  (구형 [C:id] 형식도 인식해 화이트리스트에 없으면 위반 처리)
@@ -23,7 +23,8 @@ function numbersIn(text: string): Set<string> {
   return out
 }
 
-export function verifyAnswer(answer: string, ctx: NimContext): VerifyResult {
+// externalCitations: JSON 모드에서 모델이 used_claims·used_relations·used_pages 필드로 명시한 근거 수(화이트리스트로 따로 검증됨)
+export function verifyAnswer(answer: string, ctx: NimContext, externalCitations = 0): VerifyResult {
   const violations: Violation[] = []
   if (!answer.trim()) return { ok: false, violations: [{ code: "empty_answer", detail: "답변이 비어 있음" }], citedClaims: [], citedRelations: [], citedPages: [] }
 
@@ -52,6 +53,11 @@ export function verifyAnswer(answer: string, ctx: NimContext): VerifyResult {
     if (!allowed.has(n)) unsupported.add(raw)
   }
   for (const u of unsupported) violations.push({ code: "unsupported_number", detail: u })
+
+  // V2b 인용 누락: 근거가 context에 있는데 답변에 근거 표기([C1]·[R2]·[P3])가 하나도 없으면 어디서 온 내용인지 확인할 수 없다
+  // 위키 요약 기반 답변에만 강제한다: 온톨로지 답변은 계약 응답(claims·evidence·ontology.relations)이 근거를 따로 싣는다.
+  if (ctx.basis === "wiki-sourced" && (ctx.ids.claims.length || ctx.ids.relations.length || ctx.ids.pages.length) && !violations.some((x) => x.code === "unknown_id") && citedClaims.length + citedRelations.length + citedPages.length + externalCitations === 0)
+    violations.push({ code: "missing_citation", detail: "근거 표기 없음" })
 
   // V3 충돌
   if (ctx.verified_claims.some((c) => c.contested) && !/충돌|상이|서로 다른|contested|엇갈/.test(answer)) violations.push({ code: "contested_not_flagged", detail: "충돌 claim이 있는데 답변이 충돌을 언급하지 않음" })

@@ -1,8 +1,12 @@
 // 질의 해석 공용 어휘(클래스·규칙 동의어, 한국어→영어 용어). lib/kg.ts(JSON 경로)와 lib/kg-plan.ts(SQLite 경로)가 함께 쓴다.
 export const CLASS_ALIAS: Record<string, RegExp> = {
   Motor: /모터|motor/i, ESC: /\besc\b|변속기|전자변속/i, Propeller: /프롭|프로펠러|propeller/i, Battery: /배터리|전지|battery|lipo|리튬/i,
-  Frame: /프레임|기체 골격|frame|airframe/i, FlightController: /비행\s*제어기|\bfc\b|flight controller|픽스호크|pixhawk/i,
+  Frame: /프레임|기체 골격|frame|airframe/i, FlightController: /비행\s*(제어기|컨트롤러)|\bfc\b|flight controller|픽스호크|pixhawk/i,
   CompanionComputer: /컴패니언|온보드\s*컴퓨터|임베디드|jetson|젯슨|라즈베리|raspberry|companion/i, Datalink: /데이터\s*링크|통신|텔레메트리|datalink|radio|lte|5g/i,
+  // 공식 클래스 계층(class-hierarchy.json)에 있는 소프트웨어·기체 클래스: 질의 시점에만 인식해 구조(PX4 ⊑ FlightStack ⊑ SoftwareSystem)를 context에 싣는다(문서의 클래스는 바꾸지 않는다)
+  PX4: /px4/i, ArduPilot: /ardupilot|아르두파일럿/i, FlightStack: /비행\s*스택|flight\s*stack|펌웨어|firmware/i, Telemetry: /텔레메트리|telemetry/i,
+  ROS2: /\bros\s*2\b|ros2|mavros/i, Multirotor: /멀티로터|multirotor|쿼드콥터|quadcopter/i, VTOL: /\bvtol\b|수직\s*이착륙/i, FixedWing: /고정익|fixed.?wing/i,
+  GNSS: /gnss|\bgps\b|\brtk\b/i, IMU: /\bimu\b|관성/i, Gimbal: /짐벌|gimbal/i, SwarmCoordinator: /군집|swarm/i,
   Engine: /엔진|내연|가솔린|연료전지|하이브리드\s*발전|\bengine\b|fuel cell/i, Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
 }
 
@@ -20,5 +24,6 @@ export const KO_EN: Record<string, string[]> = {
   전진: ["forward"], 항력: ["drag"], 양력: ["lift"], 용량: ["capacity"], 전압: ["voltage"], 전류: ["current"], 온도: ["temperature"], 고도: ["altitude"], 바람: ["wind"],
   제어: ["control", "controller"], 모드: ["mode"], 오프보드: ["offboard"], 알고리즘: ["algorithm"], 센서: ["sensor"], 프로토콜: ["protocol"], 거리: ["distance", "range"], 시간: ["time", "duration"],
   크기: ["size"], 비용: ["cost"], 성능: ["performance"], 효율: ["efficiency"], 안정성: ["stability", "robust"],
+  컨트롤러: ["controller"], 허가: ["permit", "permission", "authorization", "approval"], 승인: ["approval", "authorization"], 규정: ["regulation", "regulations", "rule"], 한국: ["korea", "korean"], 법규: ["regulation", "law"],
   통신: ["communication", "datalink", "link"], 시뮬레이션: ["simulation", "simulated"], 추론: ["inference"], 처리: ["throughput", "processing"], 정확도: ["accuracy"],
 }
