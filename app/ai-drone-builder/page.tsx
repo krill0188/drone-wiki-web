@@ -76,11 +76,20 @@ function emptyStages(): Record<StageKey, StageState> {
   }
 }
 
+const PROGRESS_LABEL: Record<string, string> = {
+  writing: "초안 작성 중",
+  validating: "서버 규칙 검증 중",
+  rewriting: "위반 항목 재작성 중",
+  repairing: "카탈로그 밖 제품 치환 중",
+  done: "마무리 중",
+}
+
 // SSE(UI message stream)를 읽어 text-delta를 이어 붙인다. 오류 이벤트나 비정상 종료는 throw.
 async function streamStage(
   body: unknown,
   onText: (full: string) => void,
-  signal: AbortSignal
+  signal: AbortSignal,
+  onProgress?: (label: string) => void
 ): Promise<string> {
   const res = await fetch("/api/drone-builder", {
     method: "POST",
@@ -107,7 +116,7 @@ async function streamStage(
       if (!line.startsWith("data:")) continue
       const payload = line.slice(5).trim()
       if (!payload || payload === "[DONE]") continue
-      let evt: { type?: string; delta?: string; errorText?: string }
+      let evt: { type?: string; delta?: string; errorText?: string; data?: { phase?: string; detail?: string; elapsedSec?: number } }
       try {
         evt = JSON.parse(payload)
       } catch {
@@ -116,6 +125,10 @@ async function streamStage(
       if (evt.type === "text-delta" && evt.delta) {
         full += evt.delta
         onText(full)
+      } else if (evt.type === "data-progress" && evt.data?.phase) {
+        // 서버가 검증 모드에서 첫 글자 전에 보내는 진행 단계(응답 본문이 아님)
+        const base = PROGRESS_LABEL[evt.data.phase] ?? evt.data.phase
+        onProgress?.(`${base}${evt.data.detail ? ` (${evt.data.detail})` : ""} · ${evt.data.elapsedSec ?? 0}초`)
       } else if (evt.type === "error") {
         throw new Error(evt.errorText || "AI 생성 중 오류가 발생했습니다.")
       } else if (evt.type === "finish") {
@@ -137,6 +150,7 @@ export default function AiDroneBuilderPage() {
   const [rejectReason, setRejectReason] = useState("")
   const [copied, setCopied] = useState(false)
   const [sessionId, setSessionId] = useState("")
+  const [progress, setProgress] = useState<Partial<Record<StageKey, string>>>({})
 
   const restoredRef = useRef(false)
   const abortRef = useRef<AbortController | null>(null)
@@ -217,7 +231,8 @@ export default function AiDroneBuilderPage() {
       const full = await streamStage(
         { prompt: conceptRef.current, stage: key, context: buildContext(feedback) },
         (text) => patchStage(key, { text }),
-        controller.signal
+        controller.signal,
+        (label) => setProgress((p) => ({ ...p, [key]: label }))
       )
       // 서버 게이트의 재질문·불가 판정이면 승인 단계로 넘기지 않고 컨셉 보완을 요구한다.
       patchStage(key, { status: isGateStopText(full) ? "needs-input" : "review" })
@@ -351,13 +366,14 @@ export default function AiDroneBuilderPage() {
                 <span className="text-xs font-normal text-slate-400">— {s.agent}</span>
                 <span className="ml-auto text-xs font-normal text-slate-500">
                   {STATUS_LABEL[st.status]}
+                  {st.status === "running" && progress[s.key] ? ` · ${progress[s.key]}` : ""}
                   {st.rejections.length > 0 ? ` · 반려 ${st.rejections.length}회` : ""}
                 </span>
               </div>
 
               {st.status !== "pending" && (
                 <div className="p-4 text-sm whitespace-pre-wrap leading-relaxed max-h-[500px] overflow-y-auto">
-                  {st.text || "대기 중..."}
+                  {st.text || (st.status === "running" && progress[s.key] ? `${progress[s.key]}…` : "대기 중...")}
                 </div>
               )}
 

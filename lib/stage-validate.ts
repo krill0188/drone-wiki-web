@@ -276,3 +276,38 @@ export function renderValidation(v: Validation, retried: boolean): string {
   const fail = v.checks.filter((c) => !c.ok).length
   return `\n\n---\n\n## 서버 검증 결과 (코드 판정${retried ? " · 위반 1회 자동 재작성 후" : ""})\n${lines.join("\n")}\n\n${fail ? `⚠ 미해결 위반 ${fail}건 — 위 ❌ 항목은 이 결과에서 해소되지 않았다. 반려 사유에 참고해 다시 생성하거나 컨셉 조건을 조정하라.` : "모든 자동 검증 항목 통과."}`
 }
+
+// 재작성 후에도 남은 'HW 선정안이 카탈로그 밖' 위반을 코드가 직접 고친다(2026-10-21: 운영 3회 측정에서 재작성 1회로는 3/3 잔존).
+// 모터·ESC·배터리는 서버 후보(순위순) 첫 항목으로 치환하고, 그 밖의 분류는 '카탈로그 후보 없음 — 확인 필요'로 바꾼다.
+// 치환은 결과에 그대로 공개되며(repaired 목록), 치환 뒤 검증기를 다시 돌려 파생 위반(전류·에너지 등)도 숨기지 않는다.
+export function repairHwSelections(md: string, d: MatchData, allow?: (selection: string) => boolean): { md: string; repaired: string[] } {
+  const lines = md.split("\n")
+  const repaired: string[] = []
+  const split = (l: string) => l.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim())
+  for (let i = 0; i < lines.length - 1; i++) {
+    if (!lines[i].trim().startsWith("|") || !/구성요소/.test(lines[i]) || !/^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1])) continue
+    const head = split(lines[i])
+    const nameIdx = head.findIndex((h) => /구성요소/.test(h)), selIdx = head.findIndex((h) => /선정안/.test(h))
+    if (nameIdx < 0 || selIdx < 0) return { md, repaired }
+    for (let j = i + 2; j < lines.length && lines[j].trim().startsWith("|"); j++) {
+      const c = split(lines[j])
+      const name = c[nameIdx] ?? "", sel = c[selIdx] ?? ""
+      if (!sel || SKIP_ROW.test(name) || NONE.test(sel) || matchCand(sel, d.cands) || allow?.(sel)) continue
+      const cat = /^(모터|motor)/i.test(name) ? "motor" : /^(esc)/i.test(name) ? "esc" : /^(배터리|battery)/i.test(name) ? "battery" : ""
+      const cand = cat ? d.cands.find((x) => x.category === cat && !x.ratedOnly) : undefined
+      const orig = sel.replace(/\*\*/g, "").slice(0, 60)
+      if (cand) {
+        const qty = qtyOf(sel)
+        const cap = cand.category === "battery" && cand.capMah && !cand.name.includes(String(cand.capMah)) ? ` ${cand.capMah}mAh` : ""
+        c[selIdx] = `${cand.name}${cap}${qty > 1 ? ` × ${qty}` : ""} _(서버 치환: 모델 제안 "${orig}"은 카탈로그 밖)_`
+        repaired.push(`${name}: "${orig}" → ${cand.name}`)
+      } else {
+        c[selIdx] = `카탈로그 후보 없음 — 확인 필요 _(모델 제안 "${orig}"은 카탈로그 밖이라 서버가 제거)_`
+        repaired.push(`${name}: "${orig}" → 후보 없음`)
+      }
+      lines[j] = `| ${c.join(" | ")} |`
+    }
+    break
+  }
+  return { md: lines.join("\n"), repaired }
+}

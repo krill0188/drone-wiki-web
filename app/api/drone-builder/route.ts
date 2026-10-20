@@ -5,7 +5,7 @@ import { wikiModel } from "@/lib/ai-model"
 import { evaluateBuilderGate, parseSpec } from "@/lib/design-gate"
 import { isPaperComponent, matchPaperConfig, paperBlock, specHint, validatePaperConfig } from "@/lib/paper-config"
 import { matchProducts, type MatchData } from "@/lib/product-match"
-import { validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
+import { repairHwSelections, validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
@@ -33,6 +33,8 @@ interface StageContext {
 }
 
 const GROUNDING_EXCERPT_CHARS = 500
+const GEN_TIMEOUT_MS = 120_000 // 1회 생성 상한
+const REWRITE_DEADLINE_MS = 150_000 // 이 시각을 넘기면 재작성 생략
 
 // NVIDIA NIM 무료 엔드포인트는 생성 속도가 들쭉날쭉하므로 단계별 분량을 제한해
 // 제한시간 안에 끝나게 한다(분량 지시 + 토큰 상한을 함께 둔다).
@@ -364,21 +366,43 @@ export async function POST(req: NextRequest) {
       stream: createUIMessageStream({
         execute: async ({ writer }) => {
           writer.write({ type: "start" })
+          // 첫 글자는 검증 뒤에 나가므로, 진행 단계를 먼저 흘려 화면이 멈춘 것처럼 보이지 않게 한다(알 수 없는 type은 구형 클라이언트가 무시).
+          const t0 = Date.now()
+          const progress = (phase: string, detail?: string) => writer.write({ type: "data-progress", data: { phase, detail, elapsedSec: Math.round((Date.now() - t0) / 1000) }, transient: true })
           try {
+            // 한 번의 생성에 시간 상한을 둔다(NVIDIA 지연 꼬리 205초 사례). 상한에 닿으면 모델 체인이 다음 모델로 넘어간다.
             const gen = async (extra: string) => {
-              const r = streamText({ model: wikiModel("builder"), system: fullSystem(extra), maxOutputTokens: limit.maxOutputTokens, prompt: `드론 컨셉: ${prompt}` })
+              const r = streamText({ model: wikiModel("builder"), system: fullSystem(extra), maxOutputTokens: limit.maxOutputTokens, prompt: `드론 컨셉: ${prompt}`, abortSignal: AbortSignal.timeout(GEN_TIMEOUT_MS) })
               return (await r.text).trim()
             }
+            progress("writing")
             let text = await gen("")
+            progress("validating")
             let v = validate(text)
             let retried = false
-            if (v.issues.length) {
+            // 재작성은 남은 시간이 충분할 때만 한다(전체 예산 초과 시 위반을 그대로 공개).
+            if (v.issues.length && Date.now() - t0 < REWRITE_DEADLINE_MS) {
               retried = true
+              progress("rewriting", `${v.issues.length}건 위반`)
               const fix = `\n\n# 서버 검증 위반 (코드가 판정한 사실 — 반드시 고쳐서 다시 쓴다)\n<previous-output>\n${text.slice(0, 6000)}\n</previous-output>\n${v.issues.map((x, i) => `${i + 1}. ${x}`).join("\n")}\n위 위반을 모두 해소해 이 단계 결과를 처음부터 다시 작성하되, 위반이 아닌 부분은 유지하고 출력 형식은 그대로 따른다.`
-              const second = await gen(fix)
-              if (second) { text = second; v = validate(text) }
+              try {
+                const second = await gen(fix)
+                if (second) { text = second; v = validate(text) }
+              } catch { /* 재작성 실패·시간 초과: 1차 결과로 계속 */ }
             }
-            const out = text + renderValidation(v, retried)
+            // 그래도 남은 'HW 카탈로그 밖 선정'은 코드가 직접 치환하고 그 사실을 공개한다.
+            let repairNote = ""
+            if (stage === "hw" && v.issues.some((x) => x.startsWith("카탈로그 후보에 없는 제품"))) {
+              progress("repairing")
+              const rep = repairHwSelections(text, data, paper ? (sel) => isPaperComponent(sel, paper) : undefined)
+              if (rep.repaired.length) {
+                text = rep.md
+                v = validate(text)
+                repairNote = `\n\n> 서버 치환 ${rep.repaired.length}건 (모델이 카탈로그 밖 제품을 골라 코드가 바꿈): ${rep.repaired.join(" ; ")}`
+              }
+            }
+            const out = text + repairNote + renderValidation(v, retried)
+            progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })
             for (let i = 0; i < out.length; i += 600) writer.write({ type: "text-delta", id, delta: out.slice(i, i + 600) })
