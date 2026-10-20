@@ -16,6 +16,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Lifting-wing Quadcopter Modeling and Unified Control",
     "published": "2023-01-02"
@@ -36,6 +37,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Lifting-wing Quadcopter Modeling and Unified Control",
     "published": "2023-01-02"
@@ -56,6 +58,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
     "published": "2023-01-29"
@@ -76,6 +79,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
     "published": "2023-01-29"
@@ -96,6 +100,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
     "published": "2023-01-29"
@@ -116,6 +121,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
     "published": "2023-01-29"
@@ -136,6 +142,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "A bi-level co-design approach for multicopters",
     "published": "2023-01-30"
@@ -158,6 +165,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A bi-level co-design approach for multicopters",
     "published": "2023-01-30"
@@ -178,6 +186,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Onboard dynamic-object detection and tracking for autonomous robot navigation with RGB-D camera",
     "published": "2023-02-28"
@@ -198,6 +207,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Numerical and Experimental Study on the Addition of Surface Roughness to Micro-Propellers",
     "published": "2023-06-29"
@@ -218,6 +228,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Numerical and Experimental Study on the Addition of Surface Roughness to Micro-Propellers",
     "published": "2023-06-29"
@@ -240,6 +251,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
     "published": "2023-07-12"
@@ -263,6 +275,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
     "published": "2023-07-12"
@@ -286,6 +299,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
     "published": "2023-07-12"
@@ -306,6 +320,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Agilicious: Open-Source and Open-Hardware Agile Quadrotor for Vision-Based Flight",
     "published": "2023-07-12"
@@ -328,6 +343,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Fully Onboard SLAM for Distributed Mapping with a Swarm of Nano-Drones",
     "published": "2023-09-07"
@@ -348,6 +364,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Fully Onboard SLAM for Distributed Mapping with a Swarm of Nano-Drones",
     "published": "2023-09-07"
@@ -370,6 +387,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -390,6 +408,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -410,6 +429,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -432,6 +452,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -454,6 +475,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -476,6 +498,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -498,6 +521,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -518,6 +542,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -540,6 +565,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -560,6 +586,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
@@ -582,6 +609,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Aerial Base Stations: Practical Considerations for Power Consumption and Service Time",
     "published": "2023-10-07"
@@ -604,6 +632,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Aerial Base Stations: Practical Considerations for Power Consumption and Service Time",
     "published": "2023-10-07"
@@ -624,6 +653,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Aerial Base Stations: Practical Considerations for Power Consumption and Service Time",
     "published": "2023-10-07"
@@ -644,6 +674,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Digital Twin of a DC Brushless Electric Motor-Propeller System with Application to Drone Dynamics",
     "published": "2023-12-15"
@@ -664,6 +695,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Digital Twin of a DC Brushless Electric Motor-Propeller System with Application to Drone Dynamics",
     "published": "2023-12-15"
@@ -684,6 +716,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Digital Twin of a DC Brushless Electric Motor-Propeller System with Application to Drone Dynamics",
     "published": "2023-12-15"
@@ -706,6 +739,7 @@
    "status": "verified",
    "topic": "vtol-fixedwing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Hybrid Aerodynamics-Based Model Predictive Control for a Tail-Sitter UAV",
     "published": "2023-12-22"
@@ -726,6 +760,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Hybrid Aerodynamics-Based Model Predictive Control for a Tail-Sitter UAV",
     "published": "2023-12-22"
@@ -746,6 +781,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
     "published": "2024-01-04"
@@ -766,6 +802,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
     "published": "2024-01-04"
@@ -786,6 +823,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
     "published": "2024-01-04"
@@ -808,6 +846,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Autonomous Overhead Powerline Recharging for Uninterrupted Drone Operations",
     "published": "2024-03-11"
@@ -830,6 +869,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Autonomous Overhead Powerline Recharging for Uninterrupted Drone Operations",
     "published": "2024-03-11"
@@ -850,6 +890,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Autonomous Overhead Powerline Recharging for Uninterrupted Drone Operations",
     "published": "2024-03-11"
@@ -872,6 +913,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BatDeck: Advancing Nano-drone Navigation with Low-power Ultrasound-based Obstacle Avoidance",
     "published": "2024-03-25"
@@ -892,6 +934,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Code Generation and Conic Constraints for Model-Predictive Control on Microcontrollers with Conic-TinyMPC",
     "published": "2024-03-26"
@@ -912,6 +955,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Advanced Algorithms for Autonomous Guidance of Solar-powered UAVs",
     "published": "2024-03-28"
@@ -932,6 +976,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A Hybrid Probabilistic Battery Health Management Approach for Robust Inspection Drone Operations",
     "published": "2024-04-24"
@@ -955,6 +1000,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
     "published": "2024-06-27"
@@ -977,6 +1023,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
     "published": "2024-06-27"
@@ -997,6 +1044,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
     "published": "2024-06-27"
@@ -1019,6 +1067,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
     "published": "2024-06-30"
@@ -1041,6 +1090,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
     "published": "2024-06-30"
@@ -1063,6 +1113,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
     "published": "2024-06-30"
@@ -1085,6 +1136,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "UniQuad: A Unified and Versatile Quadrotor Platform Series for UAV Research and Application",
     "published": "2024-06-30"
@@ -1105,6 +1157,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Detecting Wildfires on UAVs with Real-time Segmentation Trained by Larger Teacher Models",
     "published": "2024-08-19"
@@ -1125,6 +1178,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BlabberSeg: Real-Time Embedded Open-Vocabulary Aerial Segmentation",
     "published": "2024-10-16"
@@ -1145,6 +1199,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BlabberSeg: Real-Time Embedded Open-Vocabulary Aerial Segmentation",
     "published": "2024-10-16"
@@ -1165,6 +1220,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Energy-Optimal Planning of Waypoint-Based UAV Missions -- Does Minimum Distance Mean Minimum Energy?",
     "published": "2024-10-23"
@@ -1187,6 +1243,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A Generalized Thrust Estimation and Control Approach for Multirotors Micro Aerial Vehicles",
     "published": "2024-12-03"
@@ -1207,6 +1264,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A Generalized Thrust Estimation and Control Approach for Multirotors Micro Aerial Vehicles",
     "published": "2024-12-03"
@@ -1227,6 +1285,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
     "published": "2024-12-13"
@@ -1249,6 +1308,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
     "published": "2024-12-13"
@@ -1269,6 +1329,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
     "published": "2024-12-13"
@@ -1289,6 +1350,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Adaptive Heuristics for Scheduling DNN Inferencing on Edge and Cloud for Personalized UAV Fleets",
     "published": "2024-12-30"
@@ -1309,6 +1371,7 @@
    "status": "verified",
    "topic": "other",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Adaptive Heuristics for Scheduling DNN Inferencing on Edge and Cloud for Personalized UAV Fleets",
     "published": "2024-12-30"
@@ -1331,6 +1394,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Enhancing Multirotor Drone Efficiency: Exploring Minimum Energy Consumption Rate of Forward Flight under Varying Payload",
     "published": "2025-01-06"
@@ -1353,6 +1417,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Enhancing Multirotor Drone Efficiency: Exploring Minimum Energy Consumption Rate of Forward Flight under Varying Payload",
     "published": "2025-01-06"
@@ -1375,6 +1440,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Enhancing Multirotor Drone Efficiency: Exploring Minimum Energy Consumption Rate of Forward Flight under Varying Payload",
     "published": "2025-01-06"
@@ -1395,6 +1461,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TakuNet: an Energy-Efficient CNN for Real-Time Inference on Embedded UAV systems in Emergency Response Scenarios",
     "published": "2025-01-10"
@@ -1415,6 +1482,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TakuNet: an Energy-Efficient CNN for Real-Time Inference on Embedded UAV systems in Emergency Response Scenarios",
     "published": "2025-01-10"
@@ -1435,6 +1503,7 @@
    "status": "verified",
    "topic": "other",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Drone Carrier: An Integrated Unmanned Surface Vehicle for Autonomous Inspection and Intervention in GNSS-Denied Maritime Environment",
     "published": "2025-01-22"
@@ -1457,6 +1526,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
     "published": "2025-03-20"
@@ -1479,6 +1549,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
     "published": "2025-03-20"
@@ -1501,6 +1572,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
     "published": "2025-03-20"
@@ -1524,6 +1596,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
     "published": "2025-04-10"
@@ -1544,6 +1617,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
     "published": "2025-04-10"
@@ -1566,6 +1640,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
     "published": "2025-04-10"
@@ -1588,6 +1663,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Cable Optimization and Drag Estimation for Tether-Powered Multirotor UAVs",
     "published": "2025-04-10"
@@ -1610,6 +1686,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Towards Task-Oriented Flying: Framework, Infrastructure, and Principles",
     "published": "2025-04-21"
@@ -1630,6 +1707,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "5G Aero: A Prototyping Platform for Evaluating Aerial 5G Communications",
     "published": "2025-06-10"
@@ -1650,6 +1728,7 @@
    "status": "verified",
    "topic": "comms",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Dynamically Tunable Helical Antenna",
     "published": "2025-06-16"
@@ -1670,6 +1749,7 @@
    "status": "verified",
    "topic": "comms",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Dynamically Tunable Helical Antenna",
     "published": "2025-06-16"
@@ -1690,6 +1770,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Ground-Effect-Aware Modeling and Control for Multicopters",
     "published": "2025-06-24"
@@ -1710,6 +1791,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Modeling and control of a low-cost multirotor hybrid aerial underwater vehicle",
     "published": "2025-07-05"
@@ -1730,6 +1812,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "From Photons to Physics: Autonomous Indoor Drones and the Future of Objective Property Assessment",
     "published": "2025-08-04"
@@ -1750,6 +1833,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "From Photons to Physics: Autonomous Indoor Drones and the Future of Objective Property Assessment",
     "published": "2025-08-04"
@@ -1772,6 +1856,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
     "published": "2025-09-10"
@@ -1794,6 +1879,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
     "published": "2025-09-10"
@@ -1814,6 +1900,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
     "published": "2025-09-10"
@@ -1834,6 +1921,7 @@
    "status": "verified",
    "topic": "other",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "RAPTOR: A Foundation Policy for Quadrotor Control",
     "published": "2025-09-15"
@@ -1854,6 +1942,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Development and Flight Trial of a UAV-based Gamma Ray and Neutron Detection System for Large-Area Radioactivity Mapping and Source Activity Estimation",
     "published": "2025-10-28"
@@ -1874,6 +1963,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A Comprehensive Review of Advancements in Powering and Charging Systems for Unmanned Aerial Vehicles",
     "published": "2025-11-17"
@@ -1894,6 +1984,7 @@
    "status": "verified",
    "topic": "other",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A Comprehensive Review of Advancements in Powering and Charging Systems for Unmanned Aerial Vehicles",
     "published": "2025-11-17"
@@ -1914,6 +2005,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "LEARN: Learning End-to-End Aerial Resource-Constrained Multi-Robot Navigation",
     "published": "2025-11-21"
@@ -1936,6 +2028,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nonlinear System Identification Nano-drone Benchmark",
     "published": "2025-12-16"
@@ -1958,6 +2051,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nonlinear System Identification Nano-drone Benchmark",
     "published": "2025-12-16"
@@ -1978,6 +2072,7 @@
    "status": "verified",
    "topic": "other",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Low-Latency Quasi-Static Modeling of UAV Tether Aerodynamics",
     "published": "2025-12-27"
@@ -1998,6 +2093,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Low-Latency Quasi-Static Modeling of UAV Tether Aerodynamics",
     "published": "2025-12-27"
@@ -2018,6 +2114,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "NanoCockpit: Performance-optimized Application Framework for AI-based Autonomous Nanorobotics",
     "published": "2026-01-12"
@@ -2038,6 +2135,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "NanoCockpit: Performance-optimized Application Framework for AI-based Autonomous Nanorobotics",
     "published": "2026-01-12"
@@ -2058,6 +2156,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Exploiting Light To Enhance The Endurance and Navigation of Lighter-Than-Air Micro-Drones",
     "published": "2026-01-19"
@@ -2078,6 +2177,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Exploiting Light To Enhance The Endurance and Navigation of Lighter-Than-Air Micro-Drones",
     "published": "2026-01-19"
@@ -2098,6 +2198,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "An LLM-Agnostic, MAVLink-Based Drone Command and Control Interface and Agentic Harness Using the Model Context Protocol",
     "published": "2026-01-21"
@@ -2118,6 +2219,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Efficient Adjoint-based Design Optimization with Optimal Control",
     "published": "2026-02-16"
@@ -2138,6 +2240,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Self-supervised Domain Adaptation for Visual 3D Pose Estimation of Nano-drone Racing Gates by Enforcing Geometric Consistency",
     "published": "2026-03-03"
@@ -2160,6 +2263,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "How to Model Your Crazyflie Brushless",
     "published": "2026-03-06"
@@ -2180,6 +2284,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Adaptive SINDy: Residual Force System Identification Based UAV Disturbance Rejection",
     "published": "2026-03-09"
@@ -2200,6 +2305,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Fly, Track, Land: Infrastructure-less Magnetic Localization for Heterogeneous UAV-UGV Teaming",
     "published": "2026-03-09"
@@ -2220,6 +2326,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "On Real-Time Feasibility of High-Rate MPC using an Active-Set Method on Nano-Quadcopters",
     "published": "2026-03-10"
@@ -2242,6 +2349,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "NanoBench: A Multi-Task Benchmark Dataset for Nano-Quadrotor System Identification, Control, and State Estimation",
     "published": "2026-03-10"
@@ -2262,6 +2370,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "NanoBench: A Multi-Task Benchmark Dataset for Nano-Quadrotor System Identification, Control, and State Estimation",
     "published": "2026-03-10"
@@ -2285,6 +2394,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Motion-Specific Battery Health Assessment for Quadrotors Using High-Fidelity Battery Models",
     "published": "2026-03-13"
@@ -2305,6 +2415,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Motion-Specific Battery Health Assessment for Quadrotors Using High-Fidelity Battery Models",
     "published": "2026-03-13"
@@ -2327,6 +2438,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Motion-Specific Battery Health Assessment for Quadrotors Using High-Fidelity Battery Models",
     "published": "2026-03-13"
@@ -2349,6 +2461,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
     "published": "2026-03-16"
@@ -2371,6 +2484,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
     "published": "2026-03-16"
@@ -2391,6 +2505,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "EAAE: Energy-Aware Autonomous Exploration for UAVs in Unknown 3D Environments",
     "published": "2026-03-16"
@@ -2411,6 +2526,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "MapForest: A Modular Field Robotics System for Forest Mapping and Invasive Species Localization",
     "published": "2026-03-23"
@@ -2431,6 +2547,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Real-Time Branch-to-Tool Distance Estimation for Autonomous UAV Pruning: Benchmarking Five DEFOM-Stereo Variants from Simulation to Jetson Deployment",
     "published": "2026-03-27"
@@ -2451,6 +2568,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Real-Time Branch-to-Tool Distance Estimation for Autonomous UAV Pruning: Benchmarking Five DEFOM-Stereo Variants from Simulation to Jetson Deployment",
     "published": "2026-03-27"
@@ -2471,6 +2589,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BlankSkip: Early-exit Object Detection onboard Nano-drones",
     "published": "2026-03-30"
@@ -2491,6 +2610,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BlankSkip: Early-exit Object Detection onboard Nano-drones",
     "published": "2026-03-30"
@@ -2514,6 +2634,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "The QuadSoft: Design, Construction, and Experimental Validation of a Soft and Actuated Quadrotor",
     "published": "2026-04-01"
@@ -2537,6 +2658,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "cited-secondary",
    "paper": {
     "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
     "published": "2026-04-08"
@@ -2559,6 +2681,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
     "published": "2026-04-08"
@@ -2581,6 +2704,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
     "published": "2026-04-08"
@@ -2601,6 +2725,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Energy-Efficient Drone Logistics for Last-Mile Delivery: Implications of Payload-Dependent Routing Strategies",
     "published": "2026-04-08"
@@ -2621,6 +2746,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "A Lightweight Toggleable Adhesion Prototype for Multirotor UAV Landing on Tilting Platforms",
     "published": "2026-04-24"
@@ -2641,6 +2767,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Resource-Constrained UAV-Based Weed Detection for Site-Specific Management on Edge Devices",
     "published": "2026-04-25"
@@ -2661,6 +2788,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "cited-secondary",
    "paper": {
     "title": "Real-Time Frame- and Event-based Object Detection with Spiking Neural Networks on Edge Neuromorphic Hardware: Design, Deployment and Benchmark",
     "published": "2026-04-30"
@@ -2681,6 +2809,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TinySDP: Real Time Semidefinite Optimization for Certifiable and Agile Edge Robotics",
     "published": "2026-05-13"
@@ -2701,6 +2830,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TinySDP: Real Time Semidefinite Optimization for Certifiable and Agile Edge Robotics",
     "published": "2026-05-13"
@@ -2723,6 +2853,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
@@ -2745,6 +2876,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
@@ -2765,6 +2897,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
@@ -2787,6 +2920,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
@@ -2807,6 +2941,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
@@ -2827,6 +2962,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AcroRL: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust",
     "published": "2026-05-23"
@@ -2847,6 +2983,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AcroRL: Learning Aggressive Quadrotor Inversion using Bidirectional Thrust",
     "published": "2026-05-23"
@@ -2869,6 +3006,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Systems-Level Planning and Coordination of Truck-Drone Collaborative Delivery Networks",
     "published": "2026-06-07"
@@ -2892,6 +3030,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Systems-Level Planning and Coordination of Truck-Drone Collaborative Delivery Networks",
     "published": "2026-06-07"
@@ -2914,6 +3053,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Learning to Throw: Agile and Accurate Cable-Suspended Payload Delivery with a Quadrotor",
     "published": "2026-06-25"
@@ -2936,6 +3076,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Wind-Aware Reinforcement Learning Control of a Small Quadrotor Using Learned Onboard Wind Estimation in Simulated Atmospheric Turbulence",
     "published": "2026-07-01"
@@ -2956,6 +3097,7 @@
    "status": "verified",
    "topic": "other",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Direct Rotor Thrust Sensing and Feedback Control for Disturbance Rejection of Multirotors Using Load-cells",
     "published": "2026-07-11"
@@ -2976,6 +3118,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
     "published": "2026-07-14"
@@ -2996,6 +3139,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
     "published": "2026-07-14"
@@ -3016,6 +3160,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
     "published": "2026-07-14"
@@ -3036,6 +3181,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Moving Like a Human: Ego-Motion-Normalized Temporal Signatures for Real-Time Aerial Person Tracking on Milliwatt-Class Hardware",
     "published": "2026-07-09"
@@ -3056,6 +3202,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Moving Like a Human: Ego-Motion-Normalized Temporal Signatures for Real-Time Aerial Person Tracking on Milliwatt-Class Hardware",
     "published": "2026-07-09"
@@ -3076,6 +3223,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "NGPS: GPS-Denied Aerial Geo-Localization and 2.5D Reconstruction via Deep Satellite Image Matching and Multi-Rate Sensor Fusion",
     "published": "2026-07-21"
@@ -3096,6 +3244,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Flight-Ready LiDAR-Inertial Odometry for Embedded Drone Platforms",
     "published": "2026-07-24"
@@ -3118,6 +3267,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3140,6 +3290,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3162,6 +3313,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3184,6 +3336,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3206,6 +3359,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3228,6 +3382,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3250,6 +3405,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3272,6 +3428,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3292,6 +3449,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3315,6 +3473,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
@@ -3337,6 +3496,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
     "published": "2026-07-26"
@@ -3359,6 +3519,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
     "published": "2026-07-26"
@@ -3381,6 +3542,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
     "published": "2026-07-26"
@@ -3403,6 +3565,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
     "published": "2026-07-26"
@@ -3423,6 +3586,7 @@
    "status": "verified",
    "topic": "battery",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
     "published": "2026-07-26"
@@ -3443,6 +3607,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "FlowPilot: Real-Time World-Action Modeling for Agile UAV Navigation",
     "published": "2026-08-01"
@@ -3465,6 +3630,7 @@
    "status": "verified",
    "topic": "structure",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Hoverflie: An empirical investigation of rotor shrouds to transform micro air vehicles into multi-modal hovercraft",
     "published": "2026-08-07"
@@ -3485,6 +3651,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Hoverflie: An empirical investigation of rotor shrouds to transform micro air vehicles into multi-modal hovercraft",
     "published": "2026-08-07"
@@ -3507,6 +3674,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Effector-Centric NMPC of Tiltable-Multirotors for Offset-Free Omnidirectional Aerial Manipulation",
     "published": "2026-08-18"
@@ -3527,6 +3695,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Effector-Centric NMPC of Tiltable-Multirotors for Offset-Free Omnidirectional Aerial Manipulation",
     "published": "2026-08-18"
@@ -3547,6 +3716,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces",
     "published": "2026-08-24"
@@ -3569,6 +3739,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces",
     "published": "2026-08-24"
@@ -3591,6 +3762,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Spinning Quadrotor: Hover Thrust Augmentation with Passive Lifting Surfaces",
     "published": "2026-08-24"
@@ -3613,6 +3785,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
     "published": "2026-08-25"
@@ -3635,6 +3808,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
     "published": "2026-08-25"
@@ -3655,6 +3829,7 @@
    "status": "verified",
    "topic": "forward-flight",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
     "published": "2026-08-25"
@@ -3675,6 +3850,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AccelMPC: High-Rate, Low-Power FPGA-Accelerated Model Predictive Control for Tiny Drones",
     "published": "2026-09-08"
@@ -3695,6 +3871,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AccelMPC: High-Rate, Low-Power FPGA-Accelerated Model Predictive Control for Tiny Drones",
     "published": "2026-09-08"
@@ -3717,6 +3894,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "model-assumption",
    "paper": {
     "title": "Battery-Aware Predictive Trajectory Planning and Control for Multirotors Under Disturbances",
     "published": "2026-09-10"
@@ -3737,6 +3915,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "simulation",
    "paper": {
     "title": "Battery-Aware Predictive Trajectory Planning and Control for Multirotors Under Disturbances",
     "published": "2026-09-10"
@@ -3757,6 +3936,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
     "published": "2026-09-15"
@@ -3777,6 +3957,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TIO-Former: Ultra-Lightweight 6-Directional ToF-Inertial Odometry for Nano-UAVs via a Streaming Causal Transformer",
     "published": "2026-09-15"
@@ -3799,6 +3980,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
     "published": "2026-09-17"
@@ -3821,6 +4003,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
     "published": "2026-09-17"
@@ -3843,6 +4026,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
     "published": "2026-09-17"
@@ -3865,6 +4049,7 @@
    "status": "verified",
    "topic": "energy",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
     "published": "2026-09-17"
@@ -3885,6 +4070,7 @@
    "status": "verified",
    "topic": "sizing",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
     "published": "2026-09-17"
@@ -3905,6 +4091,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "RAYA: Learning Where and When to Intervene for Robot Recovery",
     "published": "2026-09-18"
@@ -3925,6 +4112,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
     "published": "2026-09-24"
@@ -3945,6 +4133,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "TinyCVIO: A Constellation-Aided Visual-Inertial Odometry System for Nanodrones",
     "published": "2026-09-24"
@@ -3965,6 +4154,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Normalise or condition? Noise-floor front-ends for on-board keyword spotting under UAV rotor ego-noise",
     "published": "2026-09-19"
@@ -3985,6 +4175,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Aware Reinforcement Learning for Aggressive Quadrotor Flight",
     "published": "2026-09-29"
@@ -4007,6 +4198,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Battery-Aware Reinforcement Learning for Aggressive Quadrotor Flight",
     "published": "2026-09-29"
@@ -4027,6 +4219,7 @@
    "status": "verified",
    "topic": "payload",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Toward Lightweight Aerial 5G gNBs: Reproducible OAI Testbed on Commodity ARM Platforms",
     "published": "2026-10-04"
@@ -4047,6 +4240,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
     "published": "2026-10-06"
@@ -4067,6 +4261,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
     "published": "2026-10-06"
@@ -4087,6 +4282,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
     "published": "2026-10-06"
@@ -4107,6 +4303,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
     "published": "2026-10-06"
@@ -4129,6 +4326,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
     "published": "2026-10-06"
@@ -4149,6 +4347,7 @@
    "status": "verified",
    "topic": "propulsion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Nested Power Models for Multirotor Propulsion: From Aerodynamic Drag to Electrical Losses",
     "published": "2026-10-06"
@@ -4169,6 +4368,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "GLIO2: A GPU-Parallelized Tightly-Coupled LiDAR-Inertial-GNSS System for Robust and Real-Time Global Localization and Mapping",
     "published": "2026-10-08"
@@ -4191,6 +4391,7 @@
    "status": "verified",
    "topic": "build",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Stereo-Planner: Learning Stereo-to-Trajectory Planning for Zero-Shot Sim-to-Real Quadrotor Navigation",
     "published": "2026-10-11"
@@ -4211,6 +4412,7 @@
    "status": "verified",
    "topic": "companion",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Stereo-Planner: Learning Stereo-to-Trajectory Planning for Zero-Shot Sim-to-Real Quadrotor Navigation",
     "published": "2026-10-11"
@@ -4233,6 +4435,7 @@
    "status": "verified",
    "topic": "flight-controller",
    "note": "",
+   "evidenceKind": "reported",
    "paper": {
     "title": "Stereo-Planner: Learning Stereo-to-Trajectory Planning for Zero-Shot Sim-to-Real Quadrotor Navigation",
     "published": "2026-10-11"

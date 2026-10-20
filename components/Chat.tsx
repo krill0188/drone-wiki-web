@@ -8,6 +8,8 @@ import { DOMAIN_META } from "@/lib/types"
 import DroneIcon from "@/components/DroneIcon"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
+
+const KIND_LABEL = { "model-assumption": "⚠모델 가정값", simulation: "⚠시뮬레이션", "cited-secondary": "⚠2차 인용", derived: "파생 계산" }
 import { buildTextFragmentUrl } from "@/lib/text-fragment"
 
 const CHAT_FEATURE_KEY = "chat"
@@ -16,7 +18,7 @@ interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; excerpt?: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
   kgFacts?: { id: string; text: string; source?: string }[]
-  evidence?: { id: string; name: string; formula: string; sourceStatus: string; claims: { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string }[] }[]
+  evidence?: { id: string; name: string; formula: string; sourceStatus: string; claims: { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string; kind?: string }[] }[]
 }
 
 type ChatUIMessage = UIMessage<ChatMetadata>

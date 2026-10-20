@@ -18,7 +18,7 @@ interface Item {
 const ITEMS = (catalogFile as { items: Item[] }).items
 
 export interface Cand { category: string; name: string; modelKey: string | null; keys?: string[]; massG: number | null; whPerUnit?: number; capMah?: number; cells?: number; maxThrustG?: number; ratedOnly?: boolean; maxA?: number; contA?: number }
-export interface MatchData { cands: Cand[]; needWh: number | null; auwKg: number; n: number; maxPropIn: number; maxThrustG: number; hoverG: number; payloadG: number }
+export interface MatchData { cands: Cand[]; needWh: number | null; flightMin?: number; auwKg: number; n: number; maxPropIn: number; maxThrustG: number; hoverG: number; payloadG: number }
 export interface MatchResult { block: string; found: boolean; data?: MatchData }
 
 // 선정안 문자열 매칭용 모델 키: 이름에서 처음 나오는 "영문+숫자" 모델 토큰(MN3510, Tekko32 …). 없으면 용량 토큰(4500mah).
@@ -250,5 +250,5 @@ export function matchProducts(spec: DesignSpec, opts?: { fixed?: Partial<Pick<Mo
     const it = ITEMS.find((i) => c.name === i.name || c.name.startsWith(i.name))
     return { ...c, keys: keysFor(c.name, it?.manufacturer, c.modelKey) }
   })
-  return { found: true, block: lines.join("\n"), data: { cands: withKeys, needWh: needWhOut, auwKg: plan.auw, n: N, maxPropIn, maxThrustG: maxG, hoverG, payloadG } }
+  return { found: true, block: lines.join("\n"), data: { cands: withKeys, needWh: needWhOut, flightMin: spec.flightMin, auwKg: plan.auw, n: N, maxPropIn, maxThrustG: maxG, hoverG, payloadG } }
 }

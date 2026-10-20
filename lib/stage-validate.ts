@@ -85,6 +85,20 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
   }
   checks.push({ ok: skipped.length === 0, label: "서버 후보가 있는 분류를 '후보 없음'으로 쓰지 않음", detail: skipped.length ? skipped.join(" ; ") : undefined })
   if (skipped.length) issues.push(`서버가 후보를 제시했는데 '카탈로그 후보 없음'으로 썼다: ${skipped.join(" ; ")}. <product-match>의 해당 [후보] 목록에서 골라 쓴다.`)
+  // R1c 예상 체공시간 자체 계산 검증: 서버가 (선정 배터리 Wh ÷ 필요 Wh) × 요구 비행시간으로 계산한 값과, 모델이 '예상 체공시간'으로 쓴 분 값이 ±20% 안이어야 한다.
+  // 방전깊이는 필요 Wh에 이미 반영돼 있어 상쇄된다. 모델이 산수를 틀려도(예: 57분을 95분으로) 코드가 잡는다.
+  const batRow = matched.find((m) => /배터리|battery/i.test(colOf(m.row, /구성요소/)))
+  const selWh = batRow ? (batRow.cand.whPerUnit ?? 0) * batRow.k : paperBat ?? 0
+  if (selWh > 0 && d.needWh && d.flightMin) {
+    const est = (selWh / d.needWh) * d.flightMin
+    const line = md.split("\n").find((l) => /예상\s*체공시간/.test(l))
+    const stated = line ? /(\d+(?:\.\d+)?)\s*분/.exec(line.replace(/\*\*/g, ""))?.[1] : undefined
+    if (stated) {
+      const st = parseFloat(stated), ok = Math.abs(st - est) / est <= 0.2
+      checks.push({ ok, label: "예상 체공시간이 서버 계산과 일치(±20%)", detail: `표기 ${st}분 vs 서버 계산 ${est.toFixed(0)}분 (선정 배터리 ${selWh.toFixed(0)}Wh ÷ 필요 ${d.needWh.toFixed(0)}Wh × ${d.flightMin}분)` })
+      if (!ok) issues.push(`예상 체공시간 ${st}분은 서버 계산 ${est.toFixed(0)}분(선정 배터리 ${selWh.toFixed(0)}Wh ÷ 필요 ${d.needWh.toFixed(0)}Wh × 요구 ${d.flightMin}분)과 ${((st / est - 1) * 100).toFixed(0)}% 어긋난다. 서버 계산값을 쓰고 산식을 그대로 적는다.`)
+    }
+  }
   checks.push({ ok: outside.length === 0, label: "선정안은 모두 카탈로그 후보이거나 '후보 없음'", detail: outside.length ? `카탈로그 후보에 없는 선정: ${outside.join(" / ")}` : undefined })
   if (outside.length) issues.push(`카탈로그 후보에 없는 제품을 선정했다(목록 밖 제품 금지, 없으면 '카탈로그 후보 없음 — 확인 필요'로 쓴다): ${outside.join(" / ")}`)
 

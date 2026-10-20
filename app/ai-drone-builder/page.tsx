@@ -5,6 +5,9 @@ import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
 import { isGateStopText } from "@/lib/design-gate"
 
+const KIND_LABEL = { "model-assumption": "⚠모델 가정값", simulation: "⚠시뮬레이션", "cited-secondary": "⚠2차 인용", derived: "파생 계산" }
+import { designEvidence } from "@/lib/evidence"
+
 // 2026-10-16: 6단계 + 단계별 사람 승인 게이트.
 //   1 기획 → 2 HW 스펙 → 3 SW 스펙 → 4 기술 스펙(통합 검증) → 5 아키텍처 → 6 코드·로드맵
 // 각 단계가 끝나면 멈추고 검토자가 승인/반려/마감을 고른다.
@@ -356,6 +359,28 @@ export default function AiDroneBuilderPage() {
                 <div className="p-4 text-sm whitespace-pre-wrap leading-relaxed max-h-[500px] overflow-y-auto">
                   {st.text || "대기 중..."}
                 </div>
+              )}
+
+              {st.status !== "pending" && s.key !== "proposal" && st.text && !isGateStopText(st.text) && (
+                <details className="px-4 pb-3">
+                  <summary className="text-xs text-slate-500 cursor-pointer select-none">
+                    📐 설계 근거 · 공학 규칙 (원문 대조 claim) — 이 단계의 수치가 의존하는 규칙과 출처
+                  </summary>
+                  <div className="mt-2 flex flex-col gap-1.5">
+                    {designEvidence().map((r) => (
+                      <div key={r.id} className="text-[11px] text-slate-500 border-l-2 border-dashed border-slate-300 pl-2">
+                        <p>
+                          <b>{r.id}</b> {r.name} <code>{r.formula}</code> · 근거 상태 <b>{r.sourceStatus}</b>
+                        </p>
+                        {r.claims.slice(0, 4).map((c) => (
+                          <p key={c.id} className="ml-2">
+                            · {c.kind && c.kind !== "reported" ? `[${(KIND_LABEL as Record<string, string>)[c.kind] ?? c.kind}] ` : ""}{c.subject}: {c.value} ({c.source}, {c.status}){c.quote ? ` — “${c.quote.slice(0, 120)}”` : ""}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </details>
               )}
 
               {st.status === "error" && (

@@ -169,7 +169,8 @@
       "locator": "category=battery, 무게·용량·전압 모두 있는 40개",
       "quote": "",
       "status": "derived",
-      "note": "코드의 보수 가정 180이 실제 중앙값(155~163)보다 높음. 낙관 280은 상위 2개 특이값 수준"
+      "note": "코드의 보수 가정 180이 실제 중앙값(155~163)보다 높음. 낙관 280은 상위 2개 특이값 수준",
+      "evidenceKind": "derived"
     },
     {
       "id": "CL11",
@@ -237,7 +238,8 @@
       "locator": "스펙 표",
       "quote": "",
       "status": "derived",
-      "note": ""
+      "note": "",
+      "evidenceKind": "derived"
     },
     {
       "id": "CL15",
@@ -254,7 +256,8 @@
       "locator": "scratchpad valid2.ts 계산",
       "quote": "",
       "status": "derived",
-      "note": "코드 이전 값: 보수 0.48(FM0.6×η0.8), 낙관 0.675 — 관측 최대 0.47보다 높음"
+      "note": "코드 이전 값: 보수 0.48(FM0.6×η0.8), 낙관 0.675 — 관측 최대 0.47보다 높음",
+      "evidenceKind": "derived"
     },
     {
       "id": "CL16",
@@ -271,7 +274,8 @@
       "locator": "VI-D, Table III",
       "quote": "For LiPo it starts at a base of 1.04 and accrues additive terms",
       "status": "verified",
-      "note": "180/1.04=173, 180/1.32=136 → 팩 136~173Wh/kg. 우리 보수값 155는 이 범위 안, 낙관값 207은 LiPo 범위를 넘음(LiHV 195/1.04=188, NCA 260/1.15=226 수준이어야 도달) — 낙관값은 LiPo 한정이면 과대"
+      "note": "180/1.04=173, 180/1.32=136 → 팩 136~173Wh/kg. 우리 보수값 155는 이 범위 안, 낙관값 207은 LiPo 범위를 넘음(LiHV 195/1.04=188, NCA 260/1.15=226 수준이어야 도달) — 낙관값은 LiPo 한정이면 과대",
+      "evidenceKind": "model-assumption"
     },
     {
       "id": "CL17",
@@ -288,7 +292,8 @@
       "locator": "IV-F",
       "quote": "FoMinstalled = FoMisolated/κ, with κ ∈ {1.20consumer, 1.25enterprise, 1.30MicroAIO, 1.46industrial}",
       "status": "verified",
-      "note": "설치 후 FoM이 단독 시험값보다 17~32% 낮다는 근거. 우리 FM 0.45/0.6과 같은 방향의 보정"
+      "note": "설치 후 FoM이 단독 시험값보다 17~32% 낮다는 근거. 우리 FM 0.45/0.6과 같은 방향의 보정",
+      "evidenceKind": "model-assumption"
     },
     {
       "id": "CL18",
@@ -305,7 +310,8 @@
       "locator": "III-D",
       "quote": "the baseline hover throttle target defaults to 60%, yielding T/W = 1/0.602 ≈2.78 universally",
       "status": "verified",
-      "note": "우리 R03(2:1)은 Dai의 γ=0.5 관행. 이 논문 기준은 2.78로 더 높음 — 2:1은 최소선, 실제 설계는 이보다 높은 여유가 흔하다는 참고"
+      "note": "우리 R03(2:1)은 Dai의 γ=0.5 관행. 이 논문 기준은 2.78로 더 높음 — 2:1은 최소선, 실제 설계는 이보다 높은 여유가 흔하다는 참고",
+      "evidenceKind": "model-assumption"
     },
     {
       "id": "CL19",
@@ -323,7 +329,8 @@
       "locator": "Table VI",
       "quote": "Payload mass +1.692 kg/kg −1.703 min/kg",
       "status": "verified",
-      "note": "우리 엔진은 같은 조건(900mm, 15분)에서 탑재 0.5→1→2kg일 때 +3.0, +4.8 kg/kg로 훨씬 가파름 → 구조비 ef 보수값 0.45가 과대일 가능성. 단 저자 모델 값이라 직접 보정에는 쓰지 않음"
+      "note": "우리 엔진은 같은 조건(900mm, 15분)에서 탑재 0.5→1→2kg일 때 +3.0, +4.8 kg/kg로 훨씬 가파름 → 구조비 ef 보수값 0.45가 과대일 가능성. 단 저자 모델 값이라 직접 보정에는 쓰지 않음",
+      "evidenceKind": "simulation"
     },
     {
       "id": "CL20",
@@ -340,7 +347,8 @@
       "locator": "IV-E, Abstract",
       "quote": "forward velocity diverges beyond 25.5 m/s due to cubic parasite power growth",
       "status": "verified",
-      "note": "C04의 두 번째 독립 근거(첫째는 Gong, 단일 기체). 속도별 전력 곡선 코드화에 필요한 구조(유도속도 Newton-Raphson + 기생항력 ½ρV²CdS)는 확인, 상수(fscale 0.004/0.012/0.05)도 본문에 있음"
+      "note": "C04의 두 번째 독립 근거(첫째는 Gong, 단일 기체). 속도별 전력 곡선 코드화에 필요한 구조(유도속도 Newton-Raphson + 기생항력 ½ρV²CdS)는 확인, 상수(fscale 0.004/0.012/0.05)도 본문에 있음",
+      "evidenceKind": "model-assumption"
     },
     {
       "id": "CL21",
@@ -358,7 +366,8 @@
       "locator": "Abstract, Table IV",
       "quote": "predicts Maximum Takeoff Weight (MTOW) within 7.2% Mean Absolute Percentage Error",
       "status": "verified",
-      "note": "3개 구조 계수만 DIY 20기종에서 맞춘 뒤 고정하고 상업용에 적용(비순환 검증). 우리 엔진은 이런 기종별 대조를 아직 안 했음 — Table IV 19기종 실제 MTOW 사용 가능"
+      "note": "3개 구조 계수만 DIY 20기종에서 맞춘 뒤 고정하고 상업용에 적용(비순환 검증). 우리 엔진은 이런 기종별 대조를 아직 안 했음 — Table IV 19기종 실제 MTOW 사용 가능",
+      "evidenceKind": "reported"
     },
     {
       "id": "CL22",
@@ -375,7 +384,8 @@
       "locator": "scratchpad 계산",
       "quote": "",
       "status": "derived",
-      "note": "우리 ef 보수 0.45·낙관 0.30은 페이로드 맞춤 기체 범위(0.29~0.42) 안. 범용 기체(0.56~0.71)는 탑재 여유를 가진 구성이라 높게 나옴. 2026-10-20 검토 결과 상수 유지"
+      "note": "우리 ef 보수 0.45·낙관 0.30은 페이로드 맞춤 기체 범위(0.29~0.42) 안. 범용 기체(0.56~0.71)는 탑재 여유를 가진 구성이라 높게 나옴. 2026-10-20 검토 결과 상수 유지",
+      "evidenceKind": "derived"
     }
   ]
 }

@@ -29,6 +29,8 @@ const RULE_ALIAS: Record<string, RegExp> = {
 }
 
 const mfrOf = (id?: string) => byId.get((out.get(id ?? "") ?? []).find((e) => e.p === "madeBy")?.o ?? "")?.label ?? "?"
+// 증거 종류 태그: 측정이 아닌 값은 답변에서 반드시 구분되게 앞에 붙인다(설계 상수 보정에는 쓰지 않는 값)
+const KIND_TAG: Record<string, string> = { "model-assumption": "⚠[모델 가정값·실측 아님] ", simulation: "⚠[시뮬레이션 결과·실측 아님] ", "cited-secondary": "⚠[2차 인용·원저자 미확인] ", derived: "[파생 계산] " }
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ")
 const GENERIC = new Set(["series", "module", "kit", "brushless", "motor", "battery", "propeller", "frame", "drone", "developer", "version", "lipo", "esc", "the", "and", "with", "for", "pro", "mini", "flight", "controller", "computer", "camera", "sensor", "lidar", "radio", "system"])
 
@@ -72,7 +74,8 @@ export function queryKG(question: string): KgResult {
     const c = byId.get(cid)
     if (!c) return
     const paper = (out.get(cid) ?? []).find((e) => e.p === "reportedIn")?.o ?? ""
-    add(cid, `${c.label}${c.unit ? ` ${c.unit}` : ""}${c.attribute ? ` [양: ${c.attribute}]` : ""} — 조건: ${c.conditions || "-"} (${c.source}, ${c.locator || ""}) 원문: "${String(c.quote ?? "").slice(0, 220)}"`, paper)
+    const kind = KIND_TAG[String(c.evidenceKind ?? "")] ?? ""
+    add(cid, `${kind}${c.label}${c.unit ? ` ${c.unit}` : ""}${c.attribute ? ` [양: ${c.attribute}]` : ""} — 조건: ${c.conditions || "-"} (${c.source}, ${c.locator || ""}) 원문: "${String(c.quote ?? "").slice(0, 220)}"`, paper)
   }
 
   for (const p of products) {

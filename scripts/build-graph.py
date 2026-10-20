@@ -106,7 +106,7 @@ def phrases(p):
 pphr = {pid: phrases(p) for pid, p in prods.items()}
 for c in claims:
     node(f"claim:{c['id']}", "Claim", f"{c['subject']}: {c['value']}", status=c["status"], source=c["sourceId"],
-         attribute=c.get("attribute", ""), unit=c.get("unit", ""), conditions=c.get("conditions", ""), locator=c.get("locator", ""), quote=c.get("quote", ""))
+         evidenceKind=c.get("evidenceKind") or ("derived" if c["status"] == "derived" else "reported"), attribute=c.get("attribute", ""), unit=c.get("unit", ""), conditions=c.get("conditions", ""), locator=c.get("locator", ""), quote=c.get("quote", ""))
     for cls in TOPIC.get(c.get("topic", ""), []): edge(f"claim:{c['id']}", "about", f"class:{cls}")
     text = re.sub(r"\s+", " ", f"{c['subject']} {c.get('quote', '')}".lower())
     best = {}

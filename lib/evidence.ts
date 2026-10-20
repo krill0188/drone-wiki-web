@@ -1,11 +1,11 @@
 import rulesJson from "../data/ontology/rules.json"
 import claimsJson from "../data/ontology/claims.json"
 
-export interface EvidenceClaim { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string }
+export interface EvidenceClaim { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string; kind?: string }
 export interface EvidenceRule { id: string; name: string; formula: string; sourceStatus: string; claims: EvidenceClaim[] }
 
 type RuleRow = { id: string; name: string; formula?: string; status: string; sourceStatus?: string; claims?: string[] }
-type ClaimRow = { id: string; subject: string; value: unknown; sourceId: string; locator: string; quote: string; status: string }
+type ClaimRow = { evidenceKind?: string; id: string; subject: string; value: unknown; sourceId: string; locator: string; quote: string; status: string }
 
 const rules = ((rulesJson as { rules?: RuleRow[] }).rules ?? (rulesJson as unknown as RuleRow[])) as RuleRow[]
 const claims = new Map(((claimsJson as { claims: ClaimRow[] }).claims).map((c) => [c.id, c]))
@@ -23,6 +23,6 @@ export function designEvidence(): EvidenceRule[] {
       claims: (r.claims ?? [])
         .map((id) => claims.get(id))
         .filter((c): c is ClaimRow => !!c)
-        .map((c) => ({ id: c.id, subject: c.subject, value: String(c.value), source: c.sourceId, locator: c.locator, quote: c.quote, status: c.status })),
+        .map((c) => ({ id: c.id, subject: c.subject, value: String(c.value), source: c.sourceId, locator: c.locator, quote: c.quote, status: c.status, kind: c.evidenceKind })),
     }))
 }
