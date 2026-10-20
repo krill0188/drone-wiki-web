@@ -18,6 +18,19 @@ interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; excerpt?: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
   kgFacts?: { id: string; text: string; source?: string }[]
+  answerMeta?: {
+    status: "answered" | "insufficient_evidence" | "unverified"
+    confidence: "high" | "medium" | "low"
+    contested: boolean
+    domain: string[]
+    limitations: string[]
+    suggestions?: string[]
+    ontology: { classes: string[]; entities: { id: string; label: string; class: string }[]; relations: { id: string; subject: string; predicate: string; object: string; status: string; confidence: string }[] }
+    claims: { id: string; subject: string; predicate: string; value: string; status: string; confidence: string; evidence_kind: string; contested: boolean; origin: string }[]
+    evidence: { source_path: string; source_url: string; locator: string; quote: string; claim_id: string; verified: boolean }[]
+    canonical_pages: { path: string; title: string; domain: string | null }[]
+    verification: { ok: boolean; violations: { code: string; detail: string }[]; retried: boolean }
+  }
   evidence?: { id: string; name: string; formula: string; sourceStatus: string; claims: { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string; kind?: string }[] }[]
 }
 
@@ -213,6 +226,36 @@ export default function ChatWidget() {
                         ))}
                       </div>
                     </div>
+                  )}
+
+                  {m.role === "assistant" && meta?.answerMeta && (
+                    <details className="px-1" open={meta.answerMeta.status !== "answered"}>
+                      <summary className="text-[11px] font-hud text-ink-dim mb-1 cursor-pointer select-none hover:text-signal-600">
+                        🧭 온톨로지 근거 · {meta.answerMeta.status === "answered" ? "검증됨" : meta.answerMeta.status === "unverified" ? "⚠ 검증 경고" : "근거 부족"} · 신뢰도 {meta.answerMeta.confidence}
+                        {meta.answerMeta.contested ? " · 충돌 claim 있음" : ""}
+                        {meta.answerMeta.domain.length ? ` · domain ${meta.answerMeta.domain.join(", ")}` : ""}
+                      </summary>
+                      <div className="flex flex-col gap-1 mt-1 text-[11px] text-ink-dim">
+                        {meta.answerMeta.verification.violations.length > 0 && (
+                          <p className="text-amber-600">⚠ 답변에 근거 밖 내용이 있을 수 있습니다: {meta.answerMeta.verification.violations.map((v) => `${v.code}(${v.detail})`).join(", ")}</p>
+                        )}
+                        {meta.answerMeta.ontology.relations.map((r) => (
+                          <p key={r.id}>🔗 {r.subject} —{r.predicate}→ {r.object} <span className="text-[10px]">({r.status}/{r.confidence})</span></p>
+                        ))}
+                        {meta.answerMeta.claims.map((c) => (
+                          <p key={c.id}>
+                            · [{c.status}/{c.confidence}{c.contested ? "/충돌" : ""}]{c.evidence_kind !== "reported" ? ` ⚠${c.evidence_kind}` : ""} {c.subject}: {c.value}
+                          </p>
+                        ))}
+                        {meta.answerMeta.evidence.slice(0, 8).map((e, i) => (
+                          <p key={e.claim_id + i} className="ml-2">
+                            “{e.quote.slice(0, 160)}” — {e.source_url ? <a href={e.source_url} target="_blank" rel="noopener noreferrer" className="underline">{e.source_url}</a> : e.source_path} {e.locator} {e.verified ? "✓원문 일치" : "(요약 기반)"}
+                          </p>
+                        ))}
+                        {meta.answerMeta.limitations.length > 0 && <p className="text-slate-500">한계: {meta.answerMeta.limitations.join(" / ")}</p>}
+                        {meta.answerMeta.suggestions && meta.answerMeta.suggestions.length > 0 && <p>이런 질문은 답할 수 있어요: {meta.answerMeta.suggestions.join(" / ")}</p>}
+                      </div>
+                    </details>
                   )}
 
                   {m.role === "assistant" && meta?.kgFacts && (

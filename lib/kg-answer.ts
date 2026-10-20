@@ -114,3 +114,11 @@ export async function answerQuestion(question: string, opts: { domains?: string[
   }
   return contract(plan, ctx, answer, "unverified", false, verification, used, true)
 }
+
+// 스트리밍 채팅용: 이미 흘려보낸 답변 텍스트를 사후 검증해 JSON 계약 메타를 만든다(차단이 아니라 경고 — 이미 전송된 텍스트는 되돌릴 수 없다).
+export function metaForStreamed(plan: Plan, ctx: NimContext, text: string): KgAnswer {
+  const ver = verifyAnswer(text, ctx)
+  const real = (hs: string[], allow: string[]) => [...new Set(hs)].filter((h) => allow.includes(h)).map((h) => ctx.handleMap[h])
+  const used = { claims: real(ver.citedClaims, ctx.ids.claims), relations: real(ver.citedRelations, ctx.ids.relations), pages: real(ver.citedPages, ctx.ids.pages) }
+  return contract(plan, ctx, text, ver.ok ? "answered" : "unverified", false, { ok: ver.ok, violations: ver.violations, retried: false }, used, true)
+}
