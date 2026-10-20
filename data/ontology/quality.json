@@ -1,0 +1,470 @@
+{
+ "generated": "2026-10-20 10:48",
+ "counts": {
+  "manufacturers": 229,
+  "products": 373,
+  "rules": 26,
+  "papers": 96,
+  "claims": 225,
+  "edges": 3803
+ },
+ "claimsByKind": {
+  "cited-secondary": 2,
+  "derived": 4,
+  "model-assumption": 31,
+  "reported": 168,
+  "simulation": 20
+ },
+ "claimsByTopic": {
+  "propulsion": 40,
+  "companion": 32,
+  "energy": 30,
+  "sizing": 23,
+  "-": 22,
+  "battery": 16,
+  "build": 15,
+  "forward-flight": 12,
+  "structure": 11,
+  "flight-controller": 8,
+  "payload": 7,
+  "other": 6,
+  "comms": 2,
+  "vtol-fixedwing": 1
+ },
+ "productsByCategory": {
+  "motor": 104,
+  "battery": 53,
+  "esc": 39,
+  "frame": 39,
+  "propeller": 38,
+  "datalink": 26,
+  "sensor": 22,
+  "fc": 19,
+  "compute": 17,
+  "payload": 16
+ },
+ "manufacturers": {
+  "withSpecs": 61,
+  "registryOnly": 168,
+  "countryVerified": 17,
+  "countryUnverified": 202,
+  "countryUnknown": 10
+ },
+ "edgesByRelation": {
+  "packFits": 1867,
+  "powersWith": 403,
+  "isA": 373,
+  "madeBy": 373,
+  "reportedIn": 225,
+  "hasCategory": 217,
+  "about": 193,
+  "supports": 119,
+  "mentions": 18,
+  "governs": 15
+ },
+ "rules": [
+  {
+   "id": "C01",
+   "name": "전압 강하·방전 곡선",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": "partially-verified",
+   "formula": "V_load = V_oc − I·R_int, 저전압 컷오프",
+   "claims": 5,
+   "byKind": {
+    "reported": 5
+   },
+   "papers": 4
+  },
+  {
+   "id": "C02",
+   "name": "ESC 전류 마진",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": "verified",
+   "formula": "I_ESC_rated ≥ I_motor_max (논문 식 66). 여유 계수는 논문에 없음",
+   "claims": 4,
+   "byKind": {
+    "reported": 4
+   },
+   "papers": 4
+  },
+  {
+   "id": "C03",
+   "name": "고도·온도에 따른 공기밀도",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "verified",
+   "formula": "ρ = 273/(273+T)·(1−0.0065h/(273+T))^5.2561·ρ0 (ρ0=1.293)",
+   "claims": 1,
+   "byKind": {
+    "reported": 1
+   },
+   "papers": 1
+  },
+  {
+   "id": "C04",
+   "name": "전진 비행 전력(속도별)",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": "partially-verified",
+   "formula": "P(v) 곡선, 최적 순항 속도",
+   "claims": 16,
+   "byKind": {
+    "model-assumption": 5,
+    "reported": 7,
+    "simulation": 4
+   },
+   "papers": 9
+  },
+  {
+   "id": "C05",
+   "name": "모터 토크-KV-전압 관계",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": null,
+   "formula": "RPM ≈ KV·V·부하계수, τ = Kt·I",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "C06",
+   "name": "무게중심·질량 분포",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": null,
+   "formula": "Σ(m_i·r_i)/Σm_i 범위 내",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "C07",
+   "name": "전원 배선 전류·전선 굵기",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": null,
+   "formula": "I ≤ 허용전류(AWG)",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "C08",
+   "name": "통신 링크 예산",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": null,
+   "formula": "Pr = Pt+Gt+Gr−FSPL−손실, 마진 ≥ 10dB",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "C09",
+   "name": "단위·차원 일관성",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": null,
+   "formula": "모든 수치의 단위 변환 검사",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "C10",
+   "name": "규칙 간 모순 검사",
+   "status": "candidate",
+   "kind": "empirical",
+   "sourceStatus": null,
+   "formula": "서로 다른 규칙이 같은 양을 다르게 예측하면 경고",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R01",
+   "name": "호버링 전력(운동량 이론)",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "partially-verified",
+   "formula": "P = N·(m·g/N)^1.5 / sqrt(2·ρ_air·A) / (FM·η)",
+   "claims": 23,
+   "byKind": {
+    "derived": 2,
+    "model-assumption": 9,
+    "reported": 10,
+    "simulation": 2
+   },
+   "papers": 17
+  },
+  {
+   "id": "R02",
+   "name": "로터 원판 면적",
+   "status": "implemented",
+   "kind": "definition",
+   "sourceStatus": "unverified",
+   "formula": "D = wheelbase·sin(π/N)·0.95, A = π(D/2)²",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R03",
+   "name": "추력 대비 중량비",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "verified",
+   "formula": "T_max ≥ 2·m·g",
+   "claims": 23,
+   "byKind": {
+    "model-assumption": 2,
+    "reported": 21
+   },
+   "papers": 17
+  },
+  {
+   "id": "R04",
+   "name": "디스크 로딩 한계",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "unverified",
+   "formula": "2·m ≤ N·A·DL",
+   "claims": 2,
+   "byKind": {
+    "model-assumption": 2
+   },
+   "papers": 2
+  },
+  {
+   "id": "R05",
+   "name": "배터리 에너지 수지",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "verified-with-derived",
+   "formula": "m_bat = P·t / (DoD·e_pack)",
+   "claims": 25,
+   "byKind": {
+    "cited-secondary": 1,
+    "derived": 1,
+    "model-assumption": 5,
+    "reported": 16,
+    "simulation": 2
+   },
+   "papers": 14
+  },
+  {
+   "id": "R06",
+   "name": "구조 질량 비율",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "partially-verified",
+   "formula": "m_struct+avionics = ef·m",
+   "claims": 14,
+   "byKind": {
+    "cited-secondary": 1,
+    "derived": 1,
+    "model-assumption": 3,
+    "reported": 8,
+    "simulation": 1
+   },
+   "papers": 9
+  },
+  {
+   "id": "R07",
+   "name": "평균 속도 상한",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "unverified",
+   "formula": "v_req = R/t ≤ v_max",
+   "claims": 4,
+   "byKind": {
+    "reported": 4
+   },
+   "papers": 4
+  },
+  {
+   "id": "R08",
+   "name": "고정익 순항 에너지",
+   "status": "implemented",
+   "kind": "empirical",
+   "sourceStatus": "candidate-source",
+   "formula": "b_f = g·v·t / (L/D·η_p·DoD·e_pack)",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R09",
+   "name": "배터리 Wh = V×Ah",
+   "status": "implemented",
+   "kind": "definition",
+   "sourceStatus": "unverified",
+   "formula": "Wh = V·Ah",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R10",
+   "name": "시험표 추력-전류 보간",
+   "status": "implemented",
+   "kind": "definition",
+   "sourceStatus": "unverified",
+   "formula": "선형 보간, 시험 범위 밖 외삽 금지",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R11",
+   "name": "C-rate 방전 한계",
+   "status": "implemented",
+   "kind": "definition",
+   "sourceStatus": "unverified",
+   "formula": "I_max ≤ C·Ah",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R12",
+   "name": "프롭 지름 ≤ 축거 한계",
+   "status": "implemented",
+   "kind": "heuristic",
+   "sourceStatus": "unverified",
+   "formula": "d_prop ≤ D_max + 0.5in",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R13",
+   "name": "부품 질량 합 한계",
+   "status": "implemented",
+   "kind": "heuristic",
+   "sourceStatus": "unverified",
+   "formula": "Σm_parts ≤ 1.15·AUW",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R14",
+   "name": "프레임 질량 상한",
+   "status": "implemented",
+   "kind": "heuristic",
+   "sourceStatus": "unverified",
+   "formula": "m_frame ≤ 0.45·AUW",
+   "claims": 2,
+   "byKind": {
+    "reported": 2
+   },
+   "papers": 2
+  },
+  {
+   "id": "R15",
+   "name": "체공시간 판정 일관성",
+   "status": "implemented",
+   "kind": "definition",
+   "sourceStatus": "unverified",
+   "formula": "HW 배터리 Wh ≥ 필요 Wh 이면 충족",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  },
+  {
+   "id": "R16",
+   "name": "통신 대역 상식",
+   "status": "implemented",
+   "kind": "heuristic",
+   "sourceStatus": "unverified",
+   "formula": "협대역(LoRa류)은 영상 불가, 영상은 Mbps급",
+   "claims": 0,
+   "byKind": {},
+   "papers": 0
+  }
+ ],
+ "audit": [
+  {
+   "desc": "외래키 위반",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "verified claim인데 인용문이 비어 있음 (논문 출처 verified는 quote 필수)",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "조건(conditions)이 비어 있는 claim (조건 없는 일반화 금지)",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "제품인데 제조사가 레지스트리/카탈로그에 없음",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "배터리 제품의 용량·셀 수가 비정상(0 이하)",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "ESC 연속전류가 피크전류보다 큼",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "구현된 실측 상수 규칙(empirical)인데 근거 claim이 하나도 없음",
+   "ok": false,
+   "count": 1,
+   "sample": [
+    "R08"
+   ]
+  },
+  {
+   "desc": "같은 규칙에 연결된 모델 가정·시뮬레이션 값만으로 'verified' 판정된 규칙",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  }
+ ],
+ "warnings": [
+  {
+   "desc": "경험칙(heuristic) 규칙인데 근거 claim 없음",
+   "ok": false,
+   "count": 3,
+   "sample": [
+    "R12",
+    "R13",
+    "R16"
+   ]
+  },
+  {
+   "desc": "추진·배터리·구조·사이징 주제인데 규칙에 연결되지 않은 논문 claim (규칙 후보 검토 대상)",
+   "ok": false,
+   "count": 55,
+   "sample": [
+    "P2301.00730-02",
+    "P2301.12316-02",
+    "P2301.12316-03",
+    "P2301.12316-04",
+    "P2301.12905-01",
+    "P2306.17087-01",
+    "P2306.17087-02",
+    "P2309.10631-02",
+    "P2309.10631-03",
+    "P2309.10631-08"
+   ]
+  }
+ ]
+}

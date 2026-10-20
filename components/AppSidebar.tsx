@@ -10,6 +10,8 @@ const NAV_ITEMS = [
   { href: "/chat", icon: "💬", label: "AI Q&A" },
   { href: "/wiki-editor", icon: "✍️", label: "AI 에디터" },
   { href: "/ai-drone-builder", icon: "🚀", label: "AI 드론 빌더" },
+  { href: "/knowledge", icon: "🕸", label: "지식그래프" },
+  { href: "/knowledge-quality", icon: "📊", label: "지식 품질" },
   { href: "/wiki", icon: "📖", label: "위키" },
   { href: "/news", icon: "📰", label: "뉴스" },
 ]

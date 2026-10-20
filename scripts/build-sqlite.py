@@ -122,15 +122,18 @@ def build():
 
 def audit(db):
     bad = 0
+    res = []
     print("무결성 검사")
     fk = db.execute("PRAGMA foreign_key_check").fetchall()
     print(("  ✅" if not fk else "  ❌") + f" 외래키 위반 {len(fk)}건")
+    res.append({"desc": "외래키 위반", "ok": not fk, "count": len(fk), "sample": []})
     bad += len(fk)
     for desc, q in AUDIT:
         rows = [r[0] for r in db.execute(q).fetchall()]
         print(("  ✅ " if not rows else "  ❌ ") + desc + ("" if not rows else f" → {len(rows)}건: {rows[:5]}"))
+        res.append({"desc": desc, "ok": not rows, "count": len(rows), "sample": rows[:8]})
         bad += len(rows)
-    return bad
+    return bad, res
 
 
 WARN = [
@@ -142,9 +145,38 @@ WARN = [
 
 def warnings(db):
     print("\n경고(실패 아님, 보완 대상)")
+    res = []
     for desc, q in WARN:
         rows = [r[0] for r in db.execute(q).fetchall()]
         print(("  ✅ " if not rows else "  ⚠ ") + desc + ("" if not rows else f" → {len(rows)}건: {rows[:6]}"))
+        res.append({"desc": desc, "ok": not rows, "count": len(rows), "sample": rows[:10]})
+    return res
+
+
+def quality(db, audit_res, warn_res):
+    """웹 /knowledge-quality 페이지가 읽는 품질 리포트(SQL 집계). 웹은 SQLite를 직접 읽지 않고 이 JSON만 쓴다."""
+    q = lambda s: db.execute(s).fetchall()
+    one = lambda s: db.execute(s).fetchone()[0]
+    rules = []
+    for r in q("SELECT id,name,status,kind,source_status,formula FROM rules ORDER BY id"):
+        k = dict(q(f"SELECT c.evidence_kind, count(*) FROM claim_rules cr JOIN claims c ON c.id=cr.claim_id WHERE cr.rule_id='{r[0]}' GROUP BY 1"))
+        papers = one(f"SELECT count(DISTINCT c.paper_id) FROM claim_rules cr JOIN claims c ON c.id=cr.claim_id WHERE cr.rule_id='{r[0]}' AND c.paper_id IS NOT NULL")
+        rules.append({"id": r[0], "name": r[1], "status": r[2], "kind": r[3], "sourceStatus": r[4], "formula": r[5], "claims": sum(k.values()), "byKind": k, "papers": papers})
+    import datetime
+    return {
+        "generated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "counts": {t: one(f"SELECT count(*) FROM {t}") for t in ("manufacturers", "products", "rules", "papers", "claims", "edges")},
+        "claimsByKind": dict(q("SELECT evidence_kind, count(*) FROM claims GROUP BY 1")),
+        "claimsByTopic": dict(q("SELECT coalesce(topic,'-'), count(*) FROM claims GROUP BY 1 ORDER BY 2 DESC")),
+        "productsByCategory": dict(q("SELECT category, count(*) FROM products GROUP BY 1 ORDER BY 2 DESC")),
+        "manufacturers": {"withSpecs": one("SELECT count(*) FROM manufacturers WHERE has_specs=1"), "registryOnly": one("SELECT count(*) FROM manufacturers WHERE has_specs=0"),
+                          "countryVerified": one("SELECT count(*) FROM manufacturers WHERE country_verified=1"), "countryUnverified": one("SELECT count(*) FROM manufacturers WHERE country_verified=0"),
+                          "countryUnknown": one("SELECT count(*) FROM manufacturers WHERE country_verified IS NULL")},
+        "edgesByRelation": dict(q("SELECT p, count(*) FROM edges GROUP BY 1 ORDER BY 2 DESC")),
+        "rules": rules,
+        "audit": audit_res,
+        "warnings": warn_res,
+    }
 
 
 def summary(db):
@@ -161,9 +193,10 @@ def summary(db):
 
 if __name__ == "__main__":
     db = build()
-    bad = audit(db)
-    warnings(db)
+    bad, audit_res = audit(db)
+    warn_res = warnings(db)
     summary(db)
+    json.dump(quality(db, audit_res, warn_res), open(os.path.join(D, "quality.json"), "w"), ensure_ascii=False, indent=1)
     db.close()
     print(f"\n{OUT} ({os.path.getsize(OUT) // 1024} KB)")
     sys.exit(1 if bad and "--check" in sys.argv else 0)
