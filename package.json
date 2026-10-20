@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "self-update": "tsx scripts/self-update-pipeline.ts"
+    "self-update": "tsx scripts/self-update-pipeline.ts",
+    "kdb:build": "~/2nd/.venv/bin/python scripts/build-knowledge-db.py --check",
+    "kdb:verify": "~/2nd/.venv/bin/python scripts/build-knowledge-db.py --verify",
+    "kdb:test": "~/2nd/.venv/bin/python -W ignore scripts/test_knowledge_db.py && tsx scripts/test-kg-answer.ts"
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^1.0.58",

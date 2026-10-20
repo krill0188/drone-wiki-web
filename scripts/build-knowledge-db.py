@@ -125,6 +125,7 @@ def main():
     ap.add_argument("--out-db", default=None)
     ap.add_argument("--quality", default=os.path.join(WEB, "data", "ontology", "quality.json"))
     ap.add_argument("--check", action="store_true", help="감사 위반이 있으면 종료 코드 1")
+    ap.add_argument("--verify", action="store_true", help="임시 경로에 다시 생성해 --out-sql 파일과 바이트 비교. 다르면 낡은 DB이므로 종료 코드 2(배포 전 검사용, 파일은 바꾸지 않음)")
     a = ap.parse_args()
     source_root = a.source_root if a.source_root and os.path.isdir(a.source_root) else None
     OD = a.ontology_dir
@@ -220,6 +221,29 @@ def main():
     for cls, cnt in ex("SELECT class_name, count(*) FROM ontology_nodes WHERE class_name NOT IN (SELECT name FROM ontology_classes) AND class_name NOT IN ('Rule','Paper','Source','Product') GROUP BY 1 ORDER BY 1").fetchall():
         par, why = PROPOSE.get(cls, (None, "공식 계층에 없는 클래스 — 검토 필요"))
         ex("INSERT INTO ontology_class_proposals VALUES (?,?,?,?)", (cls, par, why, cnt))
+    # ── 문서 → 클래스 연결 제안 (결정론 키워드 규칙, 자동 반영 금지) ──
+    CLASS_KW = {
+        "PX4": ["px4"], "ArduPilot": ["ardupilot"], "FlightStack": ["flight-stack", "flight stack", "비행 스택", "betaflight", "inav", "px4-flight", "firmware", "펌웨어"],
+        "Telemetry": ["telemetry", "텔레메트리"], "Datalink": ["datalink", "data-link", "데이터링크", "mavlink", "rf-link", "lte", "5g"],
+        "ROS2": ["ros2", "mavros", "micro-ros"], "Multirotor": ["multirotor", "멀티로터", "quadcopter", "quadrotor", "쿼드콥터"], "VTOL": ["vtol"], "FixedWing": ["fixed-wing", "fixedwing", "고정익"],
+        "FlightController": ["flight-controller", "flight controller", "비행제어기", "pixhawk", "cube"], "GNSS": ["gnss", "rtk", "gps"], "IMU": ["imu"], "LiDAR": ["lidar", "라이다"],
+        "Camera": ["camera", "카메라"], "Gimbal": ["gimbal", "짐벌"], "Battery": ["battery", "배터리", "lipo"], "Motor": ["motor", "모터", "bldc"], "ESC": ["-esc", "esc-", "변속기"],
+        "Propeller": ["propeller", "프로펠러"], "Payload": ["payload", "페이로드"], "SwarmCoordinator": ["swarm", "군집"], "Frame": ["airframe", "-frame", "프레임"],
+    }
+    for did_, path_, title_, cls_now in ex("SELECT id, lower(path), lower(title), ontology_class FROM documents ORDER BY id").fetchall():
+        if cls_now: continue  # 이미 frontmatter에 명시된 문서는 제안 대상이 아니다
+        tags_ = {t for (t,) in ex("SELECT lower(tag) FROM document_tags WHERE document_id=?", (did_,)).fetchall()}
+        found = {}
+        RANK = {"slug": 0, "title": 1, "tag": 2}  # 같은 클래스에 근거가 여럿이면 가장 강한 것(슬러그 > 제목 > 태그)을 쓴다
+        for cls, kws in CLASS_KW.items():
+            for kw in kws:
+                hit = ("slug", kw) if kw in path_ else ("title", kw) if kw in title_ else ("tag", kw) if kw in tags_ else None
+                if hit and (cls not in found or RANK[hit[0]] < RANK[found[cls][0]]): found[cls] = hit
+        if not found: continue
+        strong = [c for c, (f, _k) in found.items() if f in ("slug", "title")]
+        for cls, (field, kw) in sorted(found.items()):
+            tier = "C" if field == "tag" else ("A" if len(strong) == 1 else "B")
+            ex("INSERT OR IGNORE INTO ontology_node_proposals VALUES (?,?,?,?,?, 'proposed')", (did_, cls, field, kw, tier))
     mfr_of_node = {e['s']: e['o'] for e in graph['edges'] if e['p'] == 'madeBy'}
     GENERIC_W = {'series','module','kit','brushless','motor','battery','propeller','props','frame','drone','developer','version','lipo','esc','the','and','with','for','pro','mini','flight','controller','computer','camera','sensor','lidar','radio','system'}
     # 별칭: 라벨, 제품 모델 토큰(숫자+영문 4자 이상), 제조사 등록명
@@ -389,6 +413,9 @@ def main():
     ex("INSERT INTO document_fts SELECT d.id, coalesce(d.domain,''), d.title, d.body, coalesce((SELECT group_concat(tag,' ') FROM (SELECT tag FROM document_tags t WHERE t.document_id=d.id ORDER BY tag)),'') FROM documents d ORDER BY d.id")
     ex("INSERT INTO claim_fts SELECT id, coalesce(subject_text,''), predicate, object_value, coalesce(conditions,'') FROM claims ORDER BY id")
     inputs += [(f"ontology/{k}", v) for k, v in sorted(cat_hash.items())]
+    # 지문 = 입력 파일 해시 + 빌더 코드 + 스키마. 빌더 로직이 바뀌면(예: 수치 지지도 추가) 입력이 같아도 지문이 바뀌어 낡은 DB를 구분할 수 있다.
+    inputs.append(("builder", sha256_bytes(open(os.path.join(HERE, "build-knowledge-db.py"), "rb").read())))
+    inputs.append(("schema", sha256_bytes(open(os.path.join(HERE, "knowledge_db_schema.sql"), "rb").read())))
     fp = sha256_bytes("\n".join(f"{p}:{h}" for p, h in sorted(inputs)).encode())
     counts = {t: ex(f"SELECT count(*) FROM {t}").fetchone()[0] for t in ("documents", "sources", "ontology_nodes", "ontology_relations", "claims", "evidence", "products", "manufacturers")}
     for k, v in sorted({"schema_version": "1", "builder_version": BUILDER_VERSION, "input_fingerprint": fp, "source_root_used": str(source_root is not None), **{f"count_{c}": str(n) for c, n in counts.items()}}.items()):
@@ -403,8 +430,16 @@ def main():
     print("집계:", counts, "· frontmatter 파싱 실패:", parse_fail)
 
     # ═══ 10. 출력 ═════════════════════════════════════════════════════════
-    os.makedirs(os.path.dirname(a.out_sql), exist_ok=True)
-    write_dump(db, a.out_sql)
+    target = a.out_sql
+    if a.verify:
+        import tempfile
+        target = os.path.join(tempfile.mkdtemp(prefix="kdb-verify-"), "knowledge.sql")
+    os.makedirs(os.path.dirname(target), exist_ok=True)
+    write_dump(db, target)
+    if a.verify:
+        same = os.path.exists(a.out_sql) and open(a.out_sql, "rb").read() == open(target, "rb").read()
+        print("DB 최신 여부:", "최신 (재생성 결과가 커밋된 덤프와 동일)" if same else "낡음 — scripts/build-knowledge-db.py 를 다시 실행해 knowledge.sql 을 갱신하세요")
+        return 0 if same else 2
     print(f"덤프: {a.out_sql} ({os.path.getsize(a.out_sql) // 1024} KB) fingerprint={fp[:12]}")
     if a.out_db:
         if os.path.exists(a.out_db): os.remove(a.out_db)
@@ -458,7 +493,7 @@ def lit(v):
 
 
 def write_dump(db, path):
-    order = ["meta", "documents", "document_tags", "document_links", "papers", "paper_files", "sources", "ontology_classes", "ontology_nodes", "ontology_class_proposals", "ontology_aliases", "ontology_relations",
+    order = ["meta", "documents", "document_tags", "document_links", "papers", "paper_files", "sources", "ontology_classes", "ontology_nodes", "ontology_class_proposals", "ontology_node_proposals", "ontology_aliases", "ontology_relations",
              "manufacturers", "products", "rules", "edges", "claims", "claim_rules", "evidence", "query_candidates"]
     schema = open(os.path.join(HERE, "knowledge_db_schema.sql"), encoding="utf-8").read()
     with open(path, "w", encoding="utf-8", newline="\n") as f:

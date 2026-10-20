@@ -66,6 +66,17 @@ CREATE TABLE ontology_nodes (
 );
 -- 공식 계층(class-hierarchy.json)에 없는 클래스는 임의로 추가하지 않고 제안으로만 기록한다(사람 검토·승인 대상)
 CREATE TABLE ontology_class_proposals (name TEXT PRIMARY KEY, proposed_parent TEXT, reason TEXT NOT NULL, node_count INTEGER NOT NULL);
+-- 문서 → 온톨로지 클래스 연결 '제안'. documents.ontology_class는 절대 자동으로 바꾸지 않고, 사람이 승인한 것만 frontmatter에 반영한다.
+-- tier A: 슬러그·제목에 클래스 고유 키워드, 단일 클래스 / B: 여러 클래스 후보 / C: 태그만 일치
+CREATE TABLE ontology_node_proposals (
+  document_id TEXT NOT NULL REFERENCES documents(id),
+  proposed_class TEXT NOT NULL,
+  match_field TEXT NOT NULL,        -- slug | title | tag
+  matched_keyword TEXT NOT NULL,
+  tier TEXT NOT NULL CHECK (tier IN ('A','B','C')),
+  status TEXT NOT NULL DEFAULT 'proposed',
+  PRIMARY KEY (document_id, proposed_class, matched_keyword)
+);
 CREATE TABLE ontology_aliases (alias TEXT NOT NULL, node_id TEXT NOT NULL REFERENCES ontology_nodes(id), PRIMARY KEY (alias, node_id));
 CREATE TABLE ontology_relations (
   id TEXT PRIMARY KEY,

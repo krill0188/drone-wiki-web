@@ -114,6 +114,15 @@ class Fixture(unittest.TestCase):
         self.assertEqual(st["concepts/f-contested.md"], "contested")
         self.assertEqual(self.q("SELECT count(*) FROM claims WHERE origin='wiki' AND status='verified'")[0][0], 0, "위키 요약 claim은 verified가 될 수 없음")
 
+    def test_class_proposals_never_change_documents(self):
+        # 제안은 별도 표에만 기록되고 documents.ontology_class는 frontmatter 값 그대로(여기서는 b-fc만 명시)
+        cls = dict(self.q("SELECT path, ontology_class FROM documents"))
+        self.assertEqual(cls["concepts/b-fc.md"], "FlightController")
+        self.assertIsNone(cls["concepts/a-hw.md"], "제안이 문서의 클래스를 바꾸면 안 됨")
+        props = self.q("SELECT d.path, p.proposed_class, p.tier, p.status FROM ontology_node_proposals p JOIN documents d ON d.id=p.document_id")
+        self.assertTrue(any(r[0] == "concepts/a-hw.md" and r[1] == "Battery" and r[2] == "A" and r[3] == "proposed" for r in props), props)
+        self.assertFalse(any(r[0] == "concepts/b-fc.md" for r in props), "이미 클래스가 명시된 문서는 제안 대상이 아님")
+
     def test_numeric_support_score_recorded(self):
         r = dict(self.q("SELECT d.path, e.support_score FROM evidence e JOIN claims c ON c.id=e.claim_id JOIN documents d ON d.id=c.document_id WHERE c.origin='wiki'"))
         self.assertEqual(r["concepts/a-hw.md"], 1.0)
