@@ -124,5 +124,9 @@ export function metaForStreamed(plan: Plan, ctx: NimContext, text: string): KgAn
   const ver = verifyAnswer(text, ctx)
   const real = (hs: string[], allow: string[]) => [...new Set(hs)].filter((h) => allow.includes(h)).map((h) => ctx.handleMap[h])
   const used = { claims: real(ver.citedClaims, ctx.ids.claims), relations: real(ver.citedRelations, ctx.ids.relations), pages: real(ver.citedPages, ctx.ids.pages) }
-  return contract(plan, ctx, text, ver.ok ? "answered" : "unverified", false, { ok: ver.ok, violations: ver.violations, retried: false }, used, true)
+  // 인라인 출처 표기 누락만 있는 경우는 근거 밖 내용이 아니므로 '검증 경고'가 아니라 안내로 낮춘다(참고한 문서 전체를 근거 목록으로 보여 준다).
+  const hard = ver.violations.filter((v) => v.code !== "missing_citation")
+  const res = contract(plan, ctx, text, hard.length ? "unverified" : "answered", false, { ok: hard.length === 0, violations: hard, retried: false }, used, true)
+  if (hard.length === 0 && ver.violations.length) res.limitations = [...res.limitations, "본문에 문장별 출처 표기가 없습니다. 아래 근거 문서 목록이 이 답변이 참고한 자료입니다."]
+  return res
 }
