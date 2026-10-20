@@ -133,12 +133,27 @@ async function main() {
   })
 
   await t("S8b 위키에만 근거가 있는 질문: 위키 요약 기반으로 답하되 신뢰도 high 금지·표기 필수", async () => {
+    // PX4 클래스에 사람이 승인해 연결한 문서가 생겼으므로(2026-10-20) 이 질문은 ontology-linked. 위키 단독(wiki-sourced) 경로는 W1(MAVLink)이 검증한다.
     const p = planQuery("PX4 오프보드 제어 모드")
-    ok(p.status === "ready" && p.basis === "wiki-sourced", `status=${p.status} basis=${p.basis}`)
+    ok(p.status === "ready" && p.basis === "ontology-linked", `status=${p.status} basis=${p.basis}`)
     ok(p.confidence !== "high", "위키 단독 근거인데 high")
-    ok(p.limitations.some((l) => l.includes("온톨로지") && l.includes("위키 요약")), "위키 요약 기반 한계가 표기되지 않음")
+    ok(p.limitations.some((l) => l.includes("위키 요약") || l.includes("승인해 연결한 위키 문서")), "위키 요약 기반 한계가 표기되지 않음")
     const ctx = buildNimContext(p)
-    ok(ctx.basis === "wiki-sourced", "context에 basis가 전달되지 않음")
+    ok(ctx.basis === "ontology-linked", "context에 basis가 전달되지 않음")
+  })
+
+  await t("L1 클래스 연결 문서: PX4·ArduPilot·ROS2·FlightStack 질문은 ontology-linked, 연결 문서가 먼저", () => {
+    for (const q of ["PX4가 뭐야", "ArduPilot 설명해줘", "FlightStack이 뭐야?"]) {
+      const p = planQuery(q)
+      ok(p.status === "ready" && p.basis === "ontology-linked", `${q} → ${p.status}/${p.basis}`)
+      ok(p.confidence !== "high", `${q} 신뢰도 high`)
+      ok(p.pages.some((x) => x.ontologyClass), `${q} 연결 문서 없음`)
+    }
+  })
+
+  await t("L2 연결 문서가 있어도 요구한 내용이 없으면 거절(군집 비행의 역사)", () => {
+    const p = planQuery("드론 군집 비행의 역사 알려줘")
+    ok(p.status === "insufficient_evidence", `${p.status}/${p.basis}`)
   })
 
   await t("W1 MAVLink란 무엇인가요: mavlink 문서를 찾아 위키 요약 기반으로 답변 가능", () => {

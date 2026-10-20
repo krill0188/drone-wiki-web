@@ -18,7 +18,7 @@ interface ChatMetadata {
   newsSources?: { title: string; url: string; type: string }[]
   kgFacts?: { id: string; text: string; source?: string }[]
   answerMeta?: {
-    basis?: "ontology" | "wiki-sourced" | "none"
+    basis?: "ontology" | "ontology-linked" | "wiki-sourced" | "none"
     status: "answered" | "insufficient_evidence" | "unverified"
     confidence: "high" | "medium" | "low"
     contested: boolean
@@ -231,7 +231,7 @@ export default function ChatWidget() {
                   {m.role === "assistant" && meta?.answerMeta && (
                     <details className="px-1" open={meta.answerMeta.status !== "answered"}>
                       <summary className="text-[11px] font-hud text-ink-dim mb-1 cursor-pointer select-none hover:text-signal-600">
-                        🧭 {meta.answerMeta.basis === "wiki-sourced" ? "위키 요약 기반(온톨로지 미연결)" : "온톨로지 근거"} · {meta.answerMeta.status === "answered" ? "검증됨" : meta.answerMeta.status === "unverified" ? "⚠ 검증 경고" : "근거 부족"} · 신뢰도 {meta.answerMeta.confidence}
+                        🧭 {meta.answerMeta.basis === "wiki-sourced" ? "위키 요약 기반(온톨로지 미연결)" : meta.answerMeta.basis === "ontology-linked" ? "온톨로지 클래스 연결 문서 기반" : "온톨로지 근거"} · {meta.answerMeta.status === "answered" ? "검증됨" : meta.answerMeta.status === "unverified" ? "⚠ 검증 경고" : "근거 부족"} · 신뢰도 {meta.answerMeta.confidence}
                         {meta.answerMeta.contested ? " · 충돌 claim 있음" : ""}
                         {meta.answerMeta.domain.length ? ` · domain ${meta.answerMeta.domain.join(", ")}` : ""}
                       </summary>

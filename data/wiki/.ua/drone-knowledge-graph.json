@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "6a283750b91a2da8d3d2c83a686eedb70d0ec3dcefafc704cb409b252d87162b",
+  "source_fingerprint": "866c375358f3a47fe3f76b8e2b63ab1466767bf91ef4cea7516ecccef9a78a6d",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -367,7 +367,7 @@
       "updated": "2026-09-29",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Battery"
     },
     {
       "id": "ardupilot-architecture",
@@ -383,7 +383,7 @@
       "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "ardupilot-params-by-version",
@@ -400,7 +400,7 @@
       "updated": "2026-08-10",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "ardupilot-plane-4-7",
@@ -415,7 +415,7 @@
       "updated": "2026-10-15",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "autotrans-uav-suspended-payload-planning-control",
@@ -462,7 +462,7 @@
       "updated": "2026-10-15",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Frame"
     },
     {
       "id": "axisflying-vertex-5-review",
@@ -494,7 +494,7 @@
       "updated": "2026-10-01",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "FlightStack"
     },
     {
       "id": "betaflight",
@@ -509,7 +509,7 @@
       "updated": "2026-09-24",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "FlightStack"
     },
     {
       "id": "betafpv-meteor65-pro-ii",
@@ -883,7 +883,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Multirotor"
     },
     {
       "id": "cross-layer-attacks-uav-5g",
@@ -1034,7 +1034,7 @@
       "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Datalink"
     },
     {
       "id": "decentralized-swarm-gps-denied",
@@ -1601,7 +1601,7 @@
       "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ESC"
     },
     {
       "id": "drone-esc-product-specs-catalog",
@@ -2226,7 +2226,7 @@
       "updated": "2026-10-20",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Payload"
     },
     {
       "id": "drone-power-battery",
@@ -2244,7 +2244,7 @@
       "updated": "2026-10-18",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Battery"
     },
     {
       "id": "drone-power-module-specs-catalog",
@@ -2668,7 +2668,7 @@
       "updated": "2026-09-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "LiDAR"
     },
     {
       "id": "emlid-corrections",
@@ -2748,7 +2748,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Camera"
     },
     {
       "id": "event38-tb2-drops-integration",
@@ -2763,7 +2763,7 @@
       "updated": "2026-08-04",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Payload"
     },
     {
       "id": "faa-12m-drone-research-awards-2026-10",
@@ -2919,7 +2919,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Multirotor"
     },
     {
       "id": "fault-tolerant-dynamic-task-assignment-uav-search",
@@ -3078,7 +3078,7 @@
       "updated": "2026-07-27",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "FlightController"
     },
     {
       "id": "flight-logging-analysis",
@@ -3240,7 +3240,7 @@
       "updated": "2026-08-16",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Motor"
     },
     {
       "id": "ga-asi-fujitsu-mou",
@@ -3395,7 +3395,7 @@
       "updated": "2026-10-05",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Gimbal"
     },
     {
       "id": "hermes-evolutionary-uav-path-planning",
@@ -3586,7 +3586,7 @@
       "updated": "2026-10-07",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "VTOL"
     },
     {
       "id": "insta360-x6",
@@ -3934,7 +3934,7 @@
       "updated": "2026-10-05",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "FixedWing"
     },
     {
       "id": "kci-geological-outcrop-3d-mesh-dataset",
@@ -4290,7 +4290,7 @@
       "updated": "2026-10-05",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Battery"
     },
     {
       "id": "kci-uav-ground-secrecy-capacity-closed-form",
@@ -4560,7 +4560,7 @@
       "updated": "2026-10-18",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Battery"
     },
     {
       "id": "llm-enabled-uav-natural-language-navigation",
@@ -4835,7 +4835,7 @@
       "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "mavsdk-release",
@@ -5287,7 +5287,7 @@
       "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Multirotor"
     },
     {
       "id": "multirotor-propeller-test-research",
@@ -5317,7 +5317,7 @@
       "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Multirotor"
     },
     {
       "id": "nc2s-secure-c3-system",
@@ -5503,7 +5503,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "param-diff-copter-4-7-0-4-7-1",
@@ -5520,7 +5520,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "param-diff-plane-4-7-0-4-7-1",
@@ -5537,7 +5537,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "param-diff-px4-1-16-0-1-17-0",
@@ -5554,7 +5554,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "path-uav-target-handoff",
@@ -5698,7 +5698,7 @@
       "updated": "2026-08-10",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "FlightController"
     },
     {
       "id": "pmsm-sensorless-controller-observer",
@@ -5772,7 +5772,7 @@
       "updated": "2026-07-28",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-cicd-pipeline",
@@ -5790,7 +5790,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-control-tuning",
@@ -5809,7 +5809,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-flight-modes",
@@ -5841,7 +5841,7 @@
       "updated": "2026-10-16",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-params-by-version",
@@ -5858,7 +5858,7 @@
       "updated": "2026-08-10",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-pid-tuning",
@@ -5877,7 +5877,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-simulation",
@@ -5907,7 +5907,7 @@
       "updated": "2026-07-27",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-tuning-control",
@@ -5926,7 +5926,7 @@
       "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-v1-17",
@@ -5941,7 +5941,7 @@
       "updated": "2026-07-29",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "pymavlink-v2-4-50",
@@ -6172,7 +6172,7 @@
       "updated": "2026-09-25",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Battery"
     },
     {
       "id": "ris-secure-uav-communications",
@@ -6241,7 +6241,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "ros2-advanced",
@@ -6260,7 +6260,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "ros2-drone-deep",
@@ -6291,7 +6291,7 @@
       "updated": "2026-10-18",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "ros2-lyrical",
@@ -6306,7 +6306,7 @@
       "updated": "2026-07-29",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "rt-detr-plus-uav-detection",
@@ -6342,7 +6342,7 @@
       "updated": "2026-10-16",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "GNSS"
     },
     {
       "id": "saildrone-european-expansion-2026",
@@ -6557,7 +6557,7 @@
       "updated": "2026-09-18",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "VTOL"
     },
     {
       "id": "skyebrowse-crash-analysis-crowd-counter",
@@ -6933,7 +6933,7 @@
       "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "AIModel"
+      "ontologyClass": "SwarmCoordinator"
     },
     {
       "id": "swarm-modes",
@@ -6948,7 +6948,7 @@
       "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "AIModel"
+      "ontologyClass": "SwarmCoordinator"
     },
     {
       "id": "swarmnxt-aerial-swarm-platform",
@@ -7105,7 +7105,7 @@
       "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Frame"
     },
     {
       "id": "uav-alternative-power-hybrid-fuel-cell-research",
@@ -7166,7 +7166,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Battery"
     },
     {
       "id": "uav-cable-payload-cooperative-transport-research",
@@ -7384,7 +7384,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Propeller"
     },
     {
       "id": "uav-resilience-stealthy-attacks",
@@ -9029,7 +9029,7 @@
       "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "auterion",

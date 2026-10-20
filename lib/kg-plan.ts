@@ -9,9 +9,9 @@ import { DOMAIN_META } from "./types"
 
 export interface PlanEntity { id: string; label: string; cls: string; alias: string; attributes: Record<string, string | number | null> }
 export interface PlanRelation { id: string; subject: string; subjectLabel: string; predicate: string; object: string; objectLabel: string; status: string; confidence: string; attrs: Record<string, unknown> }
-export interface PlanClaim { id: string; subject: string; subjectText: string; predicate: string; value: string; unit: string | null; conditions: string | null; origin: string; status: string; confidence: string; contested: boolean; evidenceKind: string; documentPath: string | null; domain: string | null; rules: string[] }
+export interface PlanClaim { id: string; subject: string; subjectText: string; predicate: string; value: string; unit: string | null; conditions: string | null; origin: string; status: string; confidence: string; contested: boolean; evidenceKind: string; documentPath: string | null; domain: string | null; rules: string[]; classLinked?: boolean }
 export interface PlanEvidence { id: string; claimId: string; sourcePath: string; sourceUrl: string; locator: string; quote: string; verified: boolean; method: string; evidenceType: string; resolved: number | null }
-export interface PlanPage { path: string; title: string; domain: string | null; confidence: string | null; excerpt: string; supplementary: true }
+export interface PlanPage { path: string; title: string; domain: string | null; confidence: string | null; excerpt: string; supplementary: true; ontologyClass?: string | null }
 export interface Plan {
   question: string
   domainFilter: string[]
@@ -26,7 +26,7 @@ export interface Plan {
   excluded: { unverified: number; blocked: number; unreviewedRelations: number }
   suggestions: string[]
   status: "ready" | "insufficient_evidence"
-  basis: "ontology" | "wiki-sourced" | "none" // ontology: 개체·관계·검증 claim이 근거 / wiki-sourced: 온톨로지 미연결, 출처 확인된 위키 요약이 근거
+  basis: "ontology" | "ontology-linked" | "wiki-sourced" | "none" // ontology: 개체·관계·검증 claim / ontology-linked: 사람이 승인해 클래스에 연결한 위키 문서 / wiki-sourced: 온톨로지 미연결, 출처 확인된 위키 요약
   confidence: "high" | "medium" | "low"
   contested: boolean
 }
@@ -144,6 +144,15 @@ function relevant(question: string, text: string, ignore?: Set<string>): boolean
 
 // 개념·비교·절차형 질문: 텍스트로만 걸린 논문 claim(예: PX4·ArduPilot이 같이 언급된 지연 시간 측정)을 '차이점'의 근거로 쓰면 오답이 된다
 const CONCEPTUAL = /차이|비교|vs\.?|versus|무엇|뭐야|뭔가요|이란|설명|개요|정의|원리|기준|절차|방법|종류|장단점|특징|어떻게/i
+
+// 공식 계층에서 클래스와 그 하위 클래스(예: FlightStack → PX4·ArduPilot)
+function withDescendants(classes: string[]): Set<string> {
+  const out = new Set<string>(classes)
+  const rows = all<{ name: string; parent: string | null }>("SELECT name, parent FROM ontology_classes")
+  let grew = true
+  while (grew) { grew = false; for (const r of rows) if (r.parent && out.has(r.parent) && !out.has(r.name)) { out.add(r.name); grew = true } }
+  return out
+}
 
 const PRED_RANK: Record<string, number> = { madeBy: 0, isA: 1, powersWith: 2, hasCategory: 3, mentions: 4, packFits: 9 }
 
@@ -271,6 +280,13 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     const hits = all<{ path: string; bypath: number }>(`SELECT path, (lower(path) LIKE ?) bypath FROM documents WHERE (lower(title) LIKE ? OR lower(path) LIKE ?)${domSql} ORDER BY bypath DESC, ${soft}(confidence = 'high') DESC, length(path) LIMIT 40`, `%${tk}%`, `%${tk}%`, `%${tk}%`, ...hardDomain, ...(soft ? plan.domainFilter : []))
     if (hits.length > 0 && hits.length < 40) for (const h of hits.slice(0, 3)) addPage(h.path)
   }
+  // 질문에 나온 클래스에 사람이 승인해 연결한 문서(documents.ontology_class)를 우선 포함한다(온톨로지 연결 문서)
+  const classSet = plan.classes.length ? withDescendants(plan.classes) : new Set<string>()
+  if (classSet.size) {
+    const ph = [...classSet].map(() => "?").join(",")
+    const dom = hardDomain.length ? ` AND domain IN (${hardDomain.map(() => "?").join(",")})` : ""
+    for (const r of all<{ path: string }>(`SELECT path FROM documents WHERE ontology_class IN (${ph})${dom} ORDER BY (confidence = 'high') DESC, path LIMIT 8`, ...classSet, ...hardDomain)) addPage(r.path)
+  }
   for (const c of plan.claims) if (c.documentPath) addPage(c.documentPath)
   if (fq) {
     try {
@@ -304,8 +320,8 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
   pagePaths.length = 0
   for (const x of keep.sort((a, b) => b.s - a.s || a.i - b.i).slice(0, 5)) pagePaths.push(x.path)
   for (const path of pagePaths) {
-    const d = all<{ title: string; domain: string | null; confidence: string | null; body: string }>("SELECT title, domain, confidence, body FROM documents WHERE path = ?", path)[0]
-    if (d) plan.pages.push({ path, title: d.title, domain: d.domain, confidence: d.confidence, excerpt: d.body.replace(/^#.*$/gm, "").replace(/\s+/g, " ").trim().slice(0, 1200), supplementary: true })
+    const d = all<{ title: string; domain: string | null; confidence: string | null; body: string; ontology_class: string | null }>("SELECT title, domain, confidence, body, ontology_class FROM documents WHERE path = ?", path)[0]
+    if (d) plan.pages.push({ path, title: d.title, domain: d.domain, confidence: d.confidence, excerpt: d.body.replace(/^#.*$/gm, "").replace(/\s+/g, " ").trim().slice(0, 1200), supplementary: true, ontologyClass: d.ontology_class })
   }
 
   // 7. 판정 — 온톨로지에 연결된 근거가 있어야 답변 가능(위키 단독 근거 금지)
@@ -314,28 +330,41 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
   const wikiClaims = plan.claims.filter((c) => c.origin === "wiki")
   plan.contested = plan.claims.some((c) => c.contested)
   const wikiSourced = wikiClaims.filter((c) => c.status === "sourced" || c.status === "contested")
-  if (groundedClaims.length || hasEntityFacts) {
+  // 질문의 희귀한 핵심 개념(위키 문서 15개 이하에만 나오는 말)이 선택된 근거 어디에도 없으면, 위키가 그 주제를 다루지 않는 것이므로 거절한다(wiki-sourced·ontology-linked 공통)
+  const refuseMissingCore = (): boolean => {
+    const hay2 = (plan.pages.map((p) => `${p.title} ${p.path} ${p.excerpt}`).join(" ") + " " + wikiClaims.map((c) => `${c.value}`).join(" ")).toLowerCase()
+    // 질문이 가리키는 온톨로지 클래스 이름 자체(예: FlightStack)는 문서에 그 낱말이 없어도 온톨로지가 다루는 개념이므로 빠진 주제로 보지 않는다
+    const classWords = new Set(plan.classes.map((c) => c.toLowerCase()))
+    const missingCore = contentTokens(question, domainWords).filter((t) => {
+      if (t.variants.some((v) => hay2.includes(v) || classWords.has(v))) return false
+      const q = t.variants.map((v) => `"${v.replace(/"/g, "")}"`).join(" OR ")
+      let df = 0
+      try { df = all<{ n: number }>("SELECT count(*) n FROM document_fts WHERE document_fts MATCH ?", q)[0]?.n ?? 0 } catch { df = 99 }
+      return df <= 15
+    }).map((t) => t.orig)
+    // '역사·연혁·동향' 같은 요청 유형어는 일반어라 위 희귀어 검사에서 빠진다 — 질문이 그 내용을 요구하는데 선택된 근거에 한 번도 없으면 주제는 맞아도 요구한 내용이 없는 것이므로 거절한다
+    for (const w of ["역사", "연혁", "history", "동향", "현황"]) if (question.toLowerCase().includes(w) && !hay2.includes(w)) missingCore.push(w)
+    if (!missingCore.length) return false
+    plan.limitations.push(`위키가 '${missingCore.join("', '")}' 주제를 직접 다루는 문서를 갖고 있지 않아 답변하지 않습니다.`)
+    const cls0 = plan.classes[0]
+    if (cls0) plan.suggestions = all<{ example_question: string }>("SELECT q.example_question FROM query_candidates q JOIN ontology_nodes n ON n.id = q.node_id WHERE n.class_name = ? ORDER BY q.id LIMIT 3", cls0).map((r) => r.example_question)
+    return true
+  }
+  // 질문이 가리키는 클래스(또는 그 하위 클래스)에 사람이 승인해 연결한 문서가 선택됐는가
+  const linkedPages = plan.pages.filter((p) => p.ontologyClass && classSet.has(p.ontologyClass))
+  if (!(groundedClaims.length || hasEntityFacts) && linkedPages.length) {
+    if (refuseMissingCore()) return plan
+    plan.status = "ready"; plan.basis = "ontology-linked"
+    plan.confidence = plan.contested ? "low" : linkedPages.some((p) => p.confidence === "high") && wikiSourced.length >= 1 ? "medium" : "low"
+    plan.limitations.unshift(`질문의 클래스(${[...new Set(linkedPages.map((p) => p.ontologyClass))].join(", ")})에 사람이 승인해 연결한 위키 문서와 그 출처 확인 요약에 근거한 답변입니다. 수치·인용은 원문 대조가 아니라 위키 요약이므로 신뢰도를 높게 두지 않았습니다.`)
+  } else if (groundedClaims.length || hasEntityFacts) {
     plan.status = "ready"; plan.basis = "ontology"
     const hi = groundedClaims.some((c) => c.confidence === "high") || plan.relations.some((r) => r.predicate === "powersWith" && r.confidence === "high")
     const mid = groundedClaims.length > 0 || plan.entities.length > 0
     plan.confidence = plan.contested ? "low" : hi ? "high" : mid ? "medium" : "low"
   } else if (wikiSourced.length >= 1 || (plan.pages.length >= 1 && plan.pages.some((p) => p.confidence === "high" || p.confidence === "medium"))) {
     // 2단계: 온톨로지 개체·관계·검증 claim은 없지만 출처 파일이 확인된 위키 요약이 있다 → 답변하되 '위키 요약 기반'으로 명시하고 신뢰도는 medium을 넘지 않는다
-    // 질문의 희귀한 핵심 개념(위키 문서 15개 이하에만 나오는 말)이 선택된 근거 어디에도 없으면, 위키가 그 주제를 다루지 않는 것이므로 거절한다
-    const hay2 = (plan.pages.map((p) => `${p.title} ${p.path} ${p.excerpt}`).join(" ") + " " + wikiClaims.map((c) => `${c.value}`).join(" ")).toLowerCase()
-    const missingCore = contentTokens(question, domainWords).filter((t) => {
-      if (t.variants.some((v) => hay2.includes(v))) return false
-      const q = t.variants.map((v) => `"${v.replace(/"/g, "")}"`).join(" OR ")
-      let df = 0
-      try { df = all<{ n: number }>("SELECT count(*) n FROM document_fts WHERE document_fts MATCH ?", q)[0]?.n ?? 0 } catch { df = 99 }
-      return df <= 15
-    }).map((t) => t.orig)
-    if (missingCore.length) {
-      plan.limitations.push(`위키가 '${missingCore.join("', '")}' 주제를 직접 다루는 문서를 갖고 있지 않아 답변하지 않습니다.`)
-      const cls0 = plan.classes[0]
-      if (cls0) plan.suggestions = all<{ example_question: string }>("SELECT q.example_question FROM query_candidates q JOIN ontology_nodes n ON n.id = q.node_id WHERE n.class_name = ? ORDER BY q.id LIMIT 3", cls0).map((r) => r.example_question)
-      return plan
-    }
+    if (refuseMissingCore()) return plan
     plan.status = "ready"; plan.basis = "wiki-sourced"
     const strongPage = plan.pages.some((p) => p.confidence === "high")
     plan.confidence = plan.contested ? "low" : strongPage && wikiSourced.length >= 2 ? "medium" : "low"

@@ -16,7 +16,7 @@ export interface KgAnswer {
   claims: { id: string; subject: string; predicate: string; value: string; status: string; confidence: string; evidence_kind: string; contested: boolean; origin: string }[]
   evidence: { source_path: string; source_url: string; locator: string; quote: string; claim_id: string; verified: boolean }[]
   canonical_pages: { path: string; title: string; domain: string | null }[]
-  basis: "ontology" | "wiki-sourced" | "none"
+  basis: "ontology" | "ontology-linked" | "wiki-sourced" | "none"
   confidence: "high" | "medium" | "low"
   contested: boolean
   blocked: boolean

@@ -14,7 +14,8 @@ export function kdb(): DatabaseSync | null {
   if (_db !== undefined) return _db
   const t0 = Date.now()
   try {
-    const p = path.join(process.cwd(), "data", "knowledge", "knowledge.sql")
+    // KDB_SQL_PATH는 시험 전용(발행 전 내부 빌드로 질의 로직을 검증). 운영에서는 설정하지 않는다.
+    const p = process.env.KDB_SQL_PATH || path.join(process.cwd(), "data", "knowledge", "knowledge.sql")
     const db = new DatabaseSync(":memory:")
     db.exec(fs.readFileSync(p, "utf-8"))
     _db = db

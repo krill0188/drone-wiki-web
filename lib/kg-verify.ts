@@ -56,7 +56,7 @@ export function verifyAnswer(answer: string, ctx: NimContext, externalCitations 
 
   // V2b 인용 누락: 근거가 context에 있는데 답변에 근거 표기([C1]·[R2]·[P3])가 하나도 없으면 어디서 온 내용인지 확인할 수 없다
   // 위키 요약 기반 답변에만 강제한다: 온톨로지 답변은 계약 응답(claims·evidence·ontology.relations)이 근거를 따로 싣는다.
-  if (ctx.basis === "wiki-sourced" && (ctx.ids.claims.length || ctx.ids.relations.length || ctx.ids.pages.length) && !violations.some((x) => x.code === "unknown_id") && citedClaims.length + citedRelations.length + citedPages.length + externalCitations === 0)
+  if ((ctx.basis === "wiki-sourced" || ctx.basis === "ontology-linked") && (ctx.ids.claims.length || ctx.ids.relations.length || ctx.ids.pages.length) && !violations.some((x) => x.code === "unknown_id") && citedClaims.length + citedRelations.length + citedPages.length + externalCitations === 0)
     violations.push({ code: "missing_citation", detail: "근거 표기 없음" })
 
   // V3 충돌
