@@ -1,12 +1,16 @@
 {
- "generated": "2026-10-20 11:21",
+ "generated": "2026-10-20",
+ "fingerprint": "b266131980db",
  "counts": {
   "manufacturers": 238,
   "products": 588,
   "rules": 26,
   "papers": 108,
   "claims": 248,
-  "edges": 4290
+  "edges": 4290,
+  "documents": 638,
+  "wikiClaims": 1209,
+  "relations": 4325
  },
  "claimsByKind": {
   "cited-secondary": 2,
@@ -31,6 +35,14 @@
   "other": 6,
   "comms": 2
  },
+ "claimsByStatus": {
+  "derived:sourced": 2,
+  "manufacturer:sourced": 3,
+  "paper:verified": 243,
+  "wiki:blocked": 25,
+  "wiki:contested": 6,
+  "wiki:sourced": 1178
+ },
  "productsByCategory": {
   "motor": 163,
   "propeller": 88,
@@ -50,6 +62,35 @@
   "countryVerified": 17,
   "countryUnverified": 196,
   "countryUnknown": 25
+ },
+ "documents": {
+  "total": 638,
+  "withDomain": 610,
+  "noDomain": 28,
+  "unregisteredDomain": 4,
+  "withOntologyClass": 12,
+  "byDomain": {
+   "ai-autonomy": 140,
+   "ops-mission": 132,
+   "hardware": 121,
+   "comms-protocol": 61,
+   "flight-control": 57,
+   "regulations": 37,
+   "(없음)": 28,
+   "gcs-software": 26,
+   "vendor-registry": 17,
+   "software-ecosystem": 13,
+   "rf-datalink-engineering": 2,
+   "ai-agent": 2,
+   "swarm": 1,
+   "drone-sw": 1
+  }
+ },
+ "sources": {
+  "total": 993,
+  "resolved": 962,
+  "unresolved": 26,
+  "unknown": 5
  },
  "edgesByRelation": {
   "packFits": 1867,
@@ -400,25 +441,49 @@
    "sample": []
   },
   {
-   "desc": "verified claim인데 인용문이 비어 있음 (논문 출처 verified는 quote 필수)",
+   "desc": "verified claim인데 인용문이 비어 있음",
    "ok": true,
    "count": 0,
    "sample": []
   },
   {
-   "desc": "조건(conditions)이 비어 있는 claim (조건 없는 일반화 금지)",
+   "desc": "evidence 없는 claim",
    "ok": true,
    "count": 0,
    "sample": []
   },
   {
-   "desc": "제품인데 제조사가 레지스트리/카탈로그에 없음",
+   "desc": "조건(conditions)이 비어 있는 논문 claim",
    "ok": true,
    "count": 0,
    "sample": []
   },
   {
-   "desc": "배터리 제품의 용량·셀 수가 비정상(0 이하)",
+   "desc": "관계의 주어/목적어가 노드·클래스에 없음",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "노드 클래스가 온톨로지 클래스에 없음(제조사·제품·규칙·논문 제외)",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "domain이 있는데 문자열이 비어 있음",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "구현된 실측 상수 규칙(empirical)인데 근거 claim 없음",
+   "ok": true,
+   "count": 0,
+   "sample": []
+  },
+  {
+   "desc": "제품 제조사 누락",
    "ok": true,
    "count": 0,
    "sample": []
@@ -430,13 +495,7 @@
    "sample": []
   },
   {
-   "desc": "구현된 실측 상수 규칙(empirical)인데 근거 claim이 하나도 없음",
-   "ok": true,
-   "count": 0,
-   "sample": []
-  },
-  {
-   "desc": "같은 규칙에 연결된 모델 가정·시뮬레이션 값만으로 'verified' 판정된 규칙",
+   "desc": "모델 가정·시뮬레이션 값만으로 'verified' 판정된 규칙",
    "ok": true,
    "count": 0,
    "sample": []
@@ -454,7 +513,7 @@
    ]
   },
   {
-   "desc": "추진·배터리·구조·사이징 주제인데 규칙에 연결되지 않은 논문 claim (규칙 후보 검토 대상)",
+   "desc": "추진·배터리·구조·사이징 주제인데 규칙에 연결되지 않은 논문 claim",
    "ok": false,
    "count": 52,
    "sample": [
@@ -463,11 +522,65 @@
     "P2306.17087-01",
     "P2306.17087-02",
     "P2309.10631-02",
-    "P2309.10631-03",
-    "P2309.10631-08",
-    "P2309.10631-10",
-    "P2310.04857-03",
-    "P2312.09981-01"
+    "P2309.10631-03"
+   ]
+  },
+  {
+   "desc": "공식 목록에 없는 domain 값을 가진 문서(값은 보존)",
+   "ok": false,
+   "count": 4,
+   "sample": [
+    "concepts/curriculum-guided-heterogeneous-multi-agent-isac.md",
+    "concepts/gps-uav-imu.md",
+    "concepts/micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m.md",
+    "concepts/ukraine-fight-drone-simulator.md"
+   ]
+  },
+  {
+   "desc": "domain이 없는 문서(추론하지 않고 NULL 유지)",
+   "ok": false,
+   "count": 28,
+   "sample": [
+    "concepts/a2z-longtail-dual.md",
+    "concepts/aeroeval-mdo-framework.md",
+    "concepts/agile-quadrotor-learning.md",
+    "concepts/dji-osmo-360-ii.md",
+    "concepts/drone-news-2026-07-31.md",
+    "concepts/drone-wildfire-rt-detr.md"
+   ]
+  },
+  {
+   "desc": "해석되지 않은 출처 경로(blocked claim 원인)",
+   "ok": false,
+   "count": 26,
+   "sample": [
+    "raw/articles/amazon-prime-air-expansion-2026-08.md",
+    "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md",
+    "raw/articles/mastervault-ros2-devnotes.md",
+    "raw/articles/ondas-ohio-drone-hub-2026-08.md",
+    "raw/articles/px4-ros2-offboard-control.md",
+    "raw/articles/saildrone-european-expansion-2026-08.md"
+   ]
+  },
+  {
+   "desc": "frontmatter sources 표기 결함('^[' 접두, 원본 데이터 문제 — 해석기가 정규화해 해소)",
+   "ok": false,
+   "count": 30,
+   "sample": [
+    "^[inbox/processed/fetch-2026-10-20-arxiv-digital-twin-of-a-dc-brushless-electric-motor-propeller-syst.md",
+    "^[inbox/processed/fetch-2026-10-19-arxiv-airspeed-estimation-for-uavs-using-only-propeller-feedback.md",
+    "^[inbox/processed/fetch-2026-10-19-yt-3dxr-supply-and-stock-latest-oct26-china-rc-component-export.md",
+    "^[inbox/processed/fetch-2026-10-19-yolo.md",
+    "^[inbox/processed/fetch-2026-10-19-arxiv-meteorologically-introduced-impacts-on-aerial-channels-and-u.md",
+    "^[inbox/processed/fetch-2026-10-20-arxiv-uav-rotatable-antenna-under-rotation-delay.md"
+   ]
+  },
+  {
+   "desc": "ontology_class 가 있는 canonical 문서가 전체의 10% 미만",
+   "ok": false,
+   "count": 1,
+   "sample": [
+    "coverage"
    ]
   }
  ]

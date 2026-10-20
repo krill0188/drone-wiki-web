@@ -1,4 +1,5 @@
 import graphJson from "../data/ontology/graph.json"
+import { CLASS_ALIAS, KO_EN, RULE_ALIAS } from "./kg-vocab"
 
 // 지식그래프 질의 — 답변의 사실(제품·제조사·호환·규칙·검증 claim)은 여기서만 나온다.
 // graph.json은 scripts/build-graph.py가 사양 필드·원문 대조 claim으로 만든 결정론 산출물이다.
@@ -16,17 +17,6 @@ for (const e of G.edges) {
   ;(inc.get(e.o) ?? inc.set(e.o, []).get(e.o)!).push(e)
 }
 
-const CLASS_ALIAS: Record<string, RegExp> = {
-  Motor: /모터|motor/i, ESC: /\besc\b|변속기|전자변속/i, Propeller: /프롭|프로펠러|propeller/i, Battery: /배터리|전지|battery|lipo|리튬/i,
-  Frame: /프레임|기체 골격|frame|airframe/i, FlightController: /비행\s*제어기|\bfc\b|flight controller|픽스호크|pixhawk/i,
-  CompanionComputer: /컴패니언|온보드\s*컴퓨터|임베디드|jetson|젯슨|라즈베리|raspberry|companion/i, DataLink: /데이터\s*링크|통신|텔레메트리|datalink|radio|lte|5g/i,
-  Engine: /엔진|내연|가솔린|연료전지|하이브리드\s*발전|\bengine\b|fuel cell/i, Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
-}
-const RULE_ALIAS: Record<string, RegExp> = {
-  R01: /호버|hover|정지\s*비행|소모\s*전력|figure of merit|효율/i, R03: /추력|thrust|추력\s*대\s*중량/i, R04: /디스크\s*로딩|disk loading/i,
-  R05: /에너지\s*밀도|wh\/kg|비행\s*시간|체공|endurance|배터리\s*용량/i, R06: /구조\s*(질량|비)|기체\s*무게|empty mass/i, R07: /최고\s*속도|최대\s*속도|max speed/i,
-  R08: /고정익|양항비|l\/d|vtol/i, C04: /순항|전진\s*비행|forward flight|cruise/i, C02: /esc.*(전류|정격)|전류\s*정격/i, C03: /고도|공기\s*밀도|altitude/i,
-}
 
 const mfrOf = (id?: string) => byId.get((out.get(id ?? "") ?? []).find((e) => e.p === "madeBy")?.o ?? "")?.label ?? "?"
 // 증거 종류 태그: 측정이 아닌 값은 답변에서 반드시 구분되게 앞에 붙인다(설계 상수 보정에는 쓰지 않는 값)
@@ -52,14 +42,6 @@ const PRODUCT_PHRASES = G.nodes.filter((n) => n.type === "Product").map((n) => (
 
 
 // ── 그래프 내 claim 검색(어휘 일치 + 희귀 토큰 가중). 수집 문서 검색이 아니라 그래프의 검증 claim 노드만 대상이다. ──
-const KO_EN: Record<string, string[]> = {
-  패키징: ["packaging", "pkg"], 계수: ["coefficient", "multiplier", "factor"], 배터리: ["battery", "lipo", "pack"], 효율: ["efficiency"], 추력: ["thrust"],
-  질량: ["mass", "weight"], 무게: ["weight", "mass"], 전력: ["power"], 소비: ["consumption", "consumed"], 비행: ["flight", "flying"], 호버: ["hover", "hovering"],
-  프롭: ["propeller", "prop"], 프로펠러: ["propeller"], 모터: ["motor"], 에너지: ["energy"], 밀도: ["density"], 속도: ["speed", "velocity"], 지연: ["latency", "delay"],
-  컴퓨터: ["computer", "compute"], 카메라: ["camera"], 라이다: ["lidar"], 구조: ["structural", "structure", "frame"], 프레임: ["frame", "chassis"], 순항: ["cruise"],
-  전진: ["forward"], 항력: ["drag"], 양력: ["lift"], 용량: ["capacity"], 전압: ["voltage"], 전류: ["current"], 온도: ["temperature"], 고도: ["altitude"], 바람: ["wind"],
-  통신: ["communication", "datalink", "link"], 시뮬레이션: ["simulation", "simulated"], 추론: ["inference"], 처리: ["throughput", "processing"], 정확도: ["accuracy"],
-}
 const tokensOf = (t: string) => (t.toLowerCase().match(/[a-z][a-z0-9\-]{2,}|[가-힣]{2,}/g) ?? [])
 const claimNodes = G.nodes.filter((n) => n.type === "Claim")
 const claimTok = new Map<string, Set<string>>(claimNodes.map((c) => [c.id, new Set(tokensOf(`${c.label} ${c.attribute ?? ""} ${c.conditions ?? ""} ${c.quote ?? ""} ${c.source ?? ""}`))]))

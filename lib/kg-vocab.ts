@@ -1,0 +1,24 @@
+// 질의 해석 공용 어휘(클래스·규칙 동의어, 한국어→영어 용어). lib/kg.ts(JSON 경로)와 lib/kg-plan.ts(SQLite 경로)가 함께 쓴다.
+export const CLASS_ALIAS: Record<string, RegExp> = {
+  Motor: /모터|motor/i, ESC: /\besc\b|변속기|전자변속/i, Propeller: /프롭|프로펠러|propeller/i, Battery: /배터리|전지|battery|lipo|리튬/i,
+  Frame: /프레임|기체 골격|frame|airframe/i, FlightController: /비행\s*제어기|\bfc\b|flight controller|픽스호크|pixhawk/i,
+  CompanionComputer: /컴패니언|온보드\s*컴퓨터|임베디드|jetson|젯슨|라즈베리|raspberry|companion/i, Datalink: /데이터\s*링크|통신|텔레메트리|datalink|radio|lte|5g/i,
+  Engine: /엔진|내연|가솔린|연료전지|하이브리드\s*발전|\bengine\b|fuel cell/i, Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
+}
+
+export const RULE_ALIAS: Record<string, RegExp> = {
+  R01: /호버|hover|정지\s*비행|소모\s*전력|figure of merit|효율/i, R03: /추력|thrust|추력\s*대\s*중량/i, R04: /디스크\s*로딩|disk loading/i,
+  R05: /에너지\s*밀도|wh\/kg|비행\s*시간|체공|endurance|배터리\s*용량/i, R06: /구조\s*(질량|비)|기체\s*무게|empty mass/i, R07: /최고\s*속도|최대\s*속도|max speed/i,
+  R08: /고정익|양항비|l\/d|vtol/i, C04: /순항|전진\s*비행|forward flight|cruise/i, C02: /esc.*(전류|정격)|전류\s*정격/i, C03: /고도|공기\s*밀도|altitude/i,
+}
+
+export const KO_EN: Record<string, string[]> = {
+  패키징: ["packaging", "pkg"], 계수: ["coefficient", "multiplier", "factor"], 배터리: ["battery", "lipo", "pack"], 추력: ["thrust"],
+  질량: ["mass", "weight"], 무게: ["weight", "mass"], 전력: ["power"], 소비: ["consumption", "consumed"], 비행: ["flight", "flying"], 호버: ["hover", "hovering"],
+  프롭: ["propeller", "prop"], 프로펠러: ["propeller"], 모터: ["motor"], 에너지: ["energy"], 밀도: ["density"], 속도: ["speed", "velocity"], 지연: ["latency", "delay"],
+  컴퓨터: ["computer", "compute"], 카메라: ["camera"], 라이다: ["lidar"], 구조: ["structural", "structure", "frame"], 프레임: ["frame", "chassis"], 순항: ["cruise"],
+  전진: ["forward"], 항력: ["drag"], 양력: ["lift"], 용량: ["capacity"], 전압: ["voltage"], 전류: ["current"], 온도: ["temperature"], 고도: ["altitude"], 바람: ["wind"],
+  제어: ["control", "controller"], 모드: ["mode"], 오프보드: ["offboard"], 알고리즘: ["algorithm"], 센서: ["sensor"], 프로토콜: ["protocol"], 거리: ["distance", "range"], 시간: ["time", "duration"],
+  크기: ["size"], 비용: ["cost"], 성능: ["performance"], 효율: ["efficiency"], 안정성: ["stability", "robust"],
+  통신: ["communication", "datalink", "link"], 시뮬레이션: ["simulation", "simulated"], 추론: ["inference"], 처리: ["throughput", "processing"], 정확도: ["accuracy"],
+}
