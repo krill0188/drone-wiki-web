@@ -30,7 +30,8 @@ export type Generate = (system: string, prompt: string) => Promise<string>
 
 // 기존 NIM 모델 체인(lib/ai-model.ts)은 SSE 스트림 응답으로 '첫 답변 글자'를 판정하므로 스트리밍으로 호출하고 전체 텍스트를 모은다.
 const nimGenerate: Generate = async (system, prompt) => {
-  const r = streamText({ model: wikiModel("chat"), system, prompt, temperature: 0 })
+  // context가 약 14KB로 크다: 실측(2026-10-20)에서 gpt-oss-20b는 첫 답까지 9~12초(무응답 폴백 시 15초 추가), nemotron은 0.4초라 빌더용 체인(nemotron 우선)을 쓴다.
+  const r = streamText({ model: wikiModel("builder"), system, prompt, temperature: 0 })
   return await r.text
 }
 
