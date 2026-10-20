@@ -107,7 +107,7 @@ function ftsQuery(question: string): string {
 }
 
 // ── 관련성 게이트: 흔한 단어(드론·비행…)만 겹친 claim/문서를 근거로 삼지 않는다 ──
-const GENERIC_Q = new Set(["드론", "비행", "uav", "uavs", "drone", "drones", "flight", "방법", "역사", "설명", "정리", "특징", "종류", "최신", "동향", "기술", "시스템", "system", "차이", "사용", "대해", "이란", "무엇인가", "연동", "연결", "통합", "적용", "활용", "이용", "구성", "설정", "구현", "선택", "조건", "영향", "현황", "동향", "관련해서"])
+const GENERIC_Q = new Set(["드론", "비행", "uav", "uavs", "drone", "drones", "flight", "방법", "역사", "설명", "정리", "특징", "종류", "최신", "동향", "기술", "시스템", "system", "차이", "사용", "대해", "이란", "무엇인가", "연동", "연결", "통합", "적용", "활용", "이용", "구성", "설정", "구현", "선택", "조건", "영향", "현황", "동향", "관련해서", "필요", "필요해", "필요한가", "필요한가요", "있나", "있나요", "있는지", "얼마", "얼마야", "얼마예요", "어디", "어디야", "어디인가", "되나", "되나요", "해야", "하나요", "한가요"])
 const PARTICLE = /(을|를|은|는|이|가|의|에|에서|로|으로|과|와|도|만|인|란|이란|에서의|에는|으로는)$/
 const stem = (t: string) => (/[가-힣]/.test(t) ? t.replace(PARTICLE, "") : t)
 const dfCache = new Map<string, number>()
@@ -143,6 +143,7 @@ function relevant(question: string, text: string, ignore?: Set<string>): boolean
 }
 
 // 개념·비교·절차형 질문: 텍스트로만 걸린 논문 claim(예: PX4·ArduPilot이 같이 언급된 지연 시간 측정)을 '차이점'의 근거로 쓰면 오답이 된다
+const REGULATORY = /허가|승인|신고|증명|과태료|벌금|벌칙|규정|규제|법령|시행규칙|항공안전법|등록|면제|자격|금지구역|공역/
 const CONCEPTUAL = /차이|비교|vs\.?|versus|무엇|뭐야|뭔가요|이란|설명|개요|정의|원리|기준|절차|방법|종류|장단점|특징|어떻게/i
 
 // 공식 계층에서 클래스와 그 하위 클래스(예: FlightStack → PX4·ArduPilot)
@@ -219,7 +220,8 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     push(all<{ id: string }>(`SELECT id FROM claims WHERE subject_id IN (${ph}) ORDER BY id LIMIT 20`, ...entityIds).map((r) => r.id))
     push(all<{ s: string }>(`SELECT substr(subject_id, 7) s FROM ontology_relations WHERE predicate = 'mentions' AND object_id IN (${ph}) ORDER BY 1 LIMIT 20`, ...entityIds).map((r) => r.s))
   }
-  const ruleIds = Object.entries(RULE_ALIAS).filter(([, re]) => re.test(question)).map(([r]) => r)
+  // 법령·규제 질문에서는 공학 규칙(예: '고도'→대기밀도 규칙)을 끌어오지 않는다 — 단어만 겹친 공학 claim이 '근거 있음'으로 둔갑하는 것을 막는다
+  const ruleIds = REGULATORY.test(question) ? [] : Object.entries(RULE_ALIAS).filter(([, re]) => re.test(question)).map(([r]) => r)
   if (ruleIds.length) {
     const ph = ruleIds.map(() => "?").join(",")
     push(all<{ claim_id: string }>(`SELECT cr.claim_id FROM claim_rules cr JOIN claims c ON c.id = cr.claim_id WHERE cr.rule_id IN (${ph}) ORDER BY (c.evidence_kind = 'reported') DESC, (c.status = 'verified') DESC, c.id LIMIT 14`, ...ruleIds).map((r) => r.claim_id))
@@ -269,7 +271,7 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
 
   // 6. canonical 문서 — ① 질문의 핵심어가 제목·경로에 있는 문서 ② 선택된 위키 claim의 문서 ③ domain 필터를 적용한 전문검색. 모두 보강용이며 단독 근거로 쓰는 경우는 7단계 기준을 따른다.
   const pagePaths: string[] = []
-  const addPage = (path: string) => { if (!pagePaths.includes(path) && pagePaths.length < 6) pagePaths.push(path) }
+  const addPage = (path: string) => { if (!pagePaths.includes(path) && pagePaths.length < 14) pagePaths.push(path) }
   // ① 핵심어가 슬러그·제목에 있는 문서를 단어별로 직접 고른다(비교 질문은 두 대상의 문서를 각각 가져와야 하므로 한 문서에 둘이 함께 있을 필요가 없다).
   //    제목에 너무 많은 문서가 걸리는 일반어(drone·protocol 등)는 건너뛰고, 슬러그 일치를 제목 일치보다 먼저, 신뢰도 high를 먼저 둔다.
   const titleTokens = [...new Set(contentTokens(question, domainWords).flatMap((t) => t.variants).filter((v) => /^[a-z0-9][a-z0-9\-]{2,}$/.test(v)))].slice(0, 8)
@@ -299,8 +301,17 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
       }
     } catch { /* FTS 질의 오류는 보강 자료만 빠지는 것이라 무시 */ }
   }
+  // 법령·규제 질문은 regulations 문서 안에서 전문검색을 한 번 더 한다(한국어 질문 ↔ 영문 슬러그·제목이라 일반 검색 상위에 못 오르는 법령 문서를 후보에 넣는다)
+  if (fq && REGULATORY.test(question) && !hardDomain.length) {
+    try {
+      for (const r of all<{ document_id: string }>("SELECT document_id FROM document_fts WHERE document_fts MATCH ? AND domain = 'regulations' ORDER BY bm25(document_fts) LIMIT 4", fq)) addPage(r.document_id.replace(/^doc:/, ""))
+    } catch { /* 보강 검색 실패는 무시 */ }
+  }
   // 문서 순위: 질문 핵심어(한·영 변형)가 제목·경로에 몇 개 나오는지로 매기고, 핵심어가 하나도 없는 문서는 일치 문서가 2개 이상이면 버린다(본문에 우연히 언급만 된 문서가 답변을 흐리는 것을 막음)
   const anchors = contentTokens(question, domainWords)
+  // 법령·규제 질문이면 domain이 regulations인 문서를 순위에서만 앞세운다(필터가 아님 — domain 값은 바꾸지도 걸러내지도 않는다)
+  const regDocs = REGULATORY.test(question) ? new Set(all<{ path: string }>("SELECT path FROM documents WHERE domain = 'regulations'").map((r) => r.path)) : new Set<string>()
+  const claimDocs = new Set(plan.claims.map((c) => c.documentPath).filter((x): x is string => !!x))
   const anchorScore = (path: string) => {
     const r = all<{ title: string; path: string }>("SELECT title, path FROM documents WHERE path = ?", path)[0]
     const hay = `${r?.title ?? ""} ${r?.path ?? ""}`.toLowerCase()
@@ -310,7 +321,8 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     const vs = (w: string) => [w, ...Object.entries(KO_EN).filter(([ko]) => w.startsWith(ko)).flatMap(([, ens]) => ens)]
     let bonus = 0
     for (let i = 0; i + 1 < toks.length; i++) for (const a of vs(toks[i])) for (const b of vs(toks[i + 1])) if (/^[a-z0-9]/.test(a) && /^[a-z0-9]/.test(b) && new RegExp(`${esc(a)}[ \\-_]${esc(b)}`).test(hay)) bonus = 3
-    return base + bonus
+    // 질문과 맞는 위키 claim이 속한 문서는 영어 슬러그에 질문어가 없어도(한국어 질문 ↔ 영문 슬러그) 우선한다
+    return base + bonus + (claimDocs.has(path) ? 1 : 0) + (regDocs.has(path) ? 2 : 0)
   }
   const scored = pagePaths.map((path, i) => ({ path, s: anchorScore(path), i }))
   const top = Math.max(0, ...scored.map((x) => x.s))

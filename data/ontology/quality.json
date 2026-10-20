@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-20",
- "fingerprint": "579a49c46ea0",
+ "fingerprint": "35ba0ec74ced",
  "counts": {
   "manufacturers": 238,
   "products": 588,
@@ -8,8 +8,8 @@
   "papers": 108,
   "claims": 248,
   "edges": 4290,
-  "documents": 638,
-  "wikiClaims": 1209,
+  "documents": 645,
+  "wikiClaims": 1252,
   "relations": 4325
  },
  "claimsByKind": {
@@ -41,7 +41,7 @@
   "paper:verified": 243,
   "wiki:blocked": 25,
   "wiki:contested": 6,
-  "wiki:sourced": 1176,
+  "wiki:sourced": 1219,
   "wiki:unverified": 2
  },
  "productsByCategory": {
@@ -65,8 +65,8 @@
   "countryUnknown": 25
  },
  "documents": {
-  "total": 638,
-  "withDomain": 610,
+  "total": 645,
+  "withDomain": 617,
   "noDomain": 28,
   "unregisteredDomain": 4,
   "withOntologyClass": 65,
@@ -76,7 +76,7 @@
    "hardware": 121,
    "comms-protocol": 61,
    "flight-control": 57,
-   "regulations": 37,
+   "regulations": 44,
    "(없음)": 28,
    "gcs-software": 26,
    "vendor-registry": 17,
@@ -88,8 +88,8 @@
   }
  },
  "sources": {
-  "total": 993,
-  "resolved": 962,
+  "total": 1034,
+  "resolved": 1003,
   "unresolved": 26,
   "unknown": 5
  },

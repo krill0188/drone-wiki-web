@@ -156,6 +156,27 @@ async function main() {
     ok(p.status === "insufficient_evidence", `${p.status}/${p.basis}`)
   })
 
+  await t("K1 한국 드론 법령 질문: 법령 페이지를 근거로 답변 가능, 공학 규칙으로 둔갑하지 않음", () => {
+    const cases: [string, string][] = [
+      ["250g 이하 드론도 조종자 증명이 필요해?", "kr-ultralight-registration-certification"],
+      ["기체 신고 면제 기준은?", "kr-ultralight-registration-certification"],
+      ["비행승인 고도 기준은?", "kr-drone-flight-approval-airspace"],
+      ["한국 드론 과태료 얼마야?", "kr-drone-penalties"],
+      ["한국에서 드론 비행 허가 절차는?", "kr-drone-flight-approval-airspace"],
+    ]
+    for (const [q, doc] of cases) {
+      const p = planQuery(q)
+      ok(p.status === "ready" && p.basis === "wiki-sourced" && p.confidence !== "high", `${q} → ${p.status}/${p.basis}/${p.confidence}`)
+      ok(p.pages.some((x) => x.path.includes(doc)), `${q}: ${doc} 없음 (${p.pages.map((x) => x.path)})`)
+      ok(!p.claims.some((c) => c.origin !== "wiki"), `${q}: 공학 claim이 섞임`)
+    }
+  })
+
+  await t("K2 법령 별표처럼 수집본에 없는 내용(P-73 경계)은 지어내지 않고 거절", () => {
+    const p = planQuery("P-73 비행금지구역 경계가 어디야?")
+    ok(p.status === "insufficient_evidence", `${p.status}/${p.basis}`)
+  })
+
   await t("W1 MAVLink란 무엇인가요: mavlink 문서를 찾아 위키 요약 기반으로 답변 가능", () => {
     const p = planQuery("MAVLink 프로토콜이란 무엇인가요?")
     ok(p.status === "ready" && p.basis === "wiki-sourced" && p.confidence !== "high", `${p.status}/${p.basis}/${p.confidence}`)

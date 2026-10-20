@@ -21,7 +21,7 @@ export const KO_EN: Record<string, string[]> = {
   질량: ["mass", "weight"], 무게: ["weight", "mass"], 전력: ["power"], 소비: ["consumption", "consumed"], 비행: ["flight", "flying"], 호버: ["hover", "hovering"],
   프롭: ["propeller", "prop"], 프로펠러: ["propeller"], 모터: ["motor"], 에너지: ["energy"], 밀도: ["density"], 속도: ["speed", "velocity"], 지연: ["latency", "delay"],
   컴퓨터: ["computer", "compute"], 카메라: ["camera"], 라이다: ["lidar"], 구조: ["structural", "structure", "frame"], 프레임: ["frame", "chassis"], 순항: ["cruise"],
-  전진: ["forward"], 항력: ["drag"], 양력: ["lift"], 용량: ["capacity"], 전압: ["voltage"], 전류: ["current"], 온도: ["temperature"], 고도: ["altitude"], 바람: ["wind"],
+  전진: ["forward"], 항력: ["drag"], 양력: ["lift"], 용량: ["capacity"], 전압: ["voltage"], 전류: ["current"], 온도: ["temperature"], 고도: ["altitude"], 바람: ["wind"], 신고: ["registration"], 증명: ["certificate", "certification"], 과태료: ["fines", "penalties"], 벌칙: ["penalty", "penalties"], 등록: ["registration"], 공역: ["airspace"], 규제: ["regulation", "regulations"],
   제어: ["control", "controller"], 모드: ["mode"], 오프보드: ["offboard"], 알고리즘: ["algorithm"], 센서: ["sensor"], 프로토콜: ["protocol"], 거리: ["distance", "range"], 시간: ["time", "duration"],
   크기: ["size"], 비용: ["cost"], 성능: ["performance"], 효율: ["efficiency"], 안정성: ["stability", "robust"],
   컨트롤러: ["controller"], 허가: ["permit", "permission", "authorization", "approval"], 승인: ["approval", "authorization"], 규정: ["regulation", "regulations", "rule"], 한국: ["korea", "korean"], 법규: ["regulation", "law"],

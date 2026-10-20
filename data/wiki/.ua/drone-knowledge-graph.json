@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "866c375358f3a47fe3f76b8e2b63ab1466767bf91ef4cea7516ecccef9a78a6d",
+  "source_fingerprint": "47d530bf3d0f55fc4af0c863f11cadd1e39aee7114abb4c4cf19278458dd0239",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -2319,7 +2319,7 @@
         "BVLOS",
         "compliance"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-20",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -4511,6 +4511,107 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "kr-drone-business-registration",
+      "name": "한국 초경량비행장치사용사업 등록",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "company"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-drone-flight-approval-airspace",
+      "name": "한국 드론 공역·비행승인·조종자 준수사항",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-drone-law-framework",
+      "name": "한국 드론 법체계 개요와 장치 기준",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "utm"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-drone-penalties",
+      "name": "한국 초경량비행장치 위반 제재(형사벌·과태료)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-public-emergency-drone-exemption",
+      "name": "한국 군·경·세관 및 국가기관 긴급비행 적용 특례",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-ultralight-registration-certification",
+      "name": "한국 초경량비행장치 신고·안전성인증·조종자증명",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-unmanned-special-flight-approval",
+      "name": "한국 무인비행장치 특별비행승인(야간·가시권 밖)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
     },
     {
       "id": "lapf-llm-agent-pathfinder",
@@ -15515,6 +15616,51 @@
       "confidence": "high"
     },
     {
+      "source": "drone-regulations",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "kr-ultralight-registration-certification",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "kr-unmanned-special-flight-approval",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-regulations",
+      "target": "kr-drone-penalties",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/fetch-2026-08-15-rss-dronelife.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "drone-rice-heading-detection",
       "target": "computer-vision-drone",
       "type": "related",
@@ -19789,6 +19935,249 @@
         "inbox/processed/fetch-2026-10-10-yt-use-a-streamdeck-with-ardupilotmission-planner-using-kh-cont.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "kr-drone-business-registration",
+      "target": "kr-ultralight-registration-certification",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-bizact-art48-ultralight-business.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-business-registration",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-bizact-art48-ultralight-business.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-business-registration",
+      "target": "ops-mission",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-bizact-art48-ultralight-business.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-flight-approval-airspace",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art78-airspace.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-flight-approval-airspace",
+      "target": "kr-unmanned-special-flight-approval",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art78-airspace.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-flight-approval-airspace",
+      "target": "kr-drone-penalties",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art78-airspace.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-flight-approval-airspace",
+      "target": "drone-safety-failsafe",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art78-airspace.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "kr-ultralight-registration-certification",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "kr-unmanned-special-flight-approval",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "kr-drone-business-registration",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "kr-drone-penalties",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-law-framework",
+      "target": "utm-system",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art2-definition.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-penalties",
+      "target": "kr-ultralight-registration-certification",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art161-penalty-criminal.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-penalties",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art161-penalty-criminal.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-penalties",
+      "target": "kr-unmanned-special-flight-approval",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art161-penalty-criminal.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-drone-penalties",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art161-penalty-criminal.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-public-emergency-drone-exemption",
+      "target": "drone-first-responder-dfr",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art131-2-public-exemption.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-public-emergency-drone-exemption",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art131-2-public-exemption.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-public-emergency-drone-exemption",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art131-2-public-exemption.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-ultralight-registration-certification",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art122-registration.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-ultralight-registration-certification",
+      "target": "kr-drone-penalties",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art122-registration.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-ultralight-registration-certification",
+      "target": "faa-249-gram-registration-rule",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art122-registration.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-unmanned-special-flight-approval",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art129-pilot-duties-special-flight.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-unmanned-special-flight-approval",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art129-pilot-duties-special-flight.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kr-unmanned-special-flight-approval",
+      "target": "mission-planning",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art129-pilot-duties-special-flight.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "lapf-llm-agent-pathfinder",

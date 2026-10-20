@@ -5,7 +5,7 @@ import type { NimContext } from "./kg-context"
 //  V2 답변의 숫자는 모두 context(또는 질문)에 있는 숫자
 //  V3 충돌(contested) claim이 있으면 충돌을 언급
 //  V4 insufficient 판정이면 사실 진술 금지(호출부에서 처리)
-export interface Violation { code: "unknown_id" | "unsupported_number" | "contested_not_flagged" | "empty_answer" | "missing_citation"; detail: string }
+export interface Violation { code: "unknown_id" | "unsupported_number" | "contested_not_flagged" | "empty_answer" | "missing_citation" | "unsupported_term"; detail: string }
 export interface VerifyResult { ok: boolean; violations: Violation[]; citedClaims: string[]; citedRelations: string[]; citedPages: string[] }
 
 // 핸들 인용: [C1] [R3] [P2]  (구형 [C:id] 형식도 인식해 화이트리스트에 없으면 위반 처리)
@@ -53,6 +53,14 @@ export function verifyAnswer(answer: string, ctx: NimContext, externalCitations 
     if (!allowed.has(n)) unsupported.add(raw)
   }
   for (const u of unsupported) violations.push({ code: "unsupported_number", detail: u })
+
+  // V2a 풀어쓴 말: 괄호 안 한글 풀이(예: '시계비행(시계방향 비행)')는 context 어디에도 없으면 모델이 지어낸 용어다 — 법령 질문에서 용어가 바뀌어 전달되는 것을 막는다
+  const ctxText = JSON.stringify({ ...ctx, answer_constraints: [] })
+  for (const m of stripped.matchAll(/\(([가-힣][가-힣\s·]{2,24})\)/g)) {
+    const g = m[1].trim()
+    if (/위키|온톨로지|요약|예|등|기반|참고|단독|즉/.test(g)) continue
+    if (!ctxText.includes(g) && !ctx.question.includes(g)) violations.push({ code: "unsupported_term", detail: g })
+  }
 
   // V2b 인용 누락: 근거가 context에 있는데 답변에 근거 표기([C1]·[R2]·[P3])가 하나도 없으면 어디서 온 내용인지 확인할 수 없다
   // 위키 요약 기반 답변에만 강제한다: 온톨로지 답변은 계약 응답(claims·evidence·ontology.relations)이 근거를 따로 싣는다.
