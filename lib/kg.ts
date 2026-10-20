@@ -50,6 +50,42 @@ function phrases(n: KNode): string[] {
 }
 const PRODUCT_PHRASES = G.nodes.filter((n) => n.type === "Product").map((n) => ({ n, ph: phrases(n) }))
 
+
+// ── 그래프 내 claim 검색(어휘 일치 + 희귀 토큰 가중). 수집 문서 검색이 아니라 그래프의 검증 claim 노드만 대상이다. ──
+const KO_EN: Record<string, string[]> = {
+  패키징: ["packaging", "pkg"], 계수: ["coefficient", "multiplier", "factor"], 배터리: ["battery", "lipo", "pack"], 효율: ["efficiency"], 추력: ["thrust"],
+  질량: ["mass", "weight"], 무게: ["weight", "mass"], 전력: ["power"], 소비: ["consumption", "consumed"], 비행: ["flight", "flying"], 호버: ["hover", "hovering"],
+  프롭: ["propeller", "prop"], 프로펠러: ["propeller"], 모터: ["motor"], 에너지: ["energy"], 밀도: ["density"], 속도: ["speed", "velocity"], 지연: ["latency", "delay"],
+  컴퓨터: ["computer", "compute"], 카메라: ["camera"], 라이다: ["lidar"], 구조: ["structural", "structure", "frame"], 프레임: ["frame", "chassis"], 순항: ["cruise"],
+  전진: ["forward"], 항력: ["drag"], 양력: ["lift"], 용량: ["capacity"], 전압: ["voltage"], 전류: ["current"], 온도: ["temperature"], 고도: ["altitude"], 바람: ["wind"],
+  통신: ["communication", "datalink", "link"], 시뮬레이션: ["simulation", "simulated"], 추론: ["inference"], 처리: ["throughput", "processing"], 정확도: ["accuracy"],
+}
+const tokensOf = (t: string) => (t.toLowerCase().match(/[a-z][a-z0-9\-]{2,}|[가-힣]{2,}/g) ?? [])
+const claimNodes = G.nodes.filter((n) => n.type === "Claim")
+const claimTok = new Map<string, Set<string>>(claimNodes.map((c) => [c.id, new Set(tokensOf(`${c.label} ${c.attribute ?? ""} ${c.conditions ?? ""} ${c.quote ?? ""} ${c.source ?? ""}`))]))
+const df = new Map<string, number>()
+for (const set of claimTok.values()) for (const t of set) df.set(t, (df.get(t) ?? 0) + 1)
+const STOP = new Set(["알려줘", "알려", "무엇", "어떻게", "대한", "관련", "에서", "얼마", "정보", "the", "and", "for", "with", "논문"])
+
+function searchClaims(question: string, limit = 6): string[] {
+  const q = tokensOf(question).filter((t) => !STOP.has(t))
+  // 원래 질문 토큰 → 그 토큰의 매칭 후보(원형 + 용어 사전 영어). 서로 다른 '원래 토큰' 2개 이상이 맞아야 하거나,
+  // 질문에 직접 쓴 희귀 영문 이름(예: AeroEval)이 맞아야 후보가 된다 — 한 단어(예: 비행→flying)만 겹친 잡음을 막는다.
+  const variants = q.map((t) => ({ orig: t, vs: new Set<string>([t, ...Object.entries(KO_EN).filter(([ko]) => t.startsWith(ko)).flatMap(([, ens]) => ens)]) }))
+  const N = claimNodes.length
+  const scored = claimNodes.map((c) => {
+    const set = claimTok.get(c.id)!
+    let sc = 0, origHits = 0, rareDirect = false
+    for (const { orig, vs } of variants) {
+      let best = 0
+      for (const t of vs) if (set.has(t)) best = Math.max(best, Math.log(1 + N / (df.get(t) ?? 1)))
+      if (best > 0) { sc += best; origHits++; if (/^[a-z]/.test(orig) && orig.length >= 5 && (df.get(orig) ?? 99) <= 25 && set.has(orig)) rareDirect = true }
+    }
+    return { id: c.id, sc, ok: origHits >= 2 || rareDirect }
+  }).filter((x) => x.ok).sort((a, b) => b.sc - a.sc)
+  return scored.slice(0, limit).map((x) => x.id)
+}
+
 export interface KgResult { block: string; empty: boolean; facts: { id: string; text: string; source?: string }[]; matched: string[]; table?: string }
 
 export function queryKG(question: string): KgResult {
@@ -104,6 +140,9 @@ export function queryKG(question: string): KgResult {
     const meta = [m.country ? `국가/본사 ${m.country}${m.countryVerified === false ? " (일반지식 표기 — 공식 페이지 미확인)" : " (공식 페이지 확인)"}` : "", cats.length ? `레지스트리 분야 ${[...new Set(cats)].join("·")}` : "", m.officialUrl ? `공식 ${m.officialUrl}` : ""].filter(Boolean).join(", ")
     add(m.id, `제조사 ${m.label} — ${meta ? meta + "; " : ""}지식그래프 등록 제품 ${prods.length}개${prods.length ? ": " + prods.slice(0, 8).map((p) => `${p.label}(${p.cls})`).join(", ") + (prods.length > 8 ? " 외" : "") : "(제품 사양은 아직 미수집, 제조사 레지스트리만 등록)"}`)
   }
+  // 질문의 이름·용어와 어휘가 맞는 검증 claim(논문에서 나온 시스템 이름 등)을 그래프에서 직접 찾는다 — 클래스 일반 claim보다 먼저
+  const hitClaims = searchClaims(question)
+  for (const cid of hitClaims) claimLine(cid)
   for (const r of rules) {
     const n = byId.get(r)
     if (!n) continue
@@ -120,7 +159,7 @@ export function queryKG(question: string): KgResult {
       const ms = (inc.get(c) ?? []).filter((e) => e.p === "hasCategory").map((e) => byId.get(e.s)!).filter(Boolean)
       if (ms.length) add(`${c}|vendors`, `${c.slice(6)} 분야 제조사 ${ms.length}곳(2nd 제조사 레지스트리): ${ms.slice(0, 20).map((m) => `${m.label}${m.countryVerified === false ? "*" : ""}`).join(", ")}${ms.length > 20 ? " 외" : ""} (* = 국가는 일반지식 표기, 공식 확인 아님)`)
     }
-    if (!products.length && !mfrs.length) for (const e of (inc.get(c) ?? []).filter((e) => e.p === "about").slice(0, 8)) claimLine(e.s)
+    if (!products.length && !mfrs.length && !hitClaims.length) for (const e of (inc.get(c) ?? []).filter((e) => e.p === "about").slice(0, 8)) claimLine(e.s)
   }
 
   // 호환 표는 코드가 완성해 제공한다 — 모델이 표를 다시 쓰다 셀 범위·전류를 틀리는 문제를 막는다(2026-10-19 E2E에서 확인).
