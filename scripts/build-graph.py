@@ -14,7 +14,7 @@ load = lambda f: json.load(open(os.path.join(D, f)))
 slug = lambda s: re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
 
 CLASS = {"engine": "Engine", "motor": "Motor", "esc": "ESC", "propeller": "Propeller", "battery": "Battery", "frame": "Frame",
-         "fc": "FlightController", "compute": "CompanionComputer", "datalink": "DataLink", "sensor": "Sensor", "payload": "Payload"}
+         "fc": "FlightController", "compute": "CompanionComputer", "datalink": "Datalink", "sensor": "Sensor", "payload": "Payload"}
 # 규칙이 지배하는 제품 클래스 (규칙 ID → 클래스). 코드 상수와 같은 정의에서 가져온 수동 매핑이라 rules.json의 where/formula 기준으로 검토 대상.
 GOVERNS = {"R01": ["Motor", "Propeller"], "R02": ["Propeller"], "R03": ["Motor"], "R04": ["Propeller"], "R05": ["Battery"], "R06": ["Frame"],
            "R09": ["Battery"], "R11": ["Battery"], "R12": ["Propeller", "Frame"], "R13": ["Frame"], "C02": ["ESC", "Motor"], "C03": ["Propeller"]}
@@ -78,7 +78,7 @@ for m in (q for q in items if q["category"] == "motor"):
 
 # 2nd 제조사 레지스트리 병합: 웹 카탈로그 제조사와 이름 매핑된 곳은 국가·공식 URL을 붙이고, 레지스트리에만 있는 제조사는 분야(hasCategory)와 함께 노드로 추가
 RCLS = {"motor": "Motor", "esc": "ESC", "propeller": "Propeller", "battery": "Battery", "frame": "Frame", "fc": "FlightController", "compute": "CompanionComputer",
-        "datalink": "DataLink", "camera": "Sensor", "lidar": "Sensor", "radar": "Sensor", "gnss-imu": "Sensor", "payload-mech": "Payload"}
+        "datalink": "Datalink", "camera": "Sensor", "lidar": "Sensor", "radar": "Sensor", "gnss-imu": "Sensor", "payload-mech": "Payload"}
 mp = load("manufacturer-map.json")
 web2reg = {x["web"]: x["registry"] for x in mp["matched"]}
 for web, regname in web2reg.items():
@@ -99,7 +99,7 @@ for r in rules:
     for c in GOVERNS.get(r["id"], []): edge(f"rule:{r['id']}", "governs", f"class:{c}")
 # claim 주제 → 제품 클래스 (topic은 추출 시 붙인 분류, 규칙 연결은 GOVERNS 경유)
 TOPIC = {"propulsion": ["Motor", "Propeller"], "battery": ["Battery"], "energy": ["Battery"], "structure": ["Frame"], "flight-controller": ["FlightController"],
-         "companion": ["CompanionComputer"], "comms": ["DataLink"], "payload": ["Payload", "Sensor"]}
+         "companion": ["CompanionComputer"], "comms": ["Datalink"], "payload": ["Payload", "Sensor"]}
 # 제품 언급 판정: 제조사명을 뺀 제품명에서 2~3단어 구(예: "orin nx", "mid-360", "pixhawk 6x")를 만들고 claim 본문에 그대로 있으면 연결.
 # 용량·일반어만 있는 구(16gb, brushless motor 등)는 오탐이라 제외.
 GENERIC = {"series", "module", "kit", "brushless", "motor", "battery", "propeller", "props", "frame", "drone", "developer", "version", "lipo", "esc", "the", "and", "with", "for", "pro", "mini", "flight", "controller", "computer", "camera", "sensor", "lidar", "radio", "system"}

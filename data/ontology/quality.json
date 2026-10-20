@@ -41,7 +41,8 @@
   "paper:verified": 243,
   "wiki:blocked": 25,
   "wiki:contested": 6,
-  "wiki:sourced": 1178
+  "wiki:sourced": 1176,
+  "wiki:unverified": 2
  },
  "productsByCategory": {
   "motor": 163,

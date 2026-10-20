@@ -78,6 +78,36 @@ def resolve_source(path, source_root):
     return None, None
 
 
+src_text_cache = {}
+
+
+def source_text(path, source_root):
+    """해석된 출처 파일의 본문(소문자). 위키 요약 문장의 숫자·고유어가 출처에 실제로 있는지 대조하는 용도로만 읽는다."""
+    key = (source_root, path)
+    if key not in src_text_cache:
+        try:
+            src_text_cache[key] = open(os.path.join(source_root, path), encoding="utf-8", errors="replace").read().lower()
+        except OSError:
+            src_text_cache[key] = ""
+    return src_text_cache[key]
+
+
+NUM_RE = re.compile(r"\d+(?:[.,]\d+)*")
+
+
+def support_of(sentence, text):
+    """문장의 숫자(연도·한 자리 정수 제외)가 출처 본문에 있는 비율. 숫자가 없으면 (None, '숫자 없음').
+    번역 요약이라 문장 일치는 불가능하므로 '숫자 일치'만 결정론으로 확인한다."""
+    # 슬러그·파일명 안의 번호(yolo-v8-4-182), 한국식 단위 환산(225만, 2,400만 달러 = 원문 2.25M·24M)은 문자 일치가 불가능하므로 대조 대상에서 뺀다
+    cleaned = re.sub(r"[A-Za-z][A-Za-z0-9]*(?:-[A-Za-z0-9]+)+", " ", sentence)
+    cleaned = re.sub(r"\d[\d,\.]*\s*(?:만|억|천|조)", " ", cleaned)
+    nums = [n for n in NUM_RE.findall(cleaned) if not re.fullmatch(r"(19|20)\d\d", n) and not re.fullmatch(r"\d", n)]
+    if not nums: return None, "숫자 없음"
+    src_nums = {x.replace(",", "") for x in NUM_RE.findall(text)}
+    hit = sum(1 for n in nums if n.replace(",", "") in src_nums)
+    return hit / len(nums), f"숫자 {hit}/{len(nums)} 출처에 있음"
+
+
 def source_type_of(path):
     if path.startswith(("http://", "https://")): return "url"
     if path.startswith("inbox/"): return "inbox"
@@ -293,7 +323,7 @@ def main():
                              sha=(ex("SELECT sha256 FROM paper_files WHERE paper_id=?", (pid,)).fetchone() or [""])[0], resolved=(1 if ex("SELECT 1 FROM paper_files WHERE paper_id=?", (pid,)).fetchone() else None))
         else:
             src = add_source(None, f"derived:{sid_}", stype=("catalog" if origin == "manufacturer" else "derived"), locator=c.get("locator"), sha=cat_hash.get("products-catalog.json", ""), resolved=1)
-        ex("INSERT INTO evidence VALUES (?,?,?,?,?,?,?,?)", (
+        ex("INSERT INTO evidence (id,claim_id,source_id,locator,quote,evidence_type,verified,verification_method) VALUES (?,?,?,?,?,?,?,?)", (
             "ev:" + sha1_12(c["id"]), c["id"], src, c.get("locator"), quote or str(c["value"]), "verbatim-quote" if has_q else "derived-calc", int(has_q), "pdf-quote-match" if has_q else "derived-calc"))
     # 규칙 쪽에서 지정한 근거(rules.json claims 목록)도 claim_rules 에 반영
     for r in rules:
@@ -331,13 +361,22 @@ def main():
                 resolved_any = any(ex("SELECT resolved FROM sources WHERE id=?", (x,)).fetchone()[0] == 1 for x in sids)
                 unknown_any = any(ex("SELECT resolved FROM sources WHERE id=?", (x,)).fetchone()[0] is None and not ex("SELECT source_type FROM sources WHERE id=?", (x,)).fetchone()[0] == "url" for x in sids)
                 status = "sourced" if resolved_any else ("unverified" if unknown_any else "blocked")
+                # 숫자 지지도: 문장 속 숫자가 인용 출처에 있는지(가장 잘 맞는 출처 기준). 숫자가 하나도 출처에 없으면 확인 불가로 내린다.
+                supports = {}
+                for sid in sids:
+                    rpath = ex("SELECT raw_path FROM sources WHERE id=? AND resolved=1", (sid,)).fetchone()
+                    if rpath and rpath[0] and source_root: supports[sid] = support_of(sent, source_text(rpath[0], source_root))
+                scored = [v for v in (x[0] for x in supports.values()) if v is not None]
+                best = max(scored) if scored else None
+                if status == "sourced" and best is not None and best == 0: status = "unverified"
                 if dcont: status = "contested"
                 conf = {"high": "high", "medium": "medium"}.get(dconf, "low")
-                if status in ("blocked", "unverified"): conf = "low"
+                if status in ("blocked", "unverified") or (best is not None and best < 1): conf = "low"
                 ex("INSERT INTO claims VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (
                     cid, did, None, ("page:" + stem) if ("page:" + stem) in node_ids else None, str(fm.get("title") or stem), "states", sent, None, None, (None if dom is None else str(dom)), "wiki", status, conf, dcont, "wiki-summary", None))
                 for k, sid in enumerate(sids):
-                    ex("INSERT OR IGNORE INTO evidence VALUES (?,?,?,?,?,?,?,?)", ("ev:" + sha1_12(f"{cid}|{sid}"), cid, sid, None, sent, "wiki-summary", 0, "source-file-hash" if ex("SELECT resolved FROM sources WHERE id=?", (sid,)).fetchone()[0] == 1 else "unresolved"))
+                    sv = supports.get(sid, (None, "확인 불가"))
+                    ex("INSERT OR IGNORE INTO evidence (id,claim_id,source_id,locator,quote,evidence_type,verified,verification_method,support_score,support_detail) VALUES (?,?,?,?,?,?,?,?,?,?)", ("ev:" + sha1_12(f"{cid}|{sid}"), cid, sid, None, sent, "wiki-summary", 0, "source-file-hash" if ex("SELECT resolved FROM sources WHERE id=?", (sid,)).fetchone()[0] == 1 else "unresolved", sv[0], sv[1]))
 
     # ═══ 7. 질의 후보 (ontology 노드에서 결정론 생성) ═══════════════════════
     TPL = {"Motor": ["{l}에 맞는 ESC는?", "{l}의 제조사와 사양은?"], "ESC": ["{l}과 함께 쓸 수 있는 모터는?"], "Battery": ["{l}과 호환되는 부품은?"], "Manufacturer": ["{l}의 제품은 무엇이 있어?"],

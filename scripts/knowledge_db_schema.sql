@@ -106,7 +106,9 @@ CREATE TABLE evidence (
   quote TEXT NOT NULL,
   evidence_type TEXT NOT NULL,                  -- verbatim-quote | wiki-summary | derived-calc
   verified INTEGER NOT NULL DEFAULT 0,
-  verification_method TEXT
+  verification_method TEXT,
+  support_score REAL,                           -- 위키 요약 문장의 숫자가 출처 파일에 있는 비율(0~1). 숫자가 없는 문장은 NULL
+  support_detail TEXT
 );
 
 -- ── 기존 구조 보존 (제품·제조사·규칙) ────────────────────────────────────────

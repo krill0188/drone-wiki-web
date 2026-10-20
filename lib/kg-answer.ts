@@ -21,7 +21,7 @@ export interface KgAnswer {
   blocked: boolean
   status: "answered" | "insufficient_evidence" | "unverified"
   limitations: string[]
-  verification: { ok: boolean; violations: Violation[]; retried: boolean }
+  verification: { ok: boolean; violations: Violation[]; retried: boolean; json_parsed?: boolean }
   suggestions: string[]
   nim_called: boolean
 }
@@ -106,7 +106,7 @@ export async function answerQuestion(question: string, opts: { domains?: string[
     relations: real([...(parsed?.used_relations ?? []), ...ver.citedRelations], ctx.ids.relations),
     pages: real([...(parsed?.used_pages ?? []), ...ver.citedPages], ctx.ids.pages),
   }
-  const verification = { ok: ver.ok, violations: ver.violations, retried }
+  const verification = { ok: ver.ok, violations: ver.violations, retried, json_parsed: parsed !== null }
   if (ver.ok) return contract(plan, ctx, answer, "answered", false, verification, used, true)
   if (strict) {
     const msg = `검증에 실패해 답변을 제공하지 않습니다(근거 밖 내용 감지: ${ver.violations.map((v) => v.code).join(", ")}). 아래 근거 목록만 확인해 주세요.`

@@ -42,11 +42,12 @@ class Fixture(unittest.TestCase):
         w(f"{wiki}/concepts/c-nodomain.md", fm(title='"도메인 없음"', tags="[drone]", sources="[]", **base) + "# C\n\n본문.\n")
         w(f"{wiki}/concepts/d-unreg.md", fm(title='"미등록 도메인"', domain="swarm", tags="[drone, swarm]", sources="[]", **base) + "# D\n\n군집.\n")
         w(f"{wiki}/concepts/e-nosrc.md", fm(title='"출처 없는 문장"', domain="hardware", tags="[drone]", sources="[inbox/missing.md]", **base) + "# E\n\n존재하지 않는 출처를 인용한 문장이다.^[inbox/missing.md]\n")
+        w(f"{wiki}/concepts/g-badnum.md", fm(title='"출처에 없는 수치"', domain="hardware", tags="[drone]", sources="[inbox/z.md]", **base) + "# G\n\n이 팩의 에너지 밀도는 약 999Wh/kg이다.^[inbox/z.md]\n")
         c = dict(base); c["contested"] = "true"
         w(f"{wiki}/concepts/f-contested.md", fm(title='"충돌 claim"', domain="hardware", tags="[drone]", sources="[inbox/y.md]", **c) + "# F\n\n두 출처가 서로 다른 값을 주장하는 문장이다.^[inbox/y.md]\n")
         w(f"{wiki}/ontology/class-hierarchy.json", json.dumps({"classes": {"Thing": {"parent": None}, "PhysicalEntity": {"parent": "Thing"}, "Motor": {"parent": "PhysicalEntity"},
                                                                         "ESC": {"parent": "PhysicalEntity"}, "FlightController": {"parent": "PhysicalEntity"}}}))
-        w(f"{src}/inbox/processed/x.md", "원본 X"); w(f"{src}/inbox/processed/y.md", "원본 Y")
+        w(f"{src}/inbox/processed/x.md", "LiPo pack specific energy 155 Wh/kg"); w(f"{src}/inbox/processed/y.md", "원본 Y"); w(f"{src}/inbox/processed/z.md", "unrelated text, no figures here")
         g = {"nodes": [{"id": "mfr:acme", "type": "Manufacturer", "label": "Acme"}, {"id": "p-motor", "type": "Product", "label": "Acme MX5008 Motor", "cls": "Motor"},
                        {"id": "p-esc", "type": "Product", "label": "Acme ESC 60A", "cls": "ESC"}, {"id": "rule:R1", "type": "Rule", "label": "R1 hover", "status": "implemented"},
                        {"id": "paper:arXiv:1", "type": "Paper", "label": "arXiv:1"}, {"id": "class:Motor", "type": "Class", "label": "Motor"}, {"id": "class:ESC", "type": "Class", "label": "ESC"}],
@@ -85,14 +86,14 @@ class Fixture(unittest.TestCase):
         self.assertIn(("concepts/a-hw.md", "battery"), tags)
         self.assertNotIn(("concepts/a-hw.md", "hardware"), tags, "domain 값이 tags로 섞이면 안 됨")
         expected = {"concepts/a-hw.md": {"drone", "battery"}, "concepts/b-fc.md": {"drone", "fc"}, "concepts/c-nodomain.md": {"drone"}, "concepts/d-unreg.md": {"drone", "swarm"},
-                    "concepts/e-nosrc.md": {"drone"}, "concepts/f-contested.md": {"drone"}}
+                    "concepts/e-nosrc.md": {"drone"}, "concepts/f-contested.md": {"drone"}, "concepts/g-badnum.md": {"drone"}}
         got = {}
         for path, tag in tags: got.setdefault(path, set()).add(tag)
         self.assertEqual(got, expected, "DB tags는 frontmatter tags와 정확히 같아야 함(domain에서 만들거나 추가하지 않음)")
 
     def test_fts_with_domain_filter(self):
         hit = self.q("SELECT document_id FROM document_fts WHERE document_fts MATCH ? AND domain=?", ("에너지", "hardware"))
-        self.assertEqual([h[0] for h in hit], ["doc:concepts/a-hw.md"])
+        self.assertEqual(sorted(h[0] for h in hit), ["doc:concepts/a-hw.md", "doc:concepts/g-badnum.md"], "hardware domain 두 문서가 검색됨")
         self.assertEqual(self.q("SELECT document_id FROM document_fts WHERE document_fts MATCH ? AND domain=?", ("에너지", "flight-control")), [])
 
     def test_ontology_class_and_relation_queries(self):
@@ -109,8 +110,15 @@ class Fixture(unittest.TestCase):
         st = {p: s for p, s in self.q("SELECT d.path, c.status FROM claims c JOIN documents d ON d.id=c.document_id WHERE c.origin='wiki'")}
         self.assertEqual(st["concepts/a-hw.md"], "sourced", "inbox/x.md → inbox/processed/x.md 이동을 따라 해석되어 sourced")
         self.assertEqual(st["concepts/e-nosrc.md"], "blocked", "출처 파일이 없으면 blocked")
+        self.assertEqual(st["concepts/g-badnum.md"], "unverified", "문장의 숫자가 출처 파일에 하나도 없으면 unverified(수치 지지도 0)")
         self.assertEqual(st["concepts/f-contested.md"], "contested")
         self.assertEqual(self.q("SELECT count(*) FROM claims WHERE origin='wiki' AND status='verified'")[0][0], 0, "위키 요약 claim은 verified가 될 수 없음")
+
+    def test_numeric_support_score_recorded(self):
+        r = dict(self.q("SELECT d.path, e.support_score FROM evidence e JOIN claims c ON c.id=e.claim_id JOIN documents d ON d.id=c.document_id WHERE c.origin='wiki'"))
+        self.assertEqual(r["concepts/a-hw.md"], 1.0)
+        self.assertEqual(r["concepts/g-badnum.md"], 0.0)
+        self.assertIsNone(r["concepts/f-contested.md"], "숫자 없는 문장은 NULL(중립)")
 
     def test_every_claim_has_evidence_and_fk_clean(self):
         self.assertEqual(self.q("SELECT count(*) FROM claims c LEFT JOIN evidence e ON e.claim_id=c.id WHERE e.id IS NULL")[0][0], 0)
