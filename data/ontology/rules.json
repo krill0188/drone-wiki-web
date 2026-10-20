@@ -33,7 +33,23 @@
         "FM_opt": 0.75,
         "eta_opt": 0.9
       },
-      "kind": "empirical"
+      "kind": "empirical",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**FM 불일치**: 규칙 0.45~0.6, 문헌 0.5~0.8 / η 0.8 일치",
+        "urls": [
+          "https://en.wikipedia.org/wiki/Disk_loading",
+          "https://www.physicsforums.com/threads/helicopter-uav-required-power.648092/post-4137412",
+          "https://cambridge.org/core/books/rotorcraft-aeromechanics/vertical-flight/B4F122D4D2F1ABD6B8F1C2A0685BC6A1",
+          "https://arxiv.org/abs/2109.04741",
+          "https://ujcontent.uj.ac.za/esploro/outputs/journalArticle/Brushless-direct-current-motor-efficiency-characterization/9911718107691",
+          "https://scholar.its.ac.id/en/publications/high-rpm-bldc-outrunner-motor-for-fixed-wing-unmanned-aerial-vehi/"
+        ],
+        "humanVerified": null
+      },
+      "literatureConflict": "**FM 불일치**: 규칙 0.45~0.6, 문헌 0.5~0.8 / η 0.8 일치"
     },
     {
       "id": "R02",
@@ -44,10 +60,21 @@
       "constants": {
         "clearance": 0.95
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "verified",
       "note": "인접 프롭 겹침 방지 기하. 0.95는 가정",
       "claims": [],
-      "kind": "definition"
+      "kind": "definition",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "HIGH",
+        "constantsVsLiterature": "**일치**: ε=0.05 → 0.95계수 arXiv:2607.22768 정확히 확인",
+        "urls": [
+          "https://arxiv.org/html/2607.22768v1",
+          "https://arxiv.org/pdf/1908.06301"
+        ],
+        "humanVerified": "arXiv:2607.22768 §IV-A1 'tip-clearance safety factor ε=0.05' 원문 확인(2026-10-20)"
+      }
     },
     {
       "id": "R03",
@@ -76,10 +103,23 @@
         "DL_cons_kgf_m2": 60,
         "DL_opt_kgf_m2": 90
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "note": "현실적 최대 추력 면적밀도 가정",
       "claims": [],
-      "kind": "empirical"
+      "kind": "empirical",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**부분 일치**: 대형/UAM 멀티로터에 해당, 소형 드론(1~20 kg/m²)과 다름",
+        "urls": [
+          "https://en.wikipedia.org/wiki/Disk_loading",
+          "https://move.rpi.edu/sites/default/files/publication-documents/handling-qualities-of-fixed-pitch-variable-speed-multicopters-for-urban-air-mobility.pdf",
+          "https://arxiv.org/pdf/2411.05994",
+          "https://cubefpv.com/home/resources/reference-area/fpv-drone-disc-loading-data/"
+        ],
+        "humanVerified": null
+      }
     },
     {
       "id": "R05",
@@ -128,7 +168,21 @@
         "CL21",
         "CL22"
       ],
-      "kind": "empirical"
+      "kind": "empirical",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "LOW",
+        "constantsVsLiterature": "**불일치**: 실측 사례 18~20%, 직접 지지 출처 없음",
+        "urls": [
+          "https://arxiv.org/pdf/1801.02938",
+          "https://bulletin.incas.ro/files/moses_suresh__vol_13_iss_3.pdf",
+          "https://arxiv.org/pdf/2401.02541",
+          "https://arxiv.org/pdf/2607.22768"
+        ],
+        "humanVerified": null
+      },
+      "literatureConflict": "**불일치**: 실측 사례 18~20%, 직접 지지 출처 없음"
     },
     {
       "id": "R07",
@@ -140,9 +194,21 @@
         "vmax_cons": 15,
         "vmax_opt": 25
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "claims": [],
-      "kind": "empirical"
+      "kind": "empirical",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**일치**: 시뮬레이션 20 m/s 순항, 25 m/s 대시 확인",
+        "urls": [
+          "https://arxiv.org/pdf/1902.01465",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277356/table/T5",
+          "https://ntrs.nasa.gov/api/citations/20210025082/downloads/20210025082_Pradeep_SciTech2022_manuscript_final.pdf"
+        ],
+        "humanVerified": null
+      }
     },
     {
       "id": "R08",
@@ -168,7 +234,24 @@
         "CL23"
       ],
       "kind": "empirical",
-      "note": "2026-10-20 검토(논문 14편·claim 29건, 대부분 모델/설계 추정): 상수 유지. 근거 대조 — L/D 보수 9: 소형 고정익 활공비 실측 9.83·7.10(P2605.15619)과 부합 / 낙관 14: NASA Lift+Cruise 순항 L/D 13.5(모델, 저자가 항력 과대 가능성 언급)와 부합. 프롭 효율 etaP 0.65~0.80: BEMT 모델값 0.7733(실측 아님)뿐이라 실측 근거 없음. VTOL 추가 질량 10%/5%: 실기체 QuadPlane 배터리 15%·추가 구조 별도 근거 부족. CLmax 1.2: 타일시터 가정 1.5(인용 가정)보다 보수적. VTOL 호버/순항 전력비 약 2.7배(NederDrone 실측 1500W vs 550W)가 실측으로 확인됨 — 현재 엔진은 호버 구간을 별도 계산하지 않고 vtolExtra 질량으로만 반영"
+      "note": "2026-10-20 검토(논문 14편·claim 29건, 대부분 모델/설계 추정): 상수 유지. 근거 대조 — L/D 보수 9: 소형 고정익 활공비 실측 9.83·7.10(P2605.15619)과 부합 / 낙관 14: NASA Lift+Cruise 순항 L/D 13.5(모델, 저자가 항력 과대 가능성 언급)와 부합. 프롭 효율 etaP 0.65~0.80: BEMT 모델값 0.7733(실측 아님)뿐이라 실측 근거 없음. VTOL 추가 질량 10%/5%: 실기체 QuadPlane 배터리 15%·추가 구조 별도 근거 부족. CLmax 1.2: 타일시터 가정 1.5(인용 가정)보다 보수적. VTOL 호버/순항 전력비 약 2.7배(NederDrone 실측 1500W vs 550W)가 실측으로 확인됨 — 현재 엔진은 호버 구간을 별도 계산하지 않고 vtolExtra 질량으로만 반영",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "LOW",
+        "constantsVsLiterature": "**부분 불일치**: L/D 6.9~17 범위(설계별 편차 큼), VTOL 비용 미확인",
+        "urls": [
+          "https://odr.chalmers.se/items/6dd58fd9-7017-436a-ada0-4b2da4052dba/full",
+          "https://elibrary.tucl.edu.np/items/0d98c742-c0aa-44ea-a96f-4866e25d0ad5/full",
+          "https://arxiv.org/pdf/1608.01828",
+          "https://m-selig.ae.illinois.edu/props/volume-4/propDB-volume-4.html",
+          "https://ujcontent.uj.ac.za/esploro/outputs/journalArticle/Brushless-direct-current-motor-efficiency-characterization/9911718107691",
+          "https://www.inderscience.com/offers.php?id=127521",
+          "https://mediatum.ub.tum.de/doc/1536089/1536089.pdf"
+        ],
+        "humanVerified": null
+      },
+      "literatureConflict": "**부분 불일치**: L/D 6.9~17 범위(설계별 편차 큼), VTOL 비용 미확인"
     },
     {
       "id": "R09",
@@ -179,10 +262,22 @@
       "constants": {
         "tolerance": 0.98
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "note": "정의식이라 출처 불필요. 허용오차 0.98만 가정",
       "claims": [],
-      "kind": "definition"
+      "kind": "definition",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**공식 일치**: 산술 정의 확인 / 0.98 계수 출처 미확인",
+        "urls": [
+          "https://www.grepow.com/blog/basis-of-lipo-battery-specifications.html",
+          "https://www.etechnophiles.com/c-rate-of-a-battery-formula",
+          "https://www.etechnophiles.com/?p=23263"
+        ],
+        "humanVerified": null
+      }
     },
     {
       "id": "R10",
@@ -193,10 +288,23 @@
       "constants": {
         "extrapolation_low": 0.8
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "note": "제조사 시험표 데이터에 의존. 시험 조건(전압·프롭) 일치 시에만 유효",
       "claims": [],
-      "kind": "definition"
+      "kind": "definition",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**일치**: 표준 엔지니어링 관행 확인",
+        "urls": [
+          "https://lirias.kuleuven.be/bitstream/123456789/673668/2/theysvirtual.pdf",
+          "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11455336",
+          "https://rotorcraft.arc.nasa.gov/Publications/files/72-2016-374.pdf",
+          "https://espace2.etsmtl.ca/id/eprint/32363/"
+        ],
+        "humanVerified": null
+      }
     },
     {
       "id": "R11",
@@ -207,10 +315,22 @@
       "constants": {
         "margin": 1.05
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "verified",
       "note": "제조사 표기 C값 신뢰 가정",
       "claims": [],
-      "kind": "definition"
+      "kind": "definition",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "HIGH",
+        "constantsVsLiterature": "**일치**: 제조사(Grepow) + 기술 문서 다수 확인",
+        "urls": [
+          "https://www.grepow.com/blog/basis-of-lipo-battery-specifications.html",
+          "https://www.etechnophiles.com/c-rate-of-a-battery-formula",
+          "https://api-legacy.ingeniusprep.com/c-discharge-rate"
+        ],
+        "humanVerified": "Grepow 'Max Continuous Discharge Current (A)=C-rate×Battery Capacity (Ah)' 원문 확인(2026-10-20)"
+      }
     },
     {
       "id": "R12",
@@ -221,9 +341,20 @@
       "constants": {
         "tolerance_in": 0.5
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "claims": [],
-      "kind": "heuristic"
+      "kind": "heuristic",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**공식 일치**, 0.5in 절대값 출처 미확인 (5% 비율로 대체 가능)",
+        "urls": [
+          "https://arxiv.org/html/2607.22768v1",
+          "https://arxiv.org/pdf/1908.06301"
+        ],
+        "humanVerified": null
+      }
     },
     {
       "id": "R13",
@@ -236,7 +367,19 @@
       },
       "sourceStatus": "unverified",
       "claims": [],
-      "kind": "heuristic"
+      "kind": "heuristic",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "LOW",
+        "constantsVsLiterature": "**간접 지지**: 7.2% MAPE 오차 2배 수준, 직접 명시 없음",
+        "urls": [
+          "https://arxiv.org/html/2607.22768v1",
+          "https://arxiv.org/pdf/2401.02541"
+        ],
+        "humanVerified": null
+      },
+      "literatureConflict": "**간접 지지**: 7.2% MAPE 오차 2배 수준, 직접 명시 없음"
     },
     {
       "id": "R14",
@@ -253,7 +396,20 @@
         "P2604.00496-01"
       ],
       "kind": "heuristic",
-      "note": "2026-10-20: 실측 프레임 질량비 7.1%(QuadSoft 섀시)·약 23.5%(3DFiT F450급)로 상한 0.45는 느슨하지만 모순 없음(상한 용도)"
+      "note": "2026-10-20: 실측 프레임 질량비 7.1%(QuadSoft 섀시)·약 23.5%(3DFiT F450급)로 상한 0.45는 느슨하지만 모순 없음(상한 용도)",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "LOW",
+        "constantsVsLiterature": "**불일치**: 실측 18%, 고정익 10~20%, 45% 직접 지지 없음",
+        "urls": [
+          "https://arxiv.org/pdf/1801.02938",
+          "https://bulletin.incas.ro/files/moses_suresh__vol_13_iss_3.pdf",
+          "https://www.politesi.polimi.it/retrieve/a81cb05c-ffe9-616b-e053-1605fe0a889a/2018_12_Balcioglu.pdf"
+        ],
+        "humanVerified": null
+      },
+      "literatureConflict": "**불일치**: 실측 18%, 고정익 10~20%, 45% 직접 지지 없음"
     },
     {
       "id": "R15",
@@ -262,9 +418,20 @@
       "status": "implemented",
       "where": "lib/stage-validate.ts validateTechspec",
       "constants": {},
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "claims": [],
-      "kind": "definition"
+      "kind": "definition",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "MEDIUM",
+        "constantsVsLiterature": "**일치**: 산술 정의라 별도 실측 근거 불필요",
+        "urls": [
+          "https://arxiv.org/abs/2109.04741",
+          "https://arxiv.org/pdf/1608.01828"
+        ],
+        "humanVerified": null
+      }
     },
     {
       "id": "R16",
@@ -273,10 +440,25 @@
       "status": "implemented",
       "where": "lib/design-gate.ts buildCalcBlock (문구)",
       "constants": {},
-      "sourceStatus": "unverified",
+      "sourceStatus": "verified",
       "note": "현재는 프롬프트 문구일 뿐 코드 판정 아님",
       "claims": [],
-      "kind": "heuristic"
+      "kind": "heuristic",
+      "webEvidence": {
+        "collected": "2026-10-20",
+        "by": "web-research-agent",
+        "strength": "HIGH",
+        "constantsVsLiterature": "**일치**: LoRa 11 kbps vs. 영상 1,800 kbps (163배 차이)",
+        "urls": [
+          "https://semtech.com/design-support/faq/faq-lorawan/P20",
+          "https://docs.aws.amazon.com/whitepapers/latest/implementing-lpwan-solutions-with-aws/lorawan.html",
+          "https://www.thethingsnetwork.org/docs/lorawan/regional-parameters/eu868/",
+          "https://videoproc.com/media-converter/bitrate-setting-for-h264.htm",
+          "https://help.movingimage.com/docs/livestreaming-encoding-settings",
+          "https://pysdr.org/content/fpv_video.html"
+        ],
+        "humanVerified": "Semtech FAQ 'from 250 bps to 11 kbps with LoRa modulation' 원문 확인(2026-10-20)"
+      }
     },
     {
       "id": "C01",

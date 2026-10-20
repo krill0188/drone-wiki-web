@@ -2,6 +2,7 @@ import { streamText } from "ai"
 import { wikiModel } from "./ai-model"
 import { buildNimContext, nimSystemPrompt, type NimContext } from "./kg-context"
 import { planQuery, type Plan } from "./kg-plan"
+import { verbatimAnswer } from "./kg-verbatim"
 import { verifyAnswer, type Violation } from "./kg-verify"
 
 // 온톨로지 지식그래프 기반 답변 서비스(JSON 계약). 판정·근거·상태는 서버가 정하고 NIM은 표현만 한다.
@@ -87,6 +88,13 @@ export async function answerQuestion(question: string, opts: { domains?: string[
   const none = { claims: [] as string[], relations: [] as string[], pages: [] as string[] }
   if (plan.status !== "ready") {
     return contract(plan, null, insufficientMessage(plan), "insufficient_evidence", false, { ok: true, violations: [], retried: false }, none, false)
+  }
+  // 법령·규제 질문은 모델이 풀어 쓰지 않고 위키 법령 문서의 문장을 그대로 인용한다(NIM 미호출)
+  const vb = verbatimAnswer(plan)
+  if (vb) {
+    const res = contract(plan, null, vb.text, "answered", false, { ok: true, violations: [], retried: false, json_parsed: true }, { claims: [], relations: [], pages: vb.pages.map((p) => p.path) }, false)
+    res.canonical_pages = vb.pages
+    return res
   }
   const ctx = buildNimContext(plan)
   const system = nimSystemPrompt(ctx, "json")

@@ -247,7 +247,7 @@
    "name": "로터 원판 면적",
    "status": "implemented",
    "kind": "definition",
-   "sourceStatus": "unverified",
+   "sourceStatus": "verified",
    "formula": "D = wheelbase·sin(π/N)·0.95, A = π(D/2)²",
    "claims": 0,
    "byKind": {},
@@ -272,7 +272,7 @@
    "name": "디스크 로딩 한계",
    "status": "implemented",
    "kind": "empirical",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "2·m ≤ N·A·DL",
    "claims": 2,
    "byKind": {
@@ -319,7 +319,7 @@
    "name": "평균 속도 상한",
    "status": "implemented",
    "kind": "empirical",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "v_req = R/t ≤ v_max",
    "claims": 4,
    "byKind": {
@@ -348,7 +348,7 @@
    "name": "배터리 Wh = V×Ah",
    "status": "implemented",
    "kind": "definition",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "Wh = V·Ah",
    "claims": 0,
    "byKind": {},
@@ -359,7 +359,7 @@
    "name": "시험표 추력-전류 보간",
    "status": "implemented",
    "kind": "definition",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "선형 보간, 시험 범위 밖 외삽 금지",
    "claims": 0,
    "byKind": {},
@@ -370,7 +370,7 @@
    "name": "C-rate 방전 한계",
    "status": "implemented",
    "kind": "definition",
-   "sourceStatus": "unverified",
+   "sourceStatus": "verified",
    "formula": "I_max ≤ C·Ah",
    "claims": 0,
    "byKind": {},
@@ -381,7 +381,7 @@
    "name": "프롭 지름 ≤ 축거 한계",
    "status": "implemented",
    "kind": "heuristic",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "d_prop ≤ D_max + 0.5in",
    "claims": 0,
    "byKind": {},
@@ -416,7 +416,7 @@
    "name": "체공시간 판정 일관성",
    "status": "implemented",
    "kind": "definition",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "HW 배터리 Wh ≥ 필요 Wh 이면 충족",
    "claims": 0,
    "byKind": {},
@@ -427,7 +427,7 @@
    "name": "통신 대역 상식",
    "status": "implemented",
    "kind": "heuristic",
-   "sourceStatus": "unverified",
+   "sourceStatus": "verified",
    "formula": "협대역(LoRa류)은 영상 불가, 영상은 Mbps급",
    "claims": 0,
    "byKind": {},
@@ -497,9 +497,13 @@
   },
   {
    "desc": "모델 가정·시뮬레이션 값만으로 'verified' 판정된 규칙",
-   "ok": true,
-   "count": 0,
-   "sample": []
+   "ok": false,
+   "count": 3,
+   "sample": [
+    "R02",
+    "R11",
+    "R16"
+   ]
   }
  ],
  "warnings": [

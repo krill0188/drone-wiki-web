@@ -119,7 +119,7 @@ function rareToken(t: string): boolean {
   const df = dfCache.get(t) ?? 999
   return df >= 1 && df <= 25 // 코퍼스에 아예 없는 단어(df=0)는 희귀가 아니라 '해당 없음'
 }
-function contentTokens(question: string, ignore?: Set<string>): { orig: string; variants: string[] }[] {
+export function contentTokens(question: string, ignore?: Set<string>): { orig: string; variants: string[] }[] {
   return tokenize(question).filter((t) => !STOP.has(t) && !STOP.has(stem(t)) && !GENERIC_Q.has(t) && !GENERIC_Q.has(stem(t)) && !ignore?.has(stem(t))).map((orig) => {
     const st = stem(orig)
     const vs = new Set<string>([st])
@@ -143,7 +143,7 @@ function relevant(question: string, text: string, ignore?: Set<string>): boolean
 }
 
 // 개념·비교·절차형 질문: 텍스트로만 걸린 논문 claim(예: PX4·ArduPilot이 같이 언급된 지연 시간 측정)을 '차이점'의 근거로 쓰면 오답이 된다
-const REGULATORY = /허가|승인|신고|증명|과태료|벌금|벌칙|규정|규제|법령|시행규칙|항공안전법|등록|면제|자격|금지구역|공역/
+export const REGULATORY = /허가|승인|신고|증명|과태료|벌금|벌칙|규정|규제|법령|시행규칙|항공안전법|등록|면제|자격|금지구역|공역/
 const CONCEPTUAL = /차이|비교|vs\.?|versus|무엇|뭐야|뭔가요|이란|설명|개요|정의|원리|기준|절차|방법|종류|장단점|특징|어떻게/i
 
 // 공식 계층에서 클래스와 그 하위 클래스(예: FlightStack → PX4·ArduPilot)

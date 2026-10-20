@@ -14,23 +14,30 @@ const DEFAULT_OPENROUTER_MODEL = "anthropic/claude-haiku-4.5"
 // deepseek-v4.1-flash·glm-5.3-flash·step-5(추론 끔 제외)·laguna 는 무응답/미작동/느림으로 제외.
 // 판정 기준은 "추론 글자"가 아니라 "첫 답변 글자(content)" — 추론이 길어지면 다음 모델로 넘긴다.
 type ModelSpec = { id: string; extra: Record<string, unknown> }
-const DEFAULT_CHAIN: ModelSpec[] = [
-  { id: "openai/gpt-oss-20b", extra: { reasoning_effort: "low" } },
-  { id: "nvidia/nemotron-3-super-120b-a12b", extra: { chat_template_kwargs: { enable_thinking: false } } },
-]
+// 2026-10-20: nvidia/nemotron-3-super-120b-a12b 가 NVIDIA 쪽에서 404("Function not found for account")로 내려갔다(모델 목록에는 남아 있음).
+// 같은 NIM의 nemotron-3.5-lightning(0.9초)·nemotron-3-ultra(4초)로 대체하고, 추론은 끈다(켜면 content가 비어 무응답으로 판정됨).
+const NO_THINK = { chat_template_kwargs: { enable_thinking: false } }
+const KNOWN_EXTRA: Record<string, Record<string, unknown>> = {
+  "openai/gpt-oss-20b": { reasoning_effort: "low" },
+  "nvidia/nemotron-3.5-lightning-30b-a3b": NO_THINK,
+  "nvidia/nemotron-3-ultra-550b-a55b": NO_THINK,
+  "nvidia/nemotron-3-super-120b-a12b": NO_THINK,
+}
+const spec = (id: string): ModelSpec => ({ id, extra: KNOWN_EXTRA[id] ?? {} })
+const DEFAULT_CHAIN: ModelSpec[] = [spec("nvidia/nemotron-3.5-lightning-30b-a3b"), spec("nvidia/nemotron-3-ultra-550b-a55b"), spec("openai/gpt-oss-20b")]
 const FIRST_CONTENT_MS = Number(process.env.NVIDIA_NIM_FIRST_CONTENT_MS) || 15000
 const TOTAL_BUDGET_MS = 50000 // 전환 판단에 쓰는 시간 예산(응답 전체 한도는 라우트 maxDuration 120초)
 
 // NVIDIA_NIM_CHAIN(쉼표 구분 모델 id)을 주면 그 순서로, 없으면 기본 체인. 옛 NVIDIA_NIM_MODEL 값은 무시한다.
 // 드론 빌더 전용 체인은 NVIDIA_NIM_BUILDER_CHAIN(없으면 BUILDER_DEFAULT_CHAIN). 빌더는 300초 한도라 느려도 큰 모델을 먼저 쓴다.
 export type ModelProfile = "chat" | "builder"
-const BUILDER_DEFAULT_CHAIN: ModelSpec[] = [DEFAULT_CHAIN[1], DEFAULT_CHAIN[0]]
+const BUILDER_DEFAULT_CHAIN: ModelSpec[] = [spec("nvidia/nemotron-3-ultra-550b-a55b"), spec("nvidia/nemotron-3.5-lightning-30b-a3b"), spec("openai/gpt-oss-20b")]
 
 function modelChain(profile: ModelProfile = "chat"): ModelSpec[] {
   const envKey = profile === "builder" ? "NVIDIA_NIM_BUILDER_CHAIN" : "NVIDIA_NIM_CHAIN"
   const ids = (process.env[envKey] ?? "").split(",").map((m) => m.trim()).filter(Boolean)
   if (!ids.length) return profile === "builder" ? BUILDER_DEFAULT_CHAIN : DEFAULT_CHAIN
-  return ids.map((id) => DEFAULT_CHAIN.find((m) => m.id === id) ?? { id, extra: {} })
+  return ids.map(spec)
 }
 
 function withModel(body: Record<string, unknown>, spec: ModelSpec): string {

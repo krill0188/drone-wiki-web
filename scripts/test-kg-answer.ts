@@ -1,5 +1,6 @@
 // 온톨로지 우선 답변 시나리오 시험 (11개 + 보조). 실행: npx tsx scripts/test-kg-answer.ts [--live]
 // NIM 응답은 기본적으로 결정론적 대역(stub)으로 주입한다. --live 이면 실제 NVIDIA NIM으로 2건을 추가 호출한다.
+import { all } from "../lib/kdb"
 import fs from "node:fs"
 import path from "node:path"
 import os from "node:os"
@@ -170,6 +171,19 @@ async function main() {
       ok(p.pages.some((x) => x.path.includes(doc)), `${q}: ${doc} 없음 (${p.pages.map((x) => x.path)})`)
       ok(!p.claims.some((c) => c.origin !== "wiki"), `${q}: 공학 claim이 섞임`)
     }
+  })
+
+  await t("K3 법령 질문은 모델 없이 위키 문장을 그대로 인용(NIM 미호출), 인용 문장이 문서에 그대로 존재", async () => {
+    for (const q of ["250g 이하 드론도 조종자 증명이 필요해?", "기체 신고 면제 기준은?", "비행승인 고도 기준은?", "한국 드론 과태료 얼마야?"]) {
+      const a = await answerQuestion(q, { generate: never })
+      ok(a.status === "answered" && !a.nim_called, `${q} → ${a.status} nim=${a.nim_called}`)
+      const bullets = a.answer.split("**출처 문서**")[0].split("\n").filter((l) => l.startsWith("- ")).map((l) => l.replace(/^- /, "").replace(/\s*\[P\d+\]$/, ""))
+      ok(bullets.length > 0, `${q}: 인용 문장 없음`)
+      const bodies = a.canonical_pages.map((p) => all<{ body: string }>("SELECT body FROM documents WHERE path = ?", p.path)[0]?.body ?? "").join("\n").replace(/\s*\^\[[^\]]*\]/g, "")
+      for (const b of bullets) ok(bodies.includes(b), `${q}: 문서에 없는 문장 "${b.slice(0, 40)}"`)
+    }
+    const a1 = await answerQuestion("250g 이하 드론도 조종자 증명이 필요해?", { generate: never })
+    ok(/250g 이하는 증명 대상에서 제외/.test(a1.answer), "250g 증명 제외 문장 누락")
   })
 
   await t("K2 법령 별표처럼 수집본에 없는 내용(P-73 경계)은 지어내지 않고 거절", () => {

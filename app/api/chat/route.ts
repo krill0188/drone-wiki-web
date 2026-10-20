@@ -13,6 +13,7 @@ import { isSqliteBackend } from "@/lib/kdb"
 import { planQuery } from "@/lib/kg-plan"
 import { buildNimContext, nimSystemPrompt } from "@/lib/kg-context"
 import { insufficientMessage, metaForStreamed } from "@/lib/kg-answer"
+import { verbatimAnswer } from "@/lib/kg-verbatim"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
@@ -80,6 +81,11 @@ export async function POST(req: NextRequest) {
     if (plan.status !== "ready") {
       const meta = { answerMeta: { status: "insufficient_evidence", confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: plan.suggestions, ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
       return instantReply(insufficientMessage(plan), meta)
+    }
+    const vb = verbatimAnswer(plan)
+    if (vb) {
+      const meta = { ontologyClasses: plan.classes, answerMeta: { status: "answered", basis: plan.basis, confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: [], ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: vb.pages, verification: { ok: true, violations: [], retried: false } } }
+      return instantReply(vb.text, meta)
     }
     const ctx = buildNimContext(plan)
     const onto2 = buildOntologyContext(question, docContext?.title, { kgOnly: true })
