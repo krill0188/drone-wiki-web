@@ -1,8 +1,897 @@
 {
  "generated": "2026-10-20",
- "count": 122,
+ "count": 215,
  "_comment": "고정익·VTOL 제조사 공식 페이지 수집본(에이전트 수집, 코드 검증). 멀티로터 카탈로그와 분리. numeric은 페이지에 적힌 값만, 없으면 키 없음.",
  "items": [
+  {
+   "id": "product-battery-amprius-sa04",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA04 - SiCore High Energy Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa04/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "Balanced Power & Energy",
+    "Capacity": "8.9 Ah",
+    "Max Discharge - Continuous": "3C",
+    "Length": "139.1mm",
+    "Width": "52.1mm",
+    "Cycle Life": "1400"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 8900
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa08",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA08 - SiCore High Power Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa08/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "High Power",
+    "Capacity": "11.0 Ah",
+    "Max Discharge - Continuous": "5C",
+    "Length": "144.5mm",
+    "Width": "52.0mm",
+    "Cycle Life": "250"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 11000
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa102",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA102 - SiCore High Energy Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa102/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "High Energy",
+    "Capacity": "4.3 Ah",
+    "Max Discharge - Continuous": "1C",
+    "Length": "56.5mm",
+    "Width": "49.5mm",
+    "Cycle Life": "150",
+    "Headline": "High Energy cell delivering 450 Wh/kg and 950 Wh/L"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 4300,
+    "specific_energy_Wh_kg": 450.0
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa107",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA107 - SiCore High Energy Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa107/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "High Energy",
+    "Capacity": "5.8 Ah",
+    "Max Discharge - Continuous": "1C",
+    "Length": "65.5mm",
+    "Width": "53.5mm",
+    "Cycle Life": "125",
+    "Headline": "High Energy cell delivering 450 Wh/kg and 1000 Wh/L"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 5800,
+    "specific_energy_Wh_kg": 450.0
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa109",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA109 - SiCore High Energy Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa109/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "High Energy",
+    "Capacity": "11.5 Ah",
+    "Max Discharge - Continuous": "1C",
+    "Length": "127.0mm",
+    "Width": "53.5mm",
+    "Cycle Life": "150",
+    "Headline": "High Energy cell delivering 450 Wh/kg and 1000 Wh/L"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 11500,
+    "specific_energy_Wh_kg": 450.0
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa11",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA11 - SiCore Balanced Power & Energy Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa11/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "Balanced Power & Energy",
+    "Capacity": "30.7 Ah",
+    "Max Discharge - Continuous": "3C",
+    "Length": "198.0mm",
+    "Width": "96.5mm",
+    "Cycle Life": "700"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 30700
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa110",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA110 - SiCore Balanced Power & Energy Cylindrical Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa110/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "Balanced Power & Energy",
+    "Capacity": "4 Ah",
+    "Max Discharge - Continuous": "3C",
+    "Length": "65.0mm",
+    "Width": "18.3mm",
+    "Cycle Life": "500"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 4000
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa112",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA112 - SiCore High Energy Cylindrical Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa112/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "High Energy",
+    "Capacity": "6.5 Ah",
+    "Max Discharge - Continuous": "2C",
+    "Length": "70.7mm",
+    "Width": "21.5mm",
+    "Cycle Life": "500"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 6500
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa117",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA117 - SiCore Balanced Power & Energy Cylindrical Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa117/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "Balanced Power & Energy",
+    "Capacity": "6 Ah",
+    "Max Discharge - Continuous": "2C",
+    "Length": "70.9mm",
+    "Width": "21.6mm",
+    "Cycle Life": "500"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 6000
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-amprius-sa134",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Amprius",
+   "name": "SA134 - SiCore Balanced Power & Energy Pouch Cell | Amprius Technologies",
+   "url": "https://amprius.com/products/sa134/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "Balanced Power & Energy",
+    "Capacity": "35.4 Ah",
+    "Max Discharge - Continuous": "4C",
+    "Length": "187.0mm",
+    "Width": "87mm",
+    "Cycle Life": "600",
+    "Headline": "Balanced cell delivering 320 Wh/kg and 765 Wh/L"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 35400,
+    "specific_energy_Wh_kg": 320.0
+   },
+   "note": "single SiCore cell (cells=1); page marked \"Preliminary\" where stated; Wh/kg only in specs/headline (energy_Wh null)"
+  },
+  {
+   "id": "product-battery-molicel-inr-21700-m65a",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Molicel",
+   "name": "INR-21700-M65A - Molicel",
+   "url": "https://www.molicel.com/inr-21700-m65a/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "21700",
+    "Nominal Voltage": "3.6V",
+    "Typical Capacity": "6.5Ah, 23.4Wh",
+    "Energy Density": "943Wh/l, 322Wh/kg",
+    "Discharge Current": "26A"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "continuous_A": 26,
+    "capacity_mAh": 6500,
+    "energy_Wh": 23.4,
+    "specific_energy_Wh_kg": 322.0
+   },
+   "note": "single cell (cells=1); long-endurance UAV pack cell candidate, not a flight pack; continuous_A = \"Discharge Current\" printed"
+  },
+  {
+   "id": "product-battery-molicel-inr-21700-p50b",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Molicel",
+   "name": "INR-21700-P50B - Molicel",
+   "url": "https://www.molicel.com/inr-21700-p50b/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "21700",
+    "Nom. Voltage": "3.6V",
+    "Typical Capacity": "5.0Ah, 18Wh",
+    "Energy Density": "714 Wh/l, 265 Wh/kg",
+    "Discharge Current": "60A"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "continuous_A": 60,
+    "capacity_mAh": 5000,
+    "nominal_V": 3.6,
+    "energy_Wh": 18,
+    "specific_energy_Wh_kg": 265.0
+   },
+   "note": "single cell (cells=1); long-endurance UAV pack cell candidate, not a flight pack; continuous_A = \"Discharge Current\" printed"
+  },
+  {
+   "id": "product-battery-molicel-inr-21700-p60c",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Molicel",
+   "name": "INR-21700-P60C - Molicel",
+   "url": "https://www.molicel.com/inr-21700-p60c/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Cell Type": "21700",
+    "Nominal Voltage": "3.6V",
+    "Typical Capacity": "6.0Ah, 21.6Wh",
+    "Energy Density": "871 Wh/L, 284Wh/kg",
+    "Maximum Discharge Current": "100A"
+   },
+   "numeric": {
+    "cells_min": 1,
+    "cells_max": 1,
+    "capacity_mAh": 6000,
+    "energy_Wh": 21.6,
+    "specific_energy_Wh_kg": 284.0
+   },
+   "note": "single cell (cells=1); long-endurance UAV pack cell candidate, not a flight pack; continuous_A = \"Discharge Current\" printed"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-12000mah-6s-10c-22-2v-lipo-battery-xt90s-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 12000mAh 6S 10C 22.2V Lipo Battery | XT90S-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-380wh-kg-12000mah-10c-22-2v-6s1p-lipo-battery-pack-with-xt90s-f-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "12000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "800g",
+    "Size": "194x71x32mm",
+    "Discharge Connector Type": "XT90S-F",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Energy Density (stated in product text)": "380Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 800,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 12000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 380.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-17000mah-6s-10c-22-2v-lipo-battery-xt90s-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 17000mAh 6S 10C 22.2V Lipo Battery | XT90S-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-300wh-kg-17000mah-10c-22-2v-6s1p-g-tech-lipo-battery-pack-with-xt90s-f-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "17000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight(±20g)": "1432g",
+    "Size": "193*71*50.5mm",
+    "Discharge Connector Type": "XT90S-F",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Discharge Wire": "8# 150mm",
+    "Charge Wire": "22# 65mm",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Energy Density (stated in product text)": "300Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 1432,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 17000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 300.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-17000mah-6s-10c-23-7v-uhv-lipo-battery-xt90s-f-plug-uav-classic",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 17000mAh 6S 10C 23.7V(UHV) Lipo Battery | XT90S-F Plug | UAV Classic",
+   "url": "https://www.gensace.de/products/tattu-g-tech-urtral-high-voltage-17000mah-10c-23-7v-6s1p-xt90s-f",
+   "captured": "2026-10-20",
+   "specs": {
+    "High Energy Density": "280Wh/kg",
+    "High Voltage": "4.45V/cell",
+    "Safety Performance": "Voltage range of 4.45V to 3.0V per cell when the State of Charge (SOC) is from 100% to 0%.",
+    "Cycle Life of Pack": "500+ cycles, with 80% of the initial capacity retained after those cycles.",
+    "G-Tech Functionality": "The battery supports the G-Tech function with the Tattu TA1000 1000W charger. It includes automatic current allocation, enhancing charging efficiency and battery management.",
+    "Capacity": "17000mAh",
+    "Voltage": "23.7V/6S",
+    "Max Constant Current": "51A",
+    "Max Peak Current": "85A (≤3S)",
+    "NET Weight(±20g)": "1645g",
+    "Size": "188x72x60mm",
+    "Discharge Connector Type": "XT90-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Discharge Wire": "8# 150mm",
+    "Charge Wire": "22# 75mm",
+    "Recommended Charger": "TA1000 / TA3200UHV",
+    "Energy Density (stated in product text)": "280Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 1645,
+    "cells_min": 6,
+    "cells_max": 6,
+    "continuous_A": 51,
+    "capacity_mAh": 17000,
+    "nominal_V": 23.7,
+    "specific_energy_Wh_kg": 280.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-22000mah-6s-10c-22-2v-lipo-battery-xt90s-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 22000mAh 6S 10C 22.2V Lipo Battery | XT90S-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-300wh-kg-22000mah-10c-22-2v-6s1p-g-tech-lipo-battery-pack-with-xt90s-f",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "22000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "1807g (±20g)",
+    "Size": "193*76*59mm",
+    "Discharge Connector Type": "XT90-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Energy Density (stated in product text)": "300Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 1807,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 22000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 300.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-25000mah-6s-10c-22-2v-lipo-battery-xt90-s-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 25000mAh 6S 10C 22.2V Lipo Battery | XT90-S Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tarbg3325k06s10x",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "25000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "1921g (±20g)",
+    "Size": "198*77*61mm",
+    "Discharge Connector Type": "XT90-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Energy Density (stated in product text)": "330Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 1921,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 25000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 330.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-30000mah-12s-10c-44-4v-lipo-battery-as150u-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 30000mAh 12S 10C 44.4V Lipo Battery | AS150U-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-300wh-kg-30000mah-10c-44-4v-12s1p-lipo-battery-pack-with-as150u-f",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "30000mAh",
+    "Voltage": "44.4V/12S",
+    "Max Peak Current": "10C",
+    "Net Weight": "5100g (±20g)",
+    "Size": "208*91.5*118mm",
+    "Discharge Connector Type": "AS150U-F",
+    "Balancer Connector Type": "Molex-430251600",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Energy Density (stated in product text)": "300Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 5100,
+    "cells_min": 12,
+    "cells_max": 12,
+    "capacity_mAh": 30000,
+    "nominal_V": 44.4,
+    "specific_energy_Wh_kg": 300.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-30000mah-6s-10c-22-2v-lipo-battery-xt90s-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 30000mAh 6S 10C 22.2V Lipo Battery | XT90S-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tarbg3030k06s10x",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "30000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "2415g (±20g)",
+    "Size": "212x92x62mm",
+    "Discharge Connector Type": "XT90-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Energy Density (stated in product text)": "300Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 2415,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 30000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 300.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-32000mah-6s-10c-23-7v-uhv-lipo-battery-xt90s-f-plug-uav-classic",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 32000mAh 6S 10C 23.7V(UHV) Lipo Battery | XT90S-F Plug | UAV Classic",
+   "url": "https://www.gensace.de/products/tattu-g-tech-urtral-high-voltage-32000mah-10c-23-7v-6s1p-xt90s-f",
+   "captured": "2026-10-20",
+   "specs": {
+    "High Energy Density": "280Wh/kg",
+    "High Voltage": "4.45V/cell",
+    "Safety Performance": "Voltage range of 4.45V to 3.0V per cell when the State of Charge (SOC) is from 100% to 0%.",
+    "Cycle Life of Pack": "500+ cycles, with 80% of the initial capacity retained after those cycles.",
+    "G-Tech Functionality": "The battery supports the G-Tech function with the Tattu charger. It includes automatic current allocation, enhancing charging efficiency and battery management.",
+    "Capacity": "32000mAh",
+    "Voltage": "23.7V/6S1P",
+    "Max Constant Current": "60A",
+    "Max Peak Current": "100A (≤3S)",
+    "Weight": "approx. 2959g",
+    "Dimension": "approx. LxWxH 222x121x53mm",
+    "Discharge Connector Type": "XT90-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Discharge Wire": "8# 150mm",
+    "Charge Wire": "22# 75mm",
+    "Energy Density (stated in product text)": "280Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 2959,
+    "cells_min": 6,
+    "cells_max": 6,
+    "continuous_A": 60,
+    "capacity_mAh": 32000,
+    "nominal_V": 23.7,
+    "specific_energy_Wh_kg": 280.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-33000mah-14s-10c-51-8v-lipo-battery-as150u-f-plug-semi-solid-350wh-kg",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 33000mAh 14S 10C 51.8V Lipo Battery | AS150U-F Plug | Semi-solid (350Wh/kg)",
+   "url": "https://www.gensace.de/products/tarbg3533k14s10x",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "33000mAh",
+    "Voltage": "51.8V/14S",
+    "Max Peak Current": "10C",
+    "Net Weight": "5486.5g (±20g)",
+    "Size": "213*91*141mm",
+    "Discharge Connector Type": "AS150U-F",
+    "Balancer Connector Type": "Molex-430251600",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Recommended use of the Tattu matching charger": "TA3200",
+    "Energy Density (stated in product text)": "350Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 5486.5,
+    "cells_min": 14,
+    "cells_max": 14,
+    "capacity_mAh": 33000,
+    "nominal_V": 51.8,
+    "specific_energy_Wh_kg": 350.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-33000mah-6s-10c-22-2v-lipo-battery-xt90-s-plug-semi-solid-330wh-kg",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 33000mAh 6S 10C 22.2V Lipo Battery | XT90-S Plug | Semi-solid (330Wh/kg)",
+   "url": "https://www.gensace.de/products/tarbg3333k06s10x",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "33000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "2449.5g (±20g)",
+    "Size": "212*92*60mm",
+    "Discharge Connector Type": "XT90-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Recommended use of the Tattu matching charger": "TA3200",
+    "Energy Density (stated in product text)": "330Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 2449.5,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 33000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 330.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-36000mah-12s-10c-44-4v-lipo-battery-as150u-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 36000mAh 12S 10C 44.4V Lipo Battery | AS150U-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-380wh-kg-36000mah-10c-22-2v-12s1p-lipo-battery-pack-with-as150u-f-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "36000mAh",
+    "Voltage": "44.4V/12S",
+    "Max Peak Current": "10C",
+    "Net Weight": "approx. 4500±100g",
+    "Dimension": "approx. LxWxH 122x89x210m",
+    "Discharge Connector Type": "XT90S-F",
+    "Balancer Connector Type": "Molex-430251600",
+    "Recommended use of the Tattu matching charger": "TA3200",
+    "Energy Density (stated in product text)": "380Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 4500,
+    "cells_min": 12,
+    "cells_max": 12,
+    "capacity_mAh": 36000,
+    "nominal_V": 44.4,
+    "specific_energy_Wh_kg": 380.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-36000mah-6s-10c-22-2v-lipo-battery-xt90s-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 36000mAh 6S 10C 22.2V Lipo Battery | XT90S-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-380wh-kg-36000mah-10c-22-2v-6s1p-lipo-battery-pack-with-xt90s-f-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "36000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "2200g",
+    "Size": "208x89x60mm",
+    "Discharge Connector Type": "XT90S-F",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Energy Density (stated in product text)": "380Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 2200,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 36000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 380.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-39000mah-6s-10c-22-2v-lipo-battery-qs8-s-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 39000mAh 6S 10C 22.2V Lipo Battery | QS8-S Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-380wh-kg-39000mah-10c-22-2v-6s1p-lipo-battery-pack-with-qs8-s-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "39000mAh",
+    "Voltage": "22.2V/6S",
+    "Max Peak Current": "10C",
+    "Net Weight": "2550g",
+    "Size": "215x121x63mm",
+    "Discharge Connector Type": "QS8-S",
+    "Balancer Connector Type": "G-Tech-7P",
+    "Energy Density (stated in product text)": "380Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 2550,
+    "cells_min": 6,
+    "cells_max": 6,
+    "capacity_mAh": 39000,
+    "nominal_V": 22.2,
+    "specific_energy_Wh_kg": 380.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-39000mah-8s-10c-29-6v-lipo-battery-qs8-s-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 39000mAh 8S 10C 29.6V Lipo Battery | QS8-S Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-380wh-kg-39000mah-10c-29-6v-8s1p-lipo-battery-pack-with-qs8-s-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "39000mAh",
+    "Voltage": "29.6V/8S",
+    "Max Peak Current": "10C",
+    "Net Weight": "3400g",
+    "Size": "215x121x45mm",
+    "Discharge Connector Type": "QS8-S",
+    "Balancer Connector Type": "JST-XHR-9P",
+    "Recommended use of the Tattu matching charger": "TA3200",
+    "Energy Density (stated in product text)": "380Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 3400,
+    "cells_min": 8,
+    "cells_max": 8,
+    "capacity_mAh": 39000,
+    "nominal_V": 29.6,
+    "specific_energy_Wh_kg": 380.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-41000mah-12s-10c-44-4v-lipo-battery-as150u-f-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 41000mAh 12S 10C 44.4V Lipo Battery | AS150U-F Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tattu-semi-solid-state-380wh-kg-41000mah-10c-44-4v-12s1p-lipo-battery-pack-with-as150u-f-plug",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "41000mAh",
+    "Voltage": "44.4V/12S",
+    "Max Peak Current": "10C",
+    "Net Weight": "5200g",
+    "Size": "205x86x127mm",
+    "Discharge Connector Type": "XT90S-F",
+    "Balancer Connector Type": "Molex-430251600",
+    "Recommended use of the Tattu matching charger": "TA3200",
+    "Energy Density (stated in product text)": "380Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 5200,
+    "cells_min": 12,
+    "cells_max": 12,
+    "capacity_mAh": 41000,
+    "nominal_V": 44.4,
+    "specific_energy_Wh_kg": 380.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
+  {
+   "id": "product-battery-tattu-gens-ace-genspow-tattu-76000mah-12s-10c-44-4v-lipo-battery-qs12-s-plug-semi-solid",
+   "category": "battery",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Tattu (Gens ace / Genspow)",
+   "name": "Tattu 76000mAh 12S 10C 44.4V Lipo Battery | QS12-S Plug | Semi-solid",
+   "url": "https://www.gensace.de/products/tarbg3376k12s10x",
+   "captured": "2026-10-20",
+   "specs": {
+    "Capacity": "76000mAh",
+    "Voltage": "44.4V/12S",
+    "Max Peak Current": "10C",
+    "Net Weight": "10949g (±20g)",
+    "Size": "292*152*121mm",
+    "Discharge Connector Type": "QS12-F",
+    "Balancer Connector Type": "Molex",
+    "Voltage Range": "From 4.2V to 2.75V when SOC is from 100% to 0%. This range suggests good safety management within the battery’s operating limits.",
+    "Max Constant Current": "3C",
+    "Recommended use of the Tattu matching charger": "TA3200",
+    "Energy Density (stated in product text)": "330Wh/kg"
+   },
+   "numeric": {
+    "weight_g": 10949,
+    "cells_min": 12,
+    "cells_max": 12,
+    "capacity_mAh": 76000,
+    "nominal_V": 44.4,
+    "specific_energy_Wh_kg": 330.0
+   },
+   "note": "sold on Gens ace EU store gensace.de; energy_Wh not printed (null); nominal_V = voltage printed in Voltage line"
+  },
   {
    "id": "product-engine-airmobi-dle-130cc-twin-cylinder-gas-engine",
    "category": "engine",
@@ -68,7 +957,7 @@
     "power_W": 13049.75,
     "displacement_cc": 170
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); power_W converted from printed hp (x745.7)"
   },
   {
    "id": "product-engine-airmobi-dle130cc-autostart-gas-engine-with-built-in-alternator",
@@ -216,7 +1105,7 @@
     "power_W": 8250,
     "displacement_cc": 120
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); power_W converted from printed hp (x745.7)"
   },
   {
    "id": "product-engine-de-engine-de170-170cc-air-cooled-twin-cylinder-2-stroke-engine",
@@ -258,7 +1147,7 @@
     "power_W": 13300,
     "displacement_cc": 170
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); power_W converted from printed hp (x745.7)"
   },
   {
    "id": "product-engine-de-engine-de350-350cc-carbureted-gasoline-drone-engine",
@@ -351,7 +1240,7 @@
     "power_W": 33000,
     "displacement_cc": 500
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); power_W converted from printed hp (x745.7)"
   },
   {
    "id": "product-engine-de-engine-de550-550cc-4-cylinder-air-cooled-two-stroke-drone-engine",
@@ -433,7 +1322,7 @@
     "power_W": 47300,
     "displacement_cc": 730
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); power_W converted from printed hp (x745.7)"
   },
   {
    "id": "product-engine-desert-aircraft-da-100l",
@@ -564,7 +1453,7 @@
     "power_W": 15622.42,
     "displacement_cc": 215
    },
-   "note": "RC/model-aircraft class gasoline engine (page markets for model aircraft); power_W converted from printed hp (x745.7)"
+   "note": "RC/model-aircraft class gasoline engine (page markets for model aircraft); power_W converted from printed hp (x745.7); weight_g converted from printed lbs"
   },
   {
    "id": "product-engine-desert-aircraft-da-35",
@@ -745,6 +1634,177 @@
     "displacement_cc": 150
    },
    "note": "RC/model-aircraft class gasoline engine (page markets for model aircraft); power_W converted from printed hp (x745.7)"
+  },
+  {
+   "id": "product-engine-doosan-mobility-innovation-dm15",
+   "category": "engine",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "Doosan Mobility Innovation",
+   "name": "DM15 Fuel Cell Power Module",
+   "url": "https://www.doosanmobility.com/en/products/powerpack-dm15",
+   "captured": "2026-10-20",
+   "specs": {
+    "Product": "DM15",
+    "Rated power": "1250W",
+    "Output voltage": "50 ± 2V",
+    "Dimensions (W x L x H)": "275*260*170mm",
+    "Weight": "8.0kg (Hydrogen tank included)",
+    "Operating temperature": "0~40°C",
+    "Hydrogen consumption": "14NLPM (Based on rated output)",
+    "Hydrogen purity": "H2, 99.99%"
+   },
+   "numeric": {
+    "weight_g": 8000,
+    "power_W": 1250
+   },
+   "note": "hydrogen PEM fuel cell power module; application example on page: DJ25 hydrogen VTOL; weight includes hydrogen tank"
+  },
+  {
+   "id": "product-engine-doosan-mobility-innovation-dm30m2s",
+   "category": "engine",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "Doosan Mobility Innovation",
+   "name": "DM30M2S Fuel Cell Powerpack",
+   "url": "https://www.doosanmobility.com/en/products/powerpack-dm30",
+   "captured": "2026-10-20",
+   "specs": {
+    "Product": "DM30M2S",
+    "Rated power": "2700W",
+    "Peak power": "5000W (Within 3 sec.)",
+    "Output voltage": "50 ± 2V (Based on rated output)",
+    "Dimensions (W x L x H)": "600*529.5*322mm",
+    "Weight": "11.1kg (Hydrogen tank included)",
+    "Battery": "2600mAh * 2",
+    "Hydrogen consumption": "60NLPM",
+    "Operating temperature": "-5~40°C"
+   },
+   "numeric": {
+    "weight_g": 11100,
+    "power_W": 2700
+   },
+   "note": "page application example is DT30X (multicopter); listed as hydrogen power unit usable on fixed-wing/VTOL class; platform tag weak"
+  },
+  {
+   "id": "product-engine-doosan-mobility-innovation-dp30m2s",
+   "category": "engine",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "Doosan Mobility Innovation",
+   "name": "DP30M2S Fuel Cell Powerpack",
+   "url": "https://www.doosanmobility.com/en/products/powerpack",
+   "captured": "2026-10-20",
+   "specs": {
+    "Product": "DP30M2S",
+    "Dimensions(W x L x H)": "600(W) x 530(L) x 320(H) mm",
+    "Rated Power": "2.7kW",
+    "Peak Power": "5kW",
+    "Hydrogen Pressure": "0 ~ 350bar",
+    "Operating Temperature": "-5 to 40℃",
+    "Weight (Powerpack)": "6.9kg",
+    "Weight (w/ Hydrogen Tank)": "12.7kg",
+    "Hybrid Battery (Option 1)": "LiPo (2,600mAh x 2)"
+   },
+   "numeric": {
+    "weight_g": 6900,
+    "power_W": 2700
+   },
+   "note": "weight_g = powerpack only (12.7 kg with H2 tank); platform tag weak (generic drone powerpack)"
+  },
+  {
+   "id": "product-engine-intelligent-energy-ie-soar-1-2",
+   "category": "engine",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Intelligent Energy",
+   "name": "IE-SOAR 1.2 hydrogen fuel cell for UAVs",
+   "url": "https://www.intelligent-energy.com/our-products/ie-soar-fuel-cells-for-uavs/ie-soar-1-2/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Weight": "2400g",
+    "Energy density": "600-800Wh/kg",
+    "Refuelling/recharge time": "< 3 minutes",
+    "Through life power": "1200W",
+    "Peak system power": "Up to 8000W",
+    "Output voltage (DCDC regulated)": "Configurable between 50V and 70V",
+    "Fuel cell power module mass": "2700g",
+    "Hydrogen regulator mass": "315g",
+    "Maximum regulator pressure": "350 bar/5000 psi",
+    "Maximum cylinder mass": "10kg",
+    "Default hybrid battery configuration": "2 x 6S in series",
+    "Maximum altitude": "3000m"
+   },
+   "numeric": {
+    "weight_g": 2400,
+    "power_W": 1200
+   },
+   "note": "page prints both Weight 2400g and module mass 2700g (inconsistent); weight_g takes the \"Weight\" row"
+  },
+  {
+   "id": "product-engine-intelligent-energy-ie-soar-2-4",
+   "category": "engine",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "Intelligent Energy",
+   "name": "IE-SOAR 2.4 hydrogen fuel cell for UAVs",
+   "url": "https://www.intelligent-energy.com/our-products/ie-soar-fuel-cells-for-uavs/ie-soar-2-4/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Weight": "4800g",
+    "Energy density": "600-800Wh/kg",
+    "Refuelling/recharge time": "< 3 minutes",
+    "Through life power": "2400W",
+    "Peak system power": "Up to 8000W",
+    "Output voltage (DCDC regulated)": "Configurable between 50V and 70V",
+    "Fuel cell power module mass": "4800g",
+    "Hydrogen regulator mass": "315g",
+    "Maximum regulator pressure": "350 bar/5000 psi",
+    "Maximum cylinder mass": "10kg",
+    "Maximum altitude": "3000m"
+   },
+   "numeric": {
+    "weight_g": 4800,
+    "power_W": 2400
+   },
+   "note": "page frames it mainly vs rotary-wing drones; platform tag weak"
+  },
+  {
+   "id": "product-engine-intelligent-energy-ie-soar-800",
+   "category": "engine",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "Intelligent Energy",
+   "name": "IE-SOAR 800 hydrogen fuel cell for UAVs",
+   "url": "https://www.intelligent-energy.com/our-products/ie-soar-fuel-cells-for-uavs/ie-soar-800/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Weight": "1450g",
+    "Energy density": "600-800Wh/kg",
+    "Flight time": "Up to 7 hours",
+    "Refuelling/recharge time": "< 3 minutes",
+    "Maximum continuous power": "800W",
+    "Peak power": "7500W – hybrid battery dependent",
+    "Output voltage (DCDC regulated)": "Configurable between 24V and 48V",
+    "Fuel cell power module mass": "1450g",
+    "Hydrogen regulator mass": "315g",
+    "Maximum regulator (cylinder) pressure": "350 bar/5000 psi",
+    "Maximum cylinder mass": "10kg",
+    "Maximum altitude": "3000m"
+   },
+   "numeric": {
+    "weight_g": 1450,
+    "power_W": 800
+   },
+   "note": "title not captured verbatim; page cites fixed wing VTOL battery comparison; weight excludes H2 cylinder/regulator"
   },
   {
    "id": "product-esc-t-motor-at-115a-14s-fixed-wing-esc",
@@ -1922,6 +2982,58 @@
    "note": "multiple KV/variant rows on page; numeric = first listed variant (V80A 14S); all variants in specs with variant prefix"
   },
   {
+   "id": "product-frame-aerovironment-jump-20",
+   "category": "frame",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "AeroVironment",
+   "name": "JUMP 20 (AeroVironment)",
+   "url": "https://www.avinc.com/uas/jump-20",
+   "captured": "2026-10-20",
+   "specs": {
+    "Endurance": "13+ hours",
+    "Operational Range": "115 mi 185 km",
+    "Payload Capacity": "30 lbs 13.6 kg",
+    "Wingspan": "18.8ft 5.7 m",
+    "Length": "9.5 ft 2.8 m",
+    "Max takeoff weight": "215 lbs 97.5 kg"
+   },
+   "numeric": {
+    "wingspan_mm": 5700,
+    "mtow_g": 97500,
+    "payload_g": 13600,
+    "endurance_min": 780
+   },
+   "note": "values printed in imperial and metric lines; endurance 13+ h printed as 13+; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
+  },
+  {
+   "id": "product-frame-aerovironment-puma-3-ae",
+   "category": "frame",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "AeroVironment",
+   "name": "Puma 3 AE (AeroVironment)",
+   "url": "https://www.avinc.com/uas/puma-3-ae",
+   "captured": "2026-10-20",
+   "specs": {
+    "Endurance": "3 hours",
+    "Operational Range": "20 km Standard; 40 km with ERA; 60 km with LRTA",
+    "Wingspan": "9.2 ft 2.8 m",
+    "Length": "4.6 ft 1.4 m",
+    "Weight": "15.4 lb 7 kg",
+    "Payload Capacity": "4 lb; 6.5 lb with Heavy Lift Software 1.8 kg; 2.9 kg with Heavy Lift Software"
+   },
+   "numeric": {
+    "weight_g": 7000,
+    "wingspan_mm": 2800,
+    "payload_g": 1800,
+    "endurance_min": 180
+   },
+   "note": "payload_g = standard 1.8 kg (2.9 kg with Heavy Lift Software)"
+  },
+  {
    "id": "product-frame-aerovironment-puma-le",
    "category": "frame",
    "platform": [
@@ -1947,6 +3059,73 @@
     "endurance_min": 390
    },
    "note": "hand-launched Group 2 UAS; mtow_g = MGTOW footnote value 12.4 kg"
+  },
+  {
+   "id": "product-frame-aerovironment-raven",
+   "category": "frame",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "AeroVironment",
+   "name": "Raven (AeroVironment)",
+   "url": "https://www.avinc.com/uas/raven",
+   "captured": "2026-10-20",
+   "specs": {
+    "Endurance": "75+ mins",
+    "Operational Range": "6.2 mi 10 km",
+    "Aircraft Weight": "4.8 lbs 2.2 kg"
+   },
+   "numeric": {
+    "weight_g": 2200,
+    "endurance_min": 75
+   },
+   "note": "hand-launched small UAS; wingspan/payload not on captured page; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
+  },
+  {
+   "id": "product-frame-ageagle-aerial-systems-ebee-tac",
+   "category": "frame",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "AgEagle Aerial Systems",
+   "name": "eBee TAC (AgEagle)",
+   "url": "https://ageagle.com/drones/ebee-tac/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Wingspan": "116 cm / 45.7 in",
+    "Weight (incl. camera & battery)": "1.3 kg - 1.6 kg / 2.2 - 3.5 lbs, depending on camera and battery",
+    "Radio link range": "3 km nominal (up to 8 km) / 1.9 mi (up to 5 mi)",
+    "Detachable wings": "Yes",
+    "Military standard case (included with eBee TAC)": "75x48x33 cm / 30x19x13 in"
+   },
+   "numeric": {
+    "weight_g": 1600,
+    "wingspan_mm": 1160
+   },
+   "note": "weight_g upper bound of range"
+  },
+  {
+   "id": "product-frame-ageagle-aerial-systems-ebee-vision",
+   "category": "frame",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "AgEagle Aerial Systems",
+   "name": "eBee VISION (AgEagle)",
+   "url": "https://ageagle.com/drones/ebee-vision/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Wingspan": "47 in / 120cm",
+    "Weight (incl. camera & battery)": "3.6 lbs / 165 kg",
+    "Electric motor": "Low-noise, brushless",
+    "Detachable wings": "Yes",
+    "Frame material": "Carbon fiber and reinforced injected polymer",
+    "Thermal Sensor": "FLIR BOSON"
+   },
+   "numeric": {
+    "wingspan_mm": 1200
+   },
+   "note": "page prints weight as \"3.6 lbs / 165 kg\" (apparent typo, 1.65 kg intended) -> weight_g null; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-ageagle-aerial-systems-ebee-x",
@@ -2020,7 +3199,7 @@
     "payload_g": 12000,
     "endurance_min": 170
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-airmobi-skyeye-2600-fixed-wing-uav-platform",
@@ -2053,7 +3232,7 @@
     "payload_g": 4000,
     "endurance_min": 120
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-airmobi-skyeye-3600-fixed-wing-uav-platform",
@@ -2190,7 +3369,7 @@
     "endurance_min": 600,
     "cruise_speed_ms": 34.72
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-airmobi-volitation-vt370-vtol-uav-platform-15kg-5-hours",
@@ -2228,7 +3407,7 @@
     "endurance_min": 900,
     "cruise_speed_ms": 25.0
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-airmobi-volitation-vt510-heavy-load-vtol-uav-with-45kg-load-capacity",
@@ -2268,7 +3447,7 @@
     "payload_g": 45000,
     "endurance_min": 360
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-airmobi-yuav-y30-3000mm-vtol-fixed-wing-uav-pnp",
@@ -2300,7 +3479,7 @@
     "mtow_g": 16000,
     "endurance_min": 600
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-airmobi-yuav-y37-3700mm-vtol-fixed-wing-uav-pnp",
@@ -2337,7 +3516,7 @@
     "endurance_min": 510,
     "cruise_speed_ms": 25.0
    },
-   "note": "sold via Airmobi official store (airmobi.com)"
+   "note": "sold via Airmobi official store (airmobi.com); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-delair-dt26x",
@@ -2390,7 +3569,36 @@
     "endurance_min": 80,
     "cruise_speed_ms": 15
    },
-   "note": "page footer (c) 2019 - legacy product; cruise 54 km/h converted; weight_g = total incl. payload"
+   "note": "page footer (c) 2019 - legacy product; cruise 54 km/h converted; weight_g = total incl. payload; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
+  },
+  {
+   "id": "product-frame-doosan-mobility-innovation-dj25",
+   "category": "frame",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "Doosan Mobility Innovation",
+   "name": "DJ25 hydrogen fuel-cell VTOL (Doosan Mobility Innovation)",
+   "url": "https://www.doosanmobility.com/en/products/drone-dj25",
+   "captured": "2026-10-20",
+   "specs": {
+    "ECO Cruising Speed": "22m/s",
+    "Max Altitude": "3,500m",
+    "Length/Span": "2.1m/4.4m",
+    "Wind resistance": "10.8 ~13.8 m/s",
+    "Payload(Max)": "4kg",
+    "Max Take off Weight": "31kg",
+    "Flight Time": "330min (with payload)",
+    "Power Module System Weight": "7kg (with 12L Type 3 cylinder)；8kg (with 10.8L Type 4 cylinder"
+   },
+   "numeric": {
+    "wingspan_mm": 4400,
+    "mtow_g": 31000,
+    "payload_g": 4000,
+    "endurance_min": 330,
+    "cruise_speed_ms": 22
+   },
+   "note": "wingspan from \"Length/Span 2.1m/4.4m\" (span = second value); cruise = ECO cruising speed; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-event-38-unmanned-systems-e400-isr",
@@ -2475,7 +3683,7 @@
     "payload_g": 5443,
     "endurance_min": 120
    },
-   "note": "payload_g = 12 lb useful payload ceiling (5443 g); 7 lb standard payload = 3175 g; mtow_g = 60 lb (printed upper takeoff weight, 55 lb standard); cruise 39-47 mph range not converted"
+   "note": "payload_g = 12 lb useful payload ceiling (5443 g); 7 lb standard payload = 3175 g; mtow_g = 60 lb (printed upper takeoff weight, 55 lb standard); cruise 39-47 mph range not converted; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-heewing-t2-cruza-pnp",
@@ -2604,7 +3812,7 @@
     "endurance_min": 480,
     "cruise_speed_ms": 27.78
    },
-   "note": "cruise 100 km/h converted; endurance 8+ h printed as 8+"
+   "note": "cruise 100 km/h converted; endurance 8+ h printed as 8+; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
   },
   {
    "id": "product-frame-ukrspecsystems-shark-d",
@@ -2667,6 +3875,31 @@
    "note": "cruise 75 km/h converted"
   },
   {
+   "id": "product-frame-wingtra-wingtraone-gen-ii",
+   "category": "frame",
+   "platform": [
+    "vtol"
+   ],
+   "manufacturer": "Wingtra",
+   "name": "WingtraOne GEN II",
+   "url": "https://wingtra.com/wingtraone-gen-ii-drone/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Drone type": "Tailsitter vertical take-off and landing (VTOL)",
+    "Maximum take-off weight": "4.8 kg (10.6 lb)",
+    "Payload capacity": "800 g (1.8 lb)",
+    "Flight speed": "16 m/s (35.8 mph)",
+    "Wind resistance": "Max sustained wind: 12 m/s (27 mph)",
+    "Maximum flight time": "Up to 59 min"
+   },
+   "numeric": {
+    "mtow_g": 4800,
+    "payload_g": 800,
+    "endurance_min": 59
+   },
+   "note": "\"Flight speed\" 16 m/s not labelled cruise -> cruise null; wingspan not printed in captured text; where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
+  },
+  {
    "id": "product-frame-wingtra-wingtraray",
    "category": "frame",
    "platform": [
@@ -2691,7 +3924,926 @@
    "numeric": {
     "endurance_min": 59
    },
-   "note": "wingspan/MTOW/payload not stated on this page (only drone dimension 125x68x12 cm) -> null; page also says flies up to 22 m/s (max, not cruise)"
+   "note": "wingspan/MTOW/payload not stated on this page (only drone dimension 125x68x12 cm) -> null; page also says flies up to 22 m/s (max, not cruise); where page prints a range/\"up to\", numeric uses the upper bound or printed headline value"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-airplane-x5230-v3-brushless-motors-x120r-equivalent-power",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky Airplane X5230 V3 Brushless Motors X120R Equivalent Power",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-airplane-x5230-v3-brushless-motors-x120r-equivalent-power",
+   "captured": "2026-10-20",
+   "specs": {
+    "Motor Model / KV": "X5230-120E/ KV200",
+    "Stator/Rotor Poles": "24N28P",
+    "Internal resistance": "24.3mΩ",
+    "Motor size": "φ60.15*121.0mm",
+    "Shaft diameter": "8.0mm",
+    "AWG": "20AWG 150mm",
+    "Motor weight(wire included)": "615g",
+    "Motor weight(wire excluded)": "——",
+    "Rated operational voltage": "10S",
+    "No-load current": "1.9A/10V",
+    "Maximum continuous power": "3900W",
+    "Maximum continuous current": "97A/30s",
+    "ESC recommended use": "120A",
+    "Propeller size recommended use": "20*8/20*10/20*12/21*10/22*10",
+    "No.of Stator Slots": "24",
+    "Weight": "615g",
+    "No.of Rotor Poles": "28",
+    "Rotor Diameter": "60.15mm",
+    "Motor Kv": "200",
+    "Body Lengt h": "60mm",
+    "Max Lipo Cell": "10S",
+    "Motor Resistance": "24.3mΩ",
+    "ESC": "120A",
+    "Max Continuous Current": "97A/30s",
+    "Recommended Prop(inch)": "20*8/20*10/20*12/21*10/22*1 0",
+    "Max Continuous Power": "3900W"
+   },
+   "numeric": {
+    "weight_g": 615,
+    "kv": 200,
+    "cells_max": 10,
+    "continuous_A": 97,
+    "power_W": 3900
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-edge-racing-r2304-f3p-airplane-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky Edge Racing R2304 F3P Airplane Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/r2304-f3p",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "23mm",
+    "Rotor Diameter": "28mm",
+    "Stator Thickness": "4mm",
+    "Shaft Diameter": "4mm",
+    "No.of Stator Slots": "12",
+    "Body Length(without shaft)": "18mm",
+    "No.of Rotor Poles": "14",
+    "Body Length": "19.3mm",
+    "Motor Kv": "1480",
+    "Max Lipo Cell": "2-3S",
+    "No-load current": "0.3A/10V",
+    "ESC": "10-15A",
+    "Motor Resistance": "180mΩ",
+    "Recommended Prop(inch)": "GWS8040/GWS8043/GWS9047/GWS9050",
+    "Max Continuous Current": "11.4A/30s",
+    "Max Continuous Power": "125W",
+    "Weight": "20g",
+    "Header (page)": "KV1480"
+   },
+   "numeric": {
+    "weight_g": 20,
+    "kv": 1480,
+    "cells_max": 3,
+    "continuous_A": 11.4,
+    "power_W": 125
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x2216-v3-brushless-motors-long-shaft-version",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X2216 V3 Brushless Motors Long Shaft Version",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x2216-v3-brushless-motors-long-shaft-version",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "22mm",
+    "Rotor Diameter": "27.7mm",
+    "Stator Thickness": "16mm",
+    "Body Length": "34mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "3-4S",
+    "No.of Rotor Poles": "14",
+    "ESC": "50A",
+    "Motor Kv": "880",
+    "Recommended Prop(inch)": "APC11*4.7 /APC1047 /APC9047/APC9045",
+    "No-load current": "0.5A/10V",
+    "Weight for aerobatics airplane": "850g(4S 9060\\1047\\1050)",
+    "Motor Resistance": "89mΩ",
+    "Max Continuous Current": "32A/30s",
+    "Max Continuous Power": "450W",
+    "Weight for 3D airplane": "800g(3S 1147)",
+    "Weight": "67.5g"
+   },
+   "numeric": {
+    "weight_g": 67.5,
+    "kv": 880,
+    "cells_max": 4,
+    "continuous_A": 32,
+    "power_W": 450
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x2304-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X2304 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x2304-v3",
+   "captured": "2026-10-20",
+   "specs": {
+    "No.of Stator Slots": "12",
+    "Rotor Diameter": "28mm",
+    "No.of Rotor Poles": "14",
+    "Shaft Diameter": "3mm",
+    "Motor Kv": "1400",
+    "Body Length(Without Shaft)": "19.1mm",
+    "No-load current": "0.35A/10V",
+    "Body Length": "22.2mm",
+    "Motor Resistance": "200mΩ",
+    "Max Lipo Cell": "2-3S",
+    "Max Continuous Current": "14A/30s",
+    "ESC": "10-15A",
+    "Max Continuous Power": "120W",
+    "Weight": "20.2g",
+    "Header (page)": "KV1400"
+   },
+   "numeric": {
+    "weight_g": 20.2,
+    "kv": 1400,
+    "cells_max": 3,
+    "continuous_A": 14,
+    "power_W": 120
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x2814-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X2814 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x2814",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "28mm",
+    "Rotor Diameter": "35mm",
+    "Stator Thickness": "14mm",
+    "Body Length": "36mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "3-4S",
+    "No.of Rotor Poles": "14",
+    "ESC": "40-60A",
+    "Motor Kv": "900",
+    "Recommended Prop(inch)": "APC11*5.5/APC13*6.5/APC11*8/APC13*8",
+    "No-load current": "1.2A/10V",
+    "Weight for aerobatics airplane": "1200g-1400g (3S APC13*6.5\\APC13*8) (4S APC11*5.5\\APC11*7\\APC11*8)",
+    "Motor Resistance": "33.6mΩ",
+    "Weight for 3D airplane": "800g-1200g (3S APC13*6.5\\APC13*8)",
+    "Max Continuous Current": "50A/30s",
+    "Max Continuous Power": "680W",
+    "Weight": "108g",
+    "Header (page)": "KV900"
+   },
+   "numeric": {
+    "weight_g": 108,
+    "kv": 900,
+    "cells_max": 4,
+    "continuous_A": 50,
+    "power_W": 680
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x2820-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X2820 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x2820",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "28mm",
+    "Rotor Diameter": "35mm",
+    "Stator Thickness": "20mm",
+    "Body Length": "42mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "3-4S",
+    "No.of Rotor Poles": "14",
+    "ESC": "50-60A",
+    "Motor Kv": "860",
+    "Recommended Prop(inch)": "APC13*6.5/APC13*8/APC12*6/APC12*8",
+    "No-load current": "1.3A/10V",
+    "Weight for aerobatics airplane": "1400g-2000g(4S APC12*6\\APC12*8\\APC13*6.5\\APC13*8)",
+    "Motor Resistance": "25.8mΩ",
+    "Weight for 3D airplane": "1100g-1500g(4S APC12*6\\APC12*8\\APC13*6.5\\APC13*8)",
+    "Max Continuous Current": "65A/30s",
+    "Max Continuous Power": "960W",
+    "Weight": "143g",
+    "Header (page)": "KV500"
+   },
+   "numeric": {
+    "weight_g": 143,
+    "kv": 860,
+    "cells_max": 4,
+    "continuous_A": 65,
+    "power_W": 960
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x3120-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X3120 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x3120",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "31mm",
+    "Rotor Diameter": "37.7mm",
+    "Stator Thickness": "20mm",
+    "Body Length": "42mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "6S",
+    "No.of Rotor Poles": "14",
+    "ESC": "60A",
+    "Motor Kv": "585",
+    "Recommended Prop(inch)": "6S(EOLO12*6.5/EOLO13*7)",
+    "No-load current": "1.0A/10V",
+    "Weight for aerobatics airplane": "1400g-1800g (6S EOLO12x6.5/EOLO13x7)",
+    "Motor Resistance": "43.5mΩ",
+    "Weight for 3D airplane": "1100g-1400g (6S EOLO12x6.5/EOLO13x7)",
+    "Max Continuous Current": "65A/30s",
+    "Max Continuous Power": "1625W",
+    "Weight": "159g",
+    "Header (page)": "KV585"
+   },
+   "numeric": {
+    "weight_g": 159,
+    "kv": 585,
+    "cells_max": 6,
+    "continuous_A": 65,
+    "power_W": 1625
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x3520-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X3520 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x3520",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "35mm",
+    "Rotor Diameter": "42.5mm",
+    "Stator Thickness": "20mm",
+    "Body Length": "45mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "6S",
+    "No.of Rotor Poles": "14",
+    "ESC": "60-80A",
+    "Motor Kv": "560",
+    "Recommended Prop(inch)": "APC12*8/APC12*6/APC13*6.5/APC13*8/APC14*7",
+    "No-load current": "1.1A/10V",
+    "Weight for aerobatics airplane": "2500g (6S APC13*6.5\\APC13*8)",
+    "Motor Resistance": "23mΩ",
+    "Weight for 3D airplane": "2200g (6S APC13*6.5\\APC13*8)",
+    "Max Continuous Current": "80A/30s",
+    "Max Continuous Power": "2000W",
+    "Weight": "219g",
+    "Header (page)": "KV560"
+   },
+   "numeric": {
+    "weight_g": 219,
+    "kv": 560,
+    "cells_max": 6,
+    "continuous_A": 80,
+    "power_W": 2000
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x4120-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X4120 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x4120",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "41mm",
+    "Rotor Diameter": "49.7mm",
+    "Stator Thickness": "20mm",
+    "Body Length": "49mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "6S",
+    "No.of Rotor Poles": "14",
+    "ESC": "100A",
+    "Motor Kv": "480",
+    "Recommended Prop(inch)": "6S(EOLO15*8/15*10/16*8)",
+    "No-load current": "1.5A/10V",
+    "Motor Resistance": "22.5mΩ",
+    "Max Continuous Current": "97A/30s",
+    "Max Continuous Power": "2425W",
+    "Weight": "292g",
+    "Header (page)": "KV480"
+   },
+   "numeric": {
+    "weight_g": 292,
+    "kv": 480,
+    "cells_max": 6,
+    "continuous_A": 97,
+    "power_W": 2425
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x4125-v3-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X4125 V3 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x4125",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "41mm",
+    "Rotor Diameter": "49.7mm",
+    "Stator Thickness": "25mm",
+    "Body Length": "54mm",
+    "No.of Stator Slots": "12",
+    "Max Lipo Cell": "6S",
+    "No.of Rotor Poles": "14",
+    "ESC": "80-100A",
+    "Motor Kv": "420",
+    "Recommended Prop(inch)": "6S(EOLO15*8/15*10/16*8/16*10)",
+    "No-load current": "1.4A/10V",
+    "Motor Resistance": "20.5mΩ",
+    "Max Continuous Current": "90A/30s",
+    "Max Continuous Power": "2250W",
+    "Weight": "351g",
+    "Header (page)": "KV420"
+   },
+   "numeric": {
+    "weight_g": 351,
+    "kv": 420,
+    "cells_max": 6,
+    "continuous_A": 90,
+    "power_W": 2250
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x6210-20cc-equivalent-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X6210 20CC Equivalent Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x-series-v3-x6210-20cc-equivalent-motors",
+   "captured": "2026-10-20",
+   "specs": {
+    "Motor Model / KV": "X6210-III/ KV510",
+    "Stator/Rotor Poles": "24N28P",
+    "Internal resistance": "10mΩ",
+    "Shaft diameter": "3.175mm",
+    "AWG": "20AWG 100mm",
+    "Motor weight(wire included)": "329.8g",
+    "Motor weight(wire excluded)": "No data",
+    "Rated operational voltage": "6S",
+    "No-load current": "10V/2.5A",
+    "Maximum continuous power": "2112w",
+    "Maximum continuous current": "88A/30s",
+    "ESC recommended use": "120A",
+    "Propeller size recommended use": "EOLO15*8 16*8",
+    "Propeller (inch)": "Throttle point"
+   },
+   "numeric": {
+    "weight_g": 329.8,
+    "cells_max": 6,
+    "continuous_A": 88
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x-series-v3-x6215-420kv-25cc-equivalent-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X Series V3 X6215 420KV 25CC Equivalent Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x-series-v3-x6215-25cc-equivalent-motors",
+   "captured": "2026-10-20",
+   "specs": {
+    "Max Continuous Current": "115A/30s",
+    "Stator Diameter": "62mm",
+    "Max Continuous Power": "2594w",
+    "Stator Thickness": "15mm",
+    "Weight": "444.7g",
+    "No.of Stator Slots": "24",
+    "Rotor Diameter": "69.9mm",
+    "No.of Rotor Poles": "28",
+    "Body Length": "111.5mm",
+    "Motor Kv": "420",
+    "Max Lipo Cell": "6S",
+    "NO-Load Current(A/10V)": "10V/2.9A",
+    "ESC": "120-150A",
+    "Motor Resistance": "8.3mΩ",
+    "Propeller (inch)": "Voltage (V)"
+   },
+   "numeric": {
+    "weight_g": 444.7,
+    "kv": 420,
+    "cells_max": 6,
+    "continuous_A": 115
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x2212-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X2212 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x2212-brushless-motors",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "22mm",
+    "Shaft Diameter": "3.175mm",
+    "Stator Thickness": "12mm",
+    "Body Length (Without Shaft)": "30mm",
+    "No.of Stator Slots": "12",
+    "Body Length": "32mm",
+    "No.of Rotor Poles": "14",
+    "Max Lipo Cell": "2-4S",
+    "Motor Kv": "980",
+    "ESC": "20A",
+    "No-load current": "0.3A/10V",
+    "Recommended Prop(inch)": "APC8038/APC9047/APC1047/GWS8043/APC8038",
+    "Motor Resistance": "133mΩ",
+    "Weight for training airplane": "650g (3S 1047)",
+    "Max Continuous Current": "15A/30s",
+    "Max Continuous Power": "300W",
+    "Weight": "58.5g",
+    "Weight for 3D airplane": "450g (3S 1038\\1047)",
+    "Rotor Diameter": "27.5mm"
+   },
+   "numeric": {
+    "weight_g": 58.5,
+    "kv": 980,
+    "cells_max": 4,
+    "continuous_A": 15,
+    "power_W": 300
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x3525-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X3525 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x3525-brushless-motors-520kv-880kv",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "35mm",
+    "Rotor Diameter": "42.5mm",
+    "Stator Thickness": "25mm",
+    "Shaft Diameter": "5mm",
+    "No.of Stator Slots": "12",
+    "Body Length (Without Shaft)": "50mm",
+    "No.of Rotor Poles": "14",
+    "Body Length": "69mm",
+    "Motor Kv": "520",
+    "Max Lipo Cell": "6-8S",
+    "No-load current": "1.3A/10V",
+    "ESC": "60-80A",
+    "Motor Resistance": "22mΩ",
+    "Recommended Prop(inch)": "APC12*6/APC12*8/APC13*6.5/APC13*8/DXL14*8",
+    "Max Continuous Current": "76A/10s",
+    "Max Continuous Power": "1918W",
+    "Weight": "243g"
+   },
+   "numeric": {
+    "weight_g": 243,
+    "kv": 520,
+    "cells_max": 8,
+    "continuous_A": 76,
+    "power_W": 1918
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-x5320-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky X5320 Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x5320-brushless-motors",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "53mm",
+    "Rotor Diameter": "62.8mm",
+    "Stator Thickness": "20mm",
+    "Shaft Diameter": "8mm",
+    "No.of Stator Slots": "12",
+    "Body Length (Without Shaft)": "50mm",
+    "No.of Rotor Poles": "14",
+    "Body Length": "100mm",
+    "Motor Kv": "210",
+    "Max Lipo Cell": "8-10S",
+    "No-load current": "1.4A/10V",
+    "ESC": "60-80A",
+    "Motor Resistance": "50mΩ",
+    "Recommended Prop(inch)": "18*12/19*10",
+    "Max Continuous Current": "53A/10s",
+    "Max Continuous Power": "2140W",
+    "Weight": "480g"
+   },
+   "numeric": {
+    "weight_g": 480,
+    "kv": 210,
+    "cells_max": 10,
+    "continuous_A": 53,
+    "power_W": 2140
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x3515s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X3515S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x3515s",
+   "captured": "2026-10-20",
+   "specs": {
+    "No.of Stator Slots": "12",
+    "Rotor Diameter": "41.9mm",
+    "No.of Rotor Poles": "14",
+    "Shaft Diameter": "4mm",
+    "Motor Kv": "400",
+    "Body Length (Without Shaft)": "35mm",
+    "No-load current": "0.7A/10V",
+    "Body Length": "40.5mm",
+    "Motor Resistance": "115mΩ",
+    "Max Lipo Cell": "6S",
+    "Max Continuous Current": "35A/30s",
+    "ESC": "40-60A",
+    "Max Continuous Power": "875W",
+    "Recommended Prop(inch)": "14*4.7/15*5.5/16*6",
+    "Weight": "170g",
+    "Weight for multirotors": "≤1700g"
+   },
+   "numeric": {
+    "weight_g": 170,
+    "kv": 400,
+    "cells_max": 6,
+    "continuous_A": 35,
+    "power_W": 875
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x4110s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X4110S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x4110s-motors",
+   "captured": "2026-10-20",
+   "specs": {
+    "No.of Stator Slots": "12",
+    "Rotor Diameter": "47.5mm",
+    "No.of Rotor Poles": "14",
+    "Shaft Diameter": "4mm",
+    "Motor Kv": "340",
+    "Body Length(without shaft)": "32mm",
+    "No-load current": "0.5A/10V",
+    "Body Length": "37.5mm",
+    "Motor Resistance": "150mΩ",
+    "Max Lipo Cell": "6S",
+    "Max Continuous Current": "32A/30s",
+    "ESC": "40-60A",
+    "Max Continuous Power": "800W",
+    "Recommended Prop(inch)": "15*5.5/16*6/18*6.1/17*5.8",
+    "Weight": "165g",
+    "Header (page)": "KV340"
+   },
+   "numeric": {
+    "weight_g": 165,
+    "kv": 340,
+    "cells_max": 6,
+    "continuous_A": 32,
+    "power_W": 800
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x4112s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X4112S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x4212s",
+   "captured": "2026-10-20",
+   "specs": {
+    "No.of Stator Slots": "12",
+    "Rotor Diameter": "47.5mm",
+    "No.of Rotor Poles": "14",
+    "Shaft Diameter": "4mm",
+    "Motor Kv": "340",
+    "Body Length (Without Shaft)": "35mm",
+    "No-load current": "0.6A/10V",
+    "Body Length": "33.5mm",
+    "Motor Resistance": "108mΩ",
+    "Max Lipo Cell": "6S",
+    "Max Continuous Current": "30A/30s",
+    "ESC": "40-60A",
+    "Max Continuous Power": "750W",
+    "Recommended Prop(inch)": "14*4.7/15*5.5/16*6",
+    "Weight": "188g",
+    "Weight for multirotor": "≤1500g"
+   },
+   "numeric": {
+    "weight_g": 188,
+    "kv": 340,
+    "cells_max": 6,
+    "continuous_A": 30,
+    "power_W": 750
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x5212s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X5212S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x5212s",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "52mm",
+    "Rotor Diameter": "59mm",
+    "Stator Thickness": "12mm",
+    "Shaft Diameter": "4mm",
+    "No.of Stator Slots": "24",
+    "Body Length(without shaft)": "35mm",
+    "No.of Rotor Poles": "22",
+    "Body Length": "41.8mm",
+    "Motor Kv": "280",
+    "Max Lipo Cell": "6S",
+    "No-load current": "0.9A/10V",
+    "ESC": "60A",
+    "Motor Resistance": "74mΩ",
+    "Recommended Prop(inch)": "17*5.8/18*6.1/20*6.5/22*6.6",
+    "Max Continuous Current": "36A/30s",
+    "Recommended single take-off weight": "≤2000g",
+    "Max Continuous Power": "800W",
+    "Weight": "260g"
+   },
+   "numeric": {
+    "weight_g": 260,
+    "kv": 280,
+    "cells_max": 6,
+    "continuous_A": 36,
+    "power_W": 800
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x6212s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X6212S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x6212s",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "62mm",
+    "Rotor Diameter": "69.3mm",
+    "Stator Thickness": "12mm",
+    "Shaft Diameter": "4mm",
+    "No.of Stator Slots": "24",
+    "Body Length(without shaft )": "34.5mm",
+    "No.of Rotor Poles": "28",
+    "Body Length": "40mm",
+    "Motor Kv": "180",
+    "Max Lipo Cell": "12S",
+    "No-load current": "1.5A/10V",
+    "ESC": "80A",
+    "Motor Resistance": "102mΩ",
+    "Recommended Prop(inch)": "20*6.5/22*6.6",
+    "Max Continuous Current": "38A/30s",
+    "Recommended single take-off weight": "≤3500g",
+    "Max Continuous Power": "1680W",
+    "Weight": "323g"
+   },
+   "numeric": {
+    "weight_g": 323,
+    "kv": 180,
+    "cells_max": 12,
+    "continuous_A": 38,
+    "power_W": 1680
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x6215s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X6215S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x6215s",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "62mm",
+    "Rotor Diameter": "69.3mm",
+    "Stator Thickness": "15mm",
+    "Shaft Diameter": "4mm",
+    "No.of Stator Slots": "24",
+    "Body Length(without shaft )": "37.5mm",
+    "No.of Rotor Poles": "28",
+    "Body Length": "43mm",
+    "Motor Kv": "170",
+    "Max Lipo Cell": "12S",
+    "No-load current": "1.5A/10V",
+    "ESC": "80A",
+    "Motor Resistance": "70mΩ",
+    "Recommended Prop(inch)": "22*6.6",
+    "Max Continuous Current": "43A/30s",
+    "Recommended single take-off weight": "≤3500g",
+    "Max Continuous Power": "2175W",
+    "Weight": "375g"
+   },
+   "numeric": {
+    "weight_g": 375,
+    "kv": 170,
+    "cells_max": 12,
+    "continuous_A": 43,
+    "power_W": 2175
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x8016s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X8016S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x8016s",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "80mm",
+    "Rotor Diameter": "89.3mm",
+    "Stator Thickness": "16mm",
+    "Shaft Diameter": "15mm",
+    "No.of Stator Slots": "24",
+    "Body Length(without shaft)": "39mm",
+    "No.of Rotor Poles": "28",
+    "Body Length": "54.5mm",
+    "Motor Kv": "90",
+    "Max Lipo Cell": "12S",
+    "No-load current": "1.1A/10V",
+    "ESC": "80A",
+    "Motor Resistance": "60mΩ",
+    "Recommended Prop(inch)": "30*10.5",
+    "Max Continuous Current": "43A/30s",
+    "Recommended single take-off weight": "≤5500g",
+    "Max Continuous Power": "2150W",
+    "Weight": "560g"
+   },
+   "numeric": {
+    "weight_g": 560,
+    "kv": 90,
+    "cells_max": 12,
+    "continuous_A": 43,
+    "power_W": 2150
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x8020s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X8020S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/sunnysky-x8020-motors",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "80mm",
+    "Rotor Diameter": "89.3mm",
+    "Stator Thickness": "20mm",
+    "Shaft Diameter": "10mm",
+    "No.of Stator Slots": "24",
+    "Body Length(without shaft)": "43mm",
+    "No.of Rotor Poles": "28",
+    "Body Length": "62.5mm",
+    "Motor Kv": "100",
+    "Max Lipo Cell": "12S",
+    "No-load current": "1.8A/10V",
+    "ESC": "100A",
+    "Motor Resistance": "57mΩ",
+    "Recommended Prop(inch)": "28*9.2/29*9.5/30*10.5",
+    "Max Continuous Current": "62A/30s",
+    "Recommended single take-off Weight": "≤8000g",
+    "Max Continuous Power": "3100W",
+    "Weight": "895g"
+   },
+   "numeric": {
+    "weight_g": 895,
+    "kv": 100,
+    "cells_max": 12,
+    "continuous_A": 62,
+    "power_W": 3100
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
+  },
+  {
+   "id": "product-motor-sunnysky-sunnysky-xs-high-power-x8030s-brushless-motors",
+   "category": "motor",
+   "platform": [
+    "fixed-wing"
+   ],
+   "manufacturer": "SunnySky",
+   "name": "SunnySky XS High Power X8030S Brushless Motors",
+   "url": "https://www.sunnyskyusa.com/products/x8030s",
+   "captured": "2026-10-20",
+   "specs": {
+    "Stator Diameter": "80mm",
+    "Rotor Diameter": "89.3mm",
+    "Stator Thickness": "30mm",
+    "Shaft Diameter": "10mm",
+    "No.of Stator Slots": "24",
+    "Body Length(without shaft)": "53mm",
+    "No.of Rotor Poles": "28",
+    "Body Length": "72.5mm",
+    "Motor Kv": "100",
+    "Max Lipo Cell": "12S",
+    "No-load current": "2.0A/10V",
+    "ESC": "100A",
+    "Motor Resistance": "26mΩ",
+    "Recommended Prop(inch)": "30*10.5/32*11/34*11.5/36*11.5",
+    "Max Continuous Current": "80A/12s",
+    "Recommended single take-off Weight": "≤10000g",
+    "Max Continuous Power": "4200W",
+    "Weight": "1080g"
+   },
+   "numeric": {
+    "weight_g": 1080,
+    "kv": 100,
+    "cells_max": 12,
+    "continuous_A": 80,
+    "power_W": 4200
+   },
+   "note": "sold on sunnyskyusa.com (SunnySky USA); numeric from printed spec lines; cells_max from \"Max Lipo Cell\"/rated voltage"
   },
   {
    "id": "product-motor-t-motor-at2308-long-shaft-fixed-wing-motor",
@@ -4325,6 +6477,951 @@
     "power_W": 6800
    },
    "note": ""
+  },
+  {
+   "id": "product-propeller-apc-propellers-10x4-7sf",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "10x4.7SF",
+   "url": "https://www.apcprop.com/product/10x4.7sf/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "4.7",
+    "Propeller Diameter (in.)": "10",
+    "Hub Diameter": "0.50 in.",
+    "Hub Thickness": "0.29 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.42 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP10047SF"
+   },
+   "numeric": {
+    "weight_g": 11.91,
+    "diameter_in": 10,
+    "pitch_in": 4.7
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-10x5e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "10x5E",
+   "url": "https://www.apcprop.com/product/10x5e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "5",
+    "Propeller Diameter (in.)": "10",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.38 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.71 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP10050E"
+   },
+   "numeric": {
+    "weight_g": 20.13,
+    "diameter_in": 10,
+    "pitch_in": 5
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-10x7e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "10x7E",
+   "url": "https://www.apcprop.com/product/10x7e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "7",
+    "Propeller Diameter (in.)": "10",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.40 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.71 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP10070E"
+   },
+   "numeric": {
+    "weight_g": 20.13,
+    "diameter_in": 10,
+    "pitch_in": 7
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-11x4-7sf",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "11x4.7SF",
+   "url": "https://www.apcprop.com/product/11x4.7sf/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "4.7",
+    "Propeller Diameter (in.)": "11",
+    "Hub Diameter": "0.50 in.",
+    "Hub Thickness": "0.29 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.53 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP11047SF"
+   },
+   "numeric": {
+    "weight_g": 15.03,
+    "diameter_in": 11,
+    "pitch_in": 4.7
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-11x5-5e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "11x5.5E",
+   "url": "https://www.apcprop.com/product/11x5.5e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "5.5",
+    "Propeller Diameter (in.)": "11",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.41 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.81 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP11055E"
+   },
+   "numeric": {
+    "weight_g": 22.96,
+    "diameter_in": 11,
+    "pitch_in": 5.5
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-11x7e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "11x7E",
+   "url": "https://www.apcprop.com/product/11x7e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "7",
+    "Propeller Diameter (in.)": "11",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.41 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.81 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP11070E"
+   },
+   "numeric": {
+    "weight_g": 22.96,
+    "diameter_in": 11,
+    "pitch_in": 7
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-11x8e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "11x8E",
+   "url": "https://www.apcprop.com/product/11x8e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "8",
+    "Propeller Diameter (in.)": "11",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.41 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.81 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP11080E"
+   },
+   "numeric": {
+    "weight_g": 22.96,
+    "diameter_in": 11,
+    "pitch_in": 8
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-12x3-8sf",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "12x3.8SF",
+   "url": "https://www.apcprop.com/product/12x3.8sf/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "3.8",
+    "Propeller Diameter (in.)": "12",
+    "Hub Diameter": "0.50 in.",
+    "Hub Thickness": "0.30 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.63 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP12038SF"
+   },
+   "numeric": {
+    "weight_g": 17.86,
+    "diameter_in": 12,
+    "pitch_in": 3.8
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-12x6e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "12x6E",
+   "url": "https://www.apcprop.com/product/12x6e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "6",
+    "Propeller Diameter (in.)": "12",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.41 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.95 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP12060E"
+   },
+   "numeric": {
+    "weight_g": 26.93,
+    "diameter_in": 12,
+    "pitch_in": 6
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-12x6sf",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "12x6SF",
+   "url": "https://www.apcprop.com/product/12x6sf/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "6",
+    "Propeller Diameter (in.)": "12",
+    "Hub Diameter": "0.50 in.",
+    "Hub Thickness": "0.30 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.67 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP12060SF"
+   },
+   "numeric": {
+    "weight_g": 18.99,
+    "diameter_in": 12,
+    "pitch_in": 6
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-12x8e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "12x8E",
+   "url": "https://www.apcprop.com/product/12x8e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "8",
+    "Propeller Diameter (in.)": "12",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.42 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.92 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP12080E"
+   },
+   "numeric": {
+    "weight_g": 26.08,
+    "diameter_in": 12,
+    "pitch_in": 8
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-13x6-5e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "13x6.5E",
+   "url": "https://www.apcprop.com/product/13x6.5e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "6.5",
+    "Propeller Diameter (in.)": "13",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.41 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.06 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP13065E"
+   },
+   "numeric": {
+    "weight_g": 30.05,
+    "diameter_in": 13,
+    "pitch_in": 6.5
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-13x8e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "13x8E",
+   "url": "https://www.apcprop.com/product/13x8e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "8",
+    "Propeller Diameter (in.)": "13",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.42 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.09 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP13080E"
+   },
+   "numeric": {
+    "weight_g": 30.9,
+    "diameter_in": 13,
+    "pitch_in": 8
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-14x7e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "14x7E",
+   "url": "https://www.apcprop.com/product/14x7e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "7",
+    "Propeller Diameter (in.)": "14",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.44 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.20 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP14070E"
+   },
+   "numeric": {
+    "weight_g": 34.02,
+    "diameter_in": 14,
+    "pitch_in": 7
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-14x8-5e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "14x8.5E",
+   "url": "https://www.apcprop.com/product/14x8.5e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "8.5",
+    "Propeller Diameter (in.)": "14",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.44 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.31 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP14085E"
+   },
+   "numeric": {
+    "weight_g": 37.14,
+    "diameter_in": 14,
+    "pitch_in": 8.5
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-15x10e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "15x10E",
+   "url": "https://www.apcprop.com/product/15x10e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "10",
+    "Propeller Diameter (in.)": "15",
+    "Hub Diameter": "1.00 in.",
+    "Hub Thickness": "0.48 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.59 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP15010E"
+   },
+   "numeric": {
+    "weight_g": 45.08,
+    "diameter_in": 15,
+    "pitch_in": 10
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-15x8e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "15x8E",
+   "url": "https://www.apcprop.com/product/15x8e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "8",
+    "Propeller Diameter (in.)": "15",
+    "Hub Diameter": "1.00 in.",
+    "Hub Thickness": "0.47 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.55 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP15080E"
+   },
+   "numeric": {
+    "weight_g": 43.94,
+    "diameter_in": 15,
+    "pitch_in": 8
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-16x10e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "16x10E",
+   "url": "https://www.apcprop.com/product/16x10e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "10",
+    "Propeller Diameter (in.)": "16",
+    "Hub Diameter": "1.00 in.",
+    "Hub Thickness": "0.48 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "1.83 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP16010E"
+   },
+   "numeric": {
+    "weight_g": 51.88,
+    "diameter_in": 16,
+    "pitch_in": 10
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-17x10e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "17x10E",
+   "url": "https://www.apcprop.com/product/17x10e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "10",
+    "Propeller Diameter (in.)": "17",
+    "Hub Diameter": "1.00 in.",
+    "Hub Thickness": "0.49 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "2.26 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP17010E"
+   },
+   "numeric": {
+    "weight_g": 64.07,
+    "diameter_in": 17,
+    "pitch_in": 10
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-17x12e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "17x12E",
+   "url": "https://www.apcprop.com/product/17x12e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "12",
+    "Propeller Diameter (in.)": "17",
+    "Hub Diameter": "1.00 in.",
+    "Hub Thickness": "0.49 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "2.26 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP17012E"
+   },
+   "numeric": {
+    "weight_g": 64.07,
+    "diameter_in": 17,
+    "pitch_in": 12
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-18x10e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "18x10E",
+   "url": "https://www.apcprop.com/product/18x10e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "10",
+    "Propeller Diameter (in.)": "18",
+    "Hub Diameter": "1.25 in.",
+    "Hub Thickness": "0.49 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "2.57 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP18010E"
+   },
+   "numeric": {
+    "weight_g": 72.86,
+    "diameter_in": 18,
+    "pitch_in": 10
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-19x12e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "19x12E",
+   "url": "https://www.apcprop.com/product/19x12e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "12",
+    "Propeller Diameter (in.)": "19",
+    "Hub Diameter": "1.25 in.",
+    "Hub Thickness": "0.50 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "2.93 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP19012E"
+   },
+   "numeric": {
+    "weight_g": 83.06,
+    "diameter_in": 19,
+    "pitch_in": 12
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-21x13e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "21x13E",
+   "url": "https://www.apcprop.com/product/21x13e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "13",
+    "Propeller Diameter (in.)": "21",
+    "Hub Diameter": "1.25 in.",
+    "Hub Thickness": "0.52 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "3.88 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP21013E"
+   },
+   "numeric": {
+    "weight_g": 110,
+    "diameter_in": 21,
+    "pitch_in": 13
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-8x3-8sf",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "8x3.8SF",
+   "url": "https://www.apcprop.com/product/8x3.8sf/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "3.8",
+    "Propeller Diameter (in.)": "8",
+    "Hub Diameter": "0.50 in.",
+    "Hub Thickness": "0.30 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.25 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP08038SF"
+   },
+   "numeric": {
+    "weight_g": 7.09,
+    "diameter_in": 8,
+    "pitch_in": 3.8
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-9x4-7sf",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "9x4.7SF",
+   "url": "https://www.apcprop.com/product/9x4.7sf/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "4.7",
+    "Propeller Diameter (in.)": "9",
+    "Hub Diameter": "0.50 in.",
+    "Hub Thickness": "0.31 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.32 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP09047SF"
+   },
+   "numeric": {
+    "weight_g": 9.07,
+    "diameter_in": 9,
+    "pitch_in": 4.7
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-9x6e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "9x6E",
+   "url": "https://www.apcprop.com/product/9x6e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "6",
+    "Propeller Diameter (in.)": "9",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.39 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.63 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP09060E"
+   },
+   "numeric": {
+    "weight_g": 17.86,
+    "diameter_in": 9,
+    "pitch_in": 6
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
+  },
+  {
+   "id": "product-propeller-apc-propellers-9x7-5e",
+   "category": "propeller",
+   "platform": [
+    "fixed-wing",
+    "vtol"
+   ],
+   "manufacturer": "APC Propellers",
+   "name": "9x7.5E",
+   "url": "https://www.apcprop.com/product/9x7.5e/",
+   "captured": "2026-10-20",
+   "specs": {
+    "Pitch (inches)": "7.5",
+    "Propeller Diameter (in.)": "9",
+    "Hub Diameter": "0.80 in.",
+    "Hub Thickness": "0.39 in.",
+    "Shaft Diameter": "1/4 in.",
+    "Product Weight": "0.63 oz.",
+    "Color": "GREY",
+    "Cookie": "Duration",
+    "cookielawinfo-checkbox-analytics": "11 months",
+    "cookielawinfo-checkbox-functional": "11 months",
+    "cookielawinfo-checkbox-necessary": "11 months",
+    "cookielawinfo-checkbox-others": "11 months",
+    "cookielawinfo-checkbox-performance": "11 months",
+    "viewed_cookie_policy": "11 months",
+    "Product Code": "LP09075E"
+   },
+   "numeric": {
+    "weight_g": 17.86,
+    "diameter_in": 9,
+    "pitch_in": 7.5
+   },
+   "note": "weight_g converted from printed oz (x28.3495)"
   },
   {
    "id": "product-propeller-t-motor-auz15-10-carbon-fiber-fixed-wing-uav-propeller",

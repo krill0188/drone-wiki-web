@@ -1,16 +1,16 @@
 {
- "generated": "2026-10-20 11:00",
+ "generated": "2026-10-20 11:21",
  "counts": {
-  "manufacturers": 236,
-  "products": 495,
+  "manufacturers": 238,
+  "products": 588,
   "rules": 26,
   "papers": 108,
-  "claims": 247,
-  "edges": 4101
+  "claims": 248,
+  "edges": 4290
  },
  "claimsByKind": {
   "cited-secondary": 2,
-  "derived": 4,
+  "derived": 5,
   "model-assumption": 34,
   "reported": 186,
   "simulation": 21
@@ -21,7 +21,7 @@
   "vtol-fixedwing": 30,
   "energy": 27,
   "sizing": 23,
-  "-": 22,
+  "-": 23,
   "battery": 16,
   "build": 14,
   "structure": 11,
@@ -32,34 +32,34 @@
   "comms": 2
  },
  "productsByCategory": {
-  "motor": 139,
-  "frame": 63,
-  "propeller": 61,
+  "motor": 163,
+  "propeller": 88,
+  "battery": 82,
+  "frame": 70,
   "esc": 56,
-  "battery": 53,
+  "engine": 29,
   "datalink": 26,
-  "engine": 23,
   "sensor": 22,
   "fc": 19,
   "compute": 17,
   "payload": 16
  },
  "manufacturers": {
-  "withSpecs": 71,
-  "registryOnly": 165,
+  "withSpecs": 76,
+  "registryOnly": 162,
   "countryVerified": 17,
-  "countryUnverified": 199,
-  "countryUnknown": 20
+  "countryUnverified": 196,
+  "countryUnknown": 25
  },
  "edgesByRelation": {
   "packFits": 1867,
-  "isA": 495,
-  "madeBy": 495,
+  "isA": 588,
+  "madeBy": 588,
   "powersWith": 403,
-  "reportedIn": 247,
+  "reportedIn": 248,
   "hasCategory": 217,
   "about": 188,
-  "supports": 145,
+  "supports": 147,
   "mentions": 29,
   "governs": 15
  },
@@ -245,10 +245,10 @@
    "kind": "empirical",
    "sourceStatus": "verified-with-derived",
    "formula": "m_bat = P·t / (DoD·e_pack)",
-   "claims": 22,
+   "claims": 23,
    "byKind": {
     "cited-secondary": 1,
-    "derived": 1,
+    "derived": 2,
     "model-assumption": 5,
     "reported": 13,
     "simulation": 2
@@ -292,8 +292,9 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "b_f = g·v·t / (L/D·η_p·DoD·e_pack)",
-   "claims": 29,
+   "claims": 30,
    "byKind": {
+    "derived": 1,
     "model-assumption": 4,
     "reported": 24,
     "simulation": 1

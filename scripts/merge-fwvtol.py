@@ -5,14 +5,14 @@
 검증(코드 판정): 필수 필드, URL 형식, 숫자 필드가 숫자인지, 중복 id, 분류 허용값, 플랫폼 허용값. 위반 항목은 rejected 목록에 사유와 함께 남기고 제외한다.
 실행: python3 -I scripts/merge-fwvtol.py
 """
-import glob, json, os, sys, collections, datetime
+import glob, json, os, re, sys, collections, datetime
 
 SRC = os.path.expanduser("~/projectm/hw-collection/20261020/fw-vtol")
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "ontology", "products-fwvtol.json")
 CATS = {"motor", "esc", "propeller", "battery", "engine", "frame", "fc", "datalink", "payload"}
 PLAT = {"fixed-wing", "vtol"}
 NUM = ["weight_g", "kv", "cells_min", "cells_max", "continuous_A", "peak_A", "max_thrust_g", "diameter_in", "pitch_in", "capacity_mAh", "nominal_V", "energy_Wh",
-       "power_W", "displacement_cc", "wingspan_mm", "mtow_g", "payload_g", "endurance_min", "cruise_speed_ms"]
+       "power_W", "specific_energy_Wh_kg", "displacement_cc", "wingspan_mm", "mtow_g", "payload_g", "endurance_min", "cruise_speed_ms"]
 
 
 def check(r):
@@ -28,6 +28,14 @@ def check(r):
     n = r.get("numeric") or {}
     if n.get("cells_min") and n.get("cells_max") and n["cells_min"] > n["cells_max"]: return "cells_min > cells_max"
     if n.get("continuous_A") and n.get("peak_A") and n["continuous_A"] > n["peak_A"]: return "continuous_A > peak_A"
+    # 물리 타당성: 배터리 비에너지 80~600Wh/kg, 프롭 지름 1~120in, 모터 KV 5~20000, 엔진 배기량 1~5000cc, 기체 MTOW ≥ 탑재량
+    if r["category"] == "battery" and n.get("energy_Wh") and n.get("weight_g"):
+        wk = n["energy_Wh"] / (n["weight_g"] / 1000)
+        if not 80 <= wk <= 600: return f"배터리 비에너지 {wk:.0f}Wh/kg가 비정상"
+    if r["category"] == "propeller" and n.get("diameter_in") and not 1 <= n["diameter_in"] <= 120: return f"프롭 지름 {n['diameter_in']}in 비정상"
+    if r["category"] == "motor" and n.get("kv") and not 5 <= n["kv"] <= 20000: return f"KV {n['kv']} 비정상"
+    if r["category"] == "engine" and n.get("displacement_cc") and not 1 <= n["displacement_cc"] <= 5000: return f"배기량 {n['displacement_cc']}cc 비정상"
+    if r["category"] == "frame" and n.get("mtow_g") and n.get("payload_g") and n["payload_g"] > n["mtow_g"]: return "탑재량 > MTOW"
     return None
 
 
@@ -43,6 +51,12 @@ def main():
         if why:
             rejected.append({"file": os.path.basename(f), "why": why}); continue
         seen.add(r["id"])
+        # 배터리 비에너지: 사양 문구·제목에 'NNN Wh/kg'가 정확히 한 값으로만 인쇄돼 있을 때만 숫자화(여러 값이면 모호하므로 생략). 셀 단위 값이라 팩 값은 아님.
+        if r["category"] == "battery":
+            txt = " ".join([r.get("title", "")] + [f"{k} {v}" for k, v in (r.get("specs") or {}).items()])
+            vals = {float(m) for m in re.findall(r"(\d{2,4}(?:\.\d+)?)\s*Wh\s*/\s*kg", txt, re.I)}
+            if len(vals) == 1:
+                r.setdefault("numeric", {})["specific_energy_Wh_kg"] = vals.pop()
         items.append({
             "id": r["id"], "category": r["category"], "platform": r["platform"], "manufacturer": r["manufacturer"], "name": r["title"], "url": r["url"],
             "captured": r.get("captured"), "specs": r.get("specs") or {}, "numeric": {k: v for k, v in (r.get("numeric") or {}).items() if v is not None}, "note": r.get("note") or "",

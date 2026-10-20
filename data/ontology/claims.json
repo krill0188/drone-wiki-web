@@ -386,6 +386,25 @@
       "status": "derived",
       "note": "우리 ef 보수 0.45·낙관 0.30은 페이로드 맞춤 기체 범위(0.29~0.42) 안. 범용 기체(0.56~0.71)는 탑재 여유를 가진 구성이라 높게 나옴. 2026-10-20 검토 결과 상수 유지",
       "evidenceKind": "derived"
+    },
+    {
+      "id": "CL23",
+      "rules": [
+        "R05",
+        "R08"
+      ],
+      "subject": "고정익·장시간 비행용 배터리 제조사 표기 비에너지",
+      "attribute": "Wh/kg (제조사 사양 문구 표기)",
+      "value": "23개 제품 265~450Wh/kg, 중앙값 330 (Molicel P50B 265, Tattu 반고체·UHV 팩 280~380, Amprius SiCore 450)",
+      "unit": "Wh/kg",
+      "conditions": "제조사 공식 페이지에 인쇄된 값. 셀 단위/팩 단위가 제품마다 다르고(Amprius는 셀), 방전율 10C 이하 저전류 조건. 멀티로터 호버처럼 고방전율 용도의 실효값이 아님. 제조사 표기라 독립 검증 아님",
+      "sourceType": "manufacturer",
+      "sourceId": "products-fwvtol.json",
+      "locator": "scripts/merge-fwvtol.py가 사양 문구에서 추출",
+      "quote": "",
+      "status": "derived",
+      "evidenceKind": "derived",
+      "note": "R05 낙관 207보다 높음 — 고정익 저방전율 시나리오에서 낙관값을 올릴 근거 후보. 다만 제조사 표기(미검증), 셀 대 팩 혼재라 상수는 유지"
     }
   ]
 }
