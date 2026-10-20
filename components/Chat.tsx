@@ -9,7 +9,6 @@ import DroneIcon from "@/components/DroneIcon"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
 
-const KIND_LABEL = { "model-assumption": "⚠모델 가정값", simulation: "⚠시뮬레이션", "cited-secondary": "⚠2차 인용", derived: "파생 계산" }
 import { buildTextFragmentUrl } from "@/lib/text-fragment"
 
 const CHAT_FEATURE_KEY = "chat"

@@ -45,6 +45,6 @@ export function get<T = Row>(sql: string, ...params: (string | number | null)[])
 }
 
 // 서버 질의에서 쓰는 선택적 백엔드 스위치: KG_BACKEND=sqlite 일 때만 사용. 기본은 json(기존 경로).
-export function useSqliteBackend(): boolean {
+export function isSqliteBackend(): boolean {
   return process.env.KG_BACKEND === "sqlite" && kdb() !== null
 }

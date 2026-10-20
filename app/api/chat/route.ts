@@ -9,7 +9,7 @@ import {
 } from "ai"
 import { wikiModel } from "@/lib/ai-model"
 import { kgSummary, queryKG } from "@/lib/kg"
-import { useSqliteBackend } from "@/lib/kdb"
+import { isSqliteBackend } from "@/lib/kdb"
 import { planQuery } from "@/lib/kg-plan"
 import { buildNimContext, nimSystemPrompt } from "@/lib/kg-context"
 import { insufficientMessage, metaForStreamed } from "@/lib/kg-answer"
@@ -59,10 +59,10 @@ function instantReply(text: string, meta: Record<string, unknown> = {}) {
 }
 
 export async function POST(req: NextRequest) {
+  // recentDocs(최근 열람 문서)는 지식그래프 전용 답변에서 사실 근거가 아니므로 더 이상 쓰지 않는다(요청 형식은 호환 유지).
   const {
     messages,
     docContext,
-    recentDocs,
   }: { messages: UIMessage[]; docContext?: DocContext | null; recentDocs?: DocViewRecord[] } =
     await req.json()
 
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
   if (gate.reply) return instantReply(gate.reply)
   // KG_BACKEND=sqlite: 지식 RDB 기반 ontology 우선 질의. 기본값(json)에서는 아래 기존 경로를 그대로 쓴다.
   // 설계 질문(게이트 통과)은 결정론 엔진 블록이 근거이므로 기존 경로를 유지한다.
-  if (useSqliteBackend() && !gate.block) {
+  if (isSqliteBackend() && !gate.block) {
     const plan = planQuery(question)
     if (plan.status !== "ready") {
       const meta = { answerMeta: { status: "insufficient_evidence", confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: plan.suggestions, ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
@@ -84,12 +84,12 @@ export async function POST(req: NextRequest) {
     const ctx = buildNimContext(plan)
     const onto2 = buildOntologyContext(question, docContext?.title, { kgOnly: true })
     const result2 = streamText({ model: wikiModel(), system: nimSystemPrompt(ctx, "text") + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
-    let buf = ""
-    const tapped = result2.stream.pipeThrough(new TransformStream({ transform(part, ctrl) { if (part.type === "text-delta") buf += (part as { text?: string }).text ?? ""; ctrl.enqueue(part) } }))
+    const acc = { text: "" } // 스트림을 지나가는 답변 텍스트를 모아 완료 후 사후 검증에 쓴다
+    const tapped = result2.stream.pipeThrough(new TransformStream({ transform(part, ctrl) { if (part.type === "text-delta") acc.text += (part as { text?: string }).text ?? ""; ctrl.enqueue(part) } }))
     return createUIMessageStreamResponse({
       stream: toUIMessageStream({
         stream: tapped,
-        messageMetadata: ({ part }) => (part.type === "finish" ? { ontologyClasses: plan.classes, answerMeta: metaForStreamed(plan, ctx, buf) } : undefined),
+        messageMetadata: ({ part }) => (part.type === "finish" ? { ontologyClasses: plan.classes, answerMeta: metaForStreamed(plan, ctx, acc.text) } : undefined),
         onError: (error) => (error instanceof Error ? error.message : "AI 응답 생성 중 오류가 발생했습니다."),
       }),
     })

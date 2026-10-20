@@ -6,7 +6,7 @@ import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
 import { botModel, checkBotToken } from "@/lib/bot-model"
-import { useSqliteBackend } from "@/lib/kdb"
+import { isSqliteBackend } from "@/lib/kdb"
 import { answerQuestion } from "@/lib/kg-answer"
 
 export const maxDuration = 60
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
   if (gate.reply) return Response.json({ answer: gate.reply, sources: [], newsSources: [] })
 
   // KG_BACKEND=sqlite: 지식 RDB 기반 ontology 우선 답변(JSON 계약). 설계 질문(게이트 통과)은 기존 경로 유지. 기본값(json)에서는 아래 기존 경로.
-  if (useSqliteBackend() && !gate.block) {
+  if (isSqliteBackend() && !gate.block) {
     const kgAns = await answerQuestion(question, { strict: false })
     const warn = kgAns.status === "unverified" ? "\n\n⚠ 근거 검증 경고: " + kgAns.verification.violations.map((v) => `${v.code}(${v.detail})`).join(", ") : ""
     return Response.json({ answer: kgAns.answer + warn, sources: [], newsSources: [], kg: kgAns })
