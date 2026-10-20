@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "aea00584235548031e0cade7339ceedb6f88fa75d8e1419b1531222a541c2b71",
+  "source_fingerprint": "6a283750b91a2da8d3d2c83a686eedb70d0ec3dcefafc704cb409b252d87162b",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -582,7 +582,21 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-10-17",
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "bldc-motor-propeller-digital-twin-static-thrust",
+      "name": "BLDC 모터-프로펠러 디지털 트윈: 정지 추력 예측 (Gauthier 외, 2023)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -682,6 +696,20 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "capsulebot-hybrid-aerial-ground-bicopter",
+      "name": "CapsuleBot: 공중-지상 하이브리드 바이콥터 (Zheng 외, 2023)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "chained-attacks-drone-fl",
       "name": "Chained Attacks on Drone-Based Federated Learning",
       "layer": "Concepts",
@@ -723,7 +751,7 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-08-06",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -822,7 +850,7 @@
         "tracking",
         "YOLO"
       ],
-      "updated": "2026-10-18",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -1003,7 +1031,7 @@
         "communication",
         "C2"
       ],
-      "updated": "2026-10-18",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2111,6 +2139,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "drone-news-2026-10-20",
+      "name": "드론 업계 주요 소식 (2026-10-20)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "drone-news-hardware",
       "name": "드론 하드웨어 및 제조사 동향 2026-07",
       "layer": "Concepts",
@@ -2180,7 +2223,7 @@
         "camera",
         "gripper"
       ],
-      "updated": "2026-10-18",
+      "updated": "2026-10-20",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2879,6 +2922,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "fault-tolerant-dynamic-task-assignment-uav-search",
+      "name": "UAV 탐색팀 결함 허용 동적 임무 할당 (Nasir·AlDurgam, 2024)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm",
+        "ai-agent"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "fc-vendor-param-guide",
       "name": "FC 제조사별 파라미터 설정 가이드 (총론)",
       "layer": "Concepts",
@@ -3233,6 +3291,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "generative-cvae-uav-engine-mount-design",
+      "name": "UAV 엔진 마운트 3D 다기준 생성 설계 (CVAE, Petroll 외, 2023)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "drone-ai"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "gnn-uav-anomaly-detection",
@@ -4103,6 +4176,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-north-korea-drone-lessons-adoption",
+      "name": "북한의 러·우전 무인기 전훈 수용 징후와 대남 도발 시사점 (국방연구, 2026)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "kci-quadrotor-compound-fault-accommodation",
       "name": "쿼드로터 센서·구동기 복합 고장 보완 기법 (KCI)",
       "layer": "Concepts",
@@ -4140,7 +4228,7 @@
         "drone",
         "regulations"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -4302,7 +4390,7 @@
         "swarm",
         "ai-autonomy"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-20",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5196,7 +5284,7 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-10-18",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -5211,7 +5299,7 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-10-17",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -5652,7 +5740,7 @@
         "swarm",
         "research"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-20",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6021,6 +6109,21 @@
         "utm"
       ],
       "updated": "2026-09-17",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "rf-energy-harvesting-sensor-tags-drone-agriculture",
+      "name": "드론 + RF 에너지 하베스팅 센서 태그 농업 모니터링 (Kudyba 외, 2025)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "datalink",
+        "ops-mission"
+      ],
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -6827,7 +6930,7 @@
         "formation",
         "coordination"
       ],
-      "updated": "2026-10-17",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -6999,7 +7102,7 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-10-17",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -7020,6 +7123,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "uav-battery-recharge-agent-based-simulation",
+      "name": "UAV 배터리 재충전 조정 에이전트 기반 시뮬레이션 (Grando 외, 2025)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "swarm",
+        "ops-mission"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "uav-battery-replacement-planner",
       "name": "UAV Battery Replacement Mission Planner",
       "layer": "Concepts",
@@ -7030,7 +7148,7 @@
         "battery",
         "mission-planning"
       ],
-      "updated": "2026-10-05",
+      "updated": "2026-10-20",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -7060,7 +7178,7 @@
         "drone-hw",
         "research"
       ],
-      "updated": "2026-10-18",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -7141,6 +7259,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "uav-fleet-sensor-network-data-collection-de",
+      "name": "UAV 팀의 분산 센서망 데이터 수집 계획 (MahmoudZadeh 외, 2021)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "swarm",
+        "ops-mission"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "uav-imagery-ground-vehicle-localization",
@@ -7271,6 +7404,20 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "uav-rotatable-antenna-rotation-delay",
+      "name": "UAV 회전형 안테나의 회전 지연 인식 설계 (Xie 외, 2026)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-10-20",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "uav-support-facility-robust-location-planning",
       "name": "시설 고장을 고려한 UAV 감시 지원시설 강건 입지 계획",
       "layer": "Concepts",
@@ -7371,7 +7518,7 @@
         "datalink",
         "comms-protocol"
       ],
-      "updated": "2026-09-04",
+      "updated": "2026-10-20",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -10902,6 +11049,51 @@
       "confidence": "medium"
     },
     {
+      "source": "bldc-motor-esc-characterization-research",
+      "target": "bldc-motor-propeller-digital-twin-static-thrust",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-esc-motor-efficiency-characterization-brown-2019.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "bldc-motor-esc-characterization-research",
+      "target": "propeller-feedback-airspeed-estimation",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-esc-motor-efficiency-characterization-brown-2019.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "bldc-motor-propeller-digital-twin-static-thrust",
+      "target": "bldc-motor-esc-characterization-research",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-digital-twin-of-a-dc-brushless-electric-motor-propeller-syst.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "bldc-motor-propeller-digital-twin-static-thrust",
+      "target": "multirotor-propeller-test-research",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-digital-twin-of-a-dc-brushless-electric-motor-propeller-syst.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "bldc-motor-propeller-digital-twin-static-thrust",
+      "target": "crazyflie-brushless-dynamics-model",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-digital-twin-of-a-dc-brushless-electric-motor-propeller-syst.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "brinc-emergency-drone-funding",
       "target": "drone-regulations",
       "type": "related",
@@ -11058,6 +11250,24 @@
       "confidence": "medium"
     },
     {
+      "source": "capsulebot-hybrid-aerial-ground-bicopter",
+      "target": "multirotor-energy-power-models",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-capsulebot-a-novel-hybrid-aerial-ground-bi-copter-robot-with.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "capsulebot-hybrid-aerial-ground-bicopter",
+      "target": "uav-airframe-structure-optimization-research",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-capsulebot-a-novel-hybrid-aerial-ground-bi-copter-robot-with.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "chained-attacks-drone-fl",
       "target": "federated-lightweight-intrusion-detection",
       "type": "related",
@@ -11115,6 +11325,15 @@
       "source": "china-drone-export-controls",
       "target": "drone-regulations",
       "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-06-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "china-drone-export-controls",
+      "target": "china-rc-component-supply-3dxr-2026-10",
+      "type": "evidences",
       "evidence": [
         "inbox/fetch-2026-08-06-rss-dronelife.md"
       ],
@@ -11357,6 +11576,15 @@
     {
       "source": "computer-vision-drone",
       "target": "yolo-v8-4-181",
+      "type": "evidences",
+      "evidence": [
+        "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "computer-vision-drone",
+      "target": "yolo-v8-4-182",
       "type": "evidences",
       "evidence": [
         "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
@@ -11714,6 +11942,42 @@
     {
       "source": "datalink-communication",
       "target": "lyapunov-diffusion-rl-uav-vehicular-networks",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-multi-dimensional-optimization-of-blocking-aware-resource-al.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "datalink-communication",
+      "target": "uav-weather-aerial-channel-impacts",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-multi-dimensional-optimization-of-blocking-aware-resource-al.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "datalink-communication",
+      "target": "uav-rotatable-antenna-rotation-delay",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-multi-dimensional-optimization-of-blocking-aware-resource-al.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "datalink-communication",
+      "target": "uav-swipt-mec-drl-resource-management",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-08-kci-multi-dimensional-optimization-of-blocking-aware-resource-al.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "datalink-communication",
+      "target": "rf-energy-harvesting-sensor-tags-drone-agriculture",
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-08-kci-multi-dimensional-optimization-of-blocking-aware-resource-al.md"
@@ -14567,6 +14831,51 @@
       "confidence": "low"
     },
     {
+      "source": "drone-news-2026-10-20",
+      "target": "drone-news-2026-10-19",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-20",
+      "target": "china-drone-export-controls",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-20",
+      "target": "china-rc-component-supply-3dxr-2026-10",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-20",
+      "target": "drone-news-2026-10-17",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-20",
+      "target": "cross-layered-medical-drone-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -14857,6 +15166,24 @@
     {
       "source": "drone-payload-systems",
       "target": "autotrans-uav-suspended-payload-planning-control",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-payload-systems",
+      "target": "multi-uav-payload-transport-rao-controllers",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/px4-basic-concepts.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "drone-payload-systems",
+      "target": "rf-energy-harvesting-sensor-tags-drone-agriculture",
       "type": "evidences",
       "evidence": [
         "raw/articles/px4-basic-concepts.md"
@@ -16277,6 +16604,33 @@
       "confidence": "medium"
     },
     {
+      "source": "fault-tolerant-dynamic-task-assignment-uav-search",
+      "target": "kci-quadrotor-compound-fault-accommodation",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-fault-tolerant-dynamic-task-assignment-for-uav-based-search-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fault-tolerant-dynamic-task-assignment-uav-search",
+      "target": "kci-llm-cbba-swarm-task-allocation",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-fault-tolerant-dynamic-task-assignment-for-uav-based-search-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fault-tolerant-dynamic-task-assignment-uav-search",
+      "target": "kci-uav-swarm-mission-reliability-abort",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-fault-tolerant-dynamic-task-assignment-for-uav-based-search-.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "fc-vendor-param-guide",
       "target": "pixhawk-setup-params",
       "type": "wikilink",
@@ -16901,6 +17255,24 @@
       "type": "related",
       "evidence": [
         "raw/papers/swarm/game-theoretic-drone-swarm-defense-a-case-study-in-applied-differential-game-the.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "generative-cvae-uav-engine-mount-design",
+      "target": "uav-airframe-structure-optimization-research",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-a-generative-neural-network-approach-for-3d-multi-criteria-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "generative-cvae-uav-engine-mount-design",
+      "target": "bldc-motor-esc-characterization-research",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-a-generative-neural-network-approach-for-3d-multi-criteria-d.md"
       ],
       "confidence": "medium"
     },
@@ -18645,6 +19017,33 @@
       "confidence": "low"
     },
     {
+      "source": "kci-north-korea-drone-lessons-adoption",
+      "target": "kci-russia-ukraine-war-drone-terror",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kci-북한의-러시아우크라이나전-무인기-전훈-수용-징후와-대남-도발-시사점.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-north-korea-drone-lessons-adoption",
+      "target": "kci-counter-drone-3d-air-defense-layered-neutralization",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kci-북한의-러시아우크라이나전-무인기-전훈-수용-징후와-대남-도발-시사점.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-north-korea-drone-lessons-adoption",
+      "target": "drone-wall-defense-system",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-kci-북한의-러시아우크라이나전-무인기-전훈-수용-징후와-대남-도발-시사점.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-quadrotor-compound-fault-accommodation",
       "target": "drone-safety-failsafe",
       "type": "related",
@@ -18765,6 +19164,15 @@
       "source": "kci-russia-ukraine-war-drone-terror",
       "target": "kci-rok-army-drone-acquisition-capability",
       "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "kci-russia-ukraine-war-drone-terror",
+      "target": "kci-north-korea-drone-lessons-adoption",
+      "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-01-kci-러시아ㆍ우크라이나-전쟁이-드론-테러에-미치는-영향과-시사점.md"
       ],
@@ -19143,6 +19551,15 @@
       "source": "kci-uav-swarm-mission-reliability-abort",
       "target": "kci-vtol-swarm-takeoff-landing-operation",
       "type": "related",
+      "evidence": [
+        "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-uav-swarm-mission-reliability-abort",
+      "target": "fault-tolerant-dynamic-task-assignment-uav-search",
+      "type": "evidences",
       "evidence": [
         "raw/papers/swarm/mission-reliability-modeling-and-evaluation-for-reconfigurable-uav-swarm-conside.md"
       ],
@@ -20906,6 +21323,33 @@
       "confidence": "medium"
     },
     {
+      "source": "multirotor-energy-power-models",
+      "target": "modular-energy-aware-multicopter-model",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-multirotor-power-model-gong-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multirotor-energy-power-models",
+      "target": "uav-battery-recharge-agent-based-simulation",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-multirotor-power-model-gong-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multirotor-energy-power-models",
+      "target": "capsulebot-hybrid-aerial-ground-bicopter",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-multirotor-power-model-gong-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "multirotor-propeller-test-research",
       "target": "fpv-motor-selection-guide",
       "type": "wikilink",
@@ -20944,6 +21388,24 @@
     {
       "source": "multirotor-propeller-test-research",
       "target": "uav-propeller-fault-detection-hybrid-data",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-propeller-motor-static-bench-milenkovic-babic-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multirotor-propeller-test-research",
+      "target": "propeller-feedback-airspeed-estimation",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-propeller-motor-static-bench-milenkovic-babic-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "multirotor-propeller-test-research",
+      "target": "bldc-motor-propeller-digital-twin-static-thrust",
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-16-hw-paper-propeller-motor-static-bench-milenkovic-babic-2026.md"
@@ -21712,6 +22174,15 @@
       "confidence": "low"
     },
     {
+      "source": "pso-uav-bushfire-hazard-management",
+      "target": "bilevel-route-hazard-exploration-uav",
+      "type": "evidences",
+      "evidence": [
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "pt-detr-small-target-detection",
       "target": "yolo",
       "type": "related",
@@ -22460,6 +22931,33 @@
       "type": "related",
       "evidence": [
         "inbox/fetch-2026-09-17-rss-suasnews.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rf-energy-harvesting-sensor-tags-drone-agriculture",
+      "target": "datalink-communication",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-autonomous-agricultural-monitoring-with-aerial-drones-and-rf.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rf-energy-harvesting-sensor-tags-drone-agriculture",
+      "target": "drone-payload-systems",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-autonomous-agricultural-monitoring-with-aerial-drones-and-rf.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rf-energy-harvesting-sensor-tags-drone-agriculture",
+      "target": "uav-fleet-sensor-network-data-collection-de",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-autonomous-agricultural-monitoring-with-aerial-drones-and-rf.md"
       ],
       "confidence": "medium"
     },
@@ -24057,6 +24555,42 @@
       "confidence": "medium"
     },
     {
+      "source": "swarm-coordination",
+      "target": "fault-tolerant-dynamic-task-assignment-uav-search",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "uav-battery-recharge-agent-based-simulation",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "bilevel-route-hazard-exploration-uav",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "swarm-coordination",
+      "target": "uav-fleet-sensor-network-data-collection-de",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/mastervault-recon-swarm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "swarm-modes",
       "target": "swarm-coordination",
       "type": "related",
@@ -24417,6 +24951,24 @@
       "confidence": "medium"
     },
     {
+      "source": "uav-airframe-structure-optimization-research",
+      "target": "generative-cvae-uav-engine-mount-design",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-carbon-fiber-3d-printed-frame-hoang-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-airframe-structure-optimization-research",
+      "target": "capsulebot-hybrid-aerial-ground-bicopter",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-carbon-fiber-3d-printed-frame-hoang-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "uav-alternative-power-hybrid-fuel-cell-research",
       "target": "drone-firefighting-surveillance-cases",
       "type": "wikilink",
@@ -24453,6 +25005,33 @@
       "confidence": "low"
     },
     {
+      "source": "uav-battery-recharge-agent-based-simulation",
+      "target": "uav-battery-replacement-planner",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-agent-based-simulation-of-uav-battery-recharging-for-iot-app.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-battery-recharge-agent-based-simulation",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-agent-based-simulation-of-uav-battery-recharging-for-iot-app.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-battery-recharge-agent-based-simulation",
+      "target": "multirotor-energy-power-models",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-agent-based-simulation-of-uav-battery-recharging-for-iot-app.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "uav-battery-replacement-planner",
       "target": "drone-power-battery",
       "type": "related",
@@ -24483,6 +25062,24 @@
       "source": "uav-battery-replacement-planner",
       "target": "swarm-coordination",
       "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-19-arxiv-mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-battery-replacement-planner",
+      "target": "energy-efficient-uav-replacement-sdn",
+      "type": "evidences",
+      "evidence": [
+        "inbox/fetch-2026-08-19-arxiv-mission-planner-for-uav-battery-replacement.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "uav-battery-replacement-planner",
+      "target": "uav-battery-recharge-agent-based-simulation",
+      "type": "evidences",
       "evidence": [
         "inbox/fetch-2026-08-19-arxiv-mission-planner-for-uav-battery-replacement.md"
       ],
@@ -24527,6 +25124,15 @@
     {
       "source": "uav-cable-payload-cooperative-transport-research",
       "target": "autotrans-uav-suspended-payload-planning-control",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-17-arxiv-compact-force-sensor-for-dual-uav-cable-suspended-payload-tr.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-cable-payload-cooperative-transport-research",
+      "target": "multi-uav-payload-transport-rao-controllers",
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-17-arxiv-compact-force-sensor-for-dual-uav-cable-suspended-payload-tr.md"
@@ -24657,6 +25263,33 @@
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-17-arxiv-speech-enhancement-using-ego-noise-references-with-a-microph.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-fleet-sensor-network-data-collection-de",
+      "target": "wonder-uav-coverage-optimization",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-exploiting-a-fleet-of-uavs-for-monitoring-and-data-acquisiti.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-fleet-sensor-network-data-collection-de",
+      "target": "distributed-aerial-surveillance-swarm",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-exploiting-a-fleet-of-uavs-for-monitoring-and-data-acquisiti.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-fleet-sensor-network-data-collection-de",
+      "target": "rf-energy-harvesting-sensor-tags-drone-agriculture",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-exploiting-a-fleet-of-uavs-for-monitoring-and-data-acquisiti.md"
       ],
       "confidence": "medium"
     },
@@ -24880,6 +25513,33 @@
       "confidence": "high"
     },
     {
+      "source": "uav-rotatable-antenna-rotation-delay",
+      "target": "fluid-antenna-system",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-uav-rotatable-antenna-under-rotation-delay.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-rotatable-antenna-rotation-delay",
+      "target": "vertical-pinching-antenna-systems",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-uav-rotatable-antenna-under-rotation-delay.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-rotatable-antenna-rotation-delay",
+      "target": "hybrid-beamforming-ntn",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-uav-rotatable-antenna-under-rotation-delay.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "uav-support-facility-robust-location-planning",
       "target": "ops-mission",
       "type": "related",
@@ -25036,14 +25696,36 @@
       "source": "uav-uplink-energy-efficiency-los",
       "target": "unet-multi-uav-networking",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-19-arxiv-meteorologically-introduced-impacts-on-aerial-channels-and-u.md"
+      ],
       "confidence": "medium"
     },
     {
       "source": "uav-uplink-energy-efficiency-los",
       "target": "datalink-communication",
       "type": "related",
-      "evidence": [],
+      "evidence": [
+        "inbox/processed/fetch-2026-10-19-arxiv-meteorologically-introduced-impacts-on-aerial-channels-and-u.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-uplink-energy-efficiency-los",
+      "target": "uav-weather-aerial-channel-impacts",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-19-arxiv-meteorologically-introduced-impacts-on-aerial-channels-and-u.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-uplink-energy-efficiency-los",
+      "target": "uav-swipt-mec-drl-resource-management",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-19-arxiv-meteorologically-introduced-impacts-on-aerial-channels-and-u.md"
+      ],
       "confidence": "medium"
     },
     {
