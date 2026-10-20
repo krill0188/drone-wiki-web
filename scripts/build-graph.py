@@ -13,7 +13,7 @@ D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "onto
 load = lambda f: json.load(open(os.path.join(D, f)))
 slug = lambda s: re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
 
-CLASS = {"motor": "Motor", "esc": "ESC", "propeller": "Propeller", "battery": "Battery", "frame": "Frame",
+CLASS = {"engine": "Engine", "motor": "Motor", "esc": "ESC", "propeller": "Propeller", "battery": "Battery", "frame": "Frame",
          "fc": "FlightController", "compute": "CompanionComputer", "datalink": "DataLink", "sensor": "Sensor", "payload": "Payload"}
 # 규칙이 지배하는 제품 클래스 (규칙 ID → 클래스). 코드 상수와 같은 정의에서 가져온 수동 매핑이라 rules.json의 where/formula 기준으로 검토 대상.
 GOVERNS = {"R01": ["Motor", "Propeller"], "R02": ["Propeller"], "R03": ["Motor"], "R04": ["Propeller"], "R05": ["Battery"], "R06": ["Frame"],
@@ -39,6 +39,18 @@ for p in items:
     node(p["id"], "Product", p["name"], cls=cls, url=p.get("url"))
     edge(p["id"], "madeBy", mid); edge(p["id"], "isA", f"class:{cls}")
     prods[p["id"]] = p
+
+# 고정익·VTOL 수집본(products-fwvtol.json): 멀티로터 호환 판정(powersWith/packFits)에는 섞지 않고 노드·제조사·분류만 편입
+fw_path = os.path.join(D, "products-fwvtol.json")
+fw_items = load("products-fwvtol.json")["items"] if os.path.exists(fw_path) else []
+for p in fw_items:
+    cls = CLASS.get(p["category"])
+    if not cls: continue
+    mid = f"mfr:{slug(p['manufacturer'])}"
+    node(mid, "Manufacturer", p["manufacturer"])
+    node(p["id"], "Product", p["name"], cls=cls, url=p.get("url"), platform=p["platform"], numeric=p.get("numeric") or {}, domain="fixed-wing/vtol")
+    edge(p["id"], "madeBy", mid); edge(p["id"], "isA", f"class:{cls}")
+    prods[p["id"]] = {"name": p["name"], "manufacturer": p["manufacturer"], "category": p["category"]}
 
 escs = [p for p in items if p["category"] == "esc" and rng(p.get("cells"))]
 bats = [p for p in items if p["category"] == "battery" and p.get("cells_S")]

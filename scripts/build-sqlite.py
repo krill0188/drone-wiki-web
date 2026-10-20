@@ -21,7 +21,7 @@ SCHEMA = """
 PRAGMA foreign_keys = ON;
 CREATE TABLE manufacturers (id TEXT PRIMARY KEY, name TEXT NOT NULL, country TEXT, country_verified INTEGER, official_url TEXT, in_registry INTEGER DEFAULT 0, has_specs INTEGER DEFAULT 0);
 CREATE TABLE products (id TEXT PRIMARY KEY, manufacturer_id TEXT NOT NULL REFERENCES manufacturers(id), category TEXT NOT NULL, name TEXT NOT NULL, url TEXT, captured TEXT,
-  weight_g REAL, capacity_mah REAL, cells_s INTEGER, nominal_v REAL, continuous_a REAL, peak_a REAL, esc_cells_min INTEGER, esc_cells_max INTEGER);
+  weight_g REAL, capacity_mah REAL, cells_s INTEGER, nominal_v REAL, continuous_a REAL, peak_a REAL, esc_cells_min INTEGER, esc_cells_max INTEGER, platform TEXT, numeric_json TEXT);
 CREATE TABLE rules (id TEXT PRIMARY KEY, name TEXT NOT NULL, status TEXT NOT NULL, kind TEXT NOT NULL CHECK (kind IN ('definition','heuristic','empirical')), source_status TEXT, formula TEXT, note TEXT);
 CREATE TABLE papers (id TEXT PRIMARY KEY, title TEXT, published TEXT, topic TEXT, url TEXT);
 CREATE TABLE paper_files (paper_id TEXT PRIMARY KEY REFERENCES papers(id), sha256 TEXT, bytes INTEGER, local_path TEXT);
@@ -69,13 +69,19 @@ def build():
             web_mfr.add(e["o"])
     db.executemany("UPDATE manufacturers SET has_specs=1 WHERE id=?", [(m,) for m in web_mfr])
     mfr_of = {e["s"]: e["o"] for e in g["edges"] if e["p"] == "madeBy"}
+    fw = {x["id"]: x for x in (load("products-fwvtol.json")["items"] if os.path.exists(os.path.join(D, "products-fwvtol.json")) else [])}
     for pid, mid in mfr_of.items():
+        if pid in fw:
+            f = fw[pid]; n = f.get("numeric") or {}
+            db.execute("INSERT INTO products VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (pid, mid, f["category"], f["name"], f.get("url"), f.get("captured"), n.get("weight_g"), n.get("capacity_mAh"),
+                       None, n.get("nominal_V"), n.get("continuous_A"), n.get("peak_A"), n.get("cells_min"), n.get("cells_max"), ",".join(f["platform"]), json.dumps(n, ensure_ascii=False)))
+            continue
         p = items.get(pid)
         if not p:
             continue
         cells = p.get("cells") or {}
         wt = p.get("weight_g")
-        db.execute("INSERT INTO products VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (
+        db.execute("INSERT INTO products VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,NULL,NULL)", (
             pid, mid, p["category"], p["name"], p.get("url"), p.get("captured"), wt.get("value") if isinstance(wt, dict) else wt, p.get("capacity_mAh"), p.get("cells_S"),
             p.get("nominal_V"), p.get("continuous_A"), p.get("peak_A"), cells.get("min") if isinstance(cells, dict) else None, cells.get("max") if isinstance(cells, dict) else None))
 

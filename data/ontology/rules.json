@@ -158,13 +158,14 @@
         "vtolExtra_opt": 0.05,
         "CLmax": 1.2
       },
-      "sourceStatus": "candidate-source",
+      "sourceStatus": "partially-verified",
       "sourceCandidates": [
         "교과서: 항공기 항속 방정식(Breguet 계열)",
         "paper-forward-flight-efficiency-patnaik-2025"
       ],
       "claims": [],
-      "kind": "empirical"
+      "kind": "empirical",
+      "note": "2026-10-20 검토(논문 14편·claim 29건, 대부분 모델/설계 추정): 상수 유지. 근거 대조 — L/D 보수 9: 소형 고정익 활공비 실측 9.83·7.10(P2605.15619)과 부합 / 낙관 14: NASA Lift+Cruise 순항 L/D 13.5(모델, 저자가 항력 과대 가능성 언급)와 부합. 프롭 효율 etaP 0.65~0.80: BEMT 모델값 0.7733(실측 아님)뿐이라 실측 근거 없음. VTOL 추가 질량 10%/5%: 실기체 QuadPlane 배터리 15%·추가 구조 별도 근거 부족. CLmax 1.2: 타일시터 가정 1.5(인용 가정)보다 보수적. VTOL 호버/순항 전력비 약 2.7배(NederDrone 실측 1500W vs 550W)가 실측으로 확인됨 — 현재 엔진은 호버 구간을 별도 계산하지 않고 vtolExtra 질량으로만 반영"
     },
     {
       "id": "R09",

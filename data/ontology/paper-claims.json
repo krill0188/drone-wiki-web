@@ -2,6 +2,443 @@
  "_comment": "pipeline.py verify 통과 claim. quote는 원문 PDF 텍스트와 코드로 대조됨. 규칙 연결(rules)은 AI 제안이며 코드 상수에는 사람이 검토 후 반영.",
  "claims": [
   {
+   "id": "P1703.07385-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "AtlantikSolar small solar UAV",
+   "attribute": "continuous flight endurance record",
+   "value": "81",
+   "unit": "h",
+   "conditions": "Flight test, world record for aircraft below 50 kg total mass",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1703.07385",
+   "locator": "Introduction",
+   "quote": "recently performed an 81-hour continuous flight (Oettershagen et al., 2017) that is the current world record in flight endurance for all aircraft below 50 kg total mass",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "High-Fidelity Solar Power Income Modeling for Solar-Electric UAVs: Development and Flight Test Based Verification",
+    "published": "2017-03-21"
+   }
+  },
+  {
+   "id": "P1711.10328-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "AtlantikSolar solar UAV AS-2 (2015)",
+   "attribute": "total mass and battery mass",
+   "value": "6.9 kg total; 2.92 kg battery",
+   "unit": "",
+   "conditions": "Vehicle parameter table (first column AS-2); battery mass fraction ~42%",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1711.10328",
+   "locator": "Table of airplane parameters",
+   "quote": "mtot 6.9 kg 7.0 kg 7.4 kg mbat 2.92 kg 2.92 kg 2.92 kg ebat",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Meteorology-Aware Multi-Goal Path Planning for Large-Scale Inspection Missions with Long-Endurance Solar-Powered Aircraft",
+    "published": "2017-11-28"
+   }
+  },
+  {
+   "id": "P1711.10328-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "AtlantikSolar solar UAV AS-2 (2015)",
+   "attribute": "battery specific energy (as tabulated)",
+   "value": "240",
+   "unit": "Wh/kg",
+   "conditions": "Parameter table; AS-1 230, AS-3 222 Wh/kg",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1711.10328",
+   "locator": "Table of airplane parameters",
+   "quote": "ebat 240 Wh/kg 230 Wh/kg 222 Wh/kg",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Meteorology-Aware Multi-Goal Path Planning for Large-Scale Inspection Missions with Long-Endurance Solar-Powered Aircraft",
+    "published": "2017-11-28"
+   }
+  },
+  {
+   "id": "P1711.10328-03",
+   "rules": [
+    "R08"
+   ],
+   "subject": "AtlantikSolar solar UAV",
+   "attribute": "battery power to sustain level flight at night",
+   "value": "41.6",
+   "unit": "W",
+   "conditions": "Measured during 81 h continuous flight; model predicted 42.4 W; ~6.9 kg aircraft",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1711.10328",
+   "locator": "Sec. 81-h flight verification",
+   "quote": "The required battery power to sustain flight during the night is Pbat = 41.6 W whereas MetPASS estimates P model bat = 42.4 W",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Meteorology-Aware Multi-Goal Path Planning for Large-Scale Inspection Missions with Long-Endurance Solar-Powered Aircraft",
+    "published": "2017-11-28"
+   }
+  },
+  {
+   "id": "P1801.02938-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Variable-pitch quadrotor-biplane tailsitter VTOL UAV",
+   "attribute": "forward-flight power relative to hover power",
+   "value": "64 % less",
+   "unit": "",
+   "conditions": "Modified BEMT model prediction (validated on propeller data), cruise 20 m/s vs hover; not a flight measurement",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1801.02938",
+   "locator": "Abstract",
+   "quote": "The estimated power consumption during forward flight mode is 64% less than that required for hover",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Systematic design methodology for development and flight testing of a variable pitch quadrotor biplane VTOL UAV",
+    "published": "2018-01-07"
+   }
+  },
+  {
+   "id": "P1801.02938-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Proprotor (24 deg preset, -24 deg twist) of tailsitter VTOL UAV",
+   "attribute": "propeller efficiency at cruise 20 m/s, 2000 RPM",
+   "value": "0.7733",
+   "unit": "",
+   "conditions": "Modified BEMT model; 0.6079 at 3200 RPM (hover RPM), i.e. ~27% gain from RPM reduction",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1801.02938",
+   "locator": "Sec. proprotor design",
+   "quote": "The propeller efficiency at 3200 RPM is 0.6079 and that at 2000 RPM is 0.7733",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Systematic design methodology for development and flight testing of a variable pitch quadrotor biplane VTOL UAV",
+    "published": "2018-01-07"
+   }
+  },
+  {
+   "id": "P1801.02938-03",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Typical small fixed-wing UAV (design assumption for VTOL biplane sizing)",
+   "attribute": "maximum lift coefficient CLmax",
+   "value": "1.5",
+   "unit": "",
+   "conditions": "Assumed typical value from ref [32] used for wing-loading selection (with CD0 0.025, Vstall 12 m/s, e 0.8); not measured",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1801.02938",
+   "locator": "Sec. wing design",
+   "quote": "drag coefficient, CD0 of 0.025; stall speed, Vstall of 12 m/s; oswald efficiency, e of 0.8; maximum lift coefficient, CLmax of 1.5.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "model-assumption",
+   "paper": {
+    "title": "Systematic design methodology for development and flight testing of a variable pitch quadrotor biplane VTOL UAV",
+    "published": "2018-01-07"
+   }
+  },
+  {
+   "id": "P1801.02938-04",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Typical small fixed-wing UAV (design assumption for VTOL biplane sizing)",
+   "attribute": "zero-lift drag coefficient CD0",
+   "value": "0.025",
+   "unit": "",
+   "conditions": "Assumed typical value from ref [32]; not measured",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1801.02938",
+   "locator": "Sec. wing design",
+   "quote": "drag coefficient, CD0 of 0.025; stall speed, Vstall of 12 m/s; oswald efficiency, e of 0.8; maximum lift coefficient, CLmax of 1.5.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "model-assumption",
+   "paper": {
+    "title": "Systematic design methodology for development and flight testing of a variable pitch quadrotor biplane VTOL UAV",
+    "published": "2018-01-07"
+   }
+  },
+  {
+   "id": "P1810.03196-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Phoenix dual-rotor tail-sitter (650 g)",
+   "attribute": "hover endurance",
+   "value": "~20",
+   "unit": "min",
+   "conditions": "Measured spec, 3S 2200 mAh Li-Po (~24 Wh), 8 in propellers",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1810.03196",
+   "locator": "Sec. vehicle design",
+   "quote": "which has a mass of 650 g in total. Using its standard 3S 2200 mAh Li-Po battery, the drone has an endurance of approximately 20 minutes while hovering.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "The Phoenix Drone: An Open-Source Dual-Rotor Tail-Sitter Platform for Research and Education",
+    "published": "2018-10-07"
+   }
+  },
+  {
+   "id": "P1903.10623-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Tiltwing VTOL UAV (0.94 m span, 1.9 kg)",
+   "attribute": "cruise endurance",
+   "value": "~20",
+   "unit": "min",
+   "conditions": "Flight experience, 14.8 V 3800 mAh battery (56 Wh)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1903.10623",
+   "locator": "Sec. platform",
+   "quote": "span of 0.94 m and its take-off mass amounts to 1.9 kg. In cruise configuration, flights of up to ∼20 min are possible while in hover, endurance is limited to ∼5 min (battery: 14.8 V, 3800 mAh)",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Attitude- and Cruise Control of a VTOL Tiltwing UAV",
+    "published": "2019-03-25"
+   }
+  },
+  {
+   "id": "P1903.10623-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Tiltwing VTOL UAV (0.94 m span, 1.9 kg)",
+   "attribute": "hover endurance",
+   "value": "~5",
+   "unit": "min",
+   "conditions": "Flight experience, 14.8 V 3800 mAh battery; hover is ~4x shorter than cruise",
+   "sourceType": "paper",
+   "sourceId": "arXiv:1903.10623",
+   "locator": "Sec. platform",
+   "quote": "span of 0.94 m and its take-off mass amounts to 1.9 kg. In cruise configuration, flights of up to ∼20 min are possible while in hover, endurance is limited to ∼5 min (battery: 14.8 V, 3800 mAh)",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Attitude- and Cruise Control of a VTOL Tiltwing UAV",
+    "published": "2019-03-25"
+   }
+  },
+  {
+   "id": "P2011.03991-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "NederDrone hybrid-lift hybrid-energy hydrogen VTOL UAV (~10 kg)",
+   "attribute": "average electrical power in forward flight (flight+payload+fuel-cell system incl. cooling)",
+   "value": "550",
+   "unit": "W",
+   "conditions": "Flight test at sea (30 Sep 2020), fuel-cell + Li-Po hover batteries; measured power after transition to forward flight",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2011.03991",
+   "locator": "Sec. 7.2 flight test",
+   "quote": "The sum of the flight power, payload power and fuel-cell systems (including cooling) power are an average of 550 W",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "The NederDrone: A hybrid lift, hybrid energy hydrogen UAV",
+    "published": "2020-11-08"
+   }
+  },
+  {
+   "id": "P2011.03991-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "NederDrone hybrid VTOL UAV (~10 kg)",
+   "attribute": "hover power in final landing phase (turbulence, wing stalled)",
+   "value": "1500",
+   "unit": "W",
+   "conditions": "Flight test at sea; ESC-reported electrical power, peaks over 2000 W; vs ~550 W forward flight gives ~2.7x hover penalty",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2011.03991",
+   "locator": "Sec. 7.2",
+   "quote": "The hover power required in the last phase of the landing while fighting turbulence with the wing stalled (238 min) consumed nearly 1500 W with peaks of over 2000 W.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "The NederDrone: A hybrid lift, hybrid energy hydrogen UAV",
+    "published": "2020-11-08"
+   }
+  },
+  {
+   "id": "P2011.03991-03",
+   "rules": [
+    "R08"
+   ],
+   "subject": "NederDrone hybrid VTOL UAV",
+   "attribute": "flight endurance",
+   "value": "3 h 38 min",
+   "unit": "",
+   "conditions": "Flight test at sea from moving coast-guard ship, 20 knots wind, 800 W PEM fuel cell with hydrogen; 20 min hydrogen left after landing",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2011.03991",
+   "locator": "Sec. 7.2",
+   "quote": "The flight lasted 3 hour and 38 minutes.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "The NederDrone: A hybrid lift, hybrid energy hydrogen UAV",
+    "published": "2020-11-08"
+   }
+  },
+  {
+   "id": "P2011.03991-04",
+   "rules": [
+    "R08"
+   ],
+   "subject": "NederDrone hybrid VTOL UAV (10 kg platform)",
+   "attribute": "hover power demand relative to fuel-cell maximum",
+   "value": "1400",
+   "unit": "W",
+   "conditions": "Design statement: hover in gusts needs more than the 1400 W fuel-cell maximum, so high-C Li-Po hover batteries are added",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2011.03991",
+   "locator": "Sec. 4.1",
+   "quote": "Hovering a 10 kg platform in gusts while the propulsion is optimized for the much longer forward flight phase is taking more than the 1400 W",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "The NederDrone: A hybrid lift, hybrid energy hydrogen UAV",
+    "published": "2020-11-08"
+   }
+  },
+  {
+   "id": "P2101.05672-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Tricopter-flying-wing VTOL UAV (1 kg payload, 100 km range design)",
+   "attribute": "estimated total mass for 1 kg payload",
+   "value": "7",
+   "unit": "kg",
+   "conditions": "Historical-data linear regression on payload fraction plus 200 g margin; design estimate",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2101.05672",
+   "locator": "Sec. IV.C",
+   "quote": "Payload = 1 kg Total = 6.8 + 0.2 = 7kgs",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Low Fidelity VTOL UAV Design Optimization Using an Open Source Framework",
+    "published": "2021-01-14"
+   }
+  },
+  {
+   "id": "P2101.05672-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Tricopter-flying-wing VTOL UAV",
+   "attribute": "maximum battery mass (6S10P 18650 pack)",
+   "value": "2880",
+   "unit": "g",
+   "conditions": "Design selection; 6S10P of 48 g cells (3300 mAh); pack ~41% of 7 kg estimated total mass",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2101.05672",
+   "locator": "Sec. V.C Table 2",
+   "quote": "(max) = 3𝐾𝑔 6𝑆 10𝑃= 2880",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Low Fidelity VTOL UAV Design Optimization Using an Open Source Framework",
+    "published": "2021-01-14"
+   }
+  },
+  {
+   "id": "P2101.05672-03",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Tricopter-flying-wing VTOL UAV",
+   "attribute": "cruise flight time and range at 25 m/s",
+   "value": "71 min; 107 km",
+   "unit": "",
+   "conditions": "Theoretical battery-usage calculation with eta_total, not flight test",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2101.05672",
+   "locator": "Sec. V.C",
+   "quote": "= 71 𝑚𝑖𝑛𝑠 𝑅𝑎𝑛𝑔𝑒= 𝑣𝑐𝑟𝑢𝑖𝑠𝑒× 𝑡𝑐𝑟𝑢𝑖𝑠𝑒 𝑅𝑎𝑛𝑔𝑒= 107 ",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "model-assumption",
+   "paper": {
+    "title": "Low Fidelity VTOL UAV Design Optimization Using an Open Source Framework",
+    "published": "2021-01-14"
+   }
+  },
+  {
+   "id": "P2101.05672-04",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Blended flying-wing VTOL UAV at cruise",
+   "attribute": "aerodynamic coefficients CD and CL (OpenFOAM vs XFLR5)",
+   "value": "CD 0.038, CL 0.403 (OpenFOAM); CD 0.018, CL 0.477 (XFLR5)",
+   "unit": "",
+   "conditions": "CFD (simpleFoam) vs vortex-lattice at cruise state; no flight data; CFD CD is ~2x VLM",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2101.05672",
+   "locator": "Sec. VI Table 5",
+   "quote": "Coefficient XFLR5 OpenFOAM CD 0.018 0.038 CL 0.477 0.403",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "simulation",
+   "paper": {
+    "title": "Low Fidelity VTOL UAV Design Optimization Using an Open Source Framework",
+    "published": "2021-01-14"
+   }
+  },
+  {
    "id": "P2301.00730-01",
    "rules": [],
    "subject": "Lifting-wing quadcopter (RflyLW2-type hybrid UAV)",
@@ -45,18 +482,20 @@
   },
   {
    "id": "P2301.12316-01",
-   "rules": [],
-   "subject": "University of Michigan QuadPlane (lift+cruise sUAS prototype)",
-   "attribute": "vehicle mass, battery and propulsion module",
-   "value": "1.6840 kg; 4S LiPo 2650 mAh; 9.5 x 4.5 in propeller",
-   "unit": "kg, mAh",
-   "conditions": "Authors' wind-tunnel prototype (Table 1); same module for 4 vertical pushers and 1 forward puller Motor 920 KV with 30 A ESC (Sec. III-A).",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Small QuadPlane UAS wing (NACA 4415-like), wind tunnel",
+   "attribute": "wing stall angle of attack range",
+   "value": "5-10",
+   "unit": "deg",
+   "conditions": "Wind-tunnel measurement, tunnel speeds 11 and 15 m/s (low-Re 5 m/s case stalls near 5 deg); quad rotors off in Plane mode",
    "sourceType": "paper",
    "sourceId": "arXiv:2301.12316",
-   "locator": "Table 1 / Sec. III-A",
-   "quote": "Vehicle Mass (𝑀) 3.713 𝑙𝑏 1.6840 𝑘𝑔 Quadrotor Arm-length (𝑙𝑄) 19 𝑖𝑛 0.4826 𝑚 Fuselage length (𝑙𝑓) 35.3 𝑖𝑛 0.8966 𝑚 Propeller diameter 9.5 𝑖𝑛 0.2413 𝑚 Propeller pitch 4.5 𝑖𝑛 0.1143 𝑚 Battery 4𝑆LiPo, 2650 𝑚𝐴ℎ",
+   "locator": "Sec. results lift coefficient",
+   "quote": "stall angle is between 5° and 10°",
    "status": "verified",
-   "topic": "build",
+   "topic": "vtol-fixedwing",
    "note": "",
    "evidenceKind": "reported",
    "paper": {
@@ -66,60 +505,20 @@
   },
   {
    "id": "P2301.12316-02",
-   "rules": [],
-   "subject": "QuadPlane wing",
-   "attribute": "wing span/chord and stall speed",
-   "value": "span 1.2192 m; chord 0.1524 m; stall speed 10.09 m/s; stall angle 15.07°",
-   "unit": "m, m/s, deg",
-   "conditions": "Design parameters, NACA4415 airfoil, AR 8, 5° incidence; 1.684 kg vehicle",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Wing-augmented quadrotor (prior wind-tunnel work cited)",
+   "attribute": "endurance improvement with lifting wings",
+   "value": "up to 33 %",
+   "unit": "",
+   "conditions": "Literature statement on prior wind tunnel data/model, not this paper's own measurement",
    "sourceType": "paper",
    "sourceId": "arXiv:2301.12316",
-   "locator": "Table 1",
-   "quote": "Span (𝑏) 48 𝑖𝑛 1.2192 𝑚 Chord (𝑐) 6 𝑖𝑛 0.1524 𝑚 Incidence angle (𝛼𝑖) 5° 0.0873 𝑟𝑎𝑑 Dihedral angle (Γ) 0° 0 𝑟𝑎𝑑 Stall speed (𝑣𝑠𝑡𝑎𝑙𝑙) 33.10 𝑓𝑡/𝑠 10.09 𝑚/𝑠 Stall angle (𝛼𝑠𝑡𝑎𝑙𝑙) 15.07°",
+   "locator": "Sec. II background",
+   "quote": "endurance can be improved by up to 33% with lifting wings",
    "status": "verified",
-   "topic": "forward-flight",
-   "note": "",
-   "evidenceKind": "model-assumption",
-   "paper": {
-    "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
-    "published": "2023-01-29"
-   }
-  },
-  {
-   "id": "P2301.12316-03",
-   "rules": [],
-   "subject": "QuadPlane vertical propulsion modules in edgewise flow",
-   "attribute": "rear vs front rotor thrust loss due to flow interaction",
-   "value": "single module 5.69 N; rear modules 27.5% lower thrust",
-   "unit": "N, %",
-   "conditions": "Wind tunnel, vehicle AoA 0°, airspeed 11 m/s, hybrid mode; rear deficit inferred from 1.56 N m net pitching moment",
-   "sourceType": "paper",
-   "sourceId": "arXiv:2301.12316",
-   "locator": "Sec. VI-B, Fig. 10",
-   "quote": "Dynamic thrust tests show at this airspeed and 𝛼𝑉a single propulsion module produces 5.69𝑁of thrust. Rear propulsion modules generate 27.5% lower thrust than front modules for this test case.",
-   "status": "verified",
-   "topic": "forward-flight",
-   "note": "",
-   "evidenceKind": "reported",
-   "paper": {
-    "title": "Wind Tunnel Testing and Aerodynamic Characterization of a QuadPlane Uncrewed Aircraft System",
-    "published": "2023-01-29"
-   }
-  },
-  {
-   "id": "P2301.12316-04",
-   "rules": [],
-   "subject": "QuadPlane forward propeller (920 KV, 9.5x4.5) in axial flow",
-   "attribute": "throttle needed for net positive thrust at max test airspeed",
-   "value": "15 m/s; at or above 50% throttle",
-   "unit": "m/s, %",
-   "conditions": "Dynamometer in 2' x 2' wind tunnel, propeller AoA 0°, powered from bench supply at nominal 4S",
-   "sourceType": "paper",
-   "sourceId": "arXiv:2301.12316",
-   "locator": "Sec. V, Fig. 7",
-   "quote": "At the maximum test airspeed (15𝑚/𝑠), a net positive thrust from the propeller is observed only at or above 50% throttle.",
-   "status": "verified",
-   "topic": "propulsion",
+   "topic": "vtol-fixedwing",
    "note": "",
    "evidenceKind": "reported",
    "paper": {
@@ -190,6 +589,52 @@
    "paper": {
     "title": "Onboard dynamic-object detection and tracking for autonomous robot navigation with RGB-D camera",
     "published": "2023-02-28"
+   }
+  },
+  {
+   "id": "P2304.14889-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "NASA Lift+Cruise eVTOL (MDO-optimized design)",
+   "attribute": "operational lift-to-drag ratio in cruise",
+   "value": "13.5",
+   "unit": "",
+   "conditions": "VLM-based aerodynamic model in MDO; authors note minimum drag likely overestimated; not measured",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2304.14889",
+   "locator": "Sec. results Fig. 13",
+   "quote": "lift-to-drag ratio in cruise (blue dot), which is about 13.5, a reasonable value for the Lift+Cruise configuration.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Large-scale multidisciplinary design optimization of the NASA lift-plus-cruise concept using a novel",
+    "published": "2023-04-25"
+   }
+  },
+  {
+   "id": "P2304.14889-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "NASA Lift+Cruise eVTOL (MDO model)",
+   "attribute": "battery specific energy assumed",
+   "value": "400",
+   "unit": "Wh/kg",
+   "conditions": "Model assumption citing Silva et al.; simple energy-based battery model",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2304.14889",
+   "locator": "Sec. powertrain model",
+   "quote": "assumed to be 400Wh/kg according to Silva et al.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "model-assumption",
+   "paper": {
+    "title": "Large-scale multidisciplinary design optimization of the NASA lift-plus-cruise concept using a novel",
+    "published": "2023-04-25"
    }
   },
   {
@@ -590,6 +1035,29 @@
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
+   }
+  },
+  {
+   "id": "P2309.13559-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Dual-rotor tail-sitter VTOL UAV (2.25 kg, 107 cm span)",
+   "attribute": "cruise vs hover battery current",
+   "value": "cruise 9 A at 9 m/s; hover 12 A",
+   "unit": "",
+   "conditions": "Prototype specification table (6S 2600 mAh), cruise/hover current as reported; hover ~1.33x cruise current",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2309.13559",
+   "locator": "Table I",
+   "quote": "Cruise speed 9 m/s Cruise current 9 A Hover current 12 A Battery 6S, 2600 mAh",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Swashplateless-elevon Actuation for a Dual-rotor Tail-sitter VTOL UAV",
+    "published": "2023-09-24"
    }
   },
   {
@@ -1227,6 +1695,29 @@
    }
   },
   {
+   "id": "P2411.08661-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "QuadPlane small eVTOL (experimentally characterized power model)",
+   "attribute": "energy saving of optimal hybrid traversal vs pure vertical-flight (Quad) traversal",
+   "value": "71 %",
+   "unit": "",
+   "conditions": "500 m traversal between hover waypoints, 4 m/s crosswind; model built on measured power vs airspeed",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2411.08661",
+   "locator": "Abstract",
+   "quote": "saves 71% energy compared to pure vertical flight traversal",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Energy Optimal Traversal Between Hover Waypoints for Lift+Cruise Electric Powered Aircraft",
+    "published": "2024-11-13"
+   }
+  },
+  {
    "id": "P2412.02874-01",
    "rules": [
     "R03"
@@ -1512,65 +2003,19 @@
   {
    "id": "P2503.16587-01",
    "rules": [
-    "R05"
+    "R08"
    ],
-   "subject": "Butane-fueled thermoelectric generator prototype",
-   "attribute": "avg power / energy generated / butane used",
-   "value": "4.6 W for 2.6 h = 12 Wh from 121.7 g butane",
-   "unit": "W",
-   "conditions": "Bench test, TE module hot side held at 340 C, fuel flow 46.3 g/hr; device efficiency 1.8%",
+   "subject": "Pipistrel Velis Electro (full-size electric trainer)",
+   "attribute": "maximum flight endurance",
+   "value": "55",
+   "unit": "min",
+   "conditions": "Cited as practical battery-endurance saturation example, not own measurement",
    "sourceType": "paper",
    "sourceId": "arXiv:2503.16587",
-   "locator": "Sec. 3 Results",
-   "quote": "During the test, the device generated an average 4.6 W for 2.6 hours totaling 12 Wh of energy using 121.7 grams of butane",
+   "locator": "Introduction",
+   "quote": "Pipistrel Velis Electro attains a maximum flight endurance of 55 minutes",
    "status": "verified",
-   "topic": "energy",
-   "note": "",
-   "evidenceKind": "reported",
-   "paper": {
-    "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
-    "published": "2025-03-20"
-   }
-  },
-  {
-   "id": "P2503.16587-02",
-   "rules": [
-    "R05"
-   ],
-   "subject": "Butane TE generator prototype",
-   "attribute": "total device weight and fuel mass fraction",
-   "value": "746 g incl. 227 g butane; fuel mass fraction 30%",
-   "unit": "g",
-   "conditions": "Prototype with 8 oz butane canister; 23% fraction needed for parity with lithium battery using a 12%-efficient TE module",
-   "sourceType": "paper",
-   "sourceId": "arXiv:2503.16587",
-   "locator": "Sec. 3 Results",
-   "quote": "The total device weight is 746 grams including 227 grams of butane fuel. This demonstrates a fuel mass fraction of 30%",
-   "status": "verified",
-   "topic": "energy",
-   "note": "",
-   "evidenceKind": "reported",
-   "paper": {
-    "title": "Prospects for endurance augmentation of small unmanned systems using butane-fueled thermoelectric generation",
-    "published": "2025-03-20"
-   }
-  },
-  {
-   "id": "P2503.16587-03",
-   "rules": [
-    "R05"
-   ],
-   "subject": "Butane TE generator prototype",
-   "attribute": "specific energy and specific power",
-   "value": "30 Wh/kg and 6 W/kg",
-   "unit": "Wh/kg",
-   "conditions": "Measured at 1.8% device efficiency; projected 200 Wh/kg and 40 W/kg with a 12% efficient TE module",
-   "sourceType": "paper",
-   "sourceId": "arXiv:2503.16587",
-   "locator": "Sec. 3 Results",
-   "quote": "specific energy and power of 30 Wh/kg and 6 W/kg, respectively.",
-   "status": "verified",
-   "topic": "energy",
+   "topic": "vtol-fixedwing",
    "note": "",
    "evidenceKind": "reported",
    "paper": {
@@ -2009,6 +2454,52 @@
    "paper": {
     "title": "LEARN: Learning End-to-End Aerial Resource-Constrained Multi-Robot Navigation",
     "published": "2025-11-21"
+   }
+  },
+  {
+   "id": "P2512.09343-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Long-range QuadPlane (converted 2.4 m span fixed-wing glider, Jetson Orin Nano payload)",
+   "attribute": "take-off weight and battery mass",
+   "value": "4.56 kg total; battery 700 g",
+   "unit": "",
+   "conditions": "As-built mass breakdown of prototype (battery ~15% of TOW)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2512.09343",
+   "locator": "Sec. platform design",
+   "quote": "The total take-off weight of the platform is approximately 4.56 kg. This includes the left and right wings (840 g each), fuselage (1450 g), battery (700 g)",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Development and Testing for Perception Based Autonomous Landing of a Long-Range QuadPlane",
+    "published": "2025-12-10"
+   }
+  },
+  {
+   "id": "P2512.09343-02",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Long-range QuadPlane prototype",
+   "attribute": "VTOL lift thrust capacity",
+   "value": "8 kg total (4 x ~2 kg)",
+   "unit": "",
+   "conditions": "Design: 4 Flash Hobby D4215 motors with 12 in propellers; thrust-to-weight ~1.75 at 4.56 kg",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2512.09343",
+   "locator": "Sec. platform design",
+   "quote": "we select the QuadPlane motors Flash Hobby D4215, each capable of delivering approximately 2 kg of thrust, yielding a total thrust capacity of 8 kg.",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Development and Testing for Perception Based Autonomous Landing of a Long-Range QuadPlane",
+    "published": "2025-12-10"
    }
   },
   {
@@ -2834,6 +3325,29 @@
    "paper": {
     "title": "TinySDP: Real Time Semidefinite Optimization for Certifiable and Agile Edge Robotics",
     "published": "2026-05-13"
+   }
+  },
+  {
+   "id": "P2605.15619-01",
+   "rules": [
+    "R08"
+   ],
+   "subject": "Small fixed-wing UAS (energy-balanced gliding, propeller off)",
+   "attribute": "net glide ratio (L/D proxy) measured",
+   "value": "9.83",
+   "unit": "",
+   "conditions": "Flight test, Va 12.5 m/s, wind ~5.2 m/s, net glide length 489.77 m; second test with obstacle gave 7.10; sailplane 70:1 for comparison",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.15619",
+   "locator": "Sec. V.C",
+   "quote": "a net aircraft glide ratio of 9.83 : 1 m, which is pretty low compared a standard sailplane glide ratio of 70 : 1",
+   "status": "verified",
+   "topic": "vtol-fixedwing",
+   "note": "",
+   "evidenceKind": "reported",
+   "paper": {
+    "title": "Wind-Aware Optimal Trajectory Planning for Efficient Gliding of Fixed-Wing Aerial Systems",
+    "published": "2026-05-15"
    }
   },
   {

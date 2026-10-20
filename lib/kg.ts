@@ -20,7 +20,7 @@ const CLASS_ALIAS: Record<string, RegExp> = {
   Motor: /모터|motor/i, ESC: /\besc\b|변속기|전자변속/i, Propeller: /프롭|프로펠러|propeller/i, Battery: /배터리|전지|battery|lipo|리튬/i,
   Frame: /프레임|기체 골격|frame|airframe/i, FlightController: /비행\s*제어기|\bfc\b|flight controller|픽스호크|pixhawk/i,
   CompanionComputer: /컴패니언|온보드\s*컴퓨터|임베디드|jetson|젯슨|라즈베리|raspberry|companion/i, DataLink: /데이터\s*링크|통신|텔레메트리|datalink|radio|lte|5g/i,
-  Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
+  Engine: /엔진|내연|가솔린|연료전지|하이브리드\s*발전|\bengine\b|fuel cell/i, Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
 }
 const RULE_ALIAS: Record<string, RegExp> = {
   R01: /호버|hover|정지\s*비행|소모\s*전력|figure of merit|효율/i, R03: /추력|thrust|추력\s*대\s*중량/i, R04: /디스크\s*로딩|disk loading/i,
@@ -117,7 +117,9 @@ export function queryKG(question: string): KgResult {
   for (const p of products) {
     matched.add(p.id)
     const mfr = (out.get(p.id) ?? []).find((e) => e.p === "madeBy")?.o
-    add(p.id, `제품 ${p.label} — 제조사 ${byId.get(mfr ?? "")?.label ?? "?"}, 클래스 ${p.cls}${p.url ? `, 공식 페이지 ${p.url}` : ""}`)
+    const num = p.numeric && typeof p.numeric === "object" ? Object.entries(p.numeric as Record<string, number>).map(([k, v]) => `${k}=${v}`).join(", ") : ""
+    const plat = Array.isArray(p.platform) ? `, 대상 플랫폼 ${(p.platform as string[]).join("/")}` : ""
+    add(p.id, `제품 ${p.label} — 제조사 ${byId.get(mfr ?? "")?.label ?? "?"}, 클래스 ${p.cls}${plat}${p.url ? `, 공식 페이지 ${p.url}` : ""}${num ? `; 페이지 표기 수치(첫 변형 기준일 수 있음): ${num}` : ""}`)
     // 질문이 지목한 클래스(예: "맞는 ESC")의 상대 제품을 먼저, 그다음 엄격한 관계(powersWith)를 느슨한 관계(packFits)보다 먼저
     const asked = new Set(classes.map((c) => c.slice(6)))
     const otherCls = (e: KEdge) => String(byId.get(e.s === p.id ? e.o : e.s)?.cls ?? "")
@@ -156,8 +158,10 @@ export function queryKG(question: string): KgResult {
     const prods = (inc.get(c) ?? []).filter((e) => e.p === "isA").length
     add(c, `클래스 ${c.slice(6)} — 등록 제품 ${prods}개`)
     if (!products.length && !mfrs.length) {
-      const ms = (inc.get(c) ?? []).filter((e) => e.p === "hasCategory").map((e) => byId.get(e.s)!).filter(Boolean)
-      if (ms.length) add(`${c}|vendors`, `${c.slice(6)} 분야 제조사 ${ms.length}곳(2nd 제조사 레지스트리): ${ms.slice(0, 20).map((m) => `${m.label}${m.countryVerified === false ? "*" : ""}`).join(", ")}${ms.length > 20 ? " 외" : ""} (* = 국가는 일반지식 표기, 공식 확인 아님)`)
+      // 분야 제조사 = 레지스트리 분야(hasCategory) ∪ 이 분류의 제품을 낸 제조사(isA→madeBy). 고정익·엔진처럼 레지스트리에 없는 분야도 잡는다.
+      const viaProduct = (inc.get(c) ?? []).filter((e) => e.p === "isA").map((e) => (out.get(e.s) ?? []).find((x) => x.p === "madeBy")?.o).filter((x): x is string => !!x)
+      const ms = [...new Set([...(inc.get(c) ?? []).filter((e) => e.p === "hasCategory").map((e) => e.s), ...viaProduct])].map((id) => byId.get(id)!).filter(Boolean)
+      if (ms.length) add(`${c}|vendors`, `${c.slice(6)} 분야 제조사 ${ms.length}곳(제조사 레지스트리 + 수집 제품 보유 제조사): ${ms.slice(0, 20).map((m) => `${m.label}${m.countryVerified === false ? "*" : ""}`).join(", ")}${ms.length > 20 ? " 외" : ""} (* = 국가는 일반지식 표기, 공식 확인 아님)`)
     }
     if (!products.length && !mfrs.length && !hitClaims.length) for (const e of (inc.get(c) ?? []).filter((e) => e.p === "about").slice(0, 8)) claimLine(e.s)
   }

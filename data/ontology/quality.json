@@ -1,65 +1,66 @@
 {
- "generated": "2026-10-20 10:48",
+ "generated": "2026-10-20 11:00",
  "counts": {
-  "manufacturers": 229,
-  "products": 373,
+  "manufacturers": 236,
+  "products": 495,
   "rules": 26,
-  "papers": 96,
-  "claims": 225,
-  "edges": 3803
+  "papers": 108,
+  "claims": 247,
+  "edges": 4101
  },
  "claimsByKind": {
   "cited-secondary": 2,
   "derived": 4,
-  "model-assumption": 31,
-  "reported": 168,
-  "simulation": 20
+  "model-assumption": 34,
+  "reported": 186,
+  "simulation": 21
  },
  "claimsByTopic": {
-  "propulsion": 40,
+  "propulsion": 39,
   "companion": 32,
-  "energy": 30,
+  "vtol-fixedwing": 30,
+  "energy": 27,
   "sizing": 23,
   "-": 22,
   "battery": 16,
-  "build": 15,
-  "forward-flight": 12,
+  "build": 14,
   "structure": 11,
+  "forward-flight": 10,
   "flight-controller": 8,
   "payload": 7,
   "other": 6,
-  "comms": 2,
-  "vtol-fixedwing": 1
+  "comms": 2
  },
  "productsByCategory": {
-  "motor": 104,
+  "motor": 139,
+  "frame": 63,
+  "propeller": 61,
+  "esc": 56,
   "battery": 53,
-  "esc": 39,
-  "frame": 39,
-  "propeller": 38,
   "datalink": 26,
+  "engine": 23,
   "sensor": 22,
   "fc": 19,
   "compute": 17,
   "payload": 16
  },
  "manufacturers": {
-  "withSpecs": 61,
-  "registryOnly": 168,
+  "withSpecs": 71,
+  "registryOnly": 165,
   "countryVerified": 17,
-  "countryUnverified": 202,
-  "countryUnknown": 10
+  "countryUnverified": 199,
+  "countryUnknown": 20
  },
  "edgesByRelation": {
   "packFits": 1867,
+  "isA": 495,
+  "madeBy": 495,
   "powersWith": 403,
-  "isA": 373,
-  "madeBy": 373,
-  "reportedIn": 225,
+  "reportedIn": 247,
   "hasCategory": 217,
-  "about": 193,
-  "supports": 119,
-  "mentions": 18,
+  "about": 188,
+  "supports": 145,
+  "mentions": 29,
   "governs": 15
  },
  "rules": [
@@ -244,15 +245,15 @@
    "kind": "empirical",
    "sourceStatus": "verified-with-derived",
    "formula": "m_bat = P·t / (DoD·e_pack)",
-   "claims": 25,
+   "claims": 22,
    "byKind": {
     "cited-secondary": 1,
     "derived": 1,
     "model-assumption": 5,
-    "reported": 16,
+    "reported": 13,
     "simulation": 2
    },
-   "papers": 14
+   "papers": 13
   },
   {
    "id": "R06",
@@ -289,11 +290,15 @@
    "name": "고정익 순항 에너지",
    "status": "implemented",
    "kind": "empirical",
-   "sourceStatus": "candidate-source",
+   "sourceStatus": "partially-verified",
    "formula": "b_f = g·v·t / (L/D·η_p·DoD·e_pack)",
-   "claims": 0,
-   "byKind": {},
-   "papers": 0
+   "claims": 29,
+   "byKind": {
+    "model-assumption": 4,
+    "reported": 24,
+    "simulation": 1
+   },
+   "papers": 14
   },
   {
    "id": "R09",
@@ -425,11 +430,9 @@
   },
   {
    "desc": "구현된 실측 상수 규칙(empirical)인데 근거 claim이 하나도 없음",
-   "ok": false,
-   "count": 1,
-   "sample": [
-    "R08"
-   ]
+   "ok": true,
+   "count": 0,
+   "sample": []
   },
   {
    "desc": "같은 규칙에 연결된 모델 가정·시뮬레이션 값만으로 'verified' 판정된 규칙",
@@ -452,18 +455,18 @@
   {
    "desc": "추진·배터리·구조·사이징 주제인데 규칙에 연결되지 않은 논문 claim (규칙 후보 검토 대상)",
    "ok": false,
-   "count": 55,
+   "count": 52,
    "sample": [
     "P2301.00730-02",
-    "P2301.12316-02",
-    "P2301.12316-03",
-    "P2301.12316-04",
     "P2301.12905-01",
     "P2306.17087-01",
     "P2306.17087-02",
     "P2309.10631-02",
     "P2309.10631-03",
-    "P2309.10631-08"
+    "P2309.10631-08",
+    "P2309.10631-10",
+    "P2310.04857-03",
+    "P2312.09981-01"
    ]
   }
  ]
