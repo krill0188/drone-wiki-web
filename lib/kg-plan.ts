@@ -109,7 +109,14 @@ function ftsQuery(question: string): string {
 // ── 관련성 게이트: 흔한 단어(드론·비행…)만 겹친 claim/문서를 근거로 삼지 않는다 ──
 const GENERIC_Q = new Set(["드론", "비행", "uav", "uavs", "drone", "drones", "flight", "방법", "역사", "설명", "정리", "특징", "종류", "최신", "동향", "기술", "시스템", "system", "차이", "사용", "대해", "이란", "무엇인가", "연동", "연결", "통합", "적용", "활용", "이용", "구성", "설정", "구현", "선택", "조건", "영향", "현황", "동향", "관련해서", "필요", "필요해", "필요한가", "필요한가요", "있나", "있나요", "있는지", "얼마", "얼마야", "얼마예요", "어디", "어디야", "어디인가", "되나", "되나요", "해야", "하나요", "한가요", "회사", "회사야", "회사인가", "회사인가요", "회사예요", "기업이야", "기업인가", "기업인가요"])
 const PARTICLE = /(을|를|은|는|이|가|의|에|에서|로|으로|과|와|도|만|인|란|이란|에서의|에는|으로는)$/
-const stem = (t: string) => (/[가-힣]/.test(t) ? t.replace(PARTICLE, "") : t)
+// 질문 끝의 서술 어미(…이야/…해/…인가요 등)를 떼어 낸다 — '모델이야'·'탐지해'가 위키에 없는 핵심어로 오판되어 거절되던 문제(2026-10-22). 어간이 2자 이상일 때만.
+const ENDING = /(이에요|인가요|인가|이야|예요|해요|하나요|하나|할까요|할까|합니까|해)$/
+const stem = (t: string) => {
+  if (!/[가-힣]/.test(t)) return t
+  const s = t.replace(PARTICLE, "")
+  const e = s.replace(ENDING, "")
+  return e.length >= 2 ? e : s
+}
 const dfCache = new Map<string, number>()
 function rareToken(t: string): boolean {
   if (/\d/.test(t) && /[a-z]/i.test(t)) return true // 모델명·고유 표기(MN5008, X650 …)
@@ -348,8 +355,9 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     // 질문이 가리키는 온톨로지 클래스 이름 자체(예: FlightStack)는 문서에 그 낱말이 없어도 온톨로지가 다루는 개념이므로 빠진 주제로 보지 않는다
     const classWords = new Set(plan.classes.map((c) => c.toLowerCase()))
     // 한국어 합성어('수소연료전지')는 근거에 구성어('연료전지')가 있으면 다룬 것으로 본다(앞·뒤가 같은 3자 이상 낱말, 일반어 제외).
-    const hayWords = new Set(hay2.split(/[^0-9a-z가-힣]+/).filter((w) => w.length >= 3 && !GENERIC_Q.has(w)))
-    const compoundCovered = (v: string) => v.length >= 5 && /[가-힣]/.test(v) && [...hayWords].some((w) => w !== v && (v.endsWith(w) || v.startsWith(w)))
+    const hayWords = new Set(hay2.split(/[^0-9a-z가-힣]+/).filter((w) => w.length >= 4 && !GENERIC_Q.has(w)))
+    // 구성어가 4자 이상이고 합성어의 절반 이상일 때만('컴퓨터'처럼 흔한 짧은 말이 '양자컴퓨터'를 덮어 주면 안 된다)
+    const compoundCovered = (v: string) => v.length >= 5 && /[가-힣]/.test(v) && [...hayWords].some((w) => w !== v && w.length * 2 >= v.length && (v.endsWith(w) || v.startsWith(w)))
     const missingCore = contentTokens(question, domainWords).filter((t) => {
       if (t.variants.some((v) => hay2.includes(v) || classWords.has(v) || compoundCovered(v))) return false
       const q = t.variants.map((v) => `"${v.replace(/"/g, "")}"`).join(" OR ")

@@ -14,7 +14,7 @@ load = lambda f: json.load(open(os.path.join(D, f)))
 slug = lambda s: re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
 
 CLASS = {"engine": "Engine", "motor": "Motor", "esc": "ESC", "propeller": "Propeller", "battery": "Battery", "frame": "Frame",
-         "fc": "FlightController", "compute": "CompanionComputer", "datalink": "Datalink", "sensor": "Sensor", "payload": "Payload"}
+         "fc": "FlightController", "compute": "CompanionComputer", "datalink": "Datalink", "sensor": "Sensor", "payload": "Payload", "gnss": "GNSS"}
 # 규칙이 지배하는 제품 클래스 (규칙 ID → 클래스). 코드 상수와 같은 정의에서 가져온 수동 매핑이라 rules.json의 where/formula 기준으로 검토 대상.
 GOVERNS = {"R01": ["Motor", "Propeller"], "R02": ["Propeller"], "R03": ["Motor"], "R04": ["Propeller"], "R05": ["Battery"], "R06": ["Frame"],
            "R09": ["Battery"], "R11": ["Battery"], "R12": ["Propeller", "Frame"], "R13": ["Frame"], "C02": ["ESC", "Motor"], "C03": ["Propeller"]}

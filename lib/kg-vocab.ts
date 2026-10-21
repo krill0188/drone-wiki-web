@@ -26,5 +26,5 @@ export const KO_EN: Record<string, string[]> = {
   제어: ["control", "controller"], 모드: ["mode"], 오프보드: ["offboard"], 알고리즘: ["algorithm"], 센서: ["sensor"], 프로토콜: ["protocol"], 거리: ["distance", "range"], 시간: ["time", "duration"],
   크기: ["size"], 비용: ["cost"], 성능: ["performance"], 효율: ["efficiency"], 안정성: ["stability", "robust"],
   컨트롤러: ["controller"], 허가: ["permit", "permission", "authorization", "approval"], 승인: ["approval", "authorization"], 규정: ["regulation", "regulations", "rule"], 한국: ["korea", "korean"], 법규: ["regulation", "law"],
-  통신: ["communication", "datalink", "link"], 시뮬레이션: ["simulation", "simulated"], 추론: ["inference"], 처리: ["throughput", "processing"], 정확도: ["accuracy"],
+  통신: ["communication", "datalink", "link"], 시뮬레이션: ["simulation", "simulated"], 추론: ["inference"], 재밍: ["jamming", "jammer", "interference"], 스푸핑: ["spoofing", "spoofer"], 교란: ["jamming", "interference", "disruption"], 탐지: ["detection", "detect", "detecting"], 항법: ["navigation"], 위성: ["satellite", "gnss"], 안테나: ["antenna"], 간섭: ["interference"], 정밀: ["precise", "precision"], 처리: ["throughput", "processing"], 정확도: ["accuracy"],
 }
