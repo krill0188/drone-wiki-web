@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "26c7e059a5290e2ca0ab9856aa7ea30ef4b35734be0048bd5e81d96a1355456d",
+  "source_fingerprint": "219af64f8d6954749c0cc52c759c4b9286a05da6785f77a98daac825e9d24029",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -268,6 +268,61 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "ai-cert-do178c-ml-dmitriev-low-criticality-2022",
+      "name": "Toward Certification of Machine-Learning Systems for Low Criticality Airborne Applications",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "certification",
+        "do-178c",
+        "machine-learning",
+        "dal-d",
+        "airborne"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023",
+      "name": "Runway Sign Classifier: A DAL C Certifiable Machine Learning System",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "certification",
+        "do-178c",
+        "dal-c",
+        "dnn",
+        "redundancy",
+        "dissimilar"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "ai-cert-do178c-ml-semi-automated-sridhar-2025",
+      "name": "Approach Towards Semi-Automated Certification for Low Criticality ML-Enabled Airborne Applications",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "certification",
+        "do-178c",
+        "yolov8",
+        "assurance-profile",
+        "reconnaissance"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "ai-cert-easa-ai-roadmap-timeline",
       "name": "EASA Artificial Intelligence Roadmap (page: Roadmap 1.0 / 2.0 and timeline)",
       "layer": "Concepts",
@@ -303,6 +358,25 @@
       "ontologyClass": "AbstractProcess"
     },
     {
+      "id": "ai-cert-easa-concept-paper-proposed-issue-03",
+      "name": "EASA Artificial Intelligence Concept Paper: guidance for artificial intelligence applications, Proposed Issue 03",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "certification",
+        "machine-learning",
+        "learning-assurance",
+        "easa",
+        "reinforcement-learning",
+        "level-3"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "ai-cert-ed324-arp6983-ml-assurance-standard",
       "name": "ED-324 / ARP6983: Development and Assurance guidelines for Aeronautical Systems and Equipment Implemented with Machine Learning (SAE G-34 / EUROCAE WG-114)",
       "layer": "Concepts",
@@ -315,6 +389,24 @@
         "ed-324",
         "arp6983",
         "ml-constituent"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "ai-cert-ed324-eurocae-wg114-status-2026-10",
+      "name": "EUROCAE WG-114 page: ED-324 current status (Draft, target publication 31/12/2026)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "certification",
+        "machine-learning",
+        "ed-324",
+        "arp6983",
+        "eurocae"
       ],
       "updated": "2026-10-21",
       "confidence": "medium",
@@ -452,6 +544,24 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026",
+      "name": "Receiver-Domain Behavioral Probing for Backdoor-Resilient Federated GPS Spoofing Detection in UAV Networks",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "federated-learning",
+        "poisoning",
+        "backdoor",
+        "gps-spoofing",
+        "byzantine"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "ai-fl-uav-distributed-ml-swarms-ding-2023",
       "name": "Distributed Machine Learning for UAV Swarms: Computing, Sensing, and Semantics",
       "layer": "Concepts",
@@ -462,6 +572,42 @@
         "split-learning",
         "swarm",
         "survey"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "ai-fl-uav-dp-hierarchical-gat-shit-2025",
+      "name": "Hierarchical Federated Graph Attention Networks for Scalable and Resilient UAV Collision Avoidance",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "federated-learning",
+        "differential-privacy",
+        "byzantine",
+        "collision-avoidance",
+        "swarm"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "ai-fl-uav-privllmswarm-mpc-ayana-2025",
+      "name": "PrivLLMSwarm: Privacy-Preserving LLM-Driven UAV Swarms for Secure IoT Surveillance",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "privacy",
+        "mpc",
+        "llm",
+        "swarm",
+        "differential-privacy-comparison"
       ],
       "updated": "2026-10-21",
       "confidence": "medium",
@@ -486,6 +632,24 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "ai-fl-uav-soul-unlearning-zaman-2025",
+      "name": "Sky of Unlearning (SoUL): Rewiring Federated Machine Unlearning via Selective Pruning",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "federated-learning",
+        "unlearning",
+        "data-poisoning",
+        "model-inversion",
+        "internet-of-drones"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "ai-knowledge-workflow",
       "name": "AI 지식 워크플로",
       "layer": "Concepts",
@@ -500,6 +664,26 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "ai-latency-ardupilot-companion-uart-baud-dade-2026",
+      "name": "ArduPilot MAVLink telemetry reliability and latency over an Iridium Certus satellite service (companion UART baud-rate baseline)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "ardupilot",
+        "mavlink",
+        "latency",
+        "companion-computer",
+        "raspberry-pi",
+        "uart",
+        "mavlink-router"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ai-latency-companion-fc-dds-vs-mavros-cotta-2023",
@@ -970,6 +1154,26 @@
       "ontologyClass": "PerceptionModel"
     },
     {
+      "id": "ai-model-yolo26-ultralytics-jetson-orin-per-variant",
+      "name": "Ultralytics YOLO26 on Jetson Orin: per-variant (n/s/m/l/x) inference time, from docs source",
+      "layer": "Concepts",
+      "domain": "edge-ai-compute",
+      "tags": [
+        "drone",
+        "edge-inference",
+        "jetson-orin",
+        "yolo26",
+        "tensorrt",
+        "benchmark",
+        "int8",
+        "fp16"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "PerceptionModel"
+    },
+    {
       "id": "ai-model-yolov10",
       "name": "YOLOv10: Real-Time End-to-End Object Detection",
       "layer": "Concepts",
@@ -1308,6 +1512,43 @@
         "aerial-detection",
         "tracking",
         "visdrone"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "ai-sync-camera-imu-online-temporal-calibration-qin-2018",
+      "name": "Online Temporal Calibration for Monocular Visual-Inertial Systems",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "time-synchronization",
+        "camera-imu",
+        "kalibr",
+        "vins-mono",
+        "time-offset",
+        "hardware-sync"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "ai-sync-camera-imu-varying-time-offset-ling-2018",
+      "name": "Modeling Varying Camera-IMU Time Offset in Optimization-Based Visual-Inertial Odometry",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "time-synchronization",
+        "camera-imu",
+        "rolling-shutter",
+        "time-offset",
+        "vio"
       ],
       "updated": "2026-10-21",
       "confidence": "medium",
@@ -2609,6 +2850,26 @@
       "ontologyClass": null
     },
     {
+      "id": "data-edge-deepstream-9-2-jetson-orin-model-fps",
+      "name": "NVIDIA DeepStream SDK 9.2 Performance: TAO pre-trained models end-to-end FPS on Jetson AGX Orin / AGX Thor",
+      "layer": "Concepts",
+      "domain": "edge-ai-compute",
+      "tags": [
+        "drone",
+        "edge-inference",
+        "jetson-orin",
+        "deepstream",
+        "tao",
+        "rt-detr",
+        "grounding-dino",
+        "fps"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
       "id": "data-edge-jetson-orin-lineup",
       "name": "NVIDIA Jetson Orin family (product page)",
       "layer": "Concepts",
@@ -2890,6 +3151,26 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "data-latency-px4-ardupilot-rates-delays-params-source",
+      "name": "PX4 and ArduPilot source docs: control loop rates, EKF delay parameter defaults, offboard timeout",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "control-loop",
+        "latency",
+        "px4",
+        "ardupilot",
+        "ekf2",
+        "ekf3",
+        "parameters"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "data-sync-hardware-timestamp-ntnu-wiki-and-gnss-clock",
       "name": "Hardware timestamping for drone sensors: NTNU Time Synchronization Overview and Open-Source LiDAR Time Synchronization (GNSS-clock mimic)",
       "layer": "Concepts",
@@ -2909,6 +3190,23 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "data-sync-kalibr-temporal-calibration-readme",
+      "name": "Kalibr (ethz-asl): Visual-Inertial Calibration with temporal (time offset) estimation",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "time-synchronization",
+        "camera-imu",
+        "kalibr",
+        "calibration"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "data-sync-linux-pps-kernel",
       "name": "PPS - Pulse Per Second (Linux kernel documentation)",
       "layer": "Concepts",
@@ -2918,6 +3216,24 @@
         "time-sync",
         "pps",
         "gnss"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "data-sync-ros2-message-filters-approximatetime-source",
+      "name": "ros2/message_filters ApproximateTime: official doc (doc/index.rst) and C++ source (jazzy/rolling) defaults",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "ros2",
+        "message-filters",
+        "time-synchronization",
+        "approximatetime",
+        "defaults"
       ],
       "updated": "2026-10-21",
       "confidence": "medium",
@@ -4782,6 +5098,43 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021",
+      "name": "A Miniaturized All-GNSS Bands Antenna Array Incorporating Multipath Suppression for Robust Satellite Navigation on UAV Platforms",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "gnss",
+        "crpa",
+        "antenna-array",
+        "choke-ring",
+        "uav"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020",
+      "name": "Precise 6D RTK Positioning System for UAV-based Near-Field Antenna Measurements",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "gnss",
+        "uav",
+        "rtk",
+        "attitude",
+        "multipath",
+        "antenna"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "env-kim-uav-airborne-multipath-jpnt-2015",
       "name": "GNSS Airborne Multipath Error Modeling Under UAV Platform and Operating Environment",
       "layer": "Concepts",
@@ -5434,6 +5787,25 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
+      "name": "Robust UAV Position and Attitude Estimation using Multiple GNSS Receivers for Laser-based 3D Mapping",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "drone",
+        "gnss",
+        "uav",
+        "multipath",
+        "rtk",
+        "fix-rate",
+        "antenna"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
       "id": "fusion-wen-fgo-vs-ekf-2004.10572",
       "name": "It is time for Factor Graph Optimization for GNSS/INS Integration: Comparison between FGO and EKF",
       "layer": "Concepts",
@@ -6069,6 +6441,24 @@
       "ontologyClass": null
     },
     {
+      "id": "jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026",
+      "name": "Low-latency jamming mitigation in SWaP-constrained GNSS analog CRPAs via hierarchical dithered null steering",
+      "layer": "Concepts",
+      "domain": "security",
+      "tags": [
+        "drone",
+        "gnss",
+        "crpa",
+        "null-steering",
+        "swap",
+        "시뮬레이션"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
       "id": "jamming-esa-jammertest-2026",
       "name": "Jammertest pumps up the jam in Norway (ESA)",
       "layer": "Concepts",
@@ -6121,6 +6511,39 @@
         "drone",
         "gnss",
         "novatel"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "jamming-septentrio-aim-plus-jamming-protection-page",
+      "name": "AIM+ GNSS jamming protection (Septentrio 기술 해설: 노치·광대역 완화)",
+      "layer": "Concepts",
+      "domain": "security",
+      "tags": [
+        "drone",
+        "gnss",
+        "aim-plus",
+        "septentrio"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "jamming-septentrio-jammertest-2023-results-page",
+      "name": "Most resilient GNSS receiver: results from JammerTest in Norway (Septentrio)",
+      "layer": "Concepts",
+      "domain": "security",
+      "tags": [
+        "drone",
+        "gnss",
+        "jammertest",
+        "aim-plus",
+        "anti-jam-antenna"
       ],
       "updated": "2026-10-21",
       "confidence": "medium",
@@ -7104,6 +7527,23 @@
       "ontologyClass": null
     },
     {
+      "id": "korea-ngii-geodesy-portal-access-attempt-2026-10-22",
+      "name": "국토지리정보원 GNSS 서비스포털 접근 시도 기록 (신청 절차 미확인)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "gnss",
+        "ngii",
+        "network-rtk",
+        "미확인"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "korea-ngii-geodesy-portal-service-list",
       "name": "국토지리정보원 GNSS 서비스포털 (geodesy.ngii.go.kr) 서비스 항목",
       "layer": "Concepts",
@@ -7132,6 +7572,24 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "korea-seoul-network-rtk-service-access",
+      "name": "서울특별시 네트워크 RTK 시스템 접속 정보 (서울시 공식 페이지)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "gnss",
+        "network-rtk",
+        "ntrip",
+        "vrs",
+        "seoul"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "kr-drone-business-registration",
@@ -8569,6 +9027,42 @@
       "ontologyClass": "GNSS"
     },
     {
+      "id": "precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013",
+      "name": "3D-RTK CAPABILITY OF SINGLE GNSS RECEIVERS",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "gnss",
+        "uav",
+        "rtk",
+        "single-frequency",
+        "baseline"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022",
+      "name": "Evaluation of BDS/GPS Multi-Frequency RTK Positioning Performance under Different Baseline Lengths",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "gnss",
+        "rtk",
+        "baseline",
+        "ambiguity-fixing-rate",
+        "비UAV"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "propeller-feedback-airspeed-estimation",
       "name": "프로펠러 피드백만으로 고정익 대기속도 추정 (Ntouros 외, 2025)",
       "layer": "Concepts",
@@ -9803,6 +10297,23 @@
         "drone",
         "gnss",
         "kci"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "spoofing-septentrio-aim-plus-spoofing-protection-page",
+      "name": "AIM+ Anti-Spoofing Protection (Septentrio 기술 해설)",
+      "layer": "Concepts",
+      "domain": "security",
+      "tags": [
+        "drone",
+        "gnss",
+        "aim-plus",
+        "osnma",
+        "septentrio"
       ],
       "updated": "2026-10-21",
       "confidence": "medium",
@@ -13329,6 +13840,60 @@
       "confidence": "medium"
     },
     {
+      "source": "ai-cert-do178c-ml-dmitriev-low-criticality-2022",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-do178c-ml-dmitriev-low-criticality-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-do178c-ml-dmitriev-low-criticality-2022",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-do178c-ml-dmitriev-low-criticality-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-do178c-ml-semi-automated-sridhar-2025",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-do178c-ml-semi-automated-sridhar-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-do178c-ml-semi-automated-sridhar-2025",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-do178c-ml-semi-automated-sridhar-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ai-cert-easa-ai-roadmap-timeline",
       "target": "ai-drone-models-hub",
       "type": "wikilink",
@@ -13365,6 +13930,24 @@
       "confidence": "medium"
     },
     {
+      "source": "ai-cert-easa-concept-paper-proposed-issue-03",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-easa-concept-paper-proposed-issue-03.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-easa-concept-paper-proposed-issue-03",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-easa-concept-paper-proposed-issue-03.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ai-cert-ed324-arp6983-ml-assurance-standard",
       "target": "ai-drone-models-hub",
       "type": "wikilink",
@@ -13379,6 +13962,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-ai-cert-ed324-arp6983-ml-assurance-standard.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-ed324-eurocae-wg114-status-2026-10",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-ed324-eurocae-wg114-status-2026-10.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-cert-ed324-eurocae-wg114-status-2026-10",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-cert-ed324-eurocae-wg114-status-2026-10.md"
       ],
       "confidence": "medium"
     },
@@ -13529,6 +14130,15 @@
     {
       "source": "ai-drone-data-processing-hub",
       "target": "data-edge-aerial-autonomy-stack-panerati-2026",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aidata.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-data-processing-hub",
+      "target": "data-edge-deepstream-9-2-jetson-orin-model-fps",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-aidata.md"
@@ -13690,6 +14300,15 @@
     },
     {
       "source": "ai-drone-data-processing-hub",
+      "target": "data-latency-px4-ardupilot-rates-delays-params-source",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aidata.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-data-processing-hub",
       "target": "data-sync-hardware-timestamp-ntnu-wiki-and-gnss-clock",
       "type": "wikilink",
       "evidence": [
@@ -13699,7 +14318,25 @@
     },
     {
       "source": "ai-drone-data-processing-hub",
+      "target": "data-sync-kalibr-temporal-calibration-readme",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aidata.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-data-processing-hub",
       "target": "data-sync-linux-pps-kernel",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aidata.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-data-processing-hub",
+      "target": "data-sync-ros2-message-filters-approximatetime-source",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-aidata.md"
@@ -13960,6 +14597,15 @@
     },
     {
       "source": "ai-drone-models-hub",
+      "target": "ai-model-yolo26-ultralytics-jetson-orin-per-variant",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
       "target": "ai-model-yolov10",
       "type": "wikilink",
       "evidence": [
@@ -14023,6 +14669,33 @@
     },
     {
       "source": "ai-drone-models-hub",
+      "target": "ai-cert-do178c-ml-dmitriev-low-criticality-2022",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-cert-do178c-ml-semi-automated-sridhar-2025",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
       "target": "ai-cert-easa-ai-roadmap-timeline",
       "type": "wikilink",
       "evidence": [
@@ -14041,7 +14714,25 @@
     },
     {
       "source": "ai-drone-models-hub",
+      "target": "ai-cert-easa-concept-paper-proposed-issue-03",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
       "target": "ai-cert-ed324-arp6983-ml-assurance-standard",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-cert-ed324-eurocae-wg114-status-2026-10",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-aimodel.md"
@@ -14104,6 +14795,15 @@
     },
     {
       "source": "ai-drone-models-hub",
+      "target": "ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
       "target": "ai-fl-uav-distributed-ml-swarms-ding-2023",
       "type": "wikilink",
       "evidence": [
@@ -14113,7 +14813,43 @@
     },
     {
       "source": "ai-drone-models-hub",
+      "target": "ai-fl-uav-dp-hierarchical-gat-shit-2025",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-fl-uav-privllmswarm-mpc-ayana-2025",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
       "target": "ai-fl-uav-reliable-participation-cheriguene-2023",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-fl-uav-soul-unlearning-zaman-2025",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-latency-ardupilot-companion-uart-baud-dade-2026",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-aimodel.md"
@@ -14302,6 +15038,24 @@
     },
     {
       "source": "ai-drone-models-hub",
+      "target": "ai-sync-camera-imu-online-temporal-calibration-qin-2018",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
+      "target": "ai-sync-camera-imu-varying-time-offset-ling-2018",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-aimodel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-models-hub",
       "target": "ai-uncertainty-deep-ensembles-lakshminarayanan-2016",
       "type": "wikilink",
       "evidence": [
@@ -14346,6 +15100,24 @@
       "confidence": "medium"
     },
     {
+      "source": "ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ai-fl-uav-distributed-ml-swarms-ding-2023",
       "target": "ai-drone-models-hub",
       "type": "wikilink",
@@ -14364,6 +15136,42 @@
       "confidence": "medium"
     },
     {
+      "source": "ai-fl-uav-dp-hierarchical-gat-shit-2025",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-dp-hierarchical-gat-shit-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-fl-uav-dp-hierarchical-gat-shit-2025",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-dp-hierarchical-gat-shit-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-fl-uav-privllmswarm-mpc-ayana-2025",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-privllmswarm-mpc-ayana-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-fl-uav-privllmswarm-mpc-ayana-2025",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-privllmswarm-mpc-ayana-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ai-fl-uav-reliable-participation-cheriguene-2023",
       "target": "ai-drone-models-hub",
       "type": "wikilink",
@@ -14378,6 +15186,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-ai-fl-uav-reliable-participation-cheriguene-2023.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-fl-uav-soul-unlearning-zaman-2025",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-soul-unlearning-zaman-2025.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-fl-uav-soul-unlearning-zaman-2025",
+      "target": "swarm-coordination",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-fl-uav-soul-unlearning-zaman-2025.md"
       ],
       "confidence": "medium"
     },
@@ -14410,6 +15236,24 @@
       "confidence": "low"
     },
     {
+      "source": "ai-latency-ardupilot-companion-uart-baud-dade-2026",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-latency-ardupilot-companion-uart-baud-dade-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-latency-ardupilot-companion-uart-baud-dade-2026",
+      "target": "px4-offboard-control",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-latency-ardupilot-companion-uart-baud-dade-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ai-latency-companion-fc-dds-vs-mavros-cotta-2023",
       "target": "ai-drone-models-hub",
       "type": "wikilink",
@@ -14892,6 +15736,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-model-yolo11.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-model-yolo26-ultralytics-jetson-orin-per-variant",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-model-yolo26-ultralytics-jetson-orin-per-variant.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-model-yolo26-ultralytics-jetson-orin-per-variant",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-model-yolo26-ultralytics-jetson-orin-per-variant.md"
       ],
       "confidence": "medium"
     },
@@ -15262,6 +16124,42 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-ai-smallobj-visdrone-zhu-2020.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-sync-camera-imu-online-temporal-calibration-qin-2018",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-sync-camera-imu-online-temporal-calibration-qin-2018.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-sync-camera-imu-online-temporal-calibration-qin-2018",
+      "target": "mbse-uav-sysml",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-sync-camera-imu-online-temporal-calibration-qin-2018.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-sync-camera-imu-varying-time-offset-ling-2018",
+      "target": "ai-drone-models-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-sync-camera-imu-varying-time-offset-ling-2018.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-sync-camera-imu-varying-time-offset-ling-2018",
+      "target": "mbse-uav-sysml",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-ai-sync-camera-imu-varying-time-offset-ling-2018.md"
       ],
       "confidence": "medium"
     },
@@ -17364,6 +18262,24 @@
       "confidence": "medium"
     },
     {
+      "source": "data-edge-deepstream-9-2-jetson-orin-model-fps",
+      "target": "ai-drone-data-processing-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-edge-deepstream-9-2-jetson-orin-model-fps.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-edge-deepstream-9-2-jetson-orin-model-fps",
+      "target": "companion-computer",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-edge-deepstream-9-2-jetson-orin-model-fps.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "data-edge-jetson-orin-lineup",
       "target": "ai-drone-data-processing-hub",
       "type": "wikilink",
@@ -17670,6 +18586,24 @@
       "confidence": "medium"
     },
     {
+      "source": "data-latency-px4-ardupilot-rates-delays-params-source",
+      "target": "ai-drone-data-processing-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-latency-px4-ardupilot-rates-delays-params-source.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-latency-px4-ardupilot-rates-delays-params-source",
+      "target": "px4-offboard-control",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-latency-px4-ardupilot-rates-delays-params-source.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "data-sync-hardware-timestamp-ntnu-wiki-and-gnss-clock",
       "target": "ai-drone-data-processing-hub",
       "type": "wikilink",
@@ -17688,6 +18622,24 @@
       "confidence": "medium"
     },
     {
+      "source": "data-sync-kalibr-temporal-calibration-readme",
+      "target": "ai-drone-data-processing-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-sync-kalibr-temporal-calibration-readme.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-sync-kalibr-temporal-calibration-readme",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-sync-kalibr-temporal-calibration-readme.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "data-sync-linux-pps-kernel",
       "target": "ai-drone-data-processing-hub",
       "type": "wikilink",
@@ -17702,6 +18654,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-data-sync-linux-pps-kernel.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-sync-ros2-message-filters-approximatetime-source",
+      "target": "ai-drone-data-processing-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-sync-ros2-message-filters-approximatetime-source.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-sync-ros2-message-filters-approximatetime-source",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-data-sync-ros2-message-filters-approximatetime-source.md"
       ],
       "confidence": "medium"
     },
@@ -22628,6 +23598,42 @@
       "confidence": "medium"
     },
     {
+      "source": "env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "env-kim-uav-airborne-multipath-jpnt-2015",
       "target": "gnss-engineering-hub",
       "type": "wikilink",
@@ -23655,6 +24661,24 @@
       "confidence": "medium"
     },
     {
+      "source": "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-fusion-suzuki-multi-gnss-receivers-uav-iros-2019.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-fusion-suzuki-multi-gnss-receivers-uav-iros-2019.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "fusion-wen-fgo-vs-ekf-2004.10572",
       "target": "gnss-engineering-hub",
       "type": "wikilink",
@@ -24007,6 +25031,24 @@
     },
     {
       "source": "gnss-engineering-hub",
+      "target": "env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
       "target": "env-kim-uav-airborne-multipath-jpnt-2015",
       "type": "wikilink",
       "evidence": [
@@ -24080,6 +25122,15 @@
     {
       "source": "gnss-engineering-hub",
       "target": "fusion-px4-ekf2-gnss-handling",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-gnss.md"
@@ -24232,6 +25283,15 @@
     },
     {
       "source": "gnss-engineering-hub",
+      "target": "jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
       "target": "jamming-esa-jammertest-2026",
       "type": "wikilink",
       "evidence": [
@@ -24260,6 +25320,24 @@
     {
       "source": "gnss-engineering-hub",
       "target": "jamming-novatel-grit-doc",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "jamming-septentrio-aim-plus-jamming-protection-page",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "jamming-septentrio-jammertest-2023-results-page",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-gnss.md"
@@ -24322,6 +25400,15 @@
     },
     {
       "source": "gnss-engineering-hub",
+      "target": "korea-ngii-geodesy-portal-access-attempt-2026-10-22",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
       "target": "korea-ngii-geodesy-portal-service-list",
       "type": "wikilink",
       "evidence": [
@@ -24332,6 +25419,15 @@
     {
       "source": "gnss-engineering-hub",
       "target": "korea-ngii-network-rtk-access-distributor-notice",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "korea-seoul-network-rtk-service-access",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-gnss.md"
@@ -24403,6 +25499,24 @@
     },
     {
       "source": "gnss-engineering-hub",
+      "target": "precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
       "target": "spoofing-jung-px4-ekf-drl-2506.08445",
       "type": "wikilink",
       "evidence": [
@@ -24431,6 +25545,15 @@
     {
       "source": "gnss-engineering-hub",
       "target": "spoofing-kci-park-sac-covert-spoofing-uav-jpnt-2026",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "spoofing-septentrio-aim-plus-spoofing-protection-page",
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-hub-gnss.md"
@@ -25172,6 +26295,24 @@
       "confidence": "medium"
     },
     {
+      "source": "jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026",
+      "target": "kci-dual-nis-sac-gnss-ins-spoofing",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "jamming-esa-jammertest-2026",
       "target": "gnss-engineering-hub",
       "type": "wikilink",
@@ -25240,6 +26381,42 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-jamming-novatel-grit-doc.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jamming-septentrio-aim-plus-jamming-protection-page",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-jamming-septentrio-aim-plus-jamming-protection-page.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jamming-septentrio-aim-plus-jamming-protection-page",
+      "target": "kci-dual-nis-sac-gnss-ins-spoofing",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-jamming-septentrio-aim-plus-jamming-protection-page.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jamming-septentrio-jammertest-2023-results-page",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-jamming-septentrio-jammertest-2023-results-page.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jamming-septentrio-jammertest-2023-results-page",
+      "target": "kci-dual-nis-sac-gnss-ins-spoofing",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-jamming-septentrio-jammertest-2023-results-page.md"
       ],
       "confidence": "medium"
     },
@@ -27258,6 +28435,24 @@
       "confidence": "medium"
     },
     {
+      "source": "korea-ngii-geodesy-portal-access-attempt-2026-10-22",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-korea-ngii-geodesy-portal-access-attempt-2026-10-22.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "korea-ngii-geodesy-portal-access-attempt-2026-10-22",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-korea-ngii-geodesy-portal-access-attempt-2026-10-22.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "korea-ngii-geodesy-portal-service-list",
       "target": "gnss-engineering-hub",
       "type": "wikilink",
@@ -27290,6 +28485,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-korea-ngii-network-rtk-access-distributor-notice.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "korea-seoul-network-rtk-service-access",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-korea-seoul-network-rtk-service-access.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "korea-seoul-network-rtk-service-access",
+      "target": "mbse-uav-sysml",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-korea-seoul-network-rtk-service-access.md"
       ],
       "confidence": "medium"
     },
@@ -30073,6 +31286,42 @@
       "confidence": "medium"
     },
     {
+      "source": "precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "propeller-feedback-airspeed-estimation",
       "target": "multirotor-propeller-test-research",
       "type": "wikilink",
@@ -32414,6 +33663,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-spoofing-kci-park-sac-covert-spoofing-uav-jpnt-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "spoofing-septentrio-aim-plus-spoofing-protection-page",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-spoofing-septentrio-aim-plus-spoofing-protection-page.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "spoofing-septentrio-aim-plus-spoofing-protection-page",
+      "target": "kci-dual-nis-sac-gnss-ins-spoofing",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261021-spoofing-septentrio-aim-plus-spoofing-protection-page.md"
       ],
       "confidence": "medium"
     },

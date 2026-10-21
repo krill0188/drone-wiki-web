@@ -2,8 +2,8 @@
 
 > 생성: `scripts/export-class-proposals.py` (결정론 키워드 규칙). **어떤 문서의 `ontology_class`도 자동으로 바꾸지 않았습니다.** 승인한 제안만 해당 문서 frontmatter에 반영하며, 문서 변경은 발행 게이트(해시 승인) 대상입니다.
 
-- 현재 `ontology_class`가 명시된 문서: 117 / 824
-- 제안 300건 · 문서 239개 · 등급 A 117 · B 58 · C 125
+- 현재 `ontology_class`가 명시된 문서: 118 / 852
+- 제안 323건 · 문서 258개 · 등급 A 129 · B 66 · C 128
 
 | 등급 | 의미 | 권장 |
 |---|---|---|
@@ -11,7 +11,7 @@
 | B | 슬러그·제목에서 여러 클래스가 걸림 | 문서별 검토 |
 | C | 태그만 일치 | 보류(약한 근거) |
 
-## 등급 A — 일괄 승인 후보 (117건)
+## 등급 A — 일괄 승인 후보 (129건)
 
 ### ArduPilot (3)
 - `concepts/data-flightlog-ardupilot-aplogger-formats.md` — AP_Logger README: format types, units, multipliers _(slug: ardupilot)_
@@ -45,13 +45,17 @@
 - `concepts/llm-uav-carrier-tactical-agent.md` — 무인기 모함 LLM 기반 자율 전술 에이전트 프레임워크 _(title: 프레임)_
 - `concepts/vendor-registry-frame.md` — 드론 프레임·완기체 제조사 레지스트리 _(slug: -frame)_
 
-### GNSS (45)
+### GNSS (56)
+- `concepts/ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026.md` — Receiver-Domain Behavioral Probing for Backdoor-Re _(slug: gps)_
 - `concepts/env-basler-usb3-2.4ghz-gps-note.md` — Possible Interference of the USB 3.0 Radio Frequen _(slug: gps)_
+- `concepts/env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021.md` — A Miniaturized All-GNSS Bands Antenna Array Incorp _(slug: gnss)_
+- `concepts/env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020.md` — Precise 6D RTK Positioning System for UAV-based Ne _(slug: rtk)_
 - `concepts/env-kim-uav-airborne-multipath-jpnt-2015.md` — GNSS Airborne Multipath Error Modeling Under UAV P _(title: gnss)_
 - `concepts/env-punzet-groundplane-rtk-uav-ars-2023.md` — Impact of Additional Antenna Groundplanes on RTK-G _(slug: rtk)_
 - `concepts/env-recuv-gpsworld-uas-gnss-2016.md` — RECUV work highlighted in GPS World (UAS GNSS inte _(slug: gnss)_
 - `concepts/env-usb3-gnss-emlid-forum-2017.md` — Problems with interference from USB3 hub (Emlid co _(slug: gnss)_
 - `concepts/fusion-delama-galilean-gnss-delay-2605.13266.md` — Galilean State Estimation for Inertial Navigation  _(slug: gnss)_
+- `concepts/fusion-suzuki-multi-gnss-receivers-uav-iros-2019.md` — Robust UAV Position and Attitude Estimation using  _(slug: gnss)_
 - `concepts/fusion-wen-fgo-vs-ekf-2004.10572.md` — It is time for Factor Graph Optimization for GNSS/ _(title: gnss)_
 - `concepts/gnss-denied-aeromap3d-2607.14009.md` — AeroMap3D: Anchoring Monocular UAV 6-DoF Localizat _(slug: gnss)_
 - `concepts/gnss-denied-leo-fisher-emenonye-2502.06083.md` — Geolocation with Large LEO Constellations: Insight _(slug: gnss)_
@@ -67,9 +71,12 @@
 - `concepts/gnss-signals-gps-navipedia.md` — GPS Signal Plan (Navipedia, ESA) _(slug: gnss)_
 - `concepts/integrity-kass-design-insidegnss.md` — KASS: The Future of SBAS in Korea (Inside GNSS) _(title: gnss)_
 - `concepts/integrity-raim-survey-huang-2025.md` — A survey of GNSS receiver autonomous integrity mon _(title: gnss)_
+- `concepts/jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026.md` — Low-latency jamming mitigation in SWaP-constrained _(title: gnss)_
 - `concepts/jamming-kci-yoo-resnet-svm-jamming-classification-kics-2023.md` — ResNet/SVM-Based GNSS Jamming Classification Schem _(title: gnss)_
 - `concepts/jamming-kwon-null-steering-circular-array-jees-2018.md` — Null Steering of Circular Array Using Array Factor _(title: gps)_
 - `concepts/jamming-novatel-grit-doc.md` — NovAtel GRIT - GNSS Resilience and Integrity Techn _(title: gnss)_
+- `concepts/jamming-septentrio-aim-plus-jamming-protection-page.md` — AIM+ GNSS jamming protection (Septentrio 기술 해설: 노치 _(title: gnss)_
+- `concepts/jamming-septentrio-jammertest-2023-results-page.md` — Most resilient GNSS receiver: results from JammerT _(title: gnss)_
 - `concepts/jamming-spanghero-jammer-localization-2503.20352.md` — GNSS jammer localization and identification with a _(title: gnss)_
 - `concepts/jamming-spanghero-uav-mapping-interference-2405.07611.md` — Uncovering GNSS Interference with Aerial Mapping U _(title: gnss)_
 - `concepts/kci-dual-nis-sac-gnss-ins-spoofing.md` — 이중 NIS 보상 SAC 기반 GNSS/INS 무인기 은닉 기만 기법 (KCI) _(slug: gnss)_
@@ -77,13 +84,17 @@
 - `concepts/korea-jamming-segye-2024-11-cumulative.md` — 북한 GPS 전파 교란 올해까지 7000건 넘어 (세계일보) _(title: gps)_
 - `concepts/korea-kci-kim-ngii-network-rtk-testbed-jpnt-2024.md` — Construction of Network RTK Testbed Using Referenc _(slug: rtk)_
 - `concepts/korea-kci-lee-network-rtk-mountpoint-comparison-2026.md` — Comparative Analysis of GNSS Positioning Performan _(slug: rtk)_
+- `concepts/korea-ngii-geodesy-portal-access-attempt-2026-10-22.md` — 국토지리정보원 GNSS 서비스포털 접근 시도 기록 (신청 절차 미확인) _(title: gnss)_
 - `concepts/korea-ngii-geodesy-portal-service-list.md` — 국토지리정보원 GNSS 서비스포털 (geodesy.ngii.go.kr) 서비스 항목 _(title: gnss)_
 - `concepts/korea-ngii-network-rtk-access-distributor-notice.md` — 국토지리정보원 네트워크 RTK(FKP) 이용안내 - 측량장비 유통사 게시글 (2차 출처) _(slug: rtk)_
+- `concepts/korea-seoul-network-rtk-service-access.md` — 서울특별시 네트워크 RTK 시스템 접속 정보 (서울시 공식 페이지) _(slug: rtk)_
 - `concepts/precise-kci-hwang-rtk-drone-river-survey-kosham-2024.md` — Analysis of Real-Time Kinematic Drones as a Replac _(slug: rtk)_
 - `concepts/precise-kci-kim-rtk-precision-landing-iemek-2023.md` — Experiments of RTK based Precision Landing for Rot _(slug: rtk)_
 - `concepts/precise-mirmohammadian-ztd-long-baseline-rtk-sensors-2022.md` — Multi-GNSS-Weighted Interpolated Tropospheric Dela _(slug: rtk)_
 - `concepts/precise-ppk-rtk-ppp-ar-arkali-2025.md` — Accuracy Assessment of RTK, PPK, and PPP-AR Techni _(slug: rtk)_
 - `concepts/precise-ppp-rtk-review-li-2022.md` — Review of PPP-RTK: achievements, challenges, and o _(slug: rtk)_
+- `concepts/precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013.md` — 3D-RTK CAPABILITY OF SINGLE GNSS RECEIVERS _(slug: gnss)_
+- `concepts/precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022.md` — Evaluation of BDS/GPS Multi-Frequency RTK Position _(slug: rtk)_
 - `concepts/spoofing-kci-kim-cn0-detection-korea-jpnt-2026-1.md` — A Study on C/N0 Based GNSS Spoofing Detection Cons _(title: gnss)_
 - `concepts/spoofing-kci-kim-cn0-detection-tle-jpnt-2026-3.md` — A Study on C/N0 Based GNSS Spoofing Detection Cons _(title: gnss)_
 - `concepts/spoofing-kci-park-sac-covert-spoofing-uav-jpnt-2026.md` — SAC-Based Covert Spoofing Technique for GNSS/INS I _(title: gnss)_
@@ -140,11 +151,12 @@
 - `concepts/pmsm-sensorless-controller-observer.md` — PMSM 센서리스 제어기-관측기 (UAV 프로펠러 적용) _(title: 프로펠러)_
 - `concepts/vendor-registry-propeller.md` — 드론 프로펠러 제조사 레지스트리 _(slug: propeller)_
 
-### ROS2 (5)
+### ROS2 (6)
 - `concepts/ai-latency-companion-fc-dds-vs-mavros-cotta-2023.md` — Latency Reduction and Packet Synchronization in Lo _(slug: mavros)_
 - `concepts/conv-mbse-sysml-ros2-angadi-2026.md` — Model-Based Systems Engineering Framework for SysM _(slug: ros2)_
 - `concepts/data-edge-aerial-autonomy-stack-panerati-2026.md` — aerial-autonomy-stack: a Faster-than-real-time, Au _(title: ros2)_
 - `concepts/data-flightlog-rosbag2.md` — rosbag2 (ros2/rosbag2 GitHub README) _(title: ros2)_
+- `concepts/data-sync-ros2-message-filters-approximatetime-source.md` — ros2/message_filters ApproximateTime: official doc _(slug: ros2)_
 - `concepts/data-sync-ros2-message-filters-approximatetime.md` — message_filters ApproximateTime policy (ROS wiki m _(slug: ros2)_
 
 ### SwarmCoordinator (17)
@@ -166,11 +178,13 @@
 - `concepts/uav-swarm-air-ground-isac.md` — 교차 지역 협력 기반 Air-Ground ISAC UAV 군집 _(slug: swarm)_
 - `concepts/uav-swarm-target-localization.md` — UAV Swarm Target Localization via Detection-Aided  _(slug: swarm)_
 
-## 등급 B — 문서별 검토 (58건)
+## 등급 B — 문서별 검토 (66건)
 
-### ArduPilot (5)
+### ArduPilot (7)
 - `comparisons/fc-firmware-comparison.md` — FPV 드론 FC 펌웨어 비교: Betaflight vs INAV vs ArduPilot _(title: ardupilot)_
+- `concepts/ai-latency-ardupilot-companion-uart-baud-dade-2026.md` — ArduPilot MAVLink telemetry reliability and latenc _(slug: ardupilot)_
 - `concepts/data-latency-px4-ardupilot-loop-rates-official.md` — PX4 / ArduPilot official docs: loop rates, offboar _(slug: ardupilot)_
+- `concepts/data-latency-px4-ardupilot-rates-delays-params-source.md` — PX4 and ArduPilot source docs: control loop rates, _(slug: ardupilot)_
 - `concepts/fusion-ardupilot-ekf3-gps-overview.md` — ArduPilot EKF3 overview: GPS usage parameters (Ard _(slug: ardupilot)_
 - `concepts/jamming-ardupilot-ekf3-jamming-expected-doc.md` — ArduPilot GPS Jamming Mediation (EK3_OPTIONS Jammi _(slug: ardupilot)_
 - `concepts/ros2-drone-deep.md` — ROS2 Drone Integration Deep — PX4/ArduPilot 연동 상세 _(title: ardupilot)_
@@ -179,7 +193,9 @@
 - `concepts/conv-energy-flying-batteries-jain-2019.md` — Flying batteries: In-flight battery switching to i _(title: battery)_
 - `concepts/kci-lidar-slam-indoor-battery-monitoring-iot-uav.md` — LiDAR-SLAM 기반 실내 배터리 모니터링 IoT-UAV 플랫폼 (KCI) _(slug: battery)_
 
-### Camera (4)
+### Camera (6)
+- `concepts/ai-sync-camera-imu-online-temporal-calibration-qin-2018.md` — Online Temporal Calibration for Monocular Visual-I _(slug: camera)_
+- `concepts/ai-sync-camera-imu-varying-time-offset-ling-2018.md` — Modeling Varying Camera-IMU Time Offset in Optimiz _(slug: camera)_
 - `concepts/gps-uav-imu.md` — GPS 미수신 환경에 특화된 마이크로드론/UAV 위치추정 기법들은 공통적으로 외부 위치 인 _(title: 카메라)_
 - `concepts/hoverair-versa.md` — HoverAir Versa: 짐벌-드론 하이브리드 카메라 _(title: 카메라)_
 - `concepts/micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m.md` — 검색 결과에서 "micro drone"으로 명시된 SLAM 사례는 카메라+IMU(VIO)  _(title: 카메라)_
@@ -221,7 +237,9 @@
 - `concepts/hoverair-versa.md` — HoverAir Versa: 짐벌-드론 하이브리드 카메라 _(title: 짐벌)_
 - `concepts/vendor-registry-camera.md` — 드론 카메라·짐벌 제조사 레지스트리 _(title: 짐벌)_
 
-### IMU (3)
+### IMU (5)
+- `concepts/ai-sync-camera-imu-online-temporal-calibration-qin-2018.md` — Online Temporal Calibration for Monocular Visual-I _(slug: imu)_
+- `concepts/ai-sync-camera-imu-varying-time-offset-ling-2018.md` — Modeling Varying Camera-IMU Time Offset in Optimiz _(slug: imu)_
 - `concepts/gps-uav-imu.md` — GPS 미수신 환경에 특화된 마이크로드론/UAV 위치추정 기법들은 공통적으로 외부 위치 인 _(slug: imu)_
 - `concepts/micro-drone-slam-imu-vio-lidar-uav-livox-mid-360-pixhawk-4-m.md` — 검색 결과에서 "micro drone"으로 명시된 SLAM 사례는 카메라+IMU(VIO)  _(slug: imu)_
 - `concepts/vendor-registry-gnss-imu.md` — 드론 GNSS·IMU·센서 제조사 레지스트리 _(slug: imu)_
@@ -239,8 +257,9 @@
 - `concepts/conv-energy-flying-batteries-jain-2019.md` — Flying batteries: In-flight battery switching to i _(title: multirotor)_
 - `concepts/multirotor-propeller-test-research.md` — 프로펠러 성능 시험·측정 연구 (벤치, 저 Re, 덕티드 동축) _(slug: multirotor)_
 
-### PX4 (6)
+### PX4 (7)
 - `concepts/data-latency-px4-ardupilot-loop-rates-official.md` — PX4 / ArduPilot official docs: loop rates, offboar _(slug: px4)_
+- `concepts/data-latency-px4-ardupilot-rates-delays-params-source.md` — PX4 and ArduPilot source docs: control loop rates, _(slug: px4)_
 - `concepts/fusion-px4-ekf2-gnss-handling.md` — PX4 EKF2 tuning: GNSS fusion control, quality gate _(slug: px4)_
 - `concepts/px4-flight-modes.md` — PX4 Flight Modes _(slug: px4)_
 - `concepts/ros2-drone-deep.md` — ROS2 Drone Integration Deep — PX4/ArduPilot 연동 상세 _(title: px4)_
@@ -262,6 +281,9 @@
 - `concepts/decentralized-swarm-gps-denied.md` — Decentralized UAV Swarms in GPS/Communication-Deni _(slug: swarm)_
 - `concepts/kci-vtol-swarm-takeoff-landing-operation.md` — 다수 VTOL 무인기 군집비행 이착륙 운용방안 (KCI) _(slug: swarm)_
 - `concepts/rigid-covert-gnss-spoofing-swarm.md` — Rigid-Covert GNSS Spoofing: UAV 군집의 구조적 탐지 사각지대 _(slug: swarm)_
+
+### Telemetry (1)
+- `concepts/ai-latency-ardupilot-companion-uart-baud-dade-2026.md` — ArduPilot MAVLink telemetry reliability and latenc _(title: telemetry)_
 
 ### VTOL (1)
 - `concepts/kci-vtol-swarm-takeoff-landing-operation.md` — 다수 VTOL 무인기 군집비행 이착륙 운용방안 (KCI) _(slug: vtol)_

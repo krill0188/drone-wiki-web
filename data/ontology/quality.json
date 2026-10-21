@@ -1,16 +1,16 @@
 {
  "generated": "2026-10-22",
- "fingerprint": "05766f4d4705",
+ "fingerprint": "163c820b8aea",
  "counts": {
-  "manufacturers": 245,
-  "products": 662,
+  "manufacturers": 255,
+  "products": 682,
   "rules": 26,
   "papers": 109,
   "claims": 259,
-  "edges": 4485,
-  "documents": 824,
-  "wikiClaims": 2444,
-  "relations": 4520
+  "edges": 4525,
+  "documents": 852,
+  "wikiClaims": 2671,
+  "relations": 4560
  },
  "claimsByKind": {
   "cited-secondary": 3,
@@ -43,14 +43,14 @@
   "paper:verified": 248,
   "wiki:blocked": 22,
   "wiki:contested": 6,
-  "wiki:sourced": 2413,
+  "wiki:sourced": 2640,
   "wiki:unverified": 3
  },
  "productsByCategory": {
   "motor": 163,
+  "gnss": 94,
   "propeller": 88,
   "battery": 82,
-  "gnss": 74,
   "frame": 70,
   "esc": 56,
   "engine": 29,
@@ -61,31 +61,31 @@
   "payload": 16
  },
  "manufacturers": {
-  "withSpecs": 90,
+  "withSpecs": 100,
   "registryOnly": 155,
   "countryVerified": 17,
   "countryUnverified": 189,
-  "countryUnknown": 39
+  "countryUnknown": 49
  },
  "documents": {
-  "total": 824,
-  "withDomain": 821,
+  "total": 852,
+  "withDomain": 849,
   "noDomain": 3,
   "unregisteredDomain": 4,
-  "withOntologyClass": 117,
+  "withOntologyClass": 118,
   "byDomain": {
-   "ai-autonomy": 184,
-   "hardware": 149,
-   "ops-mission": 142,
-   "flight-control": 72,
+   "ai-autonomy": 190,
+   "hardware": 156,
+   "ops-mission": 143,
+   "flight-control": 74,
    "comms-protocol": 63,
-   "regulations": 51,
+   "regulations": 56,
+   "edge-ai-compute": 30,
    "gcs-software": 29,
-   "edge-ai-compute": 28,
    "vendor-registry": 18,
+   "security": 18,
    "simulation-test": 17,
-   "navigation-gnss-denied": 15,
-   "security": 14,
+   "navigation-gnss-denied": 16,
    "software-ecosystem": 13,
    "rf-datalink-engineering": 12,
    "electrical-power": 4,
@@ -99,15 +99,15 @@
   }
  },
  "sources": {
-  "total": 1201,
-  "resolved": 1172,
+  "total": 1229,
+  "resolved": 1200,
   "unresolved": 24,
   "unknown": 5
  },
  "edgesByRelation": {
   "packFits": 1867,
-  "isA": 662,
-  "madeBy": 662,
+  "isA": 682,
+  "madeBy": 682,
   "powersWith": 403,
   "reportedIn": 259,
   "hasCategory": 217,
