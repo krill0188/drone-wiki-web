@@ -533,6 +533,78 @@
       "status": "verified",
       "evidenceKind": "model-assumption",
       "note": "수식 인용(원문 LaTeX를 평문으로 옮김). 구조 분율 하한이 6~20% 범위라는 설계 가정"
+    },
+    {
+      "id": "CL31",
+      "rules": [
+        "R04"
+      ],
+      "subject": "소형 UAV 설계 디스크 로딩",
+      "attribute": "disc loading",
+      "value": "90 N/m² (약 9.2 kgf/m²)",
+      "unit": "N/m²",
+      "conditions": "가변 피치 쿼드로터 복엽 VTOL 설계 논문이 선택한 기준 설계값. R04 상수(보수 60·낙관 90 kgf/m²)는 '현실적 최대 추력 면적밀도'라 이 호버 설계값보다 6~10배 크다 — 같은 양이 아니므로 직접 비교 불가",
+      "sourceType": "paper",
+      "sourceId": "arXiv:1801.02938",
+      "locator": "4.1 Baseline configuration selection",
+      "quote": "A disc loading of 90 N/m2 (1.88 lb/ft2) is chosen, which has been reported to be reasonable for small UAVs [23].",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "1 kgf = 9.81 N. 원문 [23]은 열람 못 함(재인용). R04의 최대 추력 기준 상한과 정의가 달라 상수 근거로는 부족"
+    },
+    {
+      "id": "CL32",
+      "rules": [
+        "R07"
+      ],
+      "subject": "DJI Matrice 350 RTK 최대 수평 속도",
+      "attribute": "max horizontal speed",
+      "value": 23,
+      "unit": "m/s",
+      "conditions": "기체 최대 속도이지 임무 평균 속도가 아님. 최대 이륙 무게 9.2kg",
+      "sourceType": "manufacturer",
+      "sourceId": "enterprise.dji.com/matrice-350-rtk/specs",
+      "locator": "사양 표",
+      "quote": "최대 수평 속도 23 m/s",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "R07 낙관 상한 25 m/s와 같은 범위"
+    },
+    {
+      "id": "CL33",
+      "rules": [
+        "R07"
+      ],
+      "subject": "DJI Agras T40 최대 비행·작동 속도",
+      "attribute": "max flight speed",
+      "value": 10,
+      "unit": "m/s",
+      "conditions": "농업용 방제 드론. 작업 속도 제한이 포함된 값",
+      "sourceType": "manufacturer",
+      "sourceId": "dji.com/support/product/t40",
+      "locator": "Aircraft FAQ",
+      "quote": "최대 비행 속도: 10m/s, 최대 작동 비행 속도 10m/s",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "R07 보수 상한 15 m/s보다 낮음 — 작업형 기체는 더 낮은 속도에서 운용"
+    },
+    {
+      "id": "CL34",
+      "rules": [
+        "R12"
+      ],
+      "subject": "인접 프로펠러 유닛 축 간격",
+      "attribute": "inter-axis distance / propeller diameter",
+      "value": 1.5,
+      "unit": "배",
+      "conditions": "FlexiQuad 확장 모델 설계값. 식 D ≤ W·sin(π/N)·(1−ε)에 대입하면 ε≈0.33에 해당(저자 계산). 일반 쿼드의 0.05와는 다른 설계 철학",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2511.05426",
+      "locator": "7.4 FlexiQuad Scaling Model",
+      "quote": "the inter-axis distance between adjacent PUs is set to 1.5 times the propeller diameter ... ensuring thrust losses due to inter-propeller aerodynamic interaction remain below 1%",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "R12 기준식의 ε=0.05(CL24)는 접촉 한계 직전 값이고, 공력 간섭 손실 <1%를 목표로 하면 간격이 훨씬 커짐 — 상수는 유지하되 한계로 공개"
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
  "generated": "2026-10-21",
- "fingerprint": "f88c1a9cfc9d",
+ "fingerprint": "a59b324e94ba",
  "counts": {
   "manufacturers": 238,
   "products": 588,
   "rules": 26,
-  "papers": 108,
-  "claims": 255,
+  "papers": 109,
+  "claims": 259,
   "edges": 4290,
   "documents": 645,
   "wikiClaims": 1252,
@@ -16,14 +16,14 @@
   "cited-secondary": 3,
   "derived": 6,
   "model-assumption": 35,
-  "reported": 190,
+  "reported": 194,
   "simulation": 21
  },
  "claimsByTopic": {
   "propulsion": 39,
+  "-": 34,
   "companion": 32,
   "vtol-fixedwing": 30,
-  "-": 30,
   "energy": 27,
   "sizing": 23,
   "battery": 16,
@@ -39,8 +39,8 @@
   "derived:sourced": 2,
   "derived:verified": 1,
   "manufacturer:sourced": 4,
-  "manufacturer:verified": 2,
-  "paper:verified": 246,
+  "manufacturer:verified": 4,
+  "paper:verified": 248,
   "wiki:blocked": 25,
   "wiki:contested": 6,
   "wiki:sourced": 1219,
@@ -278,12 +278,12 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "2·m ≤ N·A·DL",
-   "claims": 3,
+   "claims": 4,
    "byKind": {
     "model-assumption": 2,
-    "reported": 1
+    "reported": 2
    },
-   "papers": 3
+   "papers": 4
   },
   {
    "id": "R05",
@@ -326,9 +326,9 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "v_req = R/t ≤ v_max",
-   "claims": 4,
+   "claims": 6,
    "byKind": {
-    "reported": 4
+    "reported": 6
    },
    "papers": 4
   },
@@ -390,11 +390,11 @@
    "kind": "heuristic",
    "sourceStatus": "partially-verified",
    "formula": "d_prop ≤ D_max + 0.5in",
-   "claims": 2,
+   "claims": 3,
    "byKind": {
-    "reported": 2
+    "reported": 3
    },
-   "papers": 2
+   "papers": 3
   },
   {
    "id": "R13",

@@ -111,12 +111,14 @@
       },
       "sourceStatus": "partially-verified",
       "note": "현실적 최대 추력 면적밀도 가정",
-      "claims": [],
+      "claims": [
+        "CL31"
+      ],
       "kind": "empirical",
       "webEvidence": {
-        "collected": "2026-10-20",
+        "collected": "2026-10-21",
         "by": "web-research-agent",
-        "strength": "MEDIUM",
+        "strength": "LOW",
         "constantsVsLiterature": "**부분 일치**: 대형/UAM 멀티로터에 해당, 소형 드론(1~20 kg/m²)과 다름",
         "urls": [
           "https://en.wikipedia.org/wiki/Disk_loading",
@@ -124,8 +126,10 @@
           "https://arxiv.org/pdf/2411.05994",
           "https://cubefpv.com/home/resources/reference-area/fpv-drone-disc-loading-data/"
         ],
-        "humanVerified": null
-      }
+        "humanVerified": null,
+        "updated": "소형 UAV 호버 설계 디스크 로딩은 약 7~10 kgf/m²(논문 90 N/m²). 규칙 상수 60/90 kgf/m²는 최대 추력 면적밀도라 같은 양이 아님 — 직접 지지 못 함, 느슨한 상한"
+      },
+      "literatureConflict": "**정의 불일치**: 문헌 호버 설계값 ~9 kgf/m² vs 규칙 최대 추력 기준 60~90 kgf/m²(비교 불가·느슨한 상한)"
     },
     {
       "id": "R05",
@@ -207,10 +211,13 @@
         "vmax_opt": 25
       },
       "sourceStatus": "partially-verified",
-      "claims": [],
+      "claims": [
+        "CL32",
+        "CL33"
+      ],
       "kind": "empirical",
       "webEvidence": {
-        "collected": "2026-10-20",
+        "collected": "2026-10-21",
         "by": "web-research-agent",
         "strength": "MEDIUM",
         "constantsVsLiterature": "**일치**: 시뮬레이션 20 m/s 순항, 25 m/s 대시 확인",
@@ -219,7 +226,8 @@
           "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277356/table/T5",
           "https://ntrs.nasa.gov/api/citations/20210025082/downloads/20210025082_Pradeep_SciTech2022_manuscript_final.pdf"
         ],
-        "humanVerified": null
+        "humanVerified": null,
+        "updated": "상용 기체 최대 속도 10(방제 T40)~23 m/s(M350). 보수 15·낙관 25는 이 범위 안. 임무 평균 속도 상한을 직접 명시한 출처는 없음"
       }
     },
     {
@@ -360,10 +368,12 @@
         "tolerance_in": 0.5
       },
       "sourceStatus": "partially-verified",
-      "claims": [],
+      "claims": [
+        "CL34"
+      ],
       "kind": "heuristic",
       "webEvidence": {
-        "collected": "2026-10-20",
+        "collected": "2026-10-21",
         "by": "web-research-agent",
         "strength": "MEDIUM",
         "constantsVsLiterature": "**공식 일치**, 0.5in 절대값 출처 미확인 (5% 비율로 대체 가능)",
@@ -371,7 +381,8 @@
           "https://arxiv.org/html/2607.22768v1",
           "https://arxiv.org/pdf/1908.06301"
         ],
-        "humanVerified": null
+        "humanVerified": null,
+        "updated": "접촉 한계 기하식은 확인(CL24). 공력 간섭 손실 <1% 기준이면 간격이 1.5D(ε≈0.33)로 훨씬 큼 — 상수 ε는 최소 간극 기준임을 유지"
       }
     },
     {
