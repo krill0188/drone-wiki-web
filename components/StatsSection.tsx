@@ -41,12 +41,13 @@ function StatCard({ value, label, suffix = "", delay = 0 }: {
   )
 }
 
-export default function StatsSection() {
+// 숫자는 서버(app/page.tsx)가 data/ontology 에서 읽어 넘긴다. 하드코딩한 23개·100%는 실제와 달랐다(2026-10-21).
+export default function StatsSection({ rules, docs }: { rules: number; docs: number }) {
   return (
     <div className="grid grid-cols-3 gap-3 my-10">
-      <StatCard value={23} label="물리 법칙 규칙" suffix="개" delay={0} />
+      <StatCard value={rules} label="코드로 구현된 공학 규칙" suffix="개" delay={0} />
       <StatCard value={6} label="AI 에이전트 단계" suffix="단계" delay={0.1} />
-      <StatCard value={100} label="사람 검증 기반" suffix="%" delay={0.2} />
+      <StatCard value={docs} label="공개 위키 문서" suffix="편" delay={0.2} />
     </div>
   )
 }

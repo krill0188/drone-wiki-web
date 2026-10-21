@@ -5,11 +5,16 @@ import HeroSection from "@/components/HeroSection"
 import AnimatedFeatureCard from "@/components/AnimatedFeatureCard"
 import PipelineFlow from "@/components/PipelineFlow"
 import StatsSection from "@/components/StatsSection"
+import rulesJson from "@/data/ontology/rules.json"
+import qualityJson from "@/data/ontology/quality.json"
 
 export default async function HomePage() {
   const feed = getNewsFeed()
   const latest = feed.slice(0, 16)
   const briefing = getDailyBriefing()
+  const ruleRows = (rulesJson as { rules?: { status: string }[] }).rules ?? (rulesJson as unknown as { status: string }[])
+  const implementedRules = ruleRows.filter((r) => r.status === "implemented").length
+  const wikiDocs = (qualityJson as { counts: { documents: number } }).counts.documents
 
   return (
     <div>
@@ -49,7 +54,7 @@ export default async function HomePage() {
         <PipelineFlow />
 
         {/* 스탯 카운트업 */}
-        <StatsSection />
+        <StatsSection rules={implementedRules} docs={wikiDocs} />
 
         {/* 뉴스 */}
         <div className="flex items-baseline justify-between mb-2">
