@@ -1,30 +1,30 @@
 {
  "generated": "2026-10-21",
- "fingerprint": "33ba9d65889a",
+ "fingerprint": "f88c1a9cfc9d",
  "counts": {
   "manufacturers": 238,
   "products": 588,
   "rules": 26,
   "papers": 108,
-  "claims": 251,
+  "claims": 255,
   "edges": 4290,
   "documents": 645,
   "wikiClaims": 1252,
   "relations": 4325
  },
  "claimsByKind": {
-  "cited-secondary": 2,
-  "derived": 5,
-  "model-assumption": 34,
-  "reported": 189,
+  "cited-secondary": 3,
+  "derived": 6,
+  "model-assumption": 35,
+  "reported": 190,
   "simulation": 21
  },
  "claimsByTopic": {
   "propulsion": 39,
   "companion": 32,
   "vtol-fixedwing": 30,
+  "-": 30,
   "energy": 27,
-  "-": 26,
   "sizing": 23,
   "battery": 16,
   "build": 14,
@@ -37,9 +37,10 @@
  },
  "claimsByStatus": {
   "derived:sourced": 2,
-  "manufacturer:sourced": 3,
+  "derived:verified": 1,
+  "manufacturer:sourced": 4,
   "manufacturer:verified": 2,
-  "paper:verified": 244,
+  "paper:verified": 246,
   "wiki:blocked": 25,
   "wiki:contested": 6,
   "wiki:sourced": 1219,
@@ -308,11 +309,11 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "m_struct+avionics = ef·m",
-   "claims": 18,
+   "claims": 19,
    "byKind": {
     "cited-secondary": 1,
     "derived": 1,
-    "model-assumption": 3,
+    "model-assumption": 4,
     "reported": 12,
     "simulation": 1
    },
@@ -400,11 +401,12 @@
    "name": "부품 질량 합 한계",
    "status": "implemented",
    "kind": "heuristic",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "Σm_parts ≤ 1.15·AUW",
-   "claims": 1,
+   "claims": 3,
    "byKind": {
-    "reported": 1
+    "cited-secondary": 1,
+    "reported": 2
    },
    "papers": 1
   },
@@ -413,13 +415,15 @@
    "name": "프레임 질량 상한",
    "status": "implemented",
    "kind": "heuristic",
-   "sourceStatus": "unverified",
+   "sourceStatus": "partially-verified",
    "formula": "m_frame ≤ 0.45·AUW",
-   "claims": 4,
+   "claims": 6,
    "byKind": {
+    "derived": 1,
+    "model-assumption": 1,
     "reported": 4
    },
-   "papers": 3
+   "papers": 4
   },
   {
    "id": "R15",

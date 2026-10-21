@@ -1,6 +1,7 @@
 import Link from "next/link"
 import type { Metadata } from "next"
 import quality from "../../data/ontology/quality.json"
+import rulesJson from "../../data/ontology/rules.json"
 
 export const metadata: Metadata = {
   title: "지식 품질 — DroneWiki",
@@ -20,6 +21,10 @@ type Q = {
   warnings: { desc: string; ok: boolean; count: number; sample: string[] }[]
 }
 const Qd = quality as unknown as Q
+// 규칙별 웹 조사 강도·문헌 대조·검토 결정(rules.json). 근거가 약한 규칙도 숨기지 않고 그대로 보여 준다.
+type RuleExtra = { id: string; literatureConflict?: string; reviewDecision?: { decision?: string; rationale?: string }; webEvidence?: { strength?: string; collected?: string } }
+const extraById = new Map(((((rulesJson as { rules?: RuleExtra[] }).rules ?? (rulesJson as unknown as RuleExtra[]))) as RuleExtra[]).map((r) => [r.id, r]))
+const STRENGTH_COLOR: Record<string, string> = { HIGH: "text-emerald-700 dark:text-emerald-300", MEDIUM: "text-amber-700 dark:text-amber-300", LOW: "text-red-700 dark:text-red-300" }
 
 const KIND_LABEL: Record<string, string> = { reported: "논문 보고값", "model-assumption": "모델 가정값", simulation: "시뮬레이션", "cited-secondary": "2차 인용", derived: "파생 계산" }
 const KIND_COLOR: Record<string, string> = { reported: "bg-emerald-500", derived: "bg-sky-500", "model-assumption": "bg-amber-500", simulation: "bg-orange-500", "cited-secondary": "bg-slate-400" }
@@ -103,7 +108,7 @@ export default function QualityPage() {
           <table className="w-full text-xs border-collapse">
             <thead>
               <tr className="text-left text-slate-500 border-b border-slate-200 dark:border-slate-700">
-                <th className="py-1 pr-2">규칙</th><th className="pr-2">종류</th><th className="pr-2">근거 상태</th><th className="pr-2">claim</th><th className="pr-2">논문</th><th className="w-28">증거 구성</th>
+                <th className="py-1 pr-2">규칙</th><th className="pr-2">종류</th><th className="pr-2">근거 상태</th><th className="pr-2">claim</th><th className="pr-2">논문</th><th className="pr-2">웹 조사</th><th className="w-28">증거 구성</th>
               </tr>
             </thead>
             <tbody>
@@ -117,6 +122,10 @@ export default function QualityPage() {
                     <td className={`pr-2 whitespace-nowrap ${s.c}`}>{s.t}</td>
                     <td className="pr-2">{r.claims}{gap && " ❗공백"}</td>
                     <td className="pr-2">{r.papers}</td>
+                    <td className="pr-2 whitespace-nowrap">
+                      {extraById.get(r.id)?.webEvidence?.strength ? <span className={STRENGTH_COLOR[extraById.get(r.id)!.webEvidence!.strength!] ?? ""} title={extraById.get(r.id)?.literatureConflict?.replace(/\*\*/g, "") ?? ""}>{extraById.get(r.id)!.webEvidence!.strength}</span> : <span className="text-slate-300">—</span>}
+                      {extraById.get(r.id)?.reviewDecision?.decision === "keep" && <span className="text-slate-500" title={extraById.get(r.id)?.reviewDecision?.rationale}> · 유지</span>}
+                    </td>
                     <td>{r.claims ? <Bar parts={r.byKind} /> : <span className="text-slate-300">—</span>}</td>
                   </tr>
                 )
@@ -124,7 +133,7 @@ export default function QualityPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-[11px] text-slate-400 mt-1">실측 상수 규칙에 근거 claim이 없으면 공백(❗)으로 표시됩니다. 산술 정의는 근거가 필요 없고, 경험칙은 보조 근거만 있으면 됩니다.</p>
+        <p className="text-[11px] text-slate-400 mt-1">웹 조사 열은 규칙 상수를 문헌·제조사 자료와 대조한 강도(HIGH 직접 일치 / MEDIUM 부분 / LOW 간접)이며, 마우스를 올리면 대조 결과와 유지 사유가 보입니다. 실측 상수 규칙에 근거 claim이 없으면 공백(❗)으로 표시됩니다. 산술 정의는 근거가 필요 없고, 경험칙은 보조 근거만 있으면 됩니다.</p>
       </section>
 
       <section className="mb-6">

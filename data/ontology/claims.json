@@ -460,6 +460,79 @@
       "status": "verified",
       "evidenceKind": "reported",
       "note": "R16 '협대역(LoRa류)은 영상 불가'의 정량 근거. 영상 비트레이트는 VideoProc H.264 참고표(480p 약 1800 kbps)와 비교"
+    },
+    {
+      "id": "CL27",
+      "rules": [
+        "R13"
+      ],
+      "subject": "질량 추정 불확실성 여유(contingency) — 설계 성숙도별",
+      "attribute": "mass contingency",
+      "value": "Concept 25% / Design 15% / Prior Build 7.5% / Fabrication 4% / Flight Build 2%",
+      "unit": "%",
+      "conditions": "우주선(THEMIS 프로젝트) 사례로 UAV가 아님. 설계 단계 15%가 R13 허용오차 15%와 크기가 같다는 비교 근거일 뿐 UAV 직접 근거는 아님",
+      "sourceType": "agency-doc",
+      "sourceId": "themis.ssl.berkeley.edu thm_SRR_RFA_Response_06_RevA",
+      "locator": "SEMP 인용 contingency 표",
+      "quote": "Concept: 25% ... Design: 15% ... Prior Build: 7.5% ... Fabrication: 4% ... Flight Build: 2%",
+      "status": "verified",
+      "evidenceKind": "cited-secondary",
+      "note": "같은 문서가 NASA SE Handbook(SP-6105) 문장 인용: 'spacecraft dry mass tends to grow during Phases C and D by as much as 25 to 30 percent.' 현행 AIAA 규격은 S-120A-2015(R-020A 대체) — 수치표는 유료라 미확인"
+    },
+    {
+      "id": "CL28",
+      "rules": [
+        "R13"
+      ],
+      "subject": "DIY 기체 20기의 MTOW 예측 오차",
+      "attribute": "MTOW MAPE",
+      "value": "26.1% (95% CI 18.5%–33.7%)",
+      "unit": "%",
+      "conditions": "AeroEval 엔진을 DIY 드론 20기에 적용한 결과. 상용 기체 대상은 7.2%(P2607.22768-09)",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "arxiv.org/html/2607.22768v1 검증 절",
+      "quote": "this cohort yields a MTOW MAPE of 26.1% (95% CI: 18.5%–33.7%)",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "상용 7.2%에는 15% 허용이 넉넉하지만 DIY에는 부족할 수 있다는 방향의 근거. 상수는 유지하고 한계로 공개"
+    },
+    {
+      "id": "CL29",
+      "rules": [
+        "R14"
+      ],
+      "subject": "DJI S1000 센터 프레임 질량 ÷ 이륙중량",
+      "attribute": "frame mass fraction",
+      "value": "1330g ÷ 6.0~11.0kg = 약 12~22%",
+      "unit": "-",
+      "conditions": "센터 프레임(랜딩기어 마운트·서보 포함)만의 질량이고 암은 제외. 제조사 공식 사양의 두 값으로 계산한 파생값",
+      "sourceType": "manufacturer",
+      "sourceId": "dji.com/spreading-wings-s1000/spec",
+      "locator": "Specification 표",
+      "quote": "Center Frame Weight (with Landing Gear Mounting Base, Servos) 1330g; Takeoff Weight 6.0Kg ~ 11.0Kg",
+      "status": "derived",
+      "evidenceKind": "derived",
+      "note": "R14 상한 0.45는 이 실측 분율의 2배 이상으로 느슨함(모순 아님). 암 포함 구조 분율은 더 높을 수 있음"
+    },
+    {
+      "id": "CL30",
+      "rules": [
+        "R06",
+        "R14"
+      ],
+      "subject": "설계 모델의 구조 질량 분율 하한",
+      "attribute": "f_struct,min",
+      "value": "max(0.06, min(0.20, 0.05 + 0.05W))",
+      "unit": "-",
+      "conditions": "AeroEval 설계 모델의 가정식(W는 논문 정의 변수). 실측이 아니라 모델 가정",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "arxiv.org/html/2607.22768v1 구조 모델 절",
+      "quote": "f_struct,min = max(0.06, min(0.20, 0.05 + 0.05W))",
+      "status": "verified",
+      "evidenceKind": "model-assumption",
+      "note": "수식 인용(원문 LaTeX를 평문으로 옮김). 구조 분율 하한이 6~20% 범위라는 설계 가정"
     }
   ]
 }

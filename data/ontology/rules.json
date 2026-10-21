@@ -383,19 +383,24 @@
       "constants": {
         "tolerance": 1.15
       },
-      "sourceStatus": "unverified",
-      "claims": [],
+      "sourceStatus": "partially-verified",
+      "claims": [
+        "CL27",
+        "CL28",
+        "P2607.22768-09"
+      ],
       "kind": "heuristic",
       "webEvidence": {
-        "collected": "2026-10-20",
+        "collected": "2026-10-21",
         "by": "web-research-agent",
-        "strength": "LOW",
+        "strength": "MEDIUM",
         "constantsVsLiterature": "**간접 지지**: 7.2% MAPE 오차 2배 수준, 직접 명시 없음",
         "urls": [
           "https://arxiv.org/html/2607.22768v1",
           "https://arxiv.org/pdf/2401.02541"
         ],
-        "humanVerified": null
+        "humanVerified": null,
+        "updated": "질량 여유 15%는 NASA류 설계 단계 contingency(15%)와 크기가 같고, 상용 MAPE 7.2%에는 넉넉하나 DIY 26.1%에는 부족. UAV 직접 근거 아님."
       },
       "literatureConflict": "**간접 지지**: 7.2% MAPE 오차 2배 수준, 직접 명시 없음",
       "reviewDecision": {
@@ -414,15 +419,17 @@
       "constants": {
         "cap": 0.45
       },
-      "sourceStatus": "unverified",
+      "sourceStatus": "partially-verified",
       "claims": [
+        "CL29",
+        "CL30",
         "P2509.09024-02",
         "P2604.00496-01"
       ],
       "kind": "heuristic",
       "note": "2026-10-20: 실측 프레임 질량비 7.1%(QuadSoft 섀시)·약 23.5%(3DFiT F450급)로 상한 0.45는 느슨하지만 모순 없음(상한 용도)",
       "webEvidence": {
-        "collected": "2026-10-20",
+        "collected": "2026-10-21",
         "by": "web-research-agent",
         "strength": "LOW",
         "constantsVsLiterature": "**불일치**: 실측 18%, 고정익 10~20%, 45% 직접 지지 없음",
@@ -431,7 +438,8 @@
           "https://bulletin.incas.ro/files/moses_suresh__vol_13_iss_3.pdf",
           "https://www.politesi.polimi.it/retrieve/a81cb05c-ffe9-616b-e053-1605fe0a889a/2018_12_Balcioglu.pdf"
         ],
-        "humanVerified": null
+        "humanVerified": null,
+        "updated": "실측 센터 프레임 분율 12~22%(DJI S1000)·UCAV 구조 분율 10~20%(논문 보고)라 0.45는 2배 이상 느슨한 이상치 탐지 상한. 0.30~0.35로 좁히는 검토 여지(제안, 출처 문장 아님)."
       },
       "literatureConflict": "**불일치**: 실측 18%, 고정익 10~20%, 45% 직접 지지 없음",
       "reviewDecision": {
