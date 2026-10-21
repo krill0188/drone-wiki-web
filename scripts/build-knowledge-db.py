@@ -306,7 +306,9 @@ def main():
         elif pid in items:
             p = items[pid]; cells = p.get("cells") or {}; wt = p.get("weight_g")
             ex("INSERT INTO products VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (pid, mid, p["category"], p["name"], p.get("url"), p.get("captured"), wt.get("value") if isinstance(wt, dict) else wt, p.get("capacity_mAh"),
-                       p.get("cells_S"), p.get("nominal_V"), p.get("continuous_A"), p.get("peak_A"), cells.get("min") if isinstance(cells, dict) else None, cells.get("max") if isinstance(cells, dict) else None, None, None))
+                       p.get("cells_S"), p.get("nominal_V"), p.get("continuous_A"), p.get("peak_A"), cells.get("min") if isinstance(cells, dict) else None, cells.get("max") if isinstance(cells, dict) else None, None,
+                       # GNSS 제품은 사양 표(수집 페이지에 적힌 값)를 JSON으로 싣는다 — 질의 context에서 사양을 답하기 위함(2026-10-22)
+                       json.dumps(p.get("specs") or {}, ensure_ascii=False, sort_keys=True) if p["category"] == "gnss" else None))
     rules_j = loadj("rules.json") or {"rules": []}
     rules = rules_j["rules"] if isinstance(rules_j, dict) else rules_j
     for r in sorted(rules, key=lambda x: x["id"]):
