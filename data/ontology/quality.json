@@ -1,12 +1,12 @@
 {
  "generated": "2026-10-21",
- "fingerprint": "633677a106e6",
+ "fingerprint": "33ba9d65889a",
  "counts": {
   "manufacturers": 238,
   "products": 588,
   "rules": 26,
   "papers": 108,
-  "claims": 248,
+  "claims": 251,
   "edges": 4290,
   "documents": 645,
   "wikiClaims": 1252,
@@ -16,7 +16,7 @@
   "cited-secondary": 2,
   "derived": 5,
   "model-assumption": 34,
-  "reported": 186,
+  "reported": 189,
   "simulation": 21
  },
  "claimsByTopic": {
@@ -24,8 +24,8 @@
   "companion": 32,
   "vtol-fixedwing": 30,
   "energy": 27,
+  "-": 26,
   "sizing": 23,
-  "-": 23,
   "battery": 16,
   "build": 14,
   "structure": 11,
@@ -38,7 +38,8 @@
  "claimsByStatus": {
   "derived:sourced": 2,
   "manufacturer:sourced": 3,
-  "paper:verified": 243,
+  "manufacturer:verified": 2,
+  "paper:verified": 244,
   "wiki:blocked": 25,
   "wiki:contested": 6,
   "wiki:sourced": 1219,
@@ -249,9 +250,11 @@
    "kind": "definition",
    "sourceStatus": "verified",
    "formula": "D = wheelbase·sin(π/N)·0.95, A = π(D/2)²",
-   "claims": 0,
-   "byKind": {},
-   "papers": 0
+   "claims": 1,
+   "byKind": {
+    "reported": 1
+   },
+   "papers": 1
   },
   {
    "id": "R03",
@@ -274,11 +277,12 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "2·m ≤ N·A·DL",
-   "claims": 2,
+   "claims": 3,
    "byKind": {
-    "model-assumption": 2
+    "model-assumption": 2,
+    "reported": 1
    },
-   "papers": 2
+   "papers": 3
   },
   {
    "id": "R05",
@@ -287,15 +291,15 @@
    "kind": "empirical",
    "sourceStatus": "verified-with-derived",
    "formula": "m_bat = P·t / (DoD·e_pack)",
-   "claims": 23,
+   "claims": 34,
    "byKind": {
     "cited-secondary": 1,
     "derived": 2,
     "model-assumption": 5,
-    "reported": 13,
-    "simulation": 2
+    "reported": 23,
+    "simulation": 3
    },
-   "papers": 13
+   "papers": 22
   },
   {
    "id": "R06",
@@ -304,15 +308,15 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "m_struct+avionics = ef·m",
-   "claims": 14,
+   "claims": 18,
    "byKind": {
     "cited-secondary": 1,
     "derived": 1,
     "model-assumption": 3,
-    "reported": 8,
+    "reported": 12,
     "simulation": 1
    },
-   "papers": 9
+   "papers": 11
   },
   {
    "id": "R07",
@@ -334,14 +338,14 @@
    "kind": "empirical",
    "sourceStatus": "partially-verified",
    "formula": "b_f = g·v·t / (L/D·η_p·DoD·e_pack)",
-   "claims": 30,
+   "claims": 32,
    "byKind": {
     "derived": 1,
     "model-assumption": 4,
     "reported": 24,
-    "simulation": 1
+    "simulation": 3
    },
-   "papers": 14
+   "papers": 16
   },
   {
    "id": "R09",
@@ -372,8 +376,10 @@
    "kind": "definition",
    "sourceStatus": "verified",
    "formula": "I_max ≤ C·Ah",
-   "claims": 0,
-   "byKind": {},
+   "claims": 1,
+   "byKind": {
+    "reported": 1
+   },
    "papers": 0
   },
   {
@@ -383,9 +389,11 @@
    "kind": "heuristic",
    "sourceStatus": "partially-verified",
    "formula": "d_prop ≤ D_max + 0.5in",
-   "claims": 0,
-   "byKind": {},
-   "papers": 0
+   "claims": 2,
+   "byKind": {
+    "reported": 2
+   },
+   "papers": 2
   },
   {
    "id": "R13",
@@ -394,9 +402,11 @@
    "kind": "heuristic",
    "sourceStatus": "unverified",
    "formula": "Σm_parts ≤ 1.15·AUW",
-   "claims": 0,
-   "byKind": {},
-   "papers": 0
+   "claims": 1,
+   "byKind": {
+    "reported": 1
+   },
+   "papers": 1
   },
   {
    "id": "R14",
@@ -405,11 +415,11 @@
    "kind": "heuristic",
    "sourceStatus": "unverified",
    "formula": "m_frame ≤ 0.45·AUW",
-   "claims": 2,
+   "claims": 4,
    "byKind": {
-    "reported": 2
+    "reported": 4
    },
-   "papers": 2
+   "papers": 3
   },
   {
    "id": "R15",
@@ -429,8 +439,10 @@
    "kind": "heuristic",
    "sourceStatus": "verified",
    "formula": "협대역(LoRa류)은 영상 불가, 영상은 Mbps급",
-   "claims": 0,
-   "byKind": {},
+   "claims": 1,
+   "byKind": {
+    "reported": 1
+   },
    "papers": 0
   }
  ],
@@ -497,37 +509,29 @@
   },
   {
    "desc": "모델 가정·시뮬레이션 값만으로 'verified' 판정된 규칙",
-   "ok": false,
-   "count": 3,
-   "sample": [
-    "R02",
-    "R11",
-    "R16"
-   ]
+   "ok": true,
+   "count": 0,
+   "sample": []
   }
  ],
  "warnings": [
   {
    "desc": "경험칙(heuristic) 규칙인데 근거 claim 없음",
-   "ok": false,
-   "count": 3,
-   "sample": [
-    "R12",
-    "R13",
-    "R16"
-   ]
+   "ok": true,
+   "count": 0,
+   "sample": []
   },
   {
    "desc": "추진·배터리·구조·사이징 주제인데 규칙에 연결되지 않은 논문 claim",
    "ok": false,
-   "count": 52,
+   "count": 30,
    "sample": [
     "P2301.00730-02",
     "P2301.12905-01",
     "P2306.17087-01",
     "P2306.17087-02",
-    "P2309.10631-02",
-    "P2309.10631-03"
+    "P2310.04857-03",
+    "P2312.09981-01"
    ]
   },
   {

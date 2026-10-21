@@ -840,7 +840,9 @@
   },
   {
    "id": "P2309.10631-02",
-   "rules": [],
+   "rules": [
+    "R06"
+   ],
    "subject": "Rotor-speed-controlled eVTOL quadcopter",
    "attribute": "electric motor mass share of vehicle weight",
    "value": "15−16 %",
@@ -857,11 +859,14 @@
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
-   }
+   },
+   "linkNote": "모터 질량 분율 15~16% — 질량 분율 비교"
   },
   {
    "id": "P2309.10631-03",
-   "rules": [],
+   "rules": [
+    "R06"
+   ],
    "subject": "HorizonUAM main propulsion system (motors + controllers + gearbox)",
    "attribute": "propulsion system weight: geared vs direct drive",
    "value": "374 kg geared vs 400 kg direct",
@@ -878,7 +883,8 @@
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
-   }
+   },
+   "linkNote": "추진계 질량(감속기 유무) — 질량 분율 비교"
   },
   {
    "id": "P2309.10631-04",
@@ -974,7 +980,9 @@
   },
   {
    "id": "P2309.10631-08",
-   "rules": [],
+   "rules": [
+    "R06"
+   ],
    "subject": "HorizonUAM multirotor concept",
    "attribute": "propulsion system weights incl. batteries",
    "value": "battery packs 480 + 248 kg; total propulsion system 1144 kg",
@@ -991,7 +999,8 @@
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
-   }
+   },
+   "linkNote": "배터리 팩 질량 — 질량 분율 비교"
   },
   {
    "id": "P2309.10631-09",
@@ -1018,7 +1027,9 @@
   },
   {
    "id": "P2309.10631-10",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "HorizonUAM main rotor battery pack",
    "attribute": "mission energy requirement (two drive units, normal ops)",
    "value": "19.7 kWh; 32.8 Ah",
@@ -1035,7 +1046,8 @@
    "paper": {
     "title": "Battery-Electric Powertrain System Design for the HorizonUAM Multirotor Air Taxi Concept",
     "published": "2023-09-19"
-   }
+   },
+   "linkNote": "임무 에너지 19.7kWh(시뮬레이션) — 배터리 에너지 수지"
   },
   {
    "id": "P2309.13559-01",
@@ -1236,7 +1248,9 @@
   },
   {
    "id": "P2401.02541-01",
-   "rules": [],
+   "rules": [
+    "R14"
+   ],
    "subject": "Micro quadcopter hub plate (balsa core sandwiched in 3-ply CFRP)",
    "attribute": "hub plate weight and cost reduction vs solid carbon plate",
    "value": "weight -33%, cost -42%",
@@ -1253,7 +1267,8 @@
    "paper": {
     "title": "Autonomous Multi-Rotor UAVs: A Holistic Approach to Design, Optimization, and Fabrication",
     "published": "2024-01-04"
-   }
+   },
+   "linkNote": "허브 플레이트 무게 -33% — 프레임 질량 절감 사례"
   },
   {
    "id": "P2401.02541-02",
@@ -1431,7 +1446,9 @@
   },
   {
    "id": "P2405.00055-01",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "Offshore wind-turbine inspection drone battery",
    "attribute": "battery pack configuration and capacity",
    "value": "6S, 30000 mAh Li-Po",
@@ -1448,7 +1465,8 @@
    "paper": {
     "title": "A Hybrid Probabilistic Battery Health Management Approach for Robust Inspection Drone Operations",
     "published": "2024-04-24"
-   }
+   },
+   "linkNote": "6S 30000mAh 풍력 점검 드론 — 배터리 구성"
   },
   {
    "id": "P2406.19009-01",
@@ -1499,7 +1517,9 @@
   },
   {
    "id": "P2406.19009-03",
-   "rules": [],
+   "rules": [
+    "R08"
+   ],
    "subject": "Fixed-wing vs rotary-wing UAV as flying access point",
    "attribute": "energy consumption per hour (circular trajectory, 2 ground users)",
    "value": "rotary-wing 483 kJ vs fixed-wing 1067 kJ",
@@ -1516,7 +1536,8 @@
    "paper": {
     "title": "On the Energy Consumption of Rotary Wing and Fixed Wing UAVs in Flying Networks",
     "published": "2024-06-27"
-   }
+   },
+   "linkNote": "고정익 vs 회전익 시간당 에너지(시뮬레이션) — 순항 에너지 비교"
   },
   {
    "id": "P2407.00578-01",
@@ -1742,7 +1763,9 @@
   },
   {
    "id": "P2412.02874-02",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "250 mm and 500 mm PX4 quadrotors",
    "attribute": "battery charge consumed: thrust-to-speed map vs thrust-estimation control",
    "value": "250 mm: 416.3 vs 491.5 mAh (+15.30%); 500 mm: 653.2 vs 822.7 mAh (+20.60%)",
@@ -1759,7 +1782,8 @@
    "paper": {
     "title": "A Generalized Thrust Estimation and Control Approach for Multirotors Micro Aerial Vehicles",
     "published": "2024-12-03"
-   }
+   },
+   "linkNote": "추력-속도 모델별 배터리 소모 — 에너지 수지"
   },
   {
    "id": "P2412.10048-01",
@@ -1807,7 +1831,9 @@
   },
   {
    "id": "P2412.10048-03",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "Crazyflie nano-drone with BatDeck (office obstacle-avoidance flights)",
    "attribute": "average flight time and distance",
    "value": "68 m, 4 min 22 s average; 8 min 43 s and 136 m excluding battery changes",
@@ -1824,7 +1850,8 @@
    "paper": {
     "title": "BatDeck -- Ultra Low-power Ultrasonic Ego-velocity Estimation and Obstacle Avoidance on Nano-drones",
     "published": "2024-12-13"
-   }
+   },
+   "linkNote": "Crazyflie BatDeck 평균 비행시간 — 배터리 에너지 수지"
   },
   {
    "id": "P2412.20860-01",
@@ -2139,7 +2166,9 @@
   },
   {
    "id": "P2506.08386-01",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "5G Aero UAV (5G-enabled research quadrotor)",
    "attribute": "flight time with given battery",
    "value": "83 Wh battery; 5 min 2 s without 5G; 4 min 59 s with 5G (~1% decrease)",
@@ -2156,7 +2185,8 @@
    "paper": {
     "title": "5G Aero: A Prototyping Platform for Evaluating Aerial 5G Communications",
     "published": "2025-06-10"
-   }
+   },
+   "linkNote": "83Wh 배터리 비행시간 — 배터리 에너지 수지"
   },
   {
    "id": "P2506.14065-01",
@@ -2244,7 +2274,9 @@
   },
   {
    "id": "P2508.01965-01",
-   "rules": [],
+   "rules": [
+    "R06"
+   ],
    "subject": "ModalAI Starling 2 Max (indoor inspection quadrotor)",
    "attribute": "airframe weight / payload capacity / flight time",
    "value": "500 g airframe, 500 g payload, 55 min",
@@ -2261,11 +2293,14 @@
    "paper": {
     "title": "From Photons to Physics: Autonomous Indoor Drones and the Future of Objective Property Assessment",
     "published": "2025-08-04"
-   }
+   },
+   "linkNote": "기체 500g·페이로드 500g — 구조/페이로드 질량 비"
   },
   {
    "id": "P2508.01965-02",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "Skydio X10 / Crazyflie 2.1+",
    "attribute": "mass and flight time",
    "value": "Skydio X10 2.1 kg, 40 min; Crazyflie 2.1+ 29 g, 7 min",
@@ -2282,7 +2317,8 @@
    "paper": {
     "title": "From Photons to Physics: Autonomous Indoor Drones and the Future of Objective Property Assessment",
     "published": "2025-08-04"
-   }
+   },
+   "linkNote": "질량·비행시간 쌍 — 배터리 에너지 수지"
   },
   {
    "id": "P2509.09024-01",
@@ -2332,7 +2368,9 @@
   },
   {
    "id": "P2509.09024-03",
-   "rules": [],
+   "rules": [
+    "R14"
+   ],
    "subject": "3DFiT CFRP lattice frame vs F450 frame",
    "attribute": "claimed flight time increase from 10% lighter frame",
    "value": "three minutes",
@@ -2349,7 +2387,8 @@
    "paper": {
     "title": "Rapid Manufacturing of Lightweight Drone Frames Using Single-Tow Architected Composites",
     "published": "2025-09-10"
-   }
+   },
+   "linkNote": "CFRP 격자 프레임 vs F450 비행시간 — 프레임 질량 영향"
   },
   {
    "id": "P2509.11481-01",
@@ -2374,7 +2413,9 @@
   },
   {
    "id": "P2510.24245-01",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "Bask Aerospace MR4 quadrotor with 1 kg radiation-detection payload",
    "attribute": "battery configuration and flight endurance",
    "value": "two 8,000 mAh 14.8 V LiPo; up to 15 minutes with 1 kg payload",
@@ -2391,11 +2432,14 @@
    "paper": {
     "title": "Development and Flight Trial of a UAV-based Gamma Ray and Neutron Detection System for Large-Area Radioactivity Mapping and Source Activity Estimation",
     "published": "2025-10-28"
-   }
+   },
+   "linkNote": "2×8000mAh 14.8V 비행시간 — 배터리 에너지 수지"
   },
   {
    "id": "P2511.13122-01",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "Commercial battery-powered rotor-based UAVs (review)",
    "attribute": "typical flight duration",
    "value": "approximately 20-40 minutes",
@@ -2412,7 +2456,8 @@
    "paper": {
     "title": "A Comprehensive Review of Advancements in Powering and Charging Systems for Unmanned Aerial Vehicles",
     "published": "2025-11-17"
-   }
+   },
+   "linkNote": "상용 배터리 로터 UAV 비행시간 20~40분 — 에너지 수지"
   },
   {
    "id": "P2511.13122-02",
@@ -3398,7 +3443,9 @@
   },
   {
    "id": "P2605.19431-03",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "LEGION module (CFRP + PA6-CF airframe)",
    "attribute": "mass, flight time, battery",
    "value": "3.9 kg; 6 min; 2 × 6S LiPo, 6000 mAh total",
@@ -3415,7 +3462,8 @@
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
-   }
+   },
+   "linkNote": "2×6S LiPo 비행시간 — 배터리 에너지 수지"
   },
   {
    "id": "P2605.19431-04",
@@ -3442,7 +3490,9 @@
   },
   {
    "id": "P2605.19431-05",
-   "rules": [],
+   "rules": [
+    "R04"
+   ],
    "subject": "LEGION rotor sizing trade-off",
    "attribute": "ideal thrust gain from enlarging rotor 5 to 6 inch",
    "value": "~70% (ideal)",
@@ -3459,7 +3509,8 @@
    "paper": {
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "published": "2026-05-19"
-   }
+   },
+   "linkNote": "로터 확대 시 이상 추력 이득 ~70% — 디스크 로딩 효과"
   },
   {
    "id": "P2605.24301-01",
@@ -3950,7 +4001,9 @@
   },
   {
    "id": "P2607.22768-09",
-   "rules": [],
+   "rules": [
+    "R13"
+   ],
    "subject": "AeroEval MTOW prediction validation",
    "attribute": "MTOW and battery-mass prediction error on 19 commercial platforms",
    "value": "MTOW MAPE 7.2% (95% CI 5.1-9.3%), median 6.6%, RMSE 1.59 kg",
@@ -3967,7 +4020,8 @@
    "paper": {
     "title": "Multi-Domain Physics-Based MDO of Multirotor UAVs: A Deterministic Framework for Discrete COTS Sizing",
     "published": "2026-07-24"
-   }
+   },
+   "linkNote": "MTOW 예측 오차 MAPE 7.2% — 질량 합 허용오차(1.15)의 크기 비교 기준"
   },
   {
    "id": "P2607.22768-10",
@@ -4152,7 +4206,9 @@
   },
   {
    "id": "P2608.06707-02",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "Hoverflie vs stock Crazyflie 2.1 Brushless",
    "attribute": "hover/flight endurance",
    "value": "889 s vs 561 s (in-ground-effect hover); 382 s vs 544 s (free flight)",
@@ -4169,7 +4225,8 @@
    "paper": {
     "title": "Hoverflie: An empirical investigation of rotor shrouds to transform micro air vehicles into multi-modal hovercraft",
     "published": "2026-08-07"
-   }
+   },
+   "linkNote": "호버 지속시간 비교 — 배터리 에너지 수지"
   },
   {
    "id": "P2608.17819-01",
@@ -4196,7 +4253,9 @@
   },
   {
    "id": "P2608.17819-02",
-   "rules": [],
+   "rules": [
+    "R12"
+   ],
    "subject": "Tiltable-quadrotor aerial manipulator",
    "attribute": "arm length, propeller radius, mass",
    "value": "l = 0.275 m; Rp = 0.114 m; m = 3.039 kg",
@@ -4213,7 +4272,8 @@
    "paper": {
     "title": "Effector-Centric NMPC of Tiltable-Multirotors for Offset-Free Omnidirectional Aerial Manipulation",
     "published": "2026-08-18"
-   }
+   },
+   "linkNote": "암 길이 0.275m·프롭 반경 0.114m — 프롭 지름 대 축거 실례"
   },
   {
    "id": "P2608.23163-01",
@@ -4330,7 +4390,9 @@
   },
   {
    "id": "P2608.25150-03",
-   "rules": [],
+   "rules": [
+    "R08"
+   ],
    "subject": "Gemfan 51466 propeller (R = 0.05 m, P/D 0.90) ahead of wing in cruise (CFD)",
    "attribute": "propulsive efficiency at advance ratio J = 0.7",
    "value": "50%, 58%, 61% (3429, 6857, 10286 RPM)",
@@ -4347,7 +4409,8 @@
    "paper": {
     "title": "Wing-Rotor Aerodynamic Interactions in Small UAVs During Hover and Cruise",
     "published": "2026-08-25"
-   }
+   },
+   "linkNote": "전진비 J별 추진 효율 50~61%(시뮬레이션) — 프롭 효율 etaP 비교"
   },
   {
    "id": "P2609.09380-01",
@@ -4571,7 +4634,9 @@
   },
   {
    "id": "P2609.20965-05",
-   "rules": [],
+   "rules": [
+    "R05"
+   ],
    "subject": "AeRove flight-only configuration vs full hybrid",
    "attribute": "mass and estimated flight endurance",
    "value": "175 g to 130 g; 6 min to 12.5 min",
@@ -4588,7 +4653,8 @@
    "paper": {
     "title": "AeRove: A Compact Bimodal Aerial-Terrestrial Drone with Rapid Bistable Reconfiguration for Close-Range Pipeline Inspection",
     "published": "2026-09-17"
-   }
+   },
+   "linkNote": "질량 감소와 비행시간 — 에너지 수지"
   },
   {
    "id": "P2609.21690-01",

@@ -405,6 +405,61 @@
       "status": "derived",
       "evidenceKind": "derived",
       "note": "R05 낙관 207보다 높음 — 고정익 저방전율 시나리오에서 낙관값을 올릴 근거 후보. 다만 제조사 표기(미검증), 셀 대 팩 혼재라 상수는 유지"
+    },
+    {
+      "id": "CL24",
+      "rules": [
+        "R02",
+        "R12"
+      ],
+      "subject": "인접 프롭 간극 안전계수 (tip-clearance safety factor)",
+      "attribute": "ε",
+      "value": 0.05,
+      "unit": "-",
+      "conditions": "MDO 논문의 기하 제약 D_p ≤ (1−ε)·W·sin(π/N_r). 쿼드 0.672·W, 헥사 0.475·W, 옥토 0.364·W(ε=0.05 적용). 설계 선택값이며 물리 상수는 아님",
+      "sourceType": "paper",
+      "sourceId": "arXiv:2607.22768",
+      "locator": "기하 제약 절 (arxiv.org/html/2607.22768v1)",
+      "quote": "tip-clearance safety factor: ε = 0.05",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "규칙 R02의 ×0.95 및 R12(프롭 지름 ≤ 축거 한계)와 일치. 교차 확인: arXiv:1908.06301은 기체 반경을 최소값의 1.05~1.2배로 키우라고 권고(공력 간섭 고려)"
+    },
+    {
+      "id": "CL25",
+      "rules": [
+        "R11"
+      ],
+      "subject": "LiPo 최대 방전 전류 = C 등급 × 용량(Ah)",
+      "attribute": "I_max",
+      "value": "C × Ah",
+      "unit": "A",
+      "conditions": "제조사 기술 블로그의 정의. 연속 정격 기준이며 짧은 펄스 한계는 더 높을 수 있고, C 등급은 내부저항 변화에 따라 달라지는 상한",
+      "sourceType": "manufacturer",
+      "sourceId": "grepow.com/blog/basis-of-lipo-battery-specifications",
+      "locator": "Grepow — Basis of LiPo Battery Specifications",
+      "quote": "Multiplying the C rating by the capacity in amp-hours gives the maximum current",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "예: 5Ah 20C 팩 = 100A(같은 글). R11 산식과 일치"
+    },
+    {
+      "id": "CL26",
+      "rules": [
+        "R16"
+      ],
+      "subject": "LoRa 변조 데이터 속도 범위",
+      "attribute": "data rate",
+      "value": "250 bps ~ 11 kbps (FSK 최대 50 kbps)",
+      "unit": "bps",
+      "conditions": "LoRaWAN 지역 규정에 따라 달라짐(북미 최소 0.9 kbps). EU868 기본 채널 0.3~5 kbps. 480p H.264 영상은 약 1.8 Mbps가 필요해 수백 배 부족",
+      "sourceType": "manufacturer",
+      "sourceId": "semtech.com/design-support/faq/faq-lorawan",
+      "locator": "Semtech LoRaWAN FAQ",
+      "quote": "from 250 bps to 11 kbps with LoRa modulation",
+      "status": "verified",
+      "evidenceKind": "reported",
+      "note": "R16 '협대역(LoRa류)은 영상 불가'의 정량 근거. 영상 비트레이트는 VideoProc H.264 참고표(480p 약 1800 kbps)와 비교"
     }
   ]
 }
