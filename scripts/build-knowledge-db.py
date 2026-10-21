@@ -223,13 +223,18 @@ def main():
         ex("INSERT INTO ontology_class_proposals VALUES (?,?,?,?)", (cls, par, why, cnt))
     # ── 문서 → 클래스 연결 제안 (결정론 키워드 규칙, 자동 반영 금지) ──
     CLASS_KW = {
-        "PX4": ["px4"], "ArduPilot": ["ardupilot"], "FlightStack": ["flight-stack", "flight stack", "비행 스택", "betaflight", "inav", "px4-flight", "firmware", "펌웨어"],
-        "Telemetry": ["telemetry", "텔레메트리"], "Datalink": ["datalink", "data-link", "데이터링크", "mavlink", "rf-link", "lte", "5g"],
+        "PX4": ["px4"], "ArduPilot": ["ardupilot"], "FlightStack": ["flight-stack", "flight stack", "비행 스택", "betaflight", "inav", "px4-flight"],
+        "Telemetry": ["telemetry", "텔레메트리"], "Datalink": ["datalink", "data-link", "데이터링크", "rf-link"],
         "ROS2": ["ros2", "mavros", "micro-ros"], "Multirotor": ["multirotor", "멀티로터", "quadcopter", "quadrotor", "쿼드콥터"], "VTOL": ["vtol"], "FixedWing": ["fixed-wing", "fixedwing", "고정익"],
         "FlightController": ["flight-controller", "flight controller", "비행제어기", "pixhawk", "cube"], "GNSS": ["gnss", "rtk", "gps"], "IMU": ["imu"], "LiDAR": ["lidar", "라이다"],
         "Camera": ["camera", "카메라"], "Gimbal": ["gimbal", "짐벌"], "Battery": ["battery", "배터리", "lipo"], "Motor": ["motor", "모터", "bldc"], "ESC": ["-esc", "esc-", "변속기"],
         "Propeller": ["propeller", "프로펠러"], "Payload": ["payload", "페이로드"], "SwarmCoordinator": ["swarm", "군집"], "Frame": ["airframe", "-frame", "프레임"],
     }
+    # 영문 키워드는 단어 경계로 찾는다(2026-10-21: framework→Frame, simulation→IMU, motorola→Motor 오탐). 한글은 부분 문자열.
+    def kwin(kw, text):
+        k = kw.strip("-")
+        if re.search(r"[가-힣]", k): return k in text
+        return re.search(r"(?<![a-z0-9])" + re.escape(k).replace(r"\ ", "[ -]") + r"(?![a-z0-9])", text) is not None
     for did_, path_, title_, cls_now in ex("SELECT id, lower(path), lower(title), ontology_class FROM documents ORDER BY id").fetchall():
         if cls_now: continue  # 이미 frontmatter에 명시된 문서는 제안 대상이 아니다
         tags_ = {t for (t,) in ex("SELECT lower(tag) FROM document_tags WHERE document_id=?", (did_,)).fetchall()}
@@ -237,7 +242,7 @@ def main():
         RANK = {"slug": 0, "title": 1, "tag": 2}  # 같은 클래스에 근거가 여럿이면 가장 강한 것(슬러그 > 제목 > 태그)을 쓴다
         for cls, kws in CLASS_KW.items():
             for kw in kws:
-                hit = ("slug", kw) if kw in path_ else ("title", kw) if kw in title_ else ("tag", kw) if kw in tags_ else None
+                hit = ("slug", kw) if kwin(kw, path_) else ("title", kw) if kwin(kw, title_) else ("tag", kw) if kw in tags_ else None
                 if hit and (cls not in found or RANK[hit[0]] < RANK[found[cls][0]]): found[cls] = hit
         if not found: continue
         strong = [c for c, (f, _k) in found.items() if f in ("slug", "title")]
