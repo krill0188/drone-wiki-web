@@ -145,9 +145,12 @@ function otherCategories(spec: DesignSpec, auwKg: number, bestProp: string | nul
     }
   }
   const payloadG = (spec.payloadKg ?? 0) * 1000
-  const cams = by("payload").map((i) => ({ i, g: grams(i) })).filter((x) => x.g != null && x.g! <= payloadG).sort((a, b) => b.g! - a.g!).slice(0, 4).map((x) => x.i)
+  // 카탈로그의 페이로드는 카메라·센서 포드뿐이다. 방제·운송 컨셉에는 맞지 않으므로 후보를 주지 않고 '없음'을 명시한다.
+  const sensorOnly = spec.purpose === "spray" || spec.purpose === "cargo"
+  const cams = sensorOnly ? [] : by("payload").map((i) => ({ i, g: grams(i) })).filter((x) => x.g != null && x.g! <= payloadG).sort((a, b) => b.g! - a.g!).slice(0, 4).map((x) => x.i)
   reg("payload", cams, grams)
-  out.push(...section(`페이로드(카메라·센서 포드) 후보 — 무게 ≤ 페이로드 ${spec.payloadKg}kg(원문 무게 기준)`, cams, (i) => ` (무게 ${Math.round(grams(i)!)}g)`))
+  if (sensorOnly) out.push(`\n[페이로드 후보] 이 컨셉의 용도(${spec.purpose === "spray" ? "방제·살포" : "운송·투하"})에 맞는 페이로드(${spec.purpose === "spray" ? "약제 탱크·펌프·노즐" : "화물 고정구·윈치·낙하산"})는 카탈로그에 없다. 카탈로그에 있는 카메라·센서 포드는 이 용도의 페이로드가 아니므로 고르지 않는다 → 페이로드 칸은 '카탈로그 후보 없음 — 확인 필요'로 쓰고 요구 중량(${spec.payloadKg}kg)만 명시한다.`)
+  else out.push(...section(`페이로드(카메라·센서 포드) 후보 — 무게 ≤ 페이로드 ${spec.payloadKg}kg(원문 무게 기준)`, cams, (i) => ` (무게 ${Math.round(grams(i)!)}g)`))
   const fcs = by("fc").filter((i) => /px4|ardupilot/i.test(Object.values(i.specs ?? {}).join(" "))).sort((a, b) => (/holybro|cubepilot|ark/i.test(a.manufacturer) ? 0 : 1) - (/holybro|cubepilot|ark/i.test(b.manufacturer) ? 0 : 1)).slice(0, 4)
   reg("fc", fcs, grams)
   out.push(...section("비행제어기(FC) 후보 — PX4/ArduPilot 지원 표기가 있는 것", fcs))

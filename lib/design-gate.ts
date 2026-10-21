@@ -17,6 +17,7 @@ export interface DesignSpec {
   flightMin?: number
   altitudeM?: number // 운용 고도(해발 m, 선택 입력). 없으면 해면
   maxAuwKg?: number // 사용자가 지정한 총중량(MTOW) 상한 — 4필수항목은 아니지만 추정 총중량과 대조한다
+  purpose?: "spray" | "cargo" | "sensing" // 컨셉 용도(키워드 판정). 페이로드 후보가 용도에 맞는지 서버가 가리는 데 쓴다
   rotors: number
   platform: "multirotor" | "fixedwing" | "vtol"
   platformExplicit: boolean
@@ -65,6 +66,11 @@ export function parseSpec(text: string): DesignSpec {
   else if (/헥사/i.test(t)) { spec.rotors = 6; spec.platformExplicit = true }
   else if (/옥타/i.test(t)) { spec.rotors = 8; spec.platformExplicit = true }
   else if (/쿼드|멀티콥터|멀티로터/i.test(t)) spec.platformExplicit = true
+
+  // 0) 용도 — 카탈로그의 페이로드는 카메라·센서 포드뿐이라, 방제·운송 컨셉에 그것을 고르지 못하게 한다(2026-10-21 방제 드론이 Zenmuse LiDAR를 선정)
+  if (/방제|살포|농약|살충|스프레이|분무|비료|파종|\bspray/i.test(t)) spec.purpose = "spray"
+  else if (/배송|택배|운송|물류|화물|운반|투하|윈치|\bcargo|\bdelivery/i.test(t)) spec.purpose = "cargo"
+  else if (/촬영|정찰|매핑|측량|점검|감시|수색|탐지|관측|순찰|모니터|라이다|열화상|카메라|영상|인스펙션|\bsurvey|\bmapping|\binspection|\bsurveillance|\bthermal|\blidar/i.test(t)) spec.purpose = "sensing"
 
   // 1) 페이로드
   if (/(페이로드|탑재(물|중량)?|적재)\D{0,6}(없|0\s*kg)|무탑재|페이로드 ?없/i.test(t)) spec.payloadKg = 0
