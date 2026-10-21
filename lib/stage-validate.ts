@@ -288,6 +288,7 @@ export function repairHwSelections(md: string, d: MatchData, allow?: (selection:
     if (!lines[i].trim().startsWith("|") || !/구성요소/.test(lines[i]) || !/^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1])) continue
     const head = split(lines[i])
     const nameIdx = head.findIndex((h) => /구성요소/.test(h)), selIdx = head.findIndex((h) => /선정안/.test(h))
+    const specIdx = head.findIndex((h) => /사양/.test(h)), ifIdx = head.findIndex((h) => /인터페이스/.test(h)), basisIdx = head.findIndex((h) => /근거/.test(h))
     if (nameIdx < 0 || selIdx < 0) return { md, repaired }
     for (let j = i + 2; j < lines.length && lines[j].trim().startsWith("|"); j++) {
       const c = split(lines[j])
@@ -300,9 +301,17 @@ export function repairHwSelections(md: string, d: MatchData, allow?: (selection:
         const qty = qtyOf(sel)
         const cap = cand.category === "battery" && cand.capMah && !cand.name.includes(String(cand.capMah)) ? ` ${cand.capMah}mAh` : ""
         c[selIdx] = `${cand.name}${cap}${qty > 1 ? ` × ${qty}` : ""} _(서버 치환: 모델 제안 "${orig}"은 카탈로그 밖)_`
+        // 같은 행의 사양·인터페이스·근거 칸은 모델이 원래 제품에 대해 쓴 값이므로 새 제품과 어긋난다 → 카탈로그가 가진 값만으로 다시 채운다.
+        const facts = [cand.maxThrustG ? `최대추력 ${Math.round(cand.maxThrustG)}g` : "", cand.maxA ? `최대전류 ${cand.maxA}A` : "", cand.contA ? `연속전류 ${cand.contA}A` : "", cand.whPerUnit ? `${cand.whPerUnit.toFixed(0)}Wh` : "", cand.capMah ? `${cand.capMah}mAh` : "", cand.cells ? `${cand.cells}S` : "", cand.massG ? `${cand.massG}g` : ""].filter(Boolean)
+        if (specIdx >= 0) c[specIdx] = facts.length ? `${facts.join(" · ")} _(서버 카탈로그 값)_` : "카탈로그 값 없음 — 확인 필요"
+        if (ifIdx >= 0) c[ifIdx] = "확인 필요"
+        if (basisIdx >= 0) c[basisIdx] = "서버 카탈로그 후보(모델 제안을 치환)"
         repaired.push(`${name}: "${orig}" → ${cand.name}`)
       } else {
         c[selIdx] = `카탈로그 후보 없음 — 확인 필요 _(모델 제안 "${orig}"은 카탈로그 밖이라 서버가 제거)_`
+        if (specIdx >= 0) c[specIdx] = "확인 필요"
+        if (ifIdx >= 0) c[ifIdx] = "확인 필요"
+        if (basisIdx >= 0) c[basisIdx] = "카탈로그 후보 없음"
         repaired.push(`${name}: "${orig}" → 후보 없음`)
       }
       lines[j] = `| ${c.join(" | ")} |`

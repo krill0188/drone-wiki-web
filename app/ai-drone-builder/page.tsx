@@ -386,8 +386,11 @@ export default function AiDroneBuilderPage() {
                     {designEvidence().map((r) => (
                       <div key={r.id} className="text-[11px] text-slate-500 border-l-2 border-dashed border-slate-300 pl-2">
                         <p>
-                          <b>{r.id}</b> {r.name} <code>{r.formula}</code> · 근거 상태 <b>{r.sourceStatus}</b>
+                          <b>{r.id}</b> {r.name} <code>{r.formula}</code> · 근거 상태 <b className={r.sourceStatus === "verified" ? "text-emerald-600" : r.sourceStatus === "unverified" ? "text-amber-600" : ""}>{r.sourceStatus}</b>
+                          {r.webStrength ? ` · 웹 조사 근거 ${r.webStrength}` : ""}
                         </p>
+                        {r.conflict && <p className="ml-2">· 문헌 대조: {r.conflict.replace(/\*\*/g, "")}</p>}
+                        {r.review && <p className="ml-2">· 검토 결정(2026-10-21): {r.review}</p>}
                         {r.claims.slice(0, 4).map((c) => (
                           <p key={c.id} className="ml-2">
                             · {c.kind && c.kind !== "reported" ? `[${(KIND_LABEL as Record<string, string>)[c.kind] ?? c.kind}] ` : ""}{c.subject}: {c.value} ({c.source}, {c.status}){c.quote ? ` — “${c.quote.slice(0, 120)}”` : ""}

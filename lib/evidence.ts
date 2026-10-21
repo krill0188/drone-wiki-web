@@ -2,9 +2,9 @@ import rulesJson from "../data/ontology/rules.json"
 import claimsJson from "../data/ontology/claims.json"
 
 export interface EvidenceClaim { id: string; subject: string; value: string; source: string; locator: string; quote: string; status: string; kind?: string }
-export interface EvidenceRule { id: string; name: string; formula: string; sourceStatus: string; claims: EvidenceClaim[] }
+export interface EvidenceRule { id: string; name: string; formula: string; sourceStatus: string; claims: EvidenceClaim[]; review?: string; conflict?: string; webStrength?: string }
 
-type RuleRow = { id: string; name: string; formula?: string; status: string; sourceStatus?: string; claims?: string[] }
+type RuleRow = { id: string; name: string; formula?: string; status: string; sourceStatus?: string; claims?: string[]; literatureConflict?: string; reviewDecision?: { decision?: string; rationale?: string }; webEvidence?: { strength?: string } }
 type ClaimRow = { evidenceKind?: string; id: string; subject: string; value: unknown; sourceId: string; locator: string; quote: string; status: string }
 
 const rules = ((rulesJson as { rules?: RuleRow[] }).rules ?? (rulesJson as unknown as RuleRow[])) as RuleRow[]
@@ -20,6 +20,9 @@ export function designEvidence(): EvidenceRule[] {
       name: r.name,
       formula: r.formula ?? "",
       sourceStatus: r.sourceStatus ?? "unverified",
+      review: r.reviewDecision?.rationale,
+      conflict: r.literatureConflict,
+      webStrength: r.webEvidence?.strength,
       claims: (r.claims ?? [])
         .map((id) => claims.get(id))
         .filter((c): c is ClaimRow => !!c)
