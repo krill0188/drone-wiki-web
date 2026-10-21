@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection"
 import AnimatedFeatureCard from "@/components/AnimatedFeatureCard"
 import PipelineFlow from "@/components/PipelineFlow"
 import StatsSection from "@/components/StatsSection"
+import ReducedMotion from "@/components/ReducedMotion"
 import rulesJson from "@/data/ontology/rules.json"
 import qualityJson from "@/data/ontology/quality.json"
 
@@ -17,6 +18,7 @@ export default async function HomePage() {
   const wikiDocs = (qualityJson as { counts: { documents: number } }).counts.documents
 
   return (
+    <ReducedMotion>
     <div>
       {/* 히어로 — 애니메이션 클라이언트 컴포넌트 */}
       <HeroSection />
@@ -102,5 +104,6 @@ export default async function HomePage() {
         )}
       </div>
     </div>
+    </ReducedMotion>
   )
 }

@@ -2,8 +2,8 @@
 
 > 생성: `scripts/export-class-proposals.py` (결정론 키워드 규칙). **어떤 문서의 `ontology_class`도 자동으로 바꾸지 않았습니다.** 승인한 제안만 해당 문서 frontmatter에 반영하며, 문서 변경은 발행 게이트(해시 승인) 대상입니다.
 
-- 현재 `ontology_class`가 명시된 문서: 65 / 645
-- 제안 217건 · 문서 170개 · 등급 A 59 · B 44 · C 114
+- 현재 `ontology_class`가 명시된 문서: 87 / 652
+- 제안 212건 · 문서 165개 · 등급 A 60 · B 44 · C 108
 
 | 등급 | 의미 | 권장 |
 |---|---|---|
@@ -11,7 +11,7 @@
 | B | 슬러그·제목에서 여러 클래스가 걸림 | 문서별 검토 |
 | C | 태그만 일치 | 보류(약한 근거) |
 
-## 등급 A — 일괄 승인 후보 (59건)
+## 등급 A — 일괄 승인 후보 (60건)
 
 ### ArduPilot (1)
 - `concepts/holybro-x650-autonomous-mission.md` — HolyBro X650 Autonomous Mission Planning with Ardu _(title: ardupilot)_
@@ -52,11 +52,12 @@
 ### Gimbal (1)
 - `concepts/hoverair-versa-2in1-2026.md` — HoverAir Versa 2-in-1 Gimbal Drone _(title: gimbal)_
 
-### LiDAR (5)
+### LiDAR (6)
 - `concepts/drone-lidar-forest-boundary.md` — 드론 라이다를 이용한 임야 현황경계 추출 및 분석 _(slug: lidar)_
 - `concepts/flight-ready-lidar-inertial-odometry.md` — Flight-Ready LiDAR-Inertial Odometry for Embedded  _(slug: lidar)_
 - `concepts/kci-uav-lidar-ground-point-density-dem-accuracy.md` — UAV-LiDAR 지면점 밀도와 공간 해상도가 DEM 정확도에 미치는 영향 _(slug: lidar)_
 - `concepts/kci-watershed-individual-tree-delineation-uav-lidar-chm.md` — UAV LiDAR CHM·그레이스케일 Watershed 개체목 분할 최적 조건 (KCI 2 _(slug: lidar)_
+- `concepts/perception-energy-aware-uav-lidar-motion-planning.md` — 인지·에너지 인식 UAV 모션 계획 (이분산 불확실성 학습 모델) _(slug: lidar)_
 - `concepts/vendor-registry-lidar.md` — 드론 LiDAR 제조사 레지스트리 _(slug: lidar)_
 
 ### Motor (2)

@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-21",
- "fingerprint": "a59b324e94ba",
+ "fingerprint": "8e233133184b",
  "counts": {
   "manufacturers": 238,
   "products": 588,
@@ -8,8 +8,8 @@
   "papers": 109,
   "claims": 259,
   "edges": 4290,
-  "documents": 645,
-  "wikiClaims": 1252,
+  "documents": 652,
+  "wikiClaims": 1284,
   "relations": 4325
  },
  "claimsByKind": {
@@ -41,9 +41,9 @@
   "manufacturer:sourced": 4,
   "manufacturer:verified": 4,
   "paper:verified": 248,
-  "wiki:blocked": 25,
+  "wiki:blocked": 22,
   "wiki:contested": 6,
-  "wiki:sourced": 1219,
+  "wiki:sourced": 1254,
   "wiki:unverified": 2
  },
  "productsByCategory": {
@@ -67,32 +67,35 @@
   "countryUnknown": 25
  },
  "documents": {
-  "total": 645,
-  "withDomain": 617,
-  "noDomain": 28,
+  "total": 652,
+  "withDomain": 649,
+  "noDomain": 3,
   "unregisteredDomain": 4,
-  "withOntologyClass": 65,
+  "withOntologyClass": 87,
   "byDomain": {
-   "ai-autonomy": 140,
-   "ops-mission": 132,
-   "hardware": 121,
-   "comms-protocol": 61,
-   "flight-control": 57,
+   "ai-autonomy": 148,
+   "ops-mission": 137,
+   "hardware": 130,
+   "comms-protocol": 63,
+   "flight-control": 59,
    "regulations": 44,
-   "(없음)": 28,
-   "gcs-software": 26,
+   "gcs-software": 29,
    "vendor-registry": 17,
    "software-ecosystem": 13,
+   "(없음)": 3,
    "rf-datalink-engineering": 2,
    "ai-agent": 2,
+   "swarm-multiagent": 1,
    "swarm": 1,
+   "sensing-perception": 1,
+   "navigation-gnss-denied": 1,
    "drone-sw": 1
   }
  },
  "sources": {
-  "total": 1034,
-  "resolved": 1003,
-  "unresolved": 26,
+  "total": 1029,
+  "resolved": 1000,
+  "unresolved": 24,
   "unknown": 5
  },
  "edgesByRelation": {
@@ -552,41 +555,31 @@
   {
    "desc": "domain이 없는 문서(추론하지 않고 NULL 유지)",
    "ok": false,
-   "count": 28,
+   "count": 3,
    "sample": [
-    "concepts/a2z-longtail-dual.md",
-    "concepts/aeroeval-mdo-framework.md",
-    "concepts/agile-quadrotor-learning.md",
-    "concepts/dji-osmo-360-ii.md",
-    "concepts/drone-news-2026-07-31.md",
-    "concepts/drone-wildfire-rt-detr.md"
+    "comparisons/knowledge-tool-roles.md",
+    "queries/notebooklm-query-compounding.md",
+    "queries/ua-knowledge-graph-workflow.md"
    ]
   },
   {
    "desc": "해석되지 않은 출처 경로(blocked claim 원인)",
    "ok": false,
-   "count": 26,
+   "count": 24,
    "sample": [
     "raw/articles/amazon-prime-air-expansion-2026-08.md",
     "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md",
-    "raw/articles/mastervault-ros2-devnotes.md",
     "raw/articles/ondas-ohio-drone-hub-2026-08.md",
-    "raw/articles/px4-ros2-offboard-control.md",
-    "raw/articles/saildrone-european-expansion-2026-08.md"
+    "raw/articles/saildrone-european-expansion-2026-08.md",
+    "raw/articles/uavionix-airwise-flightline-partnership-2026-08.md",
+    "raw/notebooklm/2026-07-16-all-notes.md"
    ]
   },
   {
    "desc": "frontmatter sources 표기 결함('^[' 접두, 원본 데이터 문제 — 해석기가 정규화해 해소)",
-   "ok": false,
-   "count": 30,
-   "sample": [
-    "^[inbox/processed/fetch-2026-10-20-arxiv-digital-twin-of-a-dc-brushless-electric-motor-propeller-syst.md",
-    "^[inbox/processed/fetch-2026-10-19-arxiv-airspeed-estimation-for-uavs-using-only-propeller-feedback.md",
-    "^[inbox/processed/fetch-2026-10-19-yt-3dxr-supply-and-stock-latest-oct26-china-rc-component-export.md",
-    "^[inbox/processed/fetch-2026-10-19-yolo.md",
-    "^[inbox/processed/fetch-2026-10-19-arxiv-meteorologically-introduced-impacts-on-aerial-channels-and-u.md",
-    "^[inbox/processed/fetch-2026-10-20-arxiv-uav-rotatable-antenna-under-rotation-delay.md"
-   ]
+   "ok": true,
+   "count": 0,
+   "sample": []
   },
   {
    "desc": "ontology_class 가 있는 canonical 문서가 전체의 10% 미만",

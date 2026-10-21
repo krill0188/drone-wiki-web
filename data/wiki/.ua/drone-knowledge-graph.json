@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "47d530bf3d0f55fc4af0c863f11cadd1e39aee7114abb4c4cf19278458dd0239",
+  "source_fingerprint": "9a98abeccfe79adfa1c919365ba5c5982359bf2cc3ddf00b88220c25e22cf813",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -22,7 +22,7 @@
       "id": "a2z-longtail-dual",
       "name": "A2Z Drone Delivery Longtail Dual",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "hardware",
@@ -33,7 +33,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "acrobatic-flight-preference-learning-uzh",
@@ -98,7 +98,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "advanced-navigation-kongsberg-cuas-deal",
@@ -135,7 +135,7 @@
       "id": "aeroeval-mdo-framework",
       "name": "AeroEval MDO Framework",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone-hw",
         "drone",
@@ -146,13 +146,13 @@
       "updated": "2026-08-19",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "agile-quadrotor-learning",
       "name": "Agile Quadrotor Flight Learning",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "drone",
         "ai-autonomy",
@@ -161,7 +161,7 @@
       "updated": "2026-10-08",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "agile-vision-multi-uav-state-estimation",
@@ -704,7 +704,7 @@
         "drone",
         "drone-hw"
       ],
-      "updated": "2026-10-20",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -832,7 +832,7 @@
         "drone-hw",
         "drone-sw"
       ],
-      "updated": "2026-10-14",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -1345,7 +1345,7 @@
       "id": "dji-osmo-360-ii",
       "name": "DJI Osmo 360 II",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "hardware",
@@ -1356,7 +1356,7 @@
       "updated": "2026-09-25",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "dji-osmo-action-6",
@@ -1756,7 +1756,7 @@
       "id": "drone-news-2026-07-31",
       "name": "Drone News 2026-07-31",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ops-mission",
       "tags": [
         "drone",
         "regulations",
@@ -1766,7 +1766,7 @@
       "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Mission"
     },
     {
       "id": "drone-news-2026-08-01",
@@ -2148,7 +2148,22 @@
         "ops-mission",
         "regulations"
       ],
-      "updated": "2026-10-20",
+      "updated": "2026-10-21",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-10-21",
+      "name": "드론 업계 주요 소식 (2026-10-21)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-21",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -2454,7 +2469,7 @@
       "id": "drone-wildfire-rt-detr",
       "name": "Drone Wildfire Monitoring RT-DETR",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "drone",
         "drone-ai",
@@ -2466,7 +2481,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "dronecan-deep",
@@ -2605,7 +2620,7 @@
         "transmitter",
         "edgetx"
       ],
-      "updated": "2026-09-24",
+      "updated": "2026-10-21",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2620,7 +2635,7 @@
         "fpv",
         "datalink"
       ],
-      "updated": "2026-08-04",
+      "updated": "2026-10-21",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2738,7 +2753,7 @@
       "id": "event-camera-drone",
       "name": "Event Camera for Drones",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "sensing-perception",
       "tags": [
         "drone",
         "ai-autonomy",
@@ -3111,7 +3126,7 @@
         "imu",
         "navigation"
       ],
-      "updated": "2026-07-30",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -3246,7 +3261,7 @@
       "id": "ga-asi-fujitsu-mou",
       "name": "GA-ASI Fujitsu Japan UAS MOU",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ops-mission",
       "tags": [
         "drone",
         "company",
@@ -3258,7 +3273,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Mission"
     },
     {
       "id": "ga-asi-mojave-battlefield-short-field-ops",
@@ -3369,7 +3384,7 @@
       "id": "hdzero-goggle-2-scroll-fix",
       "name": "HDZero Goggle 2 Scroll Wheel Fix",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "fpv",
@@ -3380,7 +3395,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "hequav-k11-dual-sensor-gimbal",
@@ -3583,7 +3598,7 @@
         "vtol",
         "stability"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-21",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "VTOL"
@@ -3635,6 +3650,20 @@
       ],
       "updated": "2026-10-04",
       "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "jet-hr2-flying-humanoid-thrust-vectoring",
+      "name": "Jet-HR2 비행 휴머노이드: 덕티드 팬 추력 벡터 제어",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "drone-hw"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -4675,7 +4704,7 @@
         "llm",
         "regulations"
       ],
-      "updated": "2026-08-12",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -4684,7 +4713,7 @@
       "id": "llm-swarm-wot-framework",
       "name": "LLM Swarm WoT Framework",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "swarm-multiagent",
       "tags": [
         "swarm",
         "ai-agent",
@@ -4748,7 +4777,7 @@
       "id": "louisville-dfr-expansion",
       "name": "Louisville DFR Fleet Expansion",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ops-mission",
       "tags": [
         "drone",
         "ops-mission",
@@ -4759,7 +4788,7 @@
       "updated": "2026-09-01",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Mission"
     },
     {
       "id": "lowes-wing-doordash-drone-delivery-pilot",
@@ -4823,6 +4852,20 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "maspa-tethered-marsupial-uav-ugv-path-planning",
+      "name": "MASPA: 테더 연결 UGV-UAV(마수피얼) 경로 계획",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "mavlink-advanced-features",
       "name": "MAVLink Advanced Features",
       "layer": "Concepts",
@@ -4840,7 +4883,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "mavlink-advanced",
@@ -4859,7 +4902,7 @@
       "updated": "2026-07-27",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "mavlink-m-interoperability",
@@ -4887,7 +4930,7 @@
       "updated": "2026-07-28",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "mavlink-protocol",
@@ -4903,7 +4946,7 @@
       "updated": "2026-08-16",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "mavlink2-security",
@@ -4922,7 +4965,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "mavros",
@@ -4942,7 +4985,7 @@
       "id": "mavsdk-release",
       "name": "MAVSDK v3.17.4 Release Notes",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "comms-protocol",
       "tags": [
         "drone",
         "drone-sw",
@@ -4953,7 +4996,7 @@
       "updated": "2026-09-01",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "mavsdk-v4-0-0",
@@ -5385,7 +5428,7 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-10-20",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Multirotor"
@@ -5685,6 +5728,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "perception-energy-aware-uav-lidar-motion-planning",
+      "name": "인지·에너지 인식 UAV 모션 계획 (이분산 불확실성 학습 모델)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "physai-bench-uav-agentic-benchmark",
@@ -6094,7 +6151,7 @@
       "id": "qgroundcontrol-v5-1-4",
       "name": "QGroundControl v5.1.4 Release Notes",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "gcs-software",
       "tags": [
         "drone",
         "drone-sw",
@@ -6105,7 +6162,7 @@
       "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "qgroundcontrol-v5-1-5",
@@ -6127,7 +6184,7 @@
       "id": "qgroundcontrol",
       "name": "QGroundControl",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "gcs-software",
       "tags": [
         "drone",
         "drone-sw",
@@ -6136,7 +6193,7 @@
       "updated": "2026-10-02",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "quadrotor-wind-fidelity-ppo-robustness",
@@ -6165,6 +6222,20 @@
       ],
       "updated": "2026-09-15",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "rc-radio-power-button-safety",
+      "name": "RC 라디오 푸시버튼 전원: 오조작 방지 동작 (Painless360)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "fpv"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -6519,7 +6590,7 @@
       "id": "shadowfaxuas-sf45",
       "name": "ShadowfaxUAS SF45",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "hardware",
@@ -6530,7 +6601,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "sim-assisted-uav-beamforming",
@@ -7084,7 +7155,7 @@
       "id": "terra-drone-deftech",
       "name": "Terra Drone DEFTECH Partnership",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ops-mission",
       "tags": [
         "drone",
         "company",
@@ -7095,13 +7166,13 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Mission"
     },
     {
       "id": "test-time-scaling-vlm-uav",
       "name": "Test-Time Scaling VLM for UAV Navigation",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "voice-control",
         "drone",
@@ -7109,10 +7180,10 @@
         "vlm",
         "navigation"
       ],
-      "updated": "2026-08-19",
+      "updated": "2026-10-21",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "thermal-drone-wildfire-monitoring",
@@ -7221,7 +7292,7 @@
       "updated": "2026-10-16",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Engine"
     },
     {
       "id": "uav-battery-recharge-agent-based-simulation",
@@ -7279,7 +7350,7 @@
         "drone-hw",
         "research"
       ],
-      "updated": "2026-10-20",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -7395,7 +7466,7 @@
       "id": "uav-isac-cross-region",
       "name": "UAV ISAC via Cross-Region Cooperation",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "comms-protocol",
       "tags": [
         "drone",
         "comms-protocol",
@@ -7405,7 +7476,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "uav-leo-satellite-backhaul-emergency",
@@ -8163,7 +8234,7 @@
       "id": "visual-slam-gps-denied-evaluation",
       "name": "Visual SLAM GPS-Denied Evaluation",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "navigation-gnss-denied",
       "tags": [
         "drone-ai",
         "drone",
@@ -8190,6 +8261,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "vlm-copilot-uav-navigation-latency-reliability",
+      "name": "UAV 항법 VLM 코파일럿: 스트레스 질의와 시간적 신뢰성 벤치마크",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "vlm-fsm-copilot-uav-navigation",
@@ -8486,7 +8571,7 @@
       "id": "yolo-v8-4-137",
       "name": "YOLO v8.4.137 Release Notes",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "drone",
         "drone-ai",
@@ -8496,7 +8581,7 @@
       "updated": "2026-09-01",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "yolo-v8-4-138",
@@ -8982,7 +9067,21 @@
         "drone",
         "drone-ai"
       ],
-      "updated": "2026-10-19",
+      "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-183",
+      "name": "YOLO v8.4.183 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -8997,7 +9096,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-10-18",
+      "updated": "2026-10-21",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -9072,7 +9171,7 @@
       "id": "zuri-cargo-tiltrotor",
       "name": "Zuri Uncrewed Cargo Tiltrotor",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "hardware",
@@ -9083,7 +9182,7 @@
       "updated": "2026-09-14",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "abz-innovation",
@@ -9098,7 +9197,7 @@
       "updated": "2026-09-23",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "airwise-nexus",
@@ -9136,7 +9235,7 @@
       "id": "auterion",
       "name": "Auterion",
       "layer": "Entities",
-      "domain": "",
+      "domain": "flight-control",
       "tags": [
         "drone",
         "drone-sw",
@@ -9146,7 +9245,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "avidrone",
@@ -9163,13 +9262,13 @@
       "updated": "2026-09-14",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "bitcraze",
       "name": "Bitcraze",
       "layer": "Entities",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "drone-hw",
@@ -9179,7 +9278,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "cambridge-aerospace",
@@ -9315,7 +9414,7 @@
       "updated": "2026-10-02",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "doordash-air",
@@ -9413,7 +9512,7 @@
       "updated": "2026-08-12",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "flowcopter",
@@ -9491,7 +9590,7 @@
       "updated": "2026-09-03",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "kite-aerospace",
@@ -9506,13 +9605,13 @@
       "updated": "2026-09-15",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "kite-gcs",
       "name": "Kite GCS",
       "layer": "Entities",
-      "domain": "",
+      "domain": "gcs-software",
       "tags": [
         "drone",
         "drone-sw",
@@ -9521,7 +9620,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "matternet",
@@ -9533,7 +9632,7 @@
         "ops-mission",
         "company"
       ],
-      "updated": "2026-09-30",
+      "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -9550,7 +9649,7 @@
       "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "CommunicationProtocol"
     },
     {
       "id": "mbf-group",
@@ -9614,7 +9713,7 @@
       "updated": "2026-08-03",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "perceptual-robotics",
@@ -9710,7 +9809,7 @@
       "id": "ratefpv",
       "name": "RateFPV",
       "layer": "Entities",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "drone",
         "drone-hw",
@@ -9719,7 +9818,7 @@
       "updated": "2026-08-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "robin-radar",
@@ -9734,7 +9833,7 @@
       "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "skydio",
@@ -9748,7 +9847,7 @@
         "autonomy",
         "security"
       ],
-      "updated": "2026-10-02",
+      "updated": "2026-10-21",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -9781,7 +9880,7 @@
       "updated": "2026-10-01",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "AIModel"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "sol-one",
@@ -9813,7 +9912,7 @@
       "updated": "2026-09-25",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "AIModel"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "terra-drone",
@@ -9876,7 +9975,7 @@
       "updated": "2026-08-02",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "wingcopter",
@@ -9892,7 +9991,7 @@
       "updated": "2026-09-15",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "Manufacturer"
     },
     {
       "id": "wingtraray",
@@ -11369,6 +11468,15 @@
       "confidence": "medium"
     },
     {
+      "source": "capsulebot-hybrid-aerial-ground-bicopter",
+      "target": "maspa-tethered-marsupial-uav-ugv-path-planning",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-arxiv-capsulebot-a-novel-hybrid-aerial-ground-bi-copter-robot-with.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "chained-attacks-drone-fl",
       "target": "federated-lightweight-intrusion-detection",
       "type": "related",
@@ -11588,6 +11696,15 @@
       "source": "companion-computer",
       "target": "visual-slam-gps-denied-evaluation",
       "type": "related",
+      "evidence": [
+        "raw/articles/quad-drone-lab-quad-drone-start.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "companion-computer",
+      "target": "vlm-copilot-uav-navigation-latency-reliability",
+      "type": "evidences",
       "evidence": [
         "raw/articles/quad-drone-lab-quad-drone-start.md"
       ],
@@ -14977,6 +15094,87 @@
       "confidence": "low"
     },
     {
+      "source": "drone-news-2026-10-20",
+      "target": "drone-news-2026-10-21",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-20-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "drone-news-2026-10-20",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "faa-section-2209-uafr",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "matternet",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "wing-nhs-medical-delivery",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "skydio-dfr-milestone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "sol-one",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-21",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-rss-dronelife.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -16288,6 +16486,15 @@
       "confidence": "high"
     },
     {
+      "source": "edgetx-custom-audio",
+      "target": "rc-radio-power-button-safety",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/fetch-2026-08-03-rss-oscarliang-fpv.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "elrs-41-release",
       "target": "fpv-hardware",
       "type": "related",
@@ -16300,6 +16507,15 @@
       "source": "elrs-41-release",
       "target": "datalink-communication",
       "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-04-yt-elrs-41-makes-binding-easier-than-ever.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "elrs-41-release",
+      "target": "rc-radio-power-button-safety",
+      "type": "evidences",
       "evidence": [
         "inbox/fetch-2026-08-04-yt-elrs-41-makes-binding-easier-than-ever.md"
       ],
@@ -17084,6 +17300,15 @@
       "source": "flight-ready-lidar-inertial-odometry",
       "target": "drone-simulation",
       "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-flight-ready-lidar-inertial-odometry-for-embedded-drone-plat.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "flight-ready-lidar-inertial-odometry",
+      "target": "perception-energy-aware-uav-lidar-motion-planning",
+      "type": "evidences",
       "evidence": [
         "inbox/fetch-2026-07-30-arxiv-flight-ready-lidar-inertial-odometry-for-embedded-drone-plat.md"
       ],
@@ -17986,6 +18211,15 @@
       "confidence": "high"
     },
     {
+      "source": "indi-stability-tilt-rotor-vtol",
+      "target": "jet-hr2-flying-humanoid-thrust-vectoring",
+      "type": "evidences",
+      "evidence": [
+        "inbox/fetch-2026-07-30-arxiv-linear-stability-analysis-of-an-indi-pitch-rate-controller-u.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "insta360-x6",
       "target": "dji-osmo-nano",
       "type": "related",
@@ -18056,6 +18290,33 @@
         "inbox/fetch-2026-08-19-arxiv-improving-physical-layer-security-in-isac-uav-system-beamfor.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "jet-hr2-flying-humanoid-thrust-vectoring",
+      "target": "capsulebot-hybrid-aerial-ground-bicopter",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-design-of-a-flying-humanoid-robot-based-on-thrust-vector-con.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jet-hr2-flying-humanoid-thrust-vectoring",
+      "target": "fpv-motor-selection-guide",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-design-of-a-flying-humanoid-robot-based-on-thrust-vector-con.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "jet-hr2-flying-humanoid-thrust-vectoring",
+      "target": "drone-power-battery",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-design-of-a-flying-humanoid-robot-based-on-thrust-vector-con.md"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "kci-3dgs-flight-path-reconstruction-quality",
@@ -20315,6 +20576,15 @@
       "confidence": "medium"
     },
     {
+      "source": "llm-enabled-uav-natural-language-navigation",
+      "target": "vlm-copilot-uav-navigation-latency-reliability",
+      "type": "evidences",
+      "evidence": [
+        "inbox/fetch-2026-08-12-arxiv-llm-enabled-low-altitude-uav-natural-language-navigation-via.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "llm-swarm-wot-framework",
       "target": "swarm-coordination",
       "type": "related",
@@ -20551,6 +20821,33 @@
       "target": "flight-controller-hardware",
       "type": "related",
       "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "maspa-tethered-marsupial-uav-ugv-path-planning",
+      "target": "uav-cable-payload-cooperative-transport-research",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-maspa-an-efficient-strategy-for-path-planning-with-a-tethere.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "maspa-tethered-marsupial-uav-ugv-path-planning",
+      "target": "multirotor-energy-power-models",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-maspa-an-efficient-strategy-for-path-planning-with-a-tethere.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "maspa-tethered-marsupial-uav-ugv-path-planning",
+      "target": "drone-ai-agents",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-maspa-an-efficient-strategy-for-path-planning-with-a-tethere.md"
+      ],
       "confidence": "medium"
     },
     {
@@ -21739,6 +22036,15 @@
       "confidence": "medium"
     },
     {
+      "source": "multirotor-energy-power-models",
+      "target": "perception-energy-aware-uav-lidar-motion-planning",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-16-hw-paper-multirotor-power-model-gong-2022.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "multirotor-propeller-test-research",
       "target": "fpv-motor-selection-guide",
       "type": "wikilink",
@@ -22304,6 +22610,33 @@
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-17-arxiv-energy-efficient-drone-logistics-for-last-mile-delivery-impl.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "perception-energy-aware-uav-lidar-motion-planning",
+      "target": "multirotor-energy-power-models",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-perception-and-energy-aware-motion-planning-for-uav-using-le.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "perception-energy-aware-uav-lidar-motion-planning",
+      "target": "flight-ready-lidar-inertial-odometry",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-perception-and-energy-aware-motion-planning-for-uav-using-le.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "perception-energy-aware-uav-lidar-motion-planning",
+      "target": "visual-slam-gps-denied-evaluation",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-perception-and-energy-aware-motion-planning-for-uav-using-le.md"
       ],
       "confidence": "medium"
     },
@@ -23240,6 +23573,42 @@
         "inbox/fetch-2026-08-01-yt-radial-impeller-drone-fly-by-drone-fpv-diy-rc-fpvdrone-quadm.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "rc-radio-power-button-safety",
+      "target": "edgetx-custom-audio",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yt-why-modern-rc-radio-power-buttons-are-safer-than-you-think.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "rc-radio-power-button-safety",
+      "target": "elrs-41-release",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yt-why-modern-rc-radio-power-buttons-are-safer-than-you-think.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "rc-radio-power-button-safety",
+      "target": "radiomaster-gx15",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yt-why-modern-rc-radio-power-buttons-are-safer-than-you-think.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "rc-radio-power-button-safety",
+      "target": "drone-safety-failsafe",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yt-why-modern-rc-radio-power-buttons-are-safer-than-you-think.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "recon-swarm-project",
@@ -25160,6 +25529,15 @@
       "confidence": "high"
     },
     {
+      "source": "test-time-scaling-vlm-uav",
+      "target": "vlm-copilot-uav-navigation-latency-reliability",
+      "type": "evidences",
+      "evidence": [
+        "raw/papers/voice-control/fetch-2026-08-19-arxiv-no-training-better-flights-test-time-scaled-vlms-for-uav-nav.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "thermal-drone-wildfire-monitoring",
       "target": "drone-first-responder-dfr",
       "type": "related",
@@ -25522,6 +25900,15 @@
     {
       "source": "uav-cable-payload-cooperative-transport-research",
       "target": "multi-uav-payload-transport-rao-controllers",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-17-arxiv-compact-force-sensor-for-dual-uav-cable-suspended-payload-tr.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "uav-cable-payload-cooperative-transport-research",
+      "target": "maspa-tethered-marsupial-uav-ugv-path-planning",
       "type": "evidences",
       "evidence": [
         "inbox/processed/fetch-2026-10-17-arxiv-compact-force-sensor-for-dual-uav-cable-suspended-payload-tr.md"
@@ -27235,6 +27622,33 @@
       "confidence": "medium"
     },
     {
+      "source": "vlm-copilot-uav-navigation-latency-reliability",
+      "target": "llm-enabled-uav-natural-language-navigation",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-stress-query-and-temporal-reliability-of-vision-language-mod.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vlm-copilot-uav-navigation-latency-reliability",
+      "target": "test-time-scaling-vlm-uav",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-stress-query-and-temporal-reliability-of-vision-language-mod.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "vlm-copilot-uav-navigation-latency-reliability",
+      "target": "companion-computer",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-arxiv-stress-query-and-temporal-reliability-of-vision-language-mod.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "vlm-fsm-copilot-uav-navigation",
       "target": "test-time-scaling-vlm-uav",
       "type": "related",
@@ -28574,6 +28988,51 @@
       "confidence": "medium"
     },
     {
+      "source": "yolo-v8-4-182",
+      "target": "yolo-v8-4-183",
+      "type": "evidences",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-19-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-183",
+      "target": "yolo-v8-4-182",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-183",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-183",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-183",
+      "target": "companion-computer",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-21-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "yolo",
       "target": "yolo-v8-4-155",
       "type": "wikilink",
@@ -28819,6 +29278,24 @@
     {
       "source": "yolo",
       "target": "yolo-v8-4-181",
+      "type": "evidences",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-183",
+      "type": "evidences",
+      "evidence": [
+        "inbox/fetch-2026-07-29-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo",
+      "target": "yolo-v8-4-182",
       "type": "evidences",
       "evidence": [
         "inbox/fetch-2026-07-29-yolo.md"
@@ -29743,6 +30220,24 @@
       "confidence": "medium"
     },
     {
+      "source": "matternet",
+      "target": "wing-nhs-medical-delivery",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/fetch-2026-09-19-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "matternet",
+      "target": "drone-news-2026-10-21",
+      "type": "evidences",
+      "evidence": [
+        "raw/articles/fetch-2026-09-19-rss-dronelife.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "mavlink",
       "target": "advanced-mavlink",
       "type": "wikilink",
@@ -30235,6 +30730,24 @@
       "source": "skydio",
       "target": "drone-first-responder-dfr",
       "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio",
+      "target": "skydio-dfr-milestone",
+      "type": "evidences",
+      "evidence": [
+        "inbox/fetch-2026-08-03-rss-skydio.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "skydio",
+      "target": "drone-news-2026-10-21",
+      "type": "evidences",
       "evidence": [
         "inbox/fetch-2026-08-03-rss-skydio.md"
       ],

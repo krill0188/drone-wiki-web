@@ -191,10 +191,19 @@ async function main() {
     ok(p.status === "insufficient_evidence", `${p.status}/${p.basis}`)
   })
 
-  await t("W1 MAVLink란 무엇인가요: mavlink 문서를 찾아 위키 요약 기반으로 답변 가능", () => {
+  await t("W1 MAVLink란 무엇인가요: 프로토콜 클래스(CommunicationProtocol, 2026-10-21 신설)에 연결된 문서로 ontology-linked 답변", () => {
     const p = planQuery("MAVLink 프로토콜이란 무엇인가요?")
-    ok(p.status === "ready" && p.basis === "wiki-sourced" && p.confidence !== "high", `${p.status}/${p.basis}/${p.confidence}`)
+    ok(p.status === "ready" && p.basis === "ontology-linked" && p.confidence !== "high" && p.classes.includes("CommunicationProtocol"), `${p.status}/${p.basis}/${p.confidence}/${p.classes}`)
     ok(p.pages.some((x) => /mavlink/.test(x.path)), `문서=${p.pages.map((x) => x.path)}`)
+  })
+
+  await t("W1b DJI는 어떤 회사야: '회사야'는 일반어라 거절 사유가 아님 + 합성어 수소연료전지는 구성어(연료전지)로 인정", () => {
+    const a = planQuery("DJI는 어떤 회사야?")
+    ok(a.status === "ready", `DJI ${a.status}/${a.basis}`)
+    const b = planQuery("수소연료전지 드론 동력원은?")
+    ok(b.status === "ready" && b.classes.includes("Engine"), `연료전지 ${b.status}/${b.basis}/${b.classes}`)
+    const c = planQuery("양자컴퓨터 드론 항법은?")
+    ok(c.status === "insufficient_evidence", `양자 ${c.status}`)
   })
 
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {

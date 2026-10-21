@@ -7,6 +7,7 @@ export const CLASS_ALIAS: Record<string, RegExp> = {
   PX4: /px4/i, ArduPilot: /ardupilot|아르두파일럿/i, FlightStack: /비행\s*스택|flight\s*stack|펌웨어|firmware/i, Telemetry: /텔레메트리|telemetry/i,
   ROS2: /\bros\s*2\b|ros2|mavros/i, Multirotor: /멀티로터|multirotor|쿼드콥터|quadcopter/i, VTOL: /\bvtol\b|수직\s*이착륙/i, FixedWing: /고정익|fixed.?wing/i,
   GNSS: /gnss|\bgps\b|\brtk\b/i, IMU: /\bimu\b|관성/i, Gimbal: /짐벌|gimbal/i, SwarmCoordinator: /군집|swarm/i,
+  CommunicationProtocol: /프로토콜|protocol|mavlink|메시지\s*규격/i, Manufacturer: /제조사|제조업체|manufacturer|\bmaker\b/i,
   Engine: /엔진|내연|가솔린|연료전지|하이브리드\s*발전|\bengine\b|fuel cell/i, Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
 }
 

@@ -8148,5 +8148,111 @@
       "china-drone-export-controls",
       "dronuum-computing-continuum"
     ]
+  },
+  "http://arxiv.org/abs/2408.02141v3": {
+    "processedAt": "2026-10-20T22:45:19.706Z",
+    "matchedSlugs": [
+      "maspa-tethered-marsupial-uav-ugv-path-planning"
+    ]
+  },
+  "http://arxiv.org/abs/2610.23877v1": {
+    "processedAt": "2026-10-20T22:45:19.734Z",
+    "matchedSlugs": [
+      "vlm-copilot-uav-navigation-latency-reliability"
+    ]
+  },
+  "https://www.youtube.com/watch?v=DLFeyCly0T8": {
+    "processedAt": "2026-10-20T22:45:19.828Z",
+    "matchedSlugs": [
+      "rc-radio-power-button-safety",
+      "drone-power-module-specs-catalog"
+    ]
+  },
+  "http://arxiv.org/abs/2108.11557v1": {
+    "processedAt": "2026-10-20T22:45:19.744Z",
+    "matchedSlugs": [
+      "jet-hr2-flying-humanoid-thrust-vectoring"
+    ]
+  },
+  "https://www.youtube.com/watch?v=h_8Ug05Ok9g": {
+    "processedAt": "2026-10-20T22:45:19.757Z",
+    "matchedSlugs": [
+      "dji-osmo-pocket-4p-stabilization",
+      "dji-osmo-pocket-4"
+    ]
+  },
+  "https://dronelife.com/2026/10/20/matternet-nhs-drone-delivery-london/": {
+    "processedAt": "2026-10-20T22:45:19.767Z",
+    "matchedSlugs": [
+      "drone-news-2026-10-21",
+      "wing-nhs-medical-delivery"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUHdLMWVsOUE4MEo4UjNIMEpkSXowd0NPVExWWGlYZFRzLXAycEJXSW8xd0tpU3RhWGZzTlY2WTA4Zk1IWjdnaEhydzNLN0RtZHh0SkpLcURBUVBtRWlhVkhBd0hlVHFZZnp1TlFmWUJOUXB5bVdvbWoxZmtTdkViVGljNVRRZjNJZWx0U1FzVmNSX2V2elBtanhybGxraS1KOS11eGFMSE0tRE9tbThPTFlKeTl3ZjFiWm5jQ0Z5SU5seFJSWkdWMURBU2ZQcThRTE9ZVVlGVDhvZ3A5OXBjUk1OZjJpMnN1dWFULVFwS0t5WFpf?oc=5": {
+    "processedAt": "2026-10-20T22:45:19.804Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://www.youtube.com/watch?v=WBH_VfmdTSA": {
+    "processedAt": "2026-10-20T22:45:19.778Z",
+    "matchedSlugs": [
+      "dji-matrice-5-rumor"
+    ]
+  },
+  "https://www.youtube.com/watch?v=Lst8QjB7tvk": {
+    "processedAt": "2026-10-20T22:45:19.823Z",
+    "matchedSlugs": [
+      "ai-personal-knowledge-management",
+      "kci-critical-facility-intrusion-detection-drone-ai"
+    ]
+  },
+  "https://dronelife.com/2026/10/20/faa-section-2209-drone-critical-infrastructure/": {
+    "processedAt": "2026-10-20T22:45:19.791Z",
+    "matchedSlugs": [
+      "drone-news-2026-10-21",
+      "drone-news-ops"
+    ]
+  },
+  "https://www.youtube.com/watch?v=riIEO9Sk_fo": {
+    "processedAt": "2026-10-20T22:45:19.832Z",
+    "matchedSlugs": [
+      "mbse-uav-sysml",
+      "ai-personal-knowledge-management"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/high-lander-announces-it-has-reached-a-total-of-30-million-in-funding/": {
+    "processedAt": "2026-10-20T22:45:19.815Z",
+    "matchedSlugs": [
+      "drone-news-ops"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/sol-one-enters-india-with-dg-sol-one/": {
+    "processedAt": "2026-10-20T22:45:19.871Z",
+    "matchedSlugs": [
+      "sol-one",
+      "drone-news-2026-10-21"
+    ]
+  },
+  "https://dronelife.com/2026/10/20/skyfly-personal-evtol-aircraft-funding/": {
+    "processedAt": "2026-10-20T22:45:19.851Z",
+    "matchedSlugs": [
+      "crazyflie-brushless-dynamics-model",
+      "drone-news-ops"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/flarebrights-flight-termination-system-gains-sail-mark-following-marshall-aerospace-assessment/": {
+    "processedAt": "2026-10-20T22:45:19.862Z",
+    "matchedSlugs": [
+      "agile-quadrotor-learning",
+      "aitester-uas-testing"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/plowman-craven-expands-infrastructure-division-following-period-of-significant-growth/": {
+    "processedAt": "2026-10-20T22:45:19.868Z",
+    "matchedSlugs": [
+      "china-drone-export-controls"
+    ]
   }
 }
