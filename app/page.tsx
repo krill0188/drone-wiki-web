@@ -1,41 +1,10 @@
 import Link from "next/link"
 import { getNewsFeed, getDailyBriefing, timeAgo, NEWS_TYPE_META } from "@/lib/news"
 import NewsCarousel from "@/components/NewsCarousel"
-import DroneIcon from "@/components/DroneIcon"
-
-function FeatureCard({
-  href,
-  emoji,
-  eyebrow,
-  title,
-  desc,
-}: {
-  href: string
-  emoji: string
-  eyebrow: string
-  title: string
-  desc: string
-}) {
-  return (
-    <Link
-      href={href}
-      className="group relative flex flex-col gap-3 p-6 rounded-2xl border border-line bg-panel hover:border-signal-500 transition-colors overflow-hidden min-h-[230px]"
-    >
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -right-3 -bottom-5 text-[130px] leading-none opacity-[0.06] group-hover:opacity-[0.11] transition-opacity select-none"
-      >
-        {emoji}
-      </span>
-      <span className="relative text-[13px] text-ink-dim">{eyebrow}</span>
-      <span className="relative font-display font-bold text-2xl leading-tight">{title}</span>
-      <span className="relative text-[13px] text-ink-dim leading-relaxed flex-1">{desc}</span>
-      <span className="relative inline-flex items-center gap-1 self-start px-4 py-1.5 rounded-full border border-line text-[13px] font-medium group-hover:border-signal-500 group-hover:text-signal-600 group-hover:bg-signal-500/10 transition-colors">
-        시작하기 →
-      </span>
-    </Link>
-  )
-}
+import HeroSection from "@/components/HeroSection"
+import AnimatedFeatureCard from "@/components/AnimatedFeatureCard"
+import PipelineFlow from "@/components/PipelineFlow"
+import StatsSection from "@/components/StatsSection"
 
 export default async function HomePage() {
   const feed = getNewsFeed()
@@ -44,57 +13,45 @@ export default async function HomePage() {
 
   return (
     <div>
-      {/* 히어로 — GPT/Gemini처럼 중앙에 크게, 3단계 사용법 안내 */}
-      <div className="text-center pt-14 pb-10 px-4 border-b border-line mb-8">
-        <DroneIcon className="w-12 h-12 mx-auto mb-3 text-ink" />
-        <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-2">DroneWiki</h1>
-        <p className="text-ink-dim text-sm sm:text-[15px] mb-7">
-          드론 비행제어·통신·하드웨어·GCS·법규·AI 자율 — 모든 드론 지식을 AI와 함께
-        </p>
-        <div className="flex flex-col gap-2.5 max-w-sm mx-auto text-left text-[13px]">
-          <div className="flex items-start gap-2.5">
-            <span className="font-hud text-signal-600 shrink-0 mt-px">01</span>
-            <span className="text-ink-dim">왼쪽 사이드바의 <strong className="text-ink">AI Q&amp;A</strong>로 바로 질문하세요</span>
-          </div>
-          <div className="flex items-start gap-2.5">
-            <span className="font-hud text-signal-600 shrink-0 mt-px">02</span>
-            <span className="text-ink-dim"><strong className="text-ink">위키</strong> 문서를 읽다가 텍스트를 선택하면 그 자리에서 질문·저장</span>
-          </div>
-          <div className="flex items-start gap-2.5">
-            <span className="font-hud text-signal-600 shrink-0 mt-px">03</span>
-            <span className="text-ink-dim"><strong className="text-ink">AI 드론 빌더</strong>에 컨셉 한 줄로 프로젝트 전체를 설계</span>
-          </div>
-        </div>
-      </div>
+      {/* 히어로 — 애니메이션 클라이언트 컴포넌트 */}
+      <HeroSection />
 
       <div className="max-w-3xl mx-auto px-4 pb-10">
-        {/* 주요 기능 3종 — Liner 스타일: 이럴 때 쓰세요(eyebrow) + 큰 이름 + 시작하기 버튼 */}
+        {/* 기능 카드 3종 — stagger 등장 */}
         <div className="grid sm:grid-cols-3 gap-3 mb-10">
-          <FeatureCard
+          <AnimatedFeatureCard
             href="/chat"
             emoji="💬"
             eyebrow="드론 지식이 궁금할 때"
             title="AI Q&A"
             desc="위키 문서와 지식그래프(GraphRAG)를 근거로 실시간 스트리밍 답변"
+            delay={0}
           />
-          <FeatureCard
+          <AnimatedFeatureCard
             href="/wiki-editor"
             emoji="✍️"
             eyebrow="정리 안 된 메모가 있을 때"
             title="AI 에디터"
             desc="초안을 넣으면 프론트매터·개요·스펙까지 갖춘 문서로 구조화"
+            delay={0.1}
           />
-          <FeatureCard
+          <AnimatedFeatureCard
             href="/ai-drone-builder"
             emoji="🚀"
             eyebrow="새 드론 프로젝트를 시작할 때"
             title="AI 드론 빌더"
             desc="기획 → HW·SW 스펙 → 기술 스펙 → 아키텍처 → 코드·로드맵, 6단계 에이전트가 순차로 작성"
+            delay={0.2}
           />
         </div>
 
-        {/* 뉴스 — AI 일일 요약이 있으면 그걸 슬라이드로, 없으면 제목만 슬라이드로 폴백.
-            나머지(논문/영상/정부/채용 등)는 전부 더보기(/news) 하나로 들어가서 본다 */}
+        {/* 2nd Brain 파이프라인 애니메이션 */}
+        <PipelineFlow />
+
+        {/* 스탯 카운트업 */}
+        <StatsSection />
+
+        {/* 뉴스 */}
         <div className="flex items-baseline justify-between mb-2">
           <h2 className="font-bold text-base">
             {briefing ? `🗞️ 오늘의 드론 소식 (${briefing.date})` : "📰 최신 소식"}
