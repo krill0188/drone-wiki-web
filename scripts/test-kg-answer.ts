@@ -206,6 +206,13 @@ async function main() {
     ok(c.status === "insufficient_evidence", `양자 ${c.status}`)
   })
 
+  await t("W1c 문체 부사(자세히·간단히·쉽게)는 핵심 개념이 아니다: 'RTK와 PPK의 차이를 자세히 설명해줘'가 거절되면 안 됨", () => {
+    for (const q of ["RTK와 PPK의 차이를 자세히 설명해줘", "MAVLink를 쉽게 알려줘", "PX4를 간단히 요약해줘", "ArduPilot 설치 방법을 단계별로 알려줘", "GNSS 재밍 대응 방법을 정리해줘", "LiPo 배터리 보관 방법은 뭐예요"]) {
+      const r = planQuery(q)
+      ok(r.status === "ready", `${q} → ${r.status}/${r.basis}`)
+    }
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)
