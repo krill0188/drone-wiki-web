@@ -34,14 +34,16 @@ const cell = (s: string, max = 260) => {
 }
 
 export function renderEntityTables(plan: Plan, maxEntities = 2): string {
-  const qt = questionTokens(plan.question)
+  const qt0 = questionTokens(plan.question)
   const out: string[] = []
   for (const e of plan.entities) {
     if (out.length >= maxEntities) break
+    const label = e.label.toLowerCase()
+    const qt = qt0.filter((t) => !label.includes(t) && !e.alias.toLowerCase().includes(t)) // 제품명 낱말은 모든 행에 걸리므로 관련 행 선별에서 뺀다
     const all = rowsOf(e)
     if (all.length < 2) continue // 속성이 거의 없는 개체(제조사 등)는 표를 만들지 않는다
     const hit = all.filter((r) => qt.some((t) => r.k.toLowerCase().includes(t) || r.v.toLowerCase().includes(t)))
-    const rows = (hit.length >= 1 && hit.length < all.length ? hit : all).slice(0, 14)
+    const rows = (hit.length >= 1 && hit.length < all.length && qt.length ? hit : all).slice(0, 14)
     const more = all.length > rows.length ? " · 질문과 관련된 항목만 표시" : ""
     const url = typeof e.attributes.url === "string" ? e.attributes.url.split(/\s*;\s*/)[0] : ""
     out.push([

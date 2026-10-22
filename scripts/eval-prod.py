@@ -73,7 +73,7 @@ ok = 0; times = []
 for r in res:
     if "err" in r:
         print("ERR ", r["q"], r["err"]); continue
-    refused = bool(re.search(r"답할 근거를 찾지 못했|답변하지 않습니다|해당하지 않|범위를 벗어", r["text"])) or r["meta"].get("status") == "insufficient_evidence"
+    refused = r["meta"].get("status") == "insufficient_evidence" or bool(re.match(r"\s*이 질문은 .{0,40}(답할 근거를 찾지|답변하지 않)", r["text"]))
     hit = (not r["must"]) or any(w.lower() in r["text"].lower() for w in r["must"])
     bad = [b for b in BAD if b in r["text"]]
     good = (refused if r["exp"] == "ref" else (not refused and hit)) and not bad
