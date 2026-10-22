@@ -1,5 +1,6 @@
 "use client"
 
+import WaitingIndicator from "@/components/WaitingIndicator"
 import { useEffect, useRef, useState } from "react"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
@@ -348,7 +349,7 @@ export default function AiDroneBuilderPage() {
               key={s.key}
               className={`border rounded-xl overflow-hidden transition-colors ${
                 st.status === "running" || st.status === "review"
-                  ? "border-signal-400"
+                  ? `border-signal-400 ${st.status === "running" ? "stage-running" : ""}`
                   : st.status === "approved"
                     ? "border-slate-200 dark:border-slate-700"
                     : st.status === "error"
@@ -373,7 +374,12 @@ export default function AiDroneBuilderPage() {
 
               {st.status !== "pending" && (
                 <div className="p-4 text-sm whitespace-pre-wrap leading-relaxed max-h-[500px] overflow-y-auto">
-                  {st.text || (st.status === "running" && progress[s.key] ? `${progress[s.key]}…` : "대기 중...")}
+                  {st.text || (st.status === "running" ? null : "대기 중...")}
+                  {st.status === "running" && (
+                    <div className={st.text ? "mt-3" : ""}>
+                      <WaitingIndicator active detail={progress[s.key]} />
+                    </div>
+                  )}
                 </div>
               )}
 

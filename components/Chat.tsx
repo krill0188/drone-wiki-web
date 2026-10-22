@@ -1,5 +1,7 @@
 "use client"
 
+import { motion } from "framer-motion"
+import WaitingIndicator, { TypingDots } from "./WaitingIndicator"
 import { useEffect, useRef, useState } from "react"
 import { useChat } from "@ai-sdk/react"
 import { DefaultChatTransport, type UIMessage } from "ai"
@@ -46,14 +48,12 @@ const EXAMPLES = [
 // 그대로 따르되, 두 가지는 드론 지식베이스 전용 서비스라는 걸 보여주는 지점이라
 // 일부러 다르게 간다: (1) GraphRAG 인용 배지로 "그냥 LLM이 아니다"를 드러내고,
 // (2) 로딩 상태를 레이더 스캔 문구로 바꿔 실제 파이프라인(RAG→그래프→생성)을 보여준다.
-const SCAN_LABELS = ["지식베이스 스캔 중", "그래프 연결고리 탐색 중", "추론 중 (복잡한 질문은 10~20초)", "답변 조합 중"]
 
 // 화면 우측에 고정되는 실시간 스트리밍 AI 챗봇. 위키 문서를 보는 중이면
 // WikiDocContext에서 현재 문서를 읽어 매 요청마다 함께 전송한다(문서 기반 대화).
 export default function ChatWidget() {
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState("")
-  const [scanLabel, setScanLabel] = useState(0)
   const { doc, pendingAsk, clearPendingAsk } = useWikiDoc()
   const endRef = useRef<HTMLDivElement>(null)
   const [sessionId, setSessionId] = useState("")
@@ -99,14 +99,6 @@ export default function ChatWidget() {
     if (open) endRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages, busy, open])
 
-  useEffect(() => {
-    if (!scanning) {
-      setScanLabel(0)
-      return
-    }
-    const id = setInterval(() => setScanLabel((i) => (i + 1) % SCAN_LABELS.length), 1100)
-    return () => clearInterval(id)
-  }, [scanning])
 
   // 본문에서 텍스트를 선택하고 "AI에게 질문하기"를 누르면 WikiDocContext에
   // pendingAsk가 채워진다 — 패널을 열고 즉시 질문을 보낸 뒤 비워준다.
@@ -195,7 +187,7 @@ export default function ChatWidget() {
           {messages.map((m) => {
             const meta = m.metadata as ChatMetadata | undefined
             return (
-              <div key={m.id} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+              <motion.div key={m.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div className="max-w-[90%] space-y-1.5">
                   <div
                     className={`rounded-2xl px-3 py-2 text-sm leading-relaxed whitespace-pre-wrap ${
@@ -357,18 +349,21 @@ export default function ChatWidget() {
                     </details>
                   )}
                 </div>
-              </div>
+              </motion.div>
             )
           })}
 
           {scanning && (
             <div className="flex justify-start">
-              <div className="bg-paper border border-line rounded-2xl rounded-bl-sm px-3 py-2">
-                <div className="flex gap-2 items-center font-hud text-[11px] text-ink-dim">
-                  <span className="w-1.5 h-1.5 bg-signal-500 rounded-full animate-pulse" />
-                  {SCAN_LABELS[scanLabel]}…
-                </div>
+              <div className="bg-paper border border-line rounded-2xl rounded-bl-sm px-3 py-2.5 min-w-[240px]">
+                <WaitingIndicator active compact />
               </div>
+            </div>
+          )}
+
+          {busy && answerStarted && (
+            <div className="flex justify-start pl-1 text-[11px] font-hud text-ink-dim">
+              답변 작성 중<TypingDots />
             </div>
           )}
 
