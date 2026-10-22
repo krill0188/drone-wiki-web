@@ -113,6 +113,8 @@ const PARTICLE = /(을|를|은|는|이|가|의|에|에서|로|으로|과|와|도
 const ENDING = /(이에요|인가요|인가|이야|예요|해요|하나요|하나|할까요|할까|합니까|해)$/
 // 요청·문체 표현(…해줘/…주세요/뭐예요/단계별로/자세히)은 주제어가 아니므로 '위키에 없는 핵심어' 판정에서 제외한다(2026-10-22: '자세히'·'단계별'·'정리해줘'·'뭐예요'로 정상 질문이 거절됨).
 const REQUEST_WORD = /^[가-힣]+(해줘|해주세요|줘|주세요|세요|뭐야|뭐예요|뭐죠|뭔가요|별로|별|적으로|하게|히)$|^(뭐|뭘|어떻게|어떤|왜|언제)/
+// 질문의 '관점'을 나타내는 일반 명사(주의점·팁·장단점·원인 …)는 주제어가 아니다 — 위키에 없는 핵심어 판정(거절)에서만 제외한다(검색어에는 그대로 쓴다).
+const ASPECT_Q = new Set(["주의점", "주의사항", "유의점", "유의사항", "주의", "팁", "요령", "포인트", "핵심", "요점", "장점", "단점", "장단점", "이유", "원인", "예시", "사례", "순서", "절차", "기준", "원리", "개념", "의미", "목적", "용도", "효과", "문제", "문제점", "해결", "대응", "대책", "방안", "비교", "차이점", "공통점", "한계", "제한", "조건", "요건", "과정", "단계", "구조", "특성", "성능", "기능", "역할", "원칙", "가이드", "체크리스트", "권장", "추천", "선택"])
 const stem = (t: string) => {
   if (!/[가-힣]/.test(t)) return t
   const s = t.replace(PARTICLE, "")
@@ -361,6 +363,7 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     // 구성어가 4자 이상이고 합성어의 절반 이상일 때만('컴퓨터'처럼 흔한 짧은 말이 '양자컴퓨터'를 덮어 주면 안 된다)
     const compoundCovered = (v: string) => v.length >= 5 && /[가-힣]/.test(v) && [...hayWords].some((w) => w !== v && w.length * 2 >= v.length && (v.endsWith(w) || v.startsWith(w)))
     const missingCore = contentTokens(question, domainWords).filter((t) => {
+      if (ASPECT_Q.has(t.orig) || t.variants.some((v) => ASPECT_Q.has(v))) return false
       if (/[가-힣]/.test(t.orig) && (REQUEST_WORD.test(t.orig) || t.variants.some((v) => REQUEST_WORD.test(v)))) return false
       if (t.variants.some((v) => hay2.includes(v) || classWords.has(v) || compoundCovered(v))) return false
       const q = t.variants.map((v) => `"${v.replace(/"/g, "")}"`).join(" OR ")

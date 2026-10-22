@@ -5,6 +5,7 @@ import { wikiModel } from "@/lib/ai-model"
 import { evaluateBuilderGate, parseSpec } from "@/lib/design-gate"
 import { isPaperComponent, matchPaperConfig, paperBlock, specHint, validatePaperConfig } from "@/lib/paper-config"
 import { matchProducts, type MatchData } from "@/lib/product-match"
+import { soften } from "@/lib/soften"
 import { repairHwSelections, validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
@@ -401,7 +402,7 @@ export async function POST(req: NextRequest) {
                 repairNote = `\n\n> 서버 치환 ${rep.repaired.length}건 (모델이 카탈로그 밖 제품을 골라 코드가 바꿈): ${rep.repaired.join(" ; ")}`
               }
             }
-            const out = text + repairNote + renderValidation(v, retried)
+            const out = soften(text + repairNote + renderValidation(v, retried))
             progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })

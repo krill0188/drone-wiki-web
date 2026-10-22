@@ -207,7 +207,7 @@ async function main() {
   })
 
   await t("W1c 문체 부사(자세히·간단히·쉽게)는 핵심 개념이 아니다: 'RTK와 PPK의 차이를 자세히 설명해줘'가 거절되면 안 됨", () => {
-    for (const q of ["RTK와 PPK의 차이를 자세히 설명해줘", "MAVLink를 쉽게 알려줘", "PX4를 간단히 요약해줘", "ArduPilot 설치 방법을 단계별로 알려줘", "GNSS 재밍 대응 방법을 정리해줘", "LiPo 배터리 보관 방법은 뭐예요"]) {
+    for (const q of ["RTK와 PPK의 차이를 자세히 설명해줘", "MAVLink를 쉽게 알려줘", "PX4를 간단히 요약해줘", "ArduPilot 설치 방법을 단계별로 알려줘", "GNSS 재밍 대응 방법을 정리해줘", "LiPo 배터리 보관 방법은 뭐예요", "RTK 안테나 설치 위치 주의점은?", "GNSS 재밍 대응 시 핵심 포인트는?"]) {
       const r = planQuery(q)
       ok(r.status === "ready", `${q} → ${r.status}/${r.basis}`)
     }
@@ -217,6 +217,13 @@ async function main() {
     const { soften } = await import("../lib/soften")
     ok(soften("값은 미확인입니다") === "값은 재확인이 필요합니다", soften("값은 미확인입니다"))
     ok(!soften("Hot start 미확인, 크기 미확인이며").includes("미확인"), "잔여 미확인")
+    // 스트림: 청크 경계에서 쪼개진 '미확인'도 바뀐다
+    const { softenTransform } = await import("../lib/soften")
+    const chunks = ["값은 ", "미", "확", "인입", "니다. 크기 미확인", "이며 끝"]
+    const rs = new ReadableStream({ start(c) { for (const x of chunks) c.enqueue({ type: "text-delta", id: "a", text: x }); c.enqueue({ type: "text-end", id: "a" }); c.close() } }).pipeThrough(softenTransform())
+    let out = ""
+    for await (const p of rs as unknown as AsyncIterable<{ type: string; text?: string }>) if (p.type === "text-delta") out += p.text
+    ok(!out.includes("미확인") && out.includes("재확인이 필요합니다") && out.includes("재확인이 필요하며"), `스트림 변환 결과: ${out}`)
     const q = planQuery("u-blox ZED-X20P 사양은?")
     const ctx = buildNimContext(q)
     const sys = nimSystemPrompt(ctx, "text")
