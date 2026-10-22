@@ -1,16 +1,16 @@
 {
  "generated": "2026-10-22",
- "fingerprint": "163c820b8aea",
+ "fingerprint": "23b30b0ac301",
  "counts": {
-  "manufacturers": 255,
-  "products": 682,
+  "manufacturers": 257,
+  "products": 693,
   "rules": 26,
   "papers": 109,
   "claims": 259,
-  "edges": 4525,
-  "documents": 852,
-  "wikiClaims": 2671,
-  "relations": 4560
+  "edges": 4547,
+  "documents": 880,
+  "wikiClaims": 2898,
+  "relations": 4582
  },
  "claimsByKind": {
   "cited-secondary": 3,
@@ -41,14 +41,14 @@
   "manufacturer:sourced": 4,
   "manufacturer:verified": 4,
   "paper:verified": 248,
-  "wiki:blocked": 22,
+  "wiki:blocked": 24,
   "wiki:contested": 6,
-  "wiki:sourced": 2640,
+  "wiki:sourced": 2865,
   "wiki:unverified": 3
  },
  "productsByCategory": {
   "motor": 163,
-  "gnss": 94,
+  "gnss": 105,
   "propeller": 88,
   "battery": 82,
   "frame": 70,
@@ -61,26 +61,26 @@
   "payload": 16
  },
  "manufacturers": {
-  "withSpecs": 100,
+  "withSpecs": 102,
   "registryOnly": 155,
   "countryVerified": 17,
   "countryUnverified": 189,
-  "countryUnknown": 49
+  "countryUnknown": 51
  },
  "documents": {
-  "total": 852,
-  "withDomain": 849,
+  "total": 880,
+  "withDomain": 877,
   "noDomain": 3,
   "unregisteredDomain": 4,
   "withOntologyClass": 118,
   "byDomain": {
-   "ai-autonomy": 190,
-   "hardware": 156,
-   "ops-mission": 143,
+   "ai-autonomy": 198,
+   "hardware": 165,
+   "ops-mission": 146,
    "flight-control": 74,
    "comms-protocol": 63,
-   "regulations": 56,
-   "edge-ai-compute": 30,
+   "regulations": 58,
+   "edge-ai-compute": 35,
    "gcs-software": 29,
    "vendor-registry": 18,
    "security": 18,
@@ -90,8 +90,8 @@
    "rf-datalink-engineering": 12,
    "electrical-power": 4,
    "swarm-multiagent": 3,
+   "ros-middleware": 3,
    "(없음)": 3,
-   "ros-middleware": 2,
    "ai-agent": 2,
    "swarm": 1,
    "sensing-perception": 1,
@@ -99,15 +99,15 @@
   }
  },
  "sources": {
-  "total": 1229,
-  "resolved": 1200,
-  "unresolved": 24,
+  "total": 1262,
+  "resolved": 1232,
+  "unresolved": 25,
   "unknown": 5
  },
  "edgesByRelation": {
   "packFits": 1867,
-  "isA": 682,
-  "madeBy": 682,
+  "isA": 693,
+  "madeBy": 693,
   "powersWith": 403,
   "reportedIn": 259,
   "hasCategory": 217,
@@ -571,14 +571,14 @@
   {
    "desc": "해석되지 않은 출처 경로(blocked claim 원인)",
    "ok": false,
-   "count": 24,
+   "count": 25,
    "sample": [
+    "inbox/processed/hw-20261022-gnss-vendors.md",
     "raw/articles/amazon-prime-air-expansion-2026-08.md",
     "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md",
     "raw/articles/ondas-ohio-drone-hub-2026-08.md",
     "raw/articles/saildrone-european-expansion-2026-08.md",
-    "raw/articles/uavionix-airwise-flightline-partnership-2026-08.md",
-    "raw/notebooklm/2026-07-16-all-notes.md"
+    "raw/articles/uavionix-airwise-flightline-partnership-2026-08.md"
    ]
   },
   {
