@@ -14,7 +14,8 @@ import { planQuery } from "@/lib/kg-plan"
 import { buildNimContext, nimSystemPrompt } from "@/lib/kg-context"
 import { cacheGet, cachePut, cacheKey } from "@/lib/answer-cache"
 import { resolveTier, profileOf } from "@/lib/model-tier"
-import { softenTransform, inferenceGuard } from "@/lib/soften"
+import { renderEntityTables } from "@/lib/kg-table"
+import { softenTransform, inferenceGuard, prefixInjector } from "@/lib/soften"
 import { unsupportedNumbers } from "@/lib/kg-verify"
 import { insufficientMessage, metaForStreamed } from "@/lib/kg-answer"
 import { verbatimAnswer } from "@/lib/kg-verbatim"
@@ -99,10 +100,11 @@ export async function POST(req: NextRequest) {
     if (hit) return instantReply(hit.text, { ...hit.meta, cached: true })
     const ctx = buildNimContext(plan)
     const onto2 = buildOntologyContext(question, docContext?.title, { kgOnly: true })
+    const table = renderEntityTables(plan)
     const tier = resolveTier(plan, question, modelTier)
-    const result2 = streamText({ model: wikiModel(profileOf(tier)), system: nimSystemPrompt(ctx, "text") + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
+    const result2 = streamText({ model: wikiModel(profileOf(tier)), system: nimSystemPrompt(ctx, "text", { serverTable: !!table }) + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
     const acc = { text: "" } // 스트림을 지나가는 답변 텍스트를 모아 완료 후 사후 검증에 쓴다
-    const tapped = result2.stream.pipeThrough(softenTransform() as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(inferenceGuard((t) => unsupportedNumbers(t, ctx).size > 0) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(new TransformStream({ transform(part, ctrl) { if (part.type === "text-delta") acc.text += (part as { text?: string }).text ?? ""; ctrl.enqueue(part) } }))
+    const tapped = result2.stream.pipeThrough(softenTransform() as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(prefixInjector(table) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(inferenceGuard((t) => unsupportedNumbers(t, ctx).size > 0) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(new TransformStream({ transform(part, ctrl) { if (part.type === "text-delta") acc.text += (part as { text?: string }).text ?? ""; ctrl.enqueue(part) } }))
     return createUIMessageStreamResponse({
       stream: toUIMessageStream({
         stream: tapped,

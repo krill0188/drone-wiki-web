@@ -29,6 +29,8 @@ async function main() {
   const { verifyAnswer } = await import("../lib/kg-verify")
   const { buildNimContext, nimSystemPrompt } = await import("../lib/kg-context")
   const { kdbInfo, all } = await import("../lib/kdb")
+  const { renderEntityTables } = await import("../lib/kg-table")
+  const { unsupportedNumbers } = await import("../lib/kg-verify")
 
   const info = kdbInfo()
   ok(info.ok, "지식 DB 적재 실패")
@@ -282,6 +284,20 @@ async function main() {
     ok(pickTier(cmp, "PX4와 ArduPilot의 차이점은?") === "deep", "비교가 fast")
     ok(resolveTier(spec, "CHCNAV M720 사양은", "deep") === "deep" && resolveTier(spec, "x", "fast") === "fast", "강제 지정 무시")
     ok(resolveTier(spec, "CHCNAV M720 사양은") === "deep", "KG_TIER 없으면 기존(deep) 유지해야 함")
+  })
+
+  await t("S18 제품 사양표는 서버가 만든다: 질문과 관련된 행만, 값은 원문 그대로, 모든 숫자가 context 안에 있다", () => {
+    const q = planQuery("CHCNAV M720 사양은")
+    const tbl = renderEntityTables(q)
+    ok(tbl.includes("| 항목 | 값 |") && tbl.includes("CHCNAV M720"), "표 없음")
+    ok(!tbl.includes("미확인"), "미확인 표기 남음")
+    const ctx = buildNimContext(q)
+    const bad = [...unsupportedNumbers(tbl, ctx)]
+    ok(bad.length === 0, `표 안 근거 밖 숫자: ${bad.join(",")}`)
+    const q2 = planQuery("Septentrio mosaic-G5 P3 채널 수와 전력은?")
+    const t2 = renderEntityTables(q2)
+    ok(/789/.test(t2) && /채널|전력/.test(t2), "질문 관련 행(채널·전력) 누락")
+    ok(renderEntityTables(planQuery("DJI는 어떤 회사야?")) === "", "제조사 개체에는 표를 만들지 않음")
   })
 
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {

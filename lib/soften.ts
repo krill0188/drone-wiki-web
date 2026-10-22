@@ -79,3 +79,18 @@ export function inferenceGuard(hasUnsupported: (text: string) => boolean): Trans
     },
   })
 }
+
+// 서버가 만든 글(사양표)을 모델 답변 앞에 붙인다: 첫 text-delta 직전에 prefix를 먼저 내보낸다.
+export function prefixInjector(prefix: string): TransformStream<Part, Part> {
+  let done = !prefix
+  return new TransformStream<Part, Part>({
+    transform(part, ctrl) {
+      if (!done && part.type === "text-delta") {
+        done = true
+        ctrl.enqueue({ ...part, text: prefix + "\n\n" })
+      }
+      ctrl.enqueue(part)
+    },
+    flush(ctrl) { void ctrl },
+  })
+}

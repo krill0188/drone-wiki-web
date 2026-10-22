@@ -4,6 +4,7 @@ import { buildNimContext, nimSystemPrompt, type NimContext } from "./kg-context"
 import { planQuery, type Plan } from "./kg-plan"
 import { verbatimAnswer } from "./kg-verbatim"
 import { soften } from "./soften"
+import { renderEntityTables } from "./kg-table"
 import { verifyAnswer, type Violation } from "./kg-verify"
 
 // 온톨로지 지식그래프 기반 답변 서비스(JSON 계약). 판정·근거·상태는 서버가 정하고 NIM은 표현만 한다.
@@ -98,7 +99,8 @@ export async function answerQuestion(question: string, opts: { domains?: string[
     return res
   }
   const ctx = buildNimContext(plan)
-  const system = nimSystemPrompt(ctx, "json")
+  const table = renderEntityTables(plan)
+  const system = nimSystemPrompt(ctx, "json", { serverTable: !!table })
   let retried = false
   let text = await gen(system, question)
   let parsed = parseJson(text)
@@ -120,7 +122,7 @@ export async function answerQuestion(question: string, opts: { domains?: string[
     pages: real([...(parsed?.used_pages ?? []), ...ver.citedPages], ctx.ids.pages),
   }
   const verification = { ok: ver.ok, violations: ver.violations, retried, json_parsed: parsed !== null }
-  answer = soften(answer)
+  answer = (table ? `${table}\n\n` : "") + soften(answer)
   if (ver.ok) return contract(plan, ctx, answer, "answered", false, verification, used, true)
   if (strict) {
     const msg = `검증에 실패해 답변을 제공하지 않습니다(근거 밖 내용 감지: ${ver.violations.map((v) => v.code).join(", ")}). 아래 근거 목록만 확인해 주세요.`

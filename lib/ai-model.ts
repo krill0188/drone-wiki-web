@@ -110,7 +110,14 @@ async function firstAnswerOrNull(
   }
 }
 
-const makeChainFetch = (profile: ModelProfile): typeof fetch => async (input, init) => {
+// 지연 헤징(2026-10-22): 첫 모델이 HEDGE_MS 안에 '첫 답변 글자'를 못 내면 다음 모델을 병렬로 시작해 먼저 글자를 내는 쪽을 쓴다.
+// 사용자가 보는 지연은 두 시도의 합이 아니라 min이다. 비용 폭주를 막으려고 한 인스턴스에서 헤징을 (2회 + 요청의 25%)로 제한한다.
+// 판정은 응답 헤더가 아니라 첫 답변 글자(content) 기준이다 — 추론 서버는 글자 전에 200 헤더를 먼저 보낸다.
+const HEDGE_MS: Record<ModelProfile, number> = { chat: Number(process.env.NVIDIA_NIM_HEDGE_CHAT_MS) || 4000, builder: Number(process.env.NVIDIA_NIM_HEDGE_BUILDER_MS) || 12000 }
+const hedgeStat = { requests: 0, hedges: 0 }
+const hedgeAllowed = () => hedgeStat.hedges < 2 + 0.25 * hedgeStat.requests // 토큰 버킷: 처음 2회 여유 + 요청의 25%
+
+export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (input, init) => {
   if (typeof init?.body !== "string") return fetch(input, init)
   let parsed: Record<string, unknown>
   try {
@@ -120,16 +127,60 @@ const makeChainFetch = (profile: ModelProfile): typeof fetch => async (input, in
   }
   const chain = modelChain(profile)
   const started = Date.now()
-  for (let i = 0; i < chain.length; i++) {
+  hedgeStat.requests++
+  type Attempt = { idx: number; ctrl: AbortController; p: Promise<Response | null> }
+  const launch = (idx: number, timeoutMs: number): Attempt => {
+    const ctrl = new AbortController()
+    const signal = init.signal ? AbortSignal.any([init.signal, ctrl.signal]) : ctrl.signal
+    const t0 = Date.now()
+    const p = firstAnswerOrNull(input, { ...init, signal }, withModel(parsed, chain[idx]), timeoutMs)
+    // 관측성: 모델별 첫 답변 글자까지의 시간(Vercel 로그에서 체인 순서·헤징 시간을 데이터로 조정한다)
+    p.then((r) => console.info(`[ai-model] ttfc model=${chain[idx].id} profile=${profile} ms=${Date.now() - t0} ok=${!!r}`)).catch(() => {})
+    return { idx, ctrl, p }
+  }
+  const budget = (idx: number) => {
     const left = TOTAL_BUDGET_MS - (Date.now() - started)
-    if (left <= 1000) break
-    const last = i === chain.length - 1
-    const res = await firstAnswerOrNull(input, init, withModel(parsed, chain[i]), last ? left : Math.min(FIRST_CONTENT_MS, left))
+    return { left, ms: idx === chain.length - 1 ? left : Math.min(FIRST_CONTENT_MS, left) }
+  }
+  let i = 0
+  while (i < chain.length) {
+    const b = budget(i)
+    if (b.left <= 1000) break
+    const primary = launch(i, b.ms)
+    const canHedge = i + 1 < chain.length && hedgeAllowed()
+    if (canHedge) {
+      const early = await Promise.race([primary.p.then((r) => ({ r })), new Promise<null>((ok) => setTimeout(() => ok(null), HEDGE_MS[profile]))])
+      if (early) {
+        if (early.r) return early.r
+        console.warn(`[ai-model] ${chain[i].id} no answer / error → next`)
+        i++
+        continue
+      }
+      // 헤징: 다음 모델을 병렬로 시작한다
+      hedgeStat.hedges++
+      const hb = budget(i + 1)
+      const hedge = launch(i + 1, hb.ms)
+      const winner = await new Promise<{ a: Attempt; res: Response } | null>((resolve) => {
+        let pending = 2
+        for (const a of [primary, hedge]) a.p.then((res) => { if (res) resolve({ a, res }); else if (--pending === 0) resolve(null) })
+      })
+      if (winner) {
+        const loser = winner.a === primary ? hedge : primary
+        loser.ctrl.abort()
+        loser.p.then((r) => r?.body?.cancel().catch(() => {})).catch(() => {})
+        console.warn(`[ai-model] hedge winner → ${chain[winner.a.idx].id}`)
+        return winner.res
+      }
+      i += 2
+      continue
+    }
+    const res = await primary.p
     if (res) {
       if (i > 0) console.warn(`[ai-model] fallback → ${chain[i].id} (attempt ${i + 1})`)
       return res
     }
     console.warn(`[ai-model] ${chain[i].id} no answer / error → next`)
+    i++
   }
   throw new Error("모든 AI 모델이 응답하지 않았습니다. 잠시 후 다시 시도해 주세요.")
 }
