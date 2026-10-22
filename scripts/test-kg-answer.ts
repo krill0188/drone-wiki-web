@@ -300,6 +300,21 @@ async function main() {
     ok(renderEntityTables(planQuery("DJI는 어떤 회사야?")) === "", "제조사 개체에는 표를 만들지 않음")
   })
 
+  await t("S19 존재하지 않는 인용([C1]인데 claim 없음)은 스트림에서 제거하고, 유효한 인용·청크 경계 인용은 유지한다", async () => {
+    const { citationGuard } = await import("../lib/soften")
+    const run = async (chunks: string[]) => {
+      const rs = new ReadableStream({ start(c) { for (const x of chunks) c.enqueue({ type: "text-delta", id: "a", text: x }); c.enqueue({ type: "text-end", id: "a" }); c.close() } }).pipeThrough(citationGuard(new Set(["R1", "P2"])))
+      let out = ""
+      for await (const p of rs as unknown as AsyncIterable<{ type: string; text?: string }>) if (p.type === "text-delta") out += p.text
+      return out
+    }
+    const r1 = (await run(["채널 789 [C1] 전력 0.44 W [R1]. 끝 [C", "2]"])).trimEnd()
+    ok(r1 === "채널 789 전력 0.44 W [R1]. 끝", JSON.stringify(r1))
+    const r2 = (await run(["근거 [P", "2] 와 [P3]"])).trimEnd()
+    ok(r2 === "근거 [P2] 와", JSON.stringify(r2))
+    ok((await run(["대괄호 [표] 와 [1] 는 유지"])) === "대괄호 [표] 와 [1] 는 유지", "일반 대괄호 훼손")
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)

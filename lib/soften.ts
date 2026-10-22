@@ -94,3 +94,29 @@ export function prefixInjector(prefix: string): TransformStream<Part, Part> {
     flush(ctrl) { void ctrl },
   })
 }
+
+// 존재하지 않는 근거 표기([C1]인데 claim이 없음 등)를 스트림에서 제거한다. 허위 인용은 보여 주는 것보다 지우는 편이 안전하다(2026-10-22: CHCNAV 답변이 claim 없이 [C1]을 반복).
+// 유효한 핸들만 남긴다. '[' 뒤 닫는 ']'가 올 때까지(최대 8자) 붙잡아 청크 경계를 처리한다.
+export function citationGuard(valid: Set<string>, onDrop?: (h: string) => void): TransformStream<Part, Part> {
+  const held = new Map<string, string>()
+  const clean = (t: string) => t.replace(/\s?\[((?:C|R|P)\d+)\]/g, (m, h) => (valid.has(h) ? m : (onDrop?.(h), "")))
+  return new TransformStream<Part, Part>({
+    transform(part, ctrl) {
+      const id = part.id ?? ""
+      if (part.type === "text-delta" && typeof part.text === "string") {
+        let t = (held.get(id) ?? "") + part.text
+        const i = t.lastIndexOf("[")
+        let keep = ""
+        if (i >= 0 && !t.slice(i).includes("]") && t.length - i <= 8) { keep = t.slice(i); t = t.slice(0, i) }
+        held.set(id, keep)
+        t = clean(t)
+        if (t) ctrl.enqueue({ ...part, text: t })
+      } else if (part.type === "text-end") {
+        const rest = clean(held.get(id) ?? "")
+        if (rest) ctrl.enqueue({ type: "text-delta", id, text: rest })
+        held.delete(id)
+        ctrl.enqueue(part)
+      } else ctrl.enqueue(part)
+    },
+  })
+}
