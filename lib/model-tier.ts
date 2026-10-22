@@ -11,7 +11,7 @@ const DEEP_Q = /비교|차이|장단점|추천|설계|왜\s|이유|원인|원리
 export function pickTier(plan: Plan, question: string): Tier {
   if (DEEP_Q.test(question)) return "deep"
   if (plan.entities.length >= 2) return "deep"
-  if (plan.basis !== "ontology") return "deep" // 위키 요약·클래스 연결 답변은 발췌를 종합해야 한다
+  // 운영 A/B(2026-10-22, 25문항): fast 25/25·p50 4.6초·검증 경고 1건, deep 24/25·p50 18.8초·최대 120초(ultra 부하 시 꼬리 지연). 근거 종류와 무관하게 fast가 기본이다.
   return "fast"
 }
 
