@@ -18,7 +18,7 @@ ok(/페이로드\(카메라·센서 포드\) 후보/.test(mv.block ?? ""), "정�
 if (ms.data) {
   const md = `| 구성요소 | 온톨로지 클래스 | 선정안 | 핵심 사양 | 인터페이스 | 근거 |\n|---|---|---|---|---|---|\n| 페이로드 | Payload | DJI Zenmuse L2 (LiDAR + RGB) | 905g | Skyport | 공식 |\n`
   const r = repairHwSelections(md, ms.data)
-  ok(r.repaired.length === 1 && r.md.includes("카탈로그 후보 없음 — 확인 필요"), "모델이 센서 포드를 골라도 후보 없음으로 치환")
+  ok(r.repaired.length === 1 && r.md.includes("카탈로그 후보 없음 — 재확인 필요"), "모델이 센서 포드를 골라도 후보 없음으로 치환")
   ok(validateHw(r.md, ms.data).checks.find((c) => c.label.startsWith("선정안은 모두"))?.ok === true, "치환 후 검증 통과")
 }
 process.exit(fail ? 1 : 0)

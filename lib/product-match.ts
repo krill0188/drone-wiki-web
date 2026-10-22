@@ -120,7 +120,7 @@ function wheelbaseMm(it: Item): number | null {
   return null
 }
 function section(title: string, items: Item[], extra?: (i: Item) => string): string[] {
-  if (!items.length) return [`\n[${title}] 카탈로그 후보 없음 — 확인 필요`]
+  if (!items.length) return [`\n[${title}] 카탈로그 후보 없음 — 재확인 필요`]
   return [`\n[${title}]`, ...items.map((i, k) => `${k + 1}. ${i.manufacturer} ${i.name}${extra ? extra(i) : ""}: ${excerpt(i)} — ${i.url}`)]
 }
 function otherCategories(spec: DesignSpec, auwKg: number, bestProp: string | null, cands: Cand[]): string[] {
@@ -140,8 +140,8 @@ function otherCategories(spec: DesignSpec, auwKg: number, bestProp: string | nul
       const props = ITEMS.filter((i) => i.category === "propeller" && i.diameter_in != null && Math.abs(i.diameter_in - d) <= 0.6 && (i.pitch_in == null || Math.abs(i.pitch_in - pch) <= 0.8)).slice(0, 3)
       reg("propeller", props, massOf)
       out.push(`\n[프로펠러 후보 — 1순위 모터 시험표 프롭 ${bestProp}(지름 ${d}인치, 피치 ${pch})]`)
-      if (!props.length) out.push("카탈로그 후보 없음 — 확인 필요")
-      props.forEach((i, k) => out.push(`${k + 1}. ${i.manufacturer} ${i.name}: 지름 ${i.diameter_in}인치, 피치 ${i.pitch_in ?? "미확인"}인치${i.weight_g ? `, 무게 ${i.weight_g.raw}` : ""}${(i as unknown as { recommended_thrust_rpm?: string }).recommended_thrust_rpm ? `, 권장 추력/RPM ${(i as unknown as { recommended_thrust_rpm?: string }).recommended_thrust_rpm}` : ""} — ${i.url}`))
+      if (!props.length) out.push("카탈로그 후보 없음 — 재확인 필요")
+      props.forEach((i, k) => out.push(`${k + 1}. ${i.manufacturer} ${i.name}: 지름 ${i.diameter_in}인치, 피치 ${i.pitch_in ?? "재확인 필요"}인치${i.weight_g ? `, 무게 ${i.weight_g.raw}` : ""}${(i as unknown as { recommended_thrust_rpm?: string }).recommended_thrust_rpm ? `, 권장 추력/RPM ${(i as unknown as { recommended_thrust_rpm?: string }).recommended_thrust_rpm}` : ""} — ${i.url}`))
     }
   }
   const payloadG = (spec.payloadKg ?? 0) * 1000
@@ -149,7 +149,7 @@ function otherCategories(spec: DesignSpec, auwKg: number, bestProp: string | nul
   const sensorOnly = spec.purpose === "spray" || spec.purpose === "cargo"
   const cams = sensorOnly ? [] : by("payload").map((i) => ({ i, g: grams(i) })).filter((x) => x.g != null && x.g! <= payloadG).sort((a, b) => b.g! - a.g!).slice(0, 4).map((x) => x.i)
   reg("payload", cams, grams)
-  if (sensorOnly) out.push(`\n[페이로드 후보] 이 컨셉의 용도(${spec.purpose === "spray" ? "방제·살포" : "운송·투하"})에 맞는 페이로드(${spec.purpose === "spray" ? "약제 탱크·펌프·노즐" : "화물 고정구·윈치·낙하산"})는 카탈로그에 없다. 카탈로그에 있는 카메라·센서 포드는 이 용도의 페이로드가 아니므로 고르지 않는다 → 페이로드 칸은 '카탈로그 후보 없음 — 확인 필요'로 쓰고 요구 중량(${spec.payloadKg}kg)만 명시한다.`)
+  if (sensorOnly) out.push(`\n[페이로드 후보] 이 컨셉의 용도(${spec.purpose === "spray" ? "방제·살포" : "운송·투하"})에 맞는 페이로드(${spec.purpose === "spray" ? "약제 탱크·펌프·노즐" : "화물 고정구·윈치·낙하산"})는 카탈로그에 없다. 카탈로그에 있는 카메라·센서 포드는 이 용도의 페이로드가 아니므로 고르지 않는다 → 페이로드 칸은 '카탈로그 후보 없음 — 재확인 필요'로 쓰고 요구 중량(${spec.payloadKg}kg)만 명시한다.`)
   else out.push(...section(`페이로드(카메라·센서 포드) 후보 — 무게 ≤ 페이로드 ${spec.payloadKg}kg(원문 무게 기준)`, cams, (i) => ` (무게 ${Math.round(grams(i)!)}g)`))
   const fcs = by("fc").filter((i) => /px4|ardupilot/i.test(Object.values(i.specs ?? {}).join(" "))).sort((a, b) => (/holybro|cubepilot|ark/i.test(a.manufacturer) ? 0 : 1) - (/holybro|cubepilot|ark/i.test(b.manufacturer) ? 0 : 1)).slice(0, 4)
   reg("fc", fcs, grams)
@@ -202,16 +202,16 @@ export function matchProducts(spec: DesignSpec, opts?: { fixed?: Partial<Pick<Mo
 
   const head = `필요(엔진 추정, ${plan.label}): 총중량 ${fmt(plan.auw)}kg, 프롭 지름 상한 ≈ ${fmt(maxPropIn, 1)}인치, ${N}로터 → 모터당 호버 추력 ≈ ${fmt(hoverG, 0)}g, 최대추력 ≥ ${fmt(maxG, 0)}g(추력 대비 중량비 2:1)`
   if (!top.length && !ratedOnly.length) {
-    return { found: false, block: `<product-match>\n${head}\n결과: 카탈로그(제조사 공식 페이지 수집 ${ITEMS.length}개)에 이 조건을 만족하는 모터 후보 없음 → HW 표의 모터·ESC·프롭·배터리는 "카탈로그 후보 없음 — 확인 필요"로 쓰고, 이름이나 수치를 지어내지 말 것.\n</product-match>` }
+    return { found: false, block: `<product-match>\n${head}\n결과: 카탈로그(제조사 공식 페이지 수집 ${ITEMS.length}개)에 이 조건을 만족하는 모터 후보 없음 → HW 표의 모터·ESC·프롭·배터리는 "카탈로그 후보 없음 — 재확인 필요"로 쓰고, 이름이나 수치를 지어내지 말 것.\n</product-match>` }
   }
 
-  const lines: string[] = [`<product-match>`, head, `아래는 수집 카탈로그(제조사 공식 페이지 원문, 2026-10-19)에서 서버가 고른 후보다. HW 표의 모터·배터리·ESC는 이 목록에서 고르고, 사양 칸의 수치는 아래 값을 그대로 인용하라(근거 칸에 URL). 목록에 없는 부품은 "카탈로그 후보 없음 — 확인 필요".`]
+  const lines: string[] = [`<product-match>`, head, `아래는 수집 카탈로그(제조사 공식 페이지 원문, 2026-10-19)에서 서버가 고른 후보다. HW 표의 모터·배터리·ESC는 이 목록에서 고르고, 사양 칸의 수치는 아래 값을 그대로 인용하라(근거 칸에 URL). 목록에 없는 부품은 "카탈로그 후보 없음 — 재확인 필요".`]
   top.forEach((p) => cands.push({ category: "motor", name: `${p.item.name} ${p.kv}`, modelKey: modelKeyOf(p.item.name), massG: p.weightG ?? null, maxThrustG: p.maxThrustG, cells: p.cells, maxA: p.maxA }))
   ratedOnly.forEach((m) => cands.push({ category: "motor", name: m.name, modelKey: modelKeyOf(m.name), massG: m.variants?.[0]?.weight_g?.value ?? null, maxThrustG: (m.max_thrust_kg_page ?? 0) * 1000, ratedOnly: true }))
   if (top.length) {
     lines.push("\n[모터 후보 — 시험표 보간(공식 페이지 추력 시험)]")
     top.forEach((p, i) => {
-      lines.push(`${i + 1}. ${p.item.manufacturer} ${p.item.name} / ${p.kv} / ${p.voltage}V(${p.cells}S) / 프롭 ${p.prop}: 100% 스로틀 추력 ${p.maxThrustG}g @ ${p.maxA}A(시험표), 호버 추정 전류 ${fmt(p.hoverA / N)}A·전력 ${fmt(p.hoverW / N, 0)}W/모터(시험표 선형 보간${p.clamped ? ", 최저 시험행 값으로 보수 적용" : ""})${p.weightG ? `, 모터 무게 ${p.weightG}g(${p.variant?.weight_g?.raw})` : ""}${p.ratedA ? `, 정격 전류 ${p.ratedA}A(${p.variant?.max_current_A?.label})` : ", 정격 전류 미확인"} — ${p.item.url}`)
+      lines.push(`${i + 1}. ${p.item.manufacturer} ${p.item.name} / ${p.kv} / ${p.voltage}V(${p.cells}S) / 프롭 ${p.prop}: 100% 스로틀 추력 ${p.maxThrustG}g @ ${p.maxA}A(시험표), 호버 추정 전류 ${fmt(p.hoverA / N)}A·전력 ${fmt(p.hoverW / N, 0)}W/모터(시험표 선형 보간${p.clamped ? ", 최저 시험행 값으로 보수 적용" : ""})${p.weightG ? `, 모터 무게 ${p.weightG}g(${p.variant?.weight_g?.raw})` : ""}${p.ratedA ? `, 정격 전류 ${p.ratedA}A(${p.variant?.max_current_A?.label})` : ", 정격 전류 재확인 필요"} — ${p.item.url}`)
     })
   }
   if (ratedOnly.length) {
@@ -229,13 +229,13 @@ export function matchProducts(spec: DesignSpec, opts?: { fixed?: Partial<Pick<Mo
     needWhOut = needWh
     const cand = packCandidates(best.cells, needWh).slice(0, 2)
     lines.push(`\n[배터리 후보 — 1순위 모터 기준 ${best.cells}S, 필요 에너지 ≈ ${fmt(needWh, 0)}Wh = (${N}×${fmt(best.hoverW / N, 0)}W × ${spec.flightMin}분/60) ÷ 방전깊이 ${plan.dod} · 비행제어기·페이로드 전력 별도, 계산값]`)
-    if (!cand.length) lines.push(`${best.cells}S 팩 중 병렬 3개 이내로 ${fmt(needWh, 0)}Wh를 만족하는 카탈로그 후보 없음 — 확인 필요`)
+    if (!cand.length) lines.push(`${best.cells}S 팩 중 병렬 3개 이내로 ${fmt(needWh, 0)}Wh를 만족하는 카탈로그 후보 없음 — 재확인 필요`)
     const peakA = N * best.maxA
     cand.forEach((c) => cands.push({ category: "battery", name: c.b.name, modelKey: modelKeyOf(c.b.name), massG: c.b.weight_g!.value, whPerUnit: c.b.nominal_V! * (c.b.capacity_mAh! / 1000), capMah: c.b.capacity_mAh!, cells: c.b.cells_S ?? undefined }))
     cand.forEach((c, i) => {
       const cr = /(\d+(?:\.\d+)?)\s*C\b/i.exec(c.b.c_rate ?? "")
       const maxA = cr ? parseFloat(cr[1]) * (c.b.capacity_mAh! / 1000) * c.k : null
-      const dis = maxA == null ? "방전율 환산 불가(페이지 표기: " + (c.b.c_rate ?? "미확인") + ")" : maxA >= peakA ? `방전 가능 전류 ≈ ${fmt(maxA, 0)}A(=${c.b.c_rate}×용량×${c.k}) ≥ 최대 시험전류 합 ${fmt(peakA, 0)}A` : `⚠ 방전 가능 전류 ≈ ${fmt(maxA, 0)}A < 최대 시험전류 합 ${fmt(peakA, 0)}A — 최대 스로틀에서 부족할 수 있음`
+      const dis = maxA == null ? "방전율 환산 불가(페이지 표기: " + (c.b.c_rate ?? "재확인 필요") + ")" : maxA >= peakA ? `방전 가능 전류 ≈ ${fmt(maxA, 0)}A(=${c.b.c_rate}×용량×${c.k}) ≥ 최대 시험전류 합 ${fmt(peakA, 0)}A` : `⚠ 방전 가능 전류 ≈ ${fmt(maxA, 0)}A < 최대 시험전류 합 ${fmt(peakA, 0)}A — 최대 스로틀에서 부족할 수 있음`
       lines.push(`${i + 1}. ${c.b.manufacturer} ${c.b.name} × ${c.k}: ${c.b.nominal_V}V × ${c.b.capacity_mAh}mAh = ${fmt(c.wh, 0)}Wh(계산), 합계 무게 ${fmt(c.kg, 2)}kg(페이지 값 ${c.b.weight_g!.raw}), ${dis} — ${c.b.url}`)
     })
     // ESC: 시험표 100% 전류 이상, 셀 수 포함
@@ -243,11 +243,11 @@ export function matchProducts(spec: DesignSpec, opts?: { fixed?: Partial<Pick<Mo
       .sort((a, b) => a.continuous_A! - b.continuous_A!).slice(0, 2)
     escs.forEach((e) => cands.push({ category: "esc", name: e.name, modelKey: modelKeyOf(e.name), massG: null, contA: e.continuous_A ?? undefined }))
     lines.push(`\n[ESC 후보 — 모터 최대 시험전류 ${best.maxA}A 이상, ${best.cells}S 지원]`)
-    if (!escs.length) lines.push("조건을 만족하는 ESC 카탈로그 후보 없음 — 확인 필요")
+    if (!escs.length) lines.push("조건을 만족하는 ESC 카탈로그 후보 없음 — 재확인 필요")
     escs.forEach((e, i) => lines.push(`${i + 1}. ${e.manufacturer} ${e.name}: 연속 ${e.continuous_A}A${e.peak_A ? ` / 피크 ${e.peak_A}A` : ""}${e.cells ? `, ${e.cells.min}~${e.cells.max}S` : ""} — ${e.url}`))
   }
   lines.push(...otherCategories(spec, plan.auw, top[0]?.prop ?? null, cands))
-  lines.push("\n규칙: 위 후보 목록 안에서만 선정하고 선정안 칸에 제품명을, 근거 칸에 URL을 쓴다. 배터리는 표의 '수량(×n)'을 포함해 후보가 제시한 조합 그대로 쓰고, 합계 Wh가 필요 에너지에 못 미치는 단품 구성은 금지. 후보가 없는 분류는 '카탈로그 후보 없음 — 확인 필요'.")
+  lines.push("\n규칙: 위 후보 목록 안에서만 선정하고 선정안 칸에 제품명을, 근거 칸에 URL을 쓴다. 배터리는 표의 '수량(×n)'을 포함해 후보가 제시한 조합 그대로 쓰고, 합계 Wh가 필요 에너지에 못 미치는 단품 구성은 금지. 후보가 없는 분류는 '카탈로그 후보 없음 — 재확인 필요'.")
   lines.push("</product-match>")
   const withKeys = cands.map((c) => {
     const it = ITEMS.find((i) => c.name === i.name || c.name.startsWith(i.name))

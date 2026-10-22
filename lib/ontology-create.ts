@@ -150,7 +150,7 @@ export function synthesisBlock(question: string): SynthesisResult {
   const gapLines = [...gaps.entries()].sort((a, b) => b[1].size - a[1].size).slice(0, 6).map(([w, set]) => `- ${w}: ${[...set].slice(0, 3).join(", ")}`)
 
   const lines = top.map((c, i) => {
-    const flags = [c.novel ? "합성 팩(신규 개체·검증 필요)" : "부품 수치는 문서 기반·조합은 규칙 검증만(실기 미검증)", ...c.verdicts, c.unknown.length ? `미확인: ${c.unknown.join("·")}` : ""].filter(Boolean).join("; ")
+    const flags = [c.novel ? "합성 팩(신규 개체·검증 필요)" : "부품 수치는 문서 기반·조합은 규칙 검증만(실기 미검증)", ...c.verdicts, c.unknown.length ? `재확인 필요: ${c.unknown.join("·")}` : ""].filter(Boolean).join("; ")
     return `${i + 1}. ${short(c.motor.name)} + ${short(c.esc.name)} + ${short(c.prop.name)} + ${c.bat.name} (${c.S}S) → 호버링 비행 추정 ${c.flightMin.toFixed(0)}분, 팁속도 ${c.tipMs.toFixed(0)}m/s${c.escMargin ? `, ESC 여유 ${c.escMargin.toFixed(2)}배` : ""} [${flags}]`
   })
 

@@ -28,7 +28,7 @@ export function parseTable(md: string, requiredHeader: RegExp): Row[] {
 }
 
 const norm = (s: string) => s.toLowerCase().replace(/[\s_\-*·]/g, "")
-const NONE = /후보 없음|확인 필요|미정의|미정|해당 없음|n\/a/i
+const NONE = /후보 없음|재?확인 필요|미정의|미정|해당 없음|n\/a/i
 const SKIP_ROW = /배선|커넥터|기타|볼트|소모품|케이블|하네스/
 const colOf = (r: Row, re: RegExp) => Object.entries(r).find(([k]) => re.test(k))?.[1] ?? ""
 
@@ -100,7 +100,7 @@ export function validateHw(md: string, d: MatchData, allow?: (selection: string)
     }
   }
   checks.push({ ok: outside.length === 0, label: "선정안은 모두 카탈로그 후보이거나 '후보 없음'", detail: outside.length ? `카탈로그 후보에 없는 선정: ${outside.join(" / ")}` : undefined })
-  if (outside.length) issues.push(`카탈로그 후보에 없는 제품을 선정했다(목록 밖 제품 금지, 없으면 '카탈로그 후보 없음 — 확인 필요'로 쓴다): ${outside.join(" / ")}`)
+  if (outside.length) issues.push(`카탈로그 후보에 없는 제품을 선정했다(목록 밖 제품 금지, 없으면 '카탈로그 후보 없음 — 재확인 필요'로 쓴다): ${outside.join(" / ")}`)
 
   // R2 배터리 에너지
   const bat = matched.find((m) => m.cand.category === "battery")
@@ -278,7 +278,7 @@ export function renderValidation(v: Validation, retried: boolean): string {
 }
 
 // 재작성 후에도 남은 'HW 선정안이 카탈로그 밖' 위반을 코드가 직접 고친다(2026-10-21: 운영 3회 측정에서 재작성 1회로는 3/3 잔존).
-// 모터·ESC·배터리는 서버 후보(순위순) 첫 항목으로 치환하고, 그 밖의 분류는 '카탈로그 후보 없음 — 확인 필요'로 바꾼다.
+// 모터·ESC·배터리는 서버 후보(순위순) 첫 항목으로 치환하고, 그 밖의 분류는 '카탈로그 후보 없음 — 재확인 필요'로 바꾼다.
 // 치환은 결과에 그대로 공개되며(repaired 목록), 치환 뒤 검증기를 다시 돌려 파생 위반(전류·에너지 등)도 숨기지 않는다.
 export function repairHwSelections(md: string, d: MatchData, allow?: (selection: string) => boolean): { md: string; repaired: string[] } {
   const lines = md.split("\n")
@@ -303,14 +303,14 @@ export function repairHwSelections(md: string, d: MatchData, allow?: (selection:
         c[selIdx] = `${cand.name}${cap}${qty > 1 ? ` × ${qty}` : ""} _(서버 치환: 모델 제안 "${orig}"은 카탈로그 밖)_`
         // 같은 행의 사양·인터페이스·근거 칸은 모델이 원래 제품에 대해 쓴 값이므로 새 제품과 어긋난다 → 카탈로그가 가진 값만으로 다시 채운다.
         const facts = [cand.maxThrustG ? `최대추력 ${Math.round(cand.maxThrustG)}g` : "", cand.maxA ? `최대전류 ${cand.maxA}A` : "", cand.contA ? `연속전류 ${cand.contA}A` : "", cand.whPerUnit ? `${cand.whPerUnit.toFixed(0)}Wh` : "", cand.capMah ? `${cand.capMah}mAh` : "", cand.cells ? `${cand.cells}S` : "", cand.massG ? `${cand.massG}g` : ""].filter(Boolean)
-        if (specIdx >= 0) c[specIdx] = facts.length ? `${facts.join(" · ")} _(서버 카탈로그 값)_` : "카탈로그 값 없음 — 확인 필요"
-        if (ifIdx >= 0) c[ifIdx] = "확인 필요"
+        if (specIdx >= 0) c[specIdx] = facts.length ? `${facts.join(" · ")} _(서버 카탈로그 값)_` : "카탈로그 값 없음 — 재확인 필요"
+        if (ifIdx >= 0) c[ifIdx] = "재확인 필요"
         if (basisIdx >= 0) c[basisIdx] = "서버 카탈로그 후보(모델 제안을 치환)"
         repaired.push(`${name}: "${orig}" → ${cand.name}`)
       } else {
-        c[selIdx] = `카탈로그 후보 없음 — 확인 필요 _(모델 제안 "${orig}"은 카탈로그 밖이라 서버가 제거)_`
-        if (specIdx >= 0) c[specIdx] = "확인 필요"
-        if (ifIdx >= 0) c[ifIdx] = "확인 필요"
+        c[selIdx] = `카탈로그 후보 없음 — 재확인 필요 _(모델 제안 "${orig}"은 카탈로그 밖이라 서버가 제거)_`
+        if (specIdx >= 0) c[specIdx] = "재확인 필요"
+        if (ifIdx >= 0) c[ifIdx] = "재확인 필요"
         if (basisIdx >= 0) c[basisIdx] = "카탈로그 후보 없음"
         repaired.push(`${name}: "${orig}" → 후보 없음`)
       }

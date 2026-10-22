@@ -20,7 +20,7 @@ for (const e of G.edges) {
 
 const mfrOf = (id?: string) => byId.get((out.get(id ?? "") ?? []).find((e) => e.p === "madeBy")?.o ?? "")?.label ?? "?"
 // 증거 종류 태그: 측정이 아닌 값은 답변에서 반드시 구분되게 앞에 붙인다(설계 상수 보정에는 쓰지 않는 값)
-const KIND_TAG: Record<string, string> = { "model-assumption": "⚠[모델 가정값·실측 아님] ", simulation: "⚠[시뮬레이션 결과·실측 아님] ", "cited-secondary": "⚠[2차 인용·원저자 미확인] ", derived: "[파생 계산] " }
+const KIND_TAG: Record<string, string> = { "model-assumption": "⚠[모델 가정값·실측 아님] ", simulation: "⚠[시뮬레이션 결과·실측 아님] ", "cited-secondary": "⚠[2차 인용·원저자 재확인 필요] ", derived: "[파생 계산] " }
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ")
 const GENERIC = new Set(["series", "module", "kit", "brushless", "motor", "battery", "propeller", "frame", "drone", "developer", "version", "lipo", "esc", "the", "and", "with", "for", "pro", "mini", "flight", "controller", "computer", "camera", "sensor", "lidar", "radio", "system"])
 
@@ -121,7 +121,7 @@ export function queryKG(question: string): KgResult {
     matched.add(m.id)
     const prods = (inc.get(m.id) ?? []).filter((e) => e.p === "madeBy").map((e) => byId.get(e.s)!).filter(Boolean)
     const cats = (out.get(m.id) ?? []).filter((e) => e.p === "hasCategory").map((e) => e.o.slice(6))
-    const meta = [m.country ? `국가/본사 ${m.country}${m.countryVerified === false ? " (일반지식 표기 — 공식 페이지 미확인)" : " (공식 페이지 확인)"}` : "", cats.length ? `레지스트리 분야 ${[...new Set(cats)].join("·")}` : "", m.officialUrl ? `공식 ${m.officialUrl}` : ""].filter(Boolean).join(", ")
+    const meta = [m.country ? `국가/본사 ${m.country}${m.countryVerified === false ? " (일반지식 표기 — 공식 페이지 재확인 필요)" : " (공식 페이지 확인)"}` : "", cats.length ? `레지스트리 분야 ${[...new Set(cats)].join("·")}` : "", m.officialUrl ? `공식 ${m.officialUrl}` : ""].filter(Boolean).join(", ")
     add(m.id, `제조사 ${m.label} — ${meta ? meta + "; " : ""}지식그래프 등록 제품 ${prods.length}개${prods.length ? ": " + prods.slice(0, 8).map((p) => `${p.label}(${p.cls})`).join(", ") + (prods.length > 8 ? " 외" : "") : "(제품 사양은 아직 미수집, 제조사 레지스트리만 등록)"}`)
   }
   // 질문의 이름·용어와 어휘가 맞는 검증 claim(논문에서 나온 시스템 이름 등)을 그래프에서 직접 찾는다 — 클래스 일반 claim보다 먼저

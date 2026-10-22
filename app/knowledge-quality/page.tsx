@@ -34,7 +34,7 @@ const SRC_LABEL: Record<string, { t: string; c: string }> = {
   "verified-with-derived": { t: "원문+파생", c: "text-emerald-700 dark:text-emerald-300" },
   "partially-verified": { t: "부분 확인", c: "text-amber-700 dark:text-amber-300" },
   "candidate-source": { t: "후보 출처", c: "text-orange-700 dark:text-orange-300" },
-  unverified: { t: "미확인", c: "text-red-700 dark:text-red-300" },
+  unverified: { t: "재확인 필요", c: "text-red-700 dark:text-red-300" },
   conflict: { t: "충돌", c: "text-red-700 dark:text-red-300" },
 }
 
@@ -140,7 +140,7 @@ export default function QualityPage() {
         <h2 className="font-semibold mb-1">제조사·제품</h2>
         <ul className="text-xs flex flex-col gap-0.5">
           <li>제품 사양까지 수집된 제조사 {m.withSpecs}곳 / 제조사 레지스트리에만 있는 곳 {m.registryOnly}곳</li>
-          <li>국가·본사 정보: 공식 페이지 확인 {m.countryVerified}곳 · 일반지식 표기(미확인) {m.countryUnverified}곳 · 정보 없음 {m.countryUnknown}곳 {registryTotal ? `(확인율 ${Math.round((m.countryVerified / registryTotal) * 100)}%)` : ""}</li>
+          <li>국가·본사 정보: 공식 페이지 확인 {m.countryVerified}곳 · 일반지식 표기(재확인 필요) {m.countryUnverified}곳 · 정보 없음 {m.countryUnknown}곳 {registryTotal ? `(확인율 ${Math.round((m.countryVerified / registryTotal) * 100)}%)` : ""}</li>
           <li>분류별 제품: {Object.entries(q.productsByCategory).map(([k, v]) => `${k} ${v}`).join(" · ")}</li>
         </ul>
       </section>

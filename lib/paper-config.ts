@@ -44,7 +44,7 @@ export function paperBlock(cfg: PaperConfig): string {
 ${cfg.components.map((c, i) => `${i + 1}. [${c.category}] ${c.name} — 원문: "${c.quote}"`).join("\n")}
 [규칙]
 - 위 구성품은 이름·모델·사양을 바꾸지 말고 그대로 쓰고, 근거 칸에 "논문 ${cfg.source.id}"를 적는다.
-- 논문에 없는 분류(예: ESC, 링크, 페이로드)만 <product-match> 후보로 보완하고, 근거 칸에 제조사 URL을 적는다. 후보가 없으면 '카탈로그 후보 없음 — 확인 필요'.
+- 논문에 없는 분류(예: ESC, 링크, 페이로드)만 <product-match> 후보로 보완하고, 근거 칸에 제조사 URL을 적는다. 후보가 없으면 '카탈로그 후보 없음 — 재확인 필요'.
 - 논문 구성과 엔진 계산(<design-calc>)이 어긋나면 논문 값을 고치지 말고 어긋난 항목과 크기를 표 아래에 그대로 공개한다. 논문 구성이 "틀렸다"고 단정하지 않는다(논문의 시험 조건을 모른다).
 </paper-config>`
 }

@@ -27,7 +27,7 @@ async function main() {
   const { planQuery } = await import("../lib/kg-plan")
   const { answerQuestion } = await import("../lib/kg-answer")
   const { verifyAnswer } = await import("../lib/kg-verify")
-  const { buildNimContext } = await import("../lib/kg-context")
+  const { buildNimContext, nimSystemPrompt } = await import("../lib/kg-context")
   const { kdbInfo, all } = await import("../lib/kdb")
 
   const info = kdbInfo()
@@ -211,6 +211,18 @@ async function main() {
       const r = planQuery(q)
       ok(r.status === "ready", `${q} → ${r.status}/${r.basis}`)
     }
+  })
+
+  await t("W1d '미확인' 표기는 사용자·모델에게 '재확인 필요'로 통일되고, 근거 부족 시 추론(확률 등급) 규칙이 프롬프트에 있다", async () => {
+    const { soften } = await import("../lib/soften")
+    ok(soften("값은 미확인입니다") === "값은 재확인이 필요합니다", soften("값은 미확인입니다"))
+    ok(!soften("Hot start 미확인, 크기 미확인이며").includes("미확인"), "잔여 미확인")
+    const q = planQuery("u-blox ZED-X20P 사양은?")
+    const ctx = buildNimContext(q)
+    const sys = nimSystemPrompt(ctx, "text")
+    ok(sys.includes("🔮 추론(확률 등급)") && sys.includes("재확인 필요"), "추론·재확인 규칙 누락")
+    const body = sys.slice(sys.indexOf("<context>"), sys.indexOf("</context>"))
+    ok(!body.includes("미확인"), "context에 미확인이 남음")
   })
 
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {

@@ -1,3 +1,4 @@
+import { soften } from "./soften"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
@@ -103,7 +104,8 @@ export async function getPageBySlug(slug: string, layerDir?: string): Promise<Wi
   if (!filePath) return null
 
   const raw = fs.readFileSync(filePath, "utf-8")
-  const { data, content } = matter(raw)
+  const { data, content: rawContent } = matter(raw)
+  const content = soften(rawContent)
 
   if (!data.title) return null
 

@@ -48,7 +48,7 @@ ${relations.join("\n") || "(관계 없음)"}`
   const today = new Date().toISOString().slice(0, 10)
   const system = buildWikiStyleSystemPrompt(
     today,
-    "지금 다루는 개념은 raw 원문에서 LLM(LangChain 지식그래프 추출 파이프라인)이 자동 추출했고 아직 사람이 검토하지 않았습니다. 아래 원문 발췌와 그래프 관계에 실제로 있는 사실만 사용하고, 발췌에 없는 내용은 지어내지 말고 반드시 \"확인 필요\"로 표시하세요."
+    "지금 다루는 개념은 raw 원문에서 LLM(LangChain 지식그래프 추출 파이프라인)이 자동 추출했고 아직 사람이 검토하지 않았습니다. 아래 원문 발췌와 그래프 관계에 실제로 있는 사실만 사용하고, 발췌에 없는 내용은 지어내지 말고 반드시 \"재확인 필요\"로 표시하세요."
   )
 
   const result = streamText({
