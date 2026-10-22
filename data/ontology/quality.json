@@ -1,16 +1,16 @@
 {
  "generated": "2026-10-22",
- "fingerprint": "23b30b0ac301",
+ "fingerprint": "8764471b460c",
  "counts": {
   "manufacturers": 257,
-  "products": 693,
+  "products": 694,
   "rules": 26,
   "papers": 109,
   "claims": 259,
-  "edges": 4547,
-  "documents": 880,
-  "wikiClaims": 2898,
-  "relations": 4582
+  "edges": 4549,
+  "documents": 892,
+  "wikiClaims": 2974,
+  "relations": 4584
  },
  "claimsByKind": {
   "cited-secondary": 3,
@@ -43,12 +43,12 @@
   "paper:verified": 248,
   "wiki:blocked": 24,
   "wiki:contested": 6,
-  "wiki:sourced": 2865,
+  "wiki:sourced": 2941,
   "wiki:unverified": 3
  },
  "productsByCategory": {
   "motor": 163,
-  "gnss": 105,
+  "gnss": 106,
   "propeller": 88,
   "battery": 82,
   "frame": 70,
@@ -68,19 +68,19 @@
   "countryUnknown": 51
  },
  "documents": {
-  "total": 880,
-  "withDomain": 877,
+  "total": 892,
+  "withDomain": 889,
   "noDomain": 3,
   "unregisteredDomain": 4,
   "withOntologyClass": 118,
   "byDomain": {
    "ai-autonomy": 198,
-   "hardware": 165,
+   "hardware": 168,
    "ops-mission": 146,
    "flight-control": 74,
    "comms-protocol": 63,
-   "regulations": 58,
-   "edge-ai-compute": 35,
+   "regulations": 59,
+   "edge-ai-compute": 40,
    "gcs-software": 29,
    "vendor-registry": 18,
    "security": 18,
@@ -88,9 +88,9 @@
    "navigation-gnss-denied": 16,
    "software-ecosystem": 13,
    "rf-datalink-engineering": 12,
+   "ros-middleware": 6,
    "electrical-power": 4,
    "swarm-multiagent": 3,
-   "ros-middleware": 3,
    "(없음)": 3,
    "ai-agent": 2,
    "swarm": 1,
@@ -99,15 +99,15 @@
   }
  },
  "sources": {
-  "total": 1262,
-  "resolved": 1232,
+  "total": 1274,
+  "resolved": 1244,
   "unresolved": 25,
   "unknown": 5
  },
  "edgesByRelation": {
   "packFits": 1867,
-  "isA": 693,
-  "madeBy": 693,
+  "isA": 694,
+  "madeBy": 694,
   "powersWith": 403,
   "reportedIn": 259,
   "hasCategory": 217,
@@ -573,7 +573,7 @@
    "ok": false,
    "count": 25,
    "sample": [
-    "inbox/processed/hw-20261022-gnss-vendors.md",
+    "inbox/processed/hw-20261023-gnss-vendors.md",
     "raw/articles/amazon-prime-air-expansion-2026-08.md",
     "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md",
     "raw/articles/ondas-ohio-drone-hub-2026-08.md",

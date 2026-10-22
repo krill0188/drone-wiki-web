@@ -53,7 +53,15 @@ export function extractLinkContext(content: string, targetSlug: string): string 
   return `${start > 0 ? "…" : ""}${snippet}${end < content.length ? "…" : ""}`
 }
 
-export async function getAllPages(): Promise<WikiPage[]> {
+// 빌드(프로덕션)에서는 위키 파일이 바뀌지 않으므로 전 문서 파싱 결과를 한 번만 만든다.
+// 상세 페이지마다 getAllPages()를 부르는 구조라 캐시가 없으면 O(N²)가 되어 문서 880쪽에서 빌드가 45분 한도를 넘겼다.
+let allPagesCache: Promise<WikiPage[]> | null = null
+export function getAllPages(): Promise<WikiPage[]> {
+  if (process.env.NODE_ENV !== "production") return loadAllPages()
+  return (allPagesCache ??= loadAllPages())
+}
+
+async function loadAllPages(): Promise<WikiPage[]> {
   const pages: WikiPage[] = []
 
   for (const dir of LAYER_DIRS) {

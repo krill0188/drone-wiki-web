@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-19",
- "count": 478,
+ "count": 479,
  "items": [
   {
    "id": "product-battery-gens-ace-5000mah-4s-45c-14-8v-lipo-battery-air-classic-non-g-tech",
@@ -16375,6 +16375,37 @@
     "필터": "LNA+SAW",
     "전압·온도": "4.5~5.5 V, -30~60 C",
     "크기·무게": "50.6 x 50.6 x 13.6 mm, 31 g"
+   },
+   "gnssKind": "gnss"
+  },
+  {
+   "id": "product-gnss-septentrio-mosaic-g5-p3-p3h-datasheet",
+   "category": "gnss",
+   "manufacturer": "Septentrio",
+   "name": "Septentrio mosaic-G5 P3 / P3H 공식 데이터시트 (789채널, 전력, 헤딩)",
+   "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_GNSS_mosaic-G5_P3/main/docs/assets/component_documentation/Septentrio_mosaic-G5_P3_%26_P3H.pdf ; https://www.septentrio.com/en/products/gnss-receivers/gnss-receiver-modules/mosaic-G5-P3H ; https://www.septentrio.com/en/products/gnss-receivers/gnss-receiver-modules/mosaic-G5-P3",
+   "captured": "2026-10-23",
+   "specs": {
+    "하드웨어 채널": "789 hardware channels (P3·P3H 공통 기재)",
+    "신호": "GPS L1C/A, L1C, L2C, L2PY, L5 / GLONASS L1CA, L2CA, L2P, L3 CDMA / BeiDou B1I, B1C, B2a, B2I, B2b, B3I / Galileo E1, E5a, E5b, E6 / QZSS L1C/A, L1C/B, L2C, L5, L6(L6는 소프트웨어 업데이트로 추가 예정 각주)",
+    "밴드": "P3: quad-band, P3H: 단일안테나 quad-band / 이중안테나 triple-band (제품 페이지)",
+    "RTK 수평/수직": "0.6 cm + 0.5 ppm / 1 cm + 1 ppm, 초기화 7 s (개활지, RMS, 기선 <40 km)",
+    "기타 측위": "Standalone 1.2 m(수평)/1.9 m(수직), DGNSS 0.4 m/0.7 m",
+    "속도 정확도": "3 cm/s",
+    "헤딩(P3H만)": "기선 1 m: 헤딩 0.15°, 피치/롤 0.25° / 5 m: 0.03°, 0.05°",
+    "갱신율": "위치 20 Hz, 측정치만(P3만) 20 Hz, 지연 <10 ms (99.9%)",
+    "시간": "PPS 분해능 1.4 ns, 이벤트 정확도 <3 ns",
+    "최초 측위": "콜드 <35 s, 웜 <10 s, 재포착 1 s",
+    "추적 임계 C/N0": "추적 20 dB-Hz, 포착 30 dB-Hz",
+    "전력": "P3 0.44 W typ / 0.57 W max, P3H(이중안테나) 0.6 W typ / 0.785 W max, 입력 3.3 VDC",
+    "안테나": "프리앰프 범위 15–50 dB(SA)/15–35 dB(DA), 바이어스 3.0–5.5 V, 전류제한 150 mA",
+    "크기·무게": "22.8 x 16.4 x 2.4 mm, 2.2 g, SMT 솔더형 LGA",
+    "온도": "동작 -40~85 C, 보관 -55~85 C, 습도 5~95% 비응축",
+    "진동": "IEC 60721-3-5 Profile 5M3, MIL-STD-810H 514.8 Cat.4, 516.8 Proc.I",
+    "인터페이스": "UART 2(LVTTL, 최대 4 Mbps), USB 2.0 HS 1, GPIO 2, PPS out 2, Event marker 2",
+    "프로토콜": "SBF, NMEA 0183 v2.3/3.03/4.0, RTCM 3.x(MSM) 입력",
+    "인증": "CE, FCC, RoHS, WEEE, ISED",
+    "기술": "AIM+, LOCK+, APME+, IONO+, RAIM+; Galileo HAS/OSNMA(소프트웨어 업데이트 예정 각주)"
    },
    "gnssKind": "gnss"
   }
