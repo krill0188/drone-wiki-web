@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-22",
- "fingerprint": "8764471b460c",
+ "fingerprint": "39934ca2310c",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -8,8 +8,8 @@
   "papers": 109,
   "claims": 259,
   "edges": 4549,
-  "documents": 892,
-  "wikiClaims": 2974,
+  "documents": 898,
+  "wikiClaims": 3009,
   "relations": 4584
  },
  "claimsByKind": {
@@ -43,7 +43,7 @@
   "paper:verified": 248,
   "wiki:blocked": 24,
   "wiki:contested": 6,
-  "wiki:sourced": 2941,
+  "wiki:sourced": 2976,
   "wiki:unverified": 3
  },
  "productsByCategory": {
@@ -68,19 +68,19 @@
   "countryUnknown": 51
  },
  "documents": {
-  "total": 892,
-  "withDomain": 889,
+  "total": 898,
+  "withDomain": 895,
   "noDomain": 3,
   "unregisteredDomain": 4,
   "withOntologyClass": 118,
   "byDomain": {
    "ai-autonomy": 198,
-   "hardware": 168,
-   "ops-mission": 146,
+   "hardware": 170,
+   "ops-mission": 147,
    "flight-control": 74,
    "comms-protocol": 63,
-   "regulations": 59,
-   "edge-ai-compute": 40,
+   "regulations": 60,
+   "edge-ai-compute": 41,
    "gcs-software": 29,
    "vendor-registry": 18,
    "security": 18,
@@ -88,7 +88,7 @@
    "navigation-gnss-denied": 16,
    "software-ecosystem": 13,
    "rf-datalink-engineering": 12,
-   "ros-middleware": 6,
+   "ros-middleware": 7,
    "electrical-power": 4,
    "swarm-multiagent": 3,
    "(없음)": 3,
@@ -99,8 +99,8 @@
   }
  },
  "sources": {
-  "total": 1274,
-  "resolved": 1244,
+  "total": 1280,
+  "resolved": 1250,
   "unresolved": 25,
   "unknown": 5
  },
@@ -573,7 +573,7 @@
    "ok": false,
    "count": 25,
    "sample": [
-    "inbox/processed/hw-20261023-gnss-vendors.md",
+    "inbox/processed/hw-20261024-gnss-vendors.md",
     "raw/articles/amazon-prime-air-expansion-2026-08.md",
     "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md",
     "raw/articles/ondas-ohio-drone-hub-2026-08.md",

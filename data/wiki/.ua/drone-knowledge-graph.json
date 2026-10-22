@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "542282894db0705222cbf3284efe1a4f5f451d6f3b3f33658bdc324a34269832",
+  "source_fingerprint": "d2e6e2aebdcbdd6ab3780567a8d98ae9423d87e511802a3ca22e255c1fb42815",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -545,7 +545,7 @@
         "drone",
         "hub"
       ],
-      "updated": "2026-10-23",
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
@@ -559,7 +559,7 @@
         "drone",
         "hub"
       ],
-      "updated": "2026-10-23",
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -2461,6 +2461,25 @@
       "ontologyClass": null
     },
     {
+      "id": "conv-arp6983-ed324-status-2026-10-24",
+      "name": "SAE ARP6983 / EUROCAE ED-324 발행 여부 — EUROCAE WG-114 공식 페이지 라이브 확인 (2026-10-24)",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "certification",
+        "arp6983",
+        "ed-324",
+        "wg-114",
+        "status",
+        "not-published"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "conv-arp6983-status-2026-10-22",
       "name": "SAE ARP6983 (EUROCAE ED-324) 정식 현재 상태 — 2026-10-22 확인 기록",
       "layer": "Concepts",
@@ -2534,6 +2553,25 @@
         "ardupilot"
       ],
       "updated": "2026-10-22",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "conv-camera-imu-sync-hw-vs-sw-search-round4-2026-10-24",
+      "name": "카메라-IMU 하드웨어 동기 vs 소프트웨어 동기 직접 정량 비교 — 4차 재조사 (2026-10-24)",
+      "layer": "Concepts",
+      "domain": "ros-middleware",
+      "tags": [
+        "drone",
+        "time-synchronization",
+        "camera-imu",
+        "hardware-sync",
+        "software-sync",
+        "vio",
+        "negative-result"
+      ],
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
@@ -2807,6 +2845,26 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "conv-motor-esc-antenna-cn0-quant-search-round4-2026-10-24",
+      "name": "모터·ESC·프로펠러 근접 GNSS 안테나 C/N0 저하 정량 — 4차 재조사 결과 (2026-10-24)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "gnss",
+        "cn0",
+        "esc",
+        "motor",
+        "antenna-placement",
+        "negative-result"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "conv-swap-autopilot-krishnan-2021",
@@ -3170,6 +3228,27 @@
         "fps"
       ],
       "updated": "2026-10-21",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "data-edge-isaac-ros-performance-summary-release-3-2-orin-nx-nano-agx",
+      "name": "Isaac ROS 공식 Performance Summary (release-3.2): AGX Orin / Orin NX / Orin Nano Super 노드·그래프별 fps·지연(ms)",
+      "layer": "Concepts",
+      "domain": "edge-ai-compute",
+      "tags": [
+        "drone",
+        "edge-inference",
+        "jetson-orin",
+        "orin-nx",
+        "latency-ms",
+        "fps",
+        "isaac-ros",
+        "stereo-depth",
+        "rt-detr"
+      ],
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
@@ -4338,7 +4417,7 @@
         "drone",
         "hub"
       ],
-      "updated": "2026-10-23",
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -5787,6 +5866,26 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "env-uav-antenna-installation-height-hehenberger-2022-no-motor-emi",
+      "name": "Design and Installed Performance Analysis of a Miniaturized All-GNSS Bands Antenna Array for Robust Navigation on UAV Platforms (헥사로터 설치 높이 50~130 mm, 로터 없는 측정)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "gnss",
+        "antenna-placement",
+        "installation-height",
+        "cn0",
+        "multipath",
+        "env"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "env-usb3-gnss-emlid-forum-2017",
       "name": "Problems with interference from USB3 hub (Emlid community forum)",
       "layer": "Concepts",
@@ -6614,7 +6713,7 @@
         "drone",
         "hub"
       ],
-      "updated": "2026-10-23",
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
@@ -8195,6 +8294,25 @@
         "공식"
       ],
       "updated": "2026-10-22",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "korea-ngii-network-rtk-g-vrs-drone-access-recheck-2026-10-24",
+      "name": "국토지리정보원 네트워크 RTK·SSR·G-VRS — 드론 사용 문구, 신청 방식, 요금/승인 기간 재확인 (2026-10-24)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "gnss",
+        "ngii",
+        "network-rtk",
+        "ssr",
+        "g-vrs",
+        "신청절차"
+      ],
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -12110,7 +12228,7 @@
         "gnss",
         "vendor-registry"
       ],
-      "updated": "2026-10-23",
+      "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
@@ -14861,7 +14979,7 @@
       "target": "data-anomaly-alfa-keipour-2019",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14870,7 +14988,7 @@
       "target": "data-anomaly-resam-islam-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14879,7 +14997,7 @@
       "target": "data-dataset-uavid",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14888,7 +15006,7 @@
       "target": "data-dataset-visdrone",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14897,7 +15015,7 @@
       "target": "data-edge-aerial-autonomy-stack-panerati-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14906,7 +15024,7 @@
       "target": "data-edge-deepstream-9-2-jetson-orin-model-fps",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14915,7 +15033,7 @@
       "target": "data-edge-jetson-orin-lineup",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14924,7 +15042,7 @@
       "target": "data-edge-jetson-ota-update",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14933,7 +15051,7 @@
       "target": "data-edge-nvidia-jetson-mlperf-orin",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14942,7 +15060,7 @@
       "target": "data-edge-onnxruntime-tensorrt-ep",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14951,7 +15069,7 @@
       "target": "data-edge-tensorrt-quantized-types",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14960,7 +15078,7 @@
       "target": "data-edge-tensorrt-quickstart",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14969,7 +15087,7 @@
       "target": "data-fl-uav-bcsfl-hafeez-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14978,7 +15096,7 @@
       "target": "data-fl-uav-privacy-yang-2020",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14987,7 +15105,7 @@
       "target": "data-fl-uav-split-sflsc3-hou-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -14996,7 +15114,7 @@
       "target": "data-flightlog-ardupilot-aplogger-formats",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15005,7 +15123,7 @@
       "target": "data-flightlog-ardupilot-dataflash",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15014,7 +15132,7 @@
       "target": "data-flightlog-mcap-spec",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15023,7 +15141,7 @@
       "target": "data-flightlog-px4-analysis-tools",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15032,7 +15150,7 @@
       "target": "data-flightlog-px4-logging",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15041,7 +15159,7 @@
       "target": "data-flightlog-px4-ulog-format",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15050,7 +15168,7 @@
       "target": "data-flightlog-rosbag2",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15059,7 +15177,7 @@
       "target": "data-latency-px4-ardupilot-loop-rates-official",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15068,7 +15186,7 @@
       "target": "data-latency-px4-ardupilot-rates-delays-params-source",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15077,7 +15195,7 @@
       "target": "data-sync-hardware-timestamp-ntnu-wiki-and-gnss-clock",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15086,7 +15204,7 @@
       "target": "data-sync-kalibr-temporal-calibration-readme",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15095,7 +15213,7 @@
       "target": "data-sync-linux-pps-kernel",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15104,7 +15222,7 @@
       "target": "data-sync-ros2-message-filters-approximatetime-source",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15113,7 +15231,7 @@
       "target": "data-sync-ros2-message-filters-approximatetime",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15122,7 +15240,7 @@
       "target": "data-synthetic-airsim-image-apis",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15131,7 +15249,7 @@
       "target": "data-synthetic-omni-replicator",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15140,7 +15258,7 @@
       "target": "data-synthetic-pegasus-simulator-jacinto-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15149,7 +15267,7 @@
       "target": "data-synthetic-testing-pipeline-jiang-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15158,7 +15276,7 @@
       "target": "data-edge-jetson-ai-lab-models-orin-llm-vlm-throughput",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15167,7 +15285,7 @@
       "target": "data-edge-jetson-benchmarks-github-csv-config",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15176,7 +15294,7 @@
       "target": "data-edge-jetson-benchmarks-wayback-2023-12-orin-family-fps",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15185,7 +15303,7 @@
       "target": "data-edge-nvidia-jetson-benchmarks-live-page-mlperf-thor-2026-10",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15194,7 +15312,7 @@
       "target": "data-sync-ardupilot-camera-trigger-feedback",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15203,7 +15321,7 @@
       "target": "data-sync-px4-camera-capture-hotshoe-and-vio-sync",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15212,7 +15330,7 @@
       "target": "data-edge-jetson-cudla-samples-yolov5s-orin-latency-ms",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15221,7 +15339,16 @@
       "target": "data-edge-jetson-nanosam-latency-ms-orin-nano-agx",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aidata.md"
+        "inbox/processed/hw-20261024-hub-aidata.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "ai-drone-data-processing-hub",
+      "target": "data-edge-isaac-ros-performance-summary-release-3-2-orin-nx-nano-agx",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-hub-aidata.md"
       ],
       "confidence": "medium"
     },
@@ -15230,7 +15357,7 @@
       "target": "ai-model-depth-anything-v2",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15239,7 +15366,7 @@
       "target": "ai-model-depth-pro",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15248,7 +15375,7 @@
       "target": "ai-model-dreamerv3",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15257,7 +15384,7 @@
       "target": "ai-model-edgetam",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15266,7 +15393,7 @@
       "target": "ai-model-grounding-dino",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15275,7 +15402,7 @@
       "target": "ai-model-jetson-ai-lab-orin-nano-super",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15284,7 +15411,7 @@
       "target": "ai-model-mobilellm",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15293,7 +15420,7 @@
       "target": "ai-model-mobilesam",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15302,7 +15429,7 @@
       "target": "ai-model-navila",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15311,7 +15438,7 @@
       "target": "ai-model-onfly-onboard-aerial-vln",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15320,7 +15447,7 @@
       "target": "ai-model-openvla",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15329,7 +15456,7 @@
       "target": "ai-model-phi-3",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15338,7 +15465,7 @@
       "target": "ai-model-pi0-openpi",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15347,7 +15474,7 @@
       "target": "ai-model-qwen2-5-vl",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15356,7 +15483,7 @@
       "target": "ai-model-rf-detr",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15365,7 +15492,7 @@
       "target": "ai-model-rt-detr",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15374,7 +15501,7 @@
       "target": "ai-model-sam2",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15383,7 +15510,7 @@
       "target": "ai-model-smolvlm",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15392,7 +15519,7 @@
       "target": "ai-model-uav-vla",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15401,7 +15528,7 @@
       "target": "ai-model-vln-on-the-fly",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15410,7 +15537,7 @@
       "target": "ai-model-yolo-ultralytics-jetson-orin-benchmarks",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15419,7 +15546,7 @@
       "target": "ai-model-yolo-world",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15428,7 +15555,7 @@
       "target": "ai-model-yolo11",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15437,7 +15564,7 @@
       "target": "ai-model-yolo26-ultralytics-jetson-orin-per-variant",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15446,7 +15573,7 @@
       "target": "ai-model-yolov10",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15455,7 +15582,7 @@
       "target": "ai-model-yolov12",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15464,7 +15591,7 @@
       "target": "ai-model-yolov9",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15473,7 +15600,7 @@
       "target": "ai-agent-safety-latency-typefly-chen-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15482,7 +15609,7 @@
       "target": "ai-agent-safety-robopair-robey-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15491,7 +15618,7 @@
       "target": "ai-agent-safety-saycan-ahn-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15500,7 +15627,7 @@
       "target": "ai-assurance-ml-lifecycle-ashmore-2019",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15509,7 +15636,7 @@
       "target": "ai-cert-do178c-ml-dmitriev-low-criticality-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15518,7 +15645,7 @@
       "target": "ai-cert-do178c-ml-runway-sign-classifier-dal-c-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15527,7 +15654,7 @@
       "target": "ai-cert-do178c-ml-semi-automated-sridhar-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15536,7 +15663,7 @@
       "target": "ai-cert-easa-ai-roadmap-timeline",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15545,7 +15672,7 @@
       "target": "ai-cert-easa-concept-paper-level1-2-issue02",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15554,7 +15681,7 @@
       "target": "ai-cert-easa-concept-paper-proposed-issue-03",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15563,7 +15690,7 @@
       "target": "ai-cert-ed324-arp6983-ml-assurance-standard",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15572,7 +15699,7 @@
       "target": "ai-cert-ed324-eurocae-wg114-status-2026-10",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15581,7 +15708,7 @@
       "target": "ai-cert-faa-roadmap-ai-safety-assurance",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15590,7 +15717,7 @@
       "target": "ai-cert-iso-21448-sotif",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15599,7 +15726,7 @@
       "target": "ai-cert-iso-pas-8800-ai-safety-road-vehicles",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15608,7 +15735,7 @@
       "target": "ai-cert-ul-4600-overview",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15617,7 +15744,7 @@
       "target": "ai-compression-deep-compression-han-2015",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15626,7 +15753,7 @@
       "target": "ai-compression-distillation-hinton-2015",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15635,7 +15762,7 @@
       "target": "ai-fl-uav-backdoor-gps-spoofing-jedrzejczak-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15644,7 +15771,7 @@
       "target": "ai-fl-uav-distributed-ml-swarms-ding-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15653,7 +15780,7 @@
       "target": "ai-fl-uav-dp-hierarchical-gat-shit-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15662,7 +15789,7 @@
       "target": "ai-fl-uav-privllmswarm-mpc-ayana-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15671,7 +15798,7 @@
       "target": "ai-fl-uav-reliable-participation-cheriguene-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15680,7 +15807,7 @@
       "target": "ai-fl-uav-soul-unlearning-zaman-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15689,7 +15816,7 @@
       "target": "ai-latency-ardupilot-companion-uart-baud-dade-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15698,7 +15825,7 @@
       "target": "ai-latency-companion-fc-dds-vs-mavros-cotta-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15707,7 +15834,7 @@
       "target": "ai-latency-px4-offboard-afio-forum-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15716,7 +15843,7 @@
       "target": "ai-latency-vision-in-the-loop-wickramasuriya-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15725,7 +15852,7 @@
       "target": "ai-llm-drone-taking-flight-px4-lim-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15734,7 +15861,7 @@
       "target": "ai-quantization-awq-lin-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15743,7 +15870,7 @@
       "target": "ai-quantization-gptq-frantar-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15752,7 +15879,7 @@
       "target": "ai-quantization-integer-only-jacob-2017",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15761,7 +15888,7 @@
       "target": "ai-quantization-smoothquant-xiao-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15770,7 +15897,7 @@
       "target": "ai-quantization-whitepaper-nagel-2021",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15779,7 +15906,7 @@
       "target": "ai-safety-concrete-problems-amodei-2016",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15788,7 +15915,7 @@
       "target": "ai-sim2real-deep-drone-acrobatics-kaufmann-2020",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15797,7 +15924,7 @@
       "target": "ai-sim2real-domain-randomization-tobin-2017",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15806,7 +15933,7 @@
       "target": "ai-sim2real-gym-pybullet-drones-panerati-2021",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15815,7 +15942,7 @@
       "target": "ai-sim2real-learning-high-speed-flight-loquercio-2021",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15824,7 +15951,7 @@
       "target": "ai-sim2real-racing-oc-vs-rl-song-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15833,7 +15960,7 @@
       "target": "ai-sim2real-survey-zhao-2020",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15842,7 +15969,7 @@
       "target": "ai-sim2real-swift-champion-drone-racing-kaufmann-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15851,7 +15978,7 @@
       "target": "ai-smallobj-sahi-akyon-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15860,7 +15987,7 @@
       "target": "ai-smallobj-soda-cheng-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15869,7 +15996,7 @@
       "target": "ai-smallobj-visdrone-zhu-2020",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15878,7 +16005,7 @@
       "target": "ai-sync-camera-imu-online-temporal-calibration-qin-2018",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15887,7 +16014,7 @@
       "target": "ai-sync-camera-imu-varying-time-offset-ling-2018",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15896,7 +16023,7 @@
       "target": "ai-uncertainty-deep-ensembles-lakshminarayanan-2016",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15905,7 +16032,7 @@
       "target": "ai-uncertainty-mc-dropout-gal-2015",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15914,7 +16041,7 @@
       "target": "ai-vlm-nav-airnav-cai-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15923,7 +16050,7 @@
       "target": "ai-vlm-nav-openfly-gao-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15932,7 +16059,7 @@
       "target": "ai-vlm-nav-soranav-song-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15941,7 +16068,7 @@
       "target": "ai-cert-arp6983-ed324-easa-ai-days-2026-flash-talk",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15950,7 +16077,7 @@
       "target": "ai-fl-uav-aerpaw-poisoning-kostage-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15959,7 +16086,7 @@
       "target": "ai-fl-uav-real-hardware-chained-attacks-sabo-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15968,7 +16095,7 @@
       "target": "ai-sync-exposure-midpoint-hs-es-vins-yang-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15977,7 +16104,7 @@
       "target": "ai-sync-pirvs-hardware-sync-host-timestamp-zhang-2017",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15986,7 +16113,7 @@
       "target": "ai-edge-jetson-orin-nano-agx-yolo-latency-laf-yolov10-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -15995,7 +16122,7 @@
       "target": "ai-edge-jetson-orin-nx-agx-depth-anything-latency-finke-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -16004,7 +16131,7 @@
       "target": "ai-sync-time-offset-vins-mono-rmse-qin-shen-2018",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -16013,7 +16140,7 @@
       "target": "ai-sync-versavis-tschopp-2019-synced-vs-nonsynced",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-aimodel.md"
+        "inbox/processed/hw-20261024-hub-aimodel.md"
       ],
       "confidence": "medium"
     },
@@ -18616,6 +18743,24 @@
       "confidence": "medium"
     },
     {
+      "source": "conv-arp6983-ed324-status-2026-10-24",
+      "target": "drone-convergence-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-conv-arp6983-ed324-status-2026-10-24.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "conv-arp6983-ed324-status-2026-10-24",
+      "target": "mbse-uav-sysml",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-conv-arp6983-ed324-status-2026-10-24.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "conv-arp6983-status-2026-10-22",
       "target": "drone-convergence-engineering-hub",
       "type": "wikilink",
@@ -18684,6 +18829,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261022-conv-camera-imu-sync-hw-vs-sw-evidence-2026-10.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "conv-camera-imu-sync-hw-vs-sw-search-round4-2026-10-24",
+      "target": "drone-convergence-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-conv-camera-imu-sync-hw-vs-sw-search-round4-2026-10-24.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "conv-camera-imu-sync-hw-vs-sw-search-round4-2026-10-24",
+      "target": "mbse-uav-sysml",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-conv-camera-imu-sync-hw-vs-sw-search-round4-2026-10-24.md"
       ],
       "confidence": "medium"
     },
@@ -18972,6 +19135,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-conv-mbse-sysml-ros2-angadi-2026.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "conv-motor-esc-antenna-cn0-quant-search-round4-2026-10-24",
+      "target": "drone-convergence-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-conv-motor-esc-antenna-cn0-quant-search-round4-2026-10-24.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "conv-motor-esc-antenna-cn0-quant-search-round4-2026-10-24",
+      "target": "mbse-uav-sysml",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-conv-motor-esc-antenna-cn0-quant-search-round4-2026-10-24.md"
       ],
       "confidence": "medium"
     },
@@ -19464,6 +19645,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261021-data-edge-deepstream-9-2-jetson-orin-model-fps.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-edge-isaac-ros-performance-summary-release-3-2-orin-nx-nano-agx",
+      "target": "ai-drone-data-processing-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-data-edge-isaac-ros-performance-summary-release-3-2-orin-nx-nano-agx.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "data-edge-isaac-ros-performance-summary-release-3-2-orin-nx-nano-agx",
+      "target": "companion-computer",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-data-edge-isaac-ros-performance-summary-release-3-2-orin-nx-nano-agx.md"
       ],
       "confidence": "medium"
     },
@@ -21145,7 +21344,7 @@
       "target": "conv-6g-control-comm-codesign-liang-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21154,7 +21353,7 @@
       "target": "conv-dt-model-sharing-xiong-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21163,7 +21362,7 @@
       "target": "conv-dt-uav-network-hossen-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21172,7 +21371,7 @@
       "target": "conv-dt-uav-zero-touch-mcmanus-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21181,7 +21380,7 @@
       "target": "conv-energy-comm-coverage-samshad-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21190,7 +21389,7 @@
       "target": "conv-energy-comm-trajectory-battery-im-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21199,7 +21398,7 @@
       "target": "conv-energy-flying-batteries-jain-2019",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21208,7 +21407,7 @@
       "target": "conv-energy-staging-jain-2020",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21217,7 +21416,7 @@
       "target": "conv-isac-cooperative-li-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21226,7 +21425,7 @@
       "target": "conv-isac-deeplsc-ye-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21235,7 +21434,7 @@
       "target": "conv-isac-mec-peng-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21244,7 +21443,7 @@
       "target": "conv-isac-networked-cheng-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21253,7 +21452,7 @@
       "target": "conv-isac-predictive-beamforming-jiang-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21262,7 +21461,7 @@
       "target": "conv-mbse-sysml-ros2-angadi-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21271,7 +21470,7 @@
       "target": "conv-swap-autopilot-krishnan-2021",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21280,7 +21479,7 @@
       "target": "conv-swap-nano-uav-survey-zango-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21289,7 +21488,7 @@
       "target": "conv-swarm-agentic-edge-nguyen-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21298,7 +21497,7 @@
       "target": "conv-swarm-llm-rally-wang-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21307,7 +21506,7 @@
       "target": "conv-utm-security-spalas-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21316,7 +21515,7 @@
       "target": "conv-utm-skyroad-zahed-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21325,7 +21524,7 @@
       "target": "conv-arp6983-status-2026-10-22",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21334,7 +21533,7 @@
       "target": "conv-camera-imu-sync-hw-vs-sw-evidence-2026-10",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21343,7 +21542,7 @@
       "target": "conv-fl-uav-real-airframe-attack-evidence-check",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21352,7 +21551,7 @@
       "target": "conv-jetson-orin-benchmark-source-map-2026-10",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21361,7 +21560,7 @@
       "target": "conv-arp6983-status-2026-10-23",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21370,7 +21569,7 @@
       "target": "conv-camera-imu-sync-direct-comparison-2026-10-23",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -21379,7 +21578,34 @@
       "target": "conv-jetson-orin-latency-ms-sources-2026-10-23",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-conv.md"
+        "inbox/processed/hw-20261024-hub-conv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-convergence-engineering-hub",
+      "target": "conv-arp6983-ed324-status-2026-10-24",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-hub-conv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-convergence-engineering-hub",
+      "target": "conv-camera-imu-sync-hw-vs-sw-search-round4-2026-10-24",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-hub-conv.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "drone-convergence-engineering-hub",
+      "target": "conv-motor-esc-antenna-cn0-quant-search-round4-2026-10-24",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-hub-conv.md"
       ],
       "confidence": "medium"
     },
@@ -25290,6 +25516,24 @@
       "confidence": "medium"
     },
     {
+      "source": "env-uav-antenna-installation-height-hehenberger-2022-no-motor-emi",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-env-uav-antenna-installation-height-hehenberger-2022-no-motor-emi.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "env-uav-antenna-installation-height-hehenberger-2022-no-motor-emi",
+      "target": "vendor-registry-gnss-imu",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-env-uav-antenna-installation-height-hehenberger-2022-no-motor-emi.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "env-usb3-gnss-emlid-forum-2017",
       "target": "gnss-engineering-hub",
       "type": "wikilink",
@@ -26591,7 +26835,7 @@
       "target": "vendor-registry-gnss-receivers",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26600,7 +26844,7 @@
       "target": "vendor-registry-gnss-imu",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26609,7 +26853,7 @@
       "target": "env-ardupilot-gps-how-it-works-doc",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26618,7 +26862,7 @@
       "target": "env-ardupilot-gps-mounting-doc",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26627,7 +26871,7 @@
       "target": "env-basler-usb3-2.4ghz-gps-note",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26636,7 +26880,7 @@
       "target": "env-dlr-miniaturized-all-gnss-antenna-array-choke-ring-eucap-2021",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26645,7 +26889,7 @@
       "target": "env-henkel-anavs-uav-6d-rtk-antenna-eucap-2020",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26654,7 +26898,7 @@
       "target": "env-kim-uav-airborne-multipath-jpnt-2015",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26663,7 +26907,7 @@
       "target": "env-punzet-groundplane-rtk-uav-ars-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26672,7 +26916,7 @@
       "target": "env-recuv-gpsworld-uas-gnss-2016",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26681,7 +26925,7 @@
       "target": "env-usb3-gnss-emlid-forum-2017",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26690,7 +26934,7 @@
       "target": "fusion-ardupilot-ekf3-gps-overview",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26699,7 +26943,7 @@
       "target": "fusion-ardupilot-gps-blending",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26708,7 +26952,7 @@
       "target": "fusion-ardupilot-gps-for-yaw-dual-antenna",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26717,7 +26961,7 @@
       "target": "fusion-delama-galilean-gnss-delay-2605.13266",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26726,7 +26970,7 @@
       "target": "fusion-px4-ekf2-gnss-handling",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26735,7 +26979,7 @@
       "target": "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26744,7 +26988,7 @@
       "target": "fusion-wen-fgo-vs-ekf-2004.10572",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26753,7 +26997,7 @@
       "target": "gnss-denied-aeromap3d-2607.14009",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26762,7 +27006,7 @@
       "target": "gnss-denied-leo-fisher-emenonye-2502.06083",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26771,7 +27015,7 @@
       "target": "gnss-denied-leo-jardak-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26780,7 +27024,7 @@
       "target": "gnss-denied-leo-survey-he-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26789,7 +27033,7 @@
       "target": "gnss-denied-uwb-pena-queralta-2003.04380",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26798,7 +27042,7 @@
       "target": "gnss-denied-vio-novak-2602.01860",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26807,7 +27051,7 @@
       "target": "gnss-signals-beidou-navipedia",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26816,7 +27060,7 @@
       "target": "gnss-signals-galileo-navipedia",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26825,7 +27069,7 @@
       "target": "gnss-signals-glonass-navipedia",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26834,7 +27078,7 @@
       "target": "gnss-signals-gps-navipedia",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26843,7 +27087,7 @@
       "target": "integrity-kass-design-insidegnss",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26852,7 +27096,7 @@
       "target": "integrity-kass-qualification-insidegnss-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26861,7 +27105,7 @@
       "target": "integrity-nasa-rnp-utm-jung-2016",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26870,7 +27114,7 @@
       "target": "integrity-raim-survey-huang-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26879,7 +27123,7 @@
       "target": "jamming-ardupilot-ekf3-jamming-expected-doc",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26888,7 +27132,7 @@
       "target": "jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26897,7 +27141,7 @@
       "target": "jamming-esa-jammertest-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26906,7 +27150,7 @@
       "target": "jamming-kci-yoo-resnet-svm-jamming-classification-kics-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26915,7 +27159,7 @@
       "target": "jamming-kwon-null-steering-circular-array-jees-2018",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26924,7 +27168,7 @@
       "target": "jamming-novatel-grit-doc",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26933,7 +27177,7 @@
       "target": "jamming-septentrio-aim-plus-jamming-protection-page",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26942,7 +27186,7 @@
       "target": "jamming-septentrio-jammertest-2023-results-page",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26951,7 +27195,7 @@
       "target": "jamming-spanghero-jammer-localization-2503.20352",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26960,7 +27204,7 @@
       "target": "jamming-spanghero-uav-mapping-interference-2405.07611",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26969,7 +27213,7 @@
       "target": "korea-jamming-koreatimes-2024-11",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26978,7 +27222,7 @@
       "target": "korea-jamming-segye-2024-11-cumulative",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26987,7 +27231,7 @@
       "target": "korea-kci-kim-ngii-network-rtk-testbed-jpnt-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -26996,7 +27240,7 @@
       "target": "korea-kci-lee-network-rtk-mountpoint-comparison-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27005,7 +27249,7 @@
       "target": "korea-ngii-geodesy-portal-access-attempt-2026-10-22",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27014,7 +27258,7 @@
       "target": "korea-ngii-geodesy-portal-service-list",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27023,7 +27267,7 @@
       "target": "korea-ngii-network-rtk-access-distributor-notice",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27032,7 +27276,7 @@
       "target": "korea-seoul-network-rtk-service-access",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27041,7 +27285,7 @@
       "target": "precise-kci-hwang-rtk-drone-river-survey-kosham-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27050,7 +27294,7 @@
       "target": "precise-kci-kim-rtk-precision-landing-iemek-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27059,7 +27303,7 @@
       "target": "precise-mirmohammadian-ztd-long-baseline-rtk-sensors-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27068,7 +27312,7 @@
       "target": "precise-ntrip-unavco-kb",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27077,7 +27321,7 @@
       "target": "precise-ppk-rtk-ppp-ar-arkali-2025",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27086,7 +27330,7 @@
       "target": "precise-ppp-rtk-review-li-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27095,7 +27339,7 @@
       "target": "precise-px4-rtk-gps-doc",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27104,7 +27348,7 @@
       "target": "precise-stempfhuber-3d-rtk-single-gnss-receivers-isprs-2013",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27113,7 +27357,7 @@
       "target": "precise-wang-bds-gps-rtk-baseline-lengths-remote-sensing-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27122,7 +27366,7 @@
       "target": "spoofing-jung-px4-ekf-drl-2506.08445",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27131,7 +27375,7 @@
       "target": "spoofing-kci-kim-cn0-detection-korea-jpnt-2026-1",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27140,7 +27384,7 @@
       "target": "spoofing-kci-kim-cn0-detection-tle-jpnt-2026-3",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27149,7 +27393,7 @@
       "target": "spoofing-kci-park-sac-covert-spoofing-uav-jpnt-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27158,7 +27402,7 @@
       "target": "spoofing-septentrio-aim-plus-spoofing-protection-page",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27167,7 +27411,7 @@
       "target": "spoofing-sharifi-utm-security-survey-2601.08229",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27176,7 +27420,7 @@
       "target": "env-brodin-helicopter-rotor-gps-reception-jnav-2005",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27185,7 +27429,7 @@
       "target": "env-hehenberger-dlr-gnss-array-installed-height-sensors-2022",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27194,7 +27438,7 @@
       "target": "env-jiang-uav-gnss-review-drones-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27203,7 +27447,7 @@
       "target": "env-punzet-groundplane-rtk-uav-ars-2023-fulltext",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27212,7 +27456,7 @@
       "target": "korea-ngii-network-rtk-account-registration-official-guide",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27221,7 +27465,7 @@
       "target": "korea-ngii-network-rtk-server-mountpoints-official",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27230,7 +27474,7 @@
       "target": "precise-beni-rtk-ppk-uav-total-station-sensors-2026",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27239,7 +27483,7 @@
       "target": "precise-cerreta-ebee-rtk-ppk-base-distance-ijaaa-2023",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27248,7 +27492,7 @@
       "target": "precise-tavasci-low-cost-rtk-critical-environments-sensors-2024",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27257,7 +27501,7 @@
       "target": "env-rotor-blade-modulation-obrien-2009-access-log",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27266,7 +27510,7 @@
       "target": "env-septentrio-ion-gnss-interference-quadcopter-selfjamming",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -27275,7 +27519,25 @@
       "target": "env-uas-onboard-rfi-cn0-stubbs-akos-2016",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-hub-gnss.md"
+        "inbox/processed/hw-20261024-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "env-uav-antenna-installation-height-hehenberger-2022-no-motor-emi",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-hub-gnss.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "gnss-engineering-hub",
+      "target": "korea-ngii-network-rtk-g-vrs-drone-access-recheck-2026-10-24",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-hub-gnss.md"
       ],
       "confidence": "medium"
     },
@@ -30213,6 +30475,24 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/hw-20261022-korea-ngii-network-rtk-account-registration-official-guide.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "korea-ngii-network-rtk-g-vrs-drone-access-recheck-2026-10-24",
+      "target": "gnss-engineering-hub",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-korea-ngii-network-rtk-g-vrs-drone-access-recheck-2026-10-24.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "korea-ngii-network-rtk-g-vrs-drone-access-recheck-2026-10-24",
+      "target": "gnss-denied-remote-autonomy",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/hw-20261024-korea-ngii-network-rtk-g-vrs-drone-access-recheck-2026-10-24.md"
       ],
       "confidence": "medium"
     },
@@ -37716,7 +37996,7 @@
       "target": "vendor-registry-gnss-imu",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-gnss-vendors.md"
+        "inbox/processed/hw-20261024-gnss-vendors.md"
       ],
       "confidence": "medium"
     },
@@ -37725,7 +38005,7 @@
       "target": "gnss-engineering-hub",
       "type": "wikilink",
       "evidence": [
-        "inbox/processed/hw-20261023-gnss-vendors.md"
+        "inbox/processed/hw-20261024-gnss-vendors.md"
       ],
       "confidence": "medium"
     },
