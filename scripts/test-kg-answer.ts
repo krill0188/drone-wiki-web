@@ -232,6 +232,13 @@ async function main() {
     ok(!body.includes("미확인"), "context에 미확인이 남음")
   })
 
+  await t("S13 문서의 RTCM34를 답변이 'RTCM 3.4'로 풀어 써도 숫자 환각으로 보지 않는다(운영 NGII 질문 오탐)", () => {
+    const q = planQuery("국토지리정보원 네트워크 RTK 접속 서버 주소는?")
+    const ctx = buildNimContext(q)
+    const r = verifyAnswer("RTS1은 VRS 전용(RTCM 2.3/3.1/3.2/3.4 마운트포인트) [P1]", ctx, 1)
+    ok(!r.violations.some((v) => v.code === "unsupported_number" && ["3.4", "3.2", "3.1", "2.3"].includes(v.detail)), JSON.stringify(r.violations))
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)

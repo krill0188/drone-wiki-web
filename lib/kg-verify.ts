@@ -45,6 +45,8 @@ export function verifyAnswer(answer: string, ctx: NimContext, externalCitations 
   // V2 숫자: 인용 표기를 지우고, 목록 번호와 한 자리 정수(순번 표현)는 제외
   const stripped = answer.replace(CITE, " ").replace(/^\s*\d+[.)]\s/gm, " ")
   const allowed = numbersIn(JSON.stringify({ ...ctx, answer_constraints: [] }) + " " + ctx.question)
+  // 표기 차이 허용: 문서의 "RTCM34"를 답변이 "RTCM 3.4"로 풀어 쓴 경우(마운트포인트·규격 버전 표기)
+  for (const m of JSON.stringify(ctx).matchAll(/RTCM[-_ ]?(\d)(\d)(?!\d)/gi)) allowed.add(norm(`${m[1]}.${m[2]}`))
   const unsupported = new Set<string>()
   for (const m of stripped.matchAll(NUM)) {
     const raw = m[0]
