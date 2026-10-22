@@ -35,9 +35,27 @@ export function unsupportedNumbers(answer: string, ctx: NimContext): Set<string>
   for (const m of stripped.matchAll(NUM)) {
     const raw = m[0]
     if (/^\d$/.test(raw)) continue // 한 자리 정수(순번·개수 표현)
-    if (!allowed.has(norm(raw))) unsupported.add(raw)
+    if (allowed.has(norm(raw))) continue
+    if (derivedFromAllowed(raw, allowed)) continue
+    unsupported.add(raw)
   }
   return unsupported
+}
+
+// 근거 숫자의 반올림(98.63→98.6)과 단위 환산(10 cm→0.10 m, 892 mm→0.892 m)은 새 사실이 아니므로 허용한다(2026-10-22 운영 평가: 거짓 경고 감소).
+// 반올림은 근거가 소수일 때만(정수는 다른 정수로 둔갑할 수 있어 제외), 오차 5% 이내. 환산은 ×100·×1000 계열만.
+const RATIOS = [0.01, 100, 0.001, 1000]
+function derivedFromAllowed(raw: string, allowed: Set<string>): boolean {
+  const v = parseFloat(raw.replace(/,/g, ""))
+  if (!Number.isFinite(v) || v === 0) return false
+  const dec = (raw.split(".")[1] ?? "").length
+  for (const a of allowed) {
+    const f = parseFloat(a)
+    if (!Number.isFinite(f) || f === 0) continue
+    if (!Number.isInteger(f) && Math.abs(v - f) / Math.abs(f) <= 0.05 && norm(f.toFixed(dec)) === norm(raw)) return true
+    for (const r of RATIOS) if (Math.abs(v - f * r) <= Math.abs(v) * 1e-9 + 1e-12) return true
+  }
+  return false
 }
 
 // externalCitations: JSON 모드에서 모델이 used_claims·used_relations·used_pages 필드로 명시한 근거 수(화이트리스트로 따로 검증됨)

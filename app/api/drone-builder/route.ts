@@ -318,7 +318,9 @@ function instantReply(text: string): Response {
 }
 
 export async function POST(req: NextRequest) {
-  const { prompt, stage, context }: { prompt: string; stage: Stage; context?: StageContext } = await req.json()
+  const { prompt, stage, context, modelTier }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string } = await req.json()
+  // 초안은 작은 모델(chat 체인), 서버 검증 위반이 나올 때만 큰 모델(builder 체인)로 재작성한다. 요청의 modelTier(cascade|deep)가 우선, 없으면 BUILDER_TIER=cascade일 때만 켠다.
+  const cascade = modelTier === "cascade" || (modelTier !== "deep" && process.env.BUILDER_TIER === "cascade")
 
   if (!prompt?.trim()) {
     return new Response("concept required", { status: 400 })
@@ -372,12 +374,12 @@ export async function POST(req: NextRequest) {
           const progress = (phase: string, detail?: string) => writer.write({ type: "data-progress", data: { phase, detail, elapsedSec: Math.round((Date.now() - t0) / 1000) }, transient: true })
           try {
             // 한 번의 생성에 시간 상한을 둔다(NVIDIA 지연 꼬리 205초 사례). 상한에 닿으면 모델 체인이 다음 모델로 넘어간다.
-            const gen = async (extra: string) => {
-              const r = streamText({ model: wikiModel("builder"), system: fullSystem(extra), maxOutputTokens: limit.maxOutputTokens, prompt: `드론 컨셉: ${prompt}`, abortSignal: AbortSignal.timeout(GEN_TIMEOUT_MS) })
+            const gen = async (extra: string, profile: "chat" | "builder" = "builder") => {
+              const r = streamText({ model: wikiModel(profile), system: fullSystem(extra), maxOutputTokens: limit.maxOutputTokens, prompt: `드론 컨셉: ${prompt}`, abortSignal: AbortSignal.timeout(GEN_TIMEOUT_MS) })
               return (await r.text).trim()
             }
             progress("writing")
-            let text = await gen("")
+            let text = await gen("", cascade ? "chat" : "builder")
             progress("validating")
             let v = validate(text)
             let retried = false
@@ -387,7 +389,7 @@ export async function POST(req: NextRequest) {
               progress("rewriting", `${v.issues.length}건 위반`)
               const fix = `\n\n# 서버 검증 위반 (코드가 판정한 사실 — 반드시 고쳐서 다시 쓴다)\n<previous-output>\n${text.slice(0, 6000)}\n</previous-output>\n${v.issues.map((x, i) => `${i + 1}. ${x}`).join("\n")}\n위 위반을 모두 해소해 이 단계 결과를 처음부터 다시 작성하되, 위반이 아닌 부분은 유지하고 출력 형식은 그대로 따른다.`
               try {
-                const second = await gen(fix)
+                const second = await gen(fix, "builder")
                 if (second) { text = second; v = validate(text) }
               } catch { /* 재작성 실패·시간 초과: 1차 결과로 계속 */ }
             }

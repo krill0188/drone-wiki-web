@@ -12,6 +12,8 @@ import { kgSummary, queryKG } from "@/lib/kg"
 import { isSqliteBackend } from "@/lib/kdb"
 import { planQuery } from "@/lib/kg-plan"
 import { buildNimContext, nimSystemPrompt } from "@/lib/kg-context"
+import { cacheGet, cachePut, cacheKey } from "@/lib/answer-cache"
+import { resolveTier, profileOf } from "@/lib/model-tier"
 import { softenTransform, inferenceGuard } from "@/lib/soften"
 import { unsupportedNumbers } from "@/lib/kg-verify"
 import { insufficientMessage, metaForStreamed } from "@/lib/kg-answer"
@@ -66,7 +68,8 @@ export async function POST(req: NextRequest) {
   const {
     messages,
     docContext,
-  }: { messages: UIMessage[]; docContext?: DocContext | null; recentDocs?: DocViewRecord[] } =
+    modelTier,
+  }: { messages: UIMessage[]; docContext?: DocContext | null; recentDocs?: DocViewRecord[]; modelTier?: string } =
     await req.json()
 
   const question = extractQuestion(messages)
@@ -89,15 +92,26 @@ export async function POST(req: NextRequest) {
       const meta = { ontologyClasses: plan.classes, answerMeta: { status: "answered", basis: plan.basis, confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: [], ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: vb.pages, verification: { ok: true, violations: [], retried: false } } }
       return instantReply(vb.text, meta)
     }
+    // 반복 질문 캐시(단일 턴·문서 맥락 없음·티어 강제 지정 없음)
+    const cacheable = messages.length === 1 && !docContext && !modelTier
+    const ckey = cacheable ? cacheKey(question) : ""
+    const hit = cacheable ? cacheGet(ckey) : null
+    if (hit) return instantReply(hit.text, { ...hit.meta, cached: true })
     const ctx = buildNimContext(plan)
     const onto2 = buildOntologyContext(question, docContext?.title, { kgOnly: true })
-    const result2 = streamText({ model: wikiModel("builder"), system: nimSystemPrompt(ctx, "text") + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
+    const tier = resolveTier(plan, question, modelTier)
+    const result2 = streamText({ model: wikiModel(profileOf(tier)), system: nimSystemPrompt(ctx, "text") + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
     const acc = { text: "" } // 스트림을 지나가는 답변 텍스트를 모아 완료 후 사후 검증에 쓴다
     const tapped = result2.stream.pipeThrough(softenTransform() as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(inferenceGuard((t) => unsupportedNumbers(t, ctx).size > 0) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(new TransformStream({ transform(part, ctrl) { if (part.type === "text-delta") acc.text += (part as { text?: string }).text ?? ""; ctrl.enqueue(part) } }))
     return createUIMessageStreamResponse({
       stream: toUIMessageStream({
         stream: tapped,
-        messageMetadata: ({ part }) => (part.type === "finish" ? { ontologyClasses: plan.classes, answerMeta: metaForStreamed(plan, ctx, acc.text) } : undefined),
+        messageMetadata: ({ part }) => {
+          if (part.type !== "finish") return undefined
+          const meta = { ontologyClasses: plan.classes, modelTier: tier, answerMeta: metaForStreamed(plan, ctx, acc.text) }
+          if (cacheable && meta.answerMeta.status === "answered") cachePut(ckey, acc.text, meta)
+          return meta
+        },
         onError: (error) => (error instanceof Error ? error.message : "AI 응답 생성 중 오류가 발생했습니다."),
       }),
     })

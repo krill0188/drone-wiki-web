@@ -262,6 +262,28 @@ async function main() {
     ok(!r.violations.some((v) => v.code === "unsupported_number" && ["892", "380"].includes(v.detail)), JSON.stringify(r.violations))
   })
 
+  await t("S16 반올림·단위 환산은 허용하고, 근거에 없는 새 숫자는 여전히 잡는다", () => {
+    const ctx = buildNimContext(planQuery("Jetson Orin Nano에서 NanoSAM 지연은?"))
+    const ids = "[P1]"
+    // 근거에 98.63이 있으면 98.6은 반올림. 근거 밖 123.45는 위반.
+    const base = JSON.parse(JSON.stringify(ctx))
+    base.verified_claims = [{ ref: "C1", value: "latency 98.63 ms, width 10 cm" }]
+    const ok1 = verifyAnswer(`지연 98.6 ms, 폭 0.10 m ${ids}`, base, 1)
+    ok(!ok1.violations.some((v) => v.code === "unsupported_number" && ["98.6", "0.10"].includes(v.detail)), JSON.stringify(ok1.violations))
+    const bad = verifyAnswer(`지연 123.45 ms ${ids}`, base, 1)
+    ok(bad.violations.some((v) => v.code === "unsupported_number" && v.detail === "123.45"), "새 숫자 미탐지")
+  })
+
+  await t("S17 모델 티어: 단순 사양 조회는 fast, 비교·종합은 deep, 강제 지정이 우선", async () => {
+    const { pickTier, resolveTier } = await import("../lib/model-tier")
+    const spec = planQuery("CHCNAV M720 사양은")
+    ok(pickTier(spec, "CHCNAV M720 사양은") === "fast", `spec=${pickTier(spec, "CHCNAV M720 사양은")}`)
+    const cmp = planQuery("PX4와 ArduPilot의 차이점은?")
+    ok(pickTier(cmp, "PX4와 ArduPilot의 차이점은?") === "deep", "비교가 fast")
+    ok(resolveTier(spec, "CHCNAV M720 사양은", "deep") === "deep" && resolveTier(spec, "x", "fast") === "fast", "강제 지정 무시")
+    ok(resolveTier(spec, "CHCNAV M720 사양은") === "deep", "KG_TIER 없으면 기존(deep) 유지해야 함")
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)

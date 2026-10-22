@@ -10,7 +10,8 @@
     "self-update": "tsx scripts/self-update-pipeline.ts",
     "kdb:build": "~/2nd/.venv/bin/python scripts/build-knowledge-db.py --check",
     "kdb:verify": "~/2nd/.venv/bin/python scripts/build-knowledge-db.py --verify",
-    "kdb:test": "~/2nd/.venv/bin/python -W ignore scripts/test_knowledge_db.py && tsx scripts/test-kg-answer.ts"
+    "kdb:test": "~/2nd/.venv/bin/python -W ignore scripts/test_knowledge_db.py && tsx scripts/test-kg-answer.ts",
+    "eval:prod": "python3 scripts/eval-prod.py"
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^1.0.58",
