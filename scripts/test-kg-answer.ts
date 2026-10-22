@@ -239,6 +239,23 @@ async function main() {
     ok(!r.violations.some((v) => v.code === "unsupported_number" && ["3.4", "3.2", "3.1", "2.3"].includes(v.detail)), JSON.stringify(r.violations))
   })
 
+  await t("S14 추론(🔮) 문단에 근거 밖 숫자가 있으면 서버가 그 문단만 생략하고, 숫자가 근거 안이면 그대로 둔다", async () => {
+    const { inferenceGuard } = await import("../lib/soften")
+    const run = async (chunks: string[], bad: (t: string) => boolean) => {
+      const rs = new ReadableStream({ start(c) { for (const x of chunks) c.enqueue({ type: "text-delta", id: "a", text: x }); c.enqueue({ type: "text-end", id: "a" }); c.close() } }).pipeThrough(inferenceGuard(bad))
+      let out = ""
+      for await (const p of rs as unknown as AsyncIterable<{ type: string; text?: string }>) if (p.type === "text-delta") out += p.text
+      return out
+    }
+    const bad = (t: string) => /3\.85/.test(t)
+    const a = await run(["결론입니다. [P1]\n\n---\n\n## ", "🔮 추론(가능성 낮음)", "\n- 보관 전압 3.", "85 V/셀"], bad)
+    ok(a.includes("결론입니다. [P1]") && !a.includes("3.85") && a.includes("추론 생략") && !a.includes("---\n\n## \n"), `생략 결과: ${JSON.stringify(a)}`)
+    const b = await run(["결론. [P1]\n\n## 🔮 추론(가능성 중간)\n- 지연이 늘 수 있음 [P2]"], bad)
+    ok(b.includes("지연이 늘 수 있음") && !b.includes("추론 생략"), `정상 결과: ${JSON.stringify(b)}`)
+    const c = await run(["본문만 있는 답변입니다."], bad)
+    ok(c === "본문만 있는 답변입니다.", `추론 없음: ${JSON.stringify(c)}`)
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)

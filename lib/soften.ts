@@ -37,3 +37,45 @@ export function softenTransform(): TransformStream<Part, Part> {
     },
   })
 }
+
+// 추론(🔮) 문단 가드: 모델이 프롬프트 금지를 어기고 근거에 없는 숫자를 추론 문단에 써도 사용자에게 나가지 않도록,
+// '🔮'가 나온 뒤의 글(답변 맨 끝)만 붙잡아 두었다가 끝에서 검사한다. 숫자가 근거 안에 없으면 문단 전체를 안내 문구로 바꾼다.
+export function inferenceGuard(hasUnsupported: (text: string) => boolean): TransformStream<Part, Part> {
+  const state = new Map<string, { buf: string; tail: string; held: boolean }>()
+  const OMIT = "🔮 **추론 생략** — 추론 문장에 근거에 없는 수치가 포함되어 표시하지 않았습니다. 해당 정보는 재확인 필요합니다.\n"
+  return new TransformStream<Part, Part>({
+    transform(part, ctrl) {
+      const id = part.id ?? ""
+      if (part.type === "text-delta" && typeof part.text === "string") {
+        const st = state.get(id) ?? { buf: "", tail: "", held: false }
+        state.set(id, st)
+        if (st.held) { st.buf += part.text; return }
+        let t = st.tail + part.text
+        st.tail = ""
+        const i = t.indexOf("🔮")
+        if (i >= 0) {
+          // 소제목 표시(##, ---, 목록 기호)도 같이 붙잡는다
+          const head = t.slice(0, i), m = /(?:[\s#*>-]*)$/.exec(head)
+          const cut = m ? head.length - m[0].length : head.length
+          const emit = head.slice(0, cut)
+          st.held = true; st.buf = head.slice(cut) + t.slice(i)
+          if (emit) ctrl.enqueue({ ...part, text: emit })
+          return
+        }
+        // 청크 끝의 공백·#·-·* 는 다음 청크에서 🔮가 이어질 수 있어 한 청크 늦춘다
+        const m2 = /[\s#*>-]*$/.exec(t)
+        const keep = m2 ? m2[0] : ""
+        if (keep) { st.tail = keep; t = t.slice(0, -keep.length) }
+        if (t) ctrl.enqueue({ ...part, text: t })
+      } else if (part.type === "text-end") {
+        const st = state.get(id)
+        if (st) {
+          const out = st.held ? (hasUnsupported(st.buf) ? "\n\n" + OMIT : st.buf) : st.tail
+          if (out) ctrl.enqueue({ type: "text-delta", id, text: out })
+          state.delete(id)
+        }
+        ctrl.enqueue(part)
+      } else ctrl.enqueue(part)
+    },
+  })
+}

@@ -23,6 +23,22 @@ function numbersIn(text: string): Set<string> {
   return out
 }
 
+
+// 답변 속 숫자 중 context(또는 질문)에 없는 것. 스트리밍 가드가 추론 문단 검사에도 쓴다.
+export function unsupportedNumbers(answer: string, ctx: NimContext): Set<string> {
+  const stripped = answer.replace(CITE, " ").replace(/^\s*\d+[.)]\s/gm, " ")
+  const allowed = numbersIn(JSON.stringify({ ...ctx, answer_constraints: [] }) + " " + ctx.question)
+  // 표기 차이 허용: 문서의 "RTCM34"를 답변이 "RTCM 3.4"로 풀어 쓴 경우(마운트포인트·규격 버전 표기)
+  for (const m of JSON.stringify(ctx).matchAll(/RTCM[-_ ]?(\d)(\d)(?!\d)/gi)) allowed.add(norm(`${m[1]}.${m[2]}`))
+  const unsupported = new Set<string>()
+  for (const m of stripped.matchAll(NUM)) {
+    const raw = m[0]
+    if (/^\d$/.test(raw)) continue // 한 자리 정수(순번·개수 표현)
+    if (!allowed.has(norm(raw))) unsupported.add(raw)
+  }
+  return unsupported
+}
+
 // externalCitations: JSON 모드에서 모델이 used_claims·used_relations·used_pages 필드로 명시한 근거 수(화이트리스트로 따로 검증됨)
 export function verifyAnswer(answer: string, ctx: NimContext, externalCitations = 0): VerifyResult {
   const violations: Violation[] = []
@@ -43,17 +59,7 @@ export function verifyAnswer(answer: string, ctx: NimContext, externalCitations 
   }
 
   // V2 숫자: 인용 표기를 지우고, 목록 번호와 한 자리 정수(순번 표현)는 제외
-  const stripped = answer.replace(CITE, " ").replace(/^\s*\d+[.)]\s/gm, " ")
-  const allowed = numbersIn(JSON.stringify({ ...ctx, answer_constraints: [] }) + " " + ctx.question)
-  // 표기 차이 허용: 문서의 "RTCM34"를 답변이 "RTCM 3.4"로 풀어 쓴 경우(마운트포인트·규격 버전 표기)
-  for (const m of JSON.stringify(ctx).matchAll(/RTCM[-_ ]?(\d)(\d)(?!\d)/gi)) allowed.add(norm(`${m[1]}.${m[2]}`))
-  const unsupported = new Set<string>()
-  for (const m of stripped.matchAll(NUM)) {
-    const raw = m[0]
-    const n = norm(raw)
-    if (/^\d$/.test(raw)) continue // 한 자리 정수(순번·개수 표현)
-    if (!allowed.has(n)) unsupported.add(raw)
-  }
+  const unsupported = unsupportedNumbers(answer, ctx)
   for (const u of unsupported) violations.push({ code: "unsupported_number", detail: u })
 
   // V2b 인용 누락: 근거가 context에 있는데 답변에 근거 표기([C1]·[R2]·[P3])가 하나도 없으면 어디서 온 내용인지 확인할 수 없다
