@@ -26,7 +26,8 @@ function numbersIn(text: string): Set<string> {
 
 // 답변 속 숫자 중 context(또는 질문)에 없는 것. 스트리밍 가드가 추론 문단 검사에도 쓴다.
 export function unsupportedNumbers(answer: string, ctx: NimContext): Set<string> {
-  const stripped = answer.replace(CITE, " ").replace(/^\s*\d+[.)]\s/gm, " ")
+  // 천 단위 공백 표기("1 892 ch")는 한 숫자(1892)로 본다 — 문서의 "1,892"를 풀어 쓴 것이다.
+  const stripped = answer.replace(/(\d) (\d{3})(?!\d)/g, "$1$2").replace(CITE, " ").replace(/^\s*\d+[.)]\s/gm, " ")
   const allowed = numbersIn(JSON.stringify({ ...ctx, answer_constraints: [] }) + " " + ctx.question)
   // 표기 차이 허용: 문서의 "RTCM34"를 답변이 "RTCM 3.4"로 풀어 쓴 경우(마운트포인트·규격 버전 표기)
   for (const m of JSON.stringify(ctx).matchAll(/RTCM[-_ ]?(\d)(\d)(?!\d)/gi)) allowed.add(norm(`${m[1]}.${m[2]}`))

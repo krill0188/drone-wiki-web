@@ -256,6 +256,12 @@ async function main() {
     ok(c === "본문만 있는 답변입니다.", `추론 없음: ${JSON.stringify(c)}`)
   })
 
+  await t("S15 천 단위 공백('1 892 ch')은 문서의 1,892와 같은 숫자로 본다(CHCNAV 오탐)", () => {
+    const ctx = buildNimContext(planQuery("CHCNAV M720 사양은"))
+    const r = verifyAnswer("채널 수는 1 892 ch(1 380 GNSS + 512 anti-jamming)입니다. [C1]", ctx, 1)
+    ok(!r.violations.some((v) => v.code === "unsupported_number" && ["892", "380"].includes(v.detail)), JSON.stringify(r.violations))
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)
