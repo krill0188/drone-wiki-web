@@ -12,7 +12,8 @@
 | 변수 | 값 | 끄는 법 |
 |---|---|---|
 | `KG_BACKEND` | `sqlite` | 삭제 → 이전 json 경로 |
-| `KG_TIER` | `auto` (단순 질문 fast, 비교·설계 deep) | 삭제 → 전부 deep |
+| `KG_TIER` | `auto` (기본 fast, `KG_DEEP=on`일 때만 비교·설계 질문이 deep) | 삭제 → 전부 deep |
+| `KG_DEEP` | 미설정(권장). `on`이면 비교·설계 질문을 큰 모델로 보냄 — 2026-10-24 점검에서 120초 시간 초과 1건이 deep에서 나와 기본 끔 | — |
 | `BUILDER_TIER` | `cascade` (초안 chat 체인, 검증 위반 시 builder 체인) | 삭제 → 전부 builder 체인 |
 | `NVIDIA_NIM_CHAIN` / `NVIDIA_NIM_BUILDER_CHAIN` | 쉼표 구분 모델 id(선택) | 삭제 → 코드 기본 체인 |
 | `NVIDIA_NIM_HEDGE_CHAT_MS` / `NVIDIA_NIM_HEDGE_BUILDER_MS` | 기본 4000 / 12000 | 매우 큰 값으로 두면 헤징 사실상 끔 |

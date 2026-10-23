@@ -281,7 +281,10 @@ async function main() {
     const spec = planQuery("CHCNAV M720 사양은")
     ok(pickTier(spec, "CHCNAV M720 사양은") === "fast", `spec=${pickTier(spec, "CHCNAV M720 사양은")}`)
     const cmp = planQuery("PX4와 ArduPilot의 차이점은?")
-    ok(pickTier(cmp, "PX4와 ArduPilot의 차이점은?") === "deep", "비교가 fast")
+    ok(pickTier(cmp, "PX4와 ArduPilot의 차이점은?") === "fast", "KG_DEEP 없으면 비교도 fast(꼬리 지연 방지)")
+    process.env.KG_DEEP = "on"
+    ok(pickTier(cmp, "PX4와 ArduPilot의 차이점은?") === "deep", "KG_DEEP=on이면 비교는 deep")
+    delete process.env.KG_DEEP
     ok(resolveTier(spec, "CHCNAV M720 사양은", "deep") === "deep" && resolveTier(spec, "x", "fast") === "fast", "강제 지정 무시")
     ok(resolveTier(spec, "CHCNAV M720 사양은") === "deep", "KG_TIER 없으면 기존(deep) 유지해야 함")
   })
@@ -336,6 +339,13 @@ async function main() {
       ok(r.status === "ready" && r.basis === "ontology-linked" && r.classes.includes(cls), `${q} → ${r.status}/${r.basis}/${r.classes}`)
     }
     ok(planQuery("양자컴퓨터 드론 항법은?").status === "insufficient_evidence", "무관 질문 거절 유지")
+  })
+
+  await t("S22 표준 이름의 번호(IEEE 1588 등)는 숫자 환각으로 보지 않는다", () => {
+    const ctx = buildNimContext(planQuery("카메라 IMU 시간 동기는 왜 필요해?"))
+    const bad = [...unsupportedNumbers("시간 동기에는 IEEE 1588 PTP와 ISO 26262 같은 표준이 쓰입니다. [P1]", ctx)]
+    ok(!bad.includes("1588") && !bad.includes("26262"), `표준 번호 오탐: ${bad}`)
+    ok([...unsupportedNumbers("지연은 777 ms입니다. [P1]", ctx)].includes("777"), "측정값 777은 여전히 잡아야 함")
   })
 
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {

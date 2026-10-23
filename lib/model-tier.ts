@@ -9,6 +9,9 @@ export type Tier = "fast" | "deep"
 const DEEP_Q = /비교|차이|장단점|추천|설계|왜\s|이유|원인|원리|어떻게|trade|\bvs\b|대비|영향|판단|적합|선택|구성/i
 
 export function pickTier(plan: Plan, question: string): Tier {
+  // 운영 점검(2026-10-24): 큰 모델(deep)은 '차이·비교' 질문에서 120초 시간 초과가 나왔다(25문항 평가 최대 121초). 같은 평가에서 fast는 정답률이 같고 꼬리가 짧다.
+  // 그래서 deep는 KG_DEEP=on일 때만 자동 배정한다(요청의 modelTier=deep 강제는 그대로 가능).
+  if (process.env.KG_DEEP !== "on") return "fast"
   if (DEEP_Q.test(question)) return "deep"
   if (plan.entities.length >= 2) return "deep"
   // 운영 A/B(2026-10-22, 25문항): fast 25/25·p50 4.6초·검증 경고 1건, deep 24/25·p50 18.8초·최대 120초(ultra 부하 시 꼬리 지연). 근거 종류와 무관하게 fast가 기본이다.
