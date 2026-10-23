@@ -22,8 +22,10 @@ export default function WorkshopHome({ docs, rules }: { docs: number; rules: num
           <DroneIcon className="w-9 h-9 text-ink" />
           <span className="font-display font-bold text-3xl sm:text-4xl tracking-tight">DroneWiki</span>
         </div>
-        <p className="mt-1.5 text-ink-dim text-sm sm:text-[15px] break-keep">
-          드론 비행제어·통신·하드웨어·GCS·법규·AI 자율 — 모든 드론 지식을 AI와 함께
+        {/* 화면이 넓으면 한 줄, 좁으면 대시(—)에서 두 줄로 나뉜다(단어 중간에서 끊기지 않게 두 덩어리로 묶음) */}
+        <p className="mt-1.5 text-ink-dim text-[13px] min-[400px]:text-sm sm:text-[15px] leading-relaxed break-keep">
+          <span className="inline-block">드론 비행제어·통신·하드웨어·GCS·법규·AI 자율 —</span>{" "}
+          <span className="inline-block">모든 드론 지식을 AI와 함께</span>
         </p>
       </header>
       <WorkshopScene />
