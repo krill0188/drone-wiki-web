@@ -24,6 +24,7 @@ def commits(since):
         m = re.match(r"([A-Za-z]+)(?:\s[a-z]+)?(?:\([^)]*\))?(?:\([^)]*\))?:\s*(.*)", s)
         key, text = (m.group(1), m.group(2)) if m else ("chore", s)
         label = next((lab for k, lab in CAT if k.lower() == key.lower()), "기타")
+        if text.strip().startswith("릴리스 노트"): continue  # 기록용 커밋은 노트에 다시 싣지 않는다
         rows.append((label, h, d, text.strip()))
     return rows
 def render(rows, title):
