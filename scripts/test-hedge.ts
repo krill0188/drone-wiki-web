@@ -2,6 +2,7 @@
 // 실행: NVIDIA_NIM_API_KEY=x NVIDIA_NIM_CHAIN=m-slow,m-fast,m-last NVIDIA_NIM_HEDGE_CHAT_MS=150 npx tsx scripts/test-hedge.ts
 process.env.NVIDIA_NIM_CHAIN = "m-slow,m-fast,m-last"
 process.env.NVIDIA_NIM_HEDGE_CHAT_MS = "150"
+process.env.OPENROUTER_API_KEY = "test-key"
 
 const calls: string[] = []
 let aborted: string[] = []
@@ -9,9 +10,14 @@ const sse = (txt: string) => `data: ${JSON.stringify({ choices: [{ delta: { cont
 const delays: Record<string, number> = { "m-slow": 1500, "m-fast": 20, "m-last": 20 }
 let failModels = new Set<string>()
 
-globalThis.fetch = (async (_url: unknown, init: RequestInit) => {
+let orFail = false
+globalThis.fetch = (async (url: unknown, init: RequestInit) => {
   const model = JSON.parse(String(init.body)).model as string
-  calls.push(model)
+  calls.push(String(url).includes("openrouter") ? `OR:${model}` : model)
+  if (String(url).includes("openrouter")) {
+    if (orFail) return new Response("err", { status: 429 })
+    return new Response(sse(`from OR ${model}`), { status: 200, headers: { "content-type": "text/event-stream" } })
+  }
   await new Promise<void>((resolve, reject) => {
     const t = setTimeout(resolve, delays[model] ?? 20)
     init.signal?.addEventListener("abort", () => { clearTimeout(t); aborted.push(model); reject(new Error("aborted")) })
@@ -64,6 +70,26 @@ async function main() {
     const { txt } = await run()
     ok(txt.includes("m-last"), `승자=${txt} 호출=${calls}`)
     return `호출 ${calls.join(">")}`
+  })
+  await t("H5 NIM 체인이 모두 실패하면 OpenRouter :free 같은 계열 모델로 넘어간다", async () => {
+    failModels = new Set(["m-slow", "m-fast", "m-last"]); delays["m-slow"] = 20; orFail = false
+    calls.length = 0
+    const { txt } = await run()
+    ok(txt.includes("from OR nvidia/") || txt.includes("from OR"), `승자=${txt}`)
+    ok(calls.some((c) => c.startsWith("OR:")), `호출 ${calls}`)
+    return `호출 ${calls.join(">")}`
+  })
+  await t("H6 OpenRouter까지 실패하면 스트림 오류 → 근거만 보여 주는 대체 답변으로 바뀐다", async () => {
+    failModels = new Set(["m-slow", "m-fast", "m-last"]); orFail = true
+    const { streamText } = await import("ai")
+    const { wikiModel } = await import("../lib/ai-model")
+    const { degradeOnError } = await import("../lib/soften")
+    const r = streamText({ model: wikiModel("chat"), prompt: "hi", maxRetries: 0 })
+    const rs = r.stream.pipeThrough(degradeOnError(() => "DEGRADED-ANSWER") as unknown as TransformStream<any, any>)
+    let text = "", sawError = false
+    for await (const p of rs as unknown as AsyncIterable<any>) { if (p.type === "text-delta") text += p.text; if (p.type === "error") sawError = true }
+    ok(text.includes("DEGRADED-ANSWER") && !sawError, `text=${text} error=${sawError}`)
+    return "오류 대신 대체 답변"
   })
   for (const r of out) console.log(`${r.ok ? "PASS" : "FAIL"}  ${r.name} — ${r.note}`)
   const f = out.filter((r) => !r.ok).length

@@ -315,6 +315,20 @@ async function main() {
     ok((await run(["대괄호 [표] 와 [1] 는 유지"])) === "대괄호 [표] 와 [1] 는 유지", "일반 대괄호 훼손")
   })
 
+  await t("S20 모델 없는 근거 답변: 사양표·claim·관계·발췌를 서버 값 그대로 보여 주고, 모든 숫자가 context 안에 있으며 '미확인' 표기가 없다", async () => {
+    const { degradedAnswer } = await import("../lib/kg-degraded")
+    const q = planQuery("CHCNAV M720 사양은")
+    const ctx = buildNimContext(q)
+    const txt = degradedAnswer(q, ctx)
+    ok(txt.includes("AI 해설 모델이 일시적으로 응답하지 않아") && txt.includes("| 항목 | 값 |"), "구성 누락")
+    ok(!txt.includes("미확인"), "미확인 표기")
+    const bad = [...unsupportedNumbers(txt, ctx)]
+    ok(bad.length === 0, `근거 밖 숫자: ${bad.join(",")}`)
+    const w = planQuery("RTK 안테나 설치 위치 주의점은?")
+    const t2 = degradedAnswer(w, buildNimContext(w))
+    ok(t2.includes("관련 위키 문서 발췌"), "위키 발췌 누락")
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)

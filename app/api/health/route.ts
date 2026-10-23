@@ -1,16 +1,44 @@
 import { kdbInfo } from "@/lib/kdb"
+import { fallbackStat } from "@/lib/ai-model"
 
 // 운영 점검용 상태 확인(읽기 전용, 비밀값 없음). 배포 직후와 정기 점검(scripts/ops-eval.sh)이 호출한다.
 // ok=false(지식 DB 적재 실패)면 503을 돌려 모니터가 바로 잡을 수 있게 한다.
 export const dynamic = "force-dynamic"
 
-export async function GET() {
+// ?probe=openrouter : 폴백 경로 점검. 서버 환경의 키로 무료 모델에 1토큰짜리 요청을 보내 상태 코드만 알려 준다(키·응답 본문 비노출).
+// 무료 한도(일 50회 등)를 아끼려고 결과를 10분간 캐시한다.
+let probeCache: { at: number; result: Record<string, unknown> } | null = null
+async function probeOpenRouter(): Promise<Record<string, unknown>> {
+  if (probeCache && Date.now() - probeCache.at < 600_000) return { ...probeCache.result, cached: true }
+  const key = process.env.OPENROUTER_API_KEY
+  if (!key) return { ok: false, reason: "OPENROUTER_API_KEY 없음" }
+  const t0 = Date.now()
+  try {
+    const r = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: `Bearer ${key}` },
+      body: JSON.stringify({ model: "nvidia/nemotron-3-ultra-550b-a55b:free", messages: [{ role: "user", content: "1+1=?" }], max_tokens: 200 }),
+      signal: AbortSignal.timeout(30_000),
+    })
+    const j = (await r.json().catch(() => ({}))) as { choices?: { message?: { content?: string } }[]; error?: { message?: string; code?: number } }
+    const result = { ok: r.ok && Boolean(j.choices?.[0]?.message?.content), status: r.status, ms: Date.now() - t0, errorCode: j.error?.code ?? null, errorMessage: j.error?.message ? String(j.error.message).slice(0, 120) : null }
+    probeCache = { at: Date.now(), result }
+    return result
+  } catch (e) {
+    return { ok: false, reason: e instanceof Error ? e.message.slice(0, 80) : "fetch failed", ms: Date.now() - t0 }
+  }
+}
+
+export async function GET(req: Request) {
+  const probe = new URL(req.url).searchParams.get("probe") === "openrouter" ? await probeOpenRouter() : undefined
   const info = kdbInfo()
   const flags = {
     kgBackend: process.env.KG_BACKEND ?? "json",
     kgTier: process.env.KG_TIER ?? "off",
     builderTier: process.env.BUILDER_TIER ?? "off",
     nimConfigured: Boolean(process.env.NVIDIA_NIM_API_KEY), // 키 값은 노출하지 않고 설정 여부만
+    openrouterFallback: Boolean(process.env.OPENROUTER_API_KEY),
+    fallbackUsed: { ...fallbackStat }, // 이 인스턴스에서 OpenRouter 폴백을 쓴 횟수·모델 전부 실패 횟수
   }
   if (!info.ok) return Response.json({ ok: false, error: String(info.error ?? "kdb load failed"), flags }, { status: 503 })
   const c = info.counts as Record<string, string>
@@ -20,6 +48,7 @@ export async function GET() {
     fingerprint: info.fingerprint,
     counts: { documents: Number(c.count_documents ?? 0), claims: Number(c.count_claims ?? 0), products: Number(c.count_products ?? 0), ontologyNodes: Number(c.count_ontology_nodes ?? 0) },
     flags,
+    ...(probe ? { openrouterProbe: probe } : {}),
     checkedAt: new Date().toISOString(),
   })
 }

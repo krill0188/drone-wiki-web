@@ -120,3 +120,23 @@ export function citationGuard(valid: Set<string>, onDrop?: (h: string) => void):
     },
   })
 }
+
+// 모델이 끝내 응답하지 않아 스트림이 오류로 끝나면(글자가 하나도 나가기 전에만) 오류 대신 대체 답변을 같은 스트림에 흘린다.
+export function degradeOnError(makeText: () => string, onUse?: () => void): TransformStream<Part, Part> {
+  let started = false
+  return new TransformStream<Part, Part>({
+    transform(part, ctrl) {
+      if (part.type === "text-delta") started = true
+      if (part.type === "error" && !started) {
+        started = true
+        onUse?.()
+        const id = "degraded"
+        ctrl.enqueue({ type: "text-start", id })
+        ctrl.enqueue({ type: "text-delta", id, text: makeText() })
+        ctrl.enqueue({ type: "text-end", id })
+        return
+      }
+      ctrl.enqueue(part)
+    },
+  })
+}

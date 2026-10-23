@@ -115,6 +115,9 @@ async function firstAnswerOrNull(
 // 판정은 응답 헤더가 아니라 첫 답변 글자(content) 기준이다 — 추론 서버는 글자 전에 200 헤더를 먼저 보낸다.
 const HEDGE_MS: Record<ModelProfile, number> = { chat: Number(process.env.NVIDIA_NIM_HEDGE_CHAT_MS) || 4000, builder: Number(process.env.NVIDIA_NIM_HEDGE_BUILDER_MS) || 12000 }
 const hedgeStat = { requests: 0, hedges: 0 }
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+const OPENROUTER_FALLBACK = ["nvidia/nemotron-3-ultra-550b-a55b:free", "nvidia/nemotron-3.5-lightning:free", "openrouter/free"]
+export const fallbackStat = { openrouter: 0, exhausted: 0 } // /api/health에서 폴백 사용 횟수를 본다(인스턴스 단위)
 const hedgeAllowed = () => hedgeStat.hedges < 2 + 0.25 * hedgeStat.requests // 토큰 버킷: 처음 2회 여유 + 요청의 25%
 
 export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (input, init) => {
@@ -182,6 +185,20 @@ export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (in
     console.warn(`[ai-model] ${chain[i].id} no answer / error → next`)
     i++
   }
+  // NIM 체인 소진 → OpenRouter 무료(:free) 같은 계열 모델로 마지막 시도(2026-10-23). 같은 모델을 다른 경로·다른 한도 풀로 쓴다.
+  // 계정 공통 한도(분당 20회, 크레딧 없으면 일 50회)라 비상용이다. 키가 없거나 이것도 실패하면 호출부의 '모델 없는 근거 답변'이 받는다.
+  const orKey = process.env.OPENROUTER_API_KEY
+  if (orKey) {
+    for (const m of OPENROUTER_FALLBACK) {
+      const headers = new Headers(init.headers)
+      headers.set("authorization", `Bearer ${orKey}`)
+      const body = JSON.stringify({ ...parsed, model: m })
+      const res = await firstAnswerOrNull(OPENROUTER_URL, { ...init, headers }, body, 25000)
+      if (res) { console.warn(`[ai-model] OpenRouter 폴백 사용 → ${m}`); fallbackStat.openrouter++; return res }
+      console.warn(`[ai-model] OpenRouter ${m} no answer / error`)
+    }
+  }
+  fallbackStat.exhausted++
   throw new Error("모든 AI 모델이 응답하지 않았습니다. 잠시 후 다시 시도해 주세요.")
 }
 
