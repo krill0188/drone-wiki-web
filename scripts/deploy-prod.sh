@@ -17,7 +17,7 @@ echo "== 지식 DB 최신 여부"; "${KDB_PY:-$HOME/2nd/.venv/bin/python}" scrip
 echo "== 이번 배포에 들어가는 변경"; python3 scripts/release-notes.py
 NOTES="$(python3 scripts/release-notes.py --meta)"
 SUBJECT="$(git log -1 --pretty=%s)"
-echo "== 배포"; vercel --prod --yes -m releaseNotes="$NOTES" -m githubCommitMessage="$SUBJECT" -m githubCommitSha="$(git rev-parse HEAD)"
+echo "== 배포"; vercel --prod --yes -m releaseNotes="$NOTES" -m githubCommitMessage="$SUBJECT ※ 이번 배포: $NOTES" -m githubCommitSha="$(git rev-parse HEAD)"
 TAG="deploy-$(date +%Y%m%d-%H%M)"
 DEPLOYED="$(git rev-parse HEAD)"
 FULL="$(python3 scripts/release-notes.py)"
