@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-23",
- "fingerprint": "c49ee5b5236b",
+ "generated": "2026-10-24",
+ "fingerprint": "11886675cf8a",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -72,7 +72,7 @@
   "withDomain": 903,
   "noDomain": 0,
   "unregisteredDomain": 4,
-  "withOntologyClass": 132,
+  "withOntologyClass": 263,
   "byDomain": {
    "ai-autonomy": 199,
    "hardware": 170,

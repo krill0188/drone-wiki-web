@@ -3,164 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>DroneWiki 레트로 홈 시안</title>
+<title>DroneWiki 클래식 데스크톱 시안</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gugi&family=IBM+Plex+Sans+KR:wght@400;600&family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* 레이아웃: 아케이드 데스크톱. 창(window) 카드 3장 + 6레벨 진행 바 + 상태 창. 데이터 화면은 이 스킨을 쓰지 않고 홈·대기·빌더 진행에만 적용하는 시안. */
+/* 레이아웃: 90년대 클래식 데스크톱. 바탕화면 아이콘 5개 + 창 3개 + 작업 표시줄. 색은 청록 바탕·회색 창·남색 제목줄 세 가지만, 움직임은 창 열림·진행 칸 채움·시계·시작 메뉴로 한정. */
 :root{
-  --bg:#dfe7ff; --dots:rgba(20,18,43,.14); --win:#ffffff; --ink:#14122b; --muted:#4a4770; --pink:#e0268a; --lime:#a9f02a; --blue:#3250ff; --shadow:#14122b; --title:#3250ff; --titletext:#ffffff;
-  --display:"Gugi","IBM Plex Sans KR",sans-serif; --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; --pixel:"Press Start 2P",monospace;
+  --desk:#2a8a8a; --face:#d4d0c8; --hi:#ffffff; --lo:#808080; --dk:#404040; --ink:#111111; --paper:#ffffff; --navy1:#0a246a; --navy2:#3a6ea5; --title-ink:#ffffff; --accent:#1c8a3c; --sel:#0a246a; --sel-ink:#ffffff;
+  --ui:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14122b;--dots:rgba(242,239,255,.10);--win:#1f1b44;--ink:#f2efff;--muted:#bdb8e8;--pink:#ff7ab8;--lime:#c8ff5c;--blue:#9aabff;--shadow:#000;--title:#4b3bff;--titletext:#ffffff;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#14122b;--dots:rgba(242,239,255,.10);--win:#1f1b44;--ink:#f2efff;--muted:#bdb8e8;--pink:#ff7ab8;--lime:#c8ff5c;--blue:#9aabff;--shadow:#000;--title:#4b3bff;--titletext:#ffffff;color-scheme:dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--desk:#10393a;--face:#3a3a3e;--hi:#6a6a70;--lo:#18181a;--dk:#000000;--ink:#ececec;--paper:#26262a;--navy1:#1b2f6e;--navy2:#2f4f86;--accent:#52d17c;--sel:#2f4f86;color-scheme:dark}}
+:root[data-theme="dark"]{--desk:#10393a;--face:#3a3a3e;--hi:#6a6a70;--lo:#18181a;--dk:#000000;--ink:#ececec;--paper:#26262a;--navy1:#1b2f6e;--navy2:#2f4f86;--accent:#52d17c;--sel:#2f4f86;color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
-  background-image:radial-gradient(var(--dots) 1.5px,transparent 1.5px);background-size:22px 22px;
-  padding-block:20px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.wrap{max-width:1040px;margin:0 auto;display:grid;gap:22px}
+body{background:var(--desk);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.55;margin:0;
+  padding-block:20px 76px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:start}
+@media (max-width:760px){.wrap{grid-template-columns:1fr}}
 a{color:inherit}
-.win{background:var(--win);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--shadow);min-width:0}
-.bar{display:flex;align-items:center;gap:10px;background:var(--title);color:var(--titletext);padding:6px 10px;font-family:var(--pixel);font-size:11px;letter-spacing:.04em;border-bottom:3px solid var(--ink)}
-.bar .btns{margin-left:auto;display:flex;gap:6px}
-.bar .btns i{width:16px;height:16px;border:2px solid #fff;display:block}
-.pad{padding:18px 20px}
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
-h1{font-size:clamp(34px,6.5vw,60px);line-height:1.08}
-h2{font-size:26px}
-h3{font-size:22px}
-.hl{background:var(--lime);color:#14122b;padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.sub{color:var(--muted);margin-top:8px}
-/* 작업 표시줄 */
-.task{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 10px}
-.task .logo{font-family:var(--pixel);font-size:12px;margin-right:6px}
-.task a{font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;padding:6px 12px;border:2px solid var(--ink);background:var(--win);box-shadow:3px 3px 0 var(--shadow);min-height:40px;display:inline-flex;align-items:center}
-.task a:hover{background:var(--lime);color:#14122b}
-.task a:active,.go:active{transform:translate(3px,3px);box-shadow:none}
-a:focus-visible,button:focus-visible{outline:4px solid var(--pink);outline-offset:2px}
-/* 입력 흉내 */
-.ask{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-top:16px}
-.field{flex:1 1 280px;min-width:0;border:3px solid var(--ink);padding:12px 14px;font-size:19px;background:var(--bg);min-height:56px;display:flex;align-items:center}
+/* 입체 테두리(베벨) */
+.bevel{background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px 0 var(--lo),inset 1px 1px 0 var(--face)}
+.sunk{background:var(--paper);border:2px solid;border-color:var(--lo) var(--hi) var(--hi) var(--lo);box-shadow:inset 1px 1px 0 var(--dk)}
+.win{min-width:0;animation:open .28s steps(4) both}
+.win:nth-child(2){animation-delay:.08s}.win:nth-child(3){animation-delay:.16s}
+@keyframes open{from{transform:scale(.97)}to{transform:scale(1)}}
+.tb{display:flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--navy1),var(--navy2));color:var(--title-ink);padding:3px 6px;font-weight:600;font-size:14px;margin:2px}
+.tb .ic{width:14px;height:14px;background:var(--face);border:1px solid var(--dk);display:inline-block}
+.tb .ctl{margin-left:auto;display:flex;gap:3px}
+.tb .ctl i{width:18px;height:16px;background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);display:block;position:relative}
+.body{padding:14px 16px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:0 0 6px;font-weight:600;text-wrap:balance}
+h2{font-size:18px;margin:0 0 8px;font-weight:600}
+p{margin:0}
+.muted{color:color-mix(in srgb,var(--ink) 70%,var(--face))}
+.stack{display:grid;gap:22px}
+/* 바탕화면 아이콘 */
+.icons{display:grid;gap:6px;grid-template-columns:1fr}
+@media (max-width:760px){.icons{grid-template-columns:repeat(5,1fr)}}
+.icon{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;text-decoration:none;color:#fff;padding:6px 2px;font-size:14px;text-shadow:1px 1px 0 #000;border:1px dotted transparent}
+.icon svg{width:44px;height:44px;image-rendering:pixelated;filter:drop-shadow(1px 1px 0 rgba(0,0,0,.5))}
+.icon:hover span,.icon:focus-visible span{background:var(--sel);color:var(--sel-ink);text-shadow:none}
+.icon:focus-visible{outline:none;border-color:#fff}
+.icon span{padding:0 4px}
+/* 입력 */
+.ask{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;align-items:stretch}
+.field{flex:1 1 260px;min-width:0;padding:10px 12px;font-size:17px;min-height:44px;display:flex;align-items:center;font-family:var(--ui);color:var(--ink)}
 .typed{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.caret{display:inline-block;width:10px;height:1.1em;background:var(--pink);margin-left:3px;animation:blink 1s steps(2,jump-none) infinite;vertical-align:text-bottom}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--ink);margin-left:2px;animation:blink 1s steps(2,jump-none) infinite}
 @keyframes blink{50%{opacity:0}}
-.go{font-family:var(--display);font-size:20px;text-decoration:none;color:#14122b;background:var(--lime);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--shadow);padding:10px 22px;display:inline-flex;align-items:center;min-height:56px}
-.go:hover{background:var(--pink);color:#fff}
-/* 카드 */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.card{display:flex;flex-direction:column;text-decoration:none;transition:transform .12s steps(2)}
-.card:hover{transform:translate(-3px,-3px)}
-.card:hover .win{box-shadow:9px 9px 0 var(--shadow)}
-.card .win{flex:1;display:flex;flex-direction:column}
-.card .pad{display:grid;gap:8px;align-content:start;flex:1}
-.pix{width:48px;height:48px;image-rendering:pixelated}
-.card p{margin:0;color:var(--muted);font-size:16px}
-.card .more{font-family:var(--pixel);font-size:10px;color:var(--pink);margin-top:4px}
-/* 6레벨 */
-.levels{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px}
-.lv{border:3px solid var(--ink);padding:8px 6px;text-align:center;background:var(--bg);font-size:15px;font-weight:600;position:relative;min-height:84px;display:flex;flex-direction:column;justify-content:center;gap:4px;cursor:pointer;font-family:inherit;color:inherit}
-.lv b{font-family:var(--pixel);font-size:10px;color:var(--pink);font-weight:400}
-.lv.on{background:var(--lime);color:#14122b;transform:translateY(-4px);box-shadow:0 5px 0 var(--shadow)}
-.lv.on b{color:#14122b}
-.lvtext{margin-top:12px;min-height:3.2em;border:3px dashed var(--ink);padding:10px 14px}
-@media (max-width:760px){.levels{grid-template-columns:repeat(3,1fr)}}
+.btn{font:inherit;font-weight:600;color:var(--ink);text-decoration:none;padding:8px 20px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px 0 var(--lo)}
+.btn:active,.btn[aria-pressed="true"]{border-color:var(--dk) var(--hi) var(--hi) var(--dk);box-shadow:inset 1px 1px 0 var(--lo);padding:9px 19px 7px 21px}
+.btn:focus-visible,.icon:focus-visible,.start:focus-visible,.menu a:focus-visible{outline:2px dotted var(--ink);outline-offset:-6px}
+.btn.primary{outline:1px solid var(--ink);outline-offset:1px}
+/* 설치 마법사 진행 칸 */
+.blocks{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;padding:4px;margin:10px 0}
+.blocks i{height:22px;background:color-mix(in srgb,var(--navy1) 14%,var(--paper));display:block}
+.blocks i.on{background:var(--navy1)}
+.stepname{font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 /* 상태 */
-.led{display:inline-block;width:14px;height:14px;background:var(--lime);border:2px solid var(--ink);margin-right:8px;animation:blink 1.6s steps(2,jump-none) infinite}
-.stat{display:flex;flex-wrap:wrap;gap:14px}
-.stat div{border:3px solid var(--ink);padding:8px 14px;min-width:150px;background:var(--bg)}
-.stat strong{font-family:var(--pixel);font-size:16px;display:block;margin-bottom:4px;font-weight:400}
-.note{font-size:14px;color:var(--muted)}
-.tag{font-family:var(--pixel);font-size:10px;background:var(--pink);color:#fff;padding:3px 8px;margin-left:8px}
+.led{display:inline-block;width:12px;height:12px;border:2px solid var(--dk);background:var(--accent);margin-right:8px;vertical-align:-1px;animation:pulse 2.4s steps(2,jump-none) infinite}
+@keyframes pulse{50%{opacity:.45}}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:10px}
+.stat div{padding:8px 12px}
+.stat strong{font-family:var(--mono);font-size:20px;display:block}
+.note{font-size:14px}
+/* 작업 표시줄 */
+.taskbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:8px;padding:4px max(8px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));background:var(--face);border-top:2px solid var(--hi);box-shadow:0 -1px 0 var(--lo)}
+.start{font:inherit;font-weight:700;display:inline-flex;align-items:center;gap:8px;padding:4px 14px;min-height:36px;cursor:pointer;color:var(--ink);background:var(--face);border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi)}
+.start[aria-expanded="true"]{border-color:var(--dk) var(--hi) var(--hi) var(--dk)}
+.start svg{width:18px;height:18px}
+.quick{display:flex;gap:6px;flex-wrap:wrap}
+.quick a{font-size:14px;text-decoration:none;padding:4px 10px;min-height:32px;display:inline-flex;align-items:center;color:var(--ink)}
+@media (max-width:700px){.quick{display:none}}
+.clock{margin-left:auto;padding:5px 10px;font-family:var(--mono);font-size:14px;display:flex;align-items:center;gap:8px}
+.menu{position:fixed;left:max(8px,env(safe-area-inset-left,0px));bottom:calc(46px + env(safe-area-inset-bottom,0px));z-index:30;width:min(300px,calc(100vw - 24px));display:flex;animation:up .18s steps(3) both}
+@keyframes up{from{transform:translateY(10px)}to{transform:none}}
+.menu[hidden]{display:none}
+.menu .strip{background:linear-gradient(0deg,var(--navy1),var(--navy2));color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);padding:10px 4px;font-weight:700;letter-spacing:.08em}
+.menu nav{flex:1;padding:4px}
+.menu a{display:block;padding:9px 12px;text-decoration:none;color:var(--ink);min-height:40px}
+.menu a:hover,.menu a:focus-visible{background:var(--sel);color:var(--sel-ink)}
+.menu hr{border:0;border-top:1px solid var(--lo);border-bottom:1px solid var(--hi);margin:3px 4px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="win">
-    <div class="bar"><span>DRONEWIKI.EXE</span><span class="btns" aria-hidden="true"><i></i><i></i></span></div>
-    <nav class="task" aria-label="주요 메뉴">
-      <span class="logo">DRONE<span style="color:var(--pink)">WIKI</span></span>
-      <a href="/chat">질문하기</a><a href="/ai-drone-builder">설계 도우미</a><a href="/wiki">자료 탐색</a><a href="/knowledge-quality">근거 센터</a><a href="/about">소개</a>
-    </nav>
-  </div>
+  <nav class="icons" aria-label="바탕화면 메뉴">
+    <a class="icon" href="/chat"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1" y="1" width="10" height="7" fill="#fff" stroke="#000" stroke-width=".8"/><rect x="3" y="3" width="6" height=".9" fill="#0a246a"/><rect x="3" y="5" width="4" height=".9" fill="#0a246a"/><path d="M3 8v3l3-3z" fill="#fff" stroke="#000" stroke-width=".8"/></svg><span>질문하기</span></a>
+    <a class="icon" href="/ai-drone-builder"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="0" y="2" width="4" height="1.4" fill="#222"/><rect x="8" y="2" width="4" height="1.4" fill="#222"/><rect x="4" y="3" width="4" height="1.6" fill="#222"/><rect x="2.5" y="4.6" width="7" height="3.4" fill="#d4d0c8" stroke="#000" stroke-width=".8"/><rect x="5" y="5.6" width="2" height="1.4" fill="#0a246a"/><rect x="0" y="9" width="4" height="1.4" fill="#222"/><rect x="8" y="9" width="4" height="1.4" fill="#222"/></svg><span>설계 도우미</span></a>
+    <a class="icon" href="/wiki"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 3h4l1 1h5v7H1z" fill="#f2d86b" stroke="#000" stroke-width=".8"/><rect x="2" y="6" width="8" height="1" fill="#b8962a"/></svg><span>자료 탐색</span></a>
+    <a class="icon" href="/knowledge-quality"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" fill="#fff" stroke="#000" stroke-width=".8"/><path d="M3 6l2 2 4-4" fill="none" stroke="#1c8a3c" stroke-width="1.4"/></svg><span>근거 센터</span></a>
+    <a class="icon" href="/about"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="#fff" stroke="#000" stroke-width=".8"/><rect x="5.2" y="5" width="1.6" height="4" fill="#0a246a"/><rect x="5.2" y="2.6" width="1.6" height="1.5" fill="#0a246a"/></svg><span>소개</span></a>
+  </nav>
 
-  <section class="win" aria-labelledby="hero">
-    <div class="bar"><span>질문.TXT</span><span class="btns" aria-hidden="true"><i></i><i></i></span></div>
-    <div class="pad">
-      <h1 id="hero">드론 지식, <span class="hl">출처와 함께</span> 답해요</h1>
-      <p class="sub">AI가 지어내지 않고, 확인된 자료만 쉬운 말로 풀어 줘요. 모르는 건 “다시 확인 필요”라고 말해요.</p>
-      <div class="ask">
-        <div class="field" aria-label="예시 질문"><span class="typed" id="typed"></span><span class="caret" aria-hidden="true"></span></div>
-        <a class="go" href="/chat">질문하기 ▶</a>
+  <div class="stack">
+    <section class="win bevel" aria-labelledby="hero">
+      <div class="tb"><span class="ic" aria-hidden="true"></span>DroneWiki 시작하기<span class="ctl" aria-hidden="true"><i></i><i></i></span></div>
+      <div class="body">
+        <h1 id="hero">드론 지식, 출처와 함께 답해요</h1>
+        <p class="muted">AI가 지어내지 않고, 확인된 자료만 쉬운 말로 풀어 줘요. 모르는 건 “다시 확인 필요”라고 말해요.</p>
+        <div class="ask">
+          <div class="field sunk" aria-label="예시 질문"><span class="typed" id="typed"></span><span class="caret" aria-hidden="true"></span></div>
+          <a class="btn primary" href="/chat">질문하기</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="cards">
-    <a class="card" href="/chat">
-      <div class="win"><div class="bar"><span>01 질문</span><span class="btns" aria-hidden="true"><i></i></span></div>
-      <div class="pad">
-        <svg class="pix" viewBox="0 0 8 8" aria-hidden="true"><g fill="currentColor"><rect x="1" y="1" width="6" height="1"/><rect x="0" y="2" width="1" height="3"/><rect x="7" y="2" width="1" height="3"/><rect x="1" y="5" width="3" height="1"/><rect x="4" y="5" width="3" height="1"/><rect x="2" y="6" width="1" height="1"/></g><g fill="var(--pink)"><rect x="2" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/></g></svg>
-        <h3>질문하기</h3><p>사양, 규정, 원리를 물어보면 출처와 함께 답해요. 표는 코드가 직접 그려서 숫자가 틀리지 않아요.</p><span class="more">PRESS START ▶</span>
-      </div></div>
-    </a>
-    <a class="card" href="/ai-drone-builder">
-      <div class="win"><div class="bar"><span>02 설계</span><span class="btns" aria-hidden="true"><i></i></span></div>
-      <div class="pad">
-        <svg class="pix" viewBox="0 0 8 8" aria-hidden="true"><g fill="currentColor"><rect x="0" y="1" width="2" height="1"/><rect x="6" y="1" width="2" height="1"/><rect x="2" y="2" width="4" height="1"/><rect x="1" y="3" width="6" height="2"/><rect x="2" y="5" width="4" height="1"/><rect x="0" y="6" width="2" height="1"/><rect x="6" y="6" width="2" height="1"/></g><g fill="var(--pink)"><rect x="3" y="3" width="2" height="1"/></g></svg>
-        <h3>설계 도우미</h3><p>무게·거리·크기·시간만 알려 주면 6단계로 설계를 도와줘요. 불가능한 조건은 “추론상 불가”라고 말해요.</p><span class="more">PRESS START ▶</span>
-      </div></div>
-    </a>
-    <a class="card" href="/wiki">
-      <div class="win"><div class="bar"><span>03 탐색</span><span class="btns" aria-hidden="true"><i></i></span></div>
-      <div class="pad">
-        <svg class="pix" viewBox="0 0 8 8" aria-hidden="true"><g fill="currentColor"><rect x="1" y="0" width="6" height="1"/><rect x="0" y="1" width="1" height="6"/><rect x="7" y="1" width="1" height="6"/><rect x="1" y="7" width="6" height="1"/></g><g fill="var(--pink)"><rect x="2" y="2" width="4" height="1"/><rect x="2" y="4" width="3" height="1"/></g></svg>
-        <h3>자료 탐색</h3><p>위키, 지식그래프(용어 관계 지도), 뉴스를 둘러봐요. 모든 글에 출처가 붙어 있어요.</p><span class="more">PRESS START ▶</span>
-      </div></div>
-    </a>
+    <section class="win bevel" aria-labelledby="wiz">
+      <div class="tb"><span class="ic" aria-hidden="true"></span>설계 도우미 안내<span class="ctl" aria-hidden="true"><i></i><i></i></span></div>
+      <div class="body">
+        <h2 id="wiz">설계는 6단계로 진행돼요</h2>
+        <div class="blocks sunk" id="blocks" aria-hidden="true"></div>
+        <p><span class="stepname" id="stepname"></span></p>
+        <p class="muted" id="steptext" aria-live="polite" style="min-height:3em"></p>
+        <div class="row" style="margin-top:10px">
+          <button class="btn" id="prev" type="button">&lt; 이전</button>
+          <button class="btn" id="next" type="button">다음 &gt;</button>
+          <a class="btn" href="/ai-drone-builder">설계 시작</a>
+          <span class="note muted">단계 순서와 승인·되돌리기·끝내기 버튼은 지금과 같아요.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="win bevel" aria-labelledby="sys">
+      <div class="tb"><span class="ic" aria-hidden="true"></span>시스템 정보<span class="ctl" aria-hidden="true"><i></i><i></i></span></div>
+      <div class="body">
+        <h2 id="sys"><span class="led" aria-hidden="true"></span><span id="ok">확인 중…</span></h2>
+        <div class="stat" id="stat"></div>
+        <p class="note muted" style="margin-top:10px">매일 아침 같은 질문 25개로 자동 점검하고, 값은 서버에서 읽어 와요.</p>
+      </div>
+    </section>
+
+    <p class="note" style="color:#fff;text-shadow:1px 1px 0 #000">이 화면은 시안이에요. 실제 홈과 모든 주소는 그대로이고, 답변·사양표·검증 경고·품질 화면은 읽기 편한 지금 모양을 유지해요.</p>
   </div>
+</div>
 
-  <section class="win" aria-labelledby="six">
-    <div class="bar"><span>LEVEL 1-6</span><span class="btns" aria-hidden="true"><i></i><i></i></span></div>
-    <div class="pad">
-      <h2 id="six">설계 도우미는 6레벨이에요 <span class="tag">단계·승인 흐름은 그대로</span></h2>
-      <div class="levels" id="levels" role="tablist"></div>
-      <div class="lvtext" id="lvtext" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="win" aria-labelledby="st">
-    <div class="bar"><span>상태.SYS</span><span class="btns" aria-hidden="true"><i></i></span></div>
-    <div class="pad">
-      <h2 id="st"><span class="led" aria-hidden="true"></span><span id="ok">확인 중…</span></h2>
-      <div class="stat" id="stat"></div>
-      <p class="note" style="margin-top:10px">매일 아침 같은 질문 25개로 자동 점검해요. 값은 서버에서 읽어 와요.</p>
-    </div>
-  </section>
-
-  <p class="note">이 화면은 <b>시안</b>이에요. 실제 홈과 모든 주소는 그대로이고, 마음에 들면 색·글꼴만 바꾸는 “레트로 스킨” 스위치로 켜고 끌 수 있게 만들 수 있어요. 답변 본문, 사양표, 검증 경고, 품질 화면은 읽기 편한 지금 모양을 유지해요.</p>
+<div class="menu bevel" id="menu" hidden>
+  <div class="strip">DroneWiki</div>
+  <nav>
+    <a href="/chat">질문하기</a><a href="/ai-drone-builder">설계 도우미</a><a href="/wiki">자료 탐색</a><a href="/knowledge-quality">근거 센터</a><hr><a href="/about">소개</a>
+  </nav>
+</div>
+<div class="taskbar">
+  <button class="start" id="start" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1" y="1" width="4.6" height="4.6" fill="#d33"/><rect x="6.4" y="1" width="4.6" height="4.6" fill="#2a2"/><rect x="1" y="6.4" width="4.6" height="4.6" fill="#33d"/><rect x="6.4" y="6.4" width="4.6" height="4.6" fill="#dc2"/></svg>시작</button>
+  <div class="quick"><a class="btn" href="/chat">질문하기</a><a class="btn" href="/ai-drone-builder">설계 도우미</a></div>
+  <div class="clock sunk"><span id="clock">--:--</span></div>
 </div>
 <script>
 (function(){
   var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  // 예시 질문 타자 효과
   var Q=["CHCNAV M720 사양은?","RTK와 PPK의 차이를 설명해줘","2kg 이하 드론도 신고해야 해?","GNSS 재밍 대응 방법을 정리해줘"],qi=0,ci=0,del=false,el=document.getElementById("typed");
   function tick(){var s=Q[qi];
     if(reduce){el.textContent=s;return}
-    if(!del){ci++;el.textContent=s.slice(0,ci);if(ci>=s.length){del=true;return setTimeout(tick,1600)}}
+    if(!del){ci++;el.textContent=s.slice(0,ci);if(ci>=s.length){del=true;return setTimeout(tick,1800)}}
     else{ci--;el.textContent=s.slice(0,ci);if(ci<=0){del=false;qi=(qi+1)%Q.length}}
-    setTimeout(tick,del?28:70)}
+    setTimeout(tick,del?30:80)}
   tick();
-  // 6레벨
-  var L=[["기획안","무게·거리·크기·시간 4가지가 없으면 다시 물어요. 불가능한 조건이면 “추론상 불가”라고 알려요."],["부품","계산으로 모터·배터리 후보를 골라요. 목록에 없는 제품은 코드가 바꿔요."],["프로그램","앞에서 고른 부품과 맞는지 코드가 확인해요."],["세부 사양","숫자가 계산 결과와 어긋나지 않는지 확인해요."],["구조도","부품과 계산값에 맞게 이어졌는지 확인해요."],["코드 뼈대","구조도와 같은 모양인지 확인해요. 마지막에 사람이 승인해요."]];
-  var box=document.getElementById("levels"),txt=document.getElementById("lvtext"),cur=0,auto=!reduce,btns=[];
-  L.forEach(function(l,i){var b=document.createElement("button");b.type="button";b.className="lv";b.setAttribute("role","tab");b.innerHTML="<b>LV."+(i+1)+"</b>"+l[0];b.onclick=function(){auto=false;set(i)};box.appendChild(b);btns.push(b)});
-  function set(i){cur=i;btns.forEach(function(b,k){b.classList.toggle("on",k===i);b.setAttribute("aria-selected",k===i)});txt.textContent=L[i][1]}
-  set(0);setInterval(function(){if(auto)set((cur+1)%L.length)},2600);
-  // 상태(서버에서 읽기, 실패하면 안내)
-  var ok=document.getElementById("ok"),st=document.getElementById("stat");
-  function show(items){st.innerHTML=items.map(function(x){return "<div><strong>"+x[0]+"</strong>"+x[1]+"</div>"}).join("")}
+  var L=[["1. 기획안","무게·거리·크기·시간 4가지가 없으면 다시 물어요. 불가능한 조건이면 “추론상 불가”라고 알려요."],["2. 부품","계산으로 모터·배터리 후보를 골라요. 목록에 없는 제품은 코드가 바꿔요."],["3. 프로그램","앞에서 고른 부품과 맞는지 코드가 확인해요."],["4. 세부 사양","숫자가 계산 결과와 어긋나지 않는지 확인해요."],["5. 구조도","부품과 계산값에 맞게 이어졌는지 확인해요."],["6. 코드 뼈대","구조도와 같은 모양인지 확인해요. 마지막에 사람이 승인해요."]];
+  var bl=document.getElementById("blocks"),cur=0,auto=!reduce,cells=[];
+  L.forEach(function(){var i=document.createElement("i");bl.appendChild(i);cells.push(i)});
+  function set(n){cur=(n+L.length)%L.length;cells.forEach(function(c,k){c.classList.toggle("on",k<=cur)});document.getElementById("stepname").textContent=L[cur][0];document.getElementById("steptext").textContent=L[cur][1]}
+  set(0);
+  document.getElementById("prev").onclick=function(){auto=false;set(cur-1)};
+  document.getElementById("next").onclick=function(){auto=false;set(cur+1)};
+  setInterval(function(){if(auto)set(cur+1)},3200);
+  function clk(){var d=new Date();document.getElementById("clock").textContent=("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2)}
+  clk();setInterval(clk,15000);
+  var st=document.getElementById("start"),mn=document.getElementById("menu");
+  st.onclick=function(e){e.stopPropagation();var o=mn.hidden;mn.hidden=!o;st.setAttribute("aria-expanded",o)};
+  document.addEventListener("click",function(){if(!mn.hidden){mn.hidden=true;st.setAttribute("aria-expanded","false")}});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!mn.hidden){mn.hidden=true;st.setAttribute("aria-expanded","false");st.focus()}});
+  var ok=document.getElementById("ok"),stat=document.getElementById("stat");
+  function show(items){stat.innerHTML=items.map(function(x){return "<div class='sunk'><strong>"+x[0]+"</strong>"+x[1]+"</div>"}).join("")}
   fetch("/api/health",{cache:"no-store"}).then(function(r){return r.json()}).then(function(h){
     ok.textContent=h.ok?"모든 시스템 정상":"확인이 필요해요";
     if(h.counts)show([[h.counts.documents.toLocaleString(),"글(쪽)"],[h.counts.claims.toLocaleString(),"출처 붙은 사실(줄)"],[h.counts.products.toLocaleString(),"제품 카드"]])

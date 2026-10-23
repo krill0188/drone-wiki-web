@@ -9,7 +9,7 @@
   },
   "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
   "dim": 768,
-  "created": "2026-10-23T12:55:20Z",
+  "created": "2026-10-23T15:21:51Z",
   "doc_count": 1557,
   "docs": [
     {

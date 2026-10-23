@@ -6,7 +6,7 @@ import { evaluateBuilderGate, parseSpec } from "@/lib/design-gate"
 import { isPaperComponent, matchPaperConfig, paperBlock, specHint, validatePaperConfig } from "@/lib/paper-config"
 import { matchProducts, type MatchData } from "@/lib/product-match"
 import { soften } from "@/lib/soften"
-import { crossChecks } from "@/lib/cross-rules"
+import { crossChecks, crossAdvisory } from "@/lib/cross-rules"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { planQuery } from "@/lib/kg-plan"
 import { repairHwSelections, validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
@@ -361,8 +361,10 @@ function instantReply(text: string): Response {
 
 export async function POST(req: NextRequest) {
   const { prompt, stage, context, modelTier, reason, cross }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string; reason?: string; cross?: string } = await req.json()
-  // 교차 공학 규칙 검증(기본 꺼짐): 요청 cross:"on" 또는 BUILDER_CROSS=on. 위반이면 기존 재작성 경로로 한 번 고치게 한다.
-  const crossOn = cross === "on" || (cross !== "off" && process.env.BUILDER_CROSS === "on")
+  // 교차 공학 규칙(2026-10-24): strict = 위반 시 기존 재작성 경로(쌍 비교에서 느려져 기본 꺼짐), advisory = 단계 끝에 규칙 기반 점검표만 붙임(지연 0, 기본 켜짐). off로 끌 수 있다(요청 cross 또는 BUILDER_CROSS).
+  const crossMode = cross ?? process.env.BUILDER_CROSS ?? "advisory"
+  const crossOn = crossMode === "strict"
+  const crossAdvisoryOn = crossMode === "advisory" || crossMode === "strict"
   // 추론 보강(교차 공학 추론 블록 + 🔮 가정·불확실성 + 추론 모델 체인)은 기본 꺼짐. 요청의 reason(on|off)이 우선, 없으면 BUILDER_REASON=on일 때만 켠다. 켜도 6단계 구조·응답 형식은 같다.
   // 수준: off | block(온톨로지 규칙 추론 블록만, 모델 호출 추가 없음) | on(블록 + 지식그래프 근거 + 추론 모델 검토)
   const level = (reason === "on" || reason === "block" || reason === "off" ? reason : process.env.BUILDER_REASON) ?? ""
@@ -466,7 +468,8 @@ export async function POST(req: NextRequest) {
               progress("reasoning")
               try { reviewNote = await reasonReview(stage, prompt, text, `${gate.calc ?? ""}`) } catch { /* 검토 실패·시간 초과는 생략한다(본문은 이미 완성) */ }
             }
-            const out = soften(text + repairNote + reviewNote + renderValidation(v, retried))
+            const advisory = crossAdvisoryOn && (stage === "sw" || stage === "techspec" || stage === "architecture") ? crossAdvisory(stage, text, ctx.hw ?? "") : ""
+            const out = soften(text + repairNote + reviewNote + advisory + renderValidation(v, retried))
             progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })

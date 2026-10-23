@@ -8,6 +8,11 @@ export const CLASS_ALIAS: Record<string, RegExp> = {
   ROS2: /\bros\s*2\b|ros2|mavros/i, Multirotor: /멀티로터|multirotor|쿼드콥터|quadcopter/i, VTOL: /\bvtol\b|수직\s*이착륙/i, FixedWing: /고정익|fixed.?wing/i,
   GNSS: /gnss|\bgps\b|\brtk\b/i, IMU: /\bimu\b|관성/i, Gimbal: /짐벌|gimbal/i, SwarmCoordinator: /군집|swarm/i,
   CommunicationProtocol: /프로토콜|protocol|mavlink|메시지\s*규격/i, Manufacturer: /제조사|제조업체|manufacturer|\bmaker\b/i,
+  // 연구·기법 문서용 주제 클래스(ResearchTopic 하위, 2026-10-24 승인). 개체가 아니므로 문서에 승인된 연결이 있을 때만 근거로 쓰인다. RegulationOps는 법령 verbatim 경로와 겹쳐 별칭을 두지 않는다.
+  GNSSInterferenceSecurity: /재밍|스푸핑|기만|교란|jamming|spoofing|jammer/i, PrecisePositioning: /\bppk\b|\bppp\b|정밀\s*측위|네트워크\s*rtk|기준국|기선/i,
+  GNSSDeniedNavigation: /gnss.?(거부|denied)|gps.?(거부|denied|미수신)|센서\s*융합|sensor\s*fusion|무결성|raim|\bslam\b/i, GNSSSignalsEnvironment: /신호\s*(규격|계획)|signal\s*plan|멀티패스|multipath|안테나\s*(설치|위치|배치|장착)/i,
+  TimingLatency: /레이턴시|latency|시간\s*동기|타임스탬프|timestamp|지연\s*(시간|측정)/i, EdgeAIPerformance: /tensorrt|양자화|quantiz|벤치마크|benchmark|yolo|엣지\s*ai|\bfps\b/i,
+  FlightLogData: /비행\s*로그|flight\s*log|ulog|rosbag|데이터셋|dataset/i, SwarmResearch: /다중\s*에이전트|multi.?agent|군집\s*연구/i, QuadrotorControl: /쿼드로터|quadrotor/i,
   Engine: /엔진|내연|가솔린|연료전지|하이브리드\s*발전|\bengine\b|fuel cell/i, Sensor: /센서|라이다|lidar|카메라|camera|gnss|imu/i, Payload: /페이로드|탑재물|짐벌|payload/i,
 }
 

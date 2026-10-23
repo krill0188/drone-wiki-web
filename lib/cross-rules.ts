@@ -62,3 +62,17 @@ export function crossChecks(stage: string, md: string, hwMd: string): Validation
 }
 
 export const CROSS_RULE_IDS = RULES.map((r) => r.id)
+
+// 교차 공학 점검표(규칙 기반 안내): 재작성을 일으키지 않고 단계 결과 끝에 붙인다(지연 0).
+// 쌍 비교(2026-10-24)에서 위반 시 재작성 방식은 기술스펙 단계가 34~46초에서 147~223초로 늘고 위반도 남았다 → 점검표로 사용자에게 보여 주는 방식으로 바꿨다.
+export function crossAdvisory(stage: string, md: string, hwMd: string): string {
+  const rows: string[] = []
+  for (const r of RULES) {
+    if (!(r.stages as string[]).includes(stage)) continue
+    if (!r.trigger(hwMd, md)) continue
+    const ok = r.need.every((n) => n.test(md))
+    rows.push(`| ${r.label} | ${ok ? "대응 서술 있음" : "**대응 서술 없음 — 재확인 필요**"} | ${r.hint} |`)
+  }
+  if (!rows.length) return ""
+  return `\n\n## 🔎 교차 공학 점검(규칙 기반, 모델 추측 아님)\n선택한 부품에서 서로 영향을 주는 분야를 서버 규칙이 찾아 이 단계 설명과 대조한 표입니다. "없음"은 설계가 틀렸다는 뜻이 아니라 이 단계에 설명이 빠졌다는 뜻입니다.\n\n| 결합 | 이 단계 설명 | 확인할 것 |\n|---|---|---|\n${rows.join("\n")}`
+}

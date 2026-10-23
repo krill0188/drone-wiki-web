@@ -329,6 +329,15 @@ async function main() {
     ok(t2.includes("관련 위키 문서 발췌"), "위키 발췌 누락")
   })
 
+  await t("S21 주제 클래스: 연구·기법 질문이 승인된 주제 클래스 문서에 연결되어 ontology-linked로 답한다", () => {
+    const cases: [string, string][] = [["GNSS 재밍 대응 연구 알려줘", "GNSSInterferenceSecurity"], ["RTK 기선 길이 오차 연구는?", "PrecisePositioning"], ["카메라 IMU 시간 동기 논문", "TimingLatency"], ["쿼드로터 강화학습 제어", "QuadrotorControl"]]
+    for (const [q, cls] of cases) {
+      const r = planQuery(q)
+      ok(r.status === "ready" && r.basis === "ontology-linked" && r.classes.includes(cls), `${q} → ${r.status}/${r.basis}/${r.classes}`)
+    }
+    ok(planQuery("양자컴퓨터 드론 항법은?").status === "insufficient_evidence", "무관 질문 거절 유지")
+  })
+
   await t("W2 PX4 vs ArduPilot: 두 대상의 문서를 각각 가져오고, 단어만 겹친 논문 측정값은 근거에서 제외", () => {
     const p = planQuery("PX4와 ArduPilot의 차이점은?")
     ok(p.classes.includes("PX4") && p.classes.includes("ArduPilot"), `classes=${p.classes}`)

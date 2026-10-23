@@ -1,6 +1,6 @@
 // 교차 공학 규칙 검증기 시험 + 저장된 실제 출력의 위반 비율(기준선) 측정. 실행: npx tsx scripts/test-cross.ts [출력 폴더] [접두사]
 import fs from "node:fs"
-import { crossChecks } from "../lib/cross-rules"
+import { crossChecks, crossAdvisory } from "../lib/cross-rules"
 let pass = 0, fail = 0
 const t = (name: string, fn: () => void) => { try { fn(); pass++; console.log("PASS ", name) } catch (e) { fail++; console.log("FAIL ", name, "—", e instanceof Error ? e.message : e) } }
 const ok = (c: unknown, m: string) => { if (!c) throw new Error(m) }
@@ -22,6 +22,14 @@ t("트리거가 없으면 검사하지 않는다(GNSS·컴패니언 없는 HW)",
   ok(!r.issues.some((i) => i.includes("X2") || i.includes("X3")), "트리거 없는데 위반")
 })
 t("대상 단계가 아니면 검사하지 않는다(implementation)", () => ok(crossChecks("implementation", "x", HW).checks.length === 0, "구현 단계 검사됨"))
+t("점검표: 트리거된 규칙만 표로, 대응 있으면 '있음', 없으면 '재확인 필요'", () => {
+  const a = crossAdvisory("architecture", "FC와 센서를 연결한다.", HW)
+  ok(a.includes("교차 공학 점검") && a.includes("재확인 필요") && a.includes("진동"), "점검표 없음")
+  const b = crossAdvisory("architecture", "IMU는 방진 마운트, 발열은 히트싱크, FC가 페일세이프, 안테나 이격, BEC 분리, 링크 예산 dB 마진.", HW)
+  ok(b.includes("대응 서술 있음") && !b.includes("재확인 필요**"), "대응이 있는데 없음 표시")
+  ok(crossAdvisory("implementation", "x", HW) === "", "구현 단계에 점검표")
+  ok(crossAdvisory("architecture", "x", "| 모터 | 프레임 |").includes("진동"), "모터 트리거")
+})
 const dir = process.argv[2], pre = process.argv[3]
 if (dir && pre) {
   for (const st of ["sw", "techspec", "architecture"]) {
