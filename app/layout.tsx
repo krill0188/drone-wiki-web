@@ -5,6 +5,7 @@ import { WikiDocProvider } from "@/components/WikiDocContext"
 import ChatWidget from "@/components/Chat"
 import AppSidebar from "@/components/AppSidebar"
 import DroneIcon from "@/components/DroneIcon"
+import { PRE_PAINT } from "@/lib/skin-script"
 
 const displayFont = Space_Grotesk({ subsets: ["latin"], variable: "--ds-display", weight: ["500", "700"] })
 const bodyFont = Inter({ subsets: ["latin"], variable: "--ds-body" })
@@ -17,7 +18,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
+    <html lang="ko" suppressHydrationWarning className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: PRE_PAINT }} />
+      </head>
       <body className="min-h-screen bg-paper text-ink font-body">
         <WikiDocProvider>
           {/* GPT/Gemini 스타일 — 상단 헤더 없이 좌측 글로벌 사이드바 하나로 전체 내비게이션 통합 */}

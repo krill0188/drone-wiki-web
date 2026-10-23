@@ -90,3 +90,59 @@ body { top: 0 !important; }
 @keyframes stage-breathe { 0%,100% { box-shadow: 0 0 0 0 rgba(255,106,0,0); } 50% { box-shadow: 0 0 0 4px rgba(255,106,0,0.18); } }
 .stage-running { animation: stage-breathe 2s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .stage-running { animation: none; } }
+
+/* ── 밤 모드(2026-10-24): <html class="dark">일 때 같은 토큰을 어두운 값으로 바꾼다. 컴포넌트의 dark: 변형도 이 클래스를 따른다. ── */
+.dark {
+  --color-paper: #0e151e;
+  --color-panel: #162030;
+  --color-ink: #e8eef6;
+  --color-ink-dim: #a3b3c7;
+  --color-line: #2c3a4d;
+  --color-signal-400: #ff8f4d;
+  --color-signal-500: #ff7a2e;
+  --color-signal-600: #ff9a5c;
+  color-scheme: dark;
+}
+.dark ::selection { color: var(--color-ink); }
+.dark .prose pre { background: #0a0f17; border: 1px solid var(--color-line); }
+
+/* ── 버튼 손질: 주황 버튼은 살짝 눌리는 입체감, 보조 버튼은 테두리를 또렷하게(구조·크기는 그대로) ── */
+button.bg-signal-500, a.bg-signal-500, button.bg-ink, a.bg-ink {
+  box-shadow: 0 3px 0 rgba(0,0,0,.28);
+  transition: transform .08s, box-shadow .08s, filter .15s;
+}
+button.bg-signal-500:hover, a.bg-signal-500:hover, button.bg-ink:hover, a.bg-ink:hover { filter: brightness(1.06); }
+button.bg-signal-500:active, a.bg-signal-500:active, button.bg-ink:active, a.bg-ink:active { transform: translateY(3px); box-shadow: none; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--color-signal-500); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { button.bg-signal-500, a.bg-signal-500 { transition: none; } }
+
+/* ── 작업실 스킨(홈): 청사진 파랑·흑연·안전 주황. 움직임은 사용자가 만질 때만 ── */
+.ws {
+  --ws-wall: #dfe5ec; --ws-peg: rgba(40,54,72,.22); --ws-bench: #9b7a52; --ws-bench2: #7d5f3d;
+  --ws-bp: #1d4f9a; --ws-bpl: #cfe1ff; --ws-screen: #0f1722; --ws-muted: #51627a; --ws-ink: #18222f;
+}
+.dark .ws {
+  --ws-wall: #1b2430; --ws-peg: rgba(220,235,255,.12); --ws-bench: #5b4630; --ws-bench2: #44331f;
+  --ws-bp: #163a73; --ws-bpl: #9cc2ff; --ws-screen: #0a0f17; --ws-muted: #a8b8cc; --ws-ink: #e8eef6;
+}
+.ws-scene { border: 2px solid var(--color-ink); border-radius: 8px; overflow: hidden; background: var(--ws-wall); }
+.ws-scene svg { display: block; width: 100%; height: auto; }
+.ws-mono { font-family: var(--font-hud); }
+.ws-cur { animation: ws-blink 1s steps(2, jump-none) infinite; }
+@keyframes ws-blink { 50% { opacity: 0; } }
+.ws-prop { transform-box: fill-box; transform-origin: center; }
+.ws-hover { transform-box: fill-box; transform-origin: center; cursor: pointer; }
+.ws-hover:hover { animation: ws-hov 1.6s ease-in-out infinite; }
+.ws-hover:hover .ws-prop { animation: ws-spin .12s linear infinite; }
+@keyframes ws-hov { 50% { transform: translateY(-6px); } }
+@keyframes ws-spin { 50% { transform: scaleX(.25); } }
+.ws-scan { opacity: 0; }
+.ws-scan.go { animation: ws-scan 2.4s ease-in-out 1 both; }
+@keyframes ws-scan { 0% { transform: translateX(0); opacity: .8; } 100% { transform: translateX(337px); opacity: 0; } }
+.ws-drawer { position: relative; display: block; border: 2px solid var(--color-ink); border-radius: 6px; background: var(--color-panel); padding: 14px 14px 12px; transition: transform .15s, box-shadow .15s; }
+.ws-drawer::before { content: ""; position: absolute; left: 50%; top: -2px; width: 46px; height: 9px; transform: translateX(-50%); background: var(--color-ink); border-radius: 0 0 6px 6px; }
+.ws-drawer:hover, .ws-drawer:focus-visible { transform: translateY(-4px); box-shadow: 0 8px 0 -2px var(--color-signal-500); }
+.ws-drawer:active { transform: translateY(0); }
+.ws-child { display: inline-block; font-size: 12.5px; padding: 1px 8px; border: 1px solid var(--color-line); border-radius: 999px; color: var(--color-ink-dim); transition: background .12s, color .12s, border-color .12s; }
+.ws-child:hover, .ws-child:focus-visible { background: var(--color-signal-500); color: #fff; border-color: var(--color-signal-500); }
+@media (prefers-reduced-motion: reduce) { .ws-hover:hover, .ws-hover:hover .ws-prop, .ws-scan.go, .ws-cur { animation: none; } .ws-drawer { transition: none; } }
