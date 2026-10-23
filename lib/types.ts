@@ -18,6 +18,7 @@ export type Domain =
   | "security"
   | "vendor-registry"
   | "software-ecosystem"
+  | "knowledge-management"
   | ""
 
 export interface WikiPage {
@@ -81,4 +82,5 @@ export const DOMAIN_META: Record<string, { label: string; color: string; emoji: 
   "security": { label: "보안", color: "#dc2626", emoji: "🔐" },
   "vendor-registry": { label: "제조사 레지스트리", color: "#64748b", emoji: "🏭" },
   "software-ecosystem": { label: "SW 생태계", color: "#2563eb", emoji: "📦" },
+  "knowledge-management": { label: "지식관리(PKM)", color: "#0d9488", emoji: "🗂️" },
 }

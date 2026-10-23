@@ -8359,5 +8359,132 @@
     "matchedSlugs": [
       "ai-latency-vision-in-the-loop-wickramasuriya-2026"
     ]
+  },
+  "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003395575": {
+    "processedAt": "2026-10-22T22:45:12.962Z",
+    "matchedSlugs": [
+      "occ-drone-dual-tag-chacha20-poly1305"
+    ]
+  },
+  "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003395578": {
+    "processedAt": "2026-10-22T22:45:12.969Z",
+    "matchedSlugs": [
+      "uav-anomaly-fitness-function-icsearcher"
+    ]
+  },
+  "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003395510": {
+    "processedAt": "2026-10-22T22:45:12.972Z",
+    "matchedSlugs": [
+      "uav-irs-dqn-power-allocation-6g"
+    ]
+  },
+  "https://www.youtube.com/watch?v=kKdNVzyEDyE": {
+    "processedAt": "2026-10-22T22:45:12.991Z",
+    "matchedSlugs": [
+      "dji-osmo-pocket-4p-stabilization",
+      "dji-osmo-pocket-4"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/evolver-dfr-debuts-a-complete-drone-as-first-responder-program-for-public-safety-agencies/": {
+    "processedAt": "2026-10-22T22:45:13.021Z",
+    "matchedSlugs": [
+      "drone-first-responder-dfr",
+      "skydio-centralsquare-dfr-integration"
+    ]
+  },
+  "https://dronelife.com/2026/10/22/evolver-dfr-drone-first-responder-program/": {
+    "processedAt": "2026-10-22T22:45:13.009Z",
+    "matchedSlugs": [
+      "drone-first-responder-dfr",
+      "drone-news-2026-10-23"
+    ]
+  },
+  "https://dronelife.com/2026/10/22/wing-and-walmart-launch-drone-delivery-in-charlotte/": {
+    "processedAt": "2026-10-22T22:45:13.004Z",
+    "matchedSlugs": [
+      "drone-news-2026-10-23",
+      "wing-nhs-medical-delivery"
+    ]
+  },
+  "https://dronelife.com/2026/10/22/university-of-cincinnati-engineers-use-sound-to-detect-drone-damage-for-nasa/": {
+    "processedAt": "2026-10-22T22:45:12.999Z",
+    "matchedSlugs": [
+      "indi-stability-tilt-rotor-vtol"
+    ]
+  },
+  "https://www.youtube.com/watch?v=KprQlrjOXaI": {
+    "processedAt": "2026-10-22T22:45:13.056Z",
+    "matchedSlugs": [
+      "drone-news-2026-10-23",
+      "indi-stability-tilt-rotor-vtol"
+    ]
+  },
+  "https://dronelife.com/2026/10/22/vector-defense-drones-socom-blue-list/": {
+    "processedAt": "2026-10-22T22:45:13.039Z",
+    "matchedSlugs": [
+      "skydio-blue-uas-cleared",
+      "china-drone-export-controls"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/how-is-the-swedish-drone-industry-doing/": {
+    "processedAt": "2026-10-22T22:45:13.060Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "drone-news-ops"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/signature-aviation-and-urbanv-launch-signature-urbanv-alliance-to-develop-and-operate-aam-infrastructure-across-the-united-states/": {
+    "processedAt": "2026-10-22T22:45:13.043Z",
+    "matchedSlugs": [
+      "precise-cerreta-ebee-rtk-ppk-base-distance-ijaaa-2023",
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://www.youtube.com/watch?v=-xy6_XCzcKU": {
+    "processedAt": "2026-10-22T22:45:13.053Z",
+    "matchedSlugs": [
+      "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
+      "fusion-wen-fgo-vs-ekf-2004.10572"
+    ]
+  },
+  "https://dronelife.com/2026/10/22/skyebrowse-adds-new-timelines-tools-for-drone-surveys/": {
+    "processedAt": "2026-10-22T22:45:13.070Z",
+    "matchedSlugs": [
+      "indi-stability-tilt-rotor-vtol",
+      "precise-kci-kim-rtk-precision-landing-iemek-2023"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/teaching-robots-to-feel-pain-astraqua-secures-1-3-million-nasa-contract/": {
+    "processedAt": "2026-10-22T22:45:13.130Z",
+    "matchedSlugs": [
+      "physai-bench-uav-agentic-benchmark",
+      "ai-knowledge-workflow"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/ofcom-1-4-ghz-spectrum-award-and-potential-impact-on-aviation/": {
+    "processedAt": "2026-10-22T22:45:13.080Z",
+    "matchedSlugs": [
+      "datalink-communication"
+    ]
+  },
+  "https://www.youtube.com/watch?v=RxOtMtWqVg4": {
+    "processedAt": "2026-10-22T22:45:13.091Z",
+    "matchedSlugs": [
+      "dji-osmo-360-ii"
+    ]
+  },
+  "https://www.youtube.com/watch?v=gYXLRMycVMk": {
+    "processedAt": "2026-10-22T22:45:13.107Z",
+    "matchedSlugs": [
+      "ai-knowledge-workflow",
+      "cross-layer-attacks-uav-5g"
+    ]
+  },
+  "https://www.federalregister.gov/documents/2026/10/22/2026-21565/establishment-of-class-e-airspace-havana-il": {
+    "processedAt": "2026-10-22T22:45:13.126Z",
+    "matchedSlugs": [
+      "faa-airspace-classes-drone-authorization",
+      "uk-caa-airspace-architecture"
+    ]
   }
 }

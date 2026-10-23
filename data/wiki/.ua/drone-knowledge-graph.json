@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "d2e6e2aebdcbdd6ab3780567a8d98ae9423d87e511802a3ca22e255c1fb42815",
+  "source_fingerprint": "5f07cecd5c5290aa3063459385287bcd17f66a95b2ed9ac4ed4653a7c8787f6c",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -3537,7 +3537,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "data-flightlog-ardupilot-dataflash",
@@ -3553,7 +3553,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "data-flightlog-mcap-spec",
@@ -3585,7 +3585,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "data-flightlog-px4-logging",
@@ -3601,7 +3601,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "data-flightlog-px4-ulog-format",
@@ -3617,7 +3617,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "data-flightlog-rosbag2",
@@ -3634,7 +3634,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "ROS2"
     },
     {
       "id": "data-latency-px4-ardupilot-loop-rates-official",
@@ -3781,7 +3781,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "data-sync-ros2-message-filters-approximatetime",
@@ -5043,6 +5043,21 @@
         "regulations"
       ],
       "updated": "2026-10-22",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "drone-news-2026-10-23",
+      "name": "드론 업계 주요 소식 (2026-10-23)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-23",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
@@ -6434,7 +6449,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "fusion-ardupilot-gps-blending",
@@ -6490,7 +6505,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "fusion-suzuki-multi-gnss-receivers-uav-iros-2019",
@@ -7144,7 +7159,7 @@
       "updated": "2026-10-21",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "ArduPilot"
     },
     {
       "id": "jamming-elaraby-hierarchical-dithered-null-steering-analog-crpa-2026",
@@ -9371,6 +9386,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "occ-drone-dual-tag-chacha20-poly1305",
+      "name": "OCC 드론 채널용 이중 태그 ChaCha20-Poly1305 AEAD 인증 프로토콜",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-10-23",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "oddityrc-echo5-frame-gps",
       "name": "OddityRC Echo5 5인치 프레임·마이크로 GPS·ELRS 수신기",
       "layer": "Concepts",
@@ -10007,7 +10036,7 @@
       "updated": "2026-07-27",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-offboard-control",
@@ -10074,7 +10103,7 @@
       "updated": "2026-08-06",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "px4-system-architecture",
@@ -10486,7 +10515,7 @@
       "updated": "2026-07-28",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "ROS2"
     },
     {
       "id": "ros2-drone-integration",
@@ -11425,6 +11454,20 @@
       "ontologyClass": "Engine"
     },
     {
+      "id": "uav-anomaly-fitness-function-icsearcher",
+      "name": "UAV 이상 동작 탐지를 위한 편차 특성 기반 적합도 함수",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw"
+      ],
+      "updated": "2026-10-23",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "uav-battery-recharge-agent-based-simulation",
       "name": "UAV 배터리 재충전 조정 에이전트 기반 시뮬레이션 (Grando 외, 2025)",
       "layer": "Concepts",
@@ -11591,6 +11634,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "uav-irs-dqn-power-allocation-6g",
+      "name": "UAV-IRS 보조 6G 시스템의 에너지 효율 최적화와 DQN 전력 할당",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-10-23",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "uav-isac-cross-region",
@@ -13248,6 +13305,20 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "yolo-v8-4-184",
+      "name": "YOLO v8.4.184 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-23",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "yolo",
       "name": "YOLO",
       "layer": "Concepts",
@@ -13932,7 +14003,7 @@
       "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "PX4"
     },
     {
       "id": "qgroundcontrol-v5-1-0",
@@ -14266,7 +14337,7 @@
       "id": "knowledge-tool-roles",
       "name": "AI 지식관리 도구 역할 비교",
       "layer": "Comparisons",
-      "domain": "",
+      "domain": "knowledge-management",
       "tags": [
         "comparison",
         "pkm",
@@ -14282,7 +14353,7 @@
       "id": "notebooklm-query-compounding",
       "name": "NotebookLM 질의 지식 증분 워크플로",
       "layer": "Queries",
-      "domain": "",
+      "domain": "knowledge-management",
       "tags": [
         "automation",
         "knowledge-base",
@@ -14299,7 +14370,7 @@
       "id": "ua-knowledge-graph-workflow",
       "name": "UA 위키 지식그래프 전체 워크플로",
       "layer": "Queries",
-      "domain": "",
+      "domain": "knowledge-management",
       "tags": [
         "knowledge-base",
         "knowledge-graph",
@@ -23737,6 +23808,96 @@
       "confidence": "low"
     },
     {
+      "source": "drone-news-2026-10-23",
+      "target": "drone-news-2026-10-22",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "drone-first-responder-dfr",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "parrot",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "skyfireai",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "wing-walmart-denver-seattle-2027",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "drone-delivery-news",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "dji",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-23",
+      "target": "dji-mavic-4-pro-firmware-update",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -32617,6 +32778,24 @@
       "confidence": "medium"
     },
     {
+      "source": "occ-drone-dual-tag-chacha20-poly1305",
+      "target": "mavlink2-security",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "occ-drone-dual-tag-chacha20-poly1305",
+      "target": "datalink-communication",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "oddityrc-echo5-frame-gps",
       "target": "china-drone-export-controls",
       "type": "wikilink",
@@ -36485,6 +36664,33 @@
       "confidence": "low"
     },
     {
+      "source": "uav-anomaly-fitness-function-icsearcher",
+      "target": "drone-anomaly-detection-survey",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-anomaly-fitness-function-icsearcher",
+      "target": "ardupilot-params-by-version",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-anomaly-fitness-function-icsearcher",
+      "target": "gnn-uav-anomaly-detection",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "uav-battery-recharge-agent-based-simulation",
       "target": "uav-battery-replacement-planner",
       "type": "wikilink",
@@ -36808,6 +37014,33 @@
         "raw/papers/_unclassified/uav-imagery-for-ground-vehicle-visual-localization-reference-database-constructi.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "uav-irs-dqn-power-allocation-6g",
+      "target": "irs-assisted-uav-direction-modulation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-irs-dqn-power-allocation-6g",
+      "target": "fluid-antenna-system",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-irs-dqn-power-allocation-6g",
+      "target": "hybrid-beamforming-ntn",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "uav-isac-cross-region",
@@ -39787,6 +40020,42 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/fetch-2026-10-21-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-184",
+      "target": "yolo-v8-4-183",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-184",
+      "target": "yolo",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-184",
+      "target": "computer-vision-drone",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-yolo.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-184",
+      "target": "companion-computer",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-23-yolo.md"
       ],
       "confidence": "medium"
     },

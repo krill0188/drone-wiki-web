@@ -31705,7 +31705,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/articles/quad-drone-lab-quad-drone-start.md"
+        "raw/articles/quad-drone-lab-quad-drone-start.md",
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
       ]
     },
     {
@@ -37786,6 +37787,318 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/swarm/temporal-waypoint-navigation-of-multi-uav-payload-system-using-barrier-functions.md"
+      ]
+    },
+    {
+      "id": "6 G",
+      "name": "6 G",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "Terahertz (THz)",
+      "name": "Terahertz (THz)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "massive MIMO (mMIMO)",
+      "name": "massive MIMO (mMIMO)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "non-orthogonal multiple access (NOMA)",
+      "name": "non-orthogonal multiple access (NOMA)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "IRS-mounted UAV",
+      "name": "IRS-mounted UAV",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "Intelligent Reflecting Surface (IRS)",
+      "name": "Intelligent Reflecting Surface (IRS)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "Track Selection Scheme (TSS)",
+      "name": "Track Selection Scheme (TSS)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "Deep Q-Network (DQN)",
+      "name": "Deep Q-Network (DQN)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "DQN-based NOMA power allocation scheme",
+      "name": "DQN-based NOMA power allocation scheme",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "Indian Institute of Technology",
+      "name": "Indian Institute of Technology",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ]
+    },
+    {
+      "id": "Global Shutter",
+      "name": "Global Shutter",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "OCC",
+      "name": "OCC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "ChaCha20-Poly1305",
+      "name": "ChaCha20-Poly1305",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "AEAD",
+      "name": "AEAD",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "HKDF-Expand",
+      "name": "HKDF-Expand",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "ASCON",
+      "name": "ASCON",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "아주대학교",
+      "name": "아주대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ]
+    },
+    {
+      "id": "Zhipeng, Zhang",
+      "name": "Zhipeng, Zhang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ]
+    },
+    {
+      "id": "Yangjie, Wei",
+      "name": "Yangjie, Wei",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ]
+    },
+    {
+      "id": "frequency-domain modulation",
+      "name": "frequency-domain modulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ]
+    },
+    {
+      "id": "hierarchical feature refinement",
+      "name": "hierarchical feature refinement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ]
+    },
+    {
+      "id": "small object detection",
+      "name": "small object detection",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ]
+    },
+    {
+      "id": "UAV imagery",
+      "name": "UAV imagery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ]
+    },
+    {
+      "id": "정우성",
+      "name": "정우성",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ]
+    },
+    {
+      "id": "세종대학교",
+      "name": "세종대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ]
+    },
+    {
+      "id": "ICSearcher",
+      "name": "ICSearcher",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
       ]
     }
   ],
@@ -67001,6 +67314,204 @@
       "type": "SIMULATED_IN",
       "evidence": [
         "raw/papers/swarm/temporal-waypoint-navigation-of-multi-uav-payload-system-using-barrier-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IRS-mounted UAV",
+      "target": "Intelligent Reflecting Surface (IRS)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IRS-mounted UAV",
+      "target": "Terahertz (THz)",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "massive MIMO (mMIMO)",
+      "target": "Terahertz (THz)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "non-orthogonal multiple access (NOMA)",
+      "target": "Terahertz (THz)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IRS-mounted UAV",
+      "target": "massive MIMO (mMIMO)",
+      "type": "ASSISTS",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IRS-mounted UAV",
+      "target": "non-orthogonal multiple access (NOMA)",
+      "type": "ASSISTS",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Track Selection Scheme (TSS)",
+      "target": "IRS-mounted UAV",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DQN-based NOMA power allocation scheme",
+      "target": "Deep Q-Network (DQN)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DQN-based NOMA power allocation scheme",
+      "target": "non-orthogonal multiple access (NOMA)",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DQN-based NOMA power allocation scheme",
+      "target": "6 G",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ChaCha20-Poly1305",
+      "target": "AEAD",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "HKDF-Expand",
+      "target": "ChaCha20-Poly1305",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "OCC",
+      "target": "Global Shutter",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ChaCha20-Poly1305",
+      "target": "OCC",
+      "type": "SECURES",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ASCON",
+      "target": "ChaCha20-Poly1305",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "아주대학교",
+      "target": "Global Shutter",
+      "type": "RESEARCHES",
+      "evidence": [
+        "raw/papers/_unclassified/global-shutter-기반-occ-드론-채널을-위한-이중-태그-기반-chacha20-poly1305-aead-인증-프로토콜.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "frequency-domain modulation",
+      "target": "hierarchical feature refinement",
+      "type": "COMBINED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "frequency-domain modulation",
+      "target": "small object detection",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "hierarchical feature refinement",
+      "target": "small object detection",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "small object detection",
+      "target": "UAV imagery",
+      "type": "USED_IN",
+      "evidence": [
+        "raw/papers/drone-ai/synergizing-frequency-domain-modulation-and-hierarchical-feature-refinement-for-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "정우성",
+      "target": "세종대학교",
+      "type": "WORKS_AT",
+      "evidence": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ArduPilot",
+      "target": "ICSearcher",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
       ],
       "confidence": "unverified"
     }

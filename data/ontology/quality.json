@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-22",
- "fingerprint": "39934ca2310c",
+ "generated": "2026-10-23",
+ "fingerprint": "c49ee5b5236b",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -8,8 +8,8 @@
   "papers": 109,
   "claims": 259,
   "edges": 4549,
-  "documents": 898,
-  "wikiClaims": 3009,
+  "documents": 903,
+  "wikiClaims": 3034,
   "relations": 4584
  },
  "claimsByKind": {
@@ -43,7 +43,7 @@
   "paper:verified": 248,
   "wiki:blocked": 24,
   "wiki:contested": 6,
-  "wiki:sourced": 2976,
+  "wiki:sourced": 3001,
   "wiki:unverified": 3
  },
  "productsByCategory": {
@@ -68,17 +68,17 @@
   "countryUnknown": 51
  },
  "documents": {
-  "total": 898,
-  "withDomain": 895,
-  "noDomain": 3,
+  "total": 903,
+  "withDomain": 903,
+  "noDomain": 0,
   "unregisteredDomain": 4,
-  "withOntologyClass": 118,
+  "withOntologyClass": 132,
   "byDomain": {
-   "ai-autonomy": 198,
+   "ai-autonomy": 199,
    "hardware": 170,
-   "ops-mission": 147,
-   "flight-control": 74,
-   "comms-protocol": 63,
+   "ops-mission": 148,
+   "flight-control": 75,
+   "comms-protocol": 65,
    "regulations": 60,
    "edge-ai-compute": 41,
    "gcs-software": 29,
@@ -91,7 +91,7 @@
    "ros-middleware": 7,
    "electrical-power": 4,
    "swarm-multiagent": 3,
-   "(없음)": 3,
+   "knowledge-management": 3,
    "ai-agent": 2,
    "swarm": 1,
    "sensing-perception": 1,
@@ -99,8 +99,8 @@
   }
  },
  "sources": {
-  "total": 1280,
-  "resolved": 1250,
+  "total": 1293,
+  "resolved": 1263,
   "unresolved": 25,
   "unknown": 5
  },
@@ -560,13 +560,9 @@
   },
   {
    "desc": "domain이 없는 문서(추론하지 않고 NULL 유지)",
-   "ok": false,
-   "count": 3,
-   "sample": [
-    "comparisons/knowledge-tool-roles.md",
-    "queries/notebooklm-query-compounding.md",
-    "queries/ua-knowledge-graph-workflow.md"
-   ]
+   "ok": true,
+   "count": 0,
+   "sample": []
   },
   {
    "desc": "해석되지 않은 출처 경로(blocked claim 원인)",
