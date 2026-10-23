@@ -14,5 +14,15 @@ echo "== 타입 검사"; npx tsc --noEmit
 echo "== 답변 시험"; KG_BACKEND=sqlite npx tsx scripts/test-kg-answer.ts < /dev/null | tail -3
 echo "== 모델 체인 시험"; NVIDIA_NIM_API_KEY=x npx tsx scripts/test-hedge.ts < /dev/null 2>&1 | grep -E "^PASS|FAIL" | tail -2
 echo "== 지식 DB 최신 여부"; "${KDB_PY:-$HOME/2nd/.venv/bin/python}" scripts/build-knowledge-db.py --verify | tail -1
-echo "== 배포"; vercel --prod --yes
+echo "== 이번 배포에 들어가는 변경"; python3 scripts/release-notes.py
+NOTES="$(python3 scripts/release-notes.py --meta)"
+SUBJECT="$(git log -1 --pretty=%s)"
+echo "== 배포"; vercel --prod --yes -m releaseNotes="$NOTES" -m githubCommitMessage="$SUBJECT" -m githubCommitSha="$(git rev-parse HEAD)"
+TAG="deploy-$(date +%Y%m%d-%H%M)"
+DEPLOYED="$(git rev-parse HEAD)"
+FULL="$(python3 scripts/release-notes.py)"
+python3 scripts/release-notes.py --write "$TAG"
+git add docs/RELEASES.md && git commit -qm "docs: 릴리스 노트 $TAG" || true
+git tag -a "$TAG" "$DEPLOYED" -m "$FULL"
+git push -q origin HEAD:main "$TAG" && echo "릴리스 노트: docs/RELEASES.md, 태그 $TAG"
 echo "== 배포 후: curl https://drone-wiki-web.vercel.app/api/health 와 npm run eval:prod 로 확인하세요."
