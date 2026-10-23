@@ -94,6 +94,9 @@ export default async function WikiDetailPage({ params }: Props) {
             </div>
           )}
 
+          {page.contentHtml.includes("†") && (
+            <p className="text-[12px] text-ink-dim mb-3">† 표시는 수집 출처 기록이 있는 문장이에요(원본 기록 파일은 공개하지 않아요).</p>
+          )}
           <WikiArticleBody html={page.contentHtml} slug={page.slug} title={page.title} />
 
           {/* 압축형 백링크 카운터 (Obsidian 벤치마킹) — 그래프를 안 열어도 참조 밀도 파악 */}

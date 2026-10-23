@@ -146,3 +146,4 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--color-signal-50
 .ws-child { display: inline-block; font-size: 12.5px; padding: 1px 8px; border: 1px solid var(--color-line); border-radius: 999px; color: var(--color-ink-dim); transition: background .12s, color .12s, border-color .12s; }
 .ws-child:hover, .ws-child:focus-visible { background: var(--color-signal-500); color: #fff; border-color: var(--color-signal-500); }
 @media (prefers-reduced-motion: reduce) { .ws-hover:hover, .ws-hover:hover .ws-prop, .ws-scan.go, .ws-cur { animation: none; } .ws-drawer { transition: none; } }
+.ws-drawer, .ws-drawer p { word-break: keep-all; }

@@ -54,6 +54,34 @@ export function extractLinkContext(content: string, targetSlug: string): string 
   return `${start > 0 ? "…" : ""}${snippet}${end < content.length ? "…" : ""}`
 }
 
+// 본문 표시용 변환(2026-10-24): [[slug]]는 실제 문서 링크로, ^[출처 기록 경로]는 짧은 †로 바꾼다. 원본 Markdown·chat 컨텍스트(content)는 그대로 둔다.
+const titleCache = new Map<string, string | null>()
+function wikiTitleOf(slug: string): string | null {
+  if (titleCache.has(slug)) return titleCache.get(slug) ?? null
+  let t: string | null = null
+  if (/^[\w.\-가-힣]+$/.test(slug)) {
+    for (const dir of LAYER_DIRS) {
+      const f = path.join(WIKI_ROOT, dir, `${slug}.md`)
+      if (!fs.existsSync(f)) continue
+      const head = fs.readFileSync(f, "utf-8").slice(0, 1200)
+      t = /^title:\s*"?(.*?)"?\s*$/m.exec(head)?.[1]?.trim() || slug
+      break
+    }
+  }
+  titleCache.set(slug, t)
+  return t
+}
+export function renderableMarkdown(md: string): string {
+  return md
+    .replace(/\[\[([^\]|]+?)(?:\|([^\]]+))?\]\]/g, (_m, raw: string, alias?: string) => {
+      const slug = raw.trim()
+      const t = wikiTitleOf(slug)
+      const label = (alias ?? t ?? slug).replace(/[\[\]]/g, "")
+      return t ? `[${label}](/wiki/${slug})` : label
+    })
+    .replace(/\s?\^\[[^\]]*\]/g, " †")
+}
+
 // 빌드(프로덕션)에서는 위키 파일이 바뀌지 않으므로 전 문서 파싱 결과를 한 번만 만든다.
 // 상세 페이지마다 getAllPages()를 부르는 구조라 캐시가 없으면 O(N²)가 되어 문서 880쪽에서 빌드가 45분 한도를 넘겼다.
 let allPagesCache: Promise<WikiPage[]> | null = null
@@ -109,7 +137,7 @@ export async function getPageBySlug(slug: string, layerDir?: string): Promise<Wi
 
   if (!data.title) return null
 
-  const processed = await remark().use(remarkGfm).use(remarkHtml).process(content)
+  const processed = await remark().use(remarkGfm).use(remarkHtml).process(renderableMarkdown(content))
 
   return {
     slug,

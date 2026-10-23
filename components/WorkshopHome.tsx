@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
 import WorkshopScene from "@/components/WorkshopScene"
+import DroneIcon from "@/components/DroneIcon"
 import { NAV } from "@/lib/nav"
 
 // 홈(작업실 스킨): 장면 + 한 줄 소개 + 서랍 메뉴(5개 메뉴와 하위 메뉴가 한눈에 보이게) + 상태.
@@ -15,6 +16,16 @@ const DESC: Record<string, string> = {
 export default function WorkshopHome({ docs, rules }: { docs: number; rules: number }) {
   return (
     <div className="max-w-5xl mx-auto px-4 pt-6 pb-8">
+      {/* 사이트 이름과 한 줄 소개(기존 홈 문구 유지) */}
+      <header className="mb-4">
+        <div className="flex items-center gap-2.5">
+          <DroneIcon className="w-9 h-9 text-ink" />
+          <span className="font-display font-bold text-3xl sm:text-4xl tracking-tight">DroneWiki</span>
+        </div>
+        <p className="mt-1.5 text-ink-dim text-sm sm:text-[15px] break-keep">
+          드론 비행제어·통신·하드웨어·GCS·법규·AI 자율 — 모든 드론 지식을 AI와 함께
+        </p>
+      </header>
       <WorkshopScene />
       <p className="text-[12.5px] text-ink-dim mt-2">
         일러스트예요(사진 아님). 평소에는 가만히 있고, 모니터를 누르거나 청사진·드론에 마우스를 올리면 움직여요.
@@ -22,10 +33,10 @@ export default function WorkshopHome({ docs, rules }: { docs: number; rules: num
 
       <section className="mt-6 flex flex-wrap items-end justify-between gap-4" aria-labelledby="ws-h1">
         <div className="min-w-0">
-          <h1 id="ws-h1" className="font-display font-bold text-3xl sm:text-4xl leading-tight tracking-tight text-balance">
-            드론 설계, <span className="text-signal-600 underline decoration-signal-500/40 decoration-4 underline-offset-4">출처와 함께</span> 도와드려요
+          <h1 id="ws-h1" className="font-display font-bold text-2xl sm:text-3xl leading-tight tracking-tight break-keep text-balance">
+            드론 설계, <span className="whitespace-nowrap text-signal-600 underline decoration-signal-500/40 decoration-4 underline-offset-4">출처와 함께</span> 도와드려요
           </h1>
-          <p className="mt-2 text-ink-dim max-w-xl text-[15px]">
+          <p className="mt-2 text-ink-dim max-w-xl text-[15px] break-keep">
             질문하면 확인된 자료로만 답하고, 설계는 계산으로 먼저 따져 봐요. 모르는 건 “다시 확인 필요”라고 말해요.
           </p>
         </div>

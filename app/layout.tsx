@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex min-h-screen">
             <AppSidebar />
             <div className="flex-1 min-w-0 flex flex-col">
-              <main className="flex-1">{children}</main>
+              <main className="flex-1 pt-12 lg:pt-0">{children}</main>
               <footer className="border-t border-line mt-12">
                 <div className="max-w-3xl mx-auto px-4 py-6 text-xs font-hud text-ink-dim flex items-center gap-1.5">
                   <DroneIcon className="w-3.5 h-3.5" />
