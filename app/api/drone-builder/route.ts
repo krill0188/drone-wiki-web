@@ -319,13 +319,14 @@ async function reasonReview(stage: Stage, prompt: string, text: string, calc: st
     system: `당신은 드론 설계 검토자다. 아래 <design>의 단계 결과가 의존하는 가정과 아직 확정되지 않은 위험을 최대 4줄로 쓴다. 형식: "- (내용) — 가능성 낮음|중간|높음". 규칙: <design>·<calc>에 있는 내용에서 직접 이어지는 것만 쓰고, 새 숫자·퍼센트·제품 사양을 만들지 않는다. 법규·안전 기준 값은 쓰지 않는다. 설명·머리말 없이 줄만 출력한다.`,
     prompt: `<concept>${prompt.slice(0, 600)}</concept>\n<stage>${stage}</stage>\n<calc>${calc.slice(0, 1500)}</calc>\n<design>${text.slice(0, 3500)}</design>`,
     maxOutputTokens: 900,
-    abortSignal: AbortSignal.timeout(30_000),
+    abortSignal: AbortSignal.timeout(45_000),
   })
   const raw = (await r.text).trim()
   const allowed = new Set((`${text} ${calc} ${prompt}`.match(/\d+(?:[.,]\d+)?/g) ?? []).map((n) => String(parseFloat(n.replace(",", ".")))))
   const lines = raw.split("\n").map((l) => l.trim()).filter((l) => /^[-•*]/.test(l) && /가능성\s*(낮음|중간|높음)/.test(l))
     .filter((l) => (l.match(/\d+(?:[.,]\d+)?/g) ?? []).every((n) => String(parseFloat(n.replace(",", "."))) !== "NaN" && (allowed.has(String(parseFloat(n.replace(",", "."))))|| /^\d$/.test(n))))
     .slice(0, 4)
+  console.info(`[builder] reasonReview stage=${stage} rawLines=${raw.split("\n").filter((l) => l.trim()).length} kept=${lines.length}`)
   return lines.length ? `\n\n## 🔮 가정·불확실성(추론 — 사실이 아니며 재확인 필요)\n${lines.map((l) => l.replace(/^[•*]/, "-")).join("\n")}` : ""
 }
 
