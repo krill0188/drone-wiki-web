@@ -123,14 +123,8 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* 토글 버튼: 항상 화면 우하단에 고정 */}
-      <button
-        onClick={() => setOpen((v) => !v)}
-        aria-label={open ? "AI 챗봇 닫기" : "AI 챗봇 열기"}
-        className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-ink hover:bg-ink/90 text-white shadow-lg flex items-center justify-center transition-transform hover:scale-105 ring-2 ring-signal-500/40"
-      >
-        {open ? <span className="text-2xl">✕</span> : <DroneIcon className="w-6 h-6" />}
-      </button>
+      {/* 우하단 둥근 퀵메뉴 버튼은 2026-10-24 요청으로 제거했다. 질문은 사이드바의 '질문하기'(/chat)에서 하고,
+          이 패널은 본문에서 글을 선택해 "AI에게 질문하기"를 눌렀을 때만 열린다(닫기는 패널 안의 닫기 버튼). */}
 
       {/* 우측 고정 패널 */}
       <aside
