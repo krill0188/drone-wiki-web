@@ -17,6 +17,8 @@
 | `NVIDIA_NIM_CHAIN` / `NVIDIA_NIM_BUILDER_CHAIN` | 쉼표 구분 모델 id(선택) | 삭제 → 코드 기본 체인 |
 | `NVIDIA_NIM_HEDGE_CHAT_MS` / `NVIDIA_NIM_HEDGE_BUILDER_MS` | 기본 4000 / 12000 | 매우 큰 값으로 두면 헤징 사실상 끔 |
 | `NVIDIA_NIM_FIRST_CONTENT_MS` | 기본 15000 | — |
+| `BUILDER_REASON` | `on`이면 빌더 SW·기술스펙·아키텍처 단계에 교차 공학 추론 블록·지식그래프 근거를 넣고, 생성 뒤 추론 모델(reason 체인: minimax-m3.1-flash → nemotron-3-ultra 추론켬 → glm-5.3-flash)이 🔮 가정·불확실성을 짧게 검토. **기본 꺼짐**(요청 body `reason:"on"`으로 측정만 가능) | 삭제 → 꺼짐 |
+| `NVIDIA_NIM_REASON_CHAIN` / `NVIDIA_NIM_HEDGE_REASON_MS` | 추론 체인·헤징(기본 9000) | 삭제 → 기본 |
 | `OPENROUTER_API_KEY` | NIM 체인 소진 시 OpenRouter `:free`(nemotron-3-ultra → lightning → openrouter/free)로 자동 폴백. 계정 공통 한도 분당 20회·크레딧 없으면 일 50회 | 키 삭제 → 폴백 없음(바로 근거만 답변) |
 키 값은 문서·로그에 적지 않는다(`vercel env ls`는 이름만 본다).
 
