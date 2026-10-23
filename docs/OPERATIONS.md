@@ -17,6 +17,7 @@
 | `NVIDIA_NIM_CHAIN` / `NVIDIA_NIM_BUILDER_CHAIN` | 쉼표 구분 모델 id(선택) | 삭제 → 코드 기본 체인 |
 | `NVIDIA_NIM_HEDGE_CHAT_MS` / `NVIDIA_NIM_HEDGE_BUILDER_MS` | 기본 4000 / 12000 | 매우 큰 값으로 두면 헤징 사실상 끔 |
 | `NVIDIA_NIM_FIRST_CONTENT_MS` | 기본 15000 | — |
+| `OPENROUTER_API_KEY` | NIM 체인 소진 시 OpenRouter `:free`(nemotron-3-ultra → lightning → openrouter/free)로 자동 폴백. 계정 공통 한도 분당 20회·크레딧 없으면 일 50회 | 키 삭제 → 폴백 없음(바로 근거만 답변) |
 키 값은 문서·로그에 적지 않는다(`vercel env ls`는 이름만 본다).
 
 ## 3. 정기 점검
@@ -31,6 +32,9 @@
 3. 커밋 → `git push origin HEAD:main` → `vercel --prod --yes`(약 10분). 빌드 45분 한도에 주의(`getAllPages` 캐시가 핵심).
 4. 배포 후 `curl /api/health` → `npm run eval:prod`. 위키가 바뀐 배포면 `~/2nd`에서 `rebaseline-publication.py --apply` 후 커밋·푸시.
 5. 위키 갱신 흐름: lint → `approve-held.py --apply` → policy 커밋 → `approve-version-manifest.py --apply` → 커밋 → discovery 미처리 0까지 `extract-knowledge-graph.sh --limit 15` 반복 → `knowledge-pipeline.py --refresh-derived --candidate <경로>` → web `rsync -ac --delete`.
+
+## 4-1. 모델 장애 시 단계 (자동)
+1. NIM 체인(헤징 포함) → 2. OpenRouter `:free` 같은 계열 모델 → 3. **모델 없는 근거 답변**(서버 사양표·검증 claim·관계·위키 발췌, "AI 해설 모델이 일시적으로 응답하지 않아…" 안내). 2·3단계 사용 여부는 Vercel 로그(`OpenRouter 폴백 사용`, `모든 모델 실패 → 근거만 표시`)와 `/api/health`의 `fallbackUsed`로 본다. 폴백 경로 점검은 `/api/health?probe=openrouter`(결과 10분 캐시, 매일 ops-eval이 호출).
 
 ## 5. 장애 대응
 | 증상 | 먼저 볼 것 | 조치 |
