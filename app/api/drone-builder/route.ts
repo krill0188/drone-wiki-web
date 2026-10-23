@@ -295,14 +295,14 @@ function groundingQuery(stage: Stage, prompt: string, c: StageContext): string {
 // 추론 보강 블록(결정론): 온톨로지 규칙 엔진의 교차 공학 파급 + 지식그래프의 검증 근거. (🔮 가정·불확실성은 생성 뒤 추론 모델의 짧은 검토 호출이 쓴다)
 const REASON_STAGES = new Set<Stage>(["sw", "techspec", "architecture"])
 const CROSS_HINT = "진동 IMU 항법 GNSS 전원 통신 간섭 연산 발열 제어 지연 모터 ESC 배터리"
-function buildReasonBlocks(stage: Stage, prompt: string, ctx: StageContext): string {
+function buildReasonBlocks(stage: Stage, prompt: string, ctx: StageContext, level: "block" | "on"): string {
   if (!REASON_STAGES.has(stage)) return ""
   const parts: string[] = []
   try {
     const o = buildOntologyContext(`${prompt} ${(ctx.hw ?? "").slice(0, 600)} ${CROSS_HINT}`, undefined, { kgOnly: true })
     if (o.block) parts.push(o.block)
   } catch { /* 규칙 엔진 실패는 보강만 빠진다 */ }
-  try {
+  if (level === "on") try {
     const plan = planQuery(`${prompt} ${CROSS_HINT}`)
     const lines = plan.claims.filter((c) => c.origin !== "wiki" && (c.status === "verified" || c.status === "sourced")).slice(0, 8).map((c) => `- ${c.subjectText || c.subject} · ${c.predicate}: ${c.value} (${c.status})`)
     if (lines.length) parts.push(`<kg-evidence>\n지식그래프의 검증·출처확인 claim(사실 근거). 이 값은 그대로 인용하고 바꾸지 마라.\n${lines.join("\n")}\n</kg-evidence>`)
@@ -361,7 +361,10 @@ function instantReply(text: string): Response {
 export async function POST(req: NextRequest) {
   const { prompt, stage, context, modelTier, reason }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string; reason?: string } = await req.json()
   // 추론 보강(교차 공학 추론 블록 + 🔮 가정·불확실성 + 추론 모델 체인)은 기본 꺼짐. 요청의 reason(on|off)이 우선, 없으면 BUILDER_REASON=on일 때만 켠다. 켜도 6단계 구조·응답 형식은 같다.
-  const reasonMode = reason === "on" || (reason !== "off" && process.env.BUILDER_REASON === "on")
+  // 수준: off | block(온톨로지 규칙 추론 블록만, 모델 호출 추가 없음) | on(블록 + 지식그래프 근거 + 추론 모델 검토)
+  const level = (reason === "on" || reason === "block" || reason === "off" ? reason : process.env.BUILDER_REASON) ?? ""
+  const reasonLevel: "off" | "block" | "on" = level === "on" ? "on" : level === "block" ? "block" : "off"
+  const reasonMode = reasonLevel === "on"
   // 초안은 작은 모델(chat 체인), 서버 검증 위반이 나올 때만 큰 모델(builder 체인)로 재작성한다. 요청의 modelTier(cascade|deep)가 우선, 없으면 BUILDER_TIER=cascade일 때만 켠다.
   const cascade = modelTier === "cascade" || (modelTier !== "deep" && process.env.BUILDER_TIER === "cascade")
 
@@ -387,7 +390,7 @@ export async function POST(req: NextRequest) {
   const match = gate.spec.platform === "multirotor" && stage !== "proposal" ? matchProducts(gate.spec) : null
   const productMatch = match?.block ?? ""
   // 추론 보강: SW·기술스펙·아키텍처 단계에 (a) 온톨로지 규칙이 계산한 교차 공학 파급, (b) 지식그래프 검증 근거, (c) 🔮 가정·불확실성 작성 지침을 서버가 주입한다.
-  const reasonBlocks = reasonMode ? buildReasonBlocks(stage, prompt, ctx) : ""
+  const reasonBlocks = reasonLevel !== "off" ? buildReasonBlocks(stage, prompt, ctx, reasonLevel) : ""
   const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}${paper ? `\n${paperBlock(paper)}` : ""}` + reasonBlocks + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const fullSystem = (extra = "") => `${system}${extra}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`
