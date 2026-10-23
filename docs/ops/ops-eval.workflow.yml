@@ -1,0 +1,35 @@
+# 운영 점검(클라우드 이중화): 이 Mac의 launchd 점검이 꺼져 있어도 GitHub에서 같은 점검을 돌린다.
+# 실패하면 워크플로 실패로 표시되고 GitHub이 저장소 소유자에게 알림 메일을 보낸다. 비밀값은 쓰지 않는다(공개 주소만 호출).
+name: ops-eval
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 매일 08:00 KST — 질문 25문항 + 상태 확인
+    - cron: "0 0 * * 1"    # 매주 월요일 09:00 KST — 설계 도우미 6단계 회귀
+  workflow_dispatch:
+jobs:
+  chat:
+    if: github.event_name != 'schedule' || github.event.schedule == '0 23 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: 상태 확인(/api/health)
+        run: |
+          code=$(curl -s -o health.json -w '%{http_code}' https://drone-wiki-web.vercel.app/api/health)
+          cat health.json; echo; test "$code" = "200"
+      - name: 질문 25문항 평가
+        run: python3 scripts/eval-prod.py --out eval-prod-result.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: eval-prod-result, path: eval-prod-result.json }
+  builder:
+    if: github.event_name != 'schedule' || github.event.schedule == '0 0 * * 1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: 설계 도우미 6단계 회귀
+        run: python3 scripts/eval-builder.py --out eval-builder-result.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: eval-builder-result, path: eval-builder-result.json }

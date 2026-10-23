@@ -24,6 +24,8 @@
 키 값은 문서·로그에 적지 않는다(`vercel env ls`는 이름만 본다).
 
 ## 3. 정기 점검
+- 클라우드 이중화(준비됨, 미가동): `docs/ops/ops-eval.workflow.yml`을 `.github/workflows/ops-eval.yml`로 옮겨 푸시하면 GitHub Actions가 매일 08:00(KST) 질문 25문항, 매주 월요일 09:00 설계 도우미 6단계를 점검하고 실패 시 소유자에게 알림 메일을 보낸다. 푸시에는 gh 토큰의 `workflow` 권한이 필요하다(`gh auth refresh -h github.com -s workflow`, 사용자가 브라우저로 승인).
+- 설계 도우미 회귀: `npm run eval:builder`(약 8~10분, 6단계 + 반려→재작성, ❌ 6건 초과·단계 240초 초과·빈 단계면 종료코드 1).
 - 자동: launchd `ai.dronewiki.eval`이 매일 07:40에 `scripts/ops-eval.sh` 실행 → `~/projectm/drone-wiki-ops/history.jsonl`에 한 줄씩 쌓고, 실패하면 macOS 알림.
 - 수동: `npm run eval:prod` (25문항, 22/25 미만 또는 p90 40초 초과면 종료코드 1) / `curl https://drone-wiki-web.vercel.app/api/health`.
 - 정상 기준(2026-10-22~23 측정): 25/25, p50 약 6초, p90 약 20~30초, 검증 경고 0~1건, 법령 질문 0.2초.

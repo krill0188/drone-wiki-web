@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import MarkdownText from "./MarkdownText"
 import WaitingIndicator, { TypingDots } from "./WaitingIndicator"
 import { useEffect, useRef, useState } from "react"
 import { useChat } from "@ai-sdk/react"
@@ -196,8 +197,10 @@ export default function ChatWidget() {
                         : "bg-paper border border-line rounded-bl-sm"
                     }`}
                   >
-                    {m.parts.map((part, i) =>
-                      part.type === "text" ? <span key={i}>{part.text}</span> : null
+                    {m.role === "assistant" ? (
+                      <MarkdownText text={m.parts.map((part) => (part.type === "text" ? part.text : "")).join("")} />
+                    ) : (
+                      m.parts.map((part, i) => (part.type === "text" ? <span key={i}>{part.text}</span> : null))
                     )}
                   </div>
 

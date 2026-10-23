@@ -1,6 +1,7 @@
 "use client"
 
 import WaitingIndicator from "@/components/WaitingIndicator"
+import MarkdownText from "@/components/MarkdownText"
 import { useEffect, useRef, useState } from "react"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
@@ -374,8 +375,14 @@ export default function AiDroneBuilderPage() {
               </div>
 
               {st.status !== "pending" && (
-                <div className="p-4 text-sm whitespace-pre-wrap leading-relaxed max-h-[500px] overflow-y-auto">
-                  {st.text || (st.status === "running" ? null : "대기 중...")}
+                <div className="p-4 text-sm leading-relaxed max-h-[500px] overflow-y-auto">
+                  {st.text ? <MarkdownText text={st.text} /> : st.status === "running" ? null : "대기 중..."}
+                  {st.text && st.status !== "running" && (
+                    <details className="mt-2 text-xs text-slate-500">
+                      <summary className="cursor-pointer select-none">마크다운 원문 보기</summary>
+                      <pre className="mt-1 whitespace-pre-wrap">{st.text}</pre>
+                    </details>
+                  )}
                   {st.status === "running" && (
                     <div className={st.text ? "mt-3" : ""}>
                       <WaitingIndicator active detail={progress[s.key]} />
