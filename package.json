@@ -12,7 +12,8 @@
     "kdb:verify": "~/2nd/.venv/bin/python scripts/build-knowledge-db.py --verify",
     "kdb:test": "~/2nd/.venv/bin/python -W ignore scripts/test_knowledge_db.py && tsx scripts/test-kg-answer.ts",
     "eval:prod": "python3 scripts/eval-prod.py",
-    "test:hedge": "NVIDIA_NIM_API_KEY=x tsx scripts/test-hedge.ts"
+    "test:hedge": "NVIDIA_NIM_API_KEY=x tsx scripts/test-hedge.ts",
+    "test:cross": "tsx scripts/test-cross.ts"
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^1.0.58",

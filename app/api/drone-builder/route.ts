@@ -6,6 +6,7 @@ import { evaluateBuilderGate, parseSpec } from "@/lib/design-gate"
 import { isPaperComponent, matchPaperConfig, paperBlock, specHint, validatePaperConfig } from "@/lib/paper-config"
 import { matchProducts, type MatchData } from "@/lib/product-match"
 import { soften } from "@/lib/soften"
+import { crossChecks } from "@/lib/cross-rules"
 import { buildOntologyContext } from "@/lib/ontology-qa"
 import { planQuery } from "@/lib/kg-plan"
 import { repairHwSelections, validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
@@ -359,7 +360,9 @@ function instantReply(text: string): Response {
 }
 
 export async function POST(req: NextRequest) {
-  const { prompt, stage, context, modelTier, reason }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string; reason?: string } = await req.json()
+  const { prompt, stage, context, modelTier, reason, cross }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string; reason?: string; cross?: string } = await req.json()
+  // 교차 공학 규칙 검증(기본 꺼짐): 요청 cross:"on" 또는 BUILDER_CROSS=on. 위반이면 기존 재작성 경로로 한 번 고치게 한다.
+  const crossOn = cross === "on" || (cross !== "off" && process.env.BUILDER_CROSS === "on")
   // 추론 보강(교차 공학 추론 블록 + 🔮 가정·불확실성 + 추론 모델 체인)은 기본 꺼짐. 요청의 reason(on|off)이 우선, 없으면 BUILDER_REASON=on일 때만 켠다. 켜도 6단계 구조·응답 형식은 같다.
   // 수준: off | block(온톨로지 규칙 추론 블록만, 모델 호출 추가 없음) | on(블록 + 지식그래프 근거 + 추론 모델 검토)
   const level = (reason === "on" || reason === "block" || reason === "off" ? reason : process.env.BUILDER_REASON) ?? ""
@@ -400,6 +403,12 @@ export async function POST(req: NextRequest) {
   if (match?.data) {
     const data = match.data
     const validate = (text: string): Validation => {
+      const base = validateCore(text)
+      if (!crossOn || !(stage === "sw" || stage === "techspec" || stage === "architecture")) return base
+      const x = crossChecks(stage, text, ctx.hw ?? "")
+      return { checks: [...base.checks, ...x.checks], issues: [...base.issues, ...x.issues] }
+    }
+    const validateCore = (text: string): Validation => {
       switch (stage) {
         case "hw": {
           const v = validateHw(text, data, paper ? (sel) => isPaperComponent(sel, paper) : undefined)
