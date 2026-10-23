@@ -292,7 +292,7 @@ function groundingQuery(stage: Stage, prompt: string, c: StageContext): string {
 }
 
 
-// 추론 보강 블록(결정론): 온톨로지 규칙 엔진의 교차 공학 파급 + 지식그래프의 검증 근거 + 🔮 작성 지침.
+// 추론 보강 블록(결정론): 온톨로지 규칙 엔진의 교차 공학 파급 + 지식그래프의 검증 근거. (🔮 가정·불확실성은 생성 뒤 추론 모델의 짧은 검토 호출이 쓴다)
 const REASON_STAGES = new Set<Stage>(["sw", "techspec", "architecture"])
 const CROSS_HINT = "진동 IMU 항법 GNSS 전원 통신 간섭 연산 발열 제어 지연 모터 ESC 배터리"
 function buildReasonBlocks(stage: Stage, prompt: string, ctx: StageContext): string {
@@ -307,11 +307,26 @@ function buildReasonBlocks(stage: Stage, prompt: string, ctx: StageContext): str
     const lines = plan.claims.filter((c) => c.origin !== "wiki" && (c.status === "verified" || c.status === "sourced")).slice(0, 8).map((c) => `- ${c.subjectText || c.subject} · ${c.predicate}: ${c.value} (${c.status})`)
     if (lines.length) parts.push(`<kg-evidence>\n지식그래프의 검증·출처확인 claim(사실 근거). 이 값은 그대로 인용하고 바꾸지 마라.\n${lines.join("\n")}\n</kg-evidence>`)
   } catch { /* 지식 DB 미적재 시 생략 */ }
-  parts.push(`<uncertainty-guide>
-결과 맨 끝에 "## 🔮 가정·불확실성(추론)" 소제목을 한 번만 둔다. 설계가 의존하는 가정과 아직 확정되지 않은 위험을 최대 4줄로, 각 줄 끝에 "가능성 낮음|중간|높음" 중 하나를 쓴다.
-규칙: 위 <ontology>·<inference>·<design-calc>·<kg-evidence> 근거에서 직접 이어지는 것만 쓴다. 새 숫자·퍼센트·제품 사양을 만들지 않는다. 법규·안전 기준 값에는 쓰지 않는다. 사실이 아닌 추론이며 재확인 필요함을 한 줄로 밝힌다. 근거가 없으면 이 소제목을 쓰지 않는다.
-</uncertainty-guide>`)
+
   return `\n\n${parts.join("\n\n")}`
+}
+
+// 추론 모델 검토(짧은 호출): 완성된 단계 결과에서 설계가 의존하는 가정·미확정 위험을 최대 4줄로 뽑는다. 장문 생성에는 쓰지 않는다(추론 체인은 장문에서 느림).
+// 서버 가드: 줄마다 등급 표기 필수, 근거 문서(본문·계산 블록·질문)에 없는 숫자가 들어간 줄은 버린다.
+async function reasonReview(stage: Stage, prompt: string, text: string, calc: string): Promise<string> {
+  const r = streamText({
+    model: wikiModel("reason"),
+    system: `당신은 드론 설계 검토자다. 아래 <design>의 단계 결과가 의존하는 가정과 아직 확정되지 않은 위험을 최대 4줄로 쓴다. 형식: "- (내용) — 가능성 낮음|중간|높음". 규칙: <design>·<calc>에 있는 내용에서 직접 이어지는 것만 쓰고, 새 숫자·퍼센트·제품 사양을 만들지 않는다. 법규·안전 기준 값은 쓰지 않는다. 설명·머리말 없이 줄만 출력한다.`,
+    prompt: `<concept>${prompt.slice(0, 600)}</concept>\n<stage>${stage}</stage>\n<calc>${calc.slice(0, 1500)}</calc>\n<design>${text.slice(0, 3500)}</design>`,
+    maxOutputTokens: 900,
+    abortSignal: AbortSignal.timeout(30_000),
+  })
+  const raw = (await r.text).trim()
+  const allowed = new Set((`${text} ${calc} ${prompt}`.match(/\d+(?:[.,]\d+)?/g) ?? []).map((n) => String(parseFloat(n.replace(",", ".")))))
+  const lines = raw.split("\n").map((l) => l.trim()).filter((l) => /^[-•*]/.test(l) && /가능성\s*(낮음|중간|높음)/.test(l))
+    .filter((l) => (l.match(/\d+(?:[.,]\d+)?/g) ?? []).every((n) => String(parseFloat(n.replace(",", "."))) !== "NaN" && (allowed.has(String(parseFloat(n.replace(",", "."))))|| /^\d$/.test(n))))
+    .slice(0, 4)
+  return lines.length ? `\n\n## 🔮 가정·불확실성(추론 — 사실이 아니며 재확인 필요)\n${lines.map((l) => l.replace(/^[•*]/, "-")).join("\n")}` : ""
 }
 
 function feedbackBlock(c: StageContext): string {
@@ -408,7 +423,7 @@ export async function POST(req: NextRequest) {
               return (await r.text).trim()
             }
             progress("writing")
-            let text = await gen("", reasonMode && (stage === "techspec" || stage === "architecture") ? "reason" : cascade ? "chat" : "builder")
+            let text = await gen("", cascade ? "chat" : "builder")
             progress("validating")
             let v = validate(text)
             let retried = false
@@ -433,7 +448,12 @@ export async function POST(req: NextRequest) {
                 repairNote = `\n\n> 서버 치환 ${rep.repaired.length}건 (모델이 카탈로그 밖 제품을 골라 코드가 바꿈): ${rep.repaired.join(" ; ")}`
               }
             }
-            const out = soften(text + repairNote + renderValidation(v, retried))
+            let reviewNote = ""
+            if (reasonMode && REASON_STAGES.has(stage) && Date.now() - t0 < 140_000) {
+              progress("reasoning")
+              try { reviewNote = await reasonReview(stage, prompt, text, `${gate.calc ?? ""}`) } catch { /* 검토 실패·시간 초과는 생략한다(본문은 이미 완성) */ }
+            }
+            const out = soften(text + repairNote + reviewNote + renderValidation(v, retried))
             progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })

@@ -82,6 +82,7 @@ const PROGRESS_LABEL: Record<string, string> = {
   validating: "서버 규칙 검증 중",
   rewriting: "위반 항목 재작성 중",
   repairing: "카탈로그 밖 제품 치환 중",
+  reasoning: "추론 모델이 가정·불확실성 검토 중",
   done: "마무리 중",
 }
 
