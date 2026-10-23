@@ -6,6 +6,8 @@ import { evaluateBuilderGate, parseSpec } from "@/lib/design-gate"
 import { isPaperComponent, matchPaperConfig, paperBlock, specHint, validatePaperConfig } from "@/lib/paper-config"
 import { matchProducts, type MatchData } from "@/lib/product-match"
 import { soften } from "@/lib/soften"
+import { buildOntologyContext } from "@/lib/ontology-qa"
+import { planQuery } from "@/lib/kg-plan"
 import { repairHwSelections, validateHw, validateSw, validateTechspec, validateArchitecture, validateImplementation, renderValidation, type Validation } from "@/lib/stage-validate"
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
@@ -289,6 +291,29 @@ function groundingQuery(stage: Stage, prompt: string, c: StageContext): string {
   return `${prompt} ${excerpt} ${STAGE_QUERY_HINT[stage] ?? ""}`.trim()
 }
 
+
+// 추론 보강 블록(결정론): 온톨로지 규칙 엔진의 교차 공학 파급 + 지식그래프의 검증 근거 + 🔮 작성 지침.
+const REASON_STAGES = new Set<Stage>(["sw", "techspec", "architecture"])
+const CROSS_HINT = "진동 IMU 항법 GNSS 전원 통신 간섭 연산 발열 제어 지연 모터 ESC 배터리"
+function buildReasonBlocks(stage: Stage, prompt: string, ctx: StageContext): string {
+  if (!REASON_STAGES.has(stage)) return ""
+  const parts: string[] = []
+  try {
+    const o = buildOntologyContext(`${prompt} ${(ctx.hw ?? "").slice(0, 600)} ${CROSS_HINT}`, undefined, { kgOnly: true })
+    if (o.block) parts.push(o.block)
+  } catch { /* 규칙 엔진 실패는 보강만 빠진다 */ }
+  try {
+    const plan = planQuery(`${prompt} ${CROSS_HINT}`)
+    const lines = plan.claims.filter((c) => c.origin !== "wiki" && (c.status === "verified" || c.status === "sourced")).slice(0, 8).map((c) => `- ${c.subjectText || c.subject} · ${c.predicate}: ${c.value} (${c.status})`)
+    if (lines.length) parts.push(`<kg-evidence>\n지식그래프의 검증·출처확인 claim(사실 근거). 이 값은 그대로 인용하고 바꾸지 마라.\n${lines.join("\n")}\n</kg-evidence>`)
+  } catch { /* 지식 DB 미적재 시 생략 */ }
+  parts.push(`<uncertainty-guide>
+결과 맨 끝에 "## 🔮 가정·불확실성(추론)" 소제목을 한 번만 둔다. 설계가 의존하는 가정과 아직 확정되지 않은 위험을 최대 4줄로, 각 줄 끝에 "가능성 낮음|중간|높음" 중 하나를 쓴다.
+규칙: 위 <ontology>·<inference>·<design-calc>·<kg-evidence> 근거에서 직접 이어지는 것만 쓴다. 새 숫자·퍼센트·제품 사양을 만들지 않는다. 법규·안전 기준 값에는 쓰지 않는다. 사실이 아닌 추론이며 재확인 필요함을 한 줄로 밝힌다. 근거가 없으면 이 소제목을 쓰지 않는다.
+</uncertainty-guide>`)
+  return `\n\n${parts.join("\n\n")}`
+}
+
 function feedbackBlock(c: StageContext): string {
   const reason = (c.feedback?.reason ?? "").trim().slice(0, 1000)
   const previous = (c.feedback?.previous ?? "").trim().slice(0, 6000)
@@ -318,7 +343,9 @@ function instantReply(text: string): Response {
 }
 
 export async function POST(req: NextRequest) {
-  const { prompt, stage, context, modelTier }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string } = await req.json()
+  const { prompt, stage, context, modelTier, reason }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string; reason?: string } = await req.json()
+  // 추론 보강(교차 공학 추론 블록 + 🔮 가정·불확실성 + 추론 모델 체인)은 기본 꺼짐. 요청의 reason(on|off)이 우선, 없으면 BUILDER_REASON=on일 때만 켠다. 켜도 6단계 구조·응답 형식은 같다.
+  const reasonMode = reason === "on" || (reason !== "off" && process.env.BUILDER_REASON === "on")
   // 초안은 작은 모델(chat 체인), 서버 검증 위반이 나올 때만 큰 모델(builder 체인)로 재작성한다. 요청의 modelTier(cascade|deep)가 우선, 없으면 BUILDER_TIER=cascade일 때만 켠다.
   const cascade = modelTier === "cascade" || (modelTier !== "deep" && process.env.BUILDER_TIER === "cascade")
 
@@ -343,7 +370,9 @@ export async function POST(req: NextRequest) {
   // 멀티로터면 엔진 계산에 맞는 실제 제품 후보(제조사 공식 사양 수집본)를 서버가 골라 확정 전제로 넣는다.
   const match = gate.spec.platform === "multirotor" && stage !== "proposal" ? matchProducts(gate.spec) : null
   const productMatch = match?.block ?? ""
-  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}${paper ? `\n${paperBlock(paper)}` : ""}` + feedbackBlock(ctx)
+  // 추론 보강: SW·기술스펙·아키텍처 단계에 (a) 온톨로지 규칙이 계산한 교차 공학 파급, (b) 지식그래프 검증 근거, (c) 🔮 가정·불확실성 작성 지침을 서버가 주입한다.
+  const reasonBlocks = reasonMode ? buildReasonBlocks(stage, prompt, ctx) : ""
+  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}${paper ? `\n${paperBlock(paper)}` : ""}` + reasonBlocks + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const fullSystem = (extra = "") => `${system}${extra}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`
 
@@ -374,12 +403,12 @@ export async function POST(req: NextRequest) {
           const progress = (phase: string, detail?: string) => writer.write({ type: "data-progress", data: { phase, detail, elapsedSec: Math.round((Date.now() - t0) / 1000) }, transient: true })
           try {
             // 한 번의 생성에 시간 상한을 둔다(NVIDIA 지연 꼬리 205초 사례). 상한에 닿으면 모델 체인이 다음 모델로 넘어간다.
-            const gen = async (extra: string, profile: "chat" | "builder" = "builder") => {
+            const gen = async (extra: string, profile: "chat" | "builder" | "reason" = "builder") => {
               const r = streamText({ model: wikiModel(profile), system: fullSystem(extra), maxOutputTokens: limit.maxOutputTokens, prompt: `드론 컨셉: ${prompt}`, abortSignal: AbortSignal.timeout(GEN_TIMEOUT_MS) })
               return (await r.text).trim()
             }
             progress("writing")
-            let text = await gen("", cascade ? "chat" : "builder")
+            let text = await gen("", reasonMode && (stage === "techspec" || stage === "architecture") ? "reason" : cascade ? "chat" : "builder")
             progress("validating")
             let v = validate(text)
             let retried = false

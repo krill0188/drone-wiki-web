@@ -30,13 +30,19 @@ const TOTAL_BUDGET_MS = 50000 // 전환 판단에 쓰는 시간 예산(응답 �
 
 // NVIDIA_NIM_CHAIN(쉼표 구분 모델 id)을 주면 그 순서로, 없으면 기본 체인. 옛 NVIDIA_NIM_MODEL 값은 무시한다.
 // 드론 빌더 전용 체인은 NVIDIA_NIM_BUILDER_CHAIN(없으면 BUILDER_DEFAULT_CHAIN). 빌더는 300초 한도라 느려도 큰 모델을 먼저 쓴다.
-export type ModelProfile = "chat" | "builder"
+// reason: 추론이 꼭 필요한 호출 전용(2026-10-23 실측: minimax-m3.1-flash 4~8초·4/4 정답, ultra 추론켬 7~33초, glm-5.3-flash 17~47초). 추론 글자가 먼저 나오므로 첫 답변 글자 대기·전체 예산을 길게 둔다.
+export type ModelProfile = "chat" | "builder" | "reason"
+const REASON_DEFAULT_CHAIN: ModelSpec[] = [
+  spec("minimaxai/minimax-m3.1-flash"),
+  { id: "nvidia/nemotron-3-ultra-550b-a55b", extra: { chat_template_kwargs: { enable_thinking: true } } },
+  spec("z-ai/glm-5.3-flash"),
+]
 const BUILDER_DEFAULT_CHAIN: ModelSpec[] = [spec("nvidia/nemotron-3-ultra-550b-a55b"), spec("nvidia/nemotron-3.5-lightning-30b-a3b"), spec("openai/gpt-oss-20b")]
 
 function modelChain(profile: ModelProfile = "chat"): ModelSpec[] {
-  const envKey = profile === "builder" ? "NVIDIA_NIM_BUILDER_CHAIN" : "NVIDIA_NIM_CHAIN"
+  const envKey = profile === "builder" ? "NVIDIA_NIM_BUILDER_CHAIN" : profile === "reason" ? "NVIDIA_NIM_REASON_CHAIN" : "NVIDIA_NIM_CHAIN"
   const ids = (process.env[envKey] ?? "").split(",").map((m) => m.trim()).filter(Boolean)
-  if (!ids.length) return profile === "builder" ? BUILDER_DEFAULT_CHAIN : DEFAULT_CHAIN
+  if (!ids.length) return profile === "builder" ? BUILDER_DEFAULT_CHAIN : profile === "reason" ? REASON_DEFAULT_CHAIN : DEFAULT_CHAIN
   return ids.map(spec)
 }
 
@@ -113,7 +119,7 @@ async function firstAnswerOrNull(
 // 지연 헤징(2026-10-22): 첫 모델이 HEDGE_MS 안에 '첫 답변 글자'를 못 내면 다음 모델을 병렬로 시작해 먼저 글자를 내는 쪽을 쓴다.
 // 사용자가 보는 지연은 두 시도의 합이 아니라 min이다. 비용 폭주를 막으려고 한 인스턴스에서 헤징을 (2회 + 요청의 25%)로 제한한다.
 // 판정은 응답 헤더가 아니라 첫 답변 글자(content) 기준이다 — 추론 서버는 글자 전에 200 헤더를 먼저 보낸다.
-const HEDGE_MS: Record<ModelProfile, number> = { chat: Number(process.env.NVIDIA_NIM_HEDGE_CHAT_MS) || 4000, builder: Number(process.env.NVIDIA_NIM_HEDGE_BUILDER_MS) || 12000 }
+const HEDGE_MS: Record<ModelProfile, number> = { chat: Number(process.env.NVIDIA_NIM_HEDGE_CHAT_MS) || 4000, builder: Number(process.env.NVIDIA_NIM_HEDGE_BUILDER_MS) || 12000, reason: Number(process.env.NVIDIA_NIM_HEDGE_REASON_MS) || 9000 }
 const hedgeStat = { requests: 0, hedges: 0 }
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 const OPENROUTER_FALLBACK = ["nvidia/nemotron-3-ultra-550b-a55b:free", "nvidia/nemotron-3.5-lightning:free", "openrouter/free"]
@@ -142,8 +148,10 @@ export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (in
     return { idx, ctrl, p }
   }
   const budget = (idx: number) => {
-    const left = TOTAL_BUDGET_MS - (Date.now() - started)
-    return { left, ms: idx === chain.length - 1 ? left : Math.min(FIRST_CONTENT_MS, left) }
+    const total = profile === "reason" ? 90000 : TOTAL_BUDGET_MS
+    const first = profile === "reason" ? 30000 : FIRST_CONTENT_MS
+    const left = total - (Date.now() - started)
+    return { left, ms: idx === chain.length - 1 ? left : Math.min(first, left) }
   }
   let i = 0
   while (i < chain.length) {
