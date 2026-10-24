@@ -293,12 +293,12 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     const hits = all<{ path: string; bypath: number }>(`SELECT path, (lower(path) LIKE ?) bypath FROM documents WHERE (lower(title) LIKE ? OR lower(path) LIKE ?)${domSql} ORDER BY bypath DESC, ${soft}(confidence = 'high') DESC, length(path) LIMIT 40`, `%${tk}%`, `%${tk}%`, `%${tk}%`, ...hardDomain, ...(soft ? plan.domainFilter : []))
     if (hits.length > 0 && hits.length < 40) for (const h of hits.slice(0, 3)) addPage(h.path)
   }
-  // 질문에 나온 클래스에 사람이 승인해 연결한 문서(documents.ontology_class)를 우선 포함한다(온톨로지 연결 문서)
+  // 질문에 나온 클래스에 사람이 승인해 연결한 문서(documents.ontology_class)를 우선 포함한다(온톨로지 연결 문서). 자동 승격 미검토 스텁(auto-promoted/auto-hub)은 근거로 쓰지 않는다.
   const classSet = plan.classes.length ? withDescendants(plan.classes) : new Set<string>()
   if (classSet.size) {
     const ph = [...classSet].map(() => "?").join(",")
     const dom = hardDomain.length ? ` AND domain IN (${hardDomain.map(() => "?").join(",")})` : ""
-    for (const r of all<{ path: string }>(`SELECT path FROM documents WHERE ontology_class IN (${ph})${dom} ORDER BY (confidence = 'high') DESC, path LIMIT 8`, ...classSet, ...hardDomain)) addPage(r.path)
+    for (const r of all<{ path: string }>(`SELECT path FROM documents WHERE ontology_class IN (${ph})${dom} AND id NOT IN (SELECT document_id FROM document_tags WHERE tag IN ('auto-promoted','auto-hub')) ORDER BY (confidence = 'high') DESC, path LIMIT 8`, ...classSet, ...hardDomain)) addPage(r.path)
   }
   for (const c of plan.claims) if (c.documentPath) addPage(c.documentPath)
   if (fq) {
