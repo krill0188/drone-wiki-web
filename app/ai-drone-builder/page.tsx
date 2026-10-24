@@ -1,6 +1,7 @@
 "use client"
 
 import WiringDiagram from "@/components/WiringDiagram"
+import BuilderGuide from "@/components/BuilderGuide"
 import WaitingIndicator from "@/components/WaitingIndicator"
 import MarkdownText from "@/components/MarkdownText"
 import { useEffect, useRef, useState } from "react"
@@ -52,11 +53,6 @@ const STAGES: { key: StageKey; title: string; agent: string }[] = [
   { key: "implementation", title: "6. 코드 · 로드맵", agent: "소스코드 설계 에이전트" },
 ]
 
-const EXAMPLES = [
-  "산불 감시용 자율비행 드론",
-  "GPS 없는 실내 물류창고 배송 드론",
-  "군집비행 정찰 드론 시스템",
-]
 
 const STATUS_LABEL: Record<StageStatus, string> = {
   pending: "대기",
@@ -312,6 +308,8 @@ export default function AiDroneBuilderPage() {
         <strong> 승인 · 반려 · 마감</strong>을 선택해 다음으로 넘어갑니다.
       </p>
 
+      {!STAGES.some((s) => stages[s.key].status !== "pending") && <BuilderGuide onPick={setConcept} />}
+
       <div className="flex flex-col gap-2 mb-8">
         <textarea
           value={concept}
@@ -319,17 +317,6 @@ export default function AiDroneBuilderPage() {
           placeholder="예: AI 드론을 기획하고 개발해줘 — 산불 감시용 자율비행 드론"
           className="min-h-[80px] border border-slate-300 dark:border-slate-600 rounded-xl p-3 text-sm bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-signal-400 resize-none"
         />
-        <div className="flex flex-wrap gap-2">
-          {EXAMPLES.map((ex) => (
-            <button
-              key={ex}
-              onClick={() => setConcept(ex)}
-              className="text-xs px-3 py-1.5 rounded-full border border-slate-300 dark:border-slate-600 hover:border-signal-400 hover:text-signal-500 dark:hover:text-signal-400 transition-colors"
-            >
-              {ex}
-            </button>
-          ))}
-        </div>
         <div>
           <button
             onClick={start}
