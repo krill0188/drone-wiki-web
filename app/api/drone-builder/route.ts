@@ -504,7 +504,14 @@ export async function POST(req: NextRequest) {
             progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })
-            for (let i = 0; i < out.length; i += 600) writer.write({ type: "text-delta", id, delta: out.slice(i, i + 600) })
+            // 600자씩 나누되 이모지(서로게이트 쌍) 중간에서 자르지 않는다
+            for (let i = 0; i < out.length;) {
+              let end = Math.min(out.length, i + 600)
+              const last = out.charCodeAt(end - 1)
+              if (end < out.length && last >= 0xd800 && last <= 0xdbff) end++
+              writer.write({ type: "text-delta", id, delta: out.slice(i, end) })
+              i = end
+            }
             writer.write({ type: "text-end", id })
             writer.write({ type: "finish" })
           } catch (e) {

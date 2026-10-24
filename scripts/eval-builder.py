@@ -42,6 +42,9 @@ bad = [r for r in rows if r["chars"] < 500 or r["err"]] or []
 slow = [r for r in rows if r["sec"] > 240]
 xs = max(r["x"] for r in rows)  # 앞 단계 점검표의 ❌가 다음 단계 본문에 그대로 이어지므로 합계가 아닌 단계별 최댓값으로 판정
 print(f"\n단계 {len(rows)}개 · ❌ 단계별 최대 {xs} · 최장 {max(r['sec'] for r in rows)}초 · 점검표 {sum(1 for r in rows if r['cross'])}단계")
+for r in rows:  # 스트림 조각 경계의 낱개 서로게이트가 남아 있으면 안전하게 정리해 저장한다
+    if "text" in r: r["text"] = r["text"].encode("utf-16", "surrogatepass").decode("utf-16", "replace")
+    r["xlines"] = [x.encode("utf-16", "surrogatepass").decode("utf-16", "replace") for x in r.get("xlines", [])]
 json.dump(rows, open(opt("--out", "eval-builder-result.json"), "w"), ensure_ascii=False, indent=1)
 ok = len(rows) >= 7 and not bad and not slow and xs <= 3
 print("판정:", "통과" if ok else "실패", "" if ok else f"(비어 있음/오류 {len(bad)}, 240초 초과 {len(slow)}, ❌ {xs})")
