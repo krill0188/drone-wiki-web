@@ -14240,7 +14240,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md"
+        "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md",
+        "raw/papers/swarm/when-metadata-betrays-the-mission-learning-to-defend-uav-swarms-with-adaptive-pr.md"
       ]
     },
     {
@@ -18934,7 +18935,9 @@
         "raw/papers/drone-ai/camf-det-closure-aware-multimodal-fusion-for-lidar-camera-3d-object-detection-on.md",
         "raw/papers/drone-ai/joint-resource-management-for-energy-efficient-uav-assisted-swipt-mec-a-deep-rei.md",
         "raw/papers/drone-hw/fault-tolerant-dynamic-task-assignment-for-uav-based-search-teams.md",
-        "raw/papers/swarm/agent-based-simulation-of-uav-battery-recharging-for-iot-applications-precision-.md"
+        "raw/papers/swarm/agent-based-simulation-of-uav-battery-recharging-for-iot-applications-precision-.md",
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md",
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
       ]
     },
     {
@@ -19311,7 +19314,8 @@
       "sources": [
         "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md",
         "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md",
-        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+        "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md",
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
       ]
     },
     {
@@ -20133,7 +20137,8 @@
         "raw/articles/fetch-2026-08-03-betaflight.md",
         "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md",
         "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md",
-        "raw/papers/drone-ai/sea-you-later-metadata-guided-long-term-re-identification-for-uav-based-multi-ob.md"
+        "raw/papers/drone-ai/sea-you-later-metadata-guided-long-term-re-identification-for-uav-based-multi-ob.md",
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
       ]
     },
     {
@@ -23388,7 +23393,8 @@
       "sources": [
         "raw/articles/fetch-2026-07-29-rss-dronedj.md",
         "raw/articles/fetch-2026-07-29-rss-dronelife.md",
-        "raw/articles/fetch-2026-07-29-rss-suasnews-regulation.md"
+        "raw/articles/fetch-2026-07-29-rss-suasnews-regulation.md",
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
       ]
     },
     {
@@ -28119,7 +28125,8 @@
       "ontologyClass": "Hardware",
       "sources": [
         "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md",
-        "raw/papers/swarm/a-modular-energy-aware-framework-for-multicopter-modeling-in-control-and-plannin.md"
+        "raw/papers/swarm/a-modular-energy-aware-framework-for-multicopter-modeling-in-control-and-plannin.md",
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
       ]
     },
     {
@@ -38099,6 +38106,522 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ]
+    },
+    {
+      "id": "Nair Akarsh",
+      "name": "Nair Akarsh",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/when-metadata-betrays-the-mission-learning-to-defend-uav-swarms-with-adaptive-pr.md"
+      ]
+    },
+    {
+      "id": "Peng",
+      "name": "Peng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/when-metadata-betrays-the-mission-learning-to-defend-uav-swarms-with-adaptive-pr.md"
+      ]
+    },
+    {
+      "id": "AERIAL",
+      "name": "AERIAL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ]
+    },
+    {
+      "id": "LLMs",
+      "name": "LLMs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ]
+    },
+    {
+      "id": "Flying Networks",
+      "name": "Flying Networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ]
+    },
+    {
+      "id": "Hybrid edge-cloud UAV control",
+      "name": "Hybrid edge-cloud UAV control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ]
+    },
+    {
+      "id": "UAV Relay",
+      "name": "UAV Relay",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Model Predictive Control",
+      "name": "Model Predictive Control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Backhaul Capacity",
+      "name": "Backhaul Capacity",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "External Communication Network",
+      "name": "External Communication Network",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Disaster Recovery",
+      "name": "Disaster Recovery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Post-Disaster Communication Recovery",
+      "name": "Post-Disaster Communication Recovery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Convex Quadratic Program",
+      "name": "Convex Quadratic Program",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Dynamic Fleet Sizing",
+      "name": "Dynamic Fleet Sizing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "UAV Energy Availability",
+      "name": "UAV Energy Availability",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "Heterogeneous UAV Operation",
+      "name": "Heterogeneous UAV Operation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ]
+    },
+    {
+      "id": "DiffDreamer",
+      "name": "DiffDreamer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "WorldModel",
+      "name": "WorldModel",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "DifferentiableSimulation",
+      "name": "DifferentiableSimulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "ReinforcementLearning",
+      "name": "ReinforcementLearning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "LatentDynamics",
+      "name": "LatentDynamics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "ActorOptimization",
+      "name": "ActorOptimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "CriticDrivenPathway",
+      "name": "CriticDrivenPathway",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "DifferentiableMotionRewards",
+      "name": "DifferentiableMotionRewards",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "AggressiveTracking",
+      "name": "AggressiveTracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "DynamicGateRacing",
+      "name": "DynamicGateRacing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "ModelFreeRL",
+      "name": "ModelFreeRL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "ModelBasedRL",
+      "name": "ModelBasedRL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "DifferentiableRL",
+      "name": "DifferentiableRL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "ClassicalPlanning",
+      "name": "ClassicalPlanning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "ClassicalControl",
+      "name": "ClassicalControl",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "RewardDecomposition",
+      "name": "RewardDecomposition",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "OdometryConditionedRelativeStateRepresentation",
+      "name": "OdometryConditionedRelativeStateRepresentation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "RealWorldFlightExperiments",
+      "name": "RealWorldFlightExperiments",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ]
+    },
+    {
+      "id": "RIS",
+      "name": "RIS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "NOMA",
+      "name": "NOMA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "BS",
+      "name": "BS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "GRIS",
+      "name": "GRIS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "IOS",
+      "name": "IOS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "I2S",
+      "name": "I2S",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "Nakagami_m_fading",
+      "name": "Nakagami_m_fading",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "Double_Nakagami_m_fading",
+      "name": "Double_Nakagami_m_fading",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "SIC",
+      "name": "SIC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
       ]
     }
   ],
@@ -67512,6 +68035,411 @@
       "type": "USES",
       "evidence": [
         "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "AERIAL",
+      "target": "LLMs",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "AERIAL",
+      "target": "Hybrid edge-cloud UAV control",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "AERIAL",
+      "target": "Flying Networks",
+      "type": "INTEGRATES_WITH",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAVs",
+      "target": "Flying Networks",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LLMs",
+      "target": "UAVs",
+      "type": "OPERATES",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model Predictive Control",
+      "target": "UAV",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model Predictive Control",
+      "target": "Backhaul Capacity",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Backhaul Capacity",
+      "target": "UAV",
+      "type": "LIMITS",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Backhaul Capacity",
+      "target": "External Communication Network",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Fleet Sizing",
+      "target": "Post-Disaster Communication Recovery",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dynamic Fleet Sizing",
+      "target": "UAV",
+      "type": "INFORMS",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Energy Availability",
+      "target": "UAV",
+      "type": "LIMITS",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Heterogeneous UAV Operation",
+      "target": "UAV",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FCC",
+      "target": "Disaster Recovery",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Convex Quadratic Program",
+      "target": "Model Predictive Control",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Relay",
+      "target": "External Communication Network",
+      "type": "CONNECTS",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Relay",
+      "target": "Backhaul Capacity",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Relay",
+      "target": "UAV",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "WorldModel",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "DifferentiableSimulation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "CriticDrivenPathway",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "DifferentiableMotionRewards",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "AggressiveTracking",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "DynamicGateRacing",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "RewardDecomposition",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "OdometryConditionedRelativeStateRepresentation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DiffDreamer",
+      "target": "RealWorldFlightExperiments",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DifferentiableSimulation",
+      "target": "Quadrotor",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "WorldModel",
+      "target": "LatentDynamics",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ReinforcementLearning",
+      "target": "ModelFreeRL",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ReinforcementLearning",
+      "target": "ModelBasedRL",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ReinforcementLearning",
+      "target": "DifferentiableRL",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ClassicalPlanning",
+      "target": "ClassicalControl",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "NOMA",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BS",
+      "target": "NOMA",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "RIS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BS",
+      "target": "RIS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "GRIS",
+      "target": "UAV",
+      "type": "CLUSTERS",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "GRIS",
+      "target": "RIS",
+      "type": "ASSIGNS",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IOS",
+      "target": "I2S",
+      "type": "COMPOSES",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "I2S",
+      "target": "GPS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "I2S",
+      "target": "RIS",
+      "type": "REASSIGNS",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RIS",
+      "target": "Nakagami_m_fading",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RIS",
+      "target": "Double_Nakagami_m_fading",
+      "type": "OPERATES_IN",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NOMA",
+      "target": "SIC",
+      "type": "DEPENDS_ON",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
       ],
       "confidence": "unverified"
     }

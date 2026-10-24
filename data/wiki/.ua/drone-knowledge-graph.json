@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "5c8beae2d963363d8722c888ddabf4b5972e7dd447c404a9a571d81c878a6ff7",
+  "source_fingerprint": "f478a3a4fea916ca2a916606a7d725829251c8ef6a2390c60bca83a146f61999",
   "nodes": [
     {
       "id": "6g-isac-matlab-usrp",
@@ -111,6 +111,22 @@
       ],
       "updated": "2026-09-23",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "aerial-mission-aware-llm-selection-flying-networks",
+      "name": "AERIAL: 비행 네트워크용 임무 인지 LLM 선택 프레임워크",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-agent",
+        "voice-control"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -2125,7 +2141,7 @@
         "fpv",
         "hardware"
       ],
-      "updated": "2026-10-07",
+      "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -2358,7 +2374,7 @@
       "updated": "2026-10-19",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "cleveland-clinic-drone-delivery",
@@ -3937,6 +3953,21 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "diffdreamer-world-model-differentiable-simulation",
+      "name": "DiffDreamer: 월드 모델 + 미분 가능 시뮬레이션 쿼드로터 제어",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "digital-twin-intent-drone-networks",
       "name": "Digital Twin for Intent-Based Drone Networks",
       "layer": "Concepts",
@@ -4434,7 +4465,7 @@
       "updated": "2026-10-15",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-delivery-platform-hardware-cases",
@@ -4569,7 +4600,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "drone-hw",
@@ -4630,7 +4661,7 @@
       "updated": "2026-08-10",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-08-01",
@@ -4644,7 +4675,7 @@
       "updated": "2026-08-06",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-08-20",
@@ -4661,7 +4692,7 @@
       "updated": "2026-08-20",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-03",
@@ -4676,7 +4707,7 @@
       "updated": "2026-09-03",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-04",
@@ -4691,7 +4722,7 @@
       "updated": "2026-09-04",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-05",
@@ -4707,7 +4738,7 @@
       "updated": "2026-09-05",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-06",
@@ -4722,7 +4753,7 @@
       "updated": "2026-09-06",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-09",
@@ -4737,7 +4768,7 @@
       "updated": "2026-09-09",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-10",
@@ -4752,7 +4783,7 @@
       "updated": "2026-09-10",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-11",
@@ -4767,7 +4798,7 @@
       "updated": "2026-09-11",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-09-12",
@@ -4782,7 +4813,7 @@
       "updated": "2026-09-12",
       "confidence": "high",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-03",
@@ -4797,7 +4828,7 @@
       "updated": "2026-10-03",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-07",
@@ -4812,7 +4843,7 @@
       "updated": "2026-10-07",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-08",
@@ -4828,7 +4859,7 @@
       "updated": "2026-10-08",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-09",
@@ -4844,7 +4875,7 @@
       "updated": "2026-10-09",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-10",
@@ -4860,7 +4891,7 @@
       "updated": "2026-10-10",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-11",
@@ -4875,7 +4906,7 @@
       "updated": "2026-10-11",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-12",
@@ -4890,7 +4921,7 @@
       "updated": "2026-10-12",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-13",
@@ -4906,7 +4937,7 @@
       "updated": "2026-10-13",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-14",
@@ -4922,7 +4953,7 @@
       "updated": "2026-10-14",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-15",
@@ -4938,7 +4969,7 @@
       "updated": "2026-10-16",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-16",
@@ -4954,7 +4985,7 @@
       "updated": "2026-10-16",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-17",
@@ -4970,7 +5001,7 @@
       "updated": "2026-10-17",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-18",
@@ -4986,7 +5017,7 @@
       "updated": "2026-10-18",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-19",
@@ -5000,7 +5031,7 @@
       "updated": "2026-10-19",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-20",
@@ -5015,7 +5046,7 @@
       "updated": "2026-10-21",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-21",
@@ -5030,7 +5061,7 @@
       "updated": "2026-10-21",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-22",
@@ -5045,7 +5076,7 @@
       "updated": "2026-10-22",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-2026-10-23",
@@ -5060,7 +5091,22 @@
       "updated": "2026-10-23",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
+    },
+    {
+      "id": "drone-news-2026-10-24",
+      "name": "드론 업계 주요 소식 (2026-10-24)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission",
+        "regulations"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-hardware",
@@ -5074,7 +5120,7 @@
       "updated": "2026-09-24",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Technology"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-ops",
@@ -5088,7 +5134,7 @@
       "updated": "2026-09-24",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "Mission"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-news-regulations",
@@ -5102,7 +5148,7 @@
       "updated": "2026-09-24",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": "AbstractProcess"
+      "ontologyClass": "NewsDigest"
     },
     {
       "id": "drone-payload-datalink-product-specs-catalog",
@@ -5452,6 +5498,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "dynamic-fleet-sizing-uav-relays-post-disaster-mpc",
+      "name": "재난 후 이종 UAV 중계기의 동적 가동 대수 결정 (MPC)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "ops-mission"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "e-rocket-tvc-gnc-testbed",
@@ -9730,6 +9791,22 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "potensic-atom-2",
+      "name": "Potensic ATOM 2 (UAV Coach 리뷰)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "drone-hw",
+        "regulations"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "precise-beni-rtk-ppk-uav-total-station-sensors-2026",
       "name": "RTK and PPK GNSS Positioning Accuracy Assessment for UAVs Using a PPS-Synchronized Robotic Total Station",
       "layer": "Concepts",
@@ -10414,6 +10491,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Battery"
+    },
+    {
+      "id": "ris-assisted-clustered-uav-noma-bilevel-optimization",
+      "name": "RIS 보조 군집형 UAV-NOMA 망의 outage 분석과 이중 최적화",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-10-24",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ris-secure-uav-communications",
@@ -12152,7 +12243,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-camera",
@@ -12167,7 +12258,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-compute",
@@ -12182,7 +12273,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-datalink",
@@ -12197,7 +12288,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-esc",
@@ -12212,7 +12303,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-fc",
@@ -12227,7 +12318,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-frame",
@@ -12242,7 +12333,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-gcs-hw",
@@ -12257,7 +12348,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-gnss-imu",
@@ -12272,7 +12363,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-gnss-receivers",
@@ -12288,7 +12379,7 @@
       "updated": "2026-10-24",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-lidar",
@@ -12303,7 +12394,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-motor",
@@ -12318,7 +12409,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-payload-mech",
@@ -12333,7 +12424,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-power-charger",
@@ -12348,7 +12439,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-propeller",
@@ -12363,7 +12454,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vendor-registry-radar",
@@ -12378,7 +12469,7 @@
       "updated": "2026-10-17",
       "confidence": "medium",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "VendorRegistry"
     },
     {
       "id": "vertical-pinching-antenna-systems",
@@ -14558,6 +14649,33 @@
         "inbox/processed/fetch-2026-09-23-rss-suasnews.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "aerial-mission-aware-llm-selection-flying-networks",
+      "target": "llm-enabled-uav-natural-language-navigation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "aerial-mission-aware-llm-selection-flying-networks",
+      "target": "vlm-copilot-uav-navigation-latency-reliability",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "aerial-mission-aware-llm-selection-flying-networks",
+      "target": "aero-llm-framework",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/voice-control/aerial-mission-aware-llm-selection-for-language-driven-uav-control-in-flying-net.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "aero-llm-framework",
@@ -20584,6 +20702,33 @@
       "confidence": "medium"
     },
     {
+      "source": "diffdreamer-world-model-differentiable-simulation",
+      "target": "agile-quadrotor-learning",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "diffdreamer-world-model-differentiable-simulation",
+      "target": "rl-quadrotor-tunable-control",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "diffdreamer-world-model-differentiable-simulation",
+      "target": "skyjepa-world-models",
+      "type": "related",
+      "evidence": [
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "digital-twin-intent-drone-networks",
       "target": "datalink-communication",
       "type": "related",
@@ -23898,6 +24043,87 @@
       "confidence": "low"
     },
     {
+      "source": "drone-news-2026-10-24",
+      "target": "drone-news-2026-10-23",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "drone-regulations",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "amazon-prime-air-expansion-2026",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "michigan-aam-projects",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "drone-first-responder-dfr",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "dji",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "fpv-hardware",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-24",
+      "target": "betafpv-p1-digital-fpv-system",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "drone-news-hardware",
       "target": "flight-controller-hardware",
       "type": "related",
@@ -25114,6 +25340,33 @@
         "inbox/fetch-2026-09-18-arxiv-context-aware-operational-security-for-autonomous-drones.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "dynamic-fleet-sizing-uav-relays-post-disaster-mpc",
+      "target": "kci-disaster-response-drone-tech-direction",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "dynamic-fleet-sizing-uav-relays-post-disaster-mpc",
+      "target": "unet-multi-uav-networking",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "dynamic-fleet-sizing-uav-relays-post-disaster-mpc",
+      "target": "xai-uav-relay-6g-terahertz",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "e-rocket-tvc-gnc-testbed",
@@ -33392,6 +33645,33 @@
       "confidence": "medium"
     },
     {
+      "source": "potensic-atom-2",
+      "target": "faa-249-gram-registration-rule",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-yt-potensic-atom-2-the-best-budget-drone-for-beginners.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "potensic-atom-2",
+      "target": "dji-mini-5-pro",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-yt-potensic-atom-2-the-best-budget-drone-for-beginners.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "potensic-atom-2",
+      "target": "dji-neo-2-rth",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-24-yt-potensic-atom-2-the-best-budget-drone-for-beginners.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "precise-beni-rtk-ppk-uav-total-station-sensors-2026",
       "target": "gnss-engineering-hub",
       "type": "wikilink",
@@ -34583,6 +34863,33 @@
         "inbox/processed/fetch-2026-09-25-rss-dronelife.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "ris-assisted-clustered-uav-noma-bilevel-optimization",
+      "target": "uav-irs-dqn-power-allocation-6g",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "ris-assisted-clustered-uav-noma-bilevel-optimization",
+      "target": "ris-secure-uav-communications",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "ris-assisted-clustered-uav-noma-bilevel-optimization",
+      "target": "fluid-antenna-system",
+      "type": "related",
+      "evidence": [
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "ris-secure-uav-communications",

@@ -8486,5 +8486,95 @@
       "faa-airspace-classes-drone-authorization",
       "uk-caa-airspace-architecture"
     ]
+  },
+  "https://www.youtube.com/watch?v=Xs2nlZzw-yQ": {
+    "processedAt": "2026-10-23T22:57:48.973Z",
+    "matchedSlugs": [
+      "betafpv-p1-digital-fpv-system",
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://www.youtube.com/watch?v=TMgSQdrNJ4s": {
+    "processedAt": "2026-10-23T22:57:48.981Z",
+    "matchedSlugs": [
+      "dji-osmo-pocket-4p-stabilization",
+      "dji-mavic-4-pro-features"
+    ]
+  },
+  "https://www.youtube.com/watch?v=5CI2kSNjBDM": {
+    "processedAt": "2026-10-23T22:57:48.955Z",
+    "matchedSlugs": [
+      "indi-stability-tilt-rotor-vtol",
+      "potensic-atom-2"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/gov-whitmer-awards-1-7m-to-launch-12-advanced-air-mobility-projects-statewide-12-pilot-projects-will-demonstrate-advanced-air-mobility-technologies-in-real-world-applications-across-michigan/": {
+    "processedAt": "2026-10-23T22:57:49.004Z",
+    "matchedSlugs": [
+      "michigan-aam-projects",
+      "precise-cerreta-ebee-rtk-ppk-base-distance-ijaaa-2023"
+    ]
+  },
+  "https://www.youtube.com/watch?v=vSzRW5XIy9s": {
+    "processedAt": "2026-10-23T22:57:48.989Z",
+    "matchedSlugs": [
+      "data-anomaly-resam-islam-2022"
+    ]
+  },
+  "https://www.youtube.com/watch?v=dEnuUrUS0Js": {
+    "processedAt": "2026-10-23T22:57:48.995Z",
+    "matchedSlugs": [
+      "dji-mavic-4-pro-features"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/allient-defense-receives-best-in-show-award-at-ausa-2026/": {
+    "processedAt": "2026-10-23T22:57:49.010Z",
+    "matchedSlugs": [
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://dronelife.com/2026/10/23/faa-vertiport-design-standards-2026/": {
+    "processedAt": "2026-10-23T22:57:49.016Z",
+    "matchedSlugs": [
+      "conv-isac-mec-peng-2024"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/building-the-autonomous-warfare-command-drpm-uxs/": {
+    "processedAt": "2026-10-23T22:57:49.022Z",
+    "matchedSlugs": [
+      "ai-latency-vision-in-the-loop-wickramasuriya-2026"
+    ]
+  },
+  "https://dronelife.com/2026/10/23/amazon-drone-delivery-westborough-state-review/": {
+    "processedAt": "2026-10-23T22:57:49.031Z",
+    "matchedSlugs": [
+      "amazon-mk30-safety-incident"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/quantum-systems-demonstrates-integrated-multi-domain-operations-at-forward-edge-2026/": {
+    "processedAt": "2026-10-23T22:57:49.037Z",
+    "matchedSlugs": [
+      "drone-news-ops"
+    ]
+  },
+  "https://www.suasnews.com/2026/10/chuyka-4-5-0/": {
+    "processedAt": "2026-10-23T22:57:49.041Z",
+    "matchedSlugs": [
+      "ai-latency-vision-in-the-loop-wickramasuriya-2026"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUjZ6eDkwLTNIa1ZpUURHZndtNnpJdmRzcU9QYW5fcU9jYk9OR0ZxMWxyTG9abldhdTBWbzlEeElhY3NKTEdLSjgzSFQzN0xuUXZEMTVDQVUzR2JqbTJkdURULVBVcm1fSUVRcVNKQVF4TlRvb2Y3VGFVVTVnc1dIN3BXSnMtMjdLYVplUHdMb3RzTzlPSVVYU0hGeFFIV3J6dUlWbGVRV2I?oc=5": {
+    "processedAt": "2026-10-23T22:57:49.051Z",
+    "matchedSlugs": [
+      "drone-news-ops",
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://www.youtube.com/watch?v=6KirnJZtQms": {
+    "processedAt": "2026-10-23T22:57:49.062Z",
+    "matchedSlugs": [
+      "data-flightlog-rosbag2",
+      "ros2-drone-integration"
+    ]
   }
 }
