@@ -168,7 +168,7 @@ INSERT INTO meta (key,value) VALUES ('count_ontology_nodes','2323');
 INSERT INTO meta (key,value) VALUES ('count_ontology_relations','4584');
 INSERT INTO meta (key,value) VALUES ('count_products','694');
 INSERT INTO meta (key,value) VALUES ('count_sources','4120');
-INSERT INTO meta (key,value) VALUES ('input_fingerprint','708f573072c6a0eaf74138fcba74865083829c8334da39260e73842397862a89');
+INSERT INTO meta (key,value) VALUES ('input_fingerprint','c26a12873da59cfcc6a345ecc06aa15b67fe11846b9c5a8737326f41f8cd615a');
 INSERT INTO meta (key,value) VALUES ('schema_version','1');
 INSERT INTO meta (key,value) VALUES ('source_root_used','True');
 INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:comparisons/fc-firmware-comparison.md','comparisons/fc-firmware-comparison.md','FPV 드론 FC 펌웨어 비교: Betaflight vs INAV vs ArduPilot','comparison','flight-control','active','f5ed637330c16c3f28c6c2775580372e3dbcf6898bcd0fb450d2676444ca5144','2026-08-09','2026-08-09',1,NULL,NULL,'medium',0,'[]',NULL,'
@@ -523,7 +523,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[rem]] — REM (ALSO_KNOWN_AS)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/3d-reconstruction.md','concepts/3d-reconstruction.md','3D Reconstruction','concept',NULL,'active','87103744ccb77dc20816aab1d04db6caa38961eab42c0cc1d1ea4d471659aaf6','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/3d-reconstruction.md','concepts/3d-reconstruction.md','3D Reconstruction','concept','ai-autonomy','active','2ebf5086458e900cc861c60e1c2a4bd87e5913e5fd521395dcff3666cf135f06','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # 3D Reconstruction
 
 ## 정의
@@ -756,7 +756,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - 세계 방산 스타트업 투자 급증…드론·AI가 안보산업 판도 바꾼다 (드론매거진 뉴스, Tue, 06 Oc) — https://news.google.com/rss/articles/CBMiZEFVX3lxTFA1ZC1iLVlyLUlXMHNuMzlsSENLX1ptTlBYNko0c05ZWEJyT2lpZ09tbHNRalJ4MHJyOGpLNGEwOWI5MVJVNThaMFNoYzRoQUtjdnhEeU14ZGZQbHdQU05YbjhGZHU?oc=5
 - 이천서 첨단드론대전 개최…해외·국내 방산기업 대거 참여 (팔당유역신문, Tue, 13 Oc) — https://news.google.com/rss/articles/CBMia0FVX3lxTFBrRXE4Y0Iza1NRNHRUYU1OM2RiNXpGOHZ5UDRpQ3lqSFhUMnlRXzhCSXo5dVlDVnhIUk91bnFxSFRDUHlvVUtQWUFsNUJFYk9Wb2hHdHprLUcyZ2VteTFrUW5lT1FWLURVNUVn?oc=5
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/6g.md','concepts/6g.md','6G','concept',NULL,'active','3fb0b0d3b8a4433853a355ea8dbd686e0ff389b464d43282af5e652c874d07c3','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/6g.md','concepts/6g.md','6G','concept','ai-autonomy','active','54a64a69a770033d3541e48a88caf3f4534baf7d9270b9efbf261be3cf994be6','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # 6G
 
 ## 정의
@@ -2015,7 +2015,7 @@ AeroEval은 멀티로터 UAV 설계를 위한 물리 기반 다학문 설계 최
 ## 📰 최근 관련 소식
 - 토토 과자 : 실제 경험자들의 조언 (Platea Magazine, Fri, 28 Au) — https://news.google.com/rss/articles/CBMioAJBVV95cUxPUFcxU3RDMlltWFg4OUx4VFY5WHJYY0xFVjZnT1dZT0tNV2xld21qZGJpS1dLczNQcTJzWlIyRGp0S3hzYnc5a0F4TzljM05icHpmNnhZYVJXWGxscHV5eEJOUkxfRVlqYnJwMlFtZmk3ODNuaHhnR1FyZnlEWlo5bjJ6ZnVEUFJZWHh1aEhqSVRKQXQtM3VKdEgtWFdOVTlDRDdLRkhTMW9yU3FBSkVVUGZHWjhkRXZzMU9IeVVQWFNKLXF5S0N2Uk5UZ0gtdUhiS1N4SjM0LUEteXpfMy1YaEt6c0hvVUpyQ1luS1hWODI1aTdVa2N6RzZ5NDA3d0lqVzBheHNESU1rSVBEMEVDWXM3OUkwdjdpV2lYRU9qMU8?oc=5
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/aeroeval.md','concepts/aeroeval.md','Aeroeval','concept',NULL,'active','0d6026c9e3d0e1996a281d9f382bb16c41ad4243fe7e1f91115bb2ba5deebe7d','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/aeroeval.md','concepts/aeroeval.md','Aeroeval','concept','hardware','active','de46b94e05532a6608fddd19e8a9b36b6eec7d32305be86f8254592b780b6909','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Aeroeval
 
 ## 정의
@@ -18919,7 +18919,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[dqn-based-noma-power-allocation-scheme]] — DQN-based NOMA power allocation scheme (USES)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/deep-reinforcement-learning.md','concepts/deep-reinforcement-learning.md','Deep Reinforcement Learning','concept',NULL,'active','271b85806563fe8e2ad4c0e5c112f529ded381f942f9110a9c53aeaea0c3279b','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/deep-reinforcement-learning.md','concepts/deep-reinforcement-learning.md','Deep Reinforcement Learning','concept','ai-autonomy','active','b5632ff1a1bb49e7d081cecb75170d19275c1e462f31b9390bdadc3d6f25dcef','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Deep Reinforcement Learning
 
 ## 정의
@@ -18976,7 +18976,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[auto-hub-concept]] — 자동 추출 분류: 개념
 - [[auto-hub-source-papers]] — 출처 유형: 논문
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/deformable-convolution.md','concepts/deformable-convolution.md','Deformable Convolution','concept',NULL,'active','e9daeb54393fcd6de435db0dbaa2641c8d11e623959785959749d6c12fd70517','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/deformable-convolution.md','concepts/deformable-convolution.md','Deformable Convolution','concept','ai-autonomy','active','6a9e58e3db5586ab6ea30beea0781fd064fa59773e88c4c5c66bdb5d1e6fb92c','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Deformable Convolution
 
 ## 정의
@@ -19247,7 +19247,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[faa-regulations]] — ENFORCES
 - [[uas-regulations]] — ENFORCES
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/detr.md','concepts/detr.md','Detr','concept',NULL,'active','927288fc1d6444c252a8a95e062fecb9f92d96fbbfc3d1c3d1523075928bab34','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/detr.md','concepts/detr.md','Detr','concept','ai-autonomy','active','0023cf29aeda2176e6ce06a7d78ae319b286ddd0386e5ce653f8bbbbe9a2c22b','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Detr
 
 ## 정의
@@ -24708,7 +24708,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[rgb-observations]] — CONTAINS
 - [[dronewam]] — TRAINS_ON
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/dronevehicle-dataset.md','concepts/dronevehicle-dataset.md','Dronevehicle Dataset','concept',NULL,'active','cd994efcf4f61bcb2af2877b32dbc19aed622d547c8b36da22a264c852dab094','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/dronevehicle-dataset.md','concepts/dronevehicle-dataset.md','Dronevehicle Dataset','concept','ai-autonomy','active','2ce61a1582a2b77afb4870efd6c9a5d934b3537e04c1c67b16fe17ec5bd524f9','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Dronevehicle Dataset
 
 ## 정의
@@ -29014,7 +29014,7 @@ Flytrex가 댈러스에서 매장(가맹점) 옥상에 드론을 미리 배치�
 ## 📰 최근 관련 소식
 - 중국, 스카버러 암초에 고고도 정찰드론 WZ-7 첫 배치 (동아일보, Tue, 29 Se) — https://news.google.com/rss/articles/CBMic0FVX3lxTE1rUGM0ZnlvR2RLekdnWTZuaG9aUG11aVRycldsbW5wVGFjVTVmSGtLYXkyUVdEQXktMnNTbWE2Vy1WSnVrcWZiNS12eW5SX0NoU0twNkpEc2Vad1FjZzVsZlJZYmprdnVnQk50WC1UdWpIMk3SAWZBVV95cUxOUDc0MDY2eFJULUFTc3VXaUhURVREZDVmRGxHc25WRS1pWlk2TkxIRXd1RTRfVmhpbDNqTkZxMWluNERnSDBvUWVUeV9uRFJOSGVlWVFaUlZLdDRINkpzVFBTUllMSlE?oc=5
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/focaler-siou.md','concepts/focaler-siou.md','Focaler-Siou','concept',NULL,'active','c7860d8c6edf5b361354118fafec0d1249a0e24845e6cc02cd3a6bf6a618ee4a','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/focaler-siou.md','concepts/focaler-siou.md','Focaler-Siou','concept','ai-autonomy','active','9b49ea044867450e28c10354ee6c777d8ba1ee23d6a8368013bedecb54883843','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Focaler-Siou
 
 ## 정의
@@ -34957,7 +34957,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 Yue Xiu et al., arXiv:2409.14431 (2024)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/isac.md','concepts/isac.md','Isac','concept',NULL,'active','a379fac32beedd48480dd2b76ffe2ad05d8205f9e4b1f2c0e5caa3a5bd5c42c2','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/isac.md','concepts/isac.md','Isac','concept','rf-datalink-engineering','active','a739d98fbfa3a46367e0b0aa78d26ac167005a776c86e410b14ca1c0933e8645','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Isac
 
 ## 정의
@@ -48299,7 +48299,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[dmoa]] — DMoA (CO_AUTHORED)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mape.md','concepts/mape.md','Mape','concept',NULL,'active','66bde1fc08ac21520e7b8597d4537d7cd802d1ce50845d255439accabf4369a0','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mape.md','concepts/mape.md','Mape','concept','hardware','active','4967269ec52dd69cf4e0bbdbc5db3891f0fa091be0726416313083f25dd8342d','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Mape
 
 ## 정의
@@ -50550,7 +50550,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[reinforcement-learning]] — SPECIALIZES
 - [[sac]] — IMPLEMENTS
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/maximum-takeoff-weight.md','concepts/maximum-takeoff-weight.md','Maximum Takeoff Weight','concept',NULL,'active','2ad9dca8c31c0f48d58344bd292d0cc05d2a92de17977814bf9d157ddbed1587','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/maximum-takeoff-weight.md','concepts/maximum-takeoff-weight.md','Maximum Takeoff Weight','concept','hardware','active','f23b847e16b6fe6c89e2bcf99e8d9bdfbb70f2b5324796da9dc3f1997c0b8a42','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Maximum Takeoff Weight
 
 ## 정의
@@ -50704,7 +50704,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[px4]] — Px4 (MODULE_OF)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mcp.md','concepts/mcp.md','Mcp','concept',NULL,'active','8c49a92b6662f52065ae6ade9fae5ec34450af08223efd519d3b38855c65c431','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]','CommunicationProtocol','
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mcp.md','concepts/mcp.md','Mcp','concept','swarm-multiagent','active','4c9546d1a82057416cb3c99f1fc18b4abff175ad3185da2329ac8fd68e4180dd','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]','CommunicationProtocol','
 # Mcp
 
 ## 정의
@@ -50745,7 +50745,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[uav]] — UAV (USED_FOR)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mdo.md','concepts/mdo.md','Mdo','concept',NULL,'active','09fd70331a6beded5020d32273e0b78882f54c5bb61140ba34544cbd08cd15b3','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mdo.md','concepts/mdo.md','Mdo','concept','hardware','active','a16aad9fc8ee2acce23ef97ca66252c13392c12671bc109717de24b06fc33cdd','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Mdo
 
 ## 정의
@@ -50805,7 +50805,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[uav-assisted-networks]] — USES
 - [[uav-assisted-swipt-mec-system]] — USES
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/median-frequency-feature-fusion.md','concepts/median-frequency-feature-fusion.md','Median-Frequency Feature Fusion','concept',NULL,'active','43a0310906c8dbedceef6eb1f933cfade3a6ef406d5a31cabc26244569cc233a','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/median-frequency-feature-fusion.md','concepts/median-frequency-feature-fusion.md','Median-Frequency Feature Fusion','concept','ai-autonomy','active','fb9469b55dffafee97ad4e6a5bea104c21d0856ed21b43e2f4dfa342eb168a07','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Median-Frequency Feature Fusion
 
 ## 정의
@@ -51090,7 +51090,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[swarm-intelligence]] — Swarm Intelligence (BASED_ON)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mfff-module.md','concepts/mfff-module.md','Mfff Module','concept',NULL,'active','407bea8ff8f1c10c90e66296a572814750be15a35b417d7ccb82a6afcdeefd76','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mfff-module.md','concepts/mfff-module.md','Mfff Module','concept','ai-autonomy','active','7a107a9f71fe1eda4874a5430fcecd76c2414dd837a6d5a37951c0a1904b50d0','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Mfff Module
 
 ## 정의
@@ -52697,7 +52697,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[ecdh]] — USES
 - [[nc2s]] — USES
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mtow.md','concepts/mtow.md','Mtow','concept',NULL,'active','5702c707bf68d735d046415164c1e90c1001481529bf49040d5fddaf00995d5c','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/mtow.md','concepts/mtow.md','Mtow','concept','hardware','active','fca0522e43c4d826ab5b62ae9c723d89c17e9b59ab0f2bef6308583d7d758fe5','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Mtow
 
 ## 정의
@@ -53127,7 +53127,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[uavs]] — UAVs (IS_A)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/multidisciplinary-design-optimization.md','concepts/multidisciplinary-design-optimization.md','Multidisciplinary Design Optimization','concept',NULL,'active','6622c300a6874ab18d7614ecc9dcdf1c0215141dbfbab73af8e0dfe0c66d03f2','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/multidisciplinary-design-optimization.md','concepts/multidisciplinary-design-optimization.md','Multidisciplinary Design Optimization','concept','hardware','active','cde845beb3cdca955d5693568e1ab68c545174ccff43deb03910439a47f92d5a','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Multidisciplinary Design Optimization
 
 ## 정의
@@ -54419,7 +54419,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[uavd-mamba]] — Uavd-Mamba (COMPARED_WITH)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/object-detection.md','concepts/object-detection.md','Object Detection','concept',NULL,'active','a69e7e77fe5188db129e2d3ff7f835f45dd2d1f8ef753a00397dfc1f10ece15e','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/object-detection.md','concepts/object-detection.md','Object Detection','concept','ai-autonomy','active','3c11dd5964ca1945fc917c3bf187392c539cd75e52cb63138339560688b96a4c','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Object Detection
 
 ## 정의
@@ -55812,7 +55812,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[physai-bench]] — PhysAI-Bench (INCLUDES)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/padf-module.md','concepts/padf-module.md','Padf Module','concept',NULL,'active','5f31c5e331e60e814de5199b44e1284ca423dba27d2e5fdd1973ff27905bd996','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/padf-module.md','concepts/padf-module.md','Padf Module','concept','ai-autonomy','active','ce7837845314bcb46cd8afa389220e46c129ee62196b7aa6727d915b1536087d','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Padf Module
 
 ## 정의
@@ -58943,7 +58943,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[microphones]] — microphones (LOCATED_NEAR)
 - [[signal-to-noise-ratios-snrs]] — signal-to-noise ratios (SNRs) (AFFECTS)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/proximal-policy-optimization.md','concepts/proximal-policy-optimization.md','Proximal Policy Optimization','concept',NULL,'active','8582d9bcddf5cea6544d5b755a1b19a48ec1e1911f78d9d098b7a1d4e03ce3d1','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/proximal-policy-optimization.md','concepts/proximal-policy-optimization.md','Proximal Policy Optimization','concept','ai-autonomy','active','c692cfad818fa8036598c8503d809db3bed1c0258d8217ba5b6f0334911258dd','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Proximal Policy Optimization
 
 ## 정의
@@ -59077,7 +59077,7 @@ PT-DETR은 영상(RGB) 기반 소형 객체 탐지 계열이다. 같은 "소형 
 
 - Huo & Wang, "PT-DETR: Small Target Detection Based on Partially-Aware Detail Focus", arXiv:2510.26630, 2025.
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/pt-detr.md','concepts/pt-detr.md','Pt-Detr','concept',NULL,'active','4909c1303383a8afcd19112f5d689bc95965c22ff1373c0abf5c3110d63afed9','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/pt-detr.md','concepts/pt-detr.md','Pt-Detr','concept','ai-autonomy','active','af8b691e174cacbc78145f6e3d8b9dc4a4943d7e85639cd6a12d3aadd03363cc','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Pt-Detr
 
 ## 정의
@@ -61402,7 +61402,7 @@ Xun Huang의 arXiv 논문(2026-09-09 게재). 강화학습 쿼드로터 제어�
 - Expert Systems with Applications 수록 예정(2027)의 "Wind-aware deep reinforcement learning for autonomous UAV navigation without GPS/GNSS position feedback and visual perception"은 제목상 GPS/GNSS 위치 피드백과 시각 인지 없이 바람을 고려한 DRL 항법을 다룬다. 초록이 수집되지 않아 방법·결과는 확인할 수 없고, 이 페이지의 "충실도보다 제어 권한" 결론을 지지하거나 반박하는 근거로는 쓰지 않는다(contested 아님).^[raw/papers/drone-ai/wind-aware-deep-reinforcement-learning-for-autonomous-uav-navigation-without-gps.md]
 - 항법 쪽 RL: [[hierarchical-rl-uav-navigation]], 비GPS 항법 비교: [[visual-slam-gps-denied-evaluation]]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/quadrotor.md','concepts/quadrotor.md','Quadrotor','concept',NULL,'active','b803e1fae8e2f531f91d9d5375a71a5e4b1b5b8a7319be22bb50382dba634ef0','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/quadrotor.md','concepts/quadrotor.md','Quadrotor','concept','ai-autonomy','active','fe5c66dc9275e16ca832029bc47f18ccb2380fc10ae4e50dcbbf7276dbffeb3f','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Quadrotor
 
 ## 정의
@@ -62621,7 +62621,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[drone-visual-navigation]] — SUPPORTS
 - [[dronenav-6d]] — CONTAINS
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/rgb.md','concepts/rgb.md','Rgb','concept',NULL,'active','1f6e88e9c84281b2c3047b6143daa061e819e8d6ca056edf0065594d4ba1e1f5','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/rgb.md','concepts/rgb.md','Rgb','concept','ai-autonomy','active','f1eb343ff42e9061e11f9c6396932c65ce2c67f7c8fddb43ff487fc6f54d5ac6','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Rgb
 
 ## 정의
@@ -62883,7 +62883,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[pixhawk]] — Pixhawk (CONTAINS)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/rmse.md','concepts/rmse.md','Rmse','concept',NULL,'active','ca02900a37ebbb39d83937b7f7cbcdf491bb888d217bc49b643d56f4c5740cb1','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/rmse.md','concepts/rmse.md','Rmse','concept','hardware','active','5873e318286afb908087b380ca8138253523ab5d800891d4653416584e2b2697','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Rmse
 
 ## 정의
@@ -64404,7 +64404,7 @@ ArXiv paper (2025-09-11) introducing RT-DETR++ with enhanced encoder for UAV ima
 ## 📰 최근 관련 소식
 - RT-DETR++ for UAV Object Detection (arxiv.org, 2025-09-11) — http://arxiv.org/abs/2509.09157v1
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/rt-detr.md','concepts/rt-detr.md','Rt-Detr','concept',NULL,'active','3e3c11758874d3794ecd6809929793b9fcc946e2dce5a021cf1e4be3a8f61269','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/rt-detr.md','concepts/rt-detr.md','Rt-Detr','concept','ai-autonomy','active','f110a6c8bc7a3ef5f1288132223692dc91e892dcbeb5a1f0853db5b69bda0b3e','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Rt-Detr
 
 ## 정의
@@ -72939,7 +72939,7 @@ UAV 다중분광 영상은 해안 수역의 센티미터급 관찰을 가능하�
 
 부산대학교 백승일, Ocean Science Journal (2026)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/uav-object-detection.md','concepts/uav-object-detection.md','Uav Object Detection','concept',NULL,'active','336666a725a9781c886695ec7c56338e8085b432d6dcb21857674a412759212b','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/uav-object-detection.md','concepts/uav-object-detection.md','Uav Object Detection','concept','ai-autonomy','active','1c8fa89425b2bd2ab011c5a4cd8901896786a86a495c6311375dd2b44d1896d5','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Uav Object Detection
 
 ## 정의
@@ -73413,7 +73413,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[uav-object-detection]] — ADDRESSES
 - [[dronevehicle-dataset]] — EVALUATED_ON
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/uavdt.md','concepts/uavdt.md','Uavdt','concept',NULL,'active','383ee568ad99fa44758388d7540e0e64b42b60ea3a7895501771ec1fc951b364','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]','Mission','
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/uavdt.md','concepts/uavdt.md','Uavdt','concept','ai-autonomy','active','19b126efd810c697956cf488d15b4980059558a69c1b0440733084a9bc07659c','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]','Mission','
 # Uavdt
 
 ## 정의
@@ -75687,7 +75687,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[robust-fixed-time-sliding-mode-guidance-strategy]] — SUPPORTS
 - [[equivalent-agent-guidance]] — USES
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/visdrone2019.md','concepts/visdrone2019.md','Visdrone2019','concept',NULL,'active','8525256d5906f1482da001427e2225cc77032eb9666047f47e238b046aab5090','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/visdrone2019.md','concepts/visdrone2019.md','Visdrone2019','concept','ai-autonomy','active','750f11cbf2f30008254a1ce292942c6d1f08b231becbcbb7742936880347b7b2','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Visdrone2019
 
 ## 정의
@@ -75946,7 +75946,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[icd-net]] — Icd-Net (USES)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/visual-perception.md','concepts/visual-perception.md','Visual Perception','concept',NULL,'active','15e695d2ea7419a7ae4891a8e2c7bafc3dcf6f2029136c1b003ac65a16ef798d','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/visual-perception.md','concepts/visual-perception.md','Visual Perception','concept','ai-autonomy','active','a48896c3581116612eb3812419ae9cdfb2b8b4d946a1d945da024aa90fe7acd9','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Visual Perception
 
 ## 정의
@@ -76477,7 +76477,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[drone-agent]] — Drone Agent (SUPPORTS)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/vlms.md','concepts/vlms.md','Vlms','concept',NULL,'active','f91c69feaf6a0dd98051ceeccccee3417de65246673daa435019b8b0bce72b99','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/vlms.md','concepts/vlms.md','Vlms','concept','ai-autonomy','active','450cf41a0960172723e9308e00be14fdb38573931a51dcdbec1eb05546d4b62e','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Vlms
 
 ## 정의
@@ -76498,7 +76498,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[vision-language-models]] — Vision-Language Models (ALIAS)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/vln.md','concepts/vln.md','Vln','concept',NULL,'active','80c7c95e42d66295c7571b44dae86a6ab8f9133d45e192461babafeddd4bfcf4','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/vln.md','concepts/vln.md','Vln','concept','ai-autonomy','active','f32ad6945b5a9d4b2371a7f7b7e36fb806b46a1007b3a542dce9ec27079fd889','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Vln
 
 ## 정의
@@ -76798,7 +76798,7 @@ Elements를 선정했다. Vulcan은 노스캐롤라이나에서 이미 자석을
 - [[china-drone-export-controls]] — 중국 드론 수출 통제
 - [[epropelled]] — 미국 드론 추진 시스템 제조사
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/w3c-web-of-things.md','concepts/w3c-web-of-things.md','W3C Web Of Things','concept',NULL,'active','eaca84f3305308aa3b594db9eec047fba8995e1fc4b04e086dd25c62df573789','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]','CommunicationProtocol','
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/w3c-web-of-things.md','concepts/w3c-web-of-things.md','W3C Web Of Things','concept','swarm-multiagent','active','7a983e5ea2497e72ac962be02e399e2f309c4bd9304e482f9c09713170592546','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]','CommunicationProtocol','
 # W3C Web Of Things
 
 ## 정의
@@ -77808,7 +77808,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 
 - [[chae-woo-nam]] — Chae Woo NAM (AFFILIATED_WITH)
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/wot.md','concepts/wot.md','Wot','concept',NULL,'active','dd70b9106923dcd20edd402646698aab3cc7b9d32a7f5de7084c0edd7134c2d5','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]','CommunicationProtocol','
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/wot.md','concepts/wot.md','Wot','concept','swarm-multiagent','active','dec822a1df3fadc2e5b23616ad8bbee811460760a63a3b12ec47f2c2eba2027f','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]','CommunicationProtocol','
 # Wot
 
 ## 정의
@@ -81325,7 +81325,7 @@ UAV 촬영 이미지의 작은 객체 탐지를 위한 적응형 줌인 프레�
 
 Tao Wang et al., "Adaptive Image Zoom-in with Bounding Box Transformation for UAV Object Detection", arXiv:2602.07512, 2026. ^[raw/papers/drone-ai/zoomdet-adaptive-image-zoom-uav-object-detection.md]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/zoomdet.md','concepts/zoomdet.md','Zoomdet','concept',NULL,'active','87c38f47bf941f179c8011af23fc825f3144e0f9abcea8f00318d39277f1da30','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/zoomdet.md','concepts/zoomdet.md','Zoomdet','concept','ai-autonomy','active','11b0a5a484da2a7217e59083ed14cece23fe5d6bab203253cd52cb0bc0fac0b4','2026-10-24','2026-10-24',1,NULL,NULL,'low',0,'[]',NULL,'
 # Zoomdet
 
 ## 정의
@@ -111313,7 +111313,7 @@ INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES 
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:mavlink-standard-modes-protocol','Mavlink Standard Modes Protocol','CommunicationProtocol',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:mavlink2-security','MAVLink 2 & Security','CommunicationProtocol','comms-protocol',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:mavros','MAVROS','ROS2','gcs-software',1,'frontmatter');
-INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:mcp','Mcp','CommunicationProtocol',NULL,1,'frontmatter');
+INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:mcp','Mcp','CommunicationProtocol','swarm-multiagent',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:mednikov-maxim','Mednikov, Maxim','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:meiyan-wang','Meiyan Wang','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:melissa-jia-ying-chong','Melissa Jia Ying Chong','Person',NULL,1,'frontmatter');
@@ -111582,7 +111582,7 @@ INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES 
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:uav-swarm-air-ground-isac','교차 지역 협력 기반 Air-Ground ISAC UAV 군집','SwarmResearch','ai-autonomy',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:uav-swarm-target-localization','UAV Swarm Target Localization via Detection-Aided Enhanced Reweighted Atomic Norm Minimization','SwarmResearch','ai-autonomy',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:uavcan','Uavcan','CommunicationProtocol',NULL,1,'frontmatter');
-INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:uavdt','Uavdt','Mission',NULL,1,'frontmatter');
+INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:uavdt','Uavdt','Mission','ai-autonomy',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:udp','Udp','CommunicationProtocol',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:uist-2026','Uist 2026','Organization',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:unifly','Unifly','Organization',NULL,1,'frontmatter');
@@ -111622,7 +111622,7 @@ INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES 
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:visual-slam-gps-denied-evaluation','Visual SLAM GPS-Denied Evaluation','GNSSDeniedNavigation','navigation-gnss-denied',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:vitale-christian','Vitale, Christian','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:vittorio-palladino','Vittorio Palladino','Person',NULL,1,'frontmatter');
-INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:w3c-web-of-things','W3C Web Of Things','CommunicationProtocol',NULL,1,'frontmatter');
+INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:w3c-web-of-things','W3C Web Of Things','CommunicationProtocol','swarm-multiagent',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:wallefpv','WalleFPV','Manufacturer','flight-control',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:walugembe-francis-noah','Walugembe, Francis Noah','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:wan-ziwei','Wan, Ziwei','Person',NULL,1,'frontmatter');
@@ -111654,7 +111654,7 @@ INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES 
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:williamson-jane','Williamson, Jane','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:wingcopter','Wingcopter','Manufacturer','hardware',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:wonkwang-university','Wonkwang University','Organization',NULL,1,'frontmatter');
-INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:wot','Wot','CommunicationProtocol',NULL,1,'frontmatter');
+INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:wot','Wot','CommunicationProtocol','swarm-multiagent',1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:xia-beihao','Xia Beihao','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:xian-li','Xian, Li','Person',NULL,1,'frontmatter');
 INSERT INTO ontology_nodes (id,label,class_name,domain,canonical,origin) VALUES ('page:xiangqi-li','Xiangqi Li','Person',NULL,1,'frontmatter');

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "e8f315917aa5aa3f038a7013b69a07b344a54445f6d1a436ccf8e35061c259e0",
+  "source_fingerprint": "61e74e838b423cee111268857e95e699baee0df03a95f6e39eef4a74f8b6979b",
   "nodes": [
     {
       "id": "10-48550-arxiv-2607-26717",
@@ -160,7 +160,7 @@
       "id": "3d-reconstruction",
       "name": "3D Reconstruction",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -168,7 +168,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "3d-scene-generation",
@@ -302,7 +302,7 @@
       "id": "6g",
       "name": "6G",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -310,7 +310,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "7-nano",
@@ -942,7 +942,7 @@
       "id": "aeroeval",
       "name": "Aeroeval",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -950,7 +950,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "aewe",
@@ -9442,7 +9442,7 @@
       "id": "deep-reinforcement-learning",
       "name": "Deep Reinforcement Learning",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -9450,7 +9450,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "deepmimo",
@@ -9484,7 +9484,7 @@
       "id": "deformable-convolution",
       "name": "Deformable Convolution",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -9492,7 +9492,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "deformable-token-mamba-block",
@@ -9694,7 +9694,7 @@
       "id": "detr",
       "name": "Detr",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -9702,7 +9702,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "development-xml",
@@ -12015,7 +12015,7 @@
       "id": "dronevehicle-dataset",
       "name": "Dronevehicle Dataset",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -12023,7 +12023,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "dronevision-tank-detection-from-aerial-videos",
@@ -14583,7 +14583,7 @@
       "id": "focaler-siou",
       "name": "Focaler-Siou",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -14591,7 +14591,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "follow-leader",
@@ -18562,7 +18562,7 @@
       "id": "isac",
       "name": "Isac",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "rf-datalink-engineering",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -28044,7 +28044,7 @@
       "id": "mape",
       "name": "Mape",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -28052,7 +28052,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "maram-alajlan",
@@ -28677,7 +28677,7 @@
       "id": "maximum-takeoff-weight",
       "name": "Maximum Takeoff Weight",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -28685,7 +28685,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "mbse-uav-sysml",
@@ -28766,7 +28766,7 @@
       "id": "mcp",
       "name": "Mcp",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "swarm-multiagent",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -28794,7 +28794,7 @@
       "id": "mdo",
       "name": "Mdo",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -28802,7 +28802,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "mdolf",
@@ -28836,7 +28836,7 @@
       "id": "median-frequency-feature-fusion",
       "name": "Median-Frequency Feature Fusion",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -28844,7 +28844,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "mednikov-maxim",
@@ -29046,7 +29046,7 @@
       "id": "mfff-module",
       "name": "Mfff Module",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -29054,7 +29054,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "mg-mot-metadata-guided-uav-maritime-tracking",
@@ -30034,7 +30034,7 @@
       "id": "mtow",
       "name": "Mtow",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -30042,7 +30042,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "muhammad-bilal",
@@ -30323,7 +30323,7 @@
       "id": "multidisciplinary-design-optimization",
       "name": "Multidisciplinary Design Optimization",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -30331,7 +30331,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "multimodal-detection",
@@ -31245,7 +31245,7 @@
       "id": "object-detection",
       "name": "Object Detection",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -31253,7 +31253,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "observation-prediction",
@@ -32220,7 +32220,7 @@
       "id": "padf-module",
       "name": "Padf Module",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -32228,7 +32228,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "paf-cfa",
@@ -33971,7 +33971,7 @@
       "id": "proximal-policy-optimization",
       "name": "Proximal Policy Optimization",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -33979,7 +33979,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "psnr",
@@ -34045,7 +34045,7 @@
       "id": "pt-detr",
       "name": "Pt-Detr",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -34053,7 +34053,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "ptq",
@@ -34662,7 +34662,7 @@
       "id": "quadrotor",
       "name": "Quadrotor",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -34670,7 +34670,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "quantum-adiabatic-algorithm",
@@ -35551,7 +35551,7 @@
       "id": "rgb",
       "name": "Rgb",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -35559,7 +35559,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "ricardo-grando",
@@ -35713,7 +35713,7 @@
       "id": "rmse",
       "name": "Rmse",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "hardware",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -35721,7 +35721,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "Technology"
     },
     {
       "id": "rmworld-radio-world-models-uav",
@@ -36097,7 +36097,7 @@
       "id": "rt-detr",
       "name": "Rt-Detr",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -36105,7 +36105,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "rtb",
@@ -41538,7 +41538,7 @@
       "id": "uav-object-detection",
       "name": "Uav Object Detection",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -41546,7 +41546,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "uav-propeller-fault-detection-hybrid-data",
@@ -41824,7 +41824,7 @@
       "id": "uavdt",
       "name": "Uavdt",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -43112,7 +43112,7 @@
       "id": "visdrone2019",
       "name": "Visdrone2019",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -43120,7 +43120,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "visible-imaging",
@@ -43275,7 +43275,7 @@
       "id": "visual-perception",
       "name": "Visual Perception",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -43283,7 +43283,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "visual-positioning-odometry",
@@ -43452,7 +43452,7 @@
       "id": "vlms",
       "name": "Vlms",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -43460,13 +43460,13 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "vln",
       "name": "Vln",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -43474,7 +43474,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "vnir",
@@ -43583,7 +43583,7 @@
       "id": "w3c-web-of-things",
       "name": "W3C Web Of Things",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "swarm-multiagent",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -44298,7 +44298,7 @@
       "id": "wot",
       "name": "Wot",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "swarm-multiagent",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -46421,7 +46421,7 @@
       "id": "zoomdet",
       "name": "Zoomdet",
       "layer": "Concepts",
-      "domain": "",
+      "domain": "ai-autonomy",
       "tags": [
         "auto-promoted",
         "unreviewed"
@@ -46429,7 +46429,7 @@
       "updated": "2026-10-24",
       "confidence": "low",
       "status": "canonical",
-      "ontologyClass": null
+      "ontologyClass": "AIModel"
     },
     {
       "id": "zubax",

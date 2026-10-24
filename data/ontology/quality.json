@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-24",
- "fingerprint": "708f573072c6",
+ "fingerprint": "c26a12873da5",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -71,14 +71,14 @@
  },
  "documents": {
   "total": 3275,
-  "withDomain": 948,
-  "noDomain": 2327,
+  "withDomain": 982,
+  "noDomain": 2293,
   "unregisteredDomain": 4,
   "withOntologyClass": 1226,
   "byDomain": {
-   "(없음)": 2327,
-   "ai-autonomy": 216,
-   "hardware": 177,
+   "(없음)": 2293,
+   "ai-autonomy": 239,
+   "hardware": 184,
    "ops-mission": 150,
    "flight-control": 80,
    "comms-protocol": 74,
@@ -90,9 +90,9 @@
    "navigation-gnss-denied": 18,
    "simulation-test": 17,
    "software-ecosystem": 13,
-   "rf-datalink-engineering": 12,
+   "rf-datalink-engineering": 13,
+   "swarm-multiagent": 7,
    "ros-middleware": 7,
-   "swarm-multiagent": 4,
    "electrical-power": 4,
    "knowledge-management": 3,
    "ai-agent": 2,
@@ -562,9 +562,17 @@
    ]
   },
   {
-   "desc": "domain이 없는 문서(추론하지 않고 NULL 유지)",
+   "desc": "domain이 없는 검토 문서(추론하지 않고 NULL 유지)",
    "ok": false,
-   "count": 2327,
+   "count": 1,
+   "sample": [
+    "concepts/visible-thermal-fusion.md"
+   ]
+  },
+  {
+   "desc": "domain이 없는 자동 승격 문서(미검토 스텁 — 출처 근거가 약해 지정하지 않음)",
+   "ok": false,
+   "count": 2292,
    "sample": [
     "concepts/10-48550-arxiv-2607-26717.md",
     "concepts/1045-propeller.md",
