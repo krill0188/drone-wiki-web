@@ -153,3 +153,8 @@ export function buildGateNote({ spec, hwMd, compareText = "" }: GateNoteInput): 
   lines.push(`\n종합: 불합격 ${rep.fail}건 · 확인 필요 ${rep.review + review.length ? "있음" : "없음"} — 국내 규정(무게 종별·주파수)은 코드가 판정하지 않으며 사람이 확인해야 합니다.`)
   return lines.join("\n")
 }
+
+// 단계 간 일치성 점검용: HW 표에서 읽은 기본 값(배터리 S·Ah, 프롭, KV, 링크 대역 등)
+export function hwBasics(hwMd: string) {
+  return parseHw(hwMd, { rotors: 4, platform: "multirotor", platformExplicit: true })
+}

@@ -13,7 +13,7 @@ git fetch -q origin main
 echo "== 타입 검사"; npx tsc --noEmit
 echo "== 답변 시험"; KG_BACKEND=sqlite npx tsx scripts/test-kg-answer.ts < /dev/null | tail -3
 echo "== 모델 체인 시험"; NVIDIA_NIM_API_KEY=x npx tsx scripts/test-hedge.ts < /dev/null 2>&1 | grep -E "^PASS|FAIL" | tail -2
-echo "== 게이트·논문 근거 시험"; npx tsx scripts/test-gates.ts < /dev/null | tail -1; npx tsx scripts/test-gates-adapter.ts < /dev/null | tail -1; npx tsx scripts/test-paper-evidence.ts < /dev/null | tail -1; npx tsx scripts/test-sw-match.ts < /dev/null | tail -1
+echo "== 게이트·논문 근거 시험"; npx tsx scripts/test-gates.ts < /dev/null | tail -1; npx tsx scripts/test-gates-adapter.ts < /dev/null | tail -1; npx tsx scripts/test-paper-evidence.ts < /dev/null | tail -1; npx tsx scripts/test-sw-match.ts < /dev/null | tail -1; npx tsx scripts/test-stage-consistency.ts < /dev/null | tail -1
 echo "== 지식 DB 최신 여부"; "${KDB_PY:-$HOME/2nd/.venv/bin/python}" scripts/build-knowledge-db.py --verify | tail -1
 echo "== 이번 배포에 들어가는 변경"; python3 scripts/release-notes.py
 NOTES="$(python3 scripts/release-notes.py --meta)"

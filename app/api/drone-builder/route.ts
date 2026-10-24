@@ -15,6 +15,7 @@ import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildGateNote } from "@/lib/gates-adapter"
 import { selectPaperClaims, paperEvidenceBlock, paperEvidenceNote } from "@/lib/paper-evidence"
+import { stageConsistencyNote } from "@/lib/stage-consistency"
 
 // "AI 드론을 기획하고 개발해줘" 같은 요청을 6개 전문 에이전트가 단계별로 협업해
 // 무에서 유로 만들어내는 멀티 에이전트 오케스트레이션 (2026-10-16 6단계 + 사람 승인 게이트).
@@ -482,7 +483,13 @@ export async function POST(req: NextRequest) {
               try { gateNote = buildGateNote({ spec: gate.spec, hwMd: stage === "hw" ? text : ctx.hw ?? "", compareText: `${ctx.hw ?? ""}\n${text}` }) } catch { /* 게이트 실패는 보강만 빠진다 */ }
             }
             const paperNote = stage !== "proposal" && stage !== "implementation" && !paper ? paperEvidenceNote(picks, text) : ""
-            const out = soften(text + repairNote + reviewNote + advisory + renderValidation(v, retried) + gateNote + paperNote)
+            // 단계 간 일치성: 기준은 HW 표(4단계 확정 스펙 구역이 생기면 그것이 우선). HW 단계는 기획과, 이후 단계는 HW 표와 비교한다.
+            let consistencyNote = ""
+            try {
+              if (stage === "hw" && ctx.proposal) consistencyNote = stageConsistencyNote(text, ctx.proposal, "기획 단계")
+              else if (stage !== "hw" && stage !== "proposal" && ctx.hw) consistencyNote = stageConsistencyNote(ctx.hw, text, `${stage === "sw" ? "SW" : stage === "techspec" ? "기술 스펙" : stage === "architecture" ? "아키텍처" : "구현"} 단계`)
+            } catch { /* 점검 실패는 보강만 빠진다 */ }
+            const out = soften(text + repairNote + reviewNote + advisory + renderValidation(v, retried) + consistencyNote + gateNote + paperNote)
             progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })
