@@ -11,7 +11,12 @@ const delays: Record<string, number> = { "m-slow": 1500, "m-fast": 20, "m-last":
 let failModels = new Set<string>()
 
 let orFail = false
+const rejectedKeys = new Set<string>() // 이 키로 온 요청은 429로 거절
+const usedKeys: string[] = []
 globalThis.fetch = (async (url: unknown, init: RequestInit) => {
+  const authKey = new Headers(init.headers).get("authorization")?.replace("Bearer ", "") ?? ""
+  usedKeys.push(authKey)
+  if (rejectedKeys.has(authKey)) return new Response("rate", { status: 429 })
   const model = JSON.parse(String(init.body)).model as string
   calls.push(String(url).includes("openrouter") ? `OR:${model}` : model)
   if (String(url).includes("openrouter")) {
@@ -90,6 +95,29 @@ async function main() {
     for await (const p of rs as unknown as AsyncIterable<any>) { if (p.type === "text-delta") text += p.text; if (p.type === "error") sawError = true }
     ok(text.includes("DEGRADED-ANSWER") && !sawError, `text=${text} error=${sawError}`)
     return "오류 대신 대체 답변"
+  })
+  await t("K1 NIM 첫 키가 429로 거절되면 같은 모델을 다음 키로 다시 보낸다", async () => {
+    process.env.NVIDIA_NIM_API_KEYS = "nim-a,nim-b"
+    failModels = new Set(); delays["m-slow"] = 20; rejectedKeys.clear(); rejectedKeys.add("x"); usedKeys.length = 0; calls.length = 0
+    const { txt } = await run()
+    ok(txt.includes("m-slow"), `승자=${txt}`)
+    ok(usedKeys[0] === "x" && usedKeys[1] === "nim-a", `사용 키 ${usedKeys}`)
+    return `키 순서 ${usedKeys.join(">")}`
+  })
+  await t("K2 거절된 키는 잠시 쉬고 다음 요청은 바로 다음 키로 간다", async () => {
+    usedKeys.length = 0
+    await run()
+    ok(usedKeys[0] === "nim-a", `첫 키 ${usedKeys[0]}`)
+    return "쉬는 키 건너뜀"
+  })
+  await t("K3 OpenRouter 첫 키가 거절되면 둘째 키로 폴백한다", async () => {
+    process.env.OPENROUTER_API_KEYS = "or-a,or-b"; delete process.env.OPENROUTER_API_KEY
+    failModels = new Set(["m-slow", "m-fast", "m-last"]); orFail = false
+    rejectedKeys.clear(); rejectedKeys.add("or-a"); usedKeys.length = 0; calls.length = 0
+    const { txt } = await run()
+    ok(txt.includes("from OR"), `승자=${txt}`)
+    ok(usedKeys.includes("or-a") && usedKeys.includes("or-b"), `사용 키 ${usedKeys}`)
+    return `키 순서 ${usedKeys.filter((k) => k.startsWith("or-")).join(">")}`
   })
   for (const r of out) console.log(`${r.ok ? "PASS" : "FAIL"}  ${r.name} — ${r.note}`)
   const f = out.filter((r) => !r.ok).length

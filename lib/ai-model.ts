@@ -70,6 +70,7 @@ async function firstAnswerOrNull(
   init: RequestInit,
   body: string,
   timeoutMs: number,
+  onStatus?: (status: number) => void,
 ): Promise<Response | null> {
   const ctrl = new AbortController()
   const timer = setTimeout(() => ctrl.abort(), timeoutMs)
@@ -78,6 +79,7 @@ async function firstAnswerOrNull(
   outer?.addEventListener("abort", onOuterAbort)
   try {
     const res = await fetch(input, { ...init, body, signal: ctrl.signal })
+    onStatus?.(res.status)
     if (!res.ok || !res.body) return null
     const reader = res.body.getReader()
     const decoder = new TextDecoder()
@@ -116,6 +118,47 @@ async function firstAnswerOrNull(
   }
 }
 
+// 키 풀(2026-10-24): 한 서비스에 키를 여러 개 등록해 두면(NVIDIA_NIM_API_KEYS / OPENROUTER_API_KEYS, 쉼표 구분)
+// 한 키가 한도(429)·인증 오류(401/403)·크레딧 소진(402)으로 거절될 때 같은 요청을 다음 키로 다시 보낸다. 거절된 키는 잠시 쉰다.
+// 키가 하나뿐이면 예전과 똑같이 동작한다. 키 값은 로그·응답에 남기지 않는다.
+const coolUntil = new Map<string, number>()
+const splitKeys = (...vals: (string | undefined)[]) => [...new Set(vals.flatMap((v) => (v ?? "").split(",")).map((k) => k.trim()).filter(Boolean))]
+const nimKeys = () => splitKeys(process.env.NVIDIA_NIM_API_KEY, process.env.NVIDIA_NIM_API_KEYS)
+const orKeys = () => splitKeys(process.env.OPENROUTER_API_KEY, process.env.OPENROUTER_API_KEYS)
+const isCooling = (k: string) => (coolUntil.get(k) ?? 0) > Date.now()
+const coolKey = (k: string, status: number) => coolUntil.set(k, Date.now() + (status === 429 ? 60_000 : 3_600_000))
+const keyRejected = (status: number) => status === 429 || status === 401 || status === 402 || status === 403
+export const keyPoolSize = () => ({ nim: nimKeys().length, openrouter: orKeys().length })
+export const keyPoolStat = { nimRotations: 0, orRotations: 0 }
+
+// 키 풀로 한 번 시도한다. keys가 1개 이하면 헤더를 건드리지 않고 한 번만 보낸다.
+async function firstAnswerPooled(
+  input: Parameters<typeof fetch>[0],
+  init: RequestInit,
+  body: string,
+  timeoutMs: number,
+  keys: string[],
+  kind: "nim" | "or",
+): Promise<Response | null> {
+  if (keys.length <= 1 && kind === "nim") return firstAnswerOrNull(input, init, body, timeoutMs)
+  const order = [...keys.filter((k) => !isCooling(k)), ...keys.filter(isCooling)]
+  for (let n = 0; n < order.length; n++) {
+    const key = order[n]
+    if (n > 0 && isCooling(key)) break // 쉬는 키는 다른 키가 모두 거절된 뒤에도 쓰지 않는다
+    const headers = new Headers(init.headers)
+    headers.set("authorization", `Bearer ${key}`)
+    let status = 0
+    const res = await firstAnswerOrNull(input, { ...init, headers }, body, timeoutMs, (st) => (status = st))
+    if (res) return res
+    if (!keyRejected(status)) return null
+    coolKey(key, status)
+    if (kind === "nim") keyPoolStat.nimRotations++
+    else keyPoolStat.orRotations++
+    console.warn(`[ai-model] ${kind === "nim" ? "NIM" : "OpenRouter"} 키 거절(status ${status}) → 다음 키 (${n + 1}/${order.length})`)
+  }
+  return null
+}
+
 // 지연 헤징(2026-10-22): 첫 모델이 HEDGE_MS 안에 '첫 답변 글자'를 못 내면 다음 모델을 병렬로 시작해 먼저 글자를 내는 쪽을 쓴다.
 // 사용자가 보는 지연은 두 시도의 합이 아니라 min이다. 비용 폭주를 막으려고 한 인스턴스에서 헤징을 (2회 + 요청의 25%)로 제한한다.
 // 판정은 응답 헤더가 아니라 첫 답변 글자(content) 기준이다 — 추론 서버는 글자 전에 200 헤더를 먼저 보낸다.
@@ -142,7 +185,7 @@ export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (in
     const ctrl = new AbortController()
     const signal = init.signal ? AbortSignal.any([init.signal, ctrl.signal]) : ctrl.signal
     const t0 = Date.now()
-    const p = firstAnswerOrNull(input, { ...init, signal }, withModel(parsed, chain[idx]), timeoutMs)
+    const p = firstAnswerPooled(input, { ...init, signal }, withModel(parsed, chain[idx]), timeoutMs, nimKeys(), "nim")
     // 관측성: 모델별 첫 답변 글자까지의 시간(Vercel 로그에서 체인 순서·헤징 시간을 데이터로 조정한다)
     p.then((r) => console.info(`[ai-model] ttfc model=${chain[idx].id} profile=${profile} ms=${Date.now() - t0} ok=${!!r}`)).catch(() => {})
     return { idx, ctrl, p }
@@ -195,13 +238,11 @@ export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (in
   }
   // NIM 체인 소진 → OpenRouter 무료(:free) 같은 계열 모델로 마지막 시도(2026-10-23). 같은 모델을 다른 경로·다른 한도 풀로 쓴다.
   // 계정 공통 한도(분당 20회, 크레딧 없으면 일 50회)라 비상용이다. 키가 없거나 이것도 실패하면 호출부의 '모델 없는 근거 답변'이 받는다.
-  const orKey = process.env.OPENROUTER_API_KEY
-  if (orKey) {
+  const orKeyList = orKeys()
+  if (orKeyList.length > 0) {
     for (const m of OPENROUTER_FALLBACK) {
-      const headers = new Headers(init.headers)
-      headers.set("authorization", `Bearer ${orKey}`)
       const body = JSON.stringify({ ...parsed, model: m })
-      const res = await firstAnswerOrNull(OPENROUTER_URL, { ...init, headers }, body, 25000)
+      const res = await firstAnswerPooled(OPENROUTER_URL, init, body, 25000, orKeyList, "or")
       if (res) { console.warn(`[ai-model] OpenRouter 폴백 사용 → ${m}`); fallbackStat.openrouter++; return res }
       console.warn(`[ai-model] OpenRouter ${m} no answer / error`)
     }
@@ -211,7 +252,7 @@ export const makeChainFetch = (profile: ModelProfile): typeof fetch => async (in
 }
 
 export function wikiModel(profile: ModelProfile = "chat") {
-  const apiKey = process.env.NVIDIA_NIM_API_KEY
+  const apiKey = nimKeys()[0]
   if (apiKey) {
     const nvidia = createOpenAICompatible({
       name: "nvidia-nim",

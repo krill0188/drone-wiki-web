@@ -1,5 +1,5 @@
 import { kdbInfo } from "@/lib/kdb"
-import { fallbackStat } from "@/lib/ai-model"
+import { fallbackStat, keyPoolSize, keyPoolStat } from "@/lib/ai-model"
 
 // 운영 점검용 상태 확인(읽기 전용, 비밀값 없음). 배포 직후와 정기 점검(scripts/ops-eval.sh)이 호출한다.
 // ok=false(지식 DB 적재 실패)면 503을 돌려 모니터가 바로 잡을 수 있게 한다.
@@ -36,8 +36,9 @@ export async function GET(req: Request) {
     kgBackend: process.env.KG_BACKEND ?? "json",
     kgTier: process.env.KG_TIER ?? "off",
     builderTier: process.env.BUILDER_TIER ?? "off",
-    nimConfigured: Boolean(process.env.NVIDIA_NIM_API_KEY), // 키 값은 노출하지 않고 설정 여부만
-    openrouterFallback: Boolean(process.env.OPENROUTER_API_KEY),
+    nimConfigured: keyPoolSize().nim > 0, // 키 값은 노출하지 않고 설정 여부·개수만
+    openrouterFallback: keyPoolSize().openrouter > 0,
+    keyPool: { ...keyPoolSize(), ...keyPoolStat }, // 등록된 키 개수와 이 인스턴스의 키 전환 횟수
     fallbackUsed: { ...fallbackStat }, // 이 인스턴스에서 OpenRouter 폴백을 쓴 횟수·모델 전부 실패 횟수
   }
   if (!info.ok) return Response.json({ ok: false, error: String(info.error ?? "kdb load failed"), flags }, { status: 503 })

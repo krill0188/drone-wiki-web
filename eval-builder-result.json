@@ -1,0 +1,65 @@
+[
+ {
+  "stage": "proposal",
+  "sec": 47,
+  "chars": 3455,
+  "x": 0,
+  "cross": false,
+  "repaired": false,
+  "err": ""
+ },
+ {
+  "stage": "hw",
+  "sec": 83,
+  "chars": 4168,
+  "x": 0,
+  "cross": false,
+  "repaired": false,
+  "err": ""
+ },
+ {
+  "stage": "sw",
+  "sec": 53,
+  "chars": 3739,
+  "x": 0,
+  "cross": true,
+  "repaired": false,
+  "err": ""
+ },
+ {
+  "stage": "sw-reject",
+  "sec": 27,
+  "chars": 3982,
+  "x": 0,
+  "cross": true,
+  "repaired": false,
+  "err": ""
+ },
+ {
+  "stage": "techspec",
+  "sec": 23,
+  "chars": 4091,
+  "x": 0,
+  "cross": true,
+  "repaired": false,
+  "err": ""
+ },
+ {
+  "stage": "architecture",
+  "sec": 29,
+  "chars": 3630,
+  "x": 0,
+  "cross": true,
+  "repaired": false,
+  "err": ""
+ },
+ {
+  "stage": "implementation",
+  "sec": 57,
+  "chars": 8953,
+  "x": 0,
+  "cross": true,
+  "repaired": false,
+  "err": ""
+ }
+]

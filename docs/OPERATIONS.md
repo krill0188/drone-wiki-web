@@ -38,6 +38,12 @@
 4. 배포 후 `curl /api/health` → `npm run eval:prod`. 위키가 바뀐 배포면 `~/2nd`에서 `rebaseline-publication.py --apply` 후 커밋·푸시.
 5. 위키 갱신 흐름: lint → `approve-held.py --apply` → policy 커밋 → `approve-version-manifest.py --apply` → 커밋 → discovery 미처리 0까지 `extract-knowledge-graph.sh --limit 15` 반복 → `knowledge-pipeline.py --refresh-derived --candidate <경로>` → web `rsync -ac --delete`.
 
+## 4-0. 키 풀(여러 키 폴백)
+- `NVIDIA_NIM_API_KEYS`, `OPENROUTER_API_KEYS`에 키를 쉼표로 나열한다(기존 단일 키 변수도 그대로 유효, 합쳐서 중복 제거). 키 값은 문서·로그·응답에 남기지 않는다.
+- 한 키가 429(한도)·401/403(인증)·402(크레딧)로 거절되면 같은 요청을 다음 키로 다시 보낸다. 429는 60초, 인증 오류는 1시간 동안 그 키를 쉰다. 키가 하나면 예전 동작과 같다.
+- `/api/health`의 `flags.keyPool`에서 등록된 키 개수(`nim`, `openrouter`)와 이 인스턴스의 키 전환 횟수를 본다.
+- 주의: 같은 사람이 계정을 여러 개 만들어 한도를 늘리는 용도는 제공사 약관 위반이 될 수 있다. 계정 정지 시 해당 키만 환경변수에서 빼면 된다.
+
 ## 4-1. 모델 장애 시 단계 (자동)
 1. NIM 체인(헤징 포함) → 2. OpenRouter `:free` 같은 계열 모델 → 3. **모델 없는 근거 답변**(서버 사양표·검증 claim·관계·위키 발췌, "AI 해설 모델이 일시적으로 응답하지 않아…" 안내). 2·3단계 사용 여부는 Vercel 로그(`OpenRouter 폴백 사용`, `모든 모델 실패 → 근거만 표시`)와 `/api/health`의 `fallbackUsed`로 본다. 폴백 경로 점검은 `/api/health?probe=openrouter`(결과 10분 캐시, 매일 ops-eval이 호출).
 
