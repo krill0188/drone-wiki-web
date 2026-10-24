@@ -19,4 +19,10 @@ near("수정안 링크 마진(dB)", num(pick(b, "G8").value, /마진 (-?[\d.]+) 
 near("수정안 가능 반경(km)", b.envelopeKm ?? 0, 2.54, 0.02)
 near("원본 FAIL 수(G0~G8)", a.fail, 8, 0)
 near("수정안 FAIL 수(G0~G8)", b.fail, 2, 0)
+// 업로드본 v2 변경: 레일 정보가 없으면 G5는 PASS가 아니라 REVIEW, T/W 부족+데이터시트 없음이면 G4는 REVIEW
+const noRails = runGates({ ...rev, rails: [] })
+const st = (rep: ReturnType<typeof runGates>, k: string) => rep.gates.find((g) => g.gate.startsWith(k))?.status
+const chk = (name: string, ok: boolean) => { if (!ok) fail++; console.log(ok ? "PASS" : "FAIL", name) }
+chk("레일 정보 없으면 G5=REVIEW", st(noRails, "G5") === "REVIEW")
+chk("T/W 부족·데이터시트 없으면 G4=REVIEW", st(a, "G4") === "REVIEW")
 console.log(`${fail ? "FAIL" : "PASS"} ${fail ? fail + "건 실패" : "전부 통과"}`); process.exit(fail ? 1 : 0)

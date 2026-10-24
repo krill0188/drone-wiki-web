@@ -80,6 +80,10 @@ export function runGates(s: CoreSpec, only?: Set<GateKey>): GateReport {
   run("G5 항전 전원 레일", () => {
     const pAvg = s.avionics_loads.reduce((a, l) => a + l.avg_w, 0)
     calc.pAv = pAvg
+    if (!(s.rails ?? []).length) {
+      add("G5 항전 전원 레일", "REVIEW", `항전 평균 ${pAvg.toFixed(1)} W; 레일(BEC) 정격 정보 없음`, "레일별 피크 부하 ≤ 정격의 80%", "전원 분배(BEC·PDB) 레일 정격을 spec.rails에 기재")
+      return
+    }
     const bad: string[] = []
     for (const rail of s.rails ?? []) {
       const peak = s.avionics_loads.filter((l) => l.rail === rail.name).reduce((a, l) => a + l.peak_w, 0)
@@ -122,6 +126,10 @@ export function runGates(s: CoreSpec, only?: Set<GateKey>): GateReport {
     if (tipMach >= 0.7) fix += " 팁 마하 과다 → KV 또는 프롭 축소"
     add("G3 추력/중량", tw >= twReq && tipMach < 0.7 ? "PASS" : "FAIL", `모터당 ${((tMax / G) * 1000).toFixed(0)} gf (${src}), T/W ${tw.toFixed(2)}, 팁마하 ${tipMach.toFixed(2)}`, `T/W ≥ ${twReq}, 무부하 팁 마하 < 0.7`, fix)
 
+    if (tw < twReq && !m.max_thrust_g_datasheet) {
+      add("G4 전류 여유", "REVIEW", `G3 추력 부족(T/W ${tw.toFixed(2)}) 상태라 전류 계산 무의미`, "ESC 연속 ≥ 1.2×모터 풀스로틀 전류, 배터리 C×Ah ≥ 1.1×팩 최대전류", "G3 해소 후 모터 데이터시트 전류로 재판정")
+      return
+    }
     const { elec: pH } = hoverPowerW(auw, f.n_rotor, f.prop_in, rho, cons.fm, cons.etaDrive)
     const tH = (auw * G) / f.n_rotor
     const iMotor = ((pH / f.n_rotor) * (tMax / tH) ** 1.5) / v
