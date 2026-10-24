@@ -1,0 +1,1937 @@
+{
+ "_comment": "원문 인용 검증 claim(자동 제안, 해석 미검증). 2026-10-24 시험 적용. sourced 전용 — verified로 올리려면 사람 검토 필요.",
+ "claims": [
+  {
+   "id": "AC-2507.03456-A01",
+   "subject": "model",
+   "attribute": "normalized Root Mean Square Error",
+   "value": "5",
+   "unit": "%",
+   "conditions": "on unseen flight data",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2507.03456",
+   "locator": "Abstract",
+   "quote": "achieving a normalized Root Mean Square Error (nRMSE) of 5% on unseen flight data",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Airspeed estimation for UAVs using only propeller feedback"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.15016-A01",
+   "subject": "proposed algorithm",
+   "attribute": "optimality gap",
+   "value": "4",
+   "unit": "%",
+   "conditions": "large-scale test cases [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.15016",
+   "locator": "Abstract",
+   "quote": "achieves optimality gaps of no more than 4% for the remaining cases",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "An Exact Branch-Price-and-Cut Algorithm for a Truck-as-Hub Vehicle Routing Problem with Drones"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.15016-A02",
+   "subject": "Gurobi",
+   "attribute": "time limit",
+   "value": "1800",
+   "unit": "seconds",
+   "conditions": "large-scale instances, compact formulation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.15016",
+   "locator": "Abstract",
+   "quote": "Gurobi reaches the 1,800-second time limit on all large-scale instances",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "An Exact Branch-Price-and-Cut Algorithm for a Truck-as-Hub Vehicle Routing Problem with Drones"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2510.18391-A01",
+   "subject": "cMPDR",
+   "attribute": "SI-SDR improvement over MPDR",
+   "value": "5",
+   "unit": "dB",
+   "conditions": "low-SNR scenarios [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2510.18391",
+   "locator": "Abstract",
+   "quote": "in low-SNR scenarios, the cMPDR achieves up to 5 dB improvement in SI-SDR over the MPDR",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Cyclic MPDR Beamforming for Suppression of Almost-Cyclostationary Acoustic Interference"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2108.11557-A01",
+   "subject": "Jet-HR2",
+   "attribute": "joint count",
+   "value": "10",
+   "unit": "개",
+   "conditions": "brushless motors and harmonic drives로 구동",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2108.11557",
+   "locator": "Abstract",
+   "quote": "The robot has 10 joints driven by brushless motors and harmonic drives for locomotion.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Design of a Flying Humanoid Robot Based on Thrust Vector Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2108.11557-A03",
+   "subject": "Jet-HR2",
+   "attribute": "thrust-to-weight ratio",
+   "value": "1.17",
+   "unit": "배",
+   "conditions": "17 kg 추력 / 20 kg 중량",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2108.11557",
+   "locator": "Abstract",
+   "quote": "The robot successfully achieved takeoff at a thrust-to-weight ratio of 1.17 (17 kg / 20 kg)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Design of a Flying Humanoid Robot Based on Thrust Vector Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2108.11557-A05",
+   "subject": "Jet-HR2",
+   "attribute": "weight",
+   "value": "20",
+   "unit": "kg",
+   "conditions": "추력-중량 비율 1.17 달성 시",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2108.11557",
+   "locator": "Abstract",
+   "quote": "The robot successfully achieved takeoff at a thrust-to-weight ratio of 1.17 (17 kg / 20 kg)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Design of a Flying Humanoid Robot Based on Thrust Vector Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2108.11557-A06",
+   "subject": "Jet-HR2",
+   "attribute": "takeoff height",
+   "value": "1000",
+   "unit": "mm",
+   "conditions": "안정적인 자세 유지하며 이륙 성공 시 [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2108.11557",
+   "locator": "Abstract",
+   "quote": "reaching a takeoff height of over 1000 mm.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Design of a Flying Humanoid Robot Based on Thrust Vector Control"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.33148-A01",
+   "subject": "DroneWAM",
+   "attribute": "average prediction depth (adaptive rollout)",
+   "value": "4.58",
+   "unit": "steps",
+   "conditions": "DroneNav-6D dataset",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.33148",
+   "locator": "Abstract",
+   "quote": "Adaptive rollout further reduces the average prediction depth from 8 to 4.58 while improving trajectory accuracy",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "DroneWAM: Efficient World Action Model for Drone Visual Navigation"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A01",
+   "subject": "Image-Synthetic fusion",
+   "attribute": "Top-1 accuracy",
+   "value": "86.92",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "Image-Synthetic fusion achieves 86.92% Top-1",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A02",
+   "subject": "Image-Synthetic fusion",
+   "attribute": "Top-3 accuracy",
+   "value": "99.03",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "Image-Synthetic fusion achieves 86.92% Top-1, 99.03% Top-3",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A03",
+   "subject": "Image-Synthetic fusion",
+   "attribute": "Top-5 accuracy",
+   "value": "99.56",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "Image-Synthetic fusion achieves 86.92% Top-1, 99.03% Top-3, and 99.56% Top-5 accuracy",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A04",
+   "subject": "Image-Synthetic fusion",
+   "attribute": "Top-1 improvement over image-only",
+   "value": "2.64",
+   "unit": "percentage points",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "improving Top-1 performance by 2.64 percentage points over image-only inference",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A05",
+   "subject": "Synthetic-only inference",
+   "attribute": "Top-1 accuracy",
+   "value": "60.71",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "outperforming the 60.71% Top-1 accuracy of synthetic-only inference",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A06",
+   "subject": "Full multimodal model (with Geometric-Kinematic branch)",
+   "attribute": "Top-1 accuracy",
+   "value": "87.14",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "reaching 87.14% Top-1, 99.12% Top-3, and 99.60% Top-5 accuracy",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A07",
+   "subject": "Full multimodal model (with Geometric-Kinematic branch)",
+   "attribute": "Top-3 accuracy",
+   "value": "99.12",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "reaching 87.14% Top-1, 99.12% Top-3, and 99.60% Top-5 accuracy",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A08",
+   "subject": "Full multimodal model (with Geometric-Kinematic branch)",
+   "attribute": "Top-5 accuracy",
+   "value": "99.60",
+   "unit": "%",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "reaching 87.14% Top-1, 99.12% Top-3, and 99.60% Top-5 accuracy",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.14593-A09",
+   "subject": "Proposed classifier",
+   "attribute": "number of beams",
+   "value": "32",
+   "unit": "beams",
+   "conditions": "DeepSense 6G Scenario 23",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.14593",
+   "locator": "Abstract",
+   "quote": "The proposed 32-beam classifier combines an ImageNet-pretrained EfficientNet-B3 visual encoder",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Efficient Multimodal Beam Prediction for Real-World 6G UAV Communications via Image-Position-Synthetic Fusion"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.03099-A01",
+   "subject": "proposed VIT-UAVCom framework",
+   "attribute": "energy efficiency improvement",
+   "value": "144",
+   "unit": "%",
+   "conditions": "compared to the K-means benchmark",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.03099",
+   "locator": "Abstract",
+   "quote": "our proposed framework improves the energy efficiency by 144% compared to the benchmark",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Enhancing UAV Trajectory and Communications Through Vision-Inertial Tracking"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.03099-A02",
+   "subject": "binary search (BS)",
+   "attribute": "computational time reduction",
+   "value": "50",
+   "unit": "%",
+   "conditions": "compared with the linear search (LS) [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.03099",
+   "locator": "Abstract",
+   "quote": "the BS reduces the computational time by approximately 50%",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Enhancing UAV Trajectory and Communications Through Vision-Inertial Tracking"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2601.03958-A01",
+   "subject": "system",
+   "attribute": "uplink throughput",
+   "value": "30",
+   "unit": "Mbps",
+   "conditions": "up to approximately 200 meters [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.03958",
+   "locator": "Abstract",
+   "quote": "maintain a stable uplink throughput of approximately 30 Mbps up to approximately 200 meters",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Experimental Evaluation of a UAV-Mounted LEO Satellite Backhaul for Emergency Connectivity"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2601.03958-A02",
+   "subject": "system",
+   "attribute": "coverage distance",
+   "value": "200",
+   "unit": "meters",
+   "conditions": "stable uplink throughput [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.03958",
+   "locator": "Abstract",
+   "quote": "maintain a stable uplink throughput of approximately 30 Mbps up to approximately 200 meters",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Experimental Evaluation of a UAV-Mounted LEO Satellite Backhaul for Emergency Connectivity"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2606.25957-A03",
+   "subject": "active sampling",
+   "attribute": "samples to peak structural correlation",
+   "value": "100",
+   "unit": "samples",
+   "conditions": "across multiple independent collapse realizations",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2606.25957",
+   "locator": "Abstract",
+   "quote": "active sampling reaches peak structural correlation in roughly $100$ samples",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "From Rubble Simulation to Active Magnetic Mapping: Quantum Sensing for Disaster Response"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.14627-A01",
+   "subject": "magnetic stray fields",
+   "attribute": "robustness threshold",
+   "value": "4000",
+   "unit": "A/m",
+   "conditions": "inductive sensing concept [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.14627",
+   "locator": "Abstract",
+   "quote": "robust against magnetic stray fields exceeding 4000 A/m",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Inductive Position Sensors based on Coupling of Coils on Printed Circuit Boards for Demanding Automotive Applications"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.14627-A02",
+   "subject": "sensor design sample",
+   "attribute": "mechanical angle error",
+   "value": "0.02",
+   "unit": "°",
+   "conditions": "finite-element simulation and test bench measurement [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.14627",
+   "locator": "Abstract",
+   "quote": "mechanical angle error less than 0.02° (0.1° electrical) in both, finite-element simulation and test bench measurement",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Inductive Position Sensors based on Coupling of Coils on Printed Circuit Boards for Demanding Automotive Applications"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.14627-A03",
+   "subject": "sensor design sample",
+   "attribute": "electrical angle error",
+   "value": "0.1",
+   "unit": "°",
+   "conditions": "finite-element simulation and test bench measurement",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.14627",
+   "locator": "Abstract",
+   "quote": "mechanical angle error less than 0.02° (0.1° electrical) in both, finite-element simulation and test bench measurement",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Inductive Position Sensors based on Coupling of Coils on Printed Circuit Boards for Demanding Automotive Applications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2607.06791-A02",
+   "subject": "1100 mAh 리튬 폴리머 배터리",
+   "attribute": "비행 실험 횟수",
+   "value": "289",
+   "unit": "회",
+   "conditions": "운영 데이터 수집용",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.06791",
+   "locator": "Abstract",
+   "quote": "342 and 289 flight experiments have been conducted to collect operational data from lithium polymer batteries of 2200 mAh and 1100 mAh, respectively",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Machine Learning-Based Battery State-of-health Prediction for Unmanned Aerial Vehicles Predictive Maintenance"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2607.06791-A03",
+   "subject": "배터리",
+   "attribute": "용량 측정 주기",
+   "value": "10",
+   "unit": "실험마다",
+   "conditions": "데이터셋 라벨링용",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2607.06791",
+   "locator": "Abstract",
+   "quote": "The remaining capacity is measured at every 10th experiment to label the dataset",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Machine Learning-Based Battery State-of-health Prediction for Unmanned Aerial Vehicles Predictive Maintenance"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.22309-A01",
+   "subject": "OTFS effective SINR",
+   "attribute": "frame-to-frame variation reduction vs OFDM",
+   "value": "37.8",
+   "unit": "%",
+   "conditions": "70 m/s, same numerology",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.22309",
+   "locator": "Abstract",
+   "quote": "the effective SINR of OTFS changes 37.8% less per frame than that of orthogonal frequency division multiplexing (OFDM) at 70 m/s under the same numerology",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "OTFS-Enabled Delayed SINR-Feedback Power Control for Reliable and Fair High-Mobility UAV Communications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.22309-A02",
+   "subject": "proposed controller",
+   "attribute": "average minimum SINR gain over equal power allocation",
+   "value": "1.21",
+   "unit": "dB",
+   "conditions": "40 m/s",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.22309",
+   "locator": "Abstract",
+   "quote": "the resulting controller raises the average minimum SINR by 1.21 dB over equal power allocation at 40 m/s",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "OTFS-Enabled Delayed SINR-Feedback Power Control for Reliable and Fair High-Mobility UAV Communications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.22309-A03",
+   "subject": "Jain's fairness index",
+   "attribute": "value with proposed controller",
+   "value": "0.970",
+   "unit": "",
+   "conditions": "40 m/s",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.22309",
+   "locator": "Abstract",
+   "quote": "lifting Jain's fairness index from 0.833 to 0.970",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "OTFS-Enabled Delayed SINR-Feedback Power Control for Reliable and Fair High-Mobility UAV Communications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.22309-A05",
+   "subject": "sum-rate cost",
+   "attribute": "relative cost of proposed controller",
+   "value": "24.6",
+   "unit": "%",
+   "conditions": "40 m/s",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.22309",
+   "locator": "Abstract",
+   "quote": "at a sum-rate cost of 24.6% that the utility weights keep under the designer's control",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "OTFS-Enabled Delayed SINR-Feedback Power Control for Reliable and Fair High-Mobility UAV Communications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.22309-A06",
+   "subject": "OTFS over OFDM SINR margin",
+   "attribute": "gain at 10 m/s",
+   "value": "0.18",
+   "unit": "dB",
+   "conditions": "10 m/s, same controller",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.22309",
+   "locator": "Abstract",
+   "quote": "The margin of OTFS over OFDM within the same controller widens from 0.18 dB at 10 m/s",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "OTFS-Enabled Delayed SINR-Feedback Power Control for Reliable and Fair High-Mobility UAV Communications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.22309-A07",
+   "subject": "OTFS over OFDM SINR margin",
+   "attribute": "gain at 90 m/s",
+   "value": "0.81",
+   "unit": "dB",
+   "conditions": "90 m/s, same controller",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.22309",
+   "locator": "Abstract",
+   "quote": "to 0.81 dB at 90 m/s",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "OTFS-Enabled Delayed SINR-Feedback Power Control for Reliable and Fair High-Mobility UAV Communications"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.12456-A03",
+   "subject": "frame-level receiver-side target acquisition accuracy",
+   "attribute": "accuracy",
+   "value": "96.0",
+   "unit": "%",
+   "conditions": "Under visually ambiguous conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.12456",
+   "locator": "Abstract",
+   "quote": "Under visually ambiguous conditions, PATH achieves 96.0\\% frame-level receiver-side target acquisition accuracy, with 2.0\\% false-positive and 2.0\\% false-negative rates.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PATH: Continuous Target Sensing among Autonomous Cooperative Drones"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.12456-A06",
+   "subject": "inter-UAV communication",
+   "attribute": "data rate",
+   "value": "16",
+   "unit": "kB/s",
+   "conditions": "at 60 Hz [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.12456",
+   "locator": "Abstract",
+   "quote": "The implementation operates at video rate with compact inter-UAV communication below 16~kB/s at 60~Hz, demonstrating the feasibility of lightweight geometry-assisted target handoff on resource-constrained UAV platforms.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PATH: Continuous Target Sensing among Autonomous Cooperative Drones"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.18556-A01",
+   "subject": "California ignitions",
+   "attribute": "count",
+   "value": "3693",
+   "unit": "fires",
+   "conditions": "2021-2024, out-of-sample evaluation",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.18556",
+   "locator": "Abstract",
+   "quote": "Evaluated out-of-sample on 3,693 California ignitions from 2021-2024",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rapid drone-based wildfire detection at a fraction of current prevention spending"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.18556-A02",
+   "subject": "optimized drone network",
+   "attribute": "budget",
+   "value": "100",
+   "unit": "million USD",
+   "conditions": "five-year budget",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.18556",
+   "locator": "Abstract",
+   "quote": "operating at a $100 million five-year budget",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rapid drone-based wildfire detection at a fraction of current prevention spending"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.18556-A03",
+   "subject": "optimized drone network",
+   "attribute": "detection rate",
+   "value": "97.3",
+   "unit": "percent",
+   "conditions": "out-of-sample on 3,693 California ignitions 2021-2024",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.18556",
+   "locator": "Abstract",
+   "quote": "detects 97.3% of fires",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rapid drone-based wildfire detection at a fraction of current prevention spending"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.18556-A04",
+   "subject": "optimized drone network",
+   "attribute": "first-hour detection rate",
+   "value": "74",
+   "unit": "percent",
+   "conditions": "out-of-sample on 3,693 California ignitions 2021-2024",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.18556",
+   "locator": "Abstract",
+   "quote": "including 74% within the first hour",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rapid drone-based wildfire detection at a fraction of current prevention spending"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.18556-A05",
+   "subject": "optimized drone network",
+   "attribute": "amortized annual budget",
+   "value": "20",
+   "unit": "million USD per year",
+   "conditions": "amortized over five years",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.18556",
+   "locator": "Abstract",
+   "quote": "Amortized over five years, that budget is about $20 million per year",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rapid drone-based wildfire detection at a fraction of current prevention spending"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.18556-A06",
+   "subject": "California annual wildfire-prevention expenditure",
+   "attribute": "percentage",
+   "value": "5",
+   "unit": "percent",
+   "conditions": "relative to amortized drone network budget [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.18556",
+   "locator": "Abstract",
+   "quote": "roughly 5% of California's annual wildfire-prevention expenditure",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rapid drone-based wildfire detection at a fraction of current prevention spending"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2110.00736-A01",
+   "subject": "Stanford Pupper",
+   "attribute": "build time",
+   "value": "8",
+   "unit": "hours",
+   "conditions": "from the ground up [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2110.00736",
+   "locator": "Abstract",
+   "quote": "can be built from the ground up in under 8 hours",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Stanford Pupper: A Low-Cost Agile Quadruped Robot for Benchmarking and Education"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2110.00736-A02",
+   "subject": "Stanford Pupper",
+   "attribute": "total cost",
+   "value": "2000",
+   "unit": "USD",
+   "conditions": "all components either easily purchased or 3D printed [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2110.00736",
+   "locator": "Abstract",
+   "quote": "for a total cost under $2000",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Stanford Pupper: A Low-Cost Agile Quadruped Robot for Benchmarking and Education"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.06874-A02",
+   "subject": "platform",
+   "attribute": "mass",
+   "value": "27",
+   "unit": "g",
+   "conditions": "wind-sensitive platform",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.06874",
+   "locator": "Abstract",
+   "quote": "wind-sensitive 27 g platform",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Statistical Turbulence and High-Fidelity Disturbance Fields for Quadrotor Flight Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.27604-A01",
+   "subject": "telemetry age at the GCS",
+   "attribute": "saturation value",
+   "value": "12",
+   "unit": "seconds",
+   "conditions": "dedicated testbed [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.27604",
+   "locator": "Abstract",
+   "quote": "telemetry age at the GCS saturates at approximately 12 seconds",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "FlyBlind: Cross-Slice Timeliness Attacks on UAV Situational Awareness over 5G"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2311.03414-A01",
+   "subject": "abstract 3D designs",
+   "attribute": "count",
+   "value": "10000",
+   "unit": "개",
+   "conditions": "UAV motor mount use case",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2311.03414",
+   "locator": "Abstract",
+   "quote": "We generate 10,000 abstract 3D designs and subject them all to simulations",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "A Generative Neural Network Approach for 3D Multi-Criteria Design Generation and Optimization of an Engine Mount for an Unmanned Air Vehicle"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2602.07512-A01",
+   "subject": "ZoomDet",
+   "attribute": "mAP gain",
+   "value": "8.4",
+   "unit": "absolute",
+   "conditions": "SeaDronesSee dataset, Faster R-CNN model [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2602.07512",
+   "locator": "Abstract",
+   "quote": "on the SeaDronesSee dataset, ZoomDet offers more than 8.4 absolute gain of mAP with a Faster R-CNN model",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Adaptive Image Zoom-in with Bounding Box Transformation for UAV Object Detection"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2602.07512-A02",
+   "subject": "ZoomDet",
+   "attribute": "additional latency",
+   "value": "3",
+   "unit": "ms",
+   "conditions": "SeaDronesSee dataset, Faster R-CNN model [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2602.07512",
+   "locator": "Abstract",
+   "quote": "with only about 3 ms additional latency",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Adaptive Image Zoom-in with Bounding Box Transformation for UAV Object Detection"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2604.09313-A01",
+   "subject": "MDUR benchmark",
+   "attribute": "degradation configurations",
+   "value": "43",
+   "unit": "configurations",
+   "conditions": "from single degradations to four-factor composites",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.09313",
+   "locator": "Abstract",
+   "quote": "with 43 degradation configurations from single degradations to four-factor composites",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Compositional-Degradation UAV Image Restoration: Conditional Decoupled MoE Network and A Benchmark"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.19021-A01",
+   "subject": "DUDE-IDS",
+   "attribute": "accuracy",
+   "value": "98",
+   "unit": "%",
+   "conditions": "identifying anomalies associated with GPS spoofing, Man-in-the-Middle (MITM), replay, and Denial-of-Service (DoS) attacks",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.19021",
+   "locator": "Abstract",
+   "quote": "Extensive experimental results demonstrate the effectiveness of this approach in identifying anomalies associated with GPS spoofing, Man-in-the-Middle (MITM), replay, and Denial-of-Service (DoS) attacks with 98% accuracy.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Context-Aware Operational Security for Autonomous Drones"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2506.16737-A01",
+   "subject": "CoDAF",
+   "attribute": "mAP",
+   "value": "78.6",
+   "unit": "%",
+   "conditions": "DroneVehicle dataset",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2506.16737",
+   "locator": "Abstract",
+   "quote": "CoDAF achieving a mAP of 78.6% on the DroneVehicle dataset.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Cross-modal Offset-guided Dynamic Alignment and Fusion for Weakly Aligned UAV Object Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.15175-A03",
+   "subject": "straight-line optimum",
+   "attribute": "path length",
+   "value": "497.33",
+   "unit": "m",
+   "conditions": "초록에 기재된 수치(실험 조건은 본문 확인 필요)",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.15175",
+   "locator": "Abstract",
+   "quote": "compared to the straight-line optimum of 497.33 m",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "LAPF: LLM-Agent-Based Path Finder Using the UAVScenes Dataset"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.15175-A10",
+   "subject": "CoT prompting",
+   "attribute": "clamp events",
+   "value": "14.0",
+   "unit": "events",
+   "conditions": "obstacle-injected scenario",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.15175",
+   "locator": "Abstract",
+   "quote": "whereas CoT prompting increases from 9.7 to 14.0 events",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "LAPF: LLM-Agent-Based Path Finder Using the UAVScenes Dataset"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.18785-A01",
+   "subject": "proposed model",
+   "attribute": "AP improvement over baseline",
+   "value": "1.9",
+   "unit": "%",
+   "conditions": "VisDrone2019 and UAVDT benchmarks",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.18785",
+   "locator": "Abstract",
+   "quote": "Compared to the baseline model, AP and AP50 improved by 1.9% and 2.4%, respectively.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "LGI-DETR: Local-Global Interaction for UAV Object Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.18785-A02",
+   "subject": "proposed model",
+   "attribute": "AP50 improvement over baseline",
+   "value": "2.4",
+   "unit": "%",
+   "conditions": "VisDrone2019 and UAVDT benchmarks",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.18785",
+   "locator": "Abstract",
+   "quote": "Compared to the baseline model, AP and AP50 improved by 1.9% and 2.4%, respectively.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "LGI-DETR: Local-Global Interaction for UAV Object Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2302.01556-A01",
+   "subject": "diagnosis accuracy",
+   "attribute": "accuracy",
+   "value": "80",
+   "unit": "%",
+   "conditions": "on the testing set [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2302.01556",
+   "locator": "Abstract",
+   "quote": "Currently, the diagnosis accuracy on the testing set is over 80%.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Machine Learning for UAV Propeller Fault Detection based on a Hybrid Data Generation Model"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.08541-A03",
+   "subject": "MNP",
+   "attribute": "inference latency jitter",
+   "value": "25",
+   "unit": "ns",
+   "conditions": "microcontroller deployment [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08541",
+   "locator": "Abstract",
+   "quote": "real-time inference latency with under 25 ns of jitter",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Micro Neural Policies for Safe Real-Time Robotic Control"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.08541-A04",
+   "subject": "MNP",
+   "attribute": "chip idle time",
+   "value": "97",
+   "unit": "%",
+   "conditions": "microcontroller deployment [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.08541",
+   "locator": "Abstract",
+   "quote": "leaving the chip idle for over 97% of the time",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Micro Neural Policies for Safe Real-Time Robotic Control"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A01",
+   "subject": "PhysAI-Bench",
+   "attribute": "decision instances count",
+   "value": "10178",
+   "unit": "instances",
+   "conditions": "automatically extracted from conversational traces of autonomous UAV missions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "It contains 10,178 standardized decision instances automatically extracted from conversational traces of autonomous UAV missions.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A02",
+   "subject": "development set",
+   "attribute": "size",
+   "value": "35",
+   "unit": "instances",
+   "conditions": "human-verified",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "tested in three runs on a 35-instance, human-verified development set.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A03",
+   "subject": "evaluation set",
+   "attribute": "size",
+   "value": "500",
+   "unit": "instances",
+   "conditions": "fixed, episode-disjoint",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "evaluate it in three runs on a fixed, episode-disjoint set of 500 instances.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A04",
+   "subject": "foundation models evaluated",
+   "attribute": "count",
+   "value": "29",
+   "unit": "models",
+   "conditions": "two-stage protocol",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "We evaluate 29 foundation models using a two-stage protocol.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A05",
+   "subject": "prompting combinations",
+   "attribute": "count",
+   "value": "12",
+   "unit": "combinations",
+   "conditions": "zero-, three-, and five-shot prompting and four temperatures",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "We select model-specific configurations from 12 combinations of zero-, three-, and five-shot prompting and four temperatures,",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A06",
+   "subject": "runs per configuration",
+   "attribute": "count",
+   "value": "3",
+   "unit": "runs",
+   "conditions": "both development and evaluation sets",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "tested in three runs on a 35-instance, human-verified development set.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A07",
+   "subject": "GPT-5.3",
+   "attribute": "accuracy",
+   "value": "52.00",
+   "unit": "%",
+   "conditions": "evaluation set of 500 instances, frozen configuration, three runs",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "GPT-5.3 achieves the highest accuracy (52.00%)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A08",
+   "subject": "GPT-5.2",
+   "attribute": "accuracy",
+   "value": "49.40",
+   "unit": "%",
+   "conditions": "evaluation set of 500 instances, frozen configuration, three runs",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "followed by GPT-5.2 (49.40%)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23695-A09",
+   "subject": "Grok 4.5",
+   "attribute": "accuracy",
+   "value": "49.07",
+   "unit": "%",
+   "conditions": "evaluation set of 500 instances, frozen configuration, three runs",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23695",
+   "locator": "Abstract",
+   "quote": "and Grok~4.5 (49.07%).",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.14082-A01",
+   "subject": "PILOT",
+   "attribute": "computational overhead reduction",
+   "value": "80",
+   "unit": "%",
+   "conditions": "Simulations on quadrotor and fixed-wing aircraft [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.14082",
+   "locator": "Abstract",
+   "quote": "reducing computational overhead by over 80\\%.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "PILOT: Privileged Imitation Learning for End-to-End Motion Planning of Autonomous UAVs under Partial Observability"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A01",
+   "subject": "ORB-SLAM3",
+   "attribute": "overall TSR",
+   "value": "62.4",
+   "unit": "%",
+   "conditions": "five controlled degradation conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "ORB-SLAM3 fails critically under severe degradation (62.4% overall TSR; 0% under dense haze)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A02",
+   "subject": "ORB-SLAM3",
+   "attribute": "TSR under dense haze",
+   "value": "0",
+   "unit": "%",
+   "conditions": "dense haze condition",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "ORB-SLAM3 fails critically under severe degradation (62.4% overall TSR; 0% under dense haze)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A03",
+   "subject": "MASt3R",
+   "attribute": "degraded ATE",
+   "value": "0.027",
+   "unit": "m",
+   "conditions": "degraded conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "MASt3R achieves the lowest degraded ATE (0.027 m) and DUSt3R the highest tracking success (96.5%)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A04",
+   "subject": "DUSt3R",
+   "attribute": "tracking success rate",
+   "value": "96.5",
+   "unit": "%",
+   "conditions": "degraded conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "MASt3R achieves the lowest degraded ATE (0.027 m) and DUSt3R the highest tracking success (96.5%)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A05",
+   "subject": "DPVO",
+   "attribute": "FPS",
+   "value": "18.6",
+   "unit": "FPS",
+   "conditions": "embedded deployment",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "DPVO offers the best efficiency robustness trade-off (18.6 FPS, 3.1 GB GPU memory, 86.1% TSR)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A06",
+   "subject": "DPVO",
+   "attribute": "GPU memory",
+   "value": "3.1",
+   "unit": "GB",
+   "conditions": "embedded deployment",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "DPVO offers the best efficiency robustness trade-off (18.6 FPS, 3.1 GB GPU memory, 86.1% TSR)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2605.03678-A07",
+   "subject": "DPVO",
+   "attribute": "TSR",
+   "value": "86.1",
+   "unit": "%",
+   "conditions": "degraded conditions",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2605.03678",
+   "locator": "Abstract",
+   "quote": "DPVO offers the best efficiency robustness trade-off (18.6 FPS, 3.1 GB GPU memory, 86.1% TSR)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Robust Visual SLAM for UAV Navigation in GPS-Denied and Degraded Environments: A Multi-Paradigm Evaluation and Deployment Study"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2311.03561-A01",
+   "subject": "MG-MOT",
+   "attribute": "HOTA",
+   "value": "69.5",
+   "unit": "%",
+   "conditions": "SeaDroneSee tracking dataset testing split",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2311.03561",
+   "locator": "Abstract",
+   "quote": "state-of-the-art HOTA of 69.5% and an IDF1 of 85.9% on the testing split",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Sea You Later: Metadata-Guided Long-Term Re-Identification for UAV-Based Multi-Object Tracking"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2311.03561-A02",
+   "subject": "MG-MOT",
+   "attribute": "IDF1",
+   "value": "85.9",
+   "unit": "%",
+   "conditions": "SeaDroneSee tracking dataset testing split",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2311.03561",
+   "locator": "Abstract",
+   "quote": "state-of-the-art HOTA of 69.5% and an IDF1 of 85.9% on the testing split",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Sea You Later: Metadata-Guided Long-Term Re-Identification for UAV-Based Multi-Object Tracking"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23643-A01",
+   "subject": "proposed algorithm",
+   "attribute": "completed episodes",
+   "value": "1913",
+   "unit": "episodes",
+   "conditions": "out of more than 3000 episodes",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23643",
+   "locator": "Abstract",
+   "quote": "The proposed algorithm was successful in completing 1913 episodes out of more than 3000.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Spiking Neural Network Actor-Critic Proximal Policy Optimization Control for Autonomous UAV Navigation Through Constrained Openings in Civil Infrastructure and Buildings"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23643-A02",
+   "subject": "proposed algorithm",
+   "attribute": "average windows passed per episode",
+   "value": "2.10",
+   "unit": "windows",
+   "conditions": "per episode",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23643",
+   "locator": "Abstract",
+   "quote": "The proposed algorithm was successful in passing an average of 2.10 windows per episode.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Spiking Neural Network Actor-Critic Proximal Policy Optimization Control for Autonomous UAV Navigation Through Constrained Openings in Civil Infrastructure and Buildings"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23643-A03",
+   "subject": "proposed algorithm",
+   "attribute": "success rate",
+   "value": "63.77",
+   "unit": "%",
+   "conditions": "overall",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23643",
+   "locator": "Abstract",
+   "quote": "The proposed algorithm was successful in achieving a success rate of 63.77%.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Spiking Neural Network Actor-Critic Proximal Policy Optimization Control for Autonomous UAV Navigation Through Constrained Openings in Civil Infrastructure and Buildings"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.23643-A04",
+   "subject": "proposed algorithm",
+   "attribute": "success rate in later stages",
+   "value": "90",
+   "unit": "%",
+   "conditions": "later stages of the algorithm [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.23643",
+   "locator": "Abstract",
+   "quote": "The proposed algorithm was successful in achieving success rates of more than 90% in the later stages of the algorithm.",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Spiking Neural Network Actor-Critic Proximal Policy Optimization Control for Autonomous UAV Navigation Through Constrained Openings in Civil Infrastructure and Buildings"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2604.16630-A01",
+   "subject": "UAV dataset",
+   "attribute": "frames",
+   "value": "10489",
+   "unit": "frames",
+   "conditions": "synchronized and pre-aligned RGB-thermal-event streams",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.16630",
+   "locator": "Abstract",
+   "quote": "We introduce a 10,489-frame UAV dataset with synchronized and pre-aligned RGB-thermal-event streams",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Tri-Modal Fusion Transformers for UAV-based Object Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2604.16630-A02",
+   "subject": "UAV dataset",
+   "attribute": "annotated vehicles",
+   "value": "24223",
+   "unit": "vehicles",
+   "conditions": "across day and night flights",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.16630",
+   "locator": "Abstract",
+   "quote": "and 24,223 annotated vehicles across day and night flights",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Tri-Modal Fusion Transformers for UAV-based Object Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2604.16630-A03",
+   "subject": "ablation study",
+   "attribute": "controlled ablations",
+   "value": "61",
+   "unit": "ablations",
+   "conditions": "evaluate fusion placement, mechanism, modality subsets, and backbone capacity",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2604.16630",
+   "locator": "Abstract",
+   "quote": "Through 61 controlled ablations, we evaluate fusion placement, mechanism (baseline MAGE+BiTE, CSSA, GAFF), modality subsets, and backbone capacity",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Tri-Modal Fusion Transformers for UAV-based Object Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2603.22841-A01",
+   "subject": "UAV-DETR",
+   "attribute": "mAP50:95 improvement over RT-DETR",
+   "value": "6.61",
+   "unit": "%",
+   "conditions": "on custom UAV dataset",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.22841",
+   "locator": "Abstract",
+   "quote": "UAV-DETR significantly outperforms the baseline RT-DETR on our custom UAV dataset (+6.61% in mAP50:95",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "UAV-DETR: DETR for Anti-Drone Target Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2603.22841-A02",
+   "subject": "UAV-DETR",
+   "attribute": "parameter reduction compared to RT-DETR",
+   "value": "39.8",
+   "unit": "%",
+   "conditions": "on custom UAV dataset",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.22841",
+   "locator": "Abstract",
+   "quote": "with a 39.8% reduction in parameters) and the public DUT-ANTI-UAV benchmark",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "UAV-DETR: DETR for Anti-Drone Target Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2603.22841-A03",
+   "subject": "UAV-DETR",
+   "attribute": "Precision improvement on DUT-ANTI-UAV",
+   "value": "1.4",
+   "unit": "%",
+   "conditions": "on public DUT-ANTI-UAV benchmark",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.22841",
+   "locator": "Abstract",
+   "quote": "the public DUT-ANTI-UAV benchmark (+1.4% in Precision, +1.0% in F1-Score)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "UAV-DETR: DETR for Anti-Drone Target Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2603.22841-A04",
+   "subject": "UAV-DETR",
+   "attribute": "F1-Score improvement on DUT-ANTI-UAV",
+   "value": "1.0",
+   "unit": "%",
+   "conditions": "on public DUT-ANTI-UAV benchmark",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.22841",
+   "locator": "Abstract",
+   "quote": "the public DUT-ANTI-UAV benchmark (+1.4% in Precision, +1.0% in F1-Score)",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "UAV-DETR: DETR for Anti-Drone Target Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2507.00849-A01",
+   "subject": "UAVD-Mamba",
+   "attribute": "mAP improvement over OAFA baseline",
+   "value": "3.6",
+   "unit": "%",
+   "conditions": "DroneVehicle dataset",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2507.00849",
+   "locator": "Abstract",
+   "quote": "outperforms the baseline OAFA method by 3.6% in the mAP metric",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "UAVD-Mamba: Deformable Token Fusion Vision Mamba for Multimodal UAV Detection"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2509.09859-A01",
+   "subject": "ARDrone dataset",
+   "attribute": "synchronized images and audio segments count",
+   "value": "7500",
+   "unit": "items",
+   "conditions": "newly generated dataset [원문 한정어: >=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2509.09859",
+   "locator": "Abstract",
+   "quote": "newly generated ARDrone dataset containing more than 7,500 synchronized images and audio segments",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "WAVE-DETR Multi-Modal Visible and Acoustic Real-Life Drone Detector"
+   },
+   "qualifier": ">=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2601.00163-A01",
+   "subject": "robots",
+   "attribute": "count",
+   "value": "48",
+   "unit": "robots",
+   "conditions": "high-fidelity simulations [원문 한정어: <=]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.00163",
+   "locator": "Abstract",
+   "quote": "high-fidelity simulations of numerous large-scale missions with up to 48 robots",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "SLEI3D: Simultaneous Exploration and Inspection via Heterogeneous Fleets under Limited Communication"
+   },
+   "qualifier": "<=",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2601.00163-A03",
+   "subject": "robots",
+   "attribute": "count",
+   "value": "7",
+   "unit": "robots",
+   "conditions": "hardware experiments",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2601.00163",
+   "locator": "Abstract",
+   "quote": "Hardware experiments of 7 robots are also conducted",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "SLEI3D: Simultaneous Exploration and Inspection via Heterogeneous Fleets under Limited Communication"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.20906-A02",
+   "subject": "Safety Monitor",
+   "attribute": "coverage (C_monitor)",
+   "value": "0.9991",
+   "unit": "",
+   "conditions": "consistent with DAL B CMD/MON implementations",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.20906",
+   "locator": "Abstract",
+   "quote": "provided the Safety Monitor meets $C_{monitor}>0.9991$, consistent with DAL B CMD/MON implementations",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "A Safety-Driven Architectural Framework for Fail-Operational Drone Swarms in Critical Missions"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.12685-A01",
+   "subject": "simulations",
+   "attribute": "total count",
+   "value": "6000",
+   "unit": "runs",
+   "conditions": "evaluation of BL and CT policies across 30 situations",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.12685",
+   "locator": "Abstract",
+   "quote": "A total of 6000 simulations were run to evaluate how two proposed policies",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Agent-Based Simulation of UAV Battery Recharging for IoT Applications: Precision Agriculture, Disaster Recovery, and Dengue Vector Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2503.12685-A03",
+   "subject": "situations",
+   "attribute": "count",
+   "value": "30",
+   "unit": "situations",
+   "conditions": "each simulation sets conclude the simulation runs",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2503.12685",
+   "locator": "Abstract",
+   "quote": "behave in 30 situations regarding how each simulation sets conclude the simulation runs",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Agent-Based Simulation of UAV Battery Recharging for IoT Applications: Precision Agriculture, Disaster Recovery, and Dengue Vector Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2610.22085-A01",
+   "subject": "simulations",
+   "attribute": "partitioned scenarios",
+   "value": "8000",
+   "unit": "cases",
+   "conditions": "including 5000 large-scale cases",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2610.22085",
+   "locator": "Abstract",
+   "quote": "Simulations on 8,000 partitioned scenarios, including 5,000 large-scale cases",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Coverage-Preserving Self-Healing in Partially Observable 3D UAV Swarm Networks via an Advection-Diffusion Graph Transformer"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2603.24401-A01",
+   "subject": "UATG framework",
+   "attribute": "computation time",
+   "value": "1",
+   "unit": "second",
+   "conditions": "1008 drones on a standard laptop",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2603.24401",
+   "locator": "Abstract",
+   "quote": "it computes the optimal assignment and trajectories for 1008 drones in approximately one second on a standard laptop",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Enhancing Drone Light Shows Performances: Optimal Allocation and Trajectories for Swarm Drone Formations"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.04394-A01",
+   "subject": "differential-game tactics",
+   "attribute": "estimated defense success",
+   "value": "96.8",
+   "unit": "%",
+   "conditions": "intruder swarm capable of evasive maneuvers",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.04394",
+   "locator": "Abstract",
+   "quote": "differential-game tactics increase estimated defense success from 94.6% to 96.8%",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Game-Theoretic Drone Swarm Defense: A Case Study in Applied Differential Game Theory"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.04394-A03",
+   "subject": "differential-game tactics",
+   "attribute": "gap closure to perfect defense",
+   "value": "41",
+   "unit": "%",
+   "conditions": "relative to baseline optimization tactics [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.04394",
+   "locator": "Abstract",
+   "quote": "closing approximately 41% of the remaining gap to perfect defense",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Game-Theoretic Drone Swarm Defense: A Case Study in Applied Differential Game Theory"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2609.04394-A04",
+   "subject": "paired-trial Bayesian analysis",
+   "attribute": "posterior probability",
+   "value": "99.9",
+   "unit": "%",
+   "conditions": "differential-game tactics have higher probability of successful asset defense than baseline tactics",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2609.04394",
+   "locator": "Abstract",
+   "quote": "assigns a 99.9% posterior probability that differential-game tactics have a higher probability of successful asset defense",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Game-Theoretic Drone Swarm Defense: A Case Study in Applied Differential Game Theory"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.06885-A04",
+   "subject": "non-anchored drones position recovery",
+   "attribute": "median error",
+   "value": "0.39",
+   "unit": "m",
+   "conditions": "statistical simulations, ArduPilot software-in-the-loop experiments, Gazebo experiments with rendered vision anchors, 20 seeds, approximately 10.1 m GNSS drift",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.06885",
+   "locator": "Abstract",
+   "quote": "recovers the positions of non-anchored drones to a median error of 0.39 m (20 seeds) under approximately 10.1 m of GNSS drift",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rigid-Covert GNSS Spoofing of UAV Swarms: A Structural Blind Spot, Its Detection Limit, and Absolute-Anchor Defenses"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.06885-A05",
+   "subject": "GNSS drift",
+   "attribute": "magnitude",
+   "value": "10.1",
+   "unit": "m",
+   "conditions": "across statistical simulations, ArduPilot software-in-the-loop experiments, and Gazebo experiments [원문 한정어: ≈]",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.06885",
+   "locator": "Abstract",
+   "quote": "recovers the positions of non-anchored drones to a median error of 0.39 m (20 seeds) under approximately 10.1 m of GNSS drift",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rigid-Covert GNSS Spoofing of UAV Swarms: A Structural Blind Spot, Its Detection Limit, and Absolute-Anchor Defenses"
+   },
+   "qualifier": "≈",
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.06885-A06",
+   "subject": "non-anchored drones position recovery",
+   "attribute": "median error",
+   "value": "7.1",
+   "unit": "cm",
+   "conditions": "rendered-vision multi-SITL setting, 5 seeds",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.06885",
+   "locator": "Abstract",
+   "quote": "and to 7.1 cm (5 seeds) in the rendered-vision multi-SITL setting",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "Rigid-Covert GNSS Spoofing of UAV Swarms: A Structural Blind Spot, Its Detection Limit, and Absolute-Anchor Defenses"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.20126-A01",
+   "subject": "RMWorld",
+   "attribute": "task-weighted RMSE",
+   "value": "0.949",
+   "unit": "bit/s/Hz",
+   "conditions": "Across 100 paired 3GPP trials",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.20126",
+   "locator": "Abstract",
+   "quote": "Across 100 paired 3GPP trials RMWorld reaches 0.949~bit/s/Hz task-weighted RMSE",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "RMWorld: Task-Aware Radio World Models with Value-of-Information Guided Multi-Trial Learning for Multi-UAV Communication Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  },
+  {
+   "id": "AC-2608.20126-A02",
+   "subject": "RMWorld",
+   "attribute": "median backlog reduction",
+   "value": "0.967",
+   "unit": "",
+   "conditions": "Across 30 severe-load DeepMIMO trials versus Ensemble UCB",
+   "sourceType": "paper",
+   "sourceId": "arXiv:2608.20126",
+   "locator": "Abstract",
+   "quote": "across 30 severe-load DeepMIMO trials it reduces median backlog by 0.967 versus Ensemble UCB",
+   "status": "sourced",
+   "evidenceKind": "abstract-quote",
+   "paper": {
+    "title": "RMWorld: Task-Aware Radio World Models with Value-of-Information Guided Multi-Trial Learning for Multi-UAV Communication Control"
+   },
+   "note": "LLM 제안 → 인용문이 원문 초록과 글자 일치·값이 인용문에 존재·별도 판정 통과. 대상·속성 해석은 사람이 검토하지 않음."
+  }
+ ]
+}

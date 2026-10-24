@@ -321,7 +321,7 @@ def main():
     meta = {}
     for f in sorted(glob.glob(os.path.join(a.papers_dir, "candidates_*.json"))):
         for p in json.load(open(f, encoding="utf-8")): meta[p["arxiv"]] = p
-    claims_src = (loadj("claims.json") or {"claims": []})["claims"] + (loadj("paper-claims.json") or {"claims": []})["claims"]
+    claims_src = (loadj("claims.json") or {"claims": []})["claims"] + (loadj("paper-claims.json") or {"claims": []})["claims"] + (loadj("auto-claims.json") or {"claims": []})["claims"]
     mention = {}
     for e in graph["edges"]:
         if e["p"] == "mentions" and e["s"].startswith("claim:"): mention.setdefault(e["s"][6:], e["o"])
@@ -339,7 +339,9 @@ def main():
         kind = c.get("evidenceKind") or ("derived" if c["status"] == "derived" else "reported")
         quote = (c.get("quote") or "").strip()
         has_q = bool(quote) and c["status"] == "verified"
-        if has_q and kind in ("reported",): status, conf = "verified", "high"
+        abs_q = bool(quote) and kind == "abstract-quote"  # 초록 인용 일치(해석 미검증) — sourced/low 로만 둔다
+        if abs_q: status, conf = "sourced", "low"
+        elif has_q and kind in ("reported",): status, conf = "verified", "high"
         elif has_q and kind in ("model-assumption", "simulation"): status, conf = "verified", "medium"
         elif has_q: status, conf = "verified", "low"
         else: status, conf = "sourced", "medium"
@@ -355,7 +357,7 @@ def main():
         else:
             src = add_source(None, f"derived:{sid_}", stype=("catalog" if origin == "manufacturer" else "derived"), locator=c.get("locator"), sha=cat_hash.get("products-catalog.json", ""), resolved=1)
         ex("INSERT INTO evidence (id,claim_id,source_id,locator,quote,evidence_type,verified,verification_method) VALUES (?,?,?,?,?,?,?,?)", (
-            "ev:" + sha1_12(c["id"]), c["id"], src, c.get("locator"), quote or str(c["value"]), "verbatim-quote" if has_q else "derived-calc", int(has_q), "pdf-quote-match" if has_q else "derived-calc"))
+            "ev:" + sha1_12(c["id"]), c["id"], src, c.get("locator"), quote or str(c["value"]), "abstract-quote" if abs_q else ("verbatim-quote" if has_q else "derived-calc"), int(has_q or abs_q), "abstract-literal-match" if abs_q else ("pdf-quote-match" if has_q else "derived-calc")))
     # 규칙 쪽에서 지정한 근거(rules.json claims 목록)도 claim_rules 에 반영
     for r in rules:
         for cid in r.get("claims", []):

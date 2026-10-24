@@ -412,6 +412,7 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
   if (plan.excluded.unverified || plan.excluded.blocked) plan.limitations.push(`근거가 확인되지 않은 claim ${plan.excluded.unverified + plan.excluded.blocked}건은 답변에서 제외했습니다.`)
   if (plan.excluded.unreviewedRelations) plan.limitations.push(`사람 검토 전 관계 ${plan.excluded.unreviewedRelations}건은 사용하지 않았습니다.`)
   if (plan.relations.some((r) => r.predicate === "packFits")) plan.limitations.push("packFits는 셀 수만 비교한 느슨한 호환이라 확정 호환이 아닙니다.")
+  if (plan.claims.some((c) => c.evidenceKind === "abstract-quote")) plan.limitations.push("일부 claim은 논문 초록의 문장과 일치하지만 대상·속성 해석은 사람이 검토하지 않았습니다.")
   if (plan.claims.some((c) => ["model-assumption", "simulation", "cited-secondary"].includes(c.evidenceKind))) plan.limitations.push("일부 claim은 모델 가정값·시뮬레이션·2차 인용이라 실측이 아닙니다.")
   if (plan.claims.some((c) => c.origin === "wiki")) plan.limitations.push("위키 요약 기반 claim은 출처 파일은 확인되지만 원문 인용과 문자 단위로 대조되지 않았습니다.")
   if (plan.domainFilter.length) plan.limitations.push(plan.domainSource === "explicit" ? `domain 필터(지정): ${plan.domainFilter.join(", ")} — 위키 문서에만 적용, 논문·제품 claim은 domain이 없어 포함됩니다.` : `질문에서 식별한 domain(${plan.domainFilter.join(", ")})은 검색 우선순위에만 반영했습니다(문서의 domain 값이 일관되지 않아 필터로 쓰지 않음).`)

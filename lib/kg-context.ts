@@ -11,6 +11,7 @@ export const ANSWER_CONSTRAINTS = [
   "discovery graph를 검증된 근거로 사용하지 말 것",
   "context에 없는 숫자·제품명·날짜·계산 결과를 만들지 말 것",
   "evidence_kind가 model-assumption·simulation·cited-secondary인 claim은 실측이 아님을 밝힐 것",
+  "evidence_kind가 abstract-quote인 claim은 '논문 초록의 문장과 일치하지만 대상·속성 해석은 검토되지 않았다'고 밝힐 것",
   "위키 요약(canonical_pages, origin=wiki)은 보강 자료일 뿐 단독 근거가 아님",
 ] as const
 
@@ -91,7 +92,7 @@ ${soften(JSON.stringify(sendable))}
 1. 사실(수치·제품명·관계·조건)은 context에 있는 것만 씁니다. 근거는 각 항목의 ref 값을 그대로 대괄호로 표기합니다: claim은 [C1], 관계는 [R3], 보강 문서는 [P2]. ref 값을 바꾸거나 새로 만들지 않고, context에 없는 ref는 쓰지 않습니다.
 2. 관계는 ontology_relations에 있는 것만 말합니다. 없는 관계를 추정하지 않습니다.
 3. status가 contested인 claim이나 서로 다른 값은 양쪽을 모두 쓰고 충돌임을 밝힙니다.
-4. evidence_kind가 model-assumption·simulation·cited-secondary인 값은 "실측이 아님"을 함께 씁니다. origin이 wiki인 항목은 "위키 요약 기반"이라고 밝히고 단독 근거로 쓰지 않습니다.
+4. evidence_kind가 model-assumption·simulation·cited-secondary인 값은 "실측이 아님"을 함께 씁니다. abstract-quote인 값은 "논문 초록 인용(해석 미검증)"이라고 함께 씁니다. origin이 wiki인 항목은 "위키 요약 기반"이라고 밝히고 단독 근거로 쓰지 않습니다.
 5. limitations에 적힌 한계를 답변 끝에 "한계" 항목으로 요약합니다.
 6. 계산 예시·추정·날짜를 새로 만들지 않습니다. 근거가 부족하면 부족하다고 씁니다.
 6-0. 답변은 짧은 소제목과 목록으로 구조화하고, 문단과 목록 항목의 끝마다 근거 표기([C번호]·[R번호]·[P번호])를 답니다. 예: \"…통신 프로토콜입니다. [P1]\"

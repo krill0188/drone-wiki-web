@@ -1,18 +1,19 @@
 {
  "generated": "2026-10-24",
- "fingerprint": "aff68ab853da",
+ "fingerprint": "1fbd9d274590",
  "counts": {
   "manufacturers": 257,
   "products": 694,
   "rules": 26,
-  "papers": 109,
-  "claims": 259,
+  "papers": 152,
+  "claims": 365,
   "edges": 4549,
   "documents": 3275,
   "wikiClaims": 3057,
   "relations": 4584
  },
  "claimsByKind": {
+  "abstract-quote": 106,
   "cited-secondary": 3,
   "derived": 6,
   "model-assumption": 35,
@@ -20,8 +21,8 @@
   "simulation": 21
  },
  "claimsByTopic": {
+  "-": 140,
   "propulsion": 39,
-  "-": 34,
   "companion": 32,
   "vtol-fixedwing": 30,
   "energy": 27,
@@ -40,6 +41,7 @@
   "derived:verified": 1,
   "manufacturer:sourced": 4,
   "manufacturer:verified": 4,
+  "paper:sourced": 106,
   "paper:verified": 248,
   "wiki:blocked": 24,
   "wiki:contested": 6,
