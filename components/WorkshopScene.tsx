@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 //  · 왼쪽 모니터: 처음 한 번 코드가 써지고, 모니터를 누르면 다시 써진다
 //  · 가운데 청사진: 처음 한 번, 그리고 마우스를 올리면 주황 스캔 선이 한 번 지나간다
 //  · 드론: 올리면 프로펠러가 돌며 뜬다 · 오른쪽 그래프: 올리면 4초만 흐른다
+// 시스템의 '동작 줄이기'(prefers-reduced-motion)가 켜져 있으면 처음 자동 재생만 멈춘다. 사용자가 직접 올리거나 누른 움직임과 '움직임 보기' 버튼은 그대로 동작한다(2026-10-25).
 const LINES: [string, string][] = [
   ["# 질문이 답이 되는 순서", "#7d93ab"],
   ['q = ask("RTK와 PPK 차이?")', "#9fe2b8"],
@@ -17,6 +18,7 @@ const LINES: [string, string][] = [
 
 export default function WorkshopScene() {
   const reduce = useRef(false)
+  const [reduced, setReduced] = useState(false)
   const [li, setLi] = useState(0)
   const [ci, setCi] = useState(0)
   const [typing, setTyping] = useState(false)
@@ -25,9 +27,9 @@ export default function WorkshopScene() {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null)
   const typeT = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const run = useCallback(() => {
+  const run = useCallback((user = false) => {
     if (typeT.current) clearTimeout(typeT.current)
-    if (reduce.current) { setLi(LINES.length); setCi(0); setTyping(false); return }
+    if (reduce.current && !user) { setLi(LINES.length); setCi(0); setTyping(false); return }
     setLi(0); setCi(0); setTyping(true)
     let l = 0, c = 0
     const step = () => {
@@ -39,19 +41,20 @@ export default function WorkshopScene() {
     }
     step()
   }, [])
-  const scan = useCallback(() => {
-    if (reduce.current) return
+  const scan = useCallback((user = false) => {
+    if (reduce.current && !user) return
     setScanGo(false)
     requestAnimationFrame(() => requestAnimationFrame(() => setScanGo(true)))
   }, [])
   useEffect(() => {
     reduce.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    setReduced(reduce.current)
     run(); scan()
     return () => { if (typeT.current) clearTimeout(typeT.current); if (timer.current) clearInterval(timer.current) }
   }, [run, scan])
 
-  const startGraph = () => {
-    if (reduce.current || timer.current) return
+  const startGraph = (user = false) => {
+    if ((reduce.current && !user) || timer.current) return
     let n = 0
     timer.current = setInterval(() => { setT((x) => x + 0.35); if (++n > 45 && timer.current) { clearInterval(timer.current); timer.current = null } }, 90)
   }
@@ -77,7 +80,7 @@ export default function WorkshopScene() {
         <rect width="1000" height="300" fill="url(#ws-peg)" />
 
         {/* 왼쪽 모니터: 코드 */}
-        <g transform="translate(36,52)" role="button" tabIndex={0} aria-label="코드 다시 보기" style={{ cursor: "pointer" }} onClick={run} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); run() } }}>
+        <g transform="translate(36,52)" role="button" tabIndex={0} aria-label="코드 다시 보기" style={{ cursor: "pointer" }} onClick={() => run(true)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); run(true) } }}>
           <rect width="270" height="178" rx="6" fill="#222c3a" stroke="#0c121b" strokeWidth="3" />
           <rect x="9" y="9" width="252" height="150" rx="3" fill="var(--ws-screen)" />
           <rect x="9" y="9" width="252" height="150" rx="3" fill="url(#ws-glow)" />
@@ -92,7 +95,7 @@ export default function WorkshopScene() {
         </g>
 
         {/* 가운데: 청사진 */}
-        <g transform="translate(330,26)" onMouseEnter={scan} onClick={scan}>
+        <g transform="translate(330,26)" onMouseEnter={() => scan(true)} onClick={() => scan(true)}>
           <rect x="-3" y="-3" width="346" height="230" fill="none" stroke="var(--ws-ink)" strokeOpacity=".35" strokeWidth="2" />
           <rect width="340" height="224" fill="var(--ws-bp)" />
           <rect width="340" height="224" fill="url(#ws-grid)" />
@@ -113,7 +116,7 @@ export default function WorkshopScene() {
         </g>
 
         {/* 오른쪽 모니터: 그래프 */}
-        <g transform="translate(694,52)" onMouseEnter={startGraph}>
+        <g transform="translate(694,52)" onMouseEnter={() => startGraph(true)} onClick={() => startGraph(true)}>
           <rect width="270" height="178" rx="6" fill="#222c3a" stroke="#0c121b" strokeWidth="3" />
           <rect x="9" y="9" width="252" height="150" rx="3" fill="var(--ws-screen)" />
           <rect x="9" y="9" width="252" height="150" rx="3" fill="url(#ws-glow)" />
@@ -147,6 +150,12 @@ export default function WorkshopScene() {
         <g transform="translate(860,260)"><rect width="38" height="36" rx="5" fill="#f4f7fb" stroke="#1b2430" strokeWidth="3" /><path d="M38 10h10a8 8 0 0 1 0 16H38" fill="none" stroke="#1b2430" strokeWidth="3" /></g>
         <g transform="translate(250,276)"><rect width="46" height="12" rx="2" fill="#c8d2de" transform="rotate(-8 23 6)" /><rect x="-26" y="2" width="30" height="10" rx="2" fill="#ff6a13" transform="rotate(-8 23 6)" /></g>
       </svg>
+      {reduced && (
+        <div className="ws-playbar">
+          <span>이 기기는 &lsquo;동작 줄이기&rsquo;가 켜져 있어 자동 재생을 멈췄어요.</span>
+          <button type="button" onClick={() => { run(true); scan(true); startGraph(true) }}>▶ 움직임 보기</button>
+        </div>
+      )}
     </div>
   )
 }
