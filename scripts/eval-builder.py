@@ -29,11 +29,11 @@ def call(stage, ctx):
 ctx, rows = {}, []
 for st in STAGES:
     out, t, prog, err = call(st, dict(ctx))
-    rows.append({"stage": st, "sec": round(t), "chars": len(out), "x": out.count("❌"), "cross": "교차 공학 점검" in out, "repaired": "서버 치환" in out, "err": err})
+    rows.append({"stage": st, "sec": round(t), "chars": len(out), "x": out.count("❌"), "cross": "교차 공학 점검" in out, "repaired": "서버 치환" in out, "err": err, "xlines": [l.strip()[:200] for l in out.splitlines() if "❌" in l][:8]})
     print(f'{st:15} {round(t):4}s len {len(out):5} ❌{out.count("❌")} 점검표 {"O" if "교차 공학 점검" in out else "-"} {err}', flush=True)
     if st == "sw" and out:  # 반려 → 같은 단계 재작성 흐름도 확인
         o2, t2, _, e2 = call("sw", {**ctx, "feedback": {"previous": out, "reason": "ROS 2 대신 MAVLink 중심으로 단순화"}})
-        rows.append({"stage": "sw-reject", "sec": round(t2), "chars": len(o2), "x": o2.count("❌"), "cross": "교차 공학 점검" in o2, "repaired": False, "err": e2})
+        rows.append({"stage": "sw-reject", "sec": round(t2), "chars": len(o2), "x": o2.count("❌"), "cross": "교차 공학 점검" in o2, "repaired": False, "err": e2, "xlines": [l.strip()[:200] for l in o2.splitlines() if "❌" in l][:8]})
         print(f'{"sw 반려→재작성":15} {round(t2):4}s len {len(o2):5} {e2}', flush=True)
         out = o2 or out
     ctx[st] = out

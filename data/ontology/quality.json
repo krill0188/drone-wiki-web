@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-24",
- "fingerprint": "1fbd9d274590",
+ "fingerprint": "708f573072c6",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -74,7 +74,7 @@
   "withDomain": 948,
   "noDomain": 2327,
   "unregisteredDomain": 4,
-  "withOntologyClass": 315,
+  "withOntologyClass": 1226,
   "byDomain": {
    "(없음)": 2327,
    "ai-autonomy": 216,
@@ -595,11 +595,9 @@
   },
   {
    "desc": "ontology_class 가 있는 canonical 문서가 전체의 10% 미만",
-   "ok": false,
-   "count": 1,
-   "sample": [
-    "coverage"
-   ]
+   "ok": true,
+   "count": 0,
+   "sample": []
   }
  ]
 }
