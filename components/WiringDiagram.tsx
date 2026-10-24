@@ -55,7 +55,7 @@ export default function WiringDiagram() {
       <p className="sm:hidden text-[12px] text-ink-dim mb-1">그림을 좌우로 밀어서 전체를 볼 수 있어요 ↔</p>
       <div className="overflow-x-auto rounded-lg border-2 border-ink" style={{ background: "var(--ws-wall, var(--color-paper))" }}>
         <div className="ws" style={{ minWidth: 760 }}>
-          <svg viewBox="0 0 960 660" role="img" aria-label="Cube 계열 비행제어기를 쓰는 멀티로터의 배선도 예시" className="block w-full h-auto">
+          <svg viewBox="0 0 960 690" role="img" aria-label="Cube 계열 비행제어기를 쓰는 멀티로터의 배선도 예시" className="block w-full h-auto">
             {/* 선(상자 아래) */}
             {line("can", "M170 85H190M170 155H190M190 85V155M190 120H215")}
             {line("can", "M305 120H340V200H380")}
@@ -98,7 +98,7 @@ export default function WiringDiagram() {
             {port(386, 204, "CAN")}{port(386, 254, "TELEM1")}{port(386, 354, "RCIN")}
             {port(574, 204, "POWER1", "end")}{port(574, 254, "I2C", "end")}{port(574, 304, "AUX OUT", "end")}
             {port(420, 394, "M1", "middle")}{port(450, 394, "M2", "middle")}{port(510, 394, "M3", "middle")}{port(540, 394, "M4", "middle")}
-            <text x="480" y="650" textAnchor="middle" fontSize="10.5" fill="var(--color-ink-dim)">센서·무선은 별도 5V 강압 모듈로 급전하는 것이 일반적이에요(표시 생략)</text>
+            <text x="480" y="678" textAnchor="middle" fontSize="10.5" fill="var(--color-ink-dim)">센서·무선은 별도 5V 강압 모듈로 급전하는 것이 일반적이에요(표시 생략)</text>
           </svg>
         </div>
       </div>
