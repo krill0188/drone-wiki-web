@@ -49,7 +49,7 @@ const STAGE_LIMITS: Record<Stage, { chars: number; maxOutputTokens: number }> = 
   proposal: { chars: 2500, maxOutputTokens: 3000 },
   hw: { chars: 4000, maxOutputTokens: 5000 },
   sw: { chars: 3500, maxOutputTokens: 4500 },
-  techspec: { chars: 3500, maxOutputTokens: 4500 },
+  techspec: { chars: 4200, maxOutputTokens: 5200 },
   architecture: { chars: 3500, maxOutputTokens: 4500 },
   implementation: { chars: 4000, maxOutputTokens: 5000 },
 }
@@ -208,7 +208,18 @@ ${grounding}
 ## 3. 충돌·위험 목록
 서로 충돌하는 요구나 선정(예: 체공시간 vs 페이로드)을 명시하고 해소 방안을 한 줄씩.
 ## 4. 규정 준수 요건
-## 5. 확정 기술 스펙 요약 (구성요소 이름과 핵심 수치만, 10줄 이내)
+## 5. 확정 기술 스펙 요약
+아래 10줄을 번호와 굵은 라벨 형식 그대로, 한 줄에 한 항목으로 쓴다. 값은 승인된 HW 스펙 표와 <design-calc>에 있는 것만 옮기고 새로 계산하지 마라. 표에 없는 값은 "미정"이라고 쓴다. 통합 검증 결과 HW 표의 값을 바꾸어야 하면 바꾼 값을 쓰고 위 3번 목록에 이유를 적는다.
+1. **기체**: 형식 · 휠베이스 N mm
+2. **모터**: 제품명 · KV N · N개
+3. **ESC**: 제품명 · 연속 N A · N개
+4. **프롭**: 제품명 또는 지름 N인치 · N개
+5. **배터리**: 제품명 · NS · N Ah · 질량 N g
+6. **총중량(AUW)**: N kg
+7. **FC**: 제품명
+8. **컴패니언 컴퓨터**: 제품명 또는 없음
+9. **통신**: 제품명 · 대역
+10. **페이로드**: N kg
 
 한국어로 작성.`
 }
@@ -480,14 +491,14 @@ export async function POST(req: NextRequest) {
             // 서버 계산 게이트(코드 계산): HW·기술스펙 단계 끝에 물리량을 코드가 다시 계산한 결과를 붙인다. 실패해도 본문은 그대로 나간다.
             let gateNote = ""
             if (stage === "hw" || stage === "techspec") {
-              try { gateNote = buildGateNote({ spec: gate.spec, hwMd: stage === "hw" ? text : ctx.hw ?? "", compareText: `${ctx.hw ?? ""}\n${text}` }) } catch { /* 게이트 실패는 보강만 빠진다 */ }
+              try { gateNote = buildGateNote({ spec: gate.spec, hwMd: stage === "hw" ? text : ctx.hw ?? "", compareText: `${ctx.hw ?? ""}\n${text}`, finalSpecMd: stage === "techspec" ? text : ctx.techspec }) } catch { /* 게이트 실패는 보강만 빠진다 */ }
             }
             const paperNote = stage !== "proposal" && stage !== "implementation" && !paper ? paperEvidenceNote(picks, text) : ""
             // 단계 간 일치성: 기준은 HW 표(4단계 확정 스펙 구역이 생기면 그것이 우선). HW 단계는 기획과, 이후 단계는 HW 표와 비교한다.
             let consistencyNote = ""
             try {
               if (stage === "hw" && ctx.proposal) consistencyNote = stageConsistencyNote(text, ctx.proposal, "기획 단계")
-              else if (stage !== "hw" && stage !== "proposal" && ctx.hw) consistencyNote = stageConsistencyNote(ctx.hw, text, `${stage === "sw" ? "SW" : stage === "techspec" ? "기술 스펙" : stage === "architecture" ? "아키텍처" : "구현"} 단계`)
+              else if (stage !== "hw" && stage !== "proposal" && ctx.hw) consistencyNote = stageConsistencyNote(ctx.hw, text, `${stage === "sw" ? "SW" : stage === "techspec" ? "기술 스펙" : stage === "architecture" ? "아키텍처" : "구현"} 단계`, stage === "architecture" || stage === "implementation" ? ctx.techspec : undefined)
             } catch { /* 점검 실패는 보강만 빠진다 */ }
             const out = soften(text + repairNote + reviewNote + advisory + renderValidation(v, retried) + consistencyNote + gateNote + paperNote)
             progress("done")

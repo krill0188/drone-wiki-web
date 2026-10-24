@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """설계 도우미 6단계 회귀 점검(운영): 기획안→부품→프로그램(반려→재작성)→세부 사양→구조도→코드 뼈대를 끝까지 호출해
-단계별 시간·길이·검증 ❌ 수·교차 공학 점검표 유무를 기록한다. 사용: python3 scripts/eval-builder.py [--url URL] [--out file.json] [--reason on|block|off]
+단계별 시간·길이·검증 ❌ 수·교차 공학 점검표 유무를 기록한다. 사용: python3 scripts/eval-builder.py [--url URL] [--out file.json] [--reason on|block|off] [--save-text 1]
 종료 코드 1: 6단계 중 하나가 비어 있거나(오류), 단계 하나가 240초를 넘거나, 단계별 ❌ 최대치가 3건을 넘을 때."""
 import json, sys, time, urllib.request
 ARGS = sys.argv[1:]
@@ -29,7 +29,7 @@ def call(stage, ctx):
 ctx, rows = {}, []
 for st in STAGES:
     out, t, prog, err = call(st, dict(ctx))
-    rows.append({"stage": st, "sec": round(t), "chars": len(out), "x": out.count("❌"), "cross": "교차 공학 점검" in out, "repaired": "서버 치환" in out, "err": err, "xlines": [l.strip()[:200] for l in out.splitlines() if "❌" in l][:8]})
+    rows.append({"stage": st, "sec": round(t), "chars": len(out), "x": out.count("❌"), "cross": "교차 공학 점검" in out, "repaired": "서버 치환" in out, "err": err, **({"text": out} if opt("--save-text") else {}), "xlines": [l.strip()[:200] for l in out.splitlines() if "❌" in l][:8]})
     print(f'{st:15} {round(t):4}s len {len(out):5} ❌{out.count("❌")} 점검표 {"O" if "교차 공학 점검" in out else "-"} {err}', flush=True)
     if st == "sw" and out:  # 반려 → 같은 단계 재작성 흐름도 확인
         o2, t2, _, e2 = call("sw", {**ctx, "feedback": {"previous": out, "reason": "ROS 2 대신 MAVLink 중심으로 단순화"}})

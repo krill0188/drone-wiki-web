@@ -1,3 +1,4 @@
+import { finalSpecStructureIssue } from "./final-spec"
 import type { MatchData, Cand } from "@/lib/product-match"
 
 // 단계 출력 검증기(2026-10-19): AI가 쓴 마크다운을 코드가 판정한다. "서술은 AI, 판정은 코드" 원칙.
@@ -244,6 +245,10 @@ export function validateTechspec(md: string, hwMd: string, d: MatchData): Valida
   const ok2 = keys.length === 0 || missing.length / keys.length <= 0.4
   checks.push({ ok: ok2, label: "확정 기술 스펙이 HW 선정 제품을 반영", detail: missing.length ? `미반영: ${missing.join(", ")}` : undefined })
   if (!ok2) issues.push(`기술 스펙이 HW 스펙의 선정 제품(${missing.join(", ")})을 반영하지 않았다.`)
+  // 구조 게이트: 확정 기술 스펙 요약이 번호 + **라벨**: 값 형식이어야 코드가 읽어 게이트·일치성 점검의 최우선 기준으로 쓴다
+  const structIssue = finalSpecStructureIssue(md)
+  checks.push({ ok: !structIssue, label: "확정 기술 스펙 요약이 읽을 수 있는 형식", detail: structIssue ? "5개 미만" : undefined })
+  if (structIssue) issues.push(structIssue)
   return { checks, issues }
 }
 

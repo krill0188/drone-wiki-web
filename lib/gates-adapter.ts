@@ -4,6 +4,7 @@
 import { parseTable } from "./stage-validate"
 import { runGates, ASSUMPTIONS, type CoreSpec, type GateKey, type GateReport } from "./gates-core"
 import { planMultirotor, type DesignSpec } from "./design-gate"
+import { finalBasics, parseFinalSpec } from "./final-spec"
 
 type Row = Record<string, string>
 const colOf = (r: Row, re: RegExp) => Object.entries(r).find(([k]) => re.test(k))?.[1] ?? ""
@@ -77,13 +78,21 @@ function parseHw(hwMd: string, spec: DesignSpec): Parsed {
   return out
 }
 
-export interface GateNoteInput { spec: DesignSpec; hwMd: string; compareText?: string }
+export interface GateNoteInput { spec: DesignSpec; hwMd: string; compareText?: string; finalSpecMd?: string }
 
 function claim(text: string, re: RegExp): number | null { const m = re.exec(text.replace(/\*\*/g, "")); return m ? num(m[1]) : null }
 
-export function buildGateNote({ spec, hwMd, compareText = "" }: GateNoteInput): string {
+export function buildGateNote({ spec, hwMd, compareText = "", finalSpecMd = "" }: GateNoteInput): string {
   if (!hwMd.trim()) return ""
   const p = parseHw(hwMd, spec)
+  // 우선순위: 4단계 확정 스펙 > HW 표 > 기획. 확정 스펙이 읽히면 그 값으로 덮어쓰고 출처를 기록한다.
+  const fin = finalSpecMd ? finalBasics(parseFinalSpec(finalSpecMd)) : {}
+  const src: Record<string, string> = {}
+  const FIN = "doc:4단계 확정 스펙", HWT = "doc:HW 표"
+  const pick = <T,>(key: string, hwVal: T | undefined, finVal: T | undefined): T | undefined => { if (finVal !== undefined) { src[key] = FIN; return finVal } if (hwVal !== undefined) src[key] = HWT; return hwVal }
+  p.cells = pick("cells", p.cells, fin.cells); p.ah = pick("ah", p.ah, fin.ah); p.propIn = pick("propIn", p.propIn, fin.propIn)
+  p.kv = pick("kv", p.kv, fin.kv); p.escA = pick("escA", p.escA, fin.escA); p.batMassG = pick("batMassG", p.batMassG, fin.batMassG)
+  if (p.thrustG !== undefined) src.thrustG = HWT
   const missing: string[] = []
   const rotors = p.rotors ?? spec.rotors
   const only = new Set<GateKey>(["G1"])
@@ -150,6 +159,22 @@ export function buildGateNote({ spec, hwMd, compareText = "" }: GateNoteInput): 
     review.push(`링크: ${p.link.freqMhz / 1000} GHz·${spec.rangeKm / 2} km에서 자유공간 손실 ${fspl.toFixed(1)} dB → 마진 10 dB를 확보하려면 수신 감도 ≤ ${need.toFixed(0)} dBm 필요(송신 ${p.link.txDbm} dBm, 안테나 0 dBi·기타 손실 3 dB 가정). 데이터시트 감도로 확인하세요`)
   }
   if (review.length) lines.push("\n**확인 필요**\n" + review.map((x) => `- 🟡 ${x}`).join("\n"))
+  // 입력 출처: 문서에서 가져온 값은 doc:, 가정한 값은 assumption:으로 표시한다
+  const rowsSrc: string[] = []
+  const add = (name: string, value: string | number | undefined, source: string | undefined) => { if (value !== undefined && source) rowsSrc.push(`| ${name} | ${value} | ${source} |`) }
+  add("배터리 S·Ah", p.cells && p.ah ? `${p.cells}S ${p.ah}Ah` : undefined, src.cells ?? src.ah)
+  add("배터리 질량", p.batMassG !== undefined ? `${p.batMassG} g` : undefined, src.batMassG)
+  add("프롭 지름", p.propIn !== undefined ? `${p.propIn}인치` : undefined, src.propIn)
+  add("모터 KV", p.kv, src.kv)
+  add("모터 최대추력", p.thrustG !== undefined ? `${p.thrustG} gf` : undefined, src.thrustG)
+  add("ESC 연속 전류", p.escA !== undefined ? `${p.escA} A` : undefined, src.escA)
+  add("휠베이스", spec.sizeMm !== undefined ? `${spec.sizeMm} mm` : undefined, spec.sizeMm !== undefined ? "doc:사용자 입력(기체 크기)" : undefined)
+  add("페이로드", spec.payloadKg !== undefined ? `${spec.payloadKg} kg` : undefined, spec.payloadKg !== undefined ? "doc:사용자 입력" : undefined)
+  add("요구 비행시간", spec.flightMin !== undefined ? `${spec.flightMin}분` : undefined, spec.flightMin !== undefined ? "doc:사용자 입력" : undefined)
+  add("총중량 하한", plan ? `${(plan.auw * 1000).toFixed(0)} g` : undefined, plan ? "doc:엔진 계산(사용자 4입력으로 산출한 추정 전제)" : undefined)
+  add("항전 전력", `${Math.max(15, p.avFoundW)} W`, p.avFoundW > 15 ? HWT : "assumption:문서에 합계가 없어 보수 기본값 15 W")
+  add("순항속도 / 맞바람 / 예비", "10 m/s / 5 m/s / 20%", "assumption:문서에 없어 소형 멀티로터 일반 보수값(가정)")
+  if (rowsSrc.length) lines.push("\n**입력 출처** (우선순위: 4단계 확정 스펙 > HW 표 > 기획)\n\n| 입력 | 값 | 출처 |\n|---|---|---|\n" + rowsSrc.join("\n"))
   lines.push(`\n종합: 불합격 ${rep.fail}건 · 확인 필요 ${rep.review + review.length ? "있음" : "없음"} — 국내 규정(무게 종별·주파수)은 코드가 판정하지 않으며 사람이 확인해야 합니다.`)
   return lines.join("\n")
 }

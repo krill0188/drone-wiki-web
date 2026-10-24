@@ -4,6 +4,7 @@
 import catalogFile from "@/data/ontology/products-catalog.json"
 import { modelKeyOf, keysFor } from "./product-match"
 import { hwBasics } from "./gates-adapter"
+import { finalBasics, parseFinalSpec } from "./final-spec"
 import { parseTable } from "./stage-validate"
 
 type Row = Record<string, string>
@@ -26,9 +27,13 @@ const mentioned = (text: string, only?: string): CatItem[] => {
 
 export interface Conflict { topic: string; base: string; other: string; note?: string }
 
-export function findStageConflicts(hwMd: string, otherText: string): { conflicts: Conflict[]; compared: string[] } {
+export function findStageConflicts(hwMd: string, otherText: string, finalMd?: string): { conflicts: Conflict[]; compared: string[]; baseLabel: string } {
   const conflicts: Conflict[] = [], compared: string[] = []
-  if (!hwMd.trim() || !otherText.trim()) return { conflicts, compared }
+  // 우선순위: 4단계 확정 스펙 > HW 표 > 기획
+  const fspec = finalMd ? parseFinalSpec(finalMd) : null
+  const fb = fspec?.found ? finalBasics(fspec) : null
+  const baseLabel = fb ? "4단계 확정 스펙(+HW 표)" : "HW 표"
+  if (!hwMd.trim() || !otherText.trim()) return { conflicts, compared, baseLabel }
 
   // 1) 카탈로그 제품: HW 표가 고른 제품(분류별)과 다른 같은 분류 제품이 다른 단계에 나오는가
   const selected = new Map<string, Set<string>>()
@@ -40,6 +45,10 @@ export function findStageConflicts(hwMd: string, otherText: string): { conflicts
     const items = mentioned(sel, cat)
     if (items.length) selected.set(cat, new Set(items.map((i) => i.name)))
   }
+  if (fspec?.found) {
+    const F2C: [string, string][] = [["모터", "motor"], ["ESC", "esc"], ["프롭", "propeller"], ["배터리", "battery"], ["FC", "fc"], ["컴패니언 컴퓨터", "compute"], ["통신", "datalink"], ["기체", "frame"]]
+    for (const [label, cat] of F2C) { const txt = (fspec.fields as Record<string, string | undefined>)[label]; if (!txt) continue; const items = mentioned(txt, cat); if (items.length) selected.set(cat, new Set(items.map((i) => i.name))) }
+  }
   for (const [cat, names] of selected) {
     compared.push(CAT_LABEL[cat])
     const others = mentioned(otherText, cat).filter((i) => !names.has(i.name))
@@ -49,7 +58,8 @@ export function findStageConflicts(hwMd: string, otherText: string): { conflicts
   }
 
   // 2) 수치: 배터리 S·Ah, 프롭 지름, 모터 KV, 총중량
-  const b = hwBasics(hwMd)
+  const b0 = hwBasics(hwMd)
+  const b = { ...b0, cells: fb?.cells ?? b0.cells, ah: fb?.ah ?? b0.ah, propIn: fb?.propIn ?? b0.propIn, kv: fb?.kv ?? b0.kv }
   if (b.cells && b.ah) {
     compared.push("배터리 S·Ah")
     const bad: string[] = []
@@ -82,9 +92,10 @@ export function findStageConflicts(hwMd: string, otherText: string): { conflicts
     if (bad.length) conflicts.push({ topic: "모터 KV", base: `${b.kv}KV`, other: [...new Set(bad)].map((v) => `${v}KV`).join(", ") })
   }
   const baseAuw = /추정 총중량[^|\n]*\|\s*\**\s*([\d.]+)\s*kg/.exec(hwMd.replace(/\*\*/g, ""))
-  if (baseAuw) {
+  const auwBase = fb?.auwKg ?? (baseAuw ? num(baseAuw[1]) : null)
+  if (auwBase) {
     compared.push("총중량")
-    const bv = num(baseAuw[1])
+    const bv = auwBase
     const bad = [...otherText.replace(/\*\*/g, "").matchAll(/(?:AUW|총중량)[^\d\n]{0,14}([\d.]+)\s*kg/gi)].map((m) => num(m[1])).filter((v) => v > 0 && Math.abs(v - bv) / bv > 0.15)
     if (bad.length) conflicts.push({ topic: "총중량(AUW)", base: `${bv} kg`, other: [...new Set(bad)].map((v) => `${v} kg`).join(", ") })
   }
@@ -101,13 +112,13 @@ export function findStageConflicts(hwMd: string, otherText: string): { conflicts
     const extra = [...otherBands].filter((f) => !baseBands.has(f))
     if (extra.length) conflicts.push({ topic: "링크 대역", base: [...baseBands].map((f) => (f === "900" ? "900 MHz대" : `${f} GHz`)).join(", "), other: extra.map((f) => (f === "900" ? "900 MHz대" : `${f} GHz`)).join(", "), note: "HW 표 데이터링크 행에 없는 대역" })
   }
-  return { conflicts, compared }
+  return { conflicts, compared, baseLabel }
 }
 
-export function stageConsistencyNote(hwMd: string, otherText: string, otherLabel: string): string {
-  const { conflicts, compared } = findStageConflicts(hwMd, otherText)
+export function stageConsistencyNote(hwMd: string, otherText: string, otherLabel: string, finalMd?: string): string {
+  const { conflicts, compared, baseLabel } = findStageConflicts(hwMd, otherText, finalMd)
   if (!compared.length) return ""
-  if (!conflicts.length) return `\n\n---\n\n## 🔀 단계 간 일치성 점검\n\n- 🟢 ${otherLabel}이(가) HW 표와 모순되는 부품·수치를 보이지 않습니다 (비교 항목: ${compared.join(", ")}).`
+  if (!conflicts.length) return `\n\n---\n\n## 🔀 단계 간 일치성 점검\n\n- 🟢 ${otherLabel}이(가) ${baseLabel}와 모순되는 부품·수치를 보이지 않습니다 (비교 항목: ${compared.join(", ")}).`
   const rows = conflicts.map((c) => `| ${c.topic} | ${c.base} | ${c.other}${c.note ? ` (${c.note})` : ""} |`)
-  return `\n\n---\n\n## 🔀 단계 간 일치성 점검 (코드가 비교 — 기준: HW 표)\n\n> ${otherLabel}에서 HW 표와 다르게 쓴 항목입니다. 대안·후보로 언급한 것일 수 있어 자동 반려하지 않습니다. 확정값은 HW 표가 우선이며, 맞지 않으면 해당 단계를 다시 생성하세요.\n\n| 항목 | HW 표(기준) | ${otherLabel} |\n|---|---|---|\n${rows.join("\n")}\n\n비교한 항목: ${compared.join(", ")}`
+  return `\n\n---\n\n## 🔀 단계 간 일치성 점검 (코드가 비교 — 기준: ${baseLabel}; 우선순위 4단계 확정 스펙 > HW 표 > 기획)\n\n> ${otherLabel}에서 ${baseLabel}와 다르게 쓴 항목입니다. 대안·후보로 언급한 것일 수 있어 자동 반려하지 않습니다. 확정값은 HW 표가 우선이며, 맞지 않으면 해당 단계를 다시 생성하세요.\n\n| 항목 | ${baseLabel} | ${otherLabel} |\n|---|---|---|\n${rows.join("\n")}\n\n비교한 항목: ${compared.join(", ")}`
 }
