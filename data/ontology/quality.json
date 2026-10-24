@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-24",
- "fingerprint": "e0ffb8da287d",
+ "fingerprint": "898d33aca06b",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -8,7 +8,7 @@
   "papers": 109,
   "claims": 259,
   "edges": 4549,
-  "documents": 909,
+  "documents": 3275,
   "wikiClaims": 3057,
   "relations": 4584
  },
@@ -68,29 +68,30 @@
   "countryUnknown": 51
  },
  "documents": {
-  "total": 909,
-  "withDomain": 909,
-  "noDomain": 0,
+  "total": 3275,
+  "withDomain": 948,
+  "noDomain": 2327,
   "unregisteredDomain": 4,
   "withOntologyClass": 315,
   "byDomain": {
-   "ai-autonomy": 200,
-   "hardware": 171,
-   "ops-mission": 149,
-   "flight-control": 76,
-   "comms-protocol": 67,
-   "regulations": 60,
+   "(없음)": 2327,
+   "ai-autonomy": 216,
+   "hardware": 177,
+   "ops-mission": 150,
+   "flight-control": 80,
+   "comms-protocol": 74,
+   "regulations": 62,
    "edge-ai-compute": 41,
    "gcs-software": 29,
    "vendor-registry": 18,
    "security": 18,
+   "navigation-gnss-denied": 18,
    "simulation-test": 17,
-   "navigation-gnss-denied": 16,
    "software-ecosystem": 13,
    "rf-datalink-engineering": 12,
    "ros-middleware": 7,
+   "swarm-multiagent": 4,
    "electrical-power": 4,
-   "swarm-multiagent": 3,
    "knowledge-management": 3,
    "ai-agent": 2,
    "swarm": 1,
@@ -99,10 +100,10 @@
   }
  },
  "sources": {
-  "total": 1304,
-  "resolved": 1274,
-  "unresolved": 25,
-  "unknown": 5
+  "total": 3957,
+  "resolved": 3917,
+  "unresolved": 32,
+  "unknown": 8
  },
  "edgesByRelation": {
   "packFits": 1867,
@@ -560,21 +561,28 @@
   },
   {
    "desc": "domain이 없는 문서(추론하지 않고 NULL 유지)",
-   "ok": true,
-   "count": 0,
-   "sample": []
+   "ok": false,
+   "count": 2327,
+   "sample": [
+    "concepts/10-48550-arxiv-2607-26717.md",
+    "concepts/1045-propeller.md",
+    "concepts/14-cfr-part-107.md",
+    "concepts/2-dof-magnetic-spherical-joint.md",
+    "concepts/3d-coverage-radius.md",
+    "concepts/3d-environment-model.md"
+   ]
   },
   {
    "desc": "해석되지 않은 출처 경로(blocked claim 원인)",
    "ok": false,
-   "count": 25,
+   "count": 32,
    "sample": [
+    "arXiv:2503.06890",
+    "arXiv:2610.30410",
     "inbox/processed/hw-20261024-gnss-vendors.md",
+    "px4-basic-concepts.md",
     "raw/articles/amazon-prime-air-expansion-2026-08.md",
-    "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md",
-    "raw/articles/ondas-ohio-drone-hub-2026-08.md",
-    "raw/articles/saildrone-european-expansion-2026-08.md",
-    "raw/articles/uavionix-airwise-flightline-partnership-2026-08.md"
+    "raw/articles/hoverair-versa-2in1-gimbal-drone-2026-08.md"
    ]
   },
   {
@@ -585,9 +593,11 @@
   },
   {
    "desc": "ontology_class 가 있는 canonical 문서가 전체의 10% 미만",
-   "ok": true,
-   "count": 0,
-   "sample": []
+   "ok": false,
+   "count": 1,
+   "sample": [
+    "coverage"
+   ]
   }
  ]
 }
