@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """설계 도우미 6단계 회귀 점검(운영): 기획안→부품→프로그램(반려→재작성)→세부 사양→구조도→코드 뼈대를 끝까지 호출해
 단계별 시간·길이·검증 ❌ 수·교차 공학 점검표 유무를 기록한다. 사용: python3 scripts/eval-builder.py [--url URL] [--out file.json]
-종료 코드 1: 6단계 중 하나가 비어 있거나(오류), 단계 하나가 240초를 넘거나, ❌ 합계가 6건을 넘을 때."""
+종료 코드 1: 6단계 중 하나가 비어 있거나(오류), 단계 하나가 240초를 넘거나, 단계별 ❌ 최대치가 3건을 넘을 때."""
 import json, sys, time, urllib.request
 ARGS = sys.argv[1:]
 opt = lambda k, d=None: ARGS[ARGS.index(k) + 1] if k in ARGS else d
@@ -40,9 +40,9 @@ for st in STAGES:
     if not out: break
 bad = [r for r in rows if r["chars"] < 500 or r["err"]] or []
 slow = [r for r in rows if r["sec"] > 240]
-xs = sum(r["x"] for r in rows)
-print(f"\n단계 {len(rows)}개 · ❌ 합계 {xs} · 최장 {max(r['sec'] for r in rows)}초 · 점검표 {sum(1 for r in rows if r['cross'])}단계")
+xs = max(r["x"] for r in rows)  # 앞 단계 점검표의 ❌가 다음 단계 본문에 그대로 이어지므로 합계가 아닌 단계별 최댓값으로 판정
+print(f"\n단계 {len(rows)}개 · ❌ 단계별 최대 {xs} · 최장 {max(r['sec'] for r in rows)}초 · 점검표 {sum(1 for r in rows if r['cross'])}단계")
 json.dump(rows, open(opt("--out", "eval-builder-result.json"), "w"), ensure_ascii=False, indent=1)
-ok = len(rows) >= 7 and not bad and not slow and xs <= 6
+ok = len(rows) >= 7 and not bad and not slow and xs <= 3
 print("판정:", "통과" if ok else "실패", "" if ok else f"(비어 있음/오류 {len(bad)}, 240초 초과 {len(slow)}, ❌ {xs})")
 sys.exit(0 if ok else 1)
