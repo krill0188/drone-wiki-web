@@ -185,6 +185,21 @@ export function hwEnergyOk(hwMd: string, d: MatchData): { ok: boolean; wh: numbe
   return { ok: false, wh: null }
 }
 
+
+const SW_GENERIC = new Set(["companion", "module", "모듈", "내부", "버스", "board", "unit", "main", "onboard", "온보드", "내장", "컴퓨터"])
+function locFragmentsMatch(loc: string, hwNames: string[]): boolean {
+  for (const frag of loc.split(/[/+→()[\],;·]|\s-\s/)) {
+    const words = frag.replace(/\*/g, " ").split(/\s+/).filter((w) => w && !SW_GENERIC.has(w.toLowerCase()))
+    for (let i = 0; i < words.length; i++) {
+      for (let j = i + 1; j <= words.length; j++) {
+        const g = norm(words.slice(i, j).join(" "))
+        if (g.length >= 5 && /[a-z0-9]/.test(g) && hwNames.some((h) => h.includes(g))) return true
+      }
+    }
+  }
+  return false
+}
+
 // ── 3단계 SW: 실행 위치는 HW 표의 실제 구성요소여야 한다 ──
 export function validateSw(md: string, hwMd: string): Validation {
   const checks: Check[] = []
@@ -199,7 +214,9 @@ export function validateSw(md: string, hwMd: string): Validation {
     const loc = colOf(r, /실행 위치/)
     if (!loc || GROUND.test(loc)) continue
     const n = norm(loc)
-    const ok = hwNames.some((h) => h.length >= 3 && (n.includes(h) || h.includes(n)))
+    // 전체 문자열 포함뿐 아니라, 실행 위치를 조각(괄호·슬래시·화살표로 분리)으로 나눠 연속 단어 묶음이 HW 표의 이름·선정안에 들어 있으면 같은 부품으로 본다
+    // (예: "ModalAI VOXL 2 Mini (Companion)" ↔ HW 표의 "VOXL 2 Mini"). 일반어만 겹치는 경우(companion·module 등)는 인정하지 않는다.
+    const ok = hwNames.some((h) => h.length >= 3 && (n.includes(h) || h.includes(n))) || locFragmentsMatch(loc, hwNames)
     if (!ok) bad.push(`${colOf(r, /구성요소/)} → "${loc.slice(0, 40)}"`)
   }
   checks.push({ ok: bad.length === 0, label: "SW 실행 위치는 HW 표의 구성요소", detail: bad.length ? bad.join(" / ") : undefined })
