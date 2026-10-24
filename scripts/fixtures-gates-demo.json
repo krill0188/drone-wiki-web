@@ -1,0 +1,488 @@
+[
+ {
+  "name": "원본(반려안)",
+  "environment": {
+   "altitude_m": 100,
+   "temp_c": 25
+  },
+  "requirements": {
+   "auw_max_g": 600,
+   "tw_min": 2.0,
+   "endurance_min": 20,
+   "loiter_min": 5
+  },
+  "mission": {
+   "payload_g": 300,
+   "radius_km": 5,
+   "cruise_mps": 10,
+   "wind_mps": 5,
+   "reserve_frac": 0.2,
+   "bvlos": true,
+   "night": true
+  },
+  "airframe": {
+   "n_rotor": 4,
+   "wheelbase_mm": 300,
+   "prop_in": 7.9
+  },
+  "frame_part": {
+   "name": "iFlight AOS 5 V5.1",
+   "wheelbase_mm": 228,
+   "max_prop_in": 5.1
+  },
+  "motor": {
+   "name": "KDE5215XF-435",
+   "kv": 435
+  },
+  "esc": {
+   "cont_a": 95
+  },
+  "battery": {
+   "chem": "lipo",
+   "cells_s": 4,
+   "capacity_ah": 1.6,
+   "voltage_nom_v": 7.4,
+   "energy_wh": 11.8,
+   "mass_g": 100,
+   "c_cont": 25
+  },
+  "parts": [
+   {
+    "name": "iFlight AOS 5 V5.1",
+    "mass_g": 165,
+    "evidence": [
+     "HW-1"
+    ]
+   },
+   {
+    "name": "KDE5215XF-435",
+    "mass_g": 305,
+    "qty": 4
+   },
+   {
+    "name": "KDE UAS95HVC",
+    "mass_g": 78,
+    "qty": 4
+   },
+   {
+    "name": "ARKV6X",
+    "mass_g": 55,
+    "evidence": [
+     "HW-4"
+    ]
+   },
+   {
+    "name": "VOXL 2 Mini",
+    "mass_g": 11,
+    "evidence": [
+     "HW-4"
+    ]
+   },
+   {
+    "name": "Mesh Rider Mini",
+    "mass_g": 34,
+    "qty": 2,
+    "evidence": [
+     "HW-4"
+    ]
+   },
+   {
+    "name": "GPS/카메라/기타",
+    "mass_g": null
+   }
+  ],
+  "removed_parts": [
+   "KDE5215XF-435",
+   "KDE UAS95HVC",
+   "Gemfan 1409"
+  ],
+  "avionics_loads": [
+   {
+    "name": "VOXL 2 Mini",
+    "avg_w": 6,
+    "peak_w": 10,
+    "rail": "5V_A"
+   },
+   {
+    "name": "Mesh Rider #1",
+    "avg_w": 5,
+    "peak_w": 8,
+    "rail": "12V"
+   },
+   {
+    "name": "Hadron 640",
+    "avg_w": 1.8,
+    "peak_w": 2.5,
+    "rail": "5V_A"
+   },
+   {
+    "name": "FC+GPS",
+    "avg_w": 1.5,
+    "peak_w": 2,
+    "rail": "5V_FC"
+   },
+   {
+    "name": "Mesh Rider #2",
+    "avg_w": 5,
+    "peak_w": 8,
+    "rail": "12V"
+   }
+  ],
+  "rails": [
+   {
+    "name": "5V_A",
+    "max_w": 15
+   },
+   {
+    "name": "12V",
+    "max_w": 24
+   },
+   {
+    "name": "5V_FC",
+    "max_w": 5
+   }
+  ],
+  "links": [
+   {
+    "name": "영상 2.4GHz",
+    "freq_mhz": 2450,
+    "range_km": 5,
+    "eirp_dbm": 20,
+    "rx_gain_dbi": 5,
+    "rx_sens_dbm": -88,
+    "h_air_m": 10,
+    "h_gnd_m": 2,
+    "clutter_m": 5,
+    "streams_mbps": [
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "hop_factor": 2.0,
+    "phy_rate_mbps": 12
+   }
+  ],
+  "companion": {
+   "name": "VOXL 2 Mini",
+   "mipi_ports": 3,
+   "runtimes": {
+    "npu": [
+     "tflite-int8",
+     "qnn-int8"
+    ],
+    "gpu": [
+     "tflite-fp16",
+     "onnx-fp32"
+    ],
+    "cpu": [
+     "onnx-fp32",
+     "tflite-fp32"
+    ]
+   },
+   "thermal": {
+    "tdp_w": 10,
+    "cooling_w": 6
+   }
+  },
+  "ai_workloads": [
+   {
+    "name": "YOLOv11n",
+    "accel": "npu",
+    "model_format": "onnx-fp16",
+    "fps": 30,
+    "latency_ms": 10,
+    "latency_source": "estimate"
+   },
+   {
+    "name": "VIO",
+    "accel": "cpu",
+    "model_format": "onnx-fp32",
+    "fps": 30,
+    "latency_ms": 15,
+    "latency_source": "estimate"
+   }
+  ],
+  "cameras": [
+   {
+    "name": "Hadron",
+    "if": "mipi"
+   },
+   {
+    "name": "VIO stereo",
+    "if": "mipi"
+   },
+   {
+    "name": "tracking",
+    "if": "mipi"
+   },
+   {
+    "name": "flow",
+    "if": "mipi"
+   }
+  ],
+  "latency_chain_ms": {
+   "budget_ms": 150,
+   "stages": {
+    "capture": 33,
+    "infer": 10,
+    "track": 10,
+    "mavlink": 50,
+    "fc": 5
+   }
+  },
+  "failsafe": {},
+  "navigation": {
+   "gnss_denied": true,
+   "vio_drift_pct": 1.0,
+   "required_err_m": 5,
+   "absolute_fix_sources": []
+  }
+ },
+ {
+  "name": "수정안 A (300mm 유지, 탑재 150g, 반경 3km)",
+  "environment": {
+   "altitude_m": 100,
+   "temp_c": 25
+  },
+  "requirements": {
+   "auw_max_g": 1200,
+   "tw_min": 2.0,
+   "endurance_min": 20,
+   "loiter_min": 8
+  },
+  "mission": {
+   "payload_g": 150,
+   "radius_km": 3,
+   "cruise_mps": 12,
+   "wind_mps": 5,
+   "reserve_frac": 0.2,
+   "bvlos": true,
+   "night": false
+  },
+  "airframe": {
+   "n_rotor": 4,
+   "wheelbase_mm": 300,
+   "prop_in": 7.0
+  },
+  "frame_part": {
+   "name": "7in 300mm X frame",
+   "wheelbase_mm": 300,
+   "max_prop_in": 7.5
+  },
+  "motor": {
+   "name": "2807 1300KV",
+   "kv": 1300,
+   "max_thrust_g_datasheet": 1250,
+   "thrust_limited": true
+  },
+  "esc": {
+   "cont_a": 45
+  },
+  "battery": {
+   "chem": "liion",
+   "cells_s": 4,
+   "capacity_ah": 5.0,
+   "mass_g": 290,
+   "c_cont": 9
+  },
+  "parts": [
+   {
+    "name": "7in 300mm X frame",
+    "mass_g": 150,
+    "evidence": [
+     "CAT-F7"
+    ]
+   },
+   {
+    "name": "2807 1300KV",
+    "mass_g": 52,
+    "qty": 4,
+    "evidence": [
+     "CAT-M2807"
+    ]
+   },
+   {
+    "name": "4in1 ESC 45A",
+    "mass_g": 18,
+    "evidence": [
+     "CAT-E45"
+    ]
+   },
+   {
+    "name": "7in prop",
+    "mass_g": 8,
+    "qty": 4,
+    "evidence": [
+     "CAT-P7"
+    ]
+   },
+   {
+    "name": "VOXL 2 Mini (PX4 onboard)",
+    "mass_g": 11,
+    "evidence": [
+     "CAT-VOXL2M"
+    ]
+   },
+   {
+    "name": "Mesh Rider Mini",
+    "mass_g": 34,
+    "evidence": [
+     "CAT-MR"
+    ]
+   },
+   {
+    "name": "GPS+안테나+VIO 카메라",
+    "mass_g": 45,
+    "evidence": [
+     "CAT-MISC"
+    ]
+   }
+  ],
+  "removed_parts": [
+   "KDE5215XF-435",
+   "KDE UAS95HVC",
+   "Gemfan 1409"
+  ],
+  "avionics_loads": [
+   {
+    "name": "VOXL 2 Mini",
+    "avg_w": 6,
+    "peak_w": 10,
+    "rail": "5V_A"
+   },
+   {
+    "name": "Mesh Rider #1",
+    "avg_w": 5,
+    "peak_w": 8,
+    "rail": "12V"
+   },
+   {
+    "name": "Hadron 640",
+    "avg_w": 1.8,
+    "peak_w": 2.5,
+    "rail": "5V_A"
+   },
+   {
+    "name": "FC+GPS",
+    "avg_w": 1.5,
+    "peak_w": 2,
+    "rail": "5V_FC"
+   }
+  ],
+  "rails": [
+   {
+    "name": "5V_A",
+    "max_w": 20
+   },
+   {
+    "name": "12V",
+    "max_w": 24
+   },
+   {
+    "name": "5V_FC",
+    "max_w": 5
+   }
+  ],
+  "links": [
+   {
+    "name": "C2+영상 2.4GHz",
+    "freq_mhz": 2450,
+    "range_km": 3,
+    "eirp_dbm": 20,
+    "rx_gain_dbi": 8,
+    "rx_sens_dbm": -90,
+    "h_air_m": 80,
+    "h_gnd_m": 3,
+    "clutter_m": 5,
+    "streams_mbps": [
+     2,
+     0.1,
+     0.1,
+     0.1,
+     0.1
+    ],
+    "hop_factor": 1.5,
+    "phy_rate_mbps": 12,
+    "kr_band_verified": false
+   }
+  ],
+  "companion": {
+   "name": "VOXL 2 Mini",
+   "mipi_ports": 3,
+   "runtimes": {
+    "npu": [
+     "tflite-int8",
+     "qnn-int8"
+    ],
+    "gpu": [
+     "tflite-fp16",
+     "onnx-fp32"
+    ],
+    "cpu": [
+     "onnx-fp32",
+     "tflite-fp32"
+    ]
+   },
+   "thermal": {
+    "tdp_w": 8,
+    "cooling_w": 9
+   }
+  },
+  "ai_workloads": [
+   {
+    "name": "YOLOv11n",
+    "accel": "npu",
+    "model_format": "qnn-int8",
+    "fps": 15,
+    "latency_ms": 12,
+    "latency_source": "estimate"
+   },
+   {
+    "name": "VIO",
+    "accel": "cpu",
+    "model_format": "onnx-fp32",
+    "fps": 30,
+    "latency_ms": 15,
+    "latency_source": "estimate"
+   }
+  ],
+  "cameras": [
+   {
+    "name": "Hadron",
+    "if": "mipi"
+   },
+   {
+    "name": "VIO",
+    "if": "mipi"
+   },
+   {
+    "name": "tracking",
+    "if": "mipi"
+   }
+  ],
+  "latency_chain_ms": {
+   "budget_ms": 150,
+   "stages": {
+    "capture": 33,
+    "infer": 10,
+    "track": 10,
+    "mavlink": 50,
+    "fc": 5
+   }
+  },
+  "failsafe": {
+   "offboard_loss_action": "Hold→RTL",
+   "offboard_timeout_s": 0.5
+  },
+  "navigation": {
+   "gnss_denied": true,
+   "vio_drift_pct": 1.0,
+   "required_err_m": 10,
+   "absolute_fix_sources": [
+    "지도정합 VPS"
+   ]
+  }
+ }
+]

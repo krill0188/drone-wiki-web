@@ -13,6 +13,8 @@ import { repairHwSelections, validateHw, validateSw, validateTechspec, validateA
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
+import { buildGateNote } from "@/lib/gates-adapter"
+import { selectPaperClaims, paperEvidenceBlock, paperEvidenceNote } from "@/lib/paper-evidence"
 
 // "AI 드론을 기획하고 개발해줘" 같은 요청을 6개 전문 에이전트가 단계별로 협업해
 // 무에서 유로 만들어내는 멀티 에이전트 오케스트레이션 (2026-10-16 6단계 + 사람 승인 게이트).
@@ -396,7 +398,12 @@ export async function POST(req: NextRequest) {
   const productMatch = match?.block ?? ""
   // 추론 보강: SW·기술스펙·아키텍처 단계에 (a) 온톨로지 규칙이 계산한 교차 공학 파급, (b) 지식그래프 검증 근거, (c) 🔮 가정·불확실성 작성 지침을 서버가 주입한다.
   const reasonBlocks = reasonLevel !== "off" ? buildReasonBlocks(stage, prompt, ctx, reasonLevel) : ""
-  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}${paper ? `\n${paperBlock(paper)}` : ""}` + reasonBlocks + feedbackBlock(ctx)
+  // 논문 근거 적용: 서버가 지식그래프의 논문 claim을 단계 주제·설계 문서와 맞춰 고르고, 프롬프트에 주입하며 결과 끝에 출처 표를 붙인다(모델이 인용하지 않아도 공개).
+  let picks: ReturnType<typeof selectPaperClaims> = []
+  if (stage !== "proposal" && stage !== "implementation" && !paper) {
+    try { picks = selectPaperClaims(stage, gate.spec, `${prompt} ${ctx.hw ?? ""}`) } catch { /* 선택 실패는 근거만 빠진다 */ }
+  }
+  const system = PROMPTS[stage](manifest, grounding, ctx) + `\n\n${gate.block ?? ""}\n${gate.calc ?? ""}\n${productMatch}${paper ? `\n${paperBlock(paper)}` : ""}` + reasonBlocks + (picks.length ? `\n\n${paperEvidenceBlock(picks)}` : "") + feedbackBlock(ctx)
   const limit = STAGE_LIMITS[stage]
   const fullSystem = (extra = "") => `${system}${extra}\n\n# 분량 제한\n전체 ${limit.chars}자 이내로 간결하게 작성하고, 표·목록은 핵심만 담아라. 코드 스켈레톤은 모듈당 15줄 이내로 제한해라.`
 
@@ -469,7 +476,13 @@ export async function POST(req: NextRequest) {
               try { reviewNote = await reasonReview(stage, prompt, text, `${gate.calc ?? ""}`) } catch { /* 검토 실패·시간 초과는 생략한다(본문은 이미 완성) */ }
             }
             const advisory = crossAdvisoryOn && (stage === "sw" || stage === "techspec" || stage === "architecture") ? crossAdvisory(stage, text, ctx.hw ?? "") : ""
-            const out = soften(text + repairNote + reviewNote + advisory + renderValidation(v, retried))
+            // 서버 계산 게이트(코드 계산): HW·기술스펙 단계 끝에 물리량을 코드가 다시 계산한 결과를 붙인다. 실패해도 본문은 그대로 나간다.
+            let gateNote = ""
+            if (stage === "hw" || stage === "techspec") {
+              try { gateNote = buildGateNote({ spec: gate.spec, hwMd: stage === "hw" ? text : ctx.hw ?? "", compareText: `${ctx.hw ?? ""}\n${text}` }) } catch { /* 게이트 실패는 보강만 빠진다 */ }
+            }
+            const paperNote = stage !== "proposal" && stage !== "implementation" && !paper ? paperEvidenceNote(picks, text) : ""
+            const out = soften(text + repairNote + reviewNote + advisory + renderValidation(v, retried) + gateNote + paperNote)
             progress("done")
             const id = "stage"
             writer.write({ type: "text-start", id })
