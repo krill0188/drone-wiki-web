@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """설계 도우미 6단계 회귀 점검(운영): 기획안→부품→프로그램(반려→재작성)→세부 사양→구조도→코드 뼈대를 끝까지 호출해
-단계별 시간·길이·검증 ❌ 수·교차 공학 점검표 유무를 기록한다. 사용: python3 scripts/eval-builder.py [--url URL] [--out file.json]
+단계별 시간·길이·검증 ❌ 수·교차 공학 점검표 유무를 기록한다. 사용: python3 scripts/eval-builder.py [--url URL] [--out file.json] [--reason on|block|off]
 종료 코드 1: 6단계 중 하나가 비어 있거나(오류), 단계 하나가 240초를 넘거나, 단계별 ❌ 최대치가 3건을 넘을 때."""
 import json, sys, time, urllib.request
 ARGS = sys.argv[1:]
@@ -11,7 +11,7 @@ STAGES = ["proposal", "hw", "sw", "techspec", "architecture", "implementation"]
 
 def call(stage, ctx):
     t0 = time.time(); out = ""; prog = 0
-    req = urllib.request.Request(URL, json.dumps({"prompt": P, "stage": stage, "context": ctx}).encode(), {"content-type": "application/json"})
+    req = urllib.request.Request(URL, json.dumps({"prompt": P, "stage": stage, "context": ctx, **({"reason": opt("--reason")} if opt("--reason") else {})}).encode(), {"content-type": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=290) as r:
             for raw in r:
