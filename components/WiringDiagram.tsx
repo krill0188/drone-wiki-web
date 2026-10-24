@@ -52,6 +52,7 @@ export default function WiringDiagram() {
         ))}
       </div>
       <p className="text-[13px] text-ink-dim mb-2 min-h-[1.4em]" aria-live="polite">{active?.hint}</p>
+      <p className="sm:hidden text-[12px] text-ink-dim mb-1">그림을 좌우로 밀어서 전체를 볼 수 있어요 ↔</p>
       <div className="overflow-x-auto rounded-lg border-2 border-ink" style={{ background: "var(--ws-wall, var(--color-paper))" }}>
         <div className="ws" style={{ minWidth: 760 }}>
           <svg viewBox="0 0 960 660" role="img" aria-label="Cube 계열 비행제어기를 쓰는 멀티로터의 배선도 예시" className="block w-full h-auto">
