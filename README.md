@@ -5,7 +5,20 @@
 
 운영: <https://drone-wiki-web.vercel.app> · 원본 지식 저장소: [2nd-brain-ai-system](https://github.com/krill0188/2nd-brain-ai-system) (`~/2nd`)
 
-[Stage 0-R follow-up verification](docs/STAGE_0R_FOLLOWUP.md)
+[Stage 0-R follow-up verification](docs/STAGE_0R_FOLLOWUP.md) · [운영 런북](docs/OPERATIONS.md) · [릴리스 노트](docs/RELEASES.md)
+
+## 현재 상태 (2026-10-24)
+
+| 항목 | 값 |
+|---|---|
+| 발행 문서 | 3,261쪽 — 사람 검토 약 900 + discovery 자동 승격 약 2,350(`confidence: low`, 태그 `unreviewed`, 분류·출처 허브 11개 포함) |
+| 지식 DB | claim 3,316(원문 인용 검증 + 위키 문장) · 온톨로지 노드 1,412 · 제품 694 · 제조사 257 (정확한 수치는 `/api/health`) |
+| 질의 경로 | `KG_BACKEND=sqlite` — 답변은 **지식그래프의 노드·엣지·검증 claim만** 사실 근거로 쓰고, 모델은 표현만 한다. 근거가 없으면 "그래프에 없음" |
+| 모델 | NVIDIA NIM 체인(병렬 헤징 + 토큰 버킷) → OpenRouter `:free` → 모델 없이 근거만 보여 주는 답. NIM·OpenRouter 모두 **키 풀 폴백**(한도·인증 거절 시 다음 키로 전환) |
+| AI 드론 빌더 | 6단계 구조 유지. 시작 화면에 필수 4조건(페이로드·비행가능거리·크기·비행시간) 안내 카드 + 예제 3종, 진행 알약, 2단계 배선도, 완성 시 드론 이미지 |
+| 운영 점검 | 이 Mac의 launchd 점검 + GitHub Actions `ops-eval`(매일 질문 25문항, 매주 설계 도우미 6단계 회귀). 배포는 `scripts/deploy-prod.sh`만 사용 |
+
+> 자동 승격 문서는 모델 호출 없이 discovery 그래프 정보(이름·분류·출처·관계)로 만든 짧은 문서이며 **사실 근거로 쓰지 않는다.** 내용 검증이 끝난 문서만 claim 근거가 된다.
 
 ---
 
@@ -17,7 +30,7 @@ DroneWiki는 이를 **한 곳에서 읽고(위키), 묻고(AI Q&A), 만들어 �
 | 기능 | 경로 | 쓰임새 |
 |---|---|---|
 | **AI Q&A** | `/chat` | 위키 + 지식그래프(GraphRAG) + 온톨로지 추론을 근거로 스트리밍 답변. 텍스트 선택 → 즉시 질문·저장 |
-| **위키 / 그래프 / 뉴스** | `/wiki`, `/graph`, `/news` | 541쪽 발행 문서 열람, 개념 그래프 탐색(노이즈 필터 focus 모드), 일일 브리핑 |
+| **위키 / 그래프 / 뉴스** | `/wiki`, `/graph`, `/news` | 발행 문서 3,261쪽(검토 909 + 자동 승격 미검토 약 2,350) 열람, 개념 그래프 탐색(노이즈 필터 focus 모드), 일일 브리핑 |
 | **AI 에디터** | `/wiki-editor` | 정리 안 된 메모 → 프론트매터·개요·스펙을 갖춘 문서로 구조화 |
 | **AI 드론 빌더** | `/ai-drone-builder` | 컨셉 한 줄 → 기획 → HW → SW → 기술스펙 → 아키텍처 → 코드·로드맵, 6단계 에이전트가 순차 작성 (단계별 승인/반려/마감) |
 | **검토 도구(로컬 전용)** | `/self-update-review`, `/discovery-review` | 사람이 AI 제안·발견 개념을 검토해 canonical로 승격 |
@@ -38,7 +51,7 @@ DroneWiki는 이를 **한 곳에서 읽고(위키), 묻고(AI Q&A), 만들어 �
 ~/2nd (source of truth: raw → canonical → ontology)
    │  auto-publish (매일 10:30, 정책·해시 게이트)
    ▼
-data/wiki (공개 snapshot, 541쪽) ──► Next.js 16 (App Router) ──► Vercel (icn1 서울)
+data/wiki (공개 snapshot, 3,261쪽) ──► Next.js 16 (App Router) ──► Vercel (icn1 서울)
                                           │
                   ┌───────────────────────┼────────────────────────┐
                   ▼                       ▼                        ▼
@@ -109,20 +122,20 @@ proxy.ts             UUID 세션 쿠키 (Next.js 16 proxy 규약)
 ## 5. 기술 스택 (GitHub 언어 통계 기준: TypeScript ≈ 309KB · Python ≈ 32KB · CSS · JS · Shell)
 
 - **프레임워크**: Next.js 16.2 · React 19.2 · Tailwind CSS 4 · react-force-graph-2d
-- **AI**: Vercel AI SDK 7(`ai`, `@ai-sdk/react`, OpenAI-compatible) · 기본 모델 NVIDIA NIM `deepseek-ai/deepseek-v4.1-flash` (OpenRouter·로컬 LLM 폴백)
+- **AI**: Vercel AI SDK 7(`ai`, `@ai-sdk/react`, OpenAI-compatible) · NVIDIA NIM 모델 체인(헤징) → OpenRouter `:free` → 근거만 보여 주는 답, 키 풀 폴백 (상세 `docs/OPERATIONS.md`)
 - **콘텐츠**: gray-matter · remark(GFM)
 - **배포**: Vercel (함수 지역 `icn1`, `/api/chat` maxDuration 90s)
 
 ### 환경변수 (이름만 — 값은 저장소에 두지 않는다)
 
-`NVIDIA_NIM_API_KEY` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH`
+`NVIDIA_NIM_API_KEY`(쉼표로 여러 개 가능) · `NVIDIA_NIM_API_KEYS` · `OPENROUTER_API_KEYS` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH`
 
 ### 로컬 실행
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # 프로덕션 빌드 (정적 페이지 566쪽)
+npm run build    # 프로덕션 빌드
 ```
 
 > 로컬 dev 서버를 상시 켜 두면 `data/wiki`를 오염시켜 자동발행 gate를 막을 수 있다 — 테스트 후에는 끈다.
@@ -131,6 +144,7 @@ npm run build    # 프로덕션 빌드 (정적 페이지 566쪽)
 
 | 버전 | 일자 | 내용 |
 |---|---|---|
+| deploy-20261024-* | 2026-10-24 | 배선도·단계별 이미지, 안내 카드, 키 풀 폴백, 클라우드 점검, discovery 전체 승격(문서 909→3,261). 배포마다 태그 `deploy-YYYYMMDD-HHMM`, 상세는 [RELEASES.md](docs/RELEASES.md) |
 | v2.13.0 | 2026-10-17 | 온톨로지 추론 엔진 · 제품 개체 지식그래프 · 기본구조 온톨로지 · 설계 게이트 · 드론 빌더 6단계 |
 | v2.10.0 | 2026-10-09 | 텔레그램 봇 브릿지 (AI Q&A + 위키 에디터) |
 | v2.9.0 / v2.8.0 | 2026-09-03 | RAG 검색 범위 확장 / 도메인 다양성 |
@@ -139,7 +153,8 @@ npm run build    # 프로덕션 빌드 (정적 페이지 566쪽)
 
 ## 7. 한계와 로드맵
 
-- 제품 개체가 21종뿐이라 조합 후보가 좁다 → HW 제조사(15개 카테고리)·SW(12개 카테고리) 레지스트리 수집 진행, 제품 사양 확장 예정.
+- 자동 승격 문서는 claim이 없다. 원문 인용 검증(LLM 제안 + 코드로 원문 글자 일치 확인) 방식으로 claim을 늘리는 작업이 다음 단계다.
+- 제품 개체는 694종이나 사양 항목이 비어 있는 것이 많다 → HW·SW 레지스트리 수집으로 보강 예정.
 - 논문 방법론(전력 모델, BEMT 추력 추정 등)을 규칙과 연결하는 작업, 유추(analogy) 추론, 군집·통신 규칙 확장은 미구현.
 - 기본구조 온톨로지의 링크·프로토콜 수치는 일반 범위이며 국내 법규(허용 대역·출력)는 판정하지 않는다.
 - 규칙 임계값(경험칙)은 사용 사례 검증으로 보정 필요.

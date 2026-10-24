@@ -168,7 +168,7 @@ INSERT INTO meta (key,value) VALUES ('count_ontology_nodes','1412');
 INSERT INTO meta (key,value) VALUES ('count_ontology_relations','4584');
 INSERT INTO meta (key,value) VALUES ('count_products','694');
 INSERT INTO meta (key,value) VALUES ('count_sources','4077');
-INSERT INTO meta (key,value) VALUES ('input_fingerprint','898d33aca06ba0ac8a8a514005d770aca19d1d405f310013431f858489972de6');
+INSERT INTO meta (key,value) VALUES ('input_fingerprint','aff68ab853da66587ef8095602541dfe717ca64fb91b9676a43f305c4f3cdb7c');
 INSERT INTO meta (key,value) VALUES ('schema_version','1');
 INSERT INTO meta (key,value) VALUES ('source_root_used','True');
 INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:comparisons/fc-firmware-comparison.md','comparisons/fc-firmware-comparison.md','FPV 드론 FC 펌웨어 비교: Betaflight vs INAV vs ArduPilot','comparison','flight-control','active','f5ed637330c16c3f28c6c2775580372e3dbcf6898bcd0fb450d2676444ca5144','2026-08-09','2026-08-09',1,NULL,NULL,'medium',0,'[]',NULL,'
@@ -6193,7 +6193,7 @@ INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_
 - [[gyro-calibration]] — USES
 - [[betaflight]] — IMPLEMENTS
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-concept.md','concepts/auto-hub-concept.md','자동 승격 허브: concept','concept',NULL,'active','ce188ba300754c2e70518172ae1b389e98677cd6935d24f3d425f14c44d558bc','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-concept.md','concepts/auto-hub-concept.md','자동 승격 허브: concept','concept',NULL,'active','dd09afb0457176b764f4bb6195f6f5c3fe6962161c78a8873ca96b684054d3fa','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
 # 자동 승격 허브: concept
 
 ## 정의
@@ -6249,7 +6249,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[covariance-prediction]] — Covariance Prediction
 - [[cretaceous-gyeongsang-basin]] — Cretaceous Gyeongsang Basin
 - [[criticdrivenpathway]] — CriticDrivenPathway
-- [[csi-entity]] — Csi
 - [[csi-feedback-delay]] — CSI feedback delay
 - [[ct-k]] — Ct-K
 - [[data-efficiency]] — Data Efficiency
@@ -6279,7 +6278,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[eavesdropper-jamming]] — Eavesdropper Jamming
 - [[edge-load]] — edge load
 - [[ego-noise-reference-signals]] — ego-noise reference signals
-- [[ekf-entity]] — Ekf
 - [[electromagnetic-scattering-analysis]] — Electromagnetic Scattering Analysis
 - [[eligibility-provisions]] — Eligibility provisions
 - [[embodied-navigation]] — embodied navigation
@@ -6593,7 +6591,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[time-allocation]] — Time Allocation
 - [[timing-synchronization]] — Timing Synchronization
 - [[traffic-conditions]] — Traffic Conditions
-- [[trajectory-prediction-entity]] — Trajectory Prediction
 - [[transmit-power]] — Transmit Power
 - [[twi]] — Twi
 - [[user-plane]] — User Plane
@@ -6615,7 +6612,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[truck-drone-collaborative-routing]] — Truck-Drone Collaborative Routing
 - [[uav]] — Uav
 - [[신속-획득-혁신]] — 신속 획득 혁신
-- [[swarm-coordination-entity]] — Swarm Coordination
 
 ## 관련 허브
 
@@ -6630,7 +6626,7 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[auto-hub-source-youtube]]
 - [[auto-hub-technology]]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-hardware.md','concepts/auto-hub-hardware.md','자동 승격 허브: hardware','concept',NULL,'active','fe2a187ade4d1b74949b4a7da2581db627bab248723c2d8660bb230c26d85d3f','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-hardware.md','concepts/auto-hub-hardware.md','자동 승격 허브: hardware','concept',NULL,'active','7575d5d66330c26c9cfd0047fa513428808ffe6d52df43f7a999599b67964515','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
 # 자동 승격 허브: hardware
 
 ## 정의
@@ -6654,7 +6650,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[brushless-dc-motors]] — brushless DC motors
 - [[c-rtk-9ps]] — C-Rtk 9Ps
 - [[cloud-servers]] — Cloud Servers
-- [[cube-orange-entity]] — Cube Orange
 - [[cylindrical-cell-battery]] — Cylindrical-cell battery
 - [[directional-antennas]] — directional antennas
 - [[edge-node]] — Edge Node
@@ -6734,7 +6729,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[rm3100]] — Rm3100
 - [[rotatable-antennas]] — Rotatable Antennas
 - [[safety-monitor]] — Safety Monitor
-- [[sd-card-entity]] — Sd Card
 - [[semi-anechoic-chamber]] — semi-anechoic chamber
 - [[servo-motor]] — servo motor
 - [[servo-motors]] — servo motors
@@ -6845,7 +6839,7 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[auto-hub-source-youtube]]
 - [[auto-hub-technology]]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-organization.md','concepts/auto-hub-organization.md','자동 승격 허브: organization','concept',NULL,'active','3d8a3ba5ca039741653e08cac3a9f5947b072edc7dc445dc78ed7b9f3e8d3dd4','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-organization.md','concepts/auto-hub-organization.md','자동 승격 허브: organization','concept',NULL,'active','8124900c75136c625dd2468d7669262e4bf9c1e6934da04b0e6d5eb0ba5b4c9e','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
 # 자동 승격 허브: organization
 
 ## 정의
@@ -6858,7 +6852,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[acm]] — Acm
 - [[alatau]] — Alatau
 - [[ark]] — Ark
-- [[arxiv-entity]] — Arxiv
 - [[arxiv-2002-01823]] — arXiv.2002.01823
 - [[autoflight]] — AutoFlight
 - [[california]] — California
@@ -6869,7 +6862,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[duksan-navcours-co]] — Duksan Navcours Co.
 - [[elsevier-ras]] — Elsevier Ras
 - [[eprosima]] — Eprosima
-- [[faa-entity]] — Faa
 - [[fda]] — Fda
 - [[gitlab]] — GitLab
 - [[gopro]] — GoPro
@@ -7726,7 +7718,7 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[auto-hub-source-youtube]]
 - [[auto-hub-technology]]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-source-articles.md','concepts/auto-hub-source-articles.md','자동 승격 허브: 출처-articles','concept',NULL,'active','b533f2b9c52ea5e973806918831d97038a6cb328563eb90049af887e6c7b552c','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-source-articles.md','concepts/auto-hub-source-articles.md','자동 승격 허브: 출처-articles','concept',NULL,'active','ad7b4b5f334d1dadb2dd91c28591dcef1958a2c9ecd76d418a1750386ef6b786','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
 # 자동 승격 허브: 출처-articles
 
 ## 정의
@@ -7771,7 +7763,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[conditional-approval]] — Conditional Approval
 - [[config-mavlink-dialect]] — Config_Mavlink_Dialect
 - [[crashflip-mode]] — Crashflip mode
-- [[cube-orange-entity]] — Cube Orange
 - [[cubepilot]] — Cubepilot
 - [[cylindrical-cell-battery]] — Cylindrical-cell battery
 - [[dataflash]] — Dataflash
@@ -7780,7 +7771,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[development-xml]] — Development.Xml
 - [[device-drivers]] — Device Drivers
 - [[digital-european-sky]] — Digital European Sky
-- [[ekf-entity]] — Ekf
 - [[electronic-conspicuity]] — Electronic Conspicuity
 - [[eligibility-provisions]] — Eligibility provisions
 - [[enu]] — Enu
@@ -7895,7 +7885,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[rssi]] — RSSI
 - [[rtl-swarm]] — Rtl Swarm
 - [[satellite-communications]] — Satellite Communications
-- [[sd-card-entity]] — Sd Card
 - [[sesar-ju]] — SESAR JU
 - [[settlement-procedures]] — Settlement procedures
 - [[sik]] — Sik
@@ -7951,7 +7940,7 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[auto-hub-source-youtube]]
 - [[auto-hub-technology]]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-source-papers.md','concepts/auto-hub-source-papers.md','자동 승격 허브: 출처-papers','concept',NULL,'active','7f5295eed81237f650bd6c2da86e8f63c6ef5f144f3d917f4bea25adc3b8943c','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-source-papers.md','concepts/auto-hub-source-papers.md','자동 승격 허브: 출처-papers','concept',NULL,'active','de0d2e6832916ae3f15ec41fbf19149a7419f8514ff3fb899097042b983b9450','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
 # 자동 승격 허브: 출처-papers
 
 ## 정의
@@ -8024,7 +8013,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[anyi]] — Anyi
 - [[araujo-paulo-ricardo-marques-de]] — Araujo, Paulo Ricardo Marques De
 - [[ari]] — ARI
-- [[arxiv-entity]] — Arxiv
 - [[arxiv-2002-01823]] — arXiv.2002.01823
 - [[ascon]] — ASCON
 - [[asmar-muqeet]] — Asmar Muqeet
@@ -8170,7 +8158,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[criticdrivenpathway]] — CriticDrivenPathway
 - [[cross-layer-local-support]] — Cross Layer Local Support
 - [[cross-scale-feature-enhancement]] — Cross-scale Feature Enhancement
-- [[csi-entity]] — Csi
 - [[csi-feedback-delay]] — CSI feedback delay
 - [[csp-pac]] — Csp-Pac
 - [[cssa]] — Cssa
@@ -8207,7 +8194,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[differential-evolution]] — Differential Evolution
 - [[differential-evolution-de]] — Differential Evolution (DE)
 - [[differential-game-theory]] — Differential Game Theory
-- [[diffusion-models-entity]] — Diffusion Models
 - [[digital-flight-approval]] — Digital Flight Approval
 - [[ding-guoru]] — Ding, Guoru
 - [[dingwen-zhang]] — Dingwen Zhang
@@ -8274,7 +8260,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[external-microphone]] — external microphone
 - [[f-genschuh-armin]] — Fügenschuh, Armin
 - [[f1-score]] — F1-score
-- [[faa-entity]] — Faa
 - [[fading-channels]] — Fading channels
 - [[fcpm]] — Fcpm
 - [[fda]] — Fda
@@ -8316,7 +8301,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[gasche-sebastian]] — Gasche, Sebastian
 - [[gasteratos-antonios]] — Gasteratos, Antonios
 - [[gather-and-distribute]] — Gather-And-Distribute
-- [[gaussian-process-regression-entity]] — Gaussian Process Regression
 - [[geng]] — Geng
 - [[geospatial-data]] — Geospatial Data
 - [[ghazy-abdallah-s]] — Ghazy, Abdallah S.
@@ -8424,7 +8408,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[infrastructure-network]] — Infrastructure Network
 - [[infrastructure-placement]] — infrastructure placement
 - [[inland-river-shipping]] — Inland River Shipping
-- [[input-output-feedback-linearization-entity]] — Input-Output Feedback Linearization
 - [[ins]] — INS
 - [[insulator-fault-detection]] — Insulator Fault Detection
 - [[integer-linear-program]] — integer linear program
@@ -8485,7 +8468,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[k-csm]] — K-Csm
 - [[k-diu]] — K-Diu
 - [[k-means]] — K-Means
-- [[k-uam-entity]] — K-Uam
 - [[kaggle]] — Kaggle
 - [[kang-gu-hyun]] — Kang Gu-Hyun
 - [[kangwon-national-university]] — Kangwon National University
@@ -9190,7 +9172,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[rf-channel]] — Rf Channel
 - [[rf-detection]] — RF Detection
 - [[ricardo-grando]] — Ricardo Grando
-- [[ris-entity]] — Ris
 - [[rita-cunha]] — Rita Cunha
 - [[rizvi]] — Rizvi
 - [[rmse]] — Rmse
@@ -9346,7 +9327,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[teaya-yang]] — Teaya Yang
 - [[temporal-dependencies]] — temporal dependencies
 - [[tengan-elisa]] — Tengan, Elisa
-- [[terahertz-thz-entity]] — terahertz (THz)
 - [[test-scenario-generation]] — Test Scenario Generation
 - [[tevv]] — TEVV
 - [[textbook-model-of-blcd-dynamics]] — textbook model of BLCD dynamics
@@ -9368,7 +9348,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[track-selection-scheme-tss]] — Track Selection Scheme (TSS)
 - [[traffic-conditions]] — Traffic Conditions
 - [[trajectory-generation]] — Trajectory Generation
-- [[trajectory-prediction-entity]] — Trajectory Prediction
 - [[trans-gaussian-kriging]] — trans-Gaussian Kriging
 - [[transfer-learning]] — transfer learning
 - [[transmit-power]] — Transmit Power
@@ -9574,8 +9553,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[무인기-비행제어시스템]] — 무인기 비행제어시스템
 - [[신속-획득-혁신]] — 신속 획득 혁신
 - [[토석류-이동범위의-공간적-재현성-평가]] — 토석류 이동범위의 공간적 재현성 평가
-- [[ekf-entity]] — EKF
-- [[swarm-coordination-entity]] — Swarm Coordination
 
 ## 관련 허브
 
@@ -9614,7 +9591,7 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 출처 유�
 - [[auto-hub-source-papers]]
 - [[auto-hub-technology]]
 ');
-INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-technology.md','concepts/auto-hub-technology.md','자동 승격 허브: technology','concept',NULL,'active','222d687d0b98d512cb39dbc2a69d305b84c7139d841eb247d6fb9d7a3c998e8d','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
+INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:concepts/auto-hub-technology.md','concepts/auto-hub-technology.md','자동 승격 허브: technology','concept',NULL,'active','b980f4695c3e2b7608f42ef139e7eab20f7988c4879816fe4a1b21163f466dbb','2026-10-24','2026-10-24',NULL,NULL,NULL,'low',0,'[]',NULL,'
 # 자동 승격 허브: technology
 
 ## 정의
@@ -9707,7 +9684,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[diehard]] — Diehard
 - [[differential-evolution]] — Differential Evolution
 - [[differential-evolution-de]] — Differential Evolution (DE)
-- [[diffusion-models-entity]] — Diffusion Models
 - [[digital-flight-approval]] — Digital Flight Approval
 - [[distributed-gaussian-processes]] — Distributed Gaussian Processes
 - [[distributionally-robust-optimization]] — Distributionally Robust Optimization
@@ -9742,7 +9718,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[g-d-c-cooperative-queue]] — G/D/c Cooperative Queue
 - [[gaff]] — Gaff
 - [[gather-and-distribute]] — Gather-And-Distribute
-- [[gaussian-process-regression-entity]] — Gaussian Process Regression
 - [[gcs]] — Gcs
 - [[gcs-dev]] — Gcs_Dev
 - [[geofence]] — Geofence
@@ -9773,7 +9748,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[inductive-sensing-concepts]] — inductive sensing concepts
 - [[infrared-imagery]] — Infrared Imagery
 - [[infrared-imaging]] — Infrared Imaging
-- [[input-output-feedback-linearization-entity]] — Input-Output Feedback Linearization
 - [[ins]] — INS
 - [[integer-linear-program]] — integer linear program
 - [[integrated-fault-estimation-and-accommodation-scheme]] — integrated fault estimation and accommodation scheme
@@ -9781,7 +9755,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[jax]] — JAX
 - [[k-csm]] — K-Csm
 - [[k-means]] — K-Means
-- [[k-uam-entity]] — K-Uam
 - [[kci]] — KCI
 - [[kilted]] — Kilted
 - [[knn]] — Knn
@@ -9958,7 +9931,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[regularization-techniques]] — regularization techniques
 - [[resnet-50]] — ResNet-50
 - [[resolvers]] — resolvers
-- [[ris-entity]] — Ris
 - [[robust-controller]] — robust controller
 - [[ros]] — Ros
 - [[rotation-delay-aware-communication-model]] — rotation-delay-aware communication model
@@ -10005,7 +9977,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[swarm-manager]] — Swarm Manager
 - [[swarm-ops-gcs]] — Swarm Ops Gcs
 - [[tdoa]] — TDOA
-- [[terahertz-thz-entity]] — terahertz (THz)
 - [[textbook-model-of-blcd-dynamics]] — textbook model of BLCD dynamics
 - [[tf2]] — Tf2
 - [[thermal-imaging]] — Thermal imaging
@@ -10069,8 +10040,6 @@ discovery 그래프에서 자동 추출·일괄 승격된 항목을 분류별로
 - [[vision-language-models]] — Vision-Language Models
 - [[wire-driven-robotic-fish]] — wire-driven robotic fish
 - [[무인기-비행제어시스템]] — 무인기 비행제어시스템
-- [[csi-entity]] — CSI
-- [[ekf-entity]] — EKF
 
 ## 관련 허브
 
@@ -93403,10 +93372,6 @@ INSERT INTO document_links (source_document_id,target_document_id,link_type) VAL
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:concepts/wind-disturbances.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:concepts/zero-shot-transfer.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:concepts/신속-획득-혁신.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:entities/csi-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:entities/ekf-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:entities/swarm-coordination-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-concept.md','doc:entities/trajectory-prediction-entity.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:concepts/1045-propeller.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:concepts/2-dof-magnetic-spherical-joint.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:concepts/945-propeller.md','wikilink');
@@ -93540,8 +93505,6 @@ INSERT INTO document_links (source_document_id,target_document_id,link_type) VAL
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:concepts/wpf.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:concepts/x-car.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:concepts/xtenth-car.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:entities/cube-orange-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-hardware.md','doc:entities/sd-card-entity.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-mission.md','doc:concepts/aggressivetracking.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-mission.md','doc:concepts/auto-hub-concept.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-mission.md','doc:concepts/auto-hub-hardware.md','wikilink');
@@ -93738,8 +93701,6 @@ INSERT INTO document_links (source_document_id,target_document_id,link_type) VAL
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-organization.md','doc:concepts/wonkwang-university.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-organization.md','doc:concepts/yongin-university.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-organization.md','doc:concepts/zubax.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-organization.md','doc:entities/arxiv-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-organization.md','doc:entities/faa-entity.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-person.md','doc:concepts/a-ananthapadmanabhan.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-person.md','doc:concepts/a-grilo.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-person.md','doc:concepts/abdelfettah-belghith.md','wikilink');
@@ -94634,9 +94595,6 @@ INSERT INTO document_links (source_document_id,target_document_id,link_type) VAL
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-articles.md','doc:concepts/wind-turbine-inspection-platform.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-articles.md','doc:concepts/y-t-g.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-articles.md','doc:concepts/zubax.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-articles.md','doc:entities/cube-orange-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-articles.md','doc:entities/ekf-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-articles.md','doc:entities/sd-card-entity.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:concepts/10-48550-arxiv-2607-26717.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:concepts/1045-propeller.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:concepts/14-cfr-part-107.md','wikilink');
@@ -96251,18 +96209,6 @@ INSERT INTO document_links (source_document_id,target_document_id,link_type) VAL
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:concepts/무인기-비행제어시스템.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:concepts/신속-획득-혁신.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:concepts/토석류-이동범위의-공간적-재현성-평가.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/arxiv-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/csi-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/diffusion-models-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/ekf-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/faa-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/gaussian-process-regression-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/input-output-feedback-linearization-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/k-uam-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/ris-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/swarm-coordination-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/terahertz-thz-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-papers.md','doc:entities/trajectory-prediction-entity.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-youtube.md','doc:concepts/auto-hub-concept.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-youtube.md','doc:concepts/auto-hub-hardware.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-source-youtube.md','doc:concepts/auto-hub-mission.md','wikilink');
@@ -96724,14 +96670,6 @@ INSERT INTO document_links (source_document_id,target_document_id,link_type) VAL
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:concepts/xtech.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:concepts/z-axis-alignment.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:concepts/무인기-비행제어시스템.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/csi-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/diffusion-models-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/ekf-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/gaussian-process-regression-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/input-output-feedback-linearization-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/k-uam-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/ris-entity.md','wikilink');
-INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/auto-hub-technology.md','doc:entities/terahertz-thz-entity.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/autoflight.md','doc:concepts/alatau.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/autoflight.md','doc:concepts/auto-hub-organization.md','wikilink');
 INSERT INTO document_links (source_document_id,target_document_id,link_type) VALUES ('doc:concepts/autoflight.md','doc:concepts/auto-hub-source-articles.md','wikilink');

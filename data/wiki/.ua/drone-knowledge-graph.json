@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "775fb2b92fc2dffec9504df569db55863576b26e4d9ae3bfe2745a3f0c15a432",
+  "source_fingerprint": "1a47ed1759ad73feec9a472cb9748a5f667ff41fc1ad94aa4da00a447859ee04",
   "nodes": [
     {
       "id": "10-48550-arxiv-2607-26717",
@@ -54674,15 +54674,6 @@
     },
     {
       "source": "auto-hub-concept",
-      "target": "csi-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-concept",
       "target": "csi-feedback-delay",
       "type": "wikilink",
       "evidence": [
@@ -54936,15 +54927,6 @@
     {
       "source": "auto-hub-concept",
       "target": "ego-noise-reference-signals",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-concept",
-      "target": "ekf-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -57770,15 +57752,6 @@
     },
     {
       "source": "auto-hub-concept",
-      "target": "trajectory-prediction-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-concept",
       "target": "transmit-power",
       "type": "wikilink",
       "evidence": [
@@ -57960,15 +57933,6 @@
     {
       "source": "auto-hub-concept",
       "target": "신속-획득-혁신",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-concept",
-      "target": "swarm-coordination-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -58194,15 +58158,6 @@
     {
       "source": "auto-hub-hardware",
       "target": "cloud-servers",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-hardware",
-      "target": "cube-orange-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -58914,15 +58869,6 @@
     {
       "source": "auto-hub-hardware",
       "target": "safety-monitor",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-hardware",
-      "target": "sd-card-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -59804,15 +59750,6 @@
     },
     {
       "source": "auto-hub-organization",
-      "target": "arxiv-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-organization",
       "target": "arxiv-2002-01823",
       "type": "wikilink",
       "evidence": [
@@ -59895,15 +59832,6 @@
     {
       "source": "auto-hub-organization",
       "target": "eprosima",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-organization",
-      "target": "faa-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -67553,15 +67481,6 @@
     },
     {
       "source": "auto-hub-source-articles",
-      "target": "cube-orange-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-articles",
       "target": "cubepilot",
       "type": "wikilink",
       "evidence": [
@@ -67626,15 +67545,6 @@
     {
       "source": "auto-hub-source-articles",
       "target": "digital-european-sky",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-articles",
-      "target": "ekf-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -68661,15 +68571,6 @@
     {
       "source": "auto-hub-source-articles",
       "target": "satellite-communications",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-articles",
-      "target": "sd-card-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -69705,15 +69606,6 @@
     {
       "source": "auto-hub-source-papers",
       "target": "ari",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
-      "target": "arxiv-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -71027,15 +70919,6 @@
     },
     {
       "source": "auto-hub-source-papers",
-      "target": "csi-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
       "target": "csi-feedback-delay",
       "type": "wikilink",
       "evidence": [
@@ -71352,15 +71235,6 @@
     {
       "source": "auto-hub-source-papers",
       "target": "differential-game-theory",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
-      "target": "diffusion-models-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -71963,15 +71837,6 @@
     },
     {
       "source": "auto-hub-source-papers",
-      "target": "faa-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
       "target": "fading-channels",
       "type": "wikilink",
       "evidence": [
@@ -72333,15 +72198,6 @@
     {
       "source": "auto-hub-source-papers",
       "target": "gather-and-distribute",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
-      "target": "gaussian-process-regression-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -73313,15 +73169,6 @@
     },
     {
       "source": "auto-hub-source-papers",
-      "target": "input-output-feedback-linearization-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
       "target": "ins",
       "type": "wikilink",
       "evidence": [
@@ -73854,15 +73701,6 @@
     {
       "source": "auto-hub-source-papers",
       "target": "k-means",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
-      "target": "k-uam-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -80207,15 +80045,6 @@
     },
     {
       "source": "auto-hub-source-papers",
-      "target": "ris-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
       "target": "rita-cunha",
       "type": "wikilink",
       "evidence": [
@@ -81611,15 +81440,6 @@
     },
     {
       "source": "auto-hub-source-papers",
-      "target": "terahertz-thz-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
       "target": "test-scenario-generation",
       "type": "wikilink",
       "evidence": [
@@ -81801,15 +81621,6 @@
     {
       "source": "auto-hub-source-papers",
       "target": "trajectory-generation",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
-      "target": "trajectory-prediction-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -83663,24 +83474,6 @@
     },
     {
       "source": "auto-hub-source-papers",
-      "target": "ekf-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
-      "target": "swarm-coordination-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-source-papers",
       "target": "auto-hub-concept",
       "type": "related",
       "evidence": [
@@ -84626,15 +84419,6 @@
     },
     {
       "source": "auto-hub-technology",
-      "target": "diffusion-models-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
       "target": "digital-flight-approval",
       "type": "wikilink",
       "evidence": [
@@ -84941,15 +84725,6 @@
     },
     {
       "source": "auto-hub-technology",
-      "target": "gaussian-process-regression-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
       "target": "gcs",
       "type": "wikilink",
       "evidence": [
@@ -85220,15 +84995,6 @@
     },
     {
       "source": "auto-hub-technology",
-      "target": "input-output-feedback-linearization-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
       "target": "ins",
       "type": "wikilink",
       "evidence": [
@@ -85284,15 +85050,6 @@
     {
       "source": "auto-hub-technology",
       "target": "k-means",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
-      "target": "k-uam-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -86885,15 +86642,6 @@
     },
     {
       "source": "auto-hub-technology",
-      "target": "ris-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
       "target": "robust-controller",
       "type": "wikilink",
       "evidence": [
@@ -87300,15 +87048,6 @@
     {
       "source": "auto-hub-technology",
       "target": "tdoa",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
-      "target": "terahertz-thz-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -87876,24 +87615,6 @@
     {
       "source": "auto-hub-technology",
       "target": "무인기-비행제어시스템",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
-      "target": "csi-entity",
-      "type": "wikilink",
-      "evidence": [
-        ".ua/discovery-knowledge-graph.json"
-      ],
-      "confidence": "low"
-    },
-    {
-      "source": "auto-hub-technology",
-      "target": "ekf-entity",
       "type": "wikilink",
       "evidence": [
         ".ua/discovery-knowledge-graph.json"
@@ -169813,6 +169534,316 @@
       "confidence": "low"
     },
     {
+      "source": "auto-hub-concept",
+      "target": "csi-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-concept",
+      "target": "ekf-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-concept",
+      "target": "trajectory-prediction-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-concept",
+      "target": "swarm-coordination-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-hardware",
+      "target": "cube-orange-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-hardware",
+      "target": "sd-card-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-organization",
+      "target": "arxiv-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-organization",
+      "target": "faa-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-articles",
+      "target": "cube-orange-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-articles",
+      "target": "ekf-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-articles",
+      "target": "sd-card-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "arxiv-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "csi-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "diffusion-models-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "faa-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "gaussian-process-regression-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "input-output-feedback-linearization-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "k-uam-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "ris-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "terahertz-thz-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "trajectory-prediction-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "ekf-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-source-papers",
+      "target": "swarm-coordination-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "diffusion-models-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "gaussian-process-regression-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "input-output-feedback-linearization-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "k-uam-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "ris-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "terahertz-thz-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "csi-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
+      "source": "auto-hub-technology",
+      "target": "ekf-entity",
+      "type": "wikilink",
+      "evidence": [
+        ".ua/discovery-knowledge-graph.json"
+      ],
+      "confidence": "low",
+      "review_status": "legacy-source-review-required"
+    },
+    {
       "source": "knowledge-tool-roles",
       "target": "ai-knowledge-workflow",
       "type": "related",
@@ -173754,5 +173785,5 @@
     }
   ],
   "edge_policy": "retain-existing-valid-endpoints",
-  "legacy_edges_pending_review": 425
+  "legacy_edges_pending_review": 456
 }
