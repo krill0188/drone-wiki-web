@@ -2,6 +2,7 @@
 import Link from "next/link"
 import WorkshopScene from "@/components/WorkshopScene"
 import DroneIcon from "@/components/DroneIcon"
+import WiringDiagram from "@/components/WiringDiagram"
 import { NAV } from "@/lib/nav"
 
 // 홈(작업실 스킨): 장면 + 한 줄 소개 + 서랍 메뉴(5개 메뉴와 하위 메뉴가 한눈에 보이게) + 상태.
@@ -69,6 +70,23 @@ export default function WorkshopHome({ docs, rules }: { docs: number; rules: num
           )
         })}
       </nav>
+
+      <figure className="mt-8 m-0 rounded-lg border-2 overflow-hidden" style={{ borderColor: "var(--color-ink)", background: "var(--color-panel)" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/drone-photo.jpg" alt="멀티로터 드론의 모습. 왼쪽은 사진, 오른쪽은 구조 도면으로 표현된 합성 이미지" width={650} height={360} loading="lazy" className="block w-full h-auto" />
+        <figcaption className="px-3 py-2 text-[12.5px] text-ink-dim break-keep">
+          드론 한 대를 사진과 도면으로 나란히 본 모습이에요. 합성(생성) 이미지라서 특정 제품의 사양을 뜻하지 않아요.
+        </figcaption>
+      </figure>
+
+      <section className="mt-8" aria-labelledby="ws-wiring">
+        <h2 id="ws-wiring" className="font-display font-bold text-xl">배선도로 보는 설계 예시</h2>
+        <p className="mt-1 mb-3 text-[13.5px] text-ink-dim break-keep">
+          Cube 계열 비행제어기를 쓰는 멀티로터의 일반적인 배선 구성이에요. 선 종류를 눌러 보세요. 직접 그린 예시 도식이고, 실제 제품의 배선은 제조사 문서를 확인하세요.
+          (참고: CubePilot 생태계 배선도. 그림 자체는 가져오지 않았어요.)
+        </p>
+        <WiringDiagram />
+      </section>
 
       <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-2 border-dashed border-line rounded-md px-4 py-3 text-[14px]">
         <span><span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 mr-1.5" aria-hidden />매일 아침 자동 점검</span>
