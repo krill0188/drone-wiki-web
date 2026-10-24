@@ -1,5 +1,6 @@
 "use client"
 
+import WiringDiagram from "@/components/WiringDiagram"
 import WaitingIndicator from "@/components/WaitingIndicator"
 import MarkdownText from "@/components/MarkdownText"
 import { useEffect, useRef, useState } from "react"
@@ -340,6 +341,24 @@ export default function AiDroneBuilderPage() {
         </div>
       </div>
 
+      {STAGES.some((s) => stages[s.key].status !== "pending") && (
+        <ol className="flex flex-wrap gap-1.5 mb-5 list-none p-0" aria-label="진행 단계">
+          {STAGES.map((s) => {
+            const t = stages[s.key].status
+            const cur = t === "running" || t === "review" || t === "needs-input" || t === "error"
+            return (
+              <li
+                key={s.key}
+                className={`text-xs px-2.5 py-1 rounded-full border ${cur ? "border-signal-400 font-semibold text-signal-500" : t === "approved" ? "border-emerald-400 text-emerald-600" : "border-slate-300 dark:border-slate-600 text-slate-400"}`}
+                aria-current={cur ? "step" : undefined}
+              >
+                {t === "approved" ? "✓ " : ""}{s.title}{cur ? (t === "running" ? " · 진행 중" : " · 확인 대기") : ""}
+              </li>
+            )
+          })}
+        </ol>
+      )}
+
       <div className="flex flex-col gap-6">
         {STAGES.map((s, idx) => {
           const st = stages[s.key]
@@ -389,6 +408,16 @@ export default function AiDroneBuilderPage() {
                     </div>
                   )}
                 </div>
+              )}
+
+              {s.key === "hw" && st.status !== "pending" && st.status !== "error" && st.text && !isGateStopText(st.text) && (
+                <details open className="px-4 pb-3">
+                  <summary className="text-xs text-slate-500 cursor-pointer select-none">🔌 배선도 예시 — 선 종류를 눌러 보세요</summary>
+                  <div className="mt-2">
+                    <WiringDiagram />
+                    <p className="mt-1.5 text-[11.5px] text-slate-500">일반적인 멀티로터 배선 예시예요. 이번 설계의 부품·포트와 다를 수 있으니 위 HW 스펙 표와 제조사 문서로 확인하세요.</p>
+                  </div>
+                </details>
               )}
 
               {st.status !== "pending" && s.key !== "proposal" && st.text && !isGateStopText(st.text) && (
@@ -502,6 +531,14 @@ export default function AiDroneBuilderPage() {
           )
         })}
       </div>
+
+      {finished && approvedStages.length > 0 && (
+        <figure className="mt-8 m-0 rounded-xl overflow-hidden border border-emerald-300 dark:border-emerald-800">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/drone-photo.jpg" alt="멀티로터 드론의 모습. 왼쪽은 사진, 오른쪽은 구조 도면으로 표현된 합성 이미지" width={650} height={360} loading="lazy" className="block w-full max-w-xl mx-auto h-auto" />
+          <figcaption className="px-3 py-2 text-[11.5px] text-slate-500 text-center">설계 완료 🎉 — 예시 이미지(합성)이며 이번 설계 결과의 외형을 뜻하지 않아요.</figcaption>
+        </figure>
+      )}
 
       {finished && approvedStages.length > 0 && (
         <div className="mt-8 border border-emerald-300 dark:border-emerald-800 rounded-xl overflow-hidden">
