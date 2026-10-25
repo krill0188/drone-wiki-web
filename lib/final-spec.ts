@@ -8,6 +8,11 @@ const ALIAS: [RegExp, FinalLabel][] = [
   [/총중량|auw|mtow/i, "총중량(AUW)"], [/^fc|비행제어/i, "FC"], [/컴패니언|companion|연산/i, "컴패니언 컴퓨터"], [/^통신|링크|datalink/i, "통신"], [/페이로드|payload/i, "페이로드"],
 ]
 const num = (s: string) => parseFloat(s.replace(/,/g, ""))
+// 'IP45 KV135'처럼 앞 숫자가 KV로 오인되지 않게 'KV 숫자' 형태를 먼저 찾고, 없으면 '숫자 KV'를 찾는다.
+export function parseKv(t: string): number | undefined {
+  const a = /KV\s*[:：]?\s*(\d{2,4})\b/i.exec(t) ?? /(?<![A-Za-z0-9])(\d{2,4})\s*KV\b/i.exec(t)
+  return a ? num(a[1]) : undefined
+}
 const UNDECIDED = /^\s*(미정|없음|해당 없음|n\/a|-)\s*$/i
 
 export interface FinalSpec { found: boolean; fields: Partial<Record<FinalLabel, string>>; section: string }
@@ -26,6 +31,7 @@ export function parseFinalSpec(md: string): FinalSpec {
 }
 
 export interface FinalBasics {
+  packNote?: string
   cells?: number; ah?: number; batMassG?: number; propIn?: number; kv?: number; escA?: number; auwKg?: number; wheelbaseMm?: number; payloadKg?: number
   motorName?: string; companion?: string; linkText?: string
 }
@@ -34,15 +40,17 @@ export function finalBasics(fs: FinalSpec): FinalBasics {
   const val = (k: FinalLabel) => (f[k] && !UNDECIDED.test(f[k]!) ? f[k]! : undefined)
   const bat = val("배터리")
   if (bat) {
+    const pk = /[×x]\s*(\d+)\s*(팩|병렬|직렬|P\b|S\b)/i.exec(bat); if (pk) out.packNote = `배터리 팩 구성(${pk[0].trim()})이 모호해 단일 팩 값으로 계산함`
     const s = /총\s*(\d{1,2})\s*S\b/i.exec(bat) ?? /(\d{1,2})\s*S\b/i.exec(bat); if (s) out.cells = num(s[1])
     const ah = /([\d.]+)\s*Ah\b/i.exec(bat), mah = /([\d,]{3,6})\s*mAh\b/i.exec(bat)
     if (ah) out.ah = num(ah[1]); else if (mah) out.ah = num(mah[1]) / 1000
     const ms = /(?:질량|무게)\s*[:：]?\s*[≈~약]?\s*([\d.,]+)\s*(kg|g)\b/i.exec(bat) ?? /([\d.,]+)\s*(kg)\b/i.exec(bat)
     if (ms) out.batMassG = num(ms[1]) * (ms[2].toLowerCase() === "kg" ? 1000 : 1)
   }
-  const prop = val("프롭"); if (prop) { const p = /(\d+(?:\.\d+)?)\s*(?:인치|inch|in\b|")/i.exec(prop); if (p) out.propIn = num(p[1]) }
-  const mot = val("모터"); if (mot) { const k = /KV\s*[:：]?\s*(\d{2,4})|(\d{2,4})\s*KV/i.exec(mot); if (k) out.kv = num(k[1] ?? k[2]); out.motorName = mot.split(/[·,(]/)[0].trim() }
-  const esc = val("ESC"); if (esc) { const a = /(\d+)\s*A\b/.exec(esc); if (a) out.escA = num(a[1]) }
+  const prop = val("프롭"); if (prop) { const p = /([≤<]?)\s*(\d+(?:\.\d+)?)\s*(?:인치|inch|in\b|")/i.exec(prop); if (p && !p[1]) out.propIn = num(p[2]) } // '≤N인치'는 상한이라 값으로 쓰지 않는다
+  const mot = val("모터"); if (mot) { out.kv = parseKv(mot); out.motorName = mot.split(/[·,(]/)[0].trim() }
+  // ESC 전류는 '연속/정격' 표기가 있거나 'N A급'일 때만 읽는다(모터 전류를 ESC 정격으로 오인 방지)
+  const esc = val("ESC"); if (esc) { const a = /(?:연속|정격|continuous|cont\.?)\s*[:：]?\s*(\d+)\s*A\b/i.exec(esc) ?? /(\d+)\s*A\s*급/.exec(esc); if (a) out.escA = num(a[1]) }
   const auw = val("총중량(AUW)"); if (auw) { const a = /([\d.]+)\s*kg/i.exec(auw); if (a) out.auwKg = num(a[1]) }
   const fr = val("기체"); if (fr) { const w = /([\d,]{3,5})\s*mm/i.exec(fr); if (w) out.wheelbaseMm = num(w[1]) }
   const pl = val("페이로드"); if (pl) { const a = /([\d.]+)\s*kg/i.exec(pl); if (a) out.payloadKg = num(a[1]) }

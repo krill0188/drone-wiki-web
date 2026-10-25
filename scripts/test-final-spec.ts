@@ -24,4 +24,13 @@ const noteHwOnly = buildGateNote({ spec, hwMd: hw, compareText: hw })
 must("확정 스펙이 없으면 HW 표 출처", /배터리 S·Ah \| 12S 16Ah \| doc:HW 표/.test(noteHwOnly))
 const c1 = findStageConflicts(hw, "프롭 40인치, 배터리 12S 16Ah", tech)
 must("확정 스펙 기준 비교(프롭 40인치는 불일치)", c1.baseLabel.includes("4단계 확정 스펙") && c1.conflicts.some((c) => c.topic === "프롭 지름"))
+// 운영 출력에서 발견된 오파싱 회귀 시험
+import { parseKv } from "../lib/final-spec"
+must("IP45 KV135에서 KV는 135(45 아님)", parseKv("T-MOTOR MN701-S IP45 KV135 × 4개") === 135 && parseKv("135KV 모터") === 135)
+const real = parseFinalSpec(`## 5. 확정 기술 스펙 요약\n1. **기체**: 재설계 필요 (휠베이스 1,500 mm)\n2. **모터**: T-MOTOR MN701-S IP45 KV135 × 4개 (Max current 42 A)\n3. **ESC**: 카탈로그 후보 없음 — 재확인 필요 (모터 42 A 커버하는 6S 대응 ESC 별도 선정)\n4. **프롭**: ≤39.7 인치 동축 쌍 × 8개\n5. **배터리**: 카탈로그 후보 없음 (6S 22 Ah × 2팩 혹은 동등 714 Wh 이상)\n6. **총중량(AUW)**: 19.2 kg\n`)
+const rb = finalBasics(real)
+must("모터 전류를 ESC 정격으로 오인하지 않는다", rb.escA === undefined)
+must("'≤N인치' 상한은 프롭 값으로 쓰지 않는다", rb.propIn === undefined)
+must("모터 KV 135", rb.kv === 135)
+must("'×2팩' 배터리는 팩 구성 모호 메모를 남긴다", !!rb.packNote)
 console.log(fail ? `FAIL ${fail}건` : "PASS 전부 통과"); process.exit(fail ? 1 : 0)

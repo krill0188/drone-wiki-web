@@ -4,7 +4,7 @@
 import catalogFile from "@/data/ontology/products-catalog.json"
 import { modelKeyOf, keysFor } from "./product-match"
 import { hwBasics } from "./gates-adapter"
-import { finalBasics, parseFinalSpec } from "./final-spec"
+import { finalBasics, parseFinalSpec, parseKv } from "./final-spec"
 import { parseTable } from "./stage-validate"
 
 type Row = Record<string, string>
@@ -88,7 +88,7 @@ export function findStageConflicts(hwMd: string, otherText: string, finalMd?: st
   }
   if (b.kv) {
     compared.push("모터 KV")
-    const bad = [...otherText.matchAll(/KV\s*[:：]?\s*(\d{2,4})\b|(\d{2,4})\s*KV\b/gi)].map((m) => num(m[1] ?? m[2])).filter((v) => Math.abs(v - b.kv!) / b.kv! > 0.05)
+    const bad = [...otherText.matchAll(/KV\s*[:：]?\s*(\d{2,4})\b|(?<![A-Za-z0-9])(\d{2,4})\s*KV\b/gi)].map((m) => num(m[1] ?? m[2])).filter((v) => Math.abs(v - b.kv!) / b.kv! > 0.05)
     if (bad.length) conflicts.push({ topic: "모터 KV", base: `${b.kv}KV`, other: [...new Set(bad)].map((v) => `${v}KV`).join(", ") })
   }
   const baseAuw = /추정 총중량[^|\n]*\|\s*\**\s*([\d.]+)\s*kg/.exec(hwMd.replace(/\*\*/g, ""))

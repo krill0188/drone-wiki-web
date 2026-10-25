@@ -4,7 +4,7 @@
 import { parseTable } from "./stage-validate"
 import { runGates, ASSUMPTIONS, type CoreSpec, type GateKey, type GateReport } from "./gates-core"
 import { planMultirotor, type DesignSpec } from "./design-gate"
-import { finalBasics, parseFinalSpec } from "./final-spec"
+import { finalBasics, parseFinalSpec, parseKv } from "./final-spec"
 
 type Row = Record<string, string>
 const colOf = (r: Row, re: RegExp) => Object.entries(r).find(([k]) => re.test(k))?.[1] ?? ""
@@ -46,7 +46,7 @@ function parseHw(hwMd: string, spec: DesignSpec): Parsed {
       out.rotors = qty > 1 ? qty : out.rotors
       const th = /(?:max\s*thrust|최대\s*추력)[^\d\n]{0,14}([\d.]+)\s*(kgf|kg|gf|g|N)\b/i.exec(t)
       if (th) { const v = num(th[1]), u = th[2].toLowerCase(); out.thrustG = u === "n" ? (v / 9.80665) * 1000 : u.startsWith("kg") ? v * 1000 : v }
-      const kv = /KV\s*[:：]?\s*(\d{2,4})|(\d{2,4})\s*KV/i.exec(t); if (kv) out.kv = num(kv[1] ?? kv[2])
+      out.kv = parseKv(t) ?? out.kv
       pushPart(out, name, massOf(sp), qty)
     } else if (/esc/i.test(cls)) {
       const a = /(?:정격|연속)?\s*전류[^\d\n]{0,8}([\d.]+)\s*A\b/.exec(t) ?? /(\d+)\s*A\b/.exec(sel); if (a) out.escA = num(a[1])
@@ -151,6 +151,7 @@ export function buildGateNote({ spec, hwMd, compareText = "", finalSpecMd = "" }
   const review: string[] = []
   if (missing.length) review.push(`읽지 못해 건너뛴 입력: ${[...new Set(missing)].join(", ")}`)
   if (unknownMass.length) review.push(`질량 미상 부품(엔진 추정 총중량을 하한으로 사용): ${unknownMass.join(", ")}`)
+  if (fin.packNote) review.push(fin.packNote)
   if (p.boundNames.length) review.push(`질량이 '이하(≤)' 상한값으로만 적혀 합산에서 제외: ${p.boundNames.join(", ")}`)
   if (p.link?.freqMhz && p.link.txDbm !== undefined && spec.rangeKm) {
     // 링크: 수신 감도는 문서에 없으므로 '마진 10 dB를 위해 필요한 수신 감도'를 계산해 공개한다(안테나 이득 미상 → 0 dBi 가정)
