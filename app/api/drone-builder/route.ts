@@ -14,6 +14,8 @@ import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
 import { buildGateNote, assumptionFreeGateIssues } from "@/lib/gates-adapter"
+import { requireConsent } from "@/lib/consent"
+import { startTrack } from "@/lib/exp-log"
 import { selectPaperClaims, paperEvidenceBlock, paperEvidenceNote } from "@/lib/paper-evidence"
 import { stageConsistencyNote, removedPartsReappear } from "@/lib/stage-consistency"
 
@@ -374,7 +376,10 @@ function instantReply(text: string): Response {
 }
 
 export async function POST(req: NextRequest) {
+  const denied = requireConsent(req) // 수집 동의 없이는 이 메뉴를 쓸 수 없다(strict 모드)
+  if (denied) return denied
   const { prompt, stage, context, modelTier, reason, cross }: { prompt: string; stage: Stage; context?: StageContext; modelTier?: string; reason?: string; cross?: string } = await req.json()
+  startTrack(req, "drone-builder", prompt, stage) // 동의한 사용자의 컨셉·단계를 응답 뒤에 기록한다(이 단계 호출의 상태는 'answered')
   // 교차 공학 규칙(2026-10-24): strict = 위반 시 기존 재작성 경로(쌍 비교에서 느려져 기본 꺼짐), advisory = 단계 끝에 규칙 기반 점검표만 붙임(지연 0, 기본 켜짐). off로 끌 수 있다(요청 cross 또는 BUILDER_CROSS).
   const crossMode = cross ?? process.env.BUILDER_CROSS ?? "advisory"
   const crossOn = crossMode === "strict"

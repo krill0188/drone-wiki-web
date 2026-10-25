@@ -1,6 +1,7 @@
 "use client"
 
 import WiringDiagram from "@/components/WiringDiagram"
+import ConsentGate from "@/components/ConsentGate"
 import BuilderSessionDialog, { type DialogMode } from "@/components/BuilderSessionDialog"
 import BuilderGuide from "@/components/BuilderGuide"
 import WaitingIndicator from "@/components/WaitingIndicator"
@@ -143,7 +144,7 @@ async function streamStage(
   return full
 }
 
-export default function AiDroneBuilderPage() {
+function AiDroneBuilderInner() {
   const [concept, setConcept] = useState("")
   const [stages, setStages] = useState<Record<StageKey, StageState>>(emptyStages)
   const [closedAt, setClosedAt] = useState<StageKey | null>(null)
@@ -154,6 +155,7 @@ export default function AiDroneBuilderPage() {
   const [progress, setProgress] = useState<Partial<Record<StageKey, string>>>({})
   const [dialog, setDialog] = useState<DialogMode | null>(null)
   const [rejectEndKey, setRejectEndKey] = useState<StageKey | null>(null)
+  const caseSentRef = useRef(false)
 
   const restoredRef = useRef(false)
   const abortRef = useRef<AbortController | null>(null)
@@ -267,13 +269,14 @@ export default function AiDroneBuilderPage() {
     const idx = STAGES.findIndex((s) => s.key === key)
     const next = STAGES[idx + 1]
     if (next) setTimeout(() => runStage(next.key), 0)
-    else setDialog("final") // 6단계 최종 승인: 마크다운 복사 → 화면 세션 초기화 안내
+    else { setDialog("final"); sendCase("final") } // 6단계 최종 승인: 마크다운 복사 → 화면 세션 초기화 안내
   }
 
   const close = (key: StageKey) => {
     patchStage(key, { status: "approved" })
     setClosedAt(key)
     setDialog("close")
+    sendCase("closed", key)
   }
 
   // 반려하고 종료: 같은 단계를 다시 만들지 않고 여기서 끝낸다(복사 → 초기화 안내).
@@ -282,6 +285,22 @@ export default function AiDroneBuilderPage() {
     setRejectReason("")
     setRejectEndKey(key)
     setDialog("reject-end")
+    sendCase("rejected_end")
+  }
+
+  // 완성·종료한 설계를 익명 사례로 저장한다(수집 동의한 경우만 서버가 받는다). 한 실행에 한 번만 보낸다.
+  const sendCase = (outcome: "final" | "closed" | "rejected_end", closedKey: StageKey | null = null) => {
+    if (caseSentRef.current) return
+    caseSentRef.current = true
+    setTimeout(() => {
+      const st = stagesRef.current
+      fetch("/api/design-case", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ concept: conceptRef.current, stages: st, closedAt: closedKey, outcome }),
+        keepalive: true,
+      }).catch(() => { /* 저장 실패는 화면에 영향 없음 */ })
+    }, 800) // 승인 직후 상태 반영 뒤에 읽는다
   }
 
   // 복사 문서: 승인된 단계를 이어 붙이고, 반려 종료·새 설계 시작이면 아직 승인 안 된 결과도 표시를 달아 포함한다.
@@ -316,6 +335,7 @@ export default function AiDroneBuilderPage() {
     setRejectingKey(null)
     setRejectReason("")
     setRejectEndKey(null)
+    caseSentRef.current = false
     setProgress({})
     setCopied(false)
     setDialog(null)
@@ -623,5 +643,13 @@ export default function AiDroneBuilderPage() {
       )}
       <BuilderSessionDialog mode={dialog} onCopy={copyForDialog} onReset={resetSession} onClose={() => setDialog(null)} />
     </div>
+  )
+}
+
+export default function AiDroneBuilderPage() {
+  return (
+    <ConsentGate feature="builder">
+      <AiDroneBuilderInner />
+    </ConsentGate>
   )
 }

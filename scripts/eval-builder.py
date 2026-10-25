@@ -5,13 +5,14 @@
 import json, sys, time, urllib.request
 ARGS = sys.argv[1:]
 opt = lambda k, d=None: ARGS[ARGS.index(k) + 1] if k in ARGS else d
+HDR = {"content-type": "application/json", "cookie": "dw_consent=2026-10-25; dw_sid=eval-script; dw_test=1", "x-dw-test": "1"}
 URL = opt("--url", "https://drone-wiki-web.vercel.app") + "/api/drone-builder"
 P = "농업용 방제 드론을 만들고 싶습니다. 페이로드 10kg, 비행거리 5km, 기체 크기 1.5m급 멀티로터, 비행시간 20분 이상."
 STAGES = ["proposal", "hw", "sw", "techspec", "architecture", "implementation"]
 
 def call(stage, ctx):
     t0 = time.time(); out = ""; prog = 0
-    req = urllib.request.Request(URL, json.dumps({"prompt": P, "stage": stage, "context": ctx, **({"reason": opt("--reason")} if opt("--reason") else {})}).encode(), {"content-type": "application/json"})
+    req = urllib.request.Request(URL, json.dumps({"prompt": P, "stage": stage, "context": ctx, **({"reason": opt("--reason")} if opt("--reason") else {})}).encode(), HDR)
     try:
         with urllib.request.urlopen(req, timeout=290) as r:
             for raw in r:

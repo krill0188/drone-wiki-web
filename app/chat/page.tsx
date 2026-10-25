@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useChat } from "@ai-sdk/react"
 import { DefaultChatTransport, type UIMessage } from "ai"
 import { DOMAIN_META } from "@/lib/types"
+import ConsentGate from "@/components/ConsentGate"
 
 interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
@@ -20,7 +21,7 @@ const EXAMPLES = [
   "한국 드론 비행 허가 절차",
 ]
 
-export default function ChatPage() {
+function ChatPageInner() {
   const [input, setInput] = useState("")
   const endRef = useRef<HTMLDivElement>(null)
 
@@ -200,5 +201,13 @@ export default function ChatPage() {
         무료버전이라 응답시간은 느리지만 최대 8초이상 걸릴수 있어요
       </p>
     </div>
+  )
+}
+
+export default function ChatPage() {
+  return (
+    <ConsentGate feature="chat">
+      <ChatPageInner />
+    </ConsentGate>
   )
 }

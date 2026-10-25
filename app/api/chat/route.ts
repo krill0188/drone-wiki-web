@@ -21,6 +21,8 @@ import { unsupportedNumbers } from "@/lib/kg-verify"
 import { insufficientMessage, metaForStreamed } from "@/lib/kg-answer"
 import { verbatimAnswer } from "@/lib/kg-verbatim"
 import { buildOntologyContext } from "@/lib/ontology-qa"
+import { requireConsent } from "@/lib/consent"
+import { startTrack } from "@/lib/exp-log"
 import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { designEvidence } from "@/lib/evidence"
@@ -66,6 +68,8 @@ function instantReply(text: string, meta: Record<string, unknown> = {}) {
 }
 
 export async function POST(req: NextRequest) {
+  const denied = requireConsent(req) // 수집 동의 없이는 이 메뉴를 쓸 수 없다(strict 모드)
+  if (denied) return denied
   // recentDocs(최근 열람 문서)는 지식그래프 전용 답변에서 사실 근거가 아니므로 더 이상 쓰지 않는다(요청 형식은 호환 유지).
   const {
     messages,
@@ -75,17 +79,20 @@ export async function POST(req: NextRequest) {
     await req.json()
 
   const question = extractQuestion(messages)
+  const track = startTrack(req, "chat", question) // 동의한 사용자의 질문·응답 상태를 응답 뒤에 기록한다
 
   // 설계 질문 게이트: 필수 4항목(페이로드·비행가능거리·크기·비행시간) 확인 + 물리 실현가능성 판정
   const userTexts = messages.filter((m) => m.role === "user").map(textOf)
   const lastAssistant = [...messages].reverse().find((m) => m.role === "assistant")
   const gate = evaluateDesignGate(userTexts, lastAssistant ? textOf(lastAssistant) : "")
-  if (gate.reply) return instantReply(gate.reply)
+  if (gate.reply) { track.set({ status: "design_gate_ask" }); return instantReply(gate.reply) }
   // KG_BACKEND=sqlite: 지식 RDB 기반 ontology 우선 질의. 기본값(json)에서는 아래 기존 경로를 그대로 쓴다.
   // 설계 질문(게이트 통과)은 결정론 엔진 블록이 근거이므로 기존 경로를 유지한다.
   if (isSqliteBackend() && !gate.block) {
     const plan = planQuery(question)
+    track.set({ basis: plan.basis, classes: plan.classes, docSlugs: (plan.pages ?? []).map((x: { path: string }) => x.path.split("/").pop()?.replace(/\.md$/, "") ?? "").filter(Boolean) })
     if (plan.status !== "ready") {
+      track.set({ status: "insufficient_evidence" })
       const meta = { answerMeta: { status: "insufficient_evidence", confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: plan.suggestions, ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
       return instantReply(insufficientMessage(plan), meta)
     }

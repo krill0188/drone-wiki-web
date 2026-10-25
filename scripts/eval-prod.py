@@ -6,6 +6,7 @@ import json, sys, time, urllib.request, concurrent.futures as cf, re
 
 ARGS = sys.argv[1:]
 opt = lambda k, d=None: ARGS[ARGS.index(k) + 1] if k in ARGS else d
+HDR = {"content-type": "application/json", "cookie": "dw_consent=2026-10-25; dw_sid=eval-script; dw_test=1", "x-dw-test": "1"}
 URL = opt("--url", "https://drone-wiki-web.vercel.app") + "/api/chat"
 TIER = opt("--tier", "auto")  # auto = 환경 기본 판정 + 캐시 우회(측정용)
 # (질문, 기대: ans=답변해야 함 / ref=거절해야 함, 반드시 포함할 단어들(하나라도), 금지 단어)
@@ -43,7 +44,8 @@ def ask(q):
     payload = {"messages": [{"id": "1", "role": "user", "parts": [{"type": "text", "text": q}]}]}
     if TIER: payload["modelTier"] = TIER
     body = json.dumps(payload).encode()
-    req = urllib.request.Request(URL, body, {"content-type": "application/json"})
+    # 운영 점검은 수집 동의 쿠키와 테스트 표시를 달아 보낸다(집계에서 제외, 동의 고지 버전은 lib/consent.ts와 같아야 한다)
+    req = urllib.request.Request(URL, body, HDR)
     text, meta = "", {}
     first = None
     try:
