@@ -2,6 +2,7 @@
 
 import WiringDiagram from "@/components/WiringDiagram"
 import ConsentGate from "@/components/ConsentGate"
+import { AUTH_ENABLED, authHeader, hasConsentCookie, sb } from "@/lib/supabase-browser"
 import BuilderSessionDialog, { type DialogMode } from "@/components/BuilderSessionDialog"
 import BuilderGuide from "@/components/BuilderGuide"
 import WaitingIndicator from "@/components/WaitingIndicator"
@@ -95,7 +96,7 @@ async function streamStage(
 ): Promise<string> {
   const res = await fetch("/api/drone-builder", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...(await authHeader()) },
     body: JSON.stringify(body),
     signal,
   })
@@ -156,6 +157,10 @@ function AiDroneBuilderInner() {
   const [dialog, setDialog] = useState<DialogMode | null>(null)
   const [rejectEndKey, setRejectEndKey] = useState<StageKey | null>(null)
   const caseSentRef = useRef(false)
+  // 구글 로그인 연동: 로그인하면 진행 중인 설계를 계정에 동기화해 다른 기기에서 이어서 볼 수 있다(수집 동의 후에만).
+  const [remote, setRemote] = useState<BuilderSnapshot | null>(null)
+  const [loggedIn, setLoggedIn] = useState(false)
+  const uidRef = useRef<string | null>(null)
 
   const restoredRef = useRef(false)
   const abortRef = useRef<AbortController | null>(null)
@@ -199,6 +204,44 @@ function AiDroneBuilderInner() {
     restoredRef.current = true
     return () => abortRef.current?.abort()
   }, [])
+
+  // 로그인 상태 감시 + 계정에 저장된 이전 설계 확인
+  useEffect(() => {
+    const c = sb()
+    if (!c) return
+    let alive = true
+    const check = async (uid?: string) => {
+      uidRef.current = uid ?? null
+      setLoggedIn(!!uid)
+      if (!uid || !hasConsentCookie()) { setRemote(null); return }
+      const { data } = await c.from("exp_builder_sessions").select("snapshot").eq("user_id", uid).maybeSingle()
+      if (alive && data?.snapshot) setRemote(data.snapshot as BuilderSnapshot)
+    }
+    c.auth.getSession().then(({ data }) => check(data.session?.user.id))
+    const { data: sub } = c.auth.onAuthStateChange((_e, session) => { check(session?.user.id) })
+    return () => { alive = false; sub.subscription.unsubscribe() }
+  }, [])
+
+  // 계정 동기화(2.5초 디바운스): 비어 있지 않은 진행 상태만 올린다. 비우는 것은 '화면 초기화'에서만 한다.
+  useEffect(() => {
+    const c = sb()
+    if (!c || !loggedIn || !uidRef.current || !restoredRef.current || !hasConsentCookie()) return
+    if (!concept.trim() && STAGES.every((x) => stages[x.key].status === "pending")) return
+    const t = setTimeout(() => {
+      c.from("exp_builder_sessions").upsert({ user_id: uidRef.current, snapshot: { version: 2, concept, stages, closedAt }, updated_at: new Date().toISOString() }).then(() => {}, () => {})
+    }, 2500)
+    return () => clearTimeout(t)
+  }, [concept, stages, closedAt, loggedIn])
+
+  const loadRemote = () => {
+    if (!remote) return
+    const restored = { ...emptyStages(), ...remote.stages }
+    for (const x of STAGES) if (restored[x.key].status === "running") restored[x.key] = { ...restored[x.key], status: "error", error: "생성 중 화면을 벗어나 중단됐습니다. 다시 시도해 주세요." }
+    setConcept(remote.concept)
+    setStages(restored)
+    setClosedAt(remote.closedAt ?? null)
+    setRemote(null)
+  }
 
   // 세션 저장(0.4초 디바운스): 스트리밍 중 델타마다 쓰지 않도록 한다.
   useEffect(() => {
@@ -294,12 +337,12 @@ function AiDroneBuilderInner() {
     caseSentRef.current = true
     setTimeout(() => {
       const st = stagesRef.current
-      fetch("/api/design-case", {
+      authHeader().then((h) => fetch("/api/design-case", {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json", ...h },
         body: JSON.stringify({ concept: conceptRef.current, stages: st, closedAt: closedKey, outcome }),
         keepalive: true,
-      }).catch(() => { /* 저장 실패는 화면에 영향 없음 */ })
+      })).catch(() => { /* 저장 실패는 화면에 영향 없음 */ })
     }, 800) // 승인 직후 상태 반영 뒤에 읽는다
   }
 
@@ -340,6 +383,9 @@ function AiDroneBuilderInner() {
     setCopied(false)
     setDialog(null)
     if (sessionId) getSessionStore().clearSnapshot(sessionId, FEATURE_KEY)
+    const c = sb()
+    if (c && uidRef.current) c.from("exp_builder_sessions").delete().eq("user_id", uidRef.current).then(() => {}, () => {})
+    setRemote(null)
     if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
@@ -384,6 +430,16 @@ function AiDroneBuilderInner() {
         6단계 에이전트가 DroneWiki 지식 베이스(GraphRAG)를 근거로 협업합니다. 각 단계가 끝나면 멈추고,
         <strong> 승인 · 반려 · 마감</strong>을 선택해 다음으로 넘어갑니다.
       </p>
+
+      {AUTH_ENABLED && remote && !concept.trim() && !STAGES.some((s) => stages[s.key].status !== "pending") && (
+        <div className="mb-4 rounded-xl border-2 border-emerald-600 bg-emerald-50 dark:bg-emerald-950 px-4 py-3 text-sm flex flex-wrap items-center gap-2">
+          <span className="break-keep">이전에 하던 설계가 계정에 저장돼 있어요: <strong>{remote.concept.slice(0, 60) || "(제목 없음)"}</strong></span>
+          <span className="ml-auto flex gap-2">
+            <button type="button" onClick={loadRemote} className="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-semibold">이어서 불러오기</button>
+            <button type="button" onClick={() => setRemote(null)} className="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-600">새로 시작</button>
+          </span>
+        </div>
+      )}
 
       {!STAGES.some((s) => stages[s.key].status !== "pending") && <BuilderGuide onPick={setConcept} />}
 

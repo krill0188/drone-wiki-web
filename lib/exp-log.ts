@@ -4,10 +4,12 @@ import { after } from "next/server"
 import type { NextRequest } from "next/server"
 import { consentMode, hasConsent, isTestTraffic, CONSENT_VERSION } from "./consent"
 import { maskText } from "./mask"
+import { verifyUser, isOwnerEmail } from "./auth-verify"
 
 export type Feature = "chat" | "drone-builder"
 export interface TurnRow {
   session_id: string
+  user_id: string | null
   feature: Feature
   stage: string | null
   question: string
@@ -60,9 +62,9 @@ function allowed(sid: string, now = Date.now()): boolean {
   return true
 }
 
-export function buildTurnRow(p: { sid: string; feature: Feature; stage?: string | null; question: string; status?: string; basis?: string | null; classes?: string[]; docSlugs?: string[]; tier?: string | null; latencyMs?: number | null; isTest: boolean }): TurnRow {
+export function buildTurnRow(p: { sid: string; userId?: string | null; feature: Feature; stage?: string | null; question: string; status?: string; basis?: string | null; classes?: string[]; docSlugs?: string[]; tier?: string | null; latencyMs?: number | null; isTest: boolean }): TurnRow {
   return {
-    session_id: p.sid, feature: p.feature, stage: p.stage ?? null, question: maskText(p.question, 1500), status: p.status ?? "answered", basis: p.basis ?? null,
+    session_id: p.sid, user_id: p.userId ?? null, feature: p.feature, stage: p.stage ?? null, question: maskText(p.question, 1500), status: p.status ?? "answered", basis: p.basis ?? null,
     classes: (p.classes ?? []).slice(0, 8), doc_slugs: (p.docSlugs ?? []).slice(0, 12), model_tier: p.tier ?? null, latency_ms: p.latencyMs ?? null, is_test: p.isTest, consent_version: CONSENT_VERSION,
   }
 }
@@ -79,10 +81,12 @@ export function startTrack(req: NextRequest, feature: Feature, question: string,
     if (mode === "off" || !question.trim() || !hasConsent(req.cookies)) return track
     const sid = req.cookies.get("dw_sid")?.value ?? ""
     if (!sid || !allowed(sid)) return track
-    const isTest = isTestTraffic(req)
+    const isTest0 = isTestTraffic(req)
+    const userP = verifyUser(req) // 로그인 사용자 확인은 응답과 병렬로 시작한다
     after(async () => {
       try {
-        const row = buildTurnRow({ sid, feature, stage, question, ...state, latencyMs: Date.now() - t0, isTest })
+        const user = await userP
+        const row = buildTurnRow({ sid, userId: user?.id ?? null, feature, stage, question, ...state, latencyMs: Date.now() - t0, isTest: isTest0 || isOwnerEmail(user?.email) })
         await getBackend().insert("exp_turns", row as unknown as Record<string, unknown>)
       } catch { /* 기록 실패는 응답에 영향을 주지 않는다 */ }
     })

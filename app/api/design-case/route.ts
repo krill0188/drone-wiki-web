@@ -6,6 +6,7 @@ import { getBackend } from "@/lib/exp-log"
 import { maskText } from "@/lib/mask"
 import { parseSpec } from "@/lib/design-gate"
 import { parseFinalSpec } from "@/lib/final-spec"
+import { verifyUser, isOwnerEmail } from "@/lib/auth-verify"
 
 // 완성(또는 종료)한 설계 사례 저장(2026-10-25). 동의한 사용자만, 마스킹 후, 구조화된 요약 + 압축 마크다운으로 저장한다.
 // '완성'은 승인된 설계일 뿐 실기 비행 검증이 아니다 — outcome과 verification 필드로 구분한다.
@@ -34,11 +35,12 @@ export async function POST(req: NextRequest) {
   const outcome = ["final", "closed", "rejected_end"].includes(body.outcome ?? "") ? body.outcome! : "final"
   const runHash = createHash("sha256").update(`${sid}|${concept}|${stages.proposal?.text?.slice(0, 200) ?? ""}`).digest("hex").slice(0, 32)
 
+  const user = await verifyUser(req)
   const row = {
-    session_id: sid, run_hash: runHash, concept, inputs: { payloadKg: spec.payloadKg ?? null, rangeKm: spec.rangeKm ?? null, sizeMm: spec.sizeMm ?? null, flightMin: spec.flightMin ?? null, rotors: spec.rotors, platform: spec.platform },
+    session_id: sid, user_id: user?.id ?? null, run_hash: runHash, concept, inputs: { payloadKg: spec.payloadKg ?? null, rangeKm: spec.rangeKm ?? null, sizeMm: spec.sizeMm ?? null, flightMin: spec.flightMin ?? null, rotors: spec.rotors, platform: spec.platform },
     final_spec: fin.fields, gate_summary: gate, approved_stages: approved, closed_at: body.closedAt ?? null, outcome,
     rejections, verification: "analytic-gates-only", markdown_gz_b64: gzipSync(Buffer.from(md, "utf8")).toString("base64"), md_chars: md.length,
-    is_test: isTestTraffic(req), consent_version: CONSENT_VERSION,
+    is_test: isTestTraffic(req) || isOwnerEmail(user?.email), consent_version: CONSENT_VERSION,
   }
   try { await getBackend().insert("exp_design_cases", row, { upsertOn: "session_id,run_hash" }) } catch { return NextResponse.json({ ok: true, stored: false, reason: "backend_error" }) }
   return NextResponse.json({ ok: true, stored: true })

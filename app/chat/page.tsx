@@ -6,6 +6,7 @@ import { useChat } from "@ai-sdk/react"
 import { DefaultChatTransport, type UIMessage } from "ai"
 import { DOMAIN_META } from "@/lib/types"
 import ConsentGate from "@/components/ConsentGate"
+import { authHeader } from "@/lib/supabase-browser"
 
 interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
@@ -26,7 +27,7 @@ function ChatPageInner() {
   const endRef = useRef<HTMLDivElement>(null)
 
   const { messages, sendMessage, status, error } = useChat<ChatUIMessage>({
-    transport: new DefaultChatTransport({ api: "/api/chat" }),
+    transport: new DefaultChatTransport({ api: "/api/chat", headers: async () => await authHeader() }),
   })
   const busy = status === "submitted" || status === "streaming"
 

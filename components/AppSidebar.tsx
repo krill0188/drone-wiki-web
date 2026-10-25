@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import LangToggle from "@/components/LangToggle"
 import DroneIcon from "@/components/DroneIcon"
 import ThemeSkinControls from "@/components/ThemeSkinControls"
+import AuthButton from "@/components/AuthButton"
 import { NAV, isActive } from "@/lib/nav"
 
 // GPT/Gemini 스타일 글로벌 좌측 사이드바 — 앱 전체에서 하나만 존재한다.
@@ -98,6 +99,7 @@ export default function AppSidebar() {
           </div>
         </div>
 
+        <AuthButton />
         <div className="p-3 border-t border-line shrink-0 flex flex-col gap-2.5">
           <ThemeSkinControls />
           <div className="flex items-center justify-between">

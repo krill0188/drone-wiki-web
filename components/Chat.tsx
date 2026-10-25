@@ -6,6 +6,7 @@ import WaitingIndicator, { TypingDots } from "./WaitingIndicator"
 import { useEffect, useRef, useState } from "react"
 import { useChat } from "@ai-sdk/react"
 import ConsentGate from "@/components/ConsentGate"
+import { authHeader } from "@/lib/supabase-browser"
 import { DefaultChatTransport, type UIMessage } from "ai"
 import { useWikiDoc } from "@/components/WikiDocContext"
 import { DOMAIN_META } from "@/lib/types"
@@ -62,7 +63,7 @@ export default function ChatWidget() {
   const restoredRef = useRef(false)
 
   const { messages, setMessages, sendMessage, status, error } = useChat<ChatUIMessage>({
-    transport: new DefaultChatTransport({ api: "/api/chat" }),
+    transport: new DefaultChatTransport({ api: "/api/chat", headers: async () => await authHeader() }),
   })
 
   // 세션 복원(2026-08-08): 이 컴포넌트는 SSR/정적 프리렌더 대상이라, 저장된 대화를
