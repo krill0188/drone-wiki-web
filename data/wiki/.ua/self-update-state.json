@@ -8576,5 +8576,131 @@
       "data-flightlog-rosbag2",
       "ros2-drone-integration"
     ]
+  },
+  "https://www.youtube.com/watch?v=q7u32D_vS0U": {
+    "processedAt": "2026-10-24T22:45:51.085Z",
+    "matchedSlugs": [
+      "caddx-ratel-ultra-analog-fpv-camera",
+      "betafpv-p1-digital-fpv-system"
+    ]
+  },
+  "http://arxiv.org/abs/2610.30410v1": {
+    "processedAt": "2026-10-24T22:45:50.955Z",
+    "matchedSlugs": [
+      "ris-assisted-clustered-uav-noma-bilevel-optimization"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNDcxUjdlX2tZLWt1RG5MSWdjZEIwM0pRemMzTDh2ZGkwTWhHSmdLZmpKSm1vMlM1Q01xZklkd29pSVYtVW96S09xTGFOR3l0ZTZLMTRtSGVfM21zQTZiaDdObnNhWUJZdG5sVG50VmRyQm9UbkFNeFpMS2JOalpDVEFHR2F2YVptanNmZ25QN0hpSmNEVEZRMGZnT21FVlR0YnpEY0xB?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.005Z",
+    "matchedSlugs": [
+      "integrity-nasa-rnp-utm-jung-2016",
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRHFlQTJaN1p6U0IxTkpEQ3p5UmJIXzNOazVLTjE0UzFSZ3ljc3dIbERoaHBPOE9sQmNEOXpzcmdTblVsOFd3blJFU2xJQmQ0cGFmLV9KNkplTjFTSTBDNzR5ejNxampHb0Ryd1FkQ3BUdndkWThjdmM3aEJ4RmIyWDc0VlQ0T3o4bEpvVTdBTG00c1VxZWd0UlZ3a0xtZF9aVFZGSlpRdnpycGlfQk02VWVBUlFEdkE4MENkRVVoU1E?oc=5": {
+    "processedAt": "2026-10-24T22:45:50.979Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "mavlink-m-interoperability"
+    ]
+  },
+  "https://dronedj.com/2026/10/24/dji-avata-firmware-new-drone/": {
+    "processedAt": "2026-10-24T22:45:51.074Z",
+    "matchedSlugs": [
+      "dji-mavic-4-pro-firmware-update",
+      "dji-mavic-4-pro"
+    ]
+  },
+  "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.188": {
+    "processedAt": "2026-10-24T22:45:51.135Z",
+    "matchedSlugs": [
+      "yolo-v8-4-188",
+      "yolo-v8-4-116"
+    ]
+  },
+  "https://doi.org/10.1016/j.adhoc.2026.104458": {
+    "processedAt": "2026-10-24T22:45:50.999Z",
+    "matchedSlugs": [
+      "data-anomaly-resam-islam-2022"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZDY3M3FJWmRlS3FzanJvaXY0cU55UXRreUVhd3J3aVVLNFRPeUppSzJWSXJKUS14LUhMWHcxSGRUcC1NTGhSZGQtQnJtbUdzOUhQb1hkOElGbkNUNnJ6bXBXRlhlVkJyQU8tS0l3dGZqNUhmcHdFZzhudThDbU41cUNnbDJsSTBFSFdfOXNGRnRlblVrYUQta3p0aE1yQVh3LVM5NGk5X3E?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.111Z",
+    "matchedSlugs": [
+      "drone-first-responder-dfr",
+      "data-synthetic-testing-pipeline-jiang-2025"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMjN0TkxMejQxMG5ac0I1T0xRN2J6UGJuTTZOcTRRQzFUNWJUQ2I3OGRiajNqRlQtYzU1UG5TN0tKekRsQnh1a0FzY1MwUEk0ZWRRLUsxT0R3eDBQYlM2YjA3VU1tX2FsTDhXYWpWLVhfNE1CN2wzTFl2YlREM2xwam9MQkQwckpHN2dN?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.028Z",
+    "matchedSlugs": [
+      "china-drone-export-controls",
+      "skydio-dock-milestone"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VYWgtT2RvYkVxdzlINkdfNlNtS0RUM3locXgzTHFUSUNkQ3FyT0dkNFBvRng2dXFPc3FjQWk0N25rM25HaFRjZW5ScmMxMl9fOE8zRmw1RjAwQ3RSLXlYdGh3?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.062Z",
+    "matchedSlugs": [
+      "ai-fl-uav-real-hardware-chained-attacks-sabo-2026",
+      "drone-news-ops"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMickFVX3lxTE50U3FJYkt3bXBCU3NzbmVRV19lLTZYaFpvUGI2WkwzLWtTeExPS0YwNTc1cFZjYU9DMGxlN0hBbERETFNrX2wzZjJVWU9tdzJfNFJMZ0c5d19jZmxxU25HRVY1b2JmUmh0dnFRdmlqMXd2QQ?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.068Z",
+    "matchedSlugs": [
+      "dji-matrice-5-rumor",
+      "dji-mavic-4-pro"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNXY4Rmc3cThiZElyVGJuV09iYVpGV0FXWjFRemZNZ0JKajlRd2RoOW1ydFp2b0xwNHF3Zm9FV2NOdnowdHYwUDVvbzl2Qi1qZ1NZQ2x1bUEwS0czc3JQazVVRk9xSVZlelFlN05TZGtVWXJhTzc4ZU4xU1R4cTktTnZ5bWpmR2VNWnVjb3o5QUJVZTl2ZXlYSUhGZmJxazREbFhfdWowYnZVblN0elR0cg?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.093Z",
+    "matchedSlugs": [
+      "ai-latency-vision-in-the-loop-wickramasuriya-2026",
+      "integrity-kass-design-insidegnss"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQW14b3o5d2NXZng1TlducUFoTUFhWTB3MDRnWk9KUFNUVGx4cmMtNmdiMlRIelEyVFZ3aDd0YUhNTm1wRHpueVQtMWJmX2F5RzFSM3VOaUF6YkhJaEk3M01lYWpnYVJqYmhhS2dqRjF3a0xyQ0kzbTM3S2lkWlA0ME9nX3psRUdUak9iVjBWZ3dLSzJvVWlxZzlrcWpYbHQ2QkdzVWVYTFh2Q3c?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.099Z",
+    "matchedSlugs": [
+      "conv-energy-flying-batteries-jain-2019"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZkVPajZOcm1JSkxVRmVUeHpfSDlEVWFILVNabmkzaWZqOG11YWhuS0FqcGpBRHhrUEV1anF4MDhfa3UxaEFnakJYM3dFRE1lMXVORjY4NFRFRlRWOFdEUzVvMEFkUGVNcERDY0tzOTJ6SW1HVE1YMUw0aHRuUExGOGdpQl9hZ2NSQ3Q1YUoyRUdGTFQ5NHEtNE5fYmN3WjFWQkhqUHlvcjJTT2RlaHc?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.116Z",
+    "matchedSlugs": [
+      "data-anomaly-resam-islam-2022",
+      "ai-vlm-nav-airnav-cai-2026"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1jV3RLaVB1NjEzWmVMNHlkQnVMTzRnSGhNV1N1b1RGVXp0OEhoeDUyN3djQ2dFRVVoWFl6dWp4RzRNeDQtSkVUTFRWSGVIU05hdno3aGxfa3d0UQ?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.122Z",
+    "matchedSlugs": [
+      "dji-mavic-4-pro-features"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aQXB0VFY3eTdSZ1RHeWhlTFg1M3pCNGhQcGtKbU05Q1dlcl81NGJYTEJCZ3VqSlJfZUQ3TWRQSXFFUDViaDNZdlNwZG9oWVJsbExFYng2RnJRSTFUVTRReWxxYVVSOENpYnJRY1BxVy10UTQzdWY5RjljV1Rnc2s?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.130Z",
+    "matchedSlugs": [
+      "dji-osmo-action-6"
+    ]
+  },
+  "https://www.youtube.com/watch?v=sdXIAl-AUXA": {
+    "processedAt": "2026-10-24T22:45:51.141Z",
+    "matchedSlugs": [
+      "compact-force-sensor-for-dual-uav-cable-suspended-payload-transport-with-tension"
+    ]
+  },
+  "https://news.google.com/rss/articles/CBMid0FVX3lxTFBxTENFTzlQSGJWQ3lMMjhMX0pNcDFCQ04zU1VsS2JjcEdfWWxCS2FFUnhSWjlaV2plVF9SZTJka0phYndrVGliUWNNWV9XdkFiS3BBQkplN05Ha3gzWndKcWhBMU91cGl5Y0twdUprMGF2X29RNXlr?oc=5": {
+    "processedAt": "2026-10-24T22:45:51.151Z",
+    "matchedSlugs": [
+      "indi-stability-tilt-rotor-vtol",
+      "skydio-centralsquare-dfr-integration"
+    ]
+  },
+  "https://www.youtube.com/watch?v=JGly6PSK5iw": {
+    "processedAt": "2026-10-24T22:45:51.159Z",
+    "matchedSlugs": [
+      "divide-conquer-uav-detector"
+    ]
   }
 }

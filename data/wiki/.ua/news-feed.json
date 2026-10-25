@@ -1,5 +1,212 @@
 [
   {
+    "title": "[Painless360] CaddxFPV Ratel Ultra Analogue FPV Camera: What is it like to fly?",
+    "url": "https://www.youtube.com/watch?v=q7u32D_vS0U",
+    "source": "youtube.com",
+    "domain": "flight-control",
+    "type": "video",
+    "region": "global",
+    "summary": "https://www.caddxfpv.com/products/caddxfpv-ratel-ultra-analog-camera?aff=17 Thank you for taking the time to watch the video. You can find me on social media at • https://twitter.com/painless360 • htt",
+    "published": "2026-10-24",
+    "fetched": "2026-10-25T07:31:39+09:00",
+    "sha256": "3c242347e06016dae3d32445384e2e98bdf72343253bf7a327957f20af001db8",
+    "summary_ko": "애널로그 FPV 카메라(CaddxFPV Ratel Ultra)와 함께 드론을 빠르게 조종하며 실시간 영상을 경험합니다."
+  },
+  {
+    "title": "[DJI] Through the car. Back inside. | DJI Avata 2",
+    "url": "https://www.youtube.com/watch?v=hWa1e3WcGcU",
+    "source": "youtube.com",
+    "domain": "hardware",
+    "type": "video",
+    "region": "global",
+    "summary": "DJI Avata 2 flies the whole villa in one breath 🚗✨ Its 155° FOV keeps the car, the hallway, and the reveal all in frame. That kind of run lives rent-free. Would you try this line? ⚠️ Professional oper",
+    "published": "2026-10-24",
+    "fetched": "2026-10-25T07:31:39+09:00",
+    "sha256": "f52f8b084d2bb358842c3e8250ae385c351635d16ee886149793a2f490736a2c",
+    "summary_ko": "DJI Avata 2는 155° FOV를 통해 차량 내부부터 마당까지 한 번에 촬영해 멋진 영상 효과를 낸다."
+  },
+  {
+    "title": "[DJI] Every move starts with control. | DJI RS 4",
+    "url": "https://www.youtube.com/watch?v=sdXIAl-AUXA",
+    "source": "youtube.com",
+    "domain": "hardware",
+    "type": "video",
+    "region": "global",
+    "summary": "DJI RS 4 keeps your camera moves intentional, and automated axis locks make each reset feel quick and precise 🏛️🎬 From start point to end frame, the motion reads better. Which shot would you practice ",
+    "published": "2026-10-24",
+    "fetched": "2026-10-25T07:31:39+09:00",
+    "sha256": "53758edc6c3fe48acb853ff0b4e8d2df004c788eaabf0e6b441a55078e2dafdb",
+    "summary_ko": "DJI RS 4는 자동 축 잠금 기능 덕분에 카메라 움직임을 정밀하게 제어해 프로시네용을 향상한다."
+  },
+  {
+    "title": "Parrot Will Manufacture Prototype of U.S. Army Short Range Reconnaissance Drone - in the U.S. - Dronelife",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRHFlQTJaN1p6U0IxTkpEQ3p5UmJIXzNOazVLTjE0UzFSZ3ljc3dIbERoaHBPOE9sQmNEOXpzcmdTblVsOFd3blJFU2xJQmQ0cGFmLV9KNkplTjFTSTBDNzR5ejNxampHb0Ryd1FkQ3BUdndkWThjdmM3aEJ4RmIyWDc0VlQ0T3o4bEpvVTdBTG00c1VxZWd0UlZ3a0xtZF9aVFZGSlpRdnpycGlfQk02VWVBUlFEdkE4MENkRVVoU1E?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "Parrot Will Manufacture Prototype of U.S. Army Short Range Reconnaissance Drone - in the U.S.  Dronelife",
+    "published": "Thu, 16 Apr 2020 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:15+09:00",
+    "sha256": "c3f2be5e3767b18ac32556c9a9dd34b7320ebbbe9af85db7787814d8c05cb849",
+    "summary_ko": "파롯(Parrot)은 미국 육군이 사용하는 소형 정찰 드론(Short Range Reconnaissance Drone)의 프로토타입을 제작할 계획이다."
+  },
+  {
+    "title": "Parrot’s Latest MiniDrone Fits In The Palm Of Your Hand, Plus Jumping Sumo - SingularityHub",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNXY4Rmc3cThiZElyVGJuV09iYVpGV0FXWjFRemZNZ0JKajlRd2RoOW1ydFp2b0xwNHF3Zm9FV2NOdnowdHYwUDVvbzl2Qi1qZ1NZQ2x1bUEwS0czc3JQazVVRk9xSVZlelFlN05TZGtVWXJhTzc4ZU4xU1R4cTktTnZ5bWpmR2VNWnVjb3o5QUJVZTl2ZXlYSUhGZmJxazREbFhfdWowYnZVblN0elR0cg?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "Parrot’s Latest MiniDrone Fits In The Palm Of Your Hand, Plus Jumping Sumo  SingularityHub",
+    "published": "Thu, 16 Jan 2014 08:00:00 GMT",
+    "fetched": "2026-10-25T07:30:15+09:00",
+    "sha256": "6e8d7626d1ac89ebdc8e9b746a1ed810d8dd440910e7cae275b67412a716767f",
+    "summary_ko": "파롯의 MiniDrone은 손바닥에 들어가는 크기로 휴대성이 좋으며, 살짝 팝킹하는 스도(토너) 기능이 추가되었다."
+  },
+  {
+    "title": "Parrot Hydrofoil Drone Is Half Boat, Half Flying Machine - autoevolution",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQW14b3o5d2NXZng1TlducUFoTUFhWTB3MDRnWk9KUFNUVGx4cmMtNmdiMlRIelEyVFZ3aDd0YUhNTm1wRHpueVQtMWJmX2F5RzFSM3VOaUF6YkhJaEk3M01lYWpnYVJqYmhhS2dqRjF3a0xyQ0kzbTM3S2lkWlA0ME9nX3psRUdUak9iVjBWZ3dLSzJvVWlxZzlrcWpYbHQ2QkdzVWVYTFh2Q3c?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "Parrot Hydrofoil Drone Is Half Boat, Half Flying Machine  autoevolution",
+    "published": "Tue, 07 Jul 2015 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:15+09:00",
+    "sha256": "160e480afce9733cf05c7eabc9e9b444519402983b9f858b60ff93fc68979617",
+    "summary_ko": "파롯 하이드로플로이(Parrot Hydrofoil Drone)는 보트와 비행기를 합친 형태로 물 위와 공중에서 모두 비행이 가능하다."
+  },
+  {
+    "title": "Parrotâ€™s new drone lets you fly with VR goggles and phone - Hypergrid Business",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZkVPajZOcm1JSkxVRmVUeHpfSDlEVWFILVNabmkzaWZqOG11YWhuS0FqcGpBRHhrUEV1anF4MDhfa3UxaEFnakJYM3dFRE1lMXVORjY4NFRFRlRWOFdEUzVvMEFkUGVNcERDY0tzOTJ6SW1HVE1YMUw0aHRuUExGOGdpQl9hZ2NSQ3Q1YUoyRUdGTFQ5NHEtNE5fYmN3WjFWQkhqUHlvcjJTT2RlaHc?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "Parrotâ€™s new drone lets you fly with VR goggles and phone  Hypergrid Business",
+    "published": "Wed, 04 Sep 2019 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:15+09:00",
+    "sha256": "8e42e951d5591d5aaded4bdb3906a2ca4910cd497c1ec7128671660347eb7a34",
+    "summary_ko": "파롯의 신형 드론은 VR 고글과 스마트폰으로 동시에 조종·비행이 가능한 혁신적 컨트롤을 제공한다."
+  },
+  {
+    "title": "Auburn Police use drone first responder to arrest rape suspect - Renton Reporter",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZDY3M3FJWmRlS3FzanJvaXY0cU55UXRreUVhd3J3aVVLNFRPeUppSzJWSXJKUS14LUhMWHcxSGRUcC1NTGhSZGQtQnJtbUdzOUhQb1hkOElGbkNUNnJ6bXBXRlhlVkJyQU8tS0l3dGZqNUhmcHdFZzhudThDbU41cUNnbDJsSTBFSFdfOXNGRnRlblVrYUQta3p0aE1yQVh3LVM5NGk5X3E?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "Auburn Police use drone first responder to arrest rape suspect  Renton Reporter",
+    "published": "Mon, 05 Oct 2026 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:14+09:00",
+    "sha256": "f307a3fa119ff7d566d47bbab6adaf36bff29b98afcef6d52776aec02b808d55",
+    "summary_ko": "오번 경찰은 드론 기반 '첫 반응자' 시스템을 활용해 강간 용의자를 체포하는 데 성공했다."
+  },
+  {
+    "title": "U.S. Marines train with Skydio X2D Small Unmanned Aircraft Systems [Image 3 of 6] - DVIDS",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNDcxUjdlX2tZLWt1RG5MSWdjZEIwM0pRemMzTDh2ZGkwTWhHSmdLZmpKSm1vMlM1Q01xZklkd29pSVYtVW96S09xTGFOR3l0ZTZLMTRtSGVfM21zQTZiaDdObnNhWUJZdG5sVG50VmRyQm9UbkFNeFpMS2JOalpDVEFHR2F2YVptanNmZ25QN0hpSmNEVEZRMGZnT21FVlR0YnpEY0xB?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "U.S. Marines train with Skydio X2D Small Unmanned Aircraft Systems [Image 3 of 6]  DVIDS",
+    "published": "Fri, 18 Sep 2026 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:14+09:00",
+    "sha256": "ac687c9d461fee05088ea35f9b0183b61fc060fdf0acb3554e2882fc70bc2460",
+    "summary_ko": "미 해병대는 Skydio X2D 소형 무인기를 이용해 자동 비행 기능을 실전훈련에서 테스트 중이다."
+  },
+  {
+    "title": "MCIWEST COMMSTRAT SKYDIO X2D Practice Launch [Image 7 of 7] - DVIDS",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMjN0TkxMejQxMG5ac0I1T0xRN2J6UGJuTTZOcTRRQzFUNWJUQ2I3OGRiajNqRlQtYzU1UG5TN0tKekRsQnh1a0FzY1MwUEk0ZWRRLUsxT0R3eDBQYlM2YjA3VU1tX2FsTDhXYWpWLVhfNE1CN2wzTFl2YlREM2xwam9MQkQwckpHN2dN?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "MCIWEST COMMSTRAT SKYDIO X2D Practice Launch [Image 7 of 7]  DVIDS",
+    "published": "Fri, 14 Aug 2026 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:14+09:00",
+    "sha256": "af8f3ecbf597663d181398780b882a5277013289e34640994f6100cad29f3d5d",
+    "summary_ko": "MCIWEST는 Skydio X2D의 시범 발사를 통해 무인기 훈련과 시험을 진행했다."
+  },
+  {
+    "title": "North Charleston Plans Skydio DFR Launch For July 2027 - DroneXL",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBxTENFTzlQSGJWQ3lMMjhMX0pNcDFCQ04zU1VsS2JjcEdfWWxCS2FFUnhSWjlaV2plVF9SZTJka0phYndrVGliUWNNWV9XdkFiS3BBQkplN05Ha3gzWndKcWhBMU91cGl5Y0twdUprMGF2X29RNXlr?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "North Charleston Plans Skydio DFR Launch For July 2027  DroneXL",
+    "published": "Sat, 18 Jul 2026 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:14+09:00",
+    "sha256": "8db244fcdb523c9cefcae006925d90a0fdeae4c7ed25e737f673ba2766a8584e",
+    "summary_ko": "노스챠살스톡은 2027년 7월 Skydio DFR(다이내믹 비행 정지) 시범 시작을 계획하고 있다."
+  },
+  {
+    "title": "DJI Teases Possible New Enterprise Drone Set to be Revealed On June 10th - No Film School",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1VYWgtT2RvYkVxdzlINkdfNlNtS0RUM3locXgzTHFUSUNkQ3FyT0dkNFBvRng2dXFPc3FjQWk0N25rM25HaFRjZW5ScmMxMl9fOE8zRmw1RjAwQ3RSLXlYdGh3?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "DJI Teases Possible New Enterprise Drone Set to be Revealed On June 10th  No Film School",
+    "published": "Thu, 05 Jun 2025 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:13+09:00",
+    "sha256": "4609351bb0c601e0dc166c023c59767bbec604d6860fb07c8e598512b218068d",
+    "summary_ko": "DJI는 6월 10일에 공개될 가능성이 있는 새 기업용 드론(Enterprise Drone)을 예고했다."
+  },
+  {
+    "title": "Which DJI Enterprise Drone Has the Best Zoom? - No Film School",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1jV3RLaVB1NjEzWmVMNHlkQnVMTzRnSGhNV1N1b1RGVXp0OEhoeDUyN3djQ2dFRVVoWFl6dWp4RzRNeDQtSkVUTFRWSGVIU05hdno3aGxfa3d0UQ?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "Which DJI Enterprise Drone Has the Best Zoom?  No Film School",
+    "published": "Thu, 27 Feb 2025 08:00:00 GMT",
+    "fetched": "2026-10-25T07:30:13+09:00",
+    "sha256": "252a6f691ce296010786d72114c5b6eb3eb2f720128973a2f9eb1c63135f137e",
+    "summary_ko": "어느 DJI 기업용 드론이 최상의 줌 성능을 갖추고 있는지 비교 분석한다."
+  },
+  {
+    "title": "DJI announces the compact Matrice 30 enterprise drone with RC Plus controller - DroneDJ",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE50U3FJYkt3bXBCU3NzbmVRV19lLTZYaFpvUGI2WkwzLWtTeExPS0YwNTc1cFZjYU9DMGxlN0hBbERETFNrX2wzZjJVWU9tdzJfNFJMZ0c5d19jZmxxU25HRVY1b2JmUmh0dnFRdmlqMXd2QQ?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "DJI announces the compact Matrice 30 enterprise drone with RC Plus controller  DroneDJ",
+    "published": "Mon, 21 Mar 2022 07:00:00 GMT",
+    "fetched": "2026-10-25T07:30:13+09:00",
+    "sha256": "830a217b055e53bb05d202b6dd59e4b8a29c8494e860622d926b7f13997a43b1",
+    "summary_ko": "DJI는 RC Plus 컨트롤러가 붙은 콤팩트 Matrice 30 기업용 드론을 발표했다."
+  },
+  {
+    "title": "DJI Gives Pilots Full Airspace Control. The World Holds Its Breath. - DroneXL",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aQXB0VFY3eTdSZ1RHeWhlTFg1M3pCNGhQcGtKbU05Q1dlcl81NGJYTEJCZ3VqSlJfZUQ3TWRQSXFFUDViaDNZdlNwZG9oWVJsbExFYng2RnJRSTFUVTRReWxxYVVSOENpYnJRY1BxVy10UTQzdWY5RjljV1Rnc2s?oc=5",
+    "source": "news.google.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "DJI Gives Pilots Full Airspace Control. The World Holds Its Breath.  DroneXL",
+    "published": "Wed, 19 Nov 2025 08:00:00 GMT",
+    "fetched": "2026-10-25T07:30:13+09:00",
+    "sha256": "bb795e31c97155b8d05a88e3c94b7c40c893445e0170a4fa364539762c9b1885",
+    "summary_ko": "DJI는 파이럿들에게 전 세계 비행 공간을 완전히 통제할 수 있는 기능을 제공했다."
+  },
+  {
+    "title": "DJI Avata drone owners have a new firmware update to install",
+    "url": "https://dronedj.com/2026/10/24/dji-avata-firmware-new-drone/",
+    "source": "dronedj.com",
+    "domain": "hardware",
+    "type": "news",
+    "summary": "The DJI Avata is built for pilots who’d rather swoop through a tight gap than capture another routine aerial shot. Now, DJI has rolled out a fresh firmware update for its FPV drone, although the relea",
+    "published": "Sat, 24 Oct 2026 07:41:35 +0000",
+    "fetched": "2026-10-25T07:30:12+09:00",
+    "sha256": "dc1d6b56c679cc9b0ef37193634091ddbafe38d1d5bc3675e45bc831dae1add3",
+    "summary_ko": "DJI Avata는 최근 펌웨어 업데이트를 통해 보다 안정적이고 성능이 향상된 비행을 지원한다."
+  },
+  {
+    "title": "yolo v8.4.188 릴리즈",
+    "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.188",
+    "source": "github.com",
+    "domain": "ai-autonomy",
+    "type": "release",
+    "summary": "## 🌟 Summary Release **8.4.188** improves QNN exports for Android, removes an unnecessary operation from non-LiteRT depth exports, and updates the LiteRT export toolchain.  ## 📊 Key Changes - **Fixes ",
+    "published": "2026-10-24",
+    "fetched": "2026-10-25T07:30:09+09:00",
+    "sha256": "74a670bb336424d8775b49d1866dbb56e5eaa117fc85d45504971aa6ec5e47fc",
+    "summary_ko": "YOLO v8.4.188 릴리즈는 Android QNN 내보내기 개선과 LiteRT 도구 체인 업데이트를 포함한다."
+  },
+  {
     "title": "[Painless360] BetaFPV gets serious about ArtLynk with new HD FPV hardware",
     "url": "https://www.youtube.com/watch?v=Xs2nlZzw-yQ",
     "source": "youtube.com",
@@ -9,7 +216,8 @@
     "summary": "https://betafpv.com/ Your followers can post any P1-related videos with your customized hashtag, whether or not they got the product. How to win: Whoever you think can win the prize(one P1 HD VRX NANO",
     "published": "2026-10-23",
     "fetched": "2026-10-24T07:32:25+09:00",
-    "sha256": "054375eca15c92328958c5ae5d1e8e11e9303780b79b8fbf202c3a30b0a7e159"
+    "sha256": "054375eca15c92328958c5ae5d1e8e11e9303780b79b8fbf202c3a30b0a7e159",
+    "summary_ko": "베타FPV는 ArtLynk와 HD FPV 하드웨어를 결합한 새로운 체험을 선보였다."
   },
   {
     "title": "[DJI] No Remote in Sight | DJI Neo 2",
@@ -21,7 +229,8 @@
     "summary": "DJI Neo 2 lifts right from your hand and pairs that easy start with Apple Watch control 🤳⌚️ Small move, big main-character energy. What would you film with a setup this light? 👇 🎥: sembler8 #DJI #Neo2",
     "published": "2026-10-23",
     "fetched": "2026-10-24T07:32:25+09:00",
-    "sha256": "b0c02f8d495fb1d9a3a6692c007cb00ea74577e6d199c5b86b8ea75b4b9ee98c"
+    "sha256": "b0c02f8d495fb1d9a3a6692c007cb00ea74577e6d199c5b86b8ea75b4b9ee98c",
+    "summary_ko": "DJI Neo 2는 리모컨 없이 스마트폰과 Apple Watch만으로도 비행을 시작할 수 있다."
   },
   {
     "title": "[DJI] Street Flow Through Melbourne | DJI Osmo Pocket 4P",
@@ -33,7 +242,8 @@
     "summary": "DJI Osmo Pocket 4P keeps Melbourne street shots smooth with 3-axis mechanical stabilization 🚶‍♂️✨ You move with the city, and the frame stays locked in. Street energy in, camera shake out. Where does ",
     "published": "2026-10-23",
     "fetched": "2026-10-24T07:32:25+09:00",
-    "sha256": "8c4889ea069f6133ddfbac3de4d6e82a6a2f871b89a1a6c3d2dd3be5319d8af8"
+    "sha256": "8c4889ea069f6133ddfbac3de4d6e82a6a2f871b89a1a6c3d2dd3be5319d8af8",
+    "summary_ko": "DJI Osmo Pocket 4P는 3축 기계식 안정화로 멜버른 거리 촬영을 부드럽게 유지한다."
   },
   {
     "title": "[MATLAB] What’s New in MATLAB and Simulink | MATLAB EXPO Online 2026",
@@ -45,7 +255,8 @@
     "summary": "Discover what’s new in MATLAB and Simulink, including AI-assisted engineering capabilities, new tools for managing complex data and models, and enhancements designed to accelerate development and depl",
     "published": "2026-10-23",
     "fetched": "2026-10-24T07:32:25+09:00",
-    "sha256": "6a0b59b9c27708b4f04fb0abde418b0760c08a0e42eea27f2bf2a520f59fda7f"
+    "sha256": "6a0b59b9c27708b4f04fb0abde418b0760c08a0e42eea27f2bf2a520f59fda7f",
+    "summary_ko": "MATLAB & Simulink 최신 버전은 AI 보조 엔지니어링, 데이터 관리 도구, 배포 가속화 기능을 포함한다."
   },
   {
     "title": "[freeCodeCamp.org] Gemini 4 Argon API Crash Course",
@@ -57,7 +268,8 @@
     "summary": "Learn how to use Google's Gemini 4 Argon model through practical JavaScript examples. This course walks through key development topics including API key setup, sending basic API requests, adjusting mo",
     "published": "2026-10-23",
     "fetched": "2026-10-24T07:32:25+09:00",
-    "sha256": "9812e33ef7412745ac96127a4b18c966ea671ea871cd7f4f345184c24b650dca"
+    "sha256": "9812e33ef7412745ac96127a4b18c966ea671ea871cd7f4f345184c24b650dca",
+    "summary_ko": "freeCodeCamp는 JavaScript 예제를 통해 Google Gemini 4 Argon API 사용법을 가르친다."
   },
   {
     "title": "[핑크랩 PinkLAB] PinkLAB Studio 🌸",
@@ -81,7 +293,8 @@
     "summary": "✅ Get the ATOM 2: https://store.potensic.com/products/atom-2?srsltid=AYCX9vJ0rjGxWpNjMFm56uLi8I_PKWEAuTmacwzYJYnxqai0YUF2YAzK In this video, we review the Potensic ATOM 2, test out it’s popular featur",
     "published": "2026-10-23",
     "fetched": "2026-10-24T07:32:25+09:00",
-    "sha256": "9ee50acc75a68520047065a3b534458ff0c43cb77a01b40cf685005b1fa21d77"
+    "sha256": "9ee50acc75a68520047065a3b534458ff0c43cb77a01b40cf685005b1fa21d77",
+    "summary_ko": "Potensic ATOM 2는 예산 친화적 초보용 드론으로 인기 기능을 테스트해 본다."
   },
   {
     "title": "When metadata betrays the mission: Learning to defend UAV swarms with adaptive privacy",
@@ -93,7 +306,8 @@
     "summary": "Ad Hoc Networks",
     "published": "2027-2",
     "fetched": "2026-10-24T07:31:30+09:00",
-    "sha256": "ee2da5167863f7f37c637f5ccd20b8258323ba83409ff001fa3428416ee81079"
+    "sha256": "ee2da5167863f7f37c637f5ccd20b8258323ba83409ff001fa3428416ee81079",
+    "summary_ko": "UAV 스왐의 적응형 개인정보보호가 메타데이터를 방어하는 방식을 학습한 논문이다."
   },
   {
     "title": "Outage Analysis and Bilevel Resource Optimization in RIS-Assisted Clustered UAV-NOMA Networks",
@@ -105,7 +319,8 @@
     "summary": "This paper investigates RIS-assisted downlink UAV communications based on NOMA. Since conventional NOMA becomes difficult to scale as the number of UAVs grows, we develop a cluster-based UAV-NOMA fram",
     "published": "2026-10-21",
     "fetched": "2026-10-24T07:30:44+09:00",
-    "sha256": "7178fd32efe2ef0cb5d5fb50dd2f74858cd9acb78d2f61ccf14350ef0f5e8271"
+    "sha256": "7178fd32efe2ef0cb5d5fb50dd2f74858cd9acb78d2f61ccf14350ef0f5e8271",
+    "summary_ko": "RIS‑보조 UAV‑NOMA 네트워크에서 정전 분석과 최적 자원 할당을 다룬 연구 논문이다."
   },
   {
     "title": "Dynamic Active Fleet Sizing of Heterogeneous UAV Relays for Post-Disaster Communication Networks",
@@ -117,7 +332,8 @@
     "summary": "Uncrewed aerial vehicle (UAV) communication systems are increasingly used to provide temporary connectivity when ground communication infrastructure is damaged by disasters such as hurricanes and wild",
     "published": "2026-10-21",
     "fetched": "2026-10-24T07:30:44+09:00",
-    "sha256": "c7a56e0a0760bf8e6fe4c03c4c84020cb9b0b473de012e0078357fca69177ccd"
+    "sha256": "c7a56e0a0760bf8e6fe4c03c4c84020cb9b0b473de012e0078357fca69177ccd",
+    "summary_ko": "재해 후에 임시 통신망 구축을 위해 UAV 중계기를 실시간으로 배치·풀링하는 방법을 제안합니다."
   },
   {
     "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
@@ -129,7 +345,8 @@
     "summary": "Unmanned Aerial Vehicles (UAVs) in Flying Networks (FNs) increasingly require mechanisms to translate high-level natural language objectives into executable missions. Although Large Language Models (L",
     "published": "2026-10-22",
     "fetched": "2026-10-24T07:30:30+09:00",
-    "sha256": "e86a7b9104deb78d57ece9138f8d8d548af44bb05153e68b2b5c422e7840e6a5"
+    "sha256": "e86a7b9104deb78d57ece9138f8d8d548af44bb05153e68b2b5c422e7840e6a5",
+    "summary_ko": "자연어 명령을 UAV 임무로 변환하는 LLM 선택 방식을 연구하며, 비행 네트워크 제어에 활용합니다."
   },
   {
     "title": "DiffDreamer: Coupling World Models with Differentiable Simulation for Agile Quadrotor Control",
@@ -141,7 +358,8 @@
     "summary": "Tasks such as quadrotor dynamic-gate racing require agents to anticipate external motion while maintaining precise high-frequency control. World-model-based reinforcement learning provides a natural s",
     "published": "2026-10-22",
     "fetched": "2026-10-24T07:30:22+09:00",
-    "sha256": "9aac0e49318c505bbfb631f4012991d399895d5fcc095cbb47c1dc4e043c98c2"
+    "sha256": "9aac0e49318c505bbfb631f4012991d399895d5fcc095cbb47c1dc4e043c98c2",
+    "summary_ko": "세계 모델과 미분 가능한 시뮬레이션을 결합해 쿼드로터의 고주파 제어를 개선하는 방법을 제시합니다."
   },
   {
     "title": "Building the Autonomous Warfare Command – DRPM UxS",
@@ -152,7 +370,8 @@
     "summary": "SUBJECT: Building the Autonomous Warfare Command In 1928, Secretary of War Dwight Davis ordered the",
     "published": "Fri, 23 Oct 2026 18:12:57 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "b3ba4ecfa62708777d98ecc4f43cf962cd389eae297b0cda8b191c93785257c6"
+    "sha256": "b3ba4ecfa62708777d98ecc4f43cf962cd389eae297b0cda8b191c93785257c6",
+    "summary_ko": "DRPM UxS가 자율전과 전쟁 명령 체계 구축 계획을 논의하는 기사입니다."
   },
   {
     "title": "Chuyka 4.5.0.",
@@ -163,7 +382,8 @@
     "summary": "In Ukrainian military slang, “4.5.0” means the situation is calm and there are no threats.",
     "published": "Fri, 23 Oct 2026 15:14:56 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "97298fe21a83a61b700817f11c918adb3b24fb16b7f8579a2333968cb970885e"
+    "sha256": "97298fe21a83a61b700817f11c918adb3b24fb16b7f8579a2333968cb970885e",
+    "summary_ko": "우크라이나 군사 용어 “4.5.0”은 위기가 없고 상황이 안정됨을 의미합니다."
   },
   {
     "title": "Gov. Whitmer awards $1.7M to launch 12 Advanced Air Mobility projects statewide 12 pilot projects will demonstrate advanced air mobility technologies in real-world applications across Michigan",
@@ -174,7 +394,8 @@
     "summary": "LANSING, Mich. — The Michigan Department of Labor and Economic Opportunity’s Office of Future Mobility",
     "published": "Fri, 23 Oct 2026 15:05:07 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "46b130c4be4758640712ae880965d77d1ea9b4963e437c2272d292e674518d11"
+    "sha256": "46b130c4be4758640712ae880965d77d1ea9b4963e437c2272d292e674518d11",
+    "summary_ko": "미시간 주에서 1.7M 달러를 배정해 12개의 Advanced Air Mobility 프로젝트를 시범 운영합니다."
   },
   {
     "title": "Allient Defense Receives Best in Show Award at AUSA 2026",
@@ -185,7 +406,8 @@
     "summary": "Allient Inc. (Nasdaq: ALNT) (“Allient” or the “Company”), a global designer and manufacturer of specialty",
     "published": "Fri, 23 Oct 2026 13:29:51 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "42ddb36ff93eed5ecd2e2cf4dc05a011ee02001026b06654682764188d8a1732"
+    "sha256": "42ddb36ff93eed5ecd2e2cf4dc05a011ee02001026b06654682764188d8a1732",
+    "summary_ko": "Allient Inc.이 AUSA 2026에서 최우수상(Best in Show)을 수상했다는 보도입니다."
   },
   {
     "title": "Quantum Systems Demonstrates Integrated Multi-Domain Operations at Forward Edge 2026",
@@ -196,7 +418,8 @@
     "summary": "Quantum Systems has completed its two-week Multi-Domain Exercise “Forward Edge 26”, demonstrating how unmanned systems",
     "published": "Fri, 23 Oct 2026 13:26:47 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "f6a3ac3960f4cda39903ccc44637157f15efc77e70ef0f41044e43e7199ec820"
+    "sha256": "f6a3ac3960f4cda39903ccc44637157f15efc77e70ef0f41044e43e7199ec820",
+    "summary_ko": "Quantum Systems가 다중 도메인 연합 시연에서 무인 시스템을 통합해 작전 효과를 시연했습니다."
   },
   {
     "title": "FAA Releases Draft Design Standards for Vertiports and Vertical Flight Facilities",
@@ -207,7 +430,8 @@
     "summary": "Updated guidance addresses landing areas, charging infrastructure, and airport integration as advanced air mobility moves toward commercial operations. The Federal Aviation Administration (FAA) has re",
     "published": "Fri, 23 Oct 2026 14:55:19 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "105a1219611df2059c4463582c64be6c8032f0266152d6318690eb9a837547d9"
+    "sha256": "105a1219611df2059c4463582c64be6c8032f0266152d6318690eb9a837547d9",
+    "summary_ko": "FAA가 버티포트(Vertiport)와 수직 비행 시설 설계 기준 초안을 공개해 상용 운용을 촉진합니다."
   },
   {
     "title": "Amazon Drone Delivery Plan Faces State Review as Massachusetts Residents Organize",
@@ -218,7 +442,8 @@
     "summary": "MassDOT says Amazon needs state approval for its Westborough facility, while a grassroots organization pushes for greater community involvement in drone delivery decisions. Amazon’s proposed Prime Air",
     "published": "Fri, 23 Oct 2026 14:43:14 +0000",
     "fetched": "2026-10-24T07:30:14+09:00",
-    "sha256": "3f6275447616e4a43b2df9ba05f772b1857f754708e1a9e4c2b707fb5e7847f1"
+    "sha256": "3f6275447616e4a43b2df9ba05f772b1857f754708e1a9e4c2b707fb5e7847f1",
+    "summary_ko": "마사추세츠 주에서 Amazon Prime Air 드론 배달 계획이 검토 중이며 주민들이 참여를 요구합니다."
   },
   {
     "title": "senseFly Brings on New CEO Gilles Labossière from Parent Company Parrot - Dronelife",
@@ -229,7 +454,8 @@
     "summary": "senseFly Brings on New CEO Gilles Labossière from Parent Company Parrot  Dronelife",
     "published": "Thu, 12 Apr 2018 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:13+09:00",
-    "sha256": "c6137e95d22a9bf53a803a1674fe171d8c8174c5c37c9c3902ae523cae020feb"
+    "sha256": "c6137e95d22a9bf53a803a1674fe171d8c8174c5c37c9c3902ae523cae020feb",
+    "summary_ko": "senseFly이 Parrot에서 영입한 Gilles Labossière를 신규 CEO로 정했습니다."
   },
   {
     "title": "Parrot's ANAFI Ai Is Now Available to Pre-Order, Comes With Game-Changing 4G Connectivity - autoevolution",
@@ -240,7 +466,8 @@
     "summary": "Parrot's ANAFI Ai Is Now Available to Pre-Order, Comes With Game-Changing 4G Connectivity  autoevolution",
     "published": "Mon, 13 Dec 2021 08:00:00 GMT",
     "fetched": "2026-10-24T07:30:13+09:00",
-    "sha256": "c149fea6dabaf8b988df3fb8a0e0b83916862cf8d2827ae2ac632d176c43f669"
+    "sha256": "c149fea6dabaf8b988df3fb8a0e0b83916862cf8d2827ae2ac632d176c43f669",
+    "summary_ko": "Parrot의 ANAFI Ai 드론이 사전 주문 가능해졌으며 4G 연결이 가능한 혁신적 기능을 제공합니다."
   },
   {
     "title": "Everyone Needs a Personal Helicopter Drone - Opinio Juris",
@@ -251,7 +478,8 @@
     "summary": "Everyone Needs a Personal Helicopter Drone  Opinio Juris",
     "published": "Mon, 06 Sep 2010 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:13+09:00",
-    "sha256": "614233a4e48911aefc0978a810a40e68e3ec53189d871855b8dcdde2ece07a0c"
+    "sha256": "614233a4e48911aefc0978a810a40e68e3ec53189d871855b8dcdde2ece07a0c",
+    "summary_ko": "개인용 헬리콥터 드론이 필요하다는 주장을 담은 기사입니다."
   },
   {
     "title": "Parrot Releases The Mambo FPV Mini Drone Puts You In The Pilot Seat - UASweekly.com",
@@ -262,7 +490,8 @@
     "summary": "Parrot Releases The Mambo FPV Mini Drone Puts You In The Pilot Seat  UASweekly.com",
     "published": "Fri, 15 Sep 2017 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:13+09:00",
-    "sha256": "39e4a9741181dd5cf924fda3a43a657d0affee41dc1e220b9a03bff4a7428c7b"
+    "sha256": "39e4a9741181dd5cf924fda3a43a657d0affee41dc1e220b9a03bff4a7428c7b",
+    "summary_ko": "Parrot가 Mambo FPV 미니 드론을 출시해 사용자가 직접 조종감을 느낄 수 있게 했습니다."
   },
   {
     "title": "Hermosa Beach Police Department demonstrates new drone program - Daily Breeze",
@@ -273,7 +502,8 @@
     "summary": "Hermosa Beach Police Department demonstrates new drone program  Daily Breeze",
     "published": "Fri, 23 Oct 2026 18:42:24 GMT",
     "fetched": "2026-10-24T07:30:12+09:00",
-    "sha256": "8c2d327b23a99dd2cf9b16f41ef365b02e106e333942dbb22bfc2abf8607b33e"
+    "sha256": "8c2d327b23a99dd2cf9b16f41ef365b02e106e333942dbb22bfc2abf8607b33e",
+    "summary_ko": "헐모사 비치 경찰이 새로운 드론 프로그램을 시연해 공공 안전에 활용했습니다."
   },
   {
     "title": "Skydio Raises $110M Series F At $4.4B Valuation, And The CEO Says The Small Size Is The Point - DroneXL",
@@ -284,7 +514,8 @@
     "summary": "Skydio Raises $110M Series F At $4.4B Valuation, And The CEO Says The Small Size Is The Point  DroneXL",
     "published": "Thu, 23 Apr 2026 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:12+09:00",
-    "sha256": "6e175ca29f577d21e708a5b95fb985f5c55fd35ef3ff2ccd92c67954fec5778b"
+    "sha256": "6e175ca29f577d21e708a5b95fb985f5c55fd35ef3ff2ccd92c67954fec5778b",
+    "summary_ko": "Skydio가 110M 달러 시리즈 F를 조달하며 CEO가 소형화가 핵심이라고 강조했습니다."
   },
   {
     "title": "DJI Alternatives: An In-Depth Guide [New for 2026] - UAV Coach",
@@ -295,7 +526,8 @@
     "summary": "DJI Alternatives: An In-Depth Guide [New for 2026]  UAV Coach",
     "published": "Sat, 06 Jun 2026 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:12+09:00",
-    "sha256": "16522f91774465fc905e004146875313b9d3c63c650c379a4a0754998dd56e80"
+    "sha256": "16522f91774465fc905e004146875313b9d3c63c650c379a4a0754998dd56e80",
+    "summary_ko": "2026년 최신 DJI 대체 드론 장비 가이드를 제공하는 심층 분석 기사입니다."
   },
   {
     "title": "New Orleans police will expand drone program in the French Quarter after council’s split vote - NOLA.com",
@@ -306,7 +538,8 @@
     "summary": "New Orleans police will expand drone program in the French Quarter after council’s split vote  NOLA.com",
     "published": "Thu, 16 Apr 2026 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:12+09:00",
-    "sha256": "1dadbbc90f340593734006db77337836d75038be9654d25622553705ac724ac7"
+    "sha256": "1dadbbc90f340593734006db77337836d75038be9654d25622553705ac724ac7",
+    "summary_ko": "뉴올리언스 경찰이 지방 자치회 결의 후 프렌치 쿼터에서 드론 프로그램을 확대합니다."
   },
   {
     "title": "ANAC Grants Design Authorization for DJI Matrice 3D Series and Dock 2, Enabling BVLOS Operations in Brazil - MundoGEO",
@@ -317,7 +550,8 @@
     "summary": "ANAC Grants Design Authorization for DJI Matrice 3D Series and Dock 2, Enabling BVLOS Operations in Brazil  MundoGEO",
     "published": "Thu, 12 Feb 2026 08:00:00 GMT",
     "fetched": "2026-10-24T07:30:10+09:00",
-    "sha256": "d28dcbe5aa88378ab2f8b156ceba1f71202694620c57785c6a07f40f3ed96369"
+    "sha256": "d28dcbe5aa88378ab2f8b156ceba1f71202694620c57785c6a07f40f3ed96369",
+    "summary_ko": "브라질 ANAC가 DJI Matrice 3D 시리즈와 Dock 2에 BVLOS 운용 허가를 부여했습니다."
   },
   {
     "title": "New DJI drone maps 38 square miles daily, offers 3,117-foot range - Interesting Engineering",
@@ -328,7 +562,8 @@
     "summary": "New DJI drone maps 38 square miles daily, offers 3,117-foot range  Interesting Engineering",
     "published": "Sun, 16 Nov 2025 08:00:00 GMT",
     "fetched": "2026-10-24T07:30:10+09:00",
-    "sha256": "c26d12df702669851abbb1e881c0cc328547cdc6058288ce9a9588aa9aad9a42"
+    "sha256": "c26d12df702669851abbb1e881c0cc328547cdc6058288ce9a9588aa9aad9a42",
+    "summary_ko": "DJI 드론이 하루에 38평방마일을 탐지하며 3,117피트 범위까지 비행합니다."
   },
   {
     "title": "DJI Puts Drones to the Test on the Worlds Highest Peak - ANTARA News",
@@ -339,7 +574,8 @@
     "summary": "DJI Puts Drones to the Test on the Worlds Highest Peak  ANTARA News",
     "published": "Mon, 13 Jul 2026 07:00:00 GMT",
     "fetched": "2026-10-24T07:30:10+09:00",
-    "sha256": "12e072b49a2fe1e1e32e174fc10b5670eb4651c2edc30d35007d73451d0c5507"
+    "sha256": "12e072b49a2fe1e1e32e174fc10b5670eb4651c2edc30d35007d73451d0c5507",
+    "summary_ko": "DJI가 세계 최고봉에서 드론을 테스트해 고난이도 환경에서 성능을 검증했습니다."
   },
   {
     "title": "New DJI Matrice 400 firmware adds Zenmuse L3 support, Patrol Route - DroneDJ",
@@ -350,7 +586,8 @@
     "summary": "New DJI Matrice 400 firmware adds Zenmuse L3 support, Patrol Route  DroneDJ",
     "published": "Tue, 11 Nov 2025 08:00:00 GMT",
     "fetched": "2026-10-24T07:30:10+09:00",
-    "sha256": "a00b005585546af0d780623b5b48628968ff6a0254a3d9fcc7c88c7acb6210b5"
+    "sha256": "a00b005585546af0d780623b5b48628968ff6a0254a3d9fcc7c88c7acb6210b5",
+    "summary_ko": "DJI Matrice 400 펌웨어가 Zenmuse L3 카메라 지원과 순찰 경로 기능을 추가했습니다."
   },
   {
     "title": "Which FPV System Should You Buy in 2026? Analog, DJI, HDZero, Walksnail, Ascent, Artlynk, OpenIPC",
@@ -361,7 +598,8 @@
     "summary": "Which FPV System Should You Buy in 2026? Analog, DJI, HDZero, Walksnail, Ascent, Artlynk, OpenIPC\nFPV (First Person View) systems are generally incompatible with each other. Once you’ve chosen an FPV ",
     "published": "Wed, 21 Oct 2026 23:00:13 +0000",
     "fetched": "2026-10-24T07:30:09+09:00",
-    "sha256": "2cd908553c0cfc5a0bef4229f1257b33a130f3df401635bde7bd3ef6bd524f34"
+    "sha256": "2cd908553c0cfc5a0bef4229f1257b33a130f3df401635bde7bd3ef6bd524f34",
+    "summary_ko": "2026년에 구매할 FPV 시스템(아날로그, DJI, HDZero 등)을 비교·추천하는 기사입니다."
   },
   {
     "title": "Four DJI FPV goggles just got firmware updates",
@@ -372,7 +610,8 @@
     "summary": "Got a pair of DJI FPV goggles sitting in your gear bag? You might want to check for a firmware update, as DJI has released new software for four models.\n\n\n\n more…",
     "published": "Fri, 23 Oct 2026 13:41:55 +0000",
     "fetched": "2026-10-24T07:30:09+09:00",
-    "sha256": "60b320419cd112699ad712bd30565d87f87b60f18491dada79c3c0f338823d23"
+    "sha256": "60b320419cd112699ad712bd30565d87f87b60f18491dada79c3c0f338823d23",
+    "summary_ko": "DJI FPV 고글 네 모델이 최신 펌웨어로 업데이트되었다는 소식입니다."
   },
   {
     "title": "DJI RC, RC 2, and RC Pro 2 get new firmware updates",
@@ -383,7 +622,8 @@
     "summary": "DJI’s latest drone firmware rollout isn’t just about the aircraft themselves. The company has also released updates for three of its screen-equipped remote controllers, bringing routine bug fixes and,",
     "published": "Fri, 23 Oct 2026 11:32:06 +0000",
     "fetched": "2026-10-24T07:30:09+09:00",
-    "sha256": "90fc53b26bc7eccb4105554cda38268e3b4941a4a4f6392260cdc2cff8795b6a"
+    "sha256": "90fc53b26bc7eccb4105554cda38268e3b4941a4a4f6392260cdc2cff8795b6a",
+    "summary_ko": "DJI RC 시리즈 리모컨(RC, RC 2, RC Pro 2)이 새로운 펌웨어 업데이트를 받았습니다."
   },
   {
     "title": "[DJI] Rotate Your Phone. Keep Up. | DJI Avata 360",
@@ -5897,216 +6137,5 @@
     "published": "Thu, 08 Oct 2026 07:35:27 GMT",
     "fetched": "2026-10-10T07:31:43+09:00",
     "sha256": "3633ff2554269464e1801956a7334bc1109575aa7e421a85f4ace231b259db4d"
-  },
-  {
-    "title": "“북한 복합타격 훈련…드론 통합은 우크라이나 전훈일 수 있어”",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQOEVhdlBWREJENlh0bV8zcHYyTDN1T1NjMHVuU19EdFFOWF94RzAtdkdISjd6MUltVzIwN0k3UnNKYzh3c2VzbVhncGltdTRkYWdMcC1wUHlUc1JxRzZEVTd6UXVBbHphTDctUG81U3BYbURHamxLTWNwbUJDaDF3cjZZc9IBhgFBVV95cUxNcktCWkhjNzFDeDhGMjBhVjRzRXMzRTN1RC02c1gtVnZXbGlINmtGRE9kMzNkODNOTHctZDNmNU5uN1ZuTlRUZ2ZMVkdtN05uUjFpam90cVNmT0ZhSUc5cXNsbkF1NnVSYkY1QlpfbXUwSnE3ZDE5SnBEeU5BaEtrT2VlQzBXZw?oc=5",
-    "source": "VOA 한국어 홈페이지",
-    "domain": "",
-    "type": "news",
-    "region": "KR",
-    "summary": "“북한 복합타격 훈련…드론 통합은 우크라이나 전훈일 수 있어”  VOA 한국어 홈페이지",
-    "published": "Fri, 09 Oct 2026 13:15:17 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "3815991539b365f157f4a58993632bd0fce88dae8183ffde6886a52b1144adfd"
-  },
-  {
-    "title": "\"中, 우크라 드론전 4개월 만에 분석…전력 반영엔 1년 이상\"",
-    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBHLTBoWllBRm4yUllLZFEtWlV5S3ZzX0ZHUHlpeWdmQ0dFN2NBNUZKX3FEN2NLOGw1Z2cyb3pHZm5WS1dHZ3kxSXBMTnNJZWd0akNrRzZiSFQ4Mzl6MVE?oc=5",
-    "source": "뉴스1",
-    "domain": "",
-    "type": "news",
-    "region": "KR",
-    "summary": "\"中, 우크라 드론전 4개월 만에 분석…전력 반영엔 1년 이상\"  뉴스1",
-    "published": "Fri, 09 Oct 2026 05:24:37 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "90673f1fee22071f29b43d6cdf05231c2787f40baa30a777b8254c4f001d0fdd"
-  },
-  {
-    "title": "드론라이트쇼로 구현한 '조선판타지' [뉴시스Pic]",
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB0eDg1cHUyNlpHNGpWb19RVi01N21uMDRaSGtVcGVGWXljVDV2dm5wbWlITVYyb2o5TlJmTkttbEtXNTl0X2ZtME5KQ2hnd1YtLTBjVlNMZ0ZwTGI4TEE0dtIBeEFVX3lxTE9KR3MwdUJodmFYZGZXUDZXSmJJcXVjSHpmM0diMkhlMTR0UGVKN0dkckZkLS1RN0FieTZzSl9FdVBIN2dHaFNkN2FOdjU3Ti0wSlNXaEI1LW01RzQyUG9IbmU1ZkJvT09ZXzBaMFBsWlh3OGFNRUhKQg?oc=5",
-    "source": "뉴시스",
-    "domain": "",
-    "type": "news",
-    "region": "KR",
-    "summary": "드론라이트쇼로 구현한 '조선판타지' [뉴시스Pic]  뉴시스",
-    "published": "Fri, 09 Oct 2026 13:17:13 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "4a4e2156a7a21e3d1135f388ab6fc4ebedb99b0dfa88d1a60a240d3f6ad00c80"
-  },
-  {
-    "title": "얀덱스 데이터센터 이틀째 드론 공격…AI 슈퍼컴퓨터 2대 위기",
-    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hN2JGSDZTM2RUd0NKQ2pvazZDWEJUVi1yV1hsSGNVRjBrbl9Ed0hETUlscHRHZ3d1d3BFVWlnMVp0d3g3eVFRdXZtTVRBUWhSQVBmbkJfV0t2czdLX19KSjNB?oc=5",
-    "source": "매일신문",
-    "domain": "",
-    "type": "news",
-    "region": "KR",
-    "summary": "얀덱스 데이터센터 이틀째 드론 공격…AI 슈퍼컴퓨터 2대 위기  매일신문",
-    "published": "Fri, 09 Oct 2026 12:16:46 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "7b211a467a7f920b3fd59cd98e7a065ed6f0ba46d2f7ad947b54906017e5ca63"
-  },
-  {
-    "title": "한화디펜스 오스트레일리아, 호주 드론 기업과 보병 전투 차량 드론 대응 공동 개발 착수",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4zMUdoYW5jVndYZ1h3NjlCejE4Vi1PcGQ4QkJ4SGJZR1ZKQmtnc09HQTJadFI2OHVtQmNqSTlMREExRDJTS2N6a1RZODFJWV9jUnR2WWlRRGl5S0h1RHpicDlQTTg4WU5ic1VXa0hB?oc=5",
-    "source": "국제뉴스",
-    "domain": "",
-    "type": "news",
-    "region": "KR",
-    "summary": "한화디펜스 오스트레일리아, 호주 드론 기업과 보병 전투 차량 드론 대응 공동 개발 착수  국제뉴스",
-    "published": "Thu, 08 Oct 2026 23:22:47 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "6fc6e52d0f865c4205a06299499ed127981809b0be5ad1fb3d77d58d1df533a4"
-  },
-  {
-    "title": "원주시, 군관산학연 연계 국방드론 클러스터 조성 본격화",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5iU2IzeW1MVVdHV1U4QmRzY2p4c25xQzI3eTF1ZFl1Qm9yUENrVW1pVmlBY1dUTXNhc2FxTzlpY2RpNk5QTGdDSWx2UVpaLS14X2g3aV92S29tcmdGTkE5MzJTaUFIQjV0RmhfZS13?oc=5",
-    "source": "전국매일신문",
-    "domain": "",
-    "type": "gov",
-    "region": "KR",
-    "summary": "원주시, 군관산학연 연계 국방드론 클러스터 조성 본격화  전국매일신문",
-    "published": "Wed, 07 Oct 2026 08:46:21 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "ee2c9abeaf54270797d1252aaedc256c93d8901163f9d952561865e0efc5b2a1"
-  },
-  {
-    "title": "원주 ‘국방 드론산업’ 메카 도전장",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MaHE0U2NWOXdKVG9lV2dSYVRVbHJObWpESGVYS01FOV84MG15UGVJLXNEOVVDNzFud05YZUx6TDF4bkdIM2tRWGRkdXlnQnktRm9sbldqYktmT0czOU0tLUZwMA?oc=5",
-    "source": "쿠키뉴스",
-    "domain": "",
-    "type": "gov",
-    "region": "KR",
-    "summary": "원주 ‘국방 드론산업’ 메카 도전장  쿠키뉴스",
-    "published": "Wed, 07 Oct 2026 16:11:51 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "d644c8cea41054a972fe0acdb28a3914aa4f2dbac0ce1b5250de8faf7a212f72"
-  },
-  {
-    "title": "원주시 국방드론 협력체계 출범…18개 기관 참여",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBVVGVFX0t6aDFQSFhob1ZXcm5kMWo5SmFEdlVaTVpEVnhSTkpXaVY2YWRab2FZY0ptQXZTeUF5cTF5VTdsQ2lETFJjeUFSdkZNdXljUm45S3JreG5fWUF4QThXRkp3bGRDaUpVQw?oc=5",
-    "source": "한국사회복지저널",
-    "domain": "",
-    "type": "gov",
-    "region": "KR",
-    "summary": "원주시 국방드론 협력체계 출범…18개 기관 참여  한국사회복지저널",
-    "published": "Wed, 07 Oct 2026 08:16:24 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "73598597d31a450f45e08cc68e743f50e201b459632e543744675b9d5c34c872"
-  },
-  {
-    "title": "[글로벌 방산] 대만 쌍십절: 드론 4만 대의 조건 '비홍색 공급망'과 K-드론",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1Ob2x6dEpXTnd1S3RmN21tLTFKN2RhUEVGUmhYLVN5NUpBSnpMSEVCRWtFNGVLSlh2R3NocTZUS2ZyWnBIaVFnUjNhVlBvSTZDVEZIRTI1ZG9kdHZaeDlRb1c2cW1oRGtxdFJreDZR?oc=5",
-    "source": "디펜스투데이",
-    "domain": "",
-    "type": "defense",
-    "region": "KR",
-    "summary": "[글로벌 방산] 대만 쌍십절: 드론 4만 대의 조건 '비홍색 공급망'과 K-드론  디펜스투데이",
-    "published": "Fri, 09 Oct 2026 07:50:44 GMT",
-    "fetched": "2026-10-10T07:31:43+09:00",
-    "sha256": "4063922f860d3d8f83a61fe6ac6e10b4343343c1c9ba281b56f268ff1f50ddd3"
-  },
-  {
-    "title": "[Painless360] Use a StreamDeck with Ardupilot/Mission Planner (Using KH-Control)",
-    "url": "https://www.youtube.com/watch?v=SUOT5BBDcYU",
-    "source": "youtube.com",
-    "domain": "flight-control",
-    "type": "video",
-    "region": "global",
-    "summary": "https://www.khunmanned.com/kh-control/ Thank you for taking the time to watch the video. You can find me on social media at • https://twitter.com/painless360 • https://www.instagram.com/painless360 • ",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "d1e3cdbda2de48113ff45625e6d60868981a52667ea448feac27431d0dd07290",
-    "summary_ko": "KH-컨트롤(KH-Control)로 스트림덱을 아두파일럿·미션 플래너에 연결하는 방법입니다."
-  },
-  {
-    "title": "[Auterion] Talon Interceptor | Auterion",
-    "url": "https://www.youtube.com/watch?v=GdJCUDQy4j4",
-    "source": "youtube.com",
-    "domain": "flight-control",
-    "type": "video",
-    "region": "global",
-    "summary": "",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "8d36c1717e9ec87f43d386a76e5f25bf6cd1169d8a35eb21cf296ffd5f8674ad",
-    "summary_ko": "오터리온의 드론 요격기 탈론 인터셉터(Talon Interceptor)를 소개합니다."
-  },
-  {
-    "title": "[Auterion] Seth-X Fielded in Ukraine | Auterion x Airlogix",
-    "url": "https://www.youtube.com/watch?v=yok8troip4w",
-    "source": "youtube.com",
-    "domain": "flight-control",
-    "type": "video",
-    "region": "global",
-    "summary": "Combat footage of Seth-X strikes operations from Ukraine's Yastruby Regiment. The Seth-X mid-range strike platform from Auterion and Airlogix, brings Auterion’s software-defined autonomy to the front ",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "699a9e35740230768078da368483ceb205f98522619106562d0679ff6df4fd70",
-    "summary_ko": "우크라이나에 배치된 중거리 타격 드론 세스-X와 자율비행 소프트웨어를 보여줍니다."
-  },
-  {
-    "title": "[Joshua Bardwell] No compromises. My DREAM portable soldering iron is ... ALIENTEK T90B",
-    "url": "https://www.youtube.com/watch?v=jPXecdg2hcA",
-    "source": "youtube.com",
-    "domain": "hardware",
-    "type": "video",
-    "region": "global",
-    "summary": "Uncertain about what to buy? Check out THE ULTIMATE FPV SHOPPING LIST: https://www.fpvknowitall.com/ultimate-fpv-shopping-list SUPPORT ME ON PATREON at: http://bit.ly/2Ep5Sia THIS IS MY FULL TIME JOB.",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "1e0fef77dc795f2c47438bc289c2e3b1e3aaf0d5f317f643ed70ffd4b9c6774e",
-    "summary_ko": "휴대용 납땜 인두 ALIENTEK T90B의 성능과 사용성을 살펴봅니다."
-  },
-  {
-    "title": "[DJI] Autumn hits different from above. | DJI Mini 5 Pro",
-    "url": "https://www.youtube.com/watch?v=IqmuqGntxeU",
-    "source": "youtube.com",
-    "domain": "hardware",
-    "type": "video",
-    "region": "global",
-    "summary": "DJI Mini 5 Pro brings Poland’s fall into full color with its 1-inch CMOS 🍂✨ Tiny in your bag, huge once you’re in the air. Where would you fly it first? 👇 🎥: tanczacachmura #DJI #Mini5Pro #AutumnViews",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "02655de3f587bfd110de4580d0000d2975637979c19a0ddf71564902f3d518b4",
-    "summary_ko": "1인치 이미지 센서(CMOS)를 단 DJI Mini 5 Pro로 폴란드의 가을을 촬영했습니다."
-  },
-  {
-    "title": "[DJI] Every nose boop, in 4K | DJI Osmo Nano",
-    "url": "https://www.youtube.com/watch?v=cAFwcFb7x7c",
-    "source": "youtube.com",
-    "domain": "hardware",
-    "type": "video",
-    "region": "global",
-    "summary": "DJI Osmo Nano shoots in 4K, so every little deer nudge lands crisp and close 🦌📷. The kind of moment you’d replay way too many times. Would you keep this clip forever? 👇 🎥: GududemaoMbinhailu #DJI #Osm",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "0f645b832776636da5108eaa1be6499228314505c002a6da693c90bfb81a1d6a",
-    "summary_ko": "DJI 오즈모 나노(Osmo Nano)로 사슴과의 가까운 순간을 4K로 담았습니다."
-  },
-  {
-    "title": "[freeCodeCamp.org] n8n Full Course – Architect Scalable AI Automations from Scratch",
-    "url": "https://www.youtube.com/watch?v=YY-egxTQirA",
-    "source": "youtube.com",
-    "domain": "gcs-software",
-    "type": "video",
-    "region": "global",
-    "summary": "Master n8n and build production-ready automation systems, covering everything from core fundamentals and API orchestration to AI agents and multi-agent pipelines. You will also learn critical real-wor",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "4858c417cd43339e30a3abd72e6f4c28fb5ec1c0246939f0a03ddad8399c05d4",
-    "summary_ko": "n8n 기초부터 응용프로그램 인터페이스(API), 인공지능 에이전트 자동화까지 설명합니다."
-  },
-  {
-    "title": "[핑크랩 PinkLAB] MuJoCo + ROS 2로 Nav2 · MoveIt · LLM까지 2일 완성 모집",
-    "url": "https://www.youtube.com/watch?v=85FGaf6unms",
-    "source": "youtube.com",
-    "domain": "gcs-software",
-    "type": "video",
-    "region": "KR",
-    "summary": "MuJoCo + ROS2 2일 워크샵 1차 참가자를 모집합니다. ※ 정원이 찰 경우 조기 마감될 수 있습니다. MuJoCo 시뮬레이션의 주행형 양팔 로봇을 ROS 2와 연결하고, Nav2 자율주행 · MoveIt 2 양팔 조작 · LLM 작업 계획까지 하나의 프로젝트로 직접 구현하는 2일 오프라인 실습입니다. [DAY 1 자율주행] MuJoCo–ROS 2 ",
-    "published": "2026-10-09",
-    "fetched": "2026-10-10T07:31:36+09:00",
-    "sha256": "c5a98262fd582e910d3cc0645b9e81560b165a2ea9c4e13a3c87112be2a3bcb5"
   }
 ]

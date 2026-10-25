@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "61e74e838b423cee111268857e95e699baee0df03a95f6e39eef4a74f8b6979b",
+  "source_fingerprint": "6a9c279ebd28bc06ac97c59aa4bd7f3c374e8f6b396277b2ac1c7336489be7fd",
   "nodes": [
     {
       "id": "10-48550-arxiv-2607-26717",
@@ -5416,6 +5416,22 @@
         "hardware"
       ],
       "updated": "2026-10-16",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "caddx-ratel-ultra-analog-fpv-camera",
+      "name": "Caddx Ratel Ultra 아날로그 FPV 카메라 (Painless360 리뷰)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone",
+        "hardware",
+        "drone-hw",
+        "fpv"
+      ],
+      "updated": "2026-10-25",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -11563,6 +11579,20 @@
         "regulations"
       ],
       "updated": "2026-10-24",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "NewsDigest"
+    },
+    {
+      "id": "drone-news-2026-10-25",
+      "name": "드론 업계 주요 소식 (2026-10-25)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-25",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "NewsDigest"
@@ -45605,6 +45635,21 @@
       ],
       "updated": "2026-10-23",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-188",
+      "name": "YOLO v8.4.188 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "ai-autonomy",
+        "yolo"
+      ],
+      "updated": "2026-10-25",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
     },
@@ -90551,6 +90596,33 @@
       "confidence": "low"
     },
     {
+      "source": "caddx-ratel-ultra-analog-fpv-camera",
+      "target": "fpv-hardware",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-yt-caddxfpv-ratel-ultra-analogue-fpv-camera-what-is-it-like-to-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "caddx-ratel-ultra-analog-fpv-camera",
+      "target": "divimath-4w-analog-vtx",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-yt-caddxfpv-ratel-ultra-analogue-fpv-camera-what-is-it-like-to-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "caddx-ratel-ultra-analog-fpv-camera",
+      "target": "betafpv-p1-digital-fpv-system",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-yt-caddxfpv-ratel-ultra-analogue-fpv-camera-what-is-it-like-to-.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "calibrate-once-fly-any-team-swarm-training",
       "target": "swarmnxt-aerial-swarm-platform",
       "type": "related",
@@ -102155,6 +102227,42 @@
       "type": "wikilink",
       "evidence": [
         "inbox/processed/fetch-2026-10-24-rss-dronedj.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-25",
+      "target": "drone-news-2026-10-24",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-rss-skydio.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-25",
+      "target": "drone-first-responder-dfr",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-rss-skydio.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-25",
+      "target": "skydio",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-rss-skydio.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-news-2026-10-25",
+      "target": "dji",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-rss-skydio.md"
       ],
       "confidence": "low"
     },
@@ -165583,6 +165691,33 @@
         "inbox/processed/fetch-2026-10-23-yolo.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "yolo-v8-4-188",
+      "target": "yolo-v8-4-184",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-188",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-188",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-25-yolo.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "yolo",
