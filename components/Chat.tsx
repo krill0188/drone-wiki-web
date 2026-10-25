@@ -5,6 +5,7 @@ import MarkdownText from "./MarkdownText"
 import WaitingIndicator, { TypingDots } from "./WaitingIndicator"
 import { useEffect, useRef, useState } from "react"
 import { useChat } from "@ai-sdk/react"
+import ConsentGate from "@/components/ConsentGate"
 import { DefaultChatTransport, type UIMessage } from "ai"
 import { useWikiDoc } from "@/components/WikiDocContext"
 import { DOMAIN_META } from "@/lib/types"
@@ -153,6 +154,7 @@ export default function ChatWidget() {
           </div>
         )}
 
+        <ConsentGate feature="chat" compact>
         <div className="flex-1 overflow-y-auto px-3 py-3 space-y-3">
           {messages.length === 0 && (
             <div className="py-6 text-center text-ink-dim">
@@ -398,6 +400,7 @@ export default function ChatWidget() {
             무료버전이라 응답시간은 느리지만 최대 8초이상 걸릴수 있어요
           </p>
         </div>
+        </ConsentGate>
       </aside>
     </>
   )
