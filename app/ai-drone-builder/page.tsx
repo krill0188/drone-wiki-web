@@ -1,6 +1,7 @@
 "use client"
 
 import WiringDiagram from "@/components/WiringDiagram"
+import BuilderSessionDialog, { type DialogMode } from "@/components/BuilderSessionDialog"
 import BuilderGuide from "@/components/BuilderGuide"
 import WaitingIndicator from "@/components/WaitingIndicator"
 import MarkdownText from "@/components/MarkdownText"
@@ -151,6 +152,8 @@ export default function AiDroneBuilderPage() {
   const [copied, setCopied] = useState(false)
   const [sessionId, setSessionId] = useState("")
   const [progress, setProgress] = useState<Partial<Record<StageKey, string>>>({})
+  const [dialog, setDialog] = useState<DialogMode | null>(null)
+  const [rejectEndKey, setRejectEndKey] = useState<StageKey | null>(null)
 
   const restoredRef = useRef(false)
   const abortRef = useRef<AbortController | null>(null)
@@ -198,6 +201,11 @@ export default function AiDroneBuilderPage() {
   // 세션 저장(0.4초 디바운스): 스트리밍 중 델타마다 쓰지 않도록 한다.
   useEffect(() => {
     if (!restoredRef.current || !sessionId) return
+    // 초기화된(빈) 상태는 저장하지 않고 이전 스냅샷도 지운다 — 새로고침해도 빈 화면으로 시작한다.
+    if (!concept.trim() && closedAt === null && STAGES.every((x) => stages[x.key].status === "pending")) {
+      getSessionStore().clearSnapshot(sessionId, FEATURE_KEY)
+      return
+    }
     const t = setTimeout(() => {
       getSessionStore().saveSnapshot<BuilderSnapshot>(sessionId, FEATURE_KEY, {
         version: 2,
@@ -259,11 +267,60 @@ export default function AiDroneBuilderPage() {
     const idx = STAGES.findIndex((s) => s.key === key)
     const next = STAGES[idx + 1]
     if (next) setTimeout(() => runStage(next.key), 0)
+    else setDialog("final") // 6단계 최종 승인: 마크다운 복사 → 화면 세션 초기화 안내
   }
 
   const close = (key: StageKey) => {
     patchStage(key, { status: "approved" })
     setClosedAt(key)
+    setDialog("close")
+  }
+
+  // 반려하고 종료: 같은 단계를 다시 만들지 않고 여기서 끝낸다(복사 → 초기화 안내).
+  const rejectEnd = (key: StageKey) => {
+    setRejectingKey(null)
+    setRejectReason("")
+    setRejectEndKey(key)
+    setDialog("reject-end")
+  }
+
+  // 복사 문서: 승인된 단계를 이어 붙이고, 반려 종료·새 설계 시작이면 아직 승인 안 된 결과도 표시를 달아 포함한다.
+  const buildCopyText = (mode: DialogMode) => {
+    const st = stagesRef.current
+    const parts: string[] = []
+    for (const x of STAGES) {
+      const t = st[x.key].text.trim()
+      if (!t) continue
+      if (st[x.key].status === "approved") parts.push(`# ${x.title} — ${x.agent}\n\n${t}`)
+      else if (mode === "reject-end" && x.key === rejectEndKey) parts.push(`# ${x.title} — ${x.agent} (반려됨)\n\n${t}`)
+      else if (mode === "manual") parts.push(`# ${x.title} — ${x.agent} (미승인)\n\n${t}`)
+    }
+    return `# ${conceptRef.current}\n\n${parts.join("\n\n---\n\n")}`
+  }
+
+  const copyForDialog = async (): Promise<boolean> => {
+    try {
+      await navigator.clipboard.writeText(buildCopyText(dialog ?? "final"))
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  // 화면 세션 초기화: 진행 중인 생성은 중단하고, 입력·단계 결과·저장된 스냅샷을 비운다.
+  const resetSession = () => {
+    abortRef.current?.abort()
+    setConcept("")
+    setStages(emptyStages())
+    setClosedAt(null)
+    setRejectingKey(null)
+    setRejectReason("")
+    setRejectEndKey(null)
+    setProgress({})
+    setCopied(false)
+    setDialog(null)
+    if (sessionId) getSessionStore().clearSnapshot(sessionId, FEATURE_KEY)
+    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   const reject = (key: StageKey) => {
@@ -327,6 +384,18 @@ export default function AiDroneBuilderPage() {
           </button>
         </div>
       </div>
+
+      {STAGES.some((s) => stages[s.key].status !== "pending") && (
+        <div className="flex justify-end mb-2">
+          <button
+            type="button"
+            onClick={() => setDialog("manual")}
+            className="text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            🧹 새 설계 시작 (화면 초기화)
+          </button>
+        </div>
+      )}
 
       {STAGES.some((s) => stages[s.key].status !== "pending") && (
         <ol className="flex flex-wrap gap-1.5 mb-5 list-none p-0" aria-label="진행 단계">
@@ -467,6 +536,12 @@ export default function AiDroneBuilderPage() {
                           반려하고 다시 생성
                         </button>
                         <button
+                          onClick={() => rejectEnd(s.key)}
+                          className="px-4 py-2 text-sm rounded-lg border border-amber-600 text-amber-700 dark:text-amber-400 font-semibold"
+                        >
+                          반려하고 종료
+                        </button>
+                        <button
                           onClick={() => {
                             setRejectingKey(null)
                             setRejectReason("")
@@ -546,6 +621,7 @@ export default function AiDroneBuilderPage() {
           </pre>
         </div>
       )}
+      <BuilderSessionDialog mode={dialog} onCopy={copyForDialog} onReset={resetSession} onClose={() => setDialog(null)} />
     </div>
   )
 }
