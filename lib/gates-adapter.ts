@@ -14,7 +14,7 @@ const NONE = /후보 없음|재?확인 필요|미정의|미정/
 
 interface Parsed {
   rotors?: number; propIn?: number; kv?: number; thrustG?: number; escA?: number
-  cells?: number; ah?: number; chem: string; batMassG?: number; batText: string
+  cells?: number; ah?: number; declV?: number; chem: string; batMassG?: number; batText: string
   payloadG: number; frameMm?: number
   parts: { name: string; mass_g: number | null; qty: number; bound?: boolean }[]
   boundNames: string[]
@@ -57,6 +57,7 @@ function parseHw(hwMd: string, spec: DesignSpec): Parsed {
     } else if (/battery/i.test(cls)) {
       out.batText = t
       const s = /총\s*(\d{1,2})\s*S\b/.exec(t) ?? /(\d{1,2})\s*S\b/.exec(t); if (s) out.cells = num(s[1])
+      const dv = /(\d{1,2})\s*S\s*\(\s*([\d.]+)\s*V/i.exec(t) ?? /(?:전압|voltage)\s*[:：]?\s*(?:\d{1,2}\s*S\s*)?\(?\s*()([\d.]+)\s*V\b/i.exec(t); if (dv) out.declV = num(dv[2])
       const ah = /([\d.]+)\s*Ah\b/i.exec(t); const mah = /([\d.]+)\s*mAh\b/i.exec(t)
       if (ah) out.ah = num(ah[1]); else if (mah) out.ah = num(mah[1]) / 1000
       if (/li-?ion|리튬\s*이온|21700|18650/i.test(t)) out.chem = "liion"; else if (/\bHV\b|lihv/i.test(t)) out.chem = "lihv"
@@ -82,8 +83,9 @@ export interface GateNoteInput { spec: DesignSpec; hwMd: string; compareText?: s
 
 function claim(text: string, re: RegExp): number | null { const m = re.exec(text.replace(/\*\*/g, "")); return m ? num(m[1]) : null }
 
-export function buildGateNote({ spec, hwMd, compareText = "", finalSpecMd = "" }: GateNoteInput): string {
-  if (!hwMd.trim()) return ""
+
+// HW 표를 읽고 4단계 확정 스펙으로 덮어쓴다(우선순위: 4단계 확정 스펙 > HW 표 > 기획). 값마다 출처를 기록한다.
+function prepare(spec: DesignSpec, hwMd: string, finalSpecMd: string) {
   const p = parseHw(hwMd, spec)
   // 우선순위: 4단계 확정 스펙 > HW 표 > 기획. 확정 스펙이 읽히면 그 값으로 덮어쓰고 출처를 기록한다.
   const fin = finalSpecMd ? finalBasics(parseFinalSpec(finalSpecMd)) : {}
@@ -93,6 +95,12 @@ export function buildGateNote({ spec, hwMd, compareText = "", finalSpecMd = "" }
   p.cells = pick("cells", p.cells, fin.cells); p.ah = pick("ah", p.ah, fin.ah); p.propIn = pick("propIn", p.propIn, fin.propIn)
   p.kv = pick("kv", p.kv, fin.kv); p.escA = pick("escA", p.escA, fin.escA); p.batMassG = pick("batMassG", p.batMassG, fin.batMassG)
   if (p.thrustG !== undefined) src.thrustG = HWT
+  return { p, fin, src, FIN, HWT }
+}
+
+export function buildGateNote({ spec, hwMd, compareText = "", finalSpecMd = "" }: GateNoteInput): string {
+  if (!hwMd.trim()) return ""
+  const { p, fin, src, FIN, HWT } = prepare(spec, hwMd, finalSpecMd)
   const missing: string[] = []
   const rotors = p.rotors ?? spec.rotors
   const only = new Set<GateKey>(["G1"])
@@ -183,4 +191,29 @@ export function buildGateNote({ spec, hwMd, compareText = "", finalSpecMd = "" }
 // 단계 간 일치성 점검용: HW 표에서 읽은 기본 값(배터리 S·Ah, 프롭, KV, 링크 대역 등)
 export function hwBasics(hwMd: string) {
   return parseHw(hwMd, { rotors: 4, platform: "multirotor", platformExplicit: true })
+}
+
+// ── 재작성 트리거(가정이 필요 없는 위반만) ──
+// G0(선언 전압 ↔ S수×셀전압)과 G2(프롭 간섭)는 문서에 적힌 값과 산술·기하만으로 판정되므로, 위반이면 해당 단계를 한 번 다시 쓰게 한다.
+// 전압은 공칭(3.7 V/셀)뿐 아니라 만충(4.2~4.35 V/셀) 표기도 허용한다(S×3.5~S×4.4 V 범위).
+export function assumptionFreeGateIssues(spec: DesignSpec, hwMd: string, finalSpecMd = ""): string[] {
+  if (!hwMd.trim()) return []
+  const { p } = prepare(spec, hwMd, finalSpecMd)
+  const only = new Set<GateKey>()
+  if (p.cells && p.ah) only.add("G0")
+  if (p.propIn && spec.sizeMm) only.add("G2")
+  if (!only.size) return []
+  const expectedV = (p.cells ?? 0) * 3.7
+  const declOk = p.declV === undefined || (p.declV >= (p.cells ?? 0) * 3.5 && p.declV <= (p.cells ?? 0) * 4.4)
+  const core: CoreSpec = {
+    environment: { altitude_m: spec.altitudeM ?? 0, temp_c: 15 },
+    requirements: { endurance_min: spec.flightMin ?? 0, loiter_min: 0 },
+    mission: { payload_g: 0, radius_km: 0, cruise_mps: 10, wind_mps: 5, reserve_frac: 0.2 },
+    airframe: { n_rotor: p.rotors ?? spec.rotors, wheelbase_mm: spec.sizeMm ?? p.frameMm ?? 0, prop_in: p.propIn ?? 0 },
+    motor: { kv: 0 }, esc: { cont_a: 0 },
+    battery: { chem: p.chem, cells_s: p.cells ?? 0, capacity_ah: p.ah ?? 0, voltage_nom_v: p.declV === undefined ? undefined : declOk ? expectedV : p.declV, mass_g: 0, c_cont: 1e6 },
+    parts: [], avionics_loads: [{ name: "x", avg_w: 0, peak_w: 0, rail: "x" }],
+  }
+  const rep = runGates(core, only)
+  return rep.gates.filter((g) => g.status === "FAIL").map((g) => `${g.gate} 위반(코드 계산): ${g.value}${g.fix ? ` — ${g.fix.trim()}` : ""}`)
 }

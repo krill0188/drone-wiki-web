@@ -13,9 +13,9 @@ import { repairHwSelections, validateHw, validateSw, validateTechspec, validateA
 import { ragSearch } from "@/lib/rag"
 import { graphRagSearch } from "@/lib/graphrag"
 import { buildAgentManifest } from "@/lib/agent-manifest"
-import { buildGateNote } from "@/lib/gates-adapter"
+import { buildGateNote, assumptionFreeGateIssues } from "@/lib/gates-adapter"
 import { selectPaperClaims, paperEvidenceBlock, paperEvidenceNote } from "@/lib/paper-evidence"
-import { stageConsistencyNote } from "@/lib/stage-consistency"
+import { stageConsistencyNote, removedPartsReappear } from "@/lib/stage-consistency"
 
 // "AI 드론을 기획하고 개발해줘" 같은 요청을 6개 전문 에이전트가 단계별로 협업해
 // 무에서 유로 만들어내는 멀티 에이전트 오케스트레이션 (2026-10-16 6단계 + 사람 승인 게이트).
@@ -423,8 +423,23 @@ export async function POST(req: NextRequest) {
   // 첫 글자는 검증 뒤에 나가므로 느리지만(최대 2회 생성), 출력의 규칙 위반을 서버가 보증/공개한다.
   if (match?.data) {
     const data = match.data
+    // 재작성 트리거(가정이 필요 없는 위반만): G0 전압·Wh 정합, G2 프롭 간섭, 서버가 제거한 부품의 재등장. 논문 재현 모드는 제외한다.
+    const hardChecks = (text: string): Validation => {
+      if (paper) return { checks: [], issues: [] }
+      try {
+        const hwMd = stage === "hw" ? text : ctx.hw ?? ""
+        const finalMd = stage === "techspec" ? text : stage === "architecture" || stage === "implementation" ? ctx.techspec : undefined
+        const issues = [
+          ...(stage === "hw" || stage === "techspec" ? assumptionFreeGateIssues(gate.spec, hwMd, finalMd) : []),
+          ...(stage !== "hw" ? removedPartsReappear(ctx.hw ?? "", text).map((x) => `HW 단계에서 서버가 제거한 부품 "${x}"이(가) 다시 쓰였다(카탈로그 밖·선정 취소된 제품). HW 표에서 선정한 제품만 써라`) : []),
+        ]
+        return { checks: [{ ok: issues.length === 0, label: "하드게이트(전압·프롭 간섭)·제거 부품 재등장 없음", detail: issues.length ? issues.map((i) => i.slice(0, 80)).join(" / ") : undefined }], issues }
+      } catch { return { checks: [], issues: [] } }
+    }
     const validate = (text: string): Validation => {
-      const base = validateCore(text)
+      const base0 = validateCore(text)
+      const h = hardChecks(text)
+      const base: Validation = { checks: [...base0.checks, ...h.checks], issues: [...base0.issues, ...h.issues] }
       if (!crossOn || !(stage === "sw" || stage === "techspec" || stage === "architecture")) return base
       const x = crossChecks(stage, text, ctx.hw ?? "")
       return { checks: [...base.checks, ...x.checks], issues: [...base.issues, ...x.issues] }

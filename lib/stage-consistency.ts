@@ -122,3 +122,18 @@ export function stageConsistencyNote(hwMd: string, otherText: string, otherLabel
   const rows = conflicts.map((c) => `| ${c.topic} | ${c.base} | ${c.other}${c.note ? ` (${c.note})` : ""} |`)
   return `\n\n---\n\n## 🔀 단계 간 일치성 점검 (코드가 비교 — 기준: ${baseLabel}; 우선순위 4단계 확정 스펙 > HW 표 > 기획)\n\n> ${otherLabel}에서 ${baseLabel}와 다르게 쓴 항목입니다. 대안·후보로 언급한 것일 수 있어 자동 반려하지 않습니다. 확정값은 HW 표가 우선이며, 맞지 않으면 해당 단계를 다시 생성하세요.\n\n| 항목 | ${baseLabel} | ${otherLabel} |\n|---|---|---|\n${rows.join("\n")}\n\n비교한 항목: ${compared.join(", ")}`
 }
+
+// 서버가 HW 단계에서 치환(제거)한 부품이 다음 단계 본문에 다시 나오는가. HW 출력 끝의 '서버 치환 N건 …: name: "원래 제안" → 대체' 메모를 읽는다.
+export function removedPartsReappear(hwMd: string, otherText: string): string[] {
+  const m = /서버 치환\s*\d+건[^:\n]*:\s*([^\n]+)/.exec(hwMd)
+  if (!m || !otherText.trim()) return []
+  const n = norm(otherText), out: string[] = []
+  for (const piece of m[1].split(" ; ")) {
+    const orig = /"([^"]+)"/.exec(piece)?.[1]
+    if (!orig) continue
+    const key = modelKeyOf(orig)
+    const kn = key ? norm(key) : ""
+    if (kn.length >= 5 && n.includes(kn)) out.push(orig.replace(/\s*\(.*$/, "").trim().slice(0, 60))
+  }
+  return [...new Set(out)]
+}
