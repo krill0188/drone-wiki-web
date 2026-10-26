@@ -7,7 +7,7 @@
 
 [Stage 0-R follow-up verification](docs/STAGE_0R_FOLLOWUP.md) · [운영 런북](docs/OPERATIONS.md) · [릴리스 노트](docs/RELEASES.md)
 
-## 현재 상태 (2026-10-24)
+## 현재 상태 (2026-10-27)
 
 | 항목 | 값 |
 |---|---|
@@ -16,6 +16,8 @@
 | 질의 경로 | `KG_BACKEND=sqlite` — 답변은 **지식그래프의 노드·엣지·검증 claim만** 사실 근거로 쓰고, 모델은 표현만 한다. 근거가 없으면 "그래프에 없음" |
 | 모델 | NVIDIA NIM 체인(병렬 헤징 + 토큰 버킷) → OpenRouter `:free` → 모델 없이 근거만 보여 주는 답. NIM·OpenRouter 모두 **키 풀 폴백**(한도·인증 거절 시 다음 키로 전환) |
 | AI 드론 빌더 | 6단계 구조 유지. 시작 화면에 필수 4조건(페이로드·비행가능거리·크기·비행시간) 안내 카드 + 예제 3종, 진행 알약, 2단계 배선도, 완성 시 드론 이미지 |
+| 수집 동의·경험 로그 | AI 질문하기·AI 드론 빌더는 진입 시 **수집 동의 고지**(기본 strict: 거절하면 사용 불가, 서버 403). 질문·완성 설계는 마스킹 후 별도 무료 Supabase에 **90일** 보관(30일 후 집계만 남김), 테스트 트래픽은 집계 제외 |
+| 구글 로그인(선택) | 코드·DB 배포 완료, 로그인 UI는 `NEXT_PUBLIC_AUTH_ENABLED`로 숨김. 켜면 `/my`에서 내 질문·설계 사례 조회/삭제, 계정 삭제, 빌더 기기 간 이어보기. 설정 순서는 [docs/GOOGLE_LOGIN_SETUP.md](docs/GOOGLE_LOGIN_SETUP.md) |
 | 운영 점검 | 이 Mac의 launchd 점검 + GitHub Actions `ops-eval`(매일 질문 25문항, 매주 설계 도우미 6단계 회귀). 배포는 `scripts/deploy-prod.sh`만 사용 |
 
 > 자동 승격 문서는 모델 호출 없이 discovery 그래프 정보(이름·분류·출처·관계)로 만든 짧은 문서이며 **사실 근거로 쓰지 않는다.** 내용 검증이 끝난 문서만 claim 근거가 된다.
@@ -128,7 +130,7 @@ proxy.ts             UUID 세션 쿠키 (Next.js 16 proxy 규약)
 
 ### 환경변수 (이름만 — 값은 저장소에 두지 않는다)
 
-`NVIDIA_NIM_API_KEY`(쉼표로 여러 개 가능) · `NVIDIA_NIM_API_KEYS` · `OPENROUTER_API_KEYS` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH`
+`NVIDIA_NIM_API_KEY`(쉼표로 여러 개 가능) · `NVIDIA_NIM_API_KEYS` · `OPENROUTER_API_KEYS` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH` · `CONSENT_MODE`(strict/optional/off) · `EXP_LOG_BACKEND` · `EXP_SUPABASE_URL` · `EXP_SUPABASE_KEY`(넣기 전용) · `NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_KEY` · `NEXT_PUBLIC_AUTH_ENABLED` · `OWNER_EMAILS`
 
 ### 로컬 실행
 
@@ -144,6 +146,7 @@ npm run build    # 프로덕션 빌드
 
 | 버전 | 일자 | 내용 |
 |---|---|---|
+| deploy-20261025-* | 2026-10-25 | 빌더 단계 일관성 검출·확정 스펙 구역·재작성 트리거, 수집 동의 고지(strict)·90일 경험 로그, 구글 로그인·내 기록(UI 숨김). 상세는 [RELEASES.md](docs/RELEASES.md) |
 | deploy-20261024-* | 2026-10-24 | 배선도·단계별 이미지, 안내 카드, 키 풀 폴백, 클라우드 점검, discovery 전체 승격(문서 909→3,261). 배포마다 태그 `deploy-YYYYMMDD-HHMM`, 상세는 [RELEASES.md](docs/RELEASES.md) |
 | v2.13.0 | 2026-10-17 | 온톨로지 추론 엔진 · 제품 개체 지식그래프 · 기본구조 온톨로지 · 설계 게이트 · 드론 빌더 6단계 |
 | v2.10.0 | 2026-10-09 | 텔레그램 봇 브릿지 (AI Q&A + 위키 에디터) |
