@@ -28,6 +28,7 @@ import { designBlocks } from "@/lib/design-context"
 import { designEvidence } from "@/lib/evidence"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
 import { eventsEnabled, relatedEventsFor } from "@/lib/events"
+import { generalTierEnabled, eligibility as generalEligibility, hasCoverageGap } from "@/lib/general-tier"
 import type { DocContext } from "@/lib/types"
 import type { DocViewRecord } from "@/lib/session-store"
 
@@ -95,7 +96,9 @@ export async function POST(req: NextRequest) {
     if (plan.status !== "ready") {
       track.set({ status: "insufficient_evidence" })
       const meta = { answerMeta: { status: "insufficient_evidence", confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: plan.suggestions, ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
-      return instantReply(insufficientMessage(plan), meta)
+      // 일반 공학 설명 자격(KG_GENERAL=1): 거절 응답 뒤에 클라이언트가 별도 엔드포인트로 요청한다. 자격은 서버가 그 엔드포인트에서 다시 판정한다.
+      const gel = generalTierEnabled() ? generalEligibility(question, plan) : null
+      return instantReply(insufficientMessage(plan), gel?.eligible ? { ...meta, generalTier: { eligible: true, kind: gel.kind } } : meta)
     }
     const vb = verbatimAnswer(plan)
     if (vb) {
@@ -121,7 +124,11 @@ export async function POST(req: NextRequest) {
           if (part.type !== "finish") return undefined
           // 최신 동향(미검증)은 모델 컨텍스트가 아니라 이 메타데이터로만 클라이언트에 간다(KG_EVENTS=1일 때만).
           const events = eventsEnabled() ? relatedEventsFor(plan.entities) : []
-          const meta = { ontologyClasses: plan.classes, modelTier: tier, answerMeta: metaForStreamed(plan, ctx, acc.text), ...(events.length ? { relatedEvents: events } : {}) }
+          const am = metaForStreamed(plan, ctx, acc.text)
+          // 근거 기반 본문이 질문의 관점을 찾지 못했을 때만 일반 공학 설명 자격을 표시한다(본문·검증·캐시 대상은 그대로).
+          const gel = generalTierEnabled() ? generalEligibility(question, plan) : null
+          const general = gel?.eligible && hasCoverageGap(am.limitations, acc.text) ? { generalTier: { eligible: true, kind: gel.kind } } : {}
+          const meta = { ontologyClasses: plan.classes, modelTier: tier, answerMeta: am, ...(events.length ? { relatedEvents: events } : {}), ...general }
           if (cacheable && meta.answerMeta.status === "answered") cachePut(ckey, acc.text, meta)
           return meta
         },

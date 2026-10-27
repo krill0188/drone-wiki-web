@@ -14,6 +14,7 @@ import DroneIcon from "@/components/DroneIcon"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
 import RelatedEvents from "@/components/RelatedEvents"
+import GeneralTierBlock from "@/components/GeneralTierBlock"
 
 import { buildTextFragmentUrl } from "@/lib/text-fragment"
 
@@ -24,6 +25,8 @@ interface ChatMetadata {
   newsSources?: { title: string; url: string; type: string }[]
   kgFacts?: { id: string; text: string; source?: string }[]
   // 검증되지 않은 최신 동향(뉴스·영상). 답변의 근거가 아니며 모델은 이 내용을 보지 못한다.
+  // 서버가 일반 공학 설명 자격을 표시한 경우(KG_GENERAL=1). 실제 생성·검증은 별도 엔드포인트가 하며 본문과 분리된다.
+  generalTier?: { eligible: boolean; kind?: string }
   relatedEvents?: { id: string; title: string; url: string; source: string; eventType: string; published: string; about: string }[]
   answerMeta?: {
     basis?: "ontology" | "ontology-linked" | "wiki-sourced" | "none"
@@ -185,7 +188,7 @@ export default function ChatWidget() {
             </div>
           )}
 
-          {messages.map((m) => {
+          {messages.map((m, idx) => {
             const meta = m.metadata as ChatMetadata | undefined
             return (
               <motion.div key={m.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
@@ -254,6 +257,9 @@ export default function ChatWidget() {
                   )}
 
                   {m.role === "assistant" && <RelatedEvents events={meta?.relatedEvents} />}
+                  {m.role === "assistant" && meta?.generalTier?.eligible && (
+                    <GeneralTierBlock question={(() => { const u = messages[idx - 1]; return u && u.role === "user" ? u.parts.map((p) => (p.type === "text" ? p.text : "")).join("").trim() : "" })()} />
+                  )}
 
                   {m.role === "assistant" && meta?.kgFacts && (
                     <details className="px-1" open={meta.kgFacts.length > 0 && meta.kgFacts.length <= 6}>

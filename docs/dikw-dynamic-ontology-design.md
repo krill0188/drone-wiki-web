@@ -376,7 +376,7 @@ ai.2nd.knowledge-pipeline (launchd, 마지막 종료코드 2)
 | 수집 소스 | arXiv 13질의 + Crossref(최근 60일 'drone UAV') + KCI(국내, 키 설정 시) | `fetch_arxiv()`, Crossref/KCI 블록 |
 | 논문 **전체 내용**을 수집해 정리하는가 | **수집(보존)은 일부만, 정리(요약·구조화)는 초록까지만.** | 아래 3행 |
 | ① 위키 노트의 내용 | **초록만.** `raw/papers/*.md` 297개 중 294개가 3KB 미만(중앙값 2.1KB, 최대 3.1KB) | 파일 크기 실측 |
-| ② 원문 보존 | arXiv는 HTML 우선·PDF 폴백으로 `raw/papers/files/`에 저장하나 **보존된 것은 130건(PDF 83 + HTML 47)** — 노트 297개 대비 약 44%(노트와 원문이 1:1로 대응하는지는 미확인이라 근사치) | `preserve_original()`, 파일 집계 |
+| ② 원문 보존 | arXiv는 HTML 우선·PDF 폴백으로 `raw/papers/files/`에 저장하나 **디스크에는 130건(PDF 83 + HTML 47)이 있으나 노트에 연결된 원문은 76건(297개 중 26%)** — 정정: 초안의 "약 44%"는 파일 수를 노트 수로 나눈 근사였음. 상세는 `docs/paper-fulltext-pipeline-design.md` §2.1 | `preserve_original()`, 파일 집계 |
 | ③ 원문에서 내용을 뽑아 정리하는 자동 경로 | **일일 파이프라인에는 없음.** 보존된 PDF/HTML을 읽어 요약·청킹·임베딩하는 단계가 없다 | `daily-ingest-claude.sh`·`embed-docs.py`·`extract-knowledge-graph.py` 모두 노트(초록)만 읽음 |
 | 전문을 쓰는 유일한 경로 | `hw-collection/20261019/papers-ontology/pipeline.py`: PDF→txt → **AI가 후보 claim 작성 → 코드가 원문 txt와 글자 대조**해 통과분만 `paper-claims.json`에 병합. **수동 실행**(launchd 등록 없음, 마지막 병합 10/21). 운영 DB 기준 `pdf-quote-match` 검증 claim 253건, 109개 논문 | `pipeline.py`, DB `evidence` |
 | 초록 기반 claim | `extract-abstract-claims.py`(수동, 마지막 10/24): 초록의 수치 문장만 → `abstract-quote` 106건. 해석은 검토되지 않았다고 답변에 명시됨 | `auto-claims.json`, `claims` |
@@ -389,4 +389,4 @@ ai.2nd.knowledge-pipeline (launchd, 마지막 종료코드 2)
 1. **전문이 지식그래프의 사실 근거가 되는 경로는 수동 1개뿐**이라 신뢰 높은 claim(253건)은 109편에 머문다. 자동 수집되는 논문 대부분(초록만)은 검증 claim이 되지 못한다.
 2. 보존 원문(130건)이 임베딩·검색·그래프 어디에도 쓰이지 않는다 — 자산이 있는데 소비처가 없다.
 3. 임베딩은 문서 앞 2,000자만 본다. 논문 초록은 포함되지만 본문 내용은 검색에 잡히지 않는다.
-4. 보완 후보(우선순위 순): ⓐ `pipeline.py`의 `totxt`·`verify`를 일일 파이프라인 단계로 편입(후보 claim 작성은 AI, 판정은 코드라는 기존 원칙 유지) ⓑ 원문 미보존 논문(노트의 56%)에 대한 재시도 ⓒ 전문 청킹 임베딩(엔티티 링킹 보조용, Phase 3과 함께).
+4. 보완 후보(우선순위 순): ⓐ `pipeline.py`의 `totxt`·`verify`를 일일 파이프라인 단계로 편입(후보 claim 작성은 AI, 판정은 코드라는 기존 원칙 유지) ⓑ 원문 미연결 논문(노트의 74%)에 대한 재시도 ⓒ 전문 청킹 임베딩(엔티티 링킹 보조용, Phase 3과 함께).

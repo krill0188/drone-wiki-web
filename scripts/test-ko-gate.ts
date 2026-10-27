@@ -56,6 +56,16 @@ async function main() {
     }
   })
 
+  t("K7 증상 서술어(끊겨요·쏠려요·뭘까요)는 '위키에 없는 주제어'로 거절 사유가 되지 않는다", () => {
+    for (const q of ["비행 중 영상 전송이 끊겨요", "드론이 이륙 후 한쪽으로 계속 쏠려요. 원인이 뭘까요?"]) {
+      // 거절 사유(주제어 누락)에 서술어가 주제로 올라오면 안 된다. ready 계획의 '근거에서 찾지 못했습니다' 한계 안내는 정상 동작이다.
+      const why = planQuery(q).limitations.join(" ")
+      ok(!/위키가 .*(끊겨요|쏠려요|뭘까요).* 주제를 직접 다루는 문서를 갖고 있지 않아/.test(why), `[${q}] 거절 사유에 서술어 노출: ${why}`)
+    }
+    // 대조군: 명사 주제어 누락 거절은 그대로
+    ok(/양자/.test(planQuery("양자 컴퓨터로 비행제어를 하는 방법").limitations.join(" ")), "양자 거절 사유 소실")
+  })
+
   const w = Math.max(...results.map((r) => r.name.length))
   for (const r of results) console.log(`${r.status}  ${r.name.padEnd(w)}${r.note ? `  — ${r.note}` : ""}`)
   const fail = results.filter((r) => r.status === "FAIL").length

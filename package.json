@@ -17,6 +17,7 @@
     "test:freshness": "tsx scripts/test-freshness.ts",
     "test:events": "tsx scripts/test-events.ts",
     "test:kogate": "tsx scripts/test-ko-gate.ts",
+    "test:general": "tsx scripts/test-general-tier.ts",
     "eval:builder": "python3 scripts/eval-builder.py"
   },
   "dependencies": {
