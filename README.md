@@ -130,7 +130,17 @@ proxy.ts             UUID 세션 쿠키 (Next.js 16 proxy 규약)
 
 ### 환경변수 (이름만 — 값은 저장소에 두지 않는다)
 
-`NVIDIA_NIM_API_KEY`(쉼표로 여러 개 가능) · `NVIDIA_NIM_API_KEYS` · `OPENROUTER_API_KEYS` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH` · `CONSENT_MODE`(strict/optional/off) · `EXP_LOG_BACKEND` · `EXP_SUPABASE_URL` · `EXP_SUPABASE_KEY`(넣기 전용) · `NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_KEY` · `NEXT_PUBLIC_AUTH_ENABLED` · `OWNER_EMAILS`
+`NVIDIA_NIM_API_KEY`(쉼표로 여러 개 가능) · `NVIDIA_NIM_API_KEYS` · `OPENROUTER_API_KEYS` · `NVIDIA_NIM_BASE_URL` · `NVIDIA_NIM_MODEL` · `NVIDIA_NIM_THINKING` · `OPENROUTER_API_KEY` · `OPENROUTER_MODEL` · `LOCAL_LLM_BASE_URL` · `LOCAL_LLM_MODEL` · `BOT_API_TOKEN` · `WIKI_PATH` · `CONSENT_MODE`(strict/optional/off) · `EXP_LOG_BACKEND` · `EXP_SUPABASE_URL` · `EXP_SUPABASE_KEY`(넣기 전용) · `NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_KEY` · `NEXT_PUBLIC_AUTH_ENABLED` · `OWNER_EMAILS` · `KG_FRESHNESS` · `KG_EVENTS` · `KG_GENERAL`
+
+### 기능 플래그 (기본 off, 켜면 동작)
+
+| 변수 | 기능 | 비고 |
+|---|---|---|
+| `KG_FRESHNESS=1` | 제품 사양표에 **수집 기준일**·경과일 행, 90일 초과 시 재확인 문구. 낡은 값을 단정하지 않도록 모델 규칙 1항 추가(제품 신선도 속성이 있을 때만) | 판정은 질의 시점 계산. DB·그래프 변경 없음 |
+| `KG_EVENTS=1` | **관련 최신 동향 패널**(뉴스·영상, 미검증). 모델에는 전달하지 않고 UI 메타데이터로만 노출 | 데이터 `data/ontology/events.json`(`scripts/build-events.py`, 제목·URL·출처·날짜만) |
+| `KG_GENERAL=1` | **라벨된 일반 공학 설명**(원인형 질문 한정, 본문과 분리된 점선 블록, "근거 아님" 상시 표시) | 안전·법규·제품·수치·화재 질문 차단, 코드 검증, 서버 재판정. 설계 `docs/ai-qa-improvement-plan.md` |
+
+세 플래그 모두 끄면 이전 동작과 완전히 같다. 롤백은 환경변수 제거 후 재배포.
 
 ### 로컬 실행
 
@@ -146,6 +156,7 @@ npm run build    # 프로덕션 빌드
 
 | 버전 | 일자 | 내용 |
 |---|---|---|
+| v2.16.0 | 2026-10-27 | **한국어 활용형 오판 거절 수정**(질문 36개 거절 18→6), 수집 기준일·신선도(`KG_FRESHNESS`), 동향 이벤트 패널(`KG_EVENTS`), 라벨된 일반 공학 설명(`KG_GENERAL`, 원인형 한정). 상세는 [RELEASES.md](docs/RELEASES.md)·[AI Q&A 개선 계획](docs/ai-qa-improvement-plan.md) |
 | deploy-20261025-* | 2026-10-25 | 빌더 단계 일관성 검출·확정 스펙 구역·재작성 트리거, 수집 동의 고지(strict)·90일 경험 로그, 구글 로그인·내 기록(UI 숨김). 상세는 [RELEASES.md](docs/RELEASES.md) |
 | deploy-20261024-* | 2026-10-24 | 배선도·단계별 이미지, 안내 카드, 키 풀 폴백, 클라우드 점검, discovery 전체 승격(문서 909→3,261). 배포마다 태그 `deploy-YYYYMMDD-HHMM`, 상세는 [RELEASES.md](docs/RELEASES.md) |
 | v2.13.0 | 2026-10-17 | 온톨로지 추론 엔진 · 제품 개체 지식그래프 · 기본구조 온톨로지 · 설계 게이트 · 드론 빌더 6단계 |
