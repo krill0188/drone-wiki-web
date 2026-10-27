@@ -23,6 +23,11 @@ export const RULE_ALIAS: Record<string, RegExp> = {
 }
 
 export const KO_EN: Record<string, string[]> = {
+  // 2026-10-27 질문 유형별 점검에서 '한국어 표면형 문서빈도만 보고 위키에 없는 주제로 오판'된 용어의 영어 대응(위키는 한·영 혼합이다)
+  브러시리스: ["brushless", "bldc"], 방제: ["spray", "spraying", "agricultur"], 농업: ["agricultur", "farming"], 과열: ["overheat", "overheating", "thermal"], 야간: ["night"],
+  수색: ["search", "rescue", "sar"], 자격증: ["license", "certificate", "certification"], 조종자: ["pilot", "operator"], 자율비행: ["autonomous", "autonomy"],
+  쿼드콥터: ["quadcopter", "quadrotor", "multirotor"], 추중비: ["thrust-to-weight", "thrust ratio", "추력비"], 영상: ["video", "fpv"], 전송: ["transmission", "link"],
+  보험: ["insurance"], 수출: ["export"], 군사: ["military", "defense"], 사업: ["commercial", "business"],
   패키징: ["packaging", "pkg"], 계수: ["coefficient", "multiplier", "factor"], 배터리: ["battery", "lipo", "pack"], 추력: ["thrust"],
   질량: ["mass", "weight"], 무게: ["weight", "mass"], 전력: ["power"], 소비: ["consumption", "consumed"], 비행: ["flight", "flying"], 호버: ["hover", "hovering"],
   프롭: ["propeller", "prop"], 프로펠러: ["propeller"], 모터: ["motor"], 에너지: ["energy"], 밀도: ["density"], 속도: ["speed", "velocity"], 지연: ["latency", "delay"],
