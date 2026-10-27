@@ -1,5 +1,6 @@
 import type { Plan, PlanEntity } from "./kg-plan"
 import { soften } from "./soften"
+import { freshnessRowValue } from "./freshness"
 
 // 제품 사양표는 모델이 아니라 서버가 만든다(2026-10-22). 모델은 표 값을 옮기다 반올림·누락·단위 오류를 내고(검증 경고의 주된 원인),
 // 출력이 길어져 느려진다. 서버는 엔터티 속성(수집 원문 표)을 그대로 표로 렌더링하고, 모델은 해설만 쓴다.
@@ -44,7 +45,9 @@ export function renderEntityTables(plan: Plan, maxEntities = 2): string {
     if (all.length < 2) continue // 속성이 거의 없는 개체(제조사 등)는 표를 만들지 않는다
     const hit = all.filter((r) => qt.some((t) => r.k.toLowerCase().includes(t) || r.v.toLowerCase().includes(t)))
     const rows = (hit.length >= 1 && hit.length < all.length && qt.length ? hit : all).slice(0, 14)
-    const more = all.length > rows.length ? " · 질문과 관련된 항목만 표시" : ""
+    const more = all.length > rows.length ? " · 질문과 관련된 항목만 표시" : "" // 기준일 행을 붙이기 전에 판정해야 행 수가 어긋나지 않는다
+    // 수집 기준일 행은 질문 관련 행 선별과 상관없이 항상 마지막에 붙인다(KG_FRESHNESS=1이고 제품 속성에 신선도가 있을 때만).
+    if (e.attributes.freshness !== undefined) rows.push({ k: "수집 기준일", v: freshnessRowValue(e.attributes.as_of, e.attributes.freshness, e.attributes.age_days) })
     const url = typeof e.attributes.url === "string" ? e.attributes.url.split(/\s*;\s*/)[0] : ""
     out.push([
       `**${soften(e.label)}** — 제품 사양표${more}`,

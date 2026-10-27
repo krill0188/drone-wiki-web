@@ -1,6 +1,7 @@
 import { soften } from "./soften"
 import { all } from "./kdb"
 import type { Plan } from "./kg-plan"
+import { freshnessEnabled, FRESHNESS_CONSTRAINT } from "./freshness"
 
 // 질의 계획 → NVIDIA NIM에 전달하는 구조화 context. NIM은 표현만 담당하고, 사실·상태·신뢰도는 서버(SQLite)가 정한다.
 export const ANSWER_CONSTRAINTS = [
@@ -62,7 +63,8 @@ export function buildNimContext(plan: Plan): NimContext {
     evidence: plan.evidence.map((e) => ({ id: e.id, claim_id: e.claimId, claim_ref: cRef.get(e.claimId) ?? "", source_path: e.sourcePath, source_url: e.sourceUrl, locator: e.locator, quote: e.quote, verified: e.verified, method: e.method })),
     canonical_pages: plan.pages.map((p) => ({ ref: pRef.get(p.path)!, path: p.path, title: p.title, domain: p.domain, excerpt: p.excerpt, role: "supplementary" as const })),
     limitations: plan.limitations,
-    answer_constraints: ANSWER_CONSTRAINTS,
+    // 신선도 규칙은 제품 신선도 속성이 실제로 context에 들어갈 때만 붙인다(제품 없는 질문의 프롬프트는 플래그와 무관하게 동일).
+    answer_constraints: freshnessEnabled() && plan.entities.some((e) => e.attributes.freshness !== undefined) ? [...ANSWER_CONSTRAINTS, FRESHNESS_CONSTRAINT] : ANSWER_CONSTRAINTS,
     ids: { claims: [...cRef.values()], relations: [...rRef.values()], evidence: plan.evidence.map((e) => e.id), pages: [...pRef.values()] },
     handleMap,
   }

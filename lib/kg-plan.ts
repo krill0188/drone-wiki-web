@@ -1,6 +1,7 @@
 import { all, kdb } from "./kdb"
 import { CLASS_ALIAS, KO_EN, RULE_ALIAS } from "./kg-vocab"
 import { DOMAIN_META } from "./types"
+import { freshnessEnabled, freshnessOf } from "./freshness"
 
 // ontology 우선 질의 계획 (결정론, LLM 없음).
 // 순서: domain 식별 → 클래스/개체 연결 → 관계 확장 → claim 수집 → evidence 확인 → (보강) canonical 문서 → 판정.
@@ -193,6 +194,15 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     const attrs: PlanEntity["attributes"] = {}
     const p = all("SELECT category, manufacturer_id, url, weight_g, capacity_mah, cells_s, nominal_v, continuous_a, peak_a, platform, numeric_json FROM products WHERE id = ?", n.id)[0]
     if (p) for (const [k, v] of Object.entries(p)) if (v !== null && v !== "") attrs[k] = v as string | number
+    // 제품 사양은 수집 시점의 값이다. KG_FRESHNESS=1일 때만 기준일(as_of)과 질의 시점 신선도를 붙인다(기본 off = 기존 속성 그대로).
+    if (p && freshnessEnabled()) {
+      const asOf = all<{ captured: string | null }>("SELECT captured FROM products WHERE id = ?", n.id)[0]?.captured ?? null
+      const f = freshnessOf(asOf, "spec")!
+      if (asOf && f.freshness !== "unknown") attrs.as_of = asOf
+      attrs.freshness = f.freshness
+      attrs.volatility = "spec"
+      if (f.ageDays !== null) attrs.age_days = f.ageDays
+    }
     const m = all("SELECT country, country_verified, official_url FROM manufacturers WHERE id = ?", n.id)[0]
     if (m) for (const [k, v] of Object.entries(m)) if (v !== null) attrs[k] = v as string | number
     plan.entities.push({ id: n.id, label: n.label, cls: n.class_name, alias: l.alias, attributes: attrs })
