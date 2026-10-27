@@ -1,0 +1,392 @@
+# DIKW 기반 '시점 인식' 온톨로지 설계서 — 신선도 메타 + 동향 이벤트 레이어
+
+> 작성: 2026-10-27 · 상태: **D1~D4 권고안 확정(마스터 승인) · Phase 1·2 로컬 구현·시험 완료(미배포, 두 플래그 모두 기본 off)**. 구현 결과는 §12(Phase 1)·§13(Phase 2).
+> 대상: drone-wiki-web(프런트) + ~/2nd(백엔드). 근거 표기: **VERIFIED**(이번 세션에 파일·DB·launchd로 직접 확인) / **INFERRED**(코드에서 도출, 라이브 미관찰) / **UNKNOWN**(근거 부족).
+
+---
+
+## 0. 한 장 요약
+
+| 항목 | 내용 |
+|---|---|
+| 문제 | 지식그래프는 Data→Information→Knowledge까지 잘 쌓였으나, Wisdom 단계의 핵심인 **"특정 시점 기준 판단"** 이 없다. 값이 언제 기준인지 답변에 나오지 않고, 최신 동향(뉴스·릴리스)은 사실 근거 금지 원칙 때문에 전혀 활용되지 않는다. |
+| 해법 | **A. 신선도 메타**(값마다 `as_of`·`volatility`, 질의 시점에 `fresh/aging/stale/unknown` 계산) + **B. 동향 이벤트 레이어**(뉴스·릴리스를 `Event`로 별도 저장, 제품·제조사에 결정론 링크, **LLM에는 전달하지 않고 UI 패널로만 노출**). |
+| 원칙 보존 | 10/19 확정 원칙 "답변의 사실은 지식그래프·규칙·설계 엔진에서만"을 **그대로 유지**한다. 이벤트는 사실 근거가 아니며 모델 컨텍스트에 들어가지 않는다. |
+| 착수 권고 | Phase 1(신선도) → Phase 2(이벤트). Phase 3~5는 후속. |
+| 마스터 결정 필요 | §9 (D1~D4) |
+
+---
+
+## 1. 배경: DIKW 진단
+
+| 단계 | 현재 대응 | 상태 |
+|---|---|---|
+| Data | `~/2nd/raw/*`, 제품 사양 필드 | ✔ |
+| Information | canonical 위키, Product 노드, Claim의 `quote/conditions/source` | ✔ |
+| Knowledge | 엣지 4,551(`packFits` 1,867 · `powersWith` 403 …), 클래스 12, Rule 26 | ✔ 강함 |
+| Wisdom | 설계 게이트·규칙 엔진·`apply-kinetic-rules`(규칙 2개 실행) | △ 시점·행동이 약함 |
+
+책의 Wisdom 정의("**특정 시점에** … 판단하고 행동")에서 비어 있는 것은 두 가지다.
+
+1. **시점**: 값의 기준일이 답변에 드러나지 않는다.
+2. **현장 대응**: 변화(신제품·펌웨어·규제)를 지식 쪽에서 감지·표시하지 못한다.
+
+---
+
+## 2. 현황 실측 (설계의 근거)
+
+### 2.1 신선도 관련 — VERIFIED
+
+| 항목 | 실측 |
+|---|---|
+| 운영 DB `data/knowledge/knowledge.sql`의 `products` | **694건 전부 `captured` 보유**, 값은 2026-10-19(373) · 10-20(215) · 10-21(58) · 10-22(47) · 10-23(1) 다섯 날짜. KG `Product` 노드 694건과 일치. *(초안의 "588건/106건 차이"는 레거시 `data/ontology/knowledge.sqlite`(build-sqlite.py)를 잘못 센 값이어서 정정함)* |
+| `captured`의 전파 | DB에는 있으나 `lib/kg-plan.ts`가 제품 속성을 읽을 때 이 컬럼을 SELECT하지 않아 **챗 컨텍스트·표 어디에도 기준일이 나오지 않았다.** `graph.json` 노드에도 없음. |
+| `products` 스키마 | 가격·재고 컬럼 **없음**. 변동성이 큰 값은 현재 사양 필드에 존재하지 않는다 |
+| Claim | 논문 근거(`reportedIn`). 시간에 따라 낡는 값이 아니라 `evidence_kind`(reported·model-assumption·simulation·cited-secondary·derived)로 신뢰도를 구분 |
+
+### 2.2 동향(뉴스) 관련 — VERIFIED
+
+| 항목 | 실측 |
+|---|---|
+| `~/2nd/.ua/news-feed.json` | 500건 상한 리스트. 필드: `title, url, source, domain, type(news·release·video), region, summary, published, fetched, sha256` |
+| 개체 링크 | **없음**(제품·제조사와 연결되지 않음) |
+| 챗 경로 | 10/19 이후 뉴스·RAG는 사실 근거로 쓰지 않음. `chat/route.ts`는 `queryKG`·`planQuery`·규칙·설계 엔진만 호출 |
+
+### 2.3 파이프라인 — VERIFIED (이전 답변 정정)
+
+이전 답변에서 "파이프라인 순서 비보장"이라고 한 것은 `00_CURRENT_SYSTEM.md`의 **옛 기록**을 근거로 한 것이었다. 실제로는 단일 job이 단계 순서를 고정해 실행한다.
+
+```
+ai.2nd.knowledge-pipeline (launchd, 마지막 종료코드 2)
+ fetch → ingest → self-update-canonical → kinetic-apply
+ → canonical-lint → embeddings → discovery → canonical-graph
+ → Validate:all
+```
+
+- 마지막 실행(2026-10-25): 모든 Generate 단계 exit 0, **`Validate:all`에서 `publication-policy` 위반 → exit 2**(`PUBLICATION_REVIEW_REQUIRED`). `deploy: NOT EXECUTED: approval required`.
+- 의미 1: **로컬 생성물과 배포본이 어긋날 수 있다.** 발행이 승인 게이트에서 멈추면 Vercel의 데이터는 낡은 채로 남는다 → 신선도 표시의 필요성이 더 커진다.
+- 의미 2: 제품 카탈로그(`products-catalog.json` → `build-graph.py`/`build-knowledge-db.py`)는 위 파이프라인 단계에 **없다**. 즉 `captured` 날짜(10/19~20)는 일일 자동 갱신의 결과가 아니라 1회성 수집 시점이다(**INFERRED**: 파이프라인 단계 목록에 카탈로그 단계가 없음을 근거로 함).
+- 의미 3: 이전 보완안 #4(파이프라인 직렬화)는 **이미 구현**되어 범위에서 제외한다.
+
+---
+
+## 3. 목표와 비목표
+
+**목표**
+
+- G1. 답변에 나오는 모든 제품 수치에 **기준일**을 표시하고, 낡은 값은 단정하지 않게 한다.
+- G2. 최신 동향을 **검증 지식과 분리된 채** 사용자에게 보여준다.
+- G3. 기존 안전 원칙(KG 전용, 근거 없으면 "그래프에 없음", 수치 사후검증)을 약화하지 않는다.
+
+**비목표 (이번 범위 밖)**
+
+- 실시간 텔레메트리 연동과 SWRL 규칙 6개 활성화(Swarm GCS 미검증으로 8/20에 보류, 유지).
+- 뉴스에서 사실(Claim)을 자동 승격하는 것. 승격은 기존 원문 대조·사람 승인 경로만 허용.
+- 가격·재고 신규 수집(현재 스키마에 없음 — §4.4 참고).
+
+---
+
+## 4. 설계 A — 신선도 메타 (Phase 1)
+
+### 4.1 개념
+
+값은 **변동성(volatility)** 에 따라 다르게 낡는다. 저장하는 것은 `as_of`와 `volatility`뿐이고, `fresh/aging/stale` 판정은 **질의 시점에 계산**한다(배포된 정적 데이터가 시간이 지나면 스스로 낡아 보여야 하므로 저장값으로 두지 않는다).
+
+| volatility | 대상 | fresh | aging | stale |
+|---|---|---|---|---|
+| `static` | 물리 규칙, 논문 Claim, 클래스 정의 | 항상 표시 안 함 | — | — |
+| `spec` | 제품 사양(중량·용량·전류 등) | ≤ 90일 | ≤ 180일 | > 180일 |
+| `volatile` | 가격·재고·최신 펌웨어 버전(해당 필드가 생길 때) | ≤ 7일 | ≤ 30일 | > 30일 |
+
+`as_of`가 없으면 `unknown`. 위 임계값은 **초기 제안값**이며 §9 D2에서 확정한다.
+
+### 4.2 데이터 변경
+
+| 파일 | 변경 |
+|---|---|
+> **구현 시 변경(§12 참고):** 운영 DB에 `captured`가 이미 있으므로 **빌더·DB 스키마·`graph.json`은 수정하지 않는다.** `as_of`는 기존 `captured`를 그대로 쓰고, `volatility`는 코드 상수(제품 = `spec`)로 둔다. 초안의 아래 안은 폐기하며 R1(빌더 간 스키마 불일치) 리스크도 사라진다.
+
+| ~~파일~~ | ~~변경(폐기)~~ |
+|---|---|
+| ~~`build-knowledge-db.py`~~ | ~~`as_of`·`volatility` 컬럼 추가~~ |
+| ~~`build-graph.py`, `build-sqlite.py`~~ | ~~`asOf` 통과 전달~~ |
+
+**적용 범위 제한:** 신선도는 운영 경로(`KG_BACKEND=sqlite`, `planQuery`)에만 적용된다. 기본값 JSON 경로(`queryKG`/`graph.json`)는 이번 범위에 포함하지 않는다.
+
+규칙: `as_of`는 **값의 출처가 관측된 날짜**여야 하며 빌드 날짜로 대체하지 않는다(빌드 날짜로 채우면 항상 fresh로 보이는 거짓 신선도가 된다).
+
+### 4.3 질의·답변 변경
+
+| 위치 | 변경 |
+|---|---|
+| `lib/freshness.ts` (신규) | `freshnessOf(asOf, volatility, now)` → `fresh | aging | stale | unknown`. 순수 함수. 임계값 상수는 한 곳에서만 정의. |
+| `lib/kg-plan.ts` | 제품 개체 속성에 `as_of`·`freshness`·`volatility`·`age_days`를 질의 시점에 계산해 부착(플래그 on일 때만). |
+| `lib/kg-context.ts` | 플래그 on일 때 `answer_constraints`에 신선도 규칙 1항 추가: "aging·stale·unknown이면 기준일과 함께 재확인 필요라고 밝히고 단정하지 말 것, context에 없는 기준일·경과일을 만들지 말 것". |
+| `lib/kg-table.ts` | 제품 사양표 마지막에 **수집 기준일** 행(항상 포함, 질문 관련 행 선별과 무관). aging·stale은 `⚠`와 재확인 문구. 표는 서버가 렌더하므로 모델 환각이 없다. `kg-answer`·`kg-degraded` 경로도 같은 함수를 써서 자동 적용된다. |
+| `lib/kg-verbatim.ts` | **변경 없음.** 법령·규제 전용 경로라 제품과 무관하다. |
+| `lib/soften.ts` | **변경 없음(초안에서 철회).** 사후 문장 재작성은 위험이 크고, 서버 표의 ⚠ 표시 + 모델 제약으로 충분하다고 판단. |
+| `lib/kg-verify.ts` | **변경 없음.** 기존 V2(숫자 검사)가 context의 기준일·경과일은 통과시키고 지어낸 날짜는 `unsupported_number`로 잡는다는 것을 시험(F14)으로 확인. |
+
+### 4.4 가격·재고에 대한 솔직한 범위
+
+현재 `products` 스키마에 가격·재고가 없으므로 `volatile` 클래스는 **자리만 마련**하고 값은 채워지지 않는다. 지금 실제로 의미가 있는 것은 `spec`(사양, 10/19~20 수집)의 노화 표시다. 가격·재고를 새로 수집할지는 별도 결정(소스 약관·갱신 주기·비용)이 필요하며 이번 범위에 넣지 않는다.
+
+### 4.5 기능 플래그
+
+`KG_FRESHNESS=1`일 때만 컨텍스트·표·후처리에 반영. 기본 off → 기존 동작 100% 유지.
+
+---
+
+## 5. 설계 B — 동향 이벤트 레이어 (Phase 2)
+
+### 5.1 원칙
+
+1. 이벤트는 **사실이 아니다.** 항상 `status = unverified`.
+2. 이벤트는 **`graph.json`과 `knowledge.sql`의 검증 테이블에 넣지 않는다.** 별도 파일·별도 테이블로 분리해 "결정론·검증 산출물"의 순도를 지킨다.
+3. **LLM 컨텍스트로 보내지 않는다.** 답변 본문은 지금과 완전히 동일한 근거만 쓴다.
+4. 링크는 **결정론**(문자열 규칙)으로만 만들고, 애매하면 링크하지 않는다.
+
+### 5.2 스키마
+
+`data/ontology/events.json` (신규, `scripts/build-events.py`가 `news-feed.json`에서 생성, AI 없음)
+
+```json
+{
+  "generated": "2026-10-27T00:00:00Z",
+  "window_days": 90,
+  "events": [{
+    "id": "event:<sha256 앞 12자>",
+    "type": "Event",
+    "eventType": "release | news | video",
+    "title": "…",
+    "url": "https://…",
+    "source": "youtube.com",
+    "domain": "hardware",
+    "published": "2026-10-26",
+    "status": "unverified"
+  }],
+  "links": [{
+    "event": "event:…", "node": "mfr:gens-ace",
+    "nodeType": "Manufacturer", "predicate": "mentions",
+    "method": "exact-name", "score": 1.0
+  }]
+}
+```
+
+- `summary` 본문은 **저장·배포하지 않는다.** 제목·URL·출처·날짜만 담는다(§8 리스크 R3: 제3자 콘텐츠 배포·발행 게이트).
+- 보존: 최근 90일. 그 이전은 제외(원본 `news-feed.json`은 그대로).
+
+### 5.3 링크 규칙 (결정론)
+
+| 순위 | 방법 | 링크 대상 | 비고 |
+|---|---|---|---|
+| 1 | 제조사 정규 이름·별칭 정확 일치(`manufacturer-map.json` 활용) | `Manufacturer` | 가장 안전 |
+| 2 | 제품 모델 구문 일치(`kg.ts`의 `phrases()`와 같은 기준) | `Product` | 구가 둘 이상 제품에 걸리면 **제품 링크 포기**, 제조사로만 링크 |
+| 3 | 클래스 키워드(Motor·ESC 등) | `Class` | 노이즈가 많아 `eventType=release`일 때만 |
+
+미링크 이벤트는 **버리지 않고** 도메인 단위 목록에만 남긴다.
+
+### 5.4 노출 방식 — 모델 밖, UI 패널
+
+```
+질문 → (기존과 동일) KG 근거 → LLM → 답변
+                 └─ 답변에 쓰인 Product·Manufacturer ID로 events 조회 → UI 패널
+                    "관련 최신 동향 (미검증 · 출처 링크)" 최대 3건
+```
+
+- 구현: `answerMeta.relatedEvents`로 클라이언트에 전달(모델 스트림과 분리). 기존 `answerMeta` 구조 확장이며 `buildNimContext`는 건드리지 않는다.
+- UI 기조는 마스터 피드백(차분하게, 움직임은 만질 때만)을 따른다. 작은 접이식 패널, 기본 접힘.
+- 이벤트 → Claim 승격은 자동화하지 않는다. 승격은 기존 `claims` 검증 경로(원문 대조 `quote`·`locator`)를 거친 뒤에만 가능하고, 이 설계에서는 후보 목록(`events-review.json`)을 사람이 보는 데까지만 정의한다.
+
+### 5.5 기능 플래그
+
+`KG_EVENTS=1`일 때만 패널용 데이터 조회. 기본 off.
+
+---
+
+## 6. 후속 단계 (개요만, 별도 설계 필요)
+
+| Phase | 내용 | 선결 확인 |
+|---|---|---|
+| 3 | **벡터를 엔티티 링킹 보조로 재배선.** 노드 라벨·별칭의 임베딩을 사전계산해 "질문 → KG 노드 후보"만 벡터가 담당하고 사실은 KG에서만 가져온다. 현재 수작업인 `kg-vocab.ts`(KO_EN·CLASS_ALIAS) 부담을 줄이는 것이 목적. | **UNKNOWN**: Vercel에서 쿼리 임베딩을 어떻게 할지(호스티드 임베딩 API 가용성, 비용). `rag.ts` 주석상 현재 Vercel은 Python 모델이 없어 키워드 폴백. 스파이크로 먼저 실측. |
+| 4 | **제품 카탈로그 갱신을 파이프라인에 편입.** 현재 카탈로그는 일일 파이프라인 밖이라 `as_of`가 자동으로 갱신되지 않음(§2.3). | 수집 소스·약관, 갱신 주기 결정 |
+| 5 | **그래프 3종 정리.** canonical(3,267노드/14,025엣지) · discovery(3,165/3,357) · KG(1,368/4,551)의 ID 매핑과 승격 경로 명문화. | 세 그래프의 실제 중복 범위 실측(**UNKNOWN**) |
+| 6 | 평가 골든셋 확대. Phase 1·2의 회귀 방지용이므로 **Phase 1과 같이 시작** → Phase 1분 완료(§12). `eval-kg-live.ts`는 실제 NIM을 호출하는 측정용이라 결정론 회귀에는 쓰지 않고, 오프라인 골든셋을 `scripts/test-freshness.ts`에 구현함. Phase 2용 골든셋(이벤트 링크 100건 라벨)은 대기. | — |
+
+---
+
+## 7. 검증 기준 (QA 게이트)
+
+### Phase 1 — 신선도
+
+| 검증 | 합격 기준 |
+|---|---|
+| 순수 함수 | `freshnessOf` 단위 테스트: 경계값(90/180일, 7/30일), `as_of` null, `static`, 미래 날짜 |
+| 데이터 일치 | 질의에 연결된 모든 제품의 `as_of`가 DB `captured`와 일치(빌드 날짜로 대체된 값 0건) — 빌더를 수정하지 않으므로 빌더 결정론은 해당 없음 |
+| 회귀 | 플래그 off 시 기존 챗 응답·`eval-kg-live` 결과 차이 0 |
+| 답변 | 플래그 on, 제품 질문 20건 이상에서 표의 기준일 열이 RDB 값과 일치, 컨텍스트에 없는 날짜 생성 0건 |
+| stale 모의 | `now`를 +200일로 주입한 테스트에서 stale 표시·단정 완화가 작동 |
+
+### Phase 2 — 이벤트
+
+| 검증 | 합격 기준 |
+|---|---|
+| 링크 정밀도 | 무작위 100건 수동 라벨링: **오링크율 ≤ 5%**(애매하면 링크 안 함 원칙이므로 재현율보다 정밀도 우선) |
+| 격리 | `graph.json`·`knowledge.sql` 바이트 변경 0, `buildNimContext` 출력에 이벤트 필드 0 |
+| 모델 불접촉 | 시스템 프롬프트·컨텍스트에 이벤트 제목이 포함되지 않음을 테스트로 고정 |
+| 데이터 | `events.json`에 `summary` 필드 0건, 90일 창 외 이벤트 0건 |
+| 발행 | `publication-preflight` 통과(신규 bytes 승인 경로 포함) |
+
+공통: 실제 배포 앱에서 사용자 경로 재현 확인(과거 교훈 "데이터 계층 ≠ 사용자 경로").
+
+---
+
+## 8. 리스크
+
+| # | 리스크 | 대응 |
+|---|---|---|
+| R1 | ~~두 빌더 스키마 불일치~~ | **해소**: 빌더·DB 스키마를 수정하지 않는 구현으로 변경(§4.2) |
+| R2 | `as_of`를 빌드 날짜로 대체하는 실수 → 거짓 신선도 | `captured` 외 출처 금지, 시험 F11·F15가 DB 값과 일치를 검증. 미래·형식 오류 날짜는 unknown 처리(F3·F4) |
+| R3 | 이벤트는 제3자 콘텐츠 → 신규 공개 bytes로 발행 게이트에서 막힘(마지막 파이프라인도 `publication-policy`에서 exit 2) | 제목·URL·출처·날짜만 저장, 본문 요약 제외. 정책 `deny/review` 분류를 사전 확인하고 승인 경로를 따른다 |
+| R4 | 제품 링크 오탐(예: 일반 단어 모델명) | 구가 모호하면 제조사로만 링크, `GENERIC` 단어 목록 재사용, 정밀도 게이트 |
+| R5 | 이벤트가 사실처럼 보이는 UX | "미검증" 라벨 고정, 모델 답변과 시각적으로 분리, 기본 접힘 |
+| R6 | 배포본이 낡은 채 멈춤(발행 게이트 정지) | 신선도 표시가 이를 사용자에게 드러냄. 별도로 `pipeline-result.json`의 마지막 성공·정지 시점을 운영 점검(`ai.dronewiki.eval`)에서 알림하는 안은 후속 검토 |
+| R7 | 배포·릴리스 절차 위반 | `deploy-prod.sh`, 릴리스 노트 3중 기록, 기준선 재고정 순서 등 기존 절차(`feedback_dronewiki_release_and_deploy_process`)를 그대로 따른다 |
+
+롤백: 두 기능 모두 환경 변수 플래그 off로 즉시 무력화, 데이터 파일은 추가형(기존 파일 덮어쓰기 최소)이라 되돌림이 쉽다. 단 빌더 스키마 변경(Phase 1)은 DB 재생성이 필요하므로 이전 커밋 복원으로 롤백한다.
+
+---
+
+## 9. 마스터 결정 요청
+
+| # | 질문 | 권고 |
+|---|---|---|
+| **D1** | 이벤트를 **답변 밖 UI 패널**로만 보여줄까요, 답변 안에 "미검증 동향" 문단으로도 넣을까요? | **UI 패널만.** 10/19 원칙("KG 전용 답변")을 그대로 지키고, 모델이 이벤트를 요약·왜곡할 여지를 없앱니다. 답변 안에 넣으려면 원칙 변경이므로 마스터 확정이 필요합니다. |
+| **D2** | `spec` 임계값 90/180일, `volatile` 7/30일로 시작해도 될까요? | 초기값으로 시작 후 운영 데이터를 보고 조정. |
+| **D3** | 착수 범위는? | **Phase 1 + Phase 6(골든셋) → Phase 2** 순. Phase 3~5는 결과를 본 뒤 별도 설계. |
+| **D4** | 이벤트를 Vercel에 배포하는 데이터에 **제목·URL·출처·날짜만** 담는 것에 동의하십니까? | 동의 권고(R3). 요약 본문은 배포하지 않습니다. |
+
+---
+
+## 10. 변경 파일 목록 (예정)
+
+| Phase | 파일 | 구분 |
+|---|---|---|
+| 1 | `lib/freshness.ts`, `scripts/test-freshness.ts` | 신규 **(완료)** |
+| 1 | `lib/kg-plan.ts`, `lib/kg-context.ts`, `lib/kg-table.ts` | 수정 **(완료)** |
+| 1 | ~~빌더 3종, `kg-verbatim.ts`, `soften.ts`, `kg-verify.ts`~~ | 변경 불필요로 제외(§4.2·4.3) |
+| 2 | `scripts/build-events.py`, `data/ontology/events.json` | 신규 |
+| 2 | `lib/events.ts`, `app/api/chat/route.ts`(`answerMeta.relatedEvents` 전달만), UI 패널 컴포넌트 | 신규/수정 |
+| 공통 | `docs/RELEASES.md` 및 릴리스 노트(기존 절차) | 수정 |
+
+---
+
+## 11. 확인하지 못한 것
+
+- Vercel 프로덕션에서 벡터 경로가 실제 키워드로 폴백하는지(라이브 로그 미확인).
+- 세 그래프(canonical·discovery·KG)의 실제 중복 범위.
+- `kg-context.ts`·`kg-table.ts` 전체 본문(이번 확인은 일부 구간만 읽음) — Phase 1 착수 시 변경 지점을 정밀 재확인한다.
+
+---
+
+## 12. 구현 결과 — Phase 1 (2026-10-27, 로컬·미배포)
+
+| 항목 | 결과 |
+|---|---|
+| 상태 | 로컬 구현 완료. **배포하지 않음**, 커밋하지 않음. `KG_FRESHNESS`는 기본 off. |
+| 신규 | `lib/freshness.ts`(순수 함수·임계값·제약 문구), `scripts/test-freshness.ts`(15건) |
+| 수정 | `lib/kg-plan.ts`(+10줄), `lib/kg-context.ts`(+3줄·-1줄), `lib/kg-table.ts`(+3줄) — 전부 플래그 on일 때만 동작 |
+| 신선도 시험 | **15/15 PASS** (경계값, unknown·미래·static, off 회귀, on 사실 불변, as_of=DB, 표 기준일 1행, +200일 모의 시계, 후검증, 골든셋 36질문·제품 58개) |
+| 기존 회귀 | `test-kg-answer.ts` 플래그 off·on **각각 39 PASS / 0 FAIL**(실NIM 1건 NOT RUN), `test-gates` 통과, `test-cross` 6/6 |
+| 타입 검사 | 변경·신규 파일 오류 0. 저장소 전체 `tsc`에는 기존 오류가 있음(`@supabase/supabase-js` 모듈 없음 등, 이번 변경과 무관) |
+| 기존 실패 1건 | `npm run kdb:test`의 `test_domain_matches_original_frontmatter_100pct`(3건 불일치). **변경 전 코드에서도 동일하게 실패**함을 확인(로컬 위키가 스냅샷 이후 바뀐 것으로 추정, 미조사) |
+
+### 사용자에게 보이는 변화 (플래그 on)
+
+제품 사양표 마지막 행: `| 수집 기준일 | 2026-10-19 (7일 경과) |` — 90일 초과 시 `⚠ … 수집 후 시간이 지났습니다. 출처에서 재확인하세요`, 기준일이 없으면 `기준일 미상 (재확인 필요)`. 모델 프롬프트에는 위 규칙 1항이 추가된다.
+
+### 활성화·배포 전 남은 일
+
+1. Vercel 환경 변수 `KG_FRESHNESS=1` 설정(코드 배포와 분리해 켜고 끌 수 있음).
+2. 기존 배포 절차 적용(`deploy-prod.sh`, 릴리스 노트 3중 기록, 한국어 커밋 제목) — 코드만 바뀌고 **데이터 파일은 바뀌지 않으므로** 발행 게이트(`publication-policy`)의 신규 bytes 문제는 이 Phase에서는 없음(INFERRED, 게이트 실행으로 확인 필요).
+3. 실NIM으로 `--live` 1회 확인(제약 1항 추가가 JSON 계약 준수율에 영향이 없는지).
+4. 현재 전 제품이 10/19~10/23 수집이라 **오늘 기준 모두 fresh**로 표시된다. 임계값(90일)을 넘는 시점(2027-01 중순 이후)부터 aging 표시가 실제로 나타난다.
+
+---
+
+## 13. 구현 결과 — Phase 2 동향 이벤트 레이어 (2026-10-27, 로컬·미배포)
+
+### 13.1 착수 전 실측이 설계 가정과 달랐던 점 (VERIFIED)
+
+| 설계 가정 | 실측 |
+|---|---|
+| 유형 `news·release·video` | 실제 유형 8종: news 260 · video 80 · paper 76 · defense 44 · gov 19 · release 10 · job 10 · regulation 1 |
+| `published`는 날짜 | 형식이 섞여 있음: RFC 2822 323건 · ISO 날짜 143건 · 연도만/연월만 24건 · 빈 값 10건. 정렬도 안 돼 있고 2016년 항목도 있음 |
+| release가 제품 펌웨어 신호 | release 10건은 **전부 YOLO(ultralytics)** — KG 제품과 무관 |
+| 제품 링크 가능 | 제목에 카탈로그 모델 토큰이 나오는 경우가 사실상 없음 → **Product 링크 0건**. 링크는 제조사 단위만 성립 |
+
+### 13.2 구현
+
+| 구분 | 내용 |
+|---|---|
+| 신규 | `scripts/build-events.py`(결정론, AI 없음), `data/ontology/events.json`(348건·링크 79건·169KB), `lib/events.ts`, `scripts/test-events.ts` |
+| 수정 | `app/api/chat/route.ts`(+4줄: 이벤트를 `messageMetadata.relatedEvents`로만 전달), `components/Chat.tsx`(+타입 1줄, 기본 접힘 패널 1개) |
+| 수정하지 않음 | `graph.json`, `knowledge.sql`, `kg-plan.ts`, `kg-context.ts`(= 모델 입력 경로 전체) |
+| 플래그 | `KG_EVENTS=1`일 때만 조회·전달(기본 off) |
+
+생성 규칙: 유형은 paper·job 제외(논문은 canonical 위키가 따로 다루고 채용 공고는 동향이 아님) → 날짜를 해석할 수 없으면 **제외**(fetched로 대체하면 거짓으로 최신처럼 보임) → 기준일(피드의 가장 늦은 fetched)로부터 90일 창 → 제목·URL·출처·날짜만 저장(**summary 미저장**).
+집계: 입력 500 → 이벤트 348 · 유형 제외 86 · 창 밖 66.
+
+링크 규칙: ① 제조사 이름·별칭이 제목에 낱말 경계로 정확히 나올 때. 별칭이 여러 제조사 노드에 걸리면 **노드 자신의 이름과 정확히 같은 쪽을 정본**으로 한다(`DJI`는 KG에 DJI·DJI Enterprise·DJI Agriculture 등 5개 노드가 있어 처음엔 모호로 버려졌음). ② 3자 대문자 상표(DJI)는 길이 하한(4자)에 걸리므로, 노드 자신의 이름이 정확히 그 3자일 때만 대소문자까지 맞춰 허용. ③ Product 링크는 모델 토큰이 카탈로그에서 유일하고 제조사도 제목에 있을 때(현재 0건). ④ 클래스 링크는 release 유형이 제품과 무관해 이번엔 구현하지 않음.
+
+### 13.3 링크 정밀도 (전수 검토)
+
+설계의 "무작위 100건 수동 라벨링" 대신, 링크된 **모든 이벤트(78건)의 제목을 읽어** 확인했다(표본보다 강한 검증). 오링크 **0건**. 분포: DJI 50 · Skydio 16 · Parrot 3 · 그 외 각 1. 재현율은 미측정이며 의도적으로 낮게 둔다(애매하면 링크하지 않음). 링크된 78건은 전체 이벤트 348건의 22%.
+
+주의: DJI 링크 50건 중 다수가 공식 채널의 소비자 제품 홍보 영상(Osmo 등)이다. 정확한 링크이지만 드론 설계 판단에는 노이즈라서 **조회 시 영상은 뉴스·릴리스 뒤로 순위를 내린다**(같은 묶음 안에서는 최신순). 그 결과 DJI 제품 질문의 상위 3건은 펌웨어 업데이트·FCC 관련 뉴스가 된다.
+
+### 13.4 시험 — `scripts/test-events.ts` 11/11 PASS
+
+| 시험 | 확인 내용 |
+|---|---|
+| E1·E2 | 허용 필드만(summary 없음)·전부 `unverified`·ID 중복 0 / 전부 90일 창 안·미래 없음 |
+| E3·E4 | 링크의 이벤트·노드 실재, 노드 유형 일치 / **모든 링크의 제조사명이 제목에 실제로 존재**(전수) |
+| E5 | 수동 검토로 확정한 골든: 반드시 링크(DJI 펌웨어·Skydio F10·Parrot·Auterion), `[DJI]` 영상이 다른 제조사로 새지 않음 |
+| E6 | 같은 입력 두 번 빌드 → 바이트 동일 |
+| E7·E8 | DJI 제품 질문 → 최대 3건·순서 규칙·전부 DJI 링크·무관 개체 0건 / 기준일+200일에는 0건(질의 시점 창 재적용) |
+| E9 | **모델 불접촉**: 표시 대상 이벤트 3건의 제목이 `NimContext`·시스템 프롬프트·`plan`에 0건(두 플래그 on 상태에서도) |
+| E10·E11 | 플래그 기본 off / `graph.json`·`knowledge.sql` 변경 0(git diff) |
+
+타입 검사: 변경·신규 파일 오류 0.
+
+### 13.5 활성화·배포 전 남은 일
+
+1. Vercel 환경 변수 `KG_EVENTS=1` 설정(Phase 1의 `KG_FRESHNESS`와 독립적으로 켜고 끌 수 있음).
+2. **발행 게이트**: `events.json`은 제3자 콘텐츠를 담은 신규 공개 bytes다. `publication/policy.json`은 위키 문서(`data/wiki`) 중심이라 `data/ontology/*.json`이 대상인지는 **UNKNOWN** — 배포 스크립트의 점검 결과로 확인한다.
+3. 이벤트는 피드가 갱신돼도 **재빌드·재배포 전까지 갱신되지 않는다**(정적 파일). 일일 파이프라인에 `build-events.py`를 편입할지는 별도 결정이 필요하다(현재 `knowledge-pipeline`은 이 단계가 없고, 그 파이프라인은 발행 게이트에서 멈춰 있음).
+4. 이벤트 가치의 한계: 현재 피드로는 제품 단위 연결이 불가능하고, 제조사 단위로도 DJI·Skydio에 집중된다. 피드 소스를 늘리거나 제품명을 제목에 쓰는 소스(제조사 릴리스 노트)를 추가해야 의미가 커진다.
+
+---
+
+## 14. 부록 — 논문 수집·정리·그래프 경로 점검 (2026-10-27, 코드·데이터 실측)
+
+| 질문 | 답 | 근거 |
+|---|---|---|
+| 도메인 논문을 **병렬**로 수집하는가 | **아니오, 순차 실행.** | `scripts/fetch-inbox.sh`에 `xargs -P`·`&`·`wait` 없음. arXiv 질의 13개(비행제어·군집·통신·인식·하드웨어 5종·LLM·보안·GCS 등)를 한 줄씩 호출, 질의당 최대 3편, 요청 사이 3초 간격(rate-limit 회피). 하루 1회(07:30) 단일 launchd job 안에서 실행 |
+| 수집 소스 | arXiv 13질의 + Crossref(최근 60일 'drone UAV') + KCI(국내, 키 설정 시) | `fetch_arxiv()`, Crossref/KCI 블록 |
+| 논문 **전체 내용**을 수집해 정리하는가 | **수집(보존)은 일부만, 정리(요약·구조화)는 초록까지만.** | 아래 3행 |
+| ① 위키 노트의 내용 | **초록만.** `raw/papers/*.md` 297개 중 294개가 3KB 미만(중앙값 2.1KB, 최대 3.1KB) | 파일 크기 실측 |
+| ② 원문 보존 | arXiv는 HTML 우선·PDF 폴백으로 `raw/papers/files/`에 저장하나 **보존된 것은 130건(PDF 83 + HTML 47)** — 노트 297개 대비 약 44%(노트와 원문이 1:1로 대응하는지는 미확인이라 근사치) | `preserve_original()`, 파일 집계 |
+| ③ 원문에서 내용을 뽑아 정리하는 자동 경로 | **일일 파이프라인에는 없음.** 보존된 PDF/HTML을 읽어 요약·청킹·임베딩하는 단계가 없다 | `daily-ingest-claude.sh`·`embed-docs.py`·`extract-knowledge-graph.py` 모두 노트(초록)만 읽음 |
+| 전문을 쓰는 유일한 경로 | `hw-collection/20261019/papers-ontology/pipeline.py`: PDF→txt → **AI가 후보 claim 작성 → 코드가 원문 txt와 글자 대조**해 통과분만 `paper-claims.json`에 병합. **수동 실행**(launchd 등록 없음, 마지막 병합 10/21). 운영 DB 기준 `pdf-quote-match` 검증 claim 253건, 109개 논문 | `pipeline.py`, DB `evidence` |
+| 초록 기반 claim | `extract-abstract-claims.py`(수동, 마지막 10/24): 초록의 수치 문장만 → `abstract-quote` 106건. 해석은 검토되지 않았다고 답변에 명시됨 | `auto-claims.json`, `claims` |
+| **벡터 → 그래프 → 지식그래프**인가 | **아니오. 벡터와 그래프는 별개 갈래이고 서로 입력이 아니다.** 그래프 생성 코드(`graph_lib.py`·`update-graph.sh`·`extract-knowledge-graph.py`·`build-graph.py`·`build-knowledge-db.py`) 어디에도 임베딩 참조 없음. 지식 DB(`knowledge.sql`)에는 벡터가 아예 없고 FTS5 키워드 인덱스만 있음 | grep 0건 |
+| 임베딩 범위 | 3,937개 문서(concepts 3,212 · raw 363 · 뉴스 300 등), **문서당 앞 2,000자만, 청킹 없음** | `embeddings.json`, `embed-docs.py` |
+| discovery 그래프 입력 | `raw/` 문서 앞 6,000자(= 논문은 사실상 초록 전체)를 LLM(haiku)으로 추출, 미검증 레이어 | `extract-knowledge-graph.py` |
+
+### 시사점 (설계 반영 후보, 미착수)
+
+1. **전문이 지식그래프의 사실 근거가 되는 경로는 수동 1개뿐**이라 신뢰 높은 claim(253건)은 109편에 머문다. 자동 수집되는 논문 대부분(초록만)은 검증 claim이 되지 못한다.
+2. 보존 원문(130건)이 임베딩·검색·그래프 어디에도 쓰이지 않는다 — 자산이 있는데 소비처가 없다.
+3. 임베딩은 문서 앞 2,000자만 본다. 논문 초록은 포함되지만 본문 내용은 검색에 잡히지 않는다.
+4. 보완 후보(우선순위 순): ⓐ `pipeline.py`의 `totxt`·`verify`를 일일 파이프라인 단계로 편입(후보 claim 작성은 AI, 판정은 코드라는 기존 원칙 유지) ⓑ 원문 미보존 논문(노트의 56%)에 대한 재시도 ⓒ 전문 청킹 임베딩(엔티티 링킹 보조용, Phase 3과 함께).
