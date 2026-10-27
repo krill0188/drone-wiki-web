@@ -27,6 +27,7 @@ import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { designEvidence } from "@/lib/evidence"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
+import { eventsEnabled, relatedEventsFor } from "@/lib/events"
 import type { DocContext } from "@/lib/types"
 import type { DocViewRecord } from "@/lib/session-store"
 
@@ -118,7 +119,9 @@ export async function POST(req: NextRequest) {
         stream: tapped,
         messageMetadata: ({ part }) => {
           if (part.type !== "finish") return undefined
-          const meta = { ontologyClasses: plan.classes, modelTier: tier, answerMeta: metaForStreamed(plan, ctx, acc.text) }
+          // 최신 동향(미검증)은 모델 컨텍스트가 아니라 이 메타데이터로만 클라이언트에 간다(KG_EVENTS=1일 때만).
+          const events = eventsEnabled() ? relatedEventsFor(plan.entities) : []
+          const meta = { ontologyClasses: plan.classes, modelTier: tier, answerMeta: metaForStreamed(plan, ctx, acc.text), ...(events.length ? { relatedEvents: events } : {}) }
           if (cacheable && meta.answerMeta.status === "answered") cachePut(ckey, acc.text, meta)
           return meta
         },

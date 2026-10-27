@@ -13,6 +13,7 @@ import { DOMAIN_META } from "@/lib/types"
 import DroneIcon from "@/components/DroneIcon"
 import { getSessionStore } from "@/lib/session-store"
 import { getSessionId } from "@/lib/session-id"
+import RelatedEvents from "@/components/RelatedEvents"
 
 import { buildTextFragmentUrl } from "@/lib/text-fragment"
 
@@ -22,6 +23,8 @@ interface ChatMetadata {
   sources?: { slug: string; title: string; domain: string; excerpt?: string; origin?: "canonical" | "raw"; sourceUrl?: string }[]
   newsSources?: { title: string; url: string; type: string }[]
   kgFacts?: { id: string; text: string; source?: string }[]
+  // 검증되지 않은 최신 동향(뉴스·영상). 답변의 근거가 아니며 모델은 이 내용을 보지 못한다.
+  relatedEvents?: { id: string; title: string; url: string; source: string; eventType: string; published: string; about: string }[]
   answerMeta?: {
     basis?: "ontology" | "ontology-linked" | "wiki-sourced" | "none"
     status: "answered" | "insufficient_evidence" | "unverified"
@@ -249,6 +252,8 @@ export default function ChatWidget() {
                       </div>
                     </details>
                   )}
+
+                  {m.role === "assistant" && <RelatedEvents events={meta?.relatedEvents} />}
 
                   {m.role === "assistant" && meta?.kgFacts && (
                     <details className="px-1" open={meta.kgFacts.length > 0 && meta.kgFacts.length <= 6}>
