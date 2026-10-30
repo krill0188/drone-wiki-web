@@ -1,6 +1,710 @@
 {
  "events": [
   {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:fb812db3e338",
+   "published": "2026-10-29",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Call for Information on Future Air Traffic Services Rulemaking",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/call-for-information-on-future-air-traffic-services-rulemaking-2/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:e678228dcd05",
+   "published": "2026-10-29",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "Utica Names Axon and Skydio for Drone Trial Flock Pitched in June - DroneXL",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSGtFQnVQN2duanhoWlZZbWd1aXpFNmpyN00wbVVUbnJmdnU5ZVhZNDcybmMwODYyOGRjM2h1V2c0N1kyY0hSNjVvbmJYMEVoc3JTNVRwUnFBWV9Gbnd3T0xfUDZoVFNGZFE2dlV0RGhXV3FOMWltd3Fmb214Wlp5Q3M2MFV3cU9K?oc=5"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:c611f172b436",
+   "published": "2026-10-29",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Reach Power Achieves First-of-Its-Kind Persistent Autonomous Drone Flight Powered Wirelessly for 10 Hours",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/reach-power-achieves-first-of-its-kind-persistent-autonomous-drone-flight-powered-wirelessly-for-10-hours/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "video",
+   "id": "event:a3455765ac32",
+   "published": "2026-10-29",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[UAV Coach] DJI Is Updating Older Drones",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=7ZCHSuPmJiY"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:920f660765b8",
+   "published": "2026-10-29",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "Zipline Announces Quieter Drone Deliveries as Communities Raise Noise Concerns",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/29/zipline-drone-delivery-noise-reduction/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:8c755f49bef0",
+   "published": "2026-10-29",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "FCC Opens 50 MHz of Cellular Spectrum for Drone Operations",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/29/fcc-opens-cellular-spectrum-drones-800-mhz/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:7fe1d439648f",
+   "published": "2026-10-29",
+   "source": "dronedj.com",
+   "status": "unverified",
+   "title": "UgCS 6.3 adds terrain-following control for complex drone LiDAR surveys",
+   "type": "Event",
+   "url": "https://dronedj.com/2026/10/29/lidar-drone-survey-dji-ugcs/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:75d1d780ab50",
+   "published": "2026-10-29",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "Matternet Gains Access to More Than 2,300 North American Hospitals Through Swisslog Healthcare Partnership",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/29/matternet-swisslog-hospital-drone-delivery/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:599e51b93ae7",
+   "published": "2026-10-29",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[DJI] A Spooky Little Strut | DJI Osmo Mobile 8P",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=HP10Hq-DNgk"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:575b3a446aa5",
+   "published": "2026-10-29",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "UgCS 6.3 adds terrain-following control for complex drone LiDAR surveys - DroneDJ",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE15blFJSzRhay1hTGhtMDBIRlZVRUVzU0pvYXhmZm9RT1cyaDh2TzI2cDU5X2dkZkFWQ001ZWZ1ZG1kdjAyREtjY0JtYUFrNXVQRGktSkVCa2Z3VEV0NHUzanRTWU96NkZUX2JJ?oc=5"
+  },
+  {
+   "domain": "flight-control",
+   "eventType": "video",
+   "id": "event:53c350d4d2f8",
+   "published": "2026-10-29",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[PX4 Autopilot - Open Source Flight Control.] Dronecode Community Update | PX4 Developer Summit 2026",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=X7eWtAvoxVc"
+  },
+  {
+   "domain": "gcs-software",
+   "eventType": "video",
+   "id": "event:460de501e720",
+   "published": "2026-10-29",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[MATLAB] Calling Python from MATLAB | MATLAB and Python for Students",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=zDqfJssxg-o"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:27bea941cfc3",
+   "published": "2026-10-29",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "FCC Proposes New Rules for Drone Communications and Counter-Drone Radar",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/29/fcc-drone-communications-counter-drone-radar-rules/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:2575168577e6",
+   "published": "2026-10-29",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[DJI] A Sea Turtle Encounter in DJI | DJI Osmo 360 II",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=xKJF8pWYHf4"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:1c9da025621e",
+   "published": "2026-10-29",
+   "source": "dronedj.com",
+   "status": "unverified",
+   "title": "Rick Scott doubles down on DJI and Autel drone restrictions as FCC reviews appeals",
+   "type": "Event",
+   "url": "https://dronedj.com/2026/10/29/rick-scott-dji-drone-fcc/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:15f47d22b865",
+   "published": "2026-10-29",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Results JammerTest 2026 – GNSS Under Attack: What the Data Reveals",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/results-jammertest-2026-gnss-under-attack-what-the-data-reveals/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:0453df82878d",
+   "published": "2026-10-29",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Snowdonia Aerospace Test Centre selected as ARIA’s flight test partner in Wales for Enduring Atmospheric Platforms programme",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/snowdonia-aerospace-test-centre-selected-as-arias-flight-test-partner-in-wales-for-enduring-atmospheric-platforms-programme/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:007fc7d9201f",
+   "published": "2026-10-29",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "High Eye Integrates Intelic NEXUS into Airboxer, Expanding Software IntegrationCapabilities and Mission Modularity",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/high-eye-integrates-intelic-nexus-into-airboxer-expanding-software-integrationcapabilities-and-mission-modularity/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:fc082981a2eb",
+   "published": "2026-10-28",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[DJI] Halloween in Light | DJI Mavic 4 Pro",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=wNtvq3wnYGQ"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:f93d3fdd97a2",
+   "published": "2026-10-28",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "New State Drone Laws Create Patchwork of Restrictions, Raising Concerns for Operators",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/28/state-drone-laws-patchwork-flight-restrictions/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:f5493e394464",
+   "published": "2026-10-28",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "SPARC AI Signs MOU for European Fixed-Wing UAV Integration and Advances Commercial Strategy in the Middle East",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/sparc-ai-signs-mou-for-european-fixed-wing-uav-integration-and-advances-commercial-strategy-in-the-middle-east/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:f2ae56a54acd",
+   "published": "2026-10-28",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Maris-Tech Unveils Edge AI Platform for Real-Time Video Intelligence and Autonomous UAVs",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/maris-tech-unveils-edge-ai-platform-for-real-time-video-intelligence-and-autonomous-uavs/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:ec14aaf13721",
+   "published": "2026-10-28",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "Basquevolt and Battera Technologies Partner on Lithium Metal Batteries for Aerospace Applications",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/28/basquevolt-and-battera-technologies-partner-on-lithium-metal-batteries-for-aerospace-applications/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:9f5cbf9f244b",
+   "published": "2026-10-28",
+   "source": "dronedj.com",
+   "status": "unverified",
+   "title": "Your industrial drones collect data. Percepto wants AI to make it count",
+   "type": "Event",
+   "url": "https://dronedj.com/2026/10/28/percepto-axion-drone-inspection-ai/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:9b321bf67f1c",
+   "published": "2026-10-28",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "MindLink and Everfox enable real time collaboration across classified network boundaries",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/mindlink-and-everfox-enable-real-time-collaboration-across-classified-network-boundaries/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:93196582cc22",
+   "published": "2026-10-28",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "NATO Nations Gain Faster Access to Combat-Proven Danish Drones Through New Procurement Agreement",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/28/nato-drone-procurement-sky-watch-rq35-heidrun/"
+  },
+  {
+   "domain": "gcs-software",
+   "eventType": "video",
+   "id": "event:8372e6bb53a4",
+   "published": "2026-10-28",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[freeCodeCamp.org] How Ethical Hackers Actually Break Into Systems",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=cqfl38Ip1ho"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:81386fbdeb0b",
+   "published": "2026-10-28",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "FCC Touts Industry Support for Opening 800 MHz Cellular Spectrum to Drones",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/28/fcc-drone-spectrum-800-mhz-industry-support/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:7d58f843775c",
+   "published": "2026-10-28",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "ANRA Advances NATO-Tested Counter-Drone Technology With UTM Airspace Data",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/28/anra-advances-nato-tested-counter-drone-technology-with-utm-airspace-data/"
+  },
+  {
+   "domain": "ai-autonomy",
+   "eventType": "release",
+   "id": "event:748445535726",
+   "published": "2026-10-28",
+   "source": "github.com",
+   "status": "unverified",
+   "title": "yolo v8.4.192 릴리즈",
+   "type": "Event",
+   "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.192"
+  },
+  {
+   "domain": "gcs-software",
+   "eventType": "video",
+   "id": "event:6ea4ca1ac82c",
+   "published": "2026-10-28",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[핑크랩 PinkLAB] 바이킹이 대서양을 건넌 비밀은… 생선 대구였다고?!",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=6KKrBn-56_g"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:536902f3b283",
+   "published": "2026-10-28",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[DJI] Balloon Jump, Every Angle | DJI Osmo 360 II",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=QE1V_OfCRXg"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:3ac31806ba44",
+   "published": "2026-10-28",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Allient Inc. Names Dave Larcenaire General Manager of Allient Denver",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/allient-inc-names-dave-larcenaire-general-manager-of-allient-denver/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:3753e7503f5a",
+   "published": "2026-10-28",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "Quantum Systems Establishes Japanese Subsidiary and Tokyo Office",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/28/quantum-systems-establishes-japanese-subsidiary-and-tokyo-office/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:2cab3edc05c4",
+   "published": "2026-10-28",
+   "source": "dronedj.com",
+   "status": "unverified",
+   "title": "Drone delivery noise is becoming a problem. Zipline has a new answer",
+   "type": "Event",
+   "url": "https://dronedj.com/2026/10/28/delivery-drone-noise-zipline-software/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:1f138de490ed",
+   "published": "2026-10-28",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "US Army Tests VMAX Electronic Warfare System With Skydio X10 Drones - Военное дело",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVXBhT0puQlBhVGNmTy0tSF9BbXVSS1pfV05rUG5hTmJkbFVqSjNKdWRvbWN2UlF6bFFlRnFsQ2xGcVRHRXFKSnpFS1NYM0ZRQ05jUjF1NVVtTlVtd2Zfb3ZiSkNPbWlrUVVtZ0ltM3BPR0JBNWFab1U3S3ZHR043ZjBibDB5XzkzS01FRDB2Y2pJWTN5WHhwT3pKck1BRlZuZERyazFGQ0FLUHVV?oc=5"
+  },
+  {
+   "domain": "regulations",
+   "eventType": "regulation",
+   "id": "event:01eae00258c7",
+   "published": "2026-10-28",
+   "source": "federalregister.gov",
+   "status": "unverified",
+   "title": "Notice of Order Designating U.S. Aviation Safety Team (USAST) Information as Protected From Disclosure",
+   "type": "Event",
+   "url": "https://www.federalregister.gov/documents/2026/10/28/2026-21964/notice-of-order-designating-us-aviation-safety-team-usast-information-as-protected-from-disclosure"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:fb404813f031",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[DJI] Too Messy for a Retake | DJI Osmo 360 II",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=fwSzjr2dNLU"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:f8473cf2c47e",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[Joshua Bardwell] Over-engineered Tweezer? Or fidget toy? // @MetMoCube PRECISION GRIP",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=8xBXd9rpV3E"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:e7d52b58949d",
+   "published": "2026-10-27",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "DHS Procurement Forecast Includes Counter-Drone Cybersecurity and Training",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/27/dhs-counter-uas-procurement-cybersecurity-training/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:dc9cae2c6d70",
+   "published": "2026-10-27",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Luxonis OAK 4 FFC Lets Robot Builders Design Their Own Multi-Camera Vision System on One Board",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/luxonis-oak-4-ffc-lets-robot-builders-design-their-own-multi-camera-vision-system-on-one-board/"
+  },
+  {
+   "domain": "gcs-software",
+   "eventType": "video",
+   "id": "event:d858ba8db9e6",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[MATLAB] What Is Simulink Design Verifier?",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=K86oOsSCdgA"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:be2418d812c2",
+   "published": "2026-10-27",
+   "source": "dronedj.com",
+   "status": "unverified",
+   "title": "DJI Modify 1.7.0 adds new ways to refine drone 3D models",
+   "type": "Event",
+   "url": "https://dronedj.com/2026/10/27/dji-modify-update-drone-mapping/"
+  },
+  {
+   "domain": "gcs-software",
+   "eventType": "video",
+   "id": "event:bb7ba9e2f2d6",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[핑크랩 PinkLAB] 핑크랩의 원격 교육 - PinkLAB Studio를 소개합니다.",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=uoDRE5IqLfc"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:a1e121ca3535",
+   "published": "2026-10-27",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "DJI Modify 1.7.0 adds new ways to refine drone 3D models - DroneDJ",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5RM2FuaU5IREljTWdXX3VoRGpPa1U0UDhIM21ON0dubE00aTI1aDBqa2lobml3bjVWNUpDZ0RxVjc5ZWNYZWhybTBJTXJ2WlBkRDhHRHoyVVhKeXI2bUZSSnBHSzVOUmFMTGxNeHI5WTA?oc=5"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:96228b289414",
+   "published": "2026-10-27",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "SFPD's Proposed Drone Rules Stop Short of Sonoma's Court Settlement - DroneXL",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdzAtNDEwUTdyMHdOelhkVWd6ZHVyaWp3MFNXOTBJYVJhZ3B5YTVlNFdvQmJMOXJudzh5U0tuMkxJbDhteDdrUk1UX1VON2tUUXVqWHFWbTh0QU5WLTdJVjNwYVJmV2V3Zl8tYnhINU9rMWtkc1RnZko4UVJNSnZ0akJ0cDVvOFdSSzRhZQ?oc=5"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:8fdbdd420b41",
+   "published": "2026-10-27",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "As U.S. Drone Manufacturing Accelerates, Faster Technology Integration Becomes Critical",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/27/suntek-thermal-drone-technology-integration/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:8d4831c8fc1d",
+   "published": "2026-10-27",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "Californians revolt against police drones after rapid adoption across state - LAist",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUEpSNVR2dC1DNHFMbGRSRlBEV1FjZl8weEtNd2c4UTg3Rm5FT0FSam8tYzlkUW9Bc2ZuV0JacEVKeTFOU25Va3g1ZHo0a2N5ODBjdktNYWxDbHN3TWxxNlI2RVREcy1IWUFUdjBDWjFsRHVfaVZRazBqME96LWRKZDdqM3pnS0hFeDJUeERXdlhiZE92dlB2czNUTVVhUzRQRnMzUkJIWlZvT25fdUNiTmt1cTdQUQ?oc=5"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:8157662a843b",
+   "published": "2026-10-27",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "ABZ Innovation Launches C30 Industrial Spray Drone in Hungary",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/27/abz-innovation-launches-c30-industrial-spray-drone-in-hungary/"
+  },
+  {
+   "domain": "ai-autonomy",
+   "eventType": "release",
+   "id": "event:7b31d140ce61",
+   "published": "2026-10-27",
+   "source": "github.com",
+   "status": "unverified",
+   "title": "yolo v8.4.191 릴리즈",
+   "type": "Event",
+   "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.191"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:715124daa75c",
+   "published": "2026-10-27",
+   "source": "oscarliang.com",
+   "status": "unverified",
+   "title": "How to Charge FPV Drone LiPo Batteries Step-by-Step Guide",
+   "type": "Event",
+   "url": "https://oscarliang.com/how-to-charge-lipo-batteries/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:617e04a39d4f",
+   "published": "2026-10-27",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "ANRA Advances NATO-Tested Counter-Drone Technology With Airspace Data for Enhanced Threat Detection",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/anra-advances-nato-tested-counter-drone-technology-with-airspace-data-for-enhanced-threat-detection/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:4f09d3371337",
+   "published": "2026-10-27",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "Sweden Selects Saildrone for Year-Long Mission in the Baltic Sea",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/27/sweden-selects-saildrone-for-year-long-mission-in-the-baltic-sea/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:45c29bec2a7f",
+   "published": "2026-10-27",
+   "source": "dronelife.com",
+   "status": "unverified",
+   "title": "Percepto Launches Hardware-Agnostic Axion Platform for Infrastructure Inspection Data",
+   "type": "Event",
+   "url": "https://dronelife.com/2026/10/27/percepto-launches-hardware-agnostic-axion-platform-for-infrastructure-inspection-data/"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:4423846a605d",
+   "published": "2026-10-27",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Keeping Critical Data in Canada: How ThinkOn and AVSS Are Building a Sovereign Platform for Public Safety and Defence",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/keeping-critical-data-in-canada-how-thinkon-and-avss-are-building-a-sovereign-platform-for-public-safety-and-defence/"
+  },
+  {
+   "domain": "flight-control",
+   "eventType": "video",
+   "id": "event:3f67f1e891b8",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[Painless360] Fix Low/Standby Power Warning in Your HD FPV Goggles (Walksnail, DJI , HDZero etc.)",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=4nEbpeUawpk"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:3afa8b0b6b56",
+   "published": "2026-10-27",
+   "source": "dronedj.com",
+   "status": "unverified",
+   "title": "Own a DJI Flip drone? Check these settings after the latest update",
+   "type": "Event",
+   "url": "https://dronedj.com/2026/10/27/new-update-dji-flip-drone/"
+  },
+  {
+   "domain": "comms-protocol",
+   "eventType": "release",
+   "id": "event:3a1bcc6a2ea1",
+   "published": "2026-10-27",
+   "source": "github.com",
+   "status": "unverified",
+   "title": "mavsdk v4.1.0 릴리즈",
+   "type": "Event",
+   "url": "https://github.com/mavlink/MAVSDK/releases/tag/v4.1.0"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:3a02d98e6a08",
+   "published": "2026-10-27",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "The weakest part of every survey job is the delivery. So we built our own",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/the-weakest-part-of-every-survey-job-is-the-delivery-so-we-built-our-own/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "video",
+   "id": "event:2ae9f42735de",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[DJI] That Moon Didn't Move. The Drone Did. | DJI Mavic 4 Pro",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=k7gL6AYMF98"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:2104da3cfc39",
+   "published": "2026-10-27",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "King Willem-Alexander to open Robin Radar Systems’ new Delft headquarters",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/king-willem-alexander-to-open-robin-radar-systems-new-delft-headquarters/"
+  },
+  {
+   "domain": "gcs-software",
+   "eventType": "video",
+   "id": "event:0f7f378cc7e4",
+   "published": "2026-10-27",
+   "source": "youtube.com",
+   "status": "unverified",
+   "title": "[freeCodeCamp.org] Jev Course – Prefill-Only Inference & Decision Models from Scratch",
+   "type": "Event",
+   "url": "https://www.youtube.com/watch?v=aZglGvBPQGs"
+  },
+  {
+   "domain": "ops-mission",
+   "eventType": "news",
+   "id": "event:04ac2748fc35",
+   "published": "2026-10-27",
+   "source": "www.suasnews.com",
+   "status": "unverified",
+   "title": "Percepto Launches Hardware-Agnostic Axion Platform, Bringing Physical AI to Mission Critical Operations",
+   "type": "Event",
+   "url": "https://www.suasnews.com/2026/10/percepto-launches-hardware-agnostic-axion-platform-bringing-physical-ai-to-mission-critical-operations/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:d1fd70ec4455",
+   "published": "2026-10-26",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "Royal Navy opens tender for Skydio X10D reconnaissance drones - Dealroom",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNN3ZBMlBKWnpNVDkwTUZnOXhiRTJMcFl2dXlsdTFXZUI4WE9RVlRrTjNJbnY0ckdrSkpHejZWUUpqNndiaHkxeG5mYWRWMkpFalpnbnlWRk5jYUtXRkxzcndVVm1KdDNRQ295MEdzQnZHalF1Q3JwY0hRVkY4UzFjVFRyTFFaX0xHLTJDaHlmYjhsbDBCb0pRYktSWQ?oc=5"
+  },
+  {
    "domain": "hardware",
    "eventType": "video",
    "id": "event:a8d1a4fb1f9a",
@@ -98,6 +802,17 @@
    "title": "FCC Seeks Input on Simplifying Satellite Communications Rules for Drones",
    "type": "Event",
    "url": "https://dronelife.com/2026/10/26/fcc-satellite-communications-rules-drones/"
+  },
+  {
+   "domain": "hardware",
+   "eventType": "news",
+   "id": "event:3b0b9755e3f8",
+   "published": "2026-10-26",
+   "source": "news.google.com",
+   "status": "unverified",
+   "title": "DJI Matrice 5TD's Native 1280 Thermal Has a US Drone Maker Alarmed - DroneXL",
+   "type": "Event",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWmt2QlRHY2ZZU2hGa09rbFJWeHlRRWd6aW1CSm1XZ2paUHJ4ZG1hc05LWUlUREg3aEN2REZDMDh4empqbVVTcHBva0lCTEFTY3k2Q2dpMU1xaWhfcE9kanBxZmQzRk9odjBJNjAzSE9vX0RyZFp4U3c4eUdfazdLT2NFNlI4MTVIcllFd3RjQmo?oc=5"
   },
   {
    "domain": "ops-mission",
@@ -2443,17 +3158,6 @@
    "url": "https://dronelife.com/2026/10/15/anra-technologies-introduces-vista-for-shared-drone-airspace-awareness/"
   },
   {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:9af94e0c9b18",
-   "published": "2026-10-15",
-   "source": "news.google.com",
-   "status": "unverified",
-   "title": "DJI Delivers First Drone Dock with Automated, 25-Second Battery Swaps for Always-Ready Aerial Support - WebWire",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0LWdvbk1Hc0RWRWRrOEtaOXY5ME9uVkRmdVd3Slo1azZtcERISmpYLTJyLWoyY1pBSVIybUhmRDdZREVHQ1JWYkFvcDJmWXYwbmFlbEVwdXdrWEJkRjV2MQ?oc=5"
-  },
-  {
    "domain": "ops-mission",
    "eventType": "news",
    "id": "event:9a4db222c6ee",
@@ -2520,17 +3224,6 @@
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fbzVJZ08zbVBnLURjZ3ZJUUh1R044MjIwUmFQQUg2N3ZDd0ppWjFvd0xRZTd0b1FKOUgwQ1pyQUhYUFhUVzNoS1VWSVlkLXhfRTUyVWZqVDZtMFdDOTdrTG1lTGI4VkhSYm1R?oc=5"
   },
   {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:83c48b7df83c",
-   "published": "2026-10-15",
-   "source": "dronedj.com",
-   "status": "unverified",
-   "title": "Rownd lands $10 million defense contract to advance autonomous drones",
-   "type": "Event",
-   "url": "https://dronedj.com/2026/10/14/rownd-drone-ai-jobs-wisconsin/"
-  },
-  {
    "domain": "",
    "eventType": "news",
    "id": "event:7fe2f019f1a3",
@@ -2584,17 +3277,6 @@
    "title": "‘단돈 2000원’으로 드론 뚝…K-방산, 세계 첫 실전 레이저포 시연",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1SRUptSTRjenUwd1VXODF5amZZSktXZjViT0FxTkFyVzhIb0VIeWJ0cFpPejNnUGZtOXhybjZzYmNpVVRrRVB2Q3laYzk2QQ?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:4eee79626b67",
-   "published": "2026-10-15",
-   "source": "dronedj.com",
-   "status": "unverified",
-   "title": "New DroneShield update sharpens drone detection and countermeasures",
-   "type": "Event",
-   "url": "https://dronedj.com/2026/10/14/droneshield-new-q4-software-update/"
   },
   {
    "domain": "",
@@ -2720,138 +3402,6 @@
   {
    "domain": "hardware",
    "eventType": "news",
-   "id": "event:f2a52b09b2c0",
-   "published": "2026-10-14",
-   "source": "news.google.com",
-   "status": "unverified",
-   "title": "DJI Delivers First Drone Dock with Automated, 25-Second Battery Swaps for Always-Ready Aerial Support - Morningstar",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPQVdnN05wYi1zaVlUcU00WUVpWjBZNFNLZ0pvRzIycTBiczJ4anhvRlY3aW9RaVZnRzJRM2lBeDktbXZpZjRhbVI3Z0JHS25CdGRKc2x4a2ROQ0dCOEtVcGNuOFBKRlRuNS1qNjJjYjFiMUtuT0UzcU9GbjhxWThYSnY5VU82NmtSNy0tLVdTUWpabHFtX013YktJdkhwbzIwaUJjSmw5Zl9WV3RXejNEakwyZU13WnVOWjFaTEhpVDBsVnN2Nk9WVjNPR254cWVDU0JZU1U5NEV3M2syR0I0d09ja2lJQ1huVEtGaWNjcnJrdWc?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:ea7793e93514",
-   "published": "2026-10-14",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Sumitomo Forestry and Mazex Expand Forestry Cargo Drones With Lower-Cost Karusuke Series",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/14/sumitomo-forestry-and-mazex-expand-forestry-cargo-drones-with-lower-cost-karusuke-series/"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:dca9b885f6c1",
-   "published": "2026-10-14",
-   "source": "MBC 뉴스",
-   "status": "unverified",
-   "title": "후티 \"사우디 아람코·공항에 미사일·드론 공격‥며칠간 계속\"",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBYMXVJdWl2TUxteE1oTXdlekRJb215dThPcTBQN1RQNW9uV2Jib2V0T0lvUHBucE5jb0JkVGxrRFZ0cEVPMGUtaGZTYl9jYkp4Mm1FSnJndXNuVkdIdWxTMnhQY2dIdDBqSDdQTFpfN3hIdWxp0gF0QVVfeXFMUGhhMWw1VVk4WmJWSmgycmpKR3JHVnZLeF80b1JIa3FCaDUwNVdSaXFFNWtxcUxpaTI1T3Zpa1pJRjQxcW9zWnZReUg2R01PbUlDUE5nUm1sOVhtMXQ1RmtBdHdOd1B1WFJ5ZVBIZEV1ajJvUF8?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "gov",
-   "id": "event:d9161d7622b9",
-   "published": "2026-10-14",
-   "source": "아산데일리",
-   "status": "unverified",
-   "title": "아산 외암민속마을 짚풀문화제 16일 개막… 전국 공예작품·드론쇼 선보인다",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1kWTl3TzZyTGVwUkRtMkdFc3N6UGFFdGlESVFlTjB3ZFliempfSXRnZko0RG9hNWwtTEFvOXU5MWUwYWxza0JQWXI2UFpPdjFPeGYw?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:d24afc3fb429",
-   "published": "2026-10-14",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "AVSS Proves Canadian Manufacturing Prowess with UK SORA SAIL Mark Certification",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/avss-proves-canadian-manufacturing-prowess-with-uk-sora-sail-mark-certification/"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:c1d715448e23",
-   "published": "2026-10-14",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "DroneShield Q4 Software Release Helps Operators Detect, Identify and Defeat Drone Threats Faster",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/droneshield-q4-software-release-helps-operators-detect-identify-and-defeat-drone-threats-faster/"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:b323b6b5bd9a",
-   "published": "2026-10-14",
-   "source": "연합뉴스",
-   "status": "unverified",
-   "title": "후티 \"사우디 아람코·공항에 미사일·드론 공격…며칠간 계속\"",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5mc1p2TjFOemRRbUk2cVZ0NlF3bmxqYi1EYlhzcUNLU0t6SzdnVERhTkZ1aWtZWW9lQ0liWHhHYUl3eGJQYkp5QU1tM1JzRkQ2RU1QcW5SaThtSDjSAWBBVV95cUxOM2lUZVNGcHJvOHp6dDRoQkc2UVpnekgyX1JXYW9IdDhsRmlnc0ZuSnVaUGhKbGRISlVqN3E0OFIxcDhwcWFISW9oeVZFNjhQUjVhdUhJT0dfa3NkeDNKd1Y?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:a1e9a5d5a5e1",
-   "published": "2026-10-14",
-   "source": "머니투데이",
-   "status": "unverified",
-   "title": "미국 군사작전 재개?…이란 매체 \"美 드론 공격으로 어민 3명 부상\" - 머니투데이",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ydWR6VU85bTE1MnZLanBHdE02TXUwNm1GbHZuMlpSYXFTUTdRWmd1WWg3S0w4NU1VQjQxRndSRjZKajVoalQ3ZnQ4SThhRHFZcmRPRDl4N2w2dDRxZTBlcDQySEhhNEI20gFuQVVfeXFMTkRNazJFR2JYdVQzdHIzQW9wN3JSQVJiQU5KMkhPV3V4UVJDbFNGblNkcHEwZDMyS2JJT3d1N01Bb29vdlk0NTdEU2d2SDhDSEpmSklFTWhuRVRXM09sdWNmMV9xY3JubTlESEkzWmc?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:946ed6911189",
-   "published": "2026-10-14",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Drone Nose? Japanese Researchers Develop New Hydrogel To Combine Bug Antennae with Drones",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/14/drone-nose-japanese-researchers-develop-new-hydrogel-to-combine-bug-antennae-with-drones/"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:923af78178ab",
-   "published": "2026-10-14",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "skyAlert: Hands-Free Traffic Awareness for UAS Pilots",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/skyalert-hands-free-traffic-awareness-for-uas-pilots/"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:8f6e687cd6c8",
-   "published": "2026-10-14",
-   "source": "매일경제",
-   "status": "unverified",
-   "title": "반도체 만들듯 드론도 찍어낸다…물량 급한 美 방산업체들, 대만 러시",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1YZFJfamxBaHE0OUkxdkFKdWFzZ0xOckFYa2RUcjZQTGtqX2U1Rkd6UThKejlwVGZ0TmVUV2c2dmFMbUtScW5kdFZjalV2c1Y3WHc?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:8f3d2915edd7",
-   "published": "2026-10-14",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "U.S. Drone Manufacturers Expand International Defense Sales as Nepal Orders SPIRIT",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/14/u-s-drone-manufacturers-expand-international-defense-sales-as-nepal-orders-spirit/"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
    "id": "event:8e1a40e1a601",
    "published": "2026-10-14",
    "source": "news.google.com",
@@ -2859,39 +3409,6 @@
    "title": "DJI Matrice 5 Series drone has its specs leaked ahead of big announcement, here's how it compares to last gen - PC Guide",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMTRHOE56dUwzeWJmZ082Y3FOZVJLTWpyN1RuVm9PdktZcWJOTHRuS2NFQ0t1dU5DdTdHd3pTejlGS0Z2aUNaMXloZFJpVzYtWlp6UnVMaGR4UUU0SjlFeFR0MHM0dWdOb0tkdlh0VkFDUmRTY1FHV043aDB6QjRpNVZFYlBOQVpWZXY3RE1laU1IcmRmS09EUDE2TkQyejkwQ21UNGpQUURmelFrR1Y2VlZNaUxyT05wOUNCNERIRFREVUE3a1hsbHBQNDYxQzN0bzhv?oc=5"
-  },
-  {
-   "domain": "gcs-software",
-   "eventType": "video",
-   "id": "event:8d11b7039cdc",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[MATLAB] Trace AI Agents in MATLAB with OpenTelemetry",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=eXDkMO7lgg0"
-  },
-  {
-   "domain": "flight-control",
-   "eventType": "video",
-   "id": "event:8cef9fa21461",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[Painless360] Just out! EMAX Tinyhawk Aero, their first ever custom built 'racer'",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=O5ISivEChw0"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:8b00d14e3bf6",
-   "published": "2026-10-14",
-   "source": "oscarliang.com",
-   "status": "unverified",
-   "title": "Build an FPV Track at Home Using PVC Pipes: RaceGOW Tiny Whoop Racing Gates",
-   "type": "Event",
-   "url": "https://oscarliang.com/tiny-whoop-racing-gates/"
   },
   {
    "domain": "",
@@ -2903,149 +3420,6 @@
    "title": "국내외 첨단드론·방산기술 한자리에… 「2026 이천 첨단드론대전」 15일 개막",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE56VXpTcklldEhweE0wNzNaa0ozeHFVSk5PTkVZZGpkSmpKNHhwNUlQN3g2TEtSNDhJMS02bmJGTVZLQkNSTGFZT2Q4b0F3MmM5MWFmTkdmY0Iyb1FGM0VGT2oxbkc3OFM2?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:8401c50fa061",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[Joshua Bardwell] This \"durable\" drone is awful // Axisflying Bando 5",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=Mo15TyjLqgs"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:8338f8c5bf70",
-   "published": "2026-10-14",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Robot Dogs and Drones? Asylon Robotics Guards Critical Infrastructure",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/14/robot-dogs-and-drones-asylon-robotics-guards-critical-infrastructure/"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:78a9eda24f89",
-   "published": "2026-10-14",
-   "source": "뉴스1",
-   "status": "unverified",
-   "title": "\"美방산업체, 대만서 드론 생산한다\"…中공급망 의존 축소 및 견제",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBOMlVvUXBzdG5DZE9RM1FObVNEV1RuQVAxbUhWb2dtN1FJRnhGUUlwaFV4ekxjY1pvZTJjVUlkY3g0em5lZzRuUnhuNjNUM1R2SmFhRW1DTDc?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:75c70aa2587a",
-   "published": "2026-10-14",
-   "source": "아시아투데이",
-   "status": "unverified",
-   "title": "전시장을 벗어난 드론 기술, 이천 하늘서 성능 선보인다",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2TTNQc2dIelpKWnV4MXF1aTFwR2lZYnh5LWVLcF96WTkwQ0cwejlpY0RMZlNTQ3FabkZ3bnZNMjRIV19KbGNLX1J4OFkzT2ZpQzF4dk9UcndqcnBJQXltdkN4bWVqX1hYQ2kxZUJ3?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:66d72e716255",
-   "published": "2026-10-14",
-   "source": "드론매거진 뉴스",
-   "status": "unverified",
-   "title": "이천첨단드론대전 ,이천시 복하천 드론경기장 일원서 개최",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE80SFFJMG53X0lBMC13b0Vvc3pISWI5WDN1OFRJZjQtVGtGQjJnWmZQbEpLd0l1bWc1SmV4UWFLcFNjYUlEWjUzQ0pFd3JQRUcxWHJ4d3p3R3R6WmcwOXFjLVdROXo?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:5682f746c361",
-   "published": "2026-10-14",
-   "source": "MBC 뉴스",
-   "status": "unverified",
-   "title": "이란 매체 \"미군 드론, 어선 공격해 3명 부상\"",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBLUUlCdGU4bTJNS1BuWmIyV25rNWh1TXFySFBJQ3VTZ3lxRnlZQlhnRHhSRDd4M2FDd2FKTWFEUmtUcHg0YzZyNWRlTVRnTWxpaW9Zc1Utb0daV050Z2NpMDdZU2NRUmVDRWsxTTEtMW1VUEtC0gF0QVVfeXFMUFE0S2lzWFB3aHlxdkhkOXJQXzg0MmlFRkpxYWwyS0cyRGhoYnhkQWoxSGNFblZCVGNjWkNGYlJkTEk4UmFBVWdNei1QRGMtakU3SldSUUw2V1NsU3A4cnM4UVBBd3dOVVJyNV9ha0VOcXp6M04?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:4bd6221dbcc1",
-   "published": "2026-10-14",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Pentagon Details $450 Million Drone Dominance Competition as Gauntlet 2.5 Moves to November",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/14/drone-dominance-phase-iii-gauntlet-2-5/"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:4b45d724a081",
-   "published": "2026-10-14",
-   "source": "news.google.com",
-   "status": "unverified",
-   "title": "DJI Dock 4 Swaps Batteries in 25 Seconds, but Its Specs Skip the FCC - DroneXL",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPanJUY1I1Qk42OGtDRk1sOVhUNEVxSEJDUnNDa09TY3lJbTVHVkdyNjRUNGVHaWhhc0lYV3BFQ1ljRjgtRm5uT2ZmbnB1aHdVdGZlQ2RYZVN6UVlEaWs3dGdMbEUyZU9jbXNlVmt3dTZ2VEZnU3U3WkYyY0daa21LdHktX05CaE0?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:48d3e9ca60df",
-   "published": "2026-10-14",
-   "source": "머니투데이",
-   "status": "unverified",
-   "title": "\"러 드론 공장에 북한 노동자 1.2만명…드론 기술 얻어간다\" - 머니투데이",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FdXJ5dVNsa1dIN095SXR0aUdhNG9pb0tKLXg0aE9aTW0wRWVyclJ0cUQyWEhnVXpLYm1vcmpaNEhYTDl5WGxWQm9uZjdvTWMyYnpRbTF2Vzc1Ykp2akQ0T2g4d0piR2xy0gFuQVVfeXFMTlpjU1FNOU5zOEVjWmRNejRYN2pxR0paMnNkZlJDaUFoRnBUZmd2ck9oNHlFNjN2VExpcXRjU0tackZDNThOMU9tRmRzQmd2akdIdThfU0RaUUMzM0t4SUFSM01ELXpIUWpOZElwM3c?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:47367c950843",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[DJI] Two Cameras. One Sky Run. | DJI Osmo Action 6 & DJI Osmo 360",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=H7YJIrMK60Y"
-  },
-  {
-   "domain": "flight-control",
-   "eventType": "release",
-   "id": "event:38862e2b80f4",
-   "published": "2026-10-14",
-   "source": "github.com",
-   "status": "unverified",
-   "title": "ardupilot Plane-4.7.2 릴리즈",
-   "type": "Event",
-   "url": "https://github.com/ArduPilot/ardupilot/releases/tag/Plane-4.7.2"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:2830a7d4ab6b",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[DJI] What does a hamster's home look like?| DJI Osmo Nano",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=O1kBXpzMggc"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:26720afbf28a",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[Emlid] How Gossweiler keeps field and office in sync with Emlid",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=MTxjz-CuwW4"
   },
   {
    "domain": "",
@@ -3060,28 +3434,6 @@
   },
   {
    "domain": "",
-   "eventType": "news",
-   "id": "event:21b84db7e10b",
-   "published": "2026-10-14",
-   "source": "경향신문",
-   "status": "unverified",
-   "title": "[단독]도로공사, 3억6000만원 들여 300명 드론자격증 취득 지원, 전담은 16명뿐",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tRm1fa3pfSmxSSTFsY2MyMmRFRV9YdXpOYUFsa2doZ0d4OThUT09sRkNiZXQzblJGY2xLYnlIWTN6dmNJY0tIWGNlMlBhLWJjbC1yZm1RM1dsUdIBX0FVX3lxTE5mSlpoMV9RSDAtLVd0blNuMm1va2JSTkZ3LXM3bUNXZWJyNFc5YzA4Vm9yWkY0SXN5OWJEbG5wVXhyY24ycEg3RnJTMDkzdmxqczBYRjI5endGYXZWTEk0?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:19f3d2ccde78",
-   "published": "2026-10-14",
-   "source": "KBS 뉴스",
-   "status": "unverified",
-   "title": "제주공항 불법드론 또 출몰…항공기 이착륙 6분간 중단",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBYLXZMU1hzR2NUaTNxWmRZdVhUX0I2Y2tadnMxZFhCQ3RicHhzdE5IUjRoZ0FjeU9PN2hXTlAwMFRqMEtXUUNfNUNPR1psNWJubk9ZUHd2UVFkdjA?oc=5"
-  },
-  {
-   "domain": "",
    "eventType": "defense",
    "id": "event:1730751933c4",
    "published": "2026-10-14",
@@ -3090,72 +3442,6 @@
    "title": "中 빈틈 공략하자…블루오션으로 떠오른 대드론 체계 [발목 잡힌 K드론]",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Jcy1RcUoyelAtQ2Y0SHBUamstN3p0SUNpRkRwd1VBdndjWU1HOFFDWF93U2xtZ09GNFp4Wll6TDB1Wm5RejJvVkk5X0ZjTk9kS0tjNw?oc=5"
-  },
-  {
-   "domain": "ai-autonomy",
-   "eventType": "video",
-   "id": "event:129c56903b4c",
-   "published": "2026-10-14",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[MIT CSAIL] Underwater Robotics: Physical AI's Toughest Test",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=i0O2URp0HpM"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:0cba3a5d1f09",
-   "published": "2026-10-14",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "Skapion Unveils the World’s First Native Counter-Swarm Defense System",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/skapion-unveils-the-worlds-first-native-counter-swarm-defense-system/"
-  },
-  {
-   "domain": "gcs-software",
-   "eventType": "video",
-   "id": "event:f847ddca8f22",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[멈춤보단 천천히라도] 시도중입니다",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=QnT8Dq7ytYM"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:ed25c7176d6c",
-   "published": "2026-10-13",
-   "source": "뉴스1",
-   "status": "unverified",
-   "title": "첨단드론·방산기술 한자리에…이천 복하천서 15~17일 '드론대전'",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5jcTdMUmRsRk9aTnNnNlVyOU16SkI2QXlFOEs4U05VbkpCMjdXSlNhWE5hNkhFRHA5SzUzLUd3RklWWGdxc2NXeXBEMTFpUWZyRWVYWGVR?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:ec6cec43101e",
-   "published": "2026-10-13",
-   "source": "Chosunbiz",
-   "status": "unverified",
-   "title": "[K무기열전]⑧ 1회 발사 단 2000원… 드론 잡는 초가성비 레이저 대공무기 ‘천광’ - 조선비즈",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNGx2ZlZYeTlQRGstVWVUcHJOT3p5LXltZl96SmgyZXBNZ29wSFpMTzB2OWxFN2pyYnVQNGY5N1hzV2JSWVJJWDZ2X0lHeVRlUnMwby1IaEhFRnZWNHg5RUhqVy16czZCUUZkWUhsVzBVamMwc0o2bkhEeWFBeU8xbk9VZHDSAZgBQVVfeXFMTWdLNGlOaF9PN2xLdWU4MmJGTzVvQUthZFpjRjZkQTJ5RzVaZ0xHYmlVRmltbFJxMkpJbmw1RU5sQ1k0RjZ6T3JrVUxIQmZhYl85MVNSYngyM1JsbWJrdGx4MEhaVi1SX2dndkFBYi1sb2gwMC1ld0RfVjktOEZnUWxrNzYyN0tJZ0hkZm5fbnp4cG1lMF9iQ2Q?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:e8adff8b8a41",
-   "published": "2026-10-13",
-   "source": "news.google.com",
-   "status": "unverified",
-   "title": "Tablet Command, Skydio Integration Allows Live Aircraft Location and Video During Emergency Incidents - www.firehouse.com",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNUVhIRnBzeVRBby1ETThQVi1TallONTg0TE43endlY0xjR1p1UmpkaGh3ZC1EeUxPbm02cXAyN05Vd0NtS1ZVdWFGRjNJR1VyZTZra1RISG5VRUJ4ZElJZHZybDhhVXJWdkNhRmIxMDVob25qeERKQmVNUnNWTnNXbVMtTzhFckpkbDNtLTdsSlRKdTlTc1dRbzNhbXN4QlZCZmEyV0dBckF3dkpZdUR6WjNiTjN6QTVoTHNXaEtLRWxVRGkwT0M2OUoyVGs0am9jTlZlZW52RFozQ0FjdlVXOVBFcldtMDZjMWxGb3M1VlZqVnFvZ3lJRExvREs5M0U2QmZTa05aV2o?oc=5"
   },
   {
    "domain": "",
@@ -3167,193 +3453,6 @@
    "title": "국내외 첨단드론·방산기술 한자리에… '2026 이천 첨단드론대전' 15일 개막",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBiT2swQXI5Y0cxcmpMNnRKdkNrdlVLMllVeE9zdTZUOFlZRTdkdlExVVJvdjdaTVB0T2xDWWNrblRncTE5Uy1ES09TUktCQ2xGZlFZQ2Y2OWVSVkdMX3FJSFJoMzRUYmJNTXU4?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:e63b41c6c66f",
-   "published": "2026-10-13",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "Orqa U.S. Awarded $38 Million for U.S. Department of War Drone Dominance Gauntlet II Competition",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/orqa-u-s-awarded-38-million-for-u-s-department-of-war-drone-dominance-gauntlet-ii-competition/"
-  },
-  {
-   "domain": "gcs-software",
-   "eventType": "video",
-   "id": "event:e13fb21dd542",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[멈춤보단 천천히라도] AI 영상 만들기의 시작은 이미지 만들기 부터네요",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=c-8taQY-rmM"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:cd253c10b2f2",
-   "published": "2026-10-13",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Proposed “Ban Flock Act” Targets License Plate Readers, Including Drone-Based Systems",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/13/ban-flock-act-drone-license-plate-readers/"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:c83d5057900f",
-   "published": "2026-10-13",
-   "source": "전자신문",
-   "status": "unverified",
-   "title": "국내외 첨단 드론·방산기술 한자리에…'2026 이천 첨단드론대전' 15일 개막",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE0xZm9MRGVpd1pDNEpGX0NQaFRXa0o2dERVZEhuSlM5V1VvU3BzclhTM004SDRvdG9YalZramI4bGx5bzBlTndEZFctSmZEUQ?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:c577d39a77e2",
-   "published": "2026-10-13",
-   "source": "뉴스1",
-   "status": "unverified",
-   "title": "사우디 \"리야드·남부 겨냥한 순항미사일·드론 요격\"",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1EdXJDYS1ZVk00MWlUbzdaelFVT1gySmZscThIMVZSNVVQQUNBeGVZNU4xR1pXQXZJVUJmZkFWbF9Rc1V1emVJSGI1ZnBySlJBeFo2NHhzSExkWFlGTnVLZ1FB?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:af06f832eb21",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[DJI] Where the Stability Comes From | DJI Osmo Pocket 4",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=5uiWF7g_-tM"
-  },
-  {
-   "domain": "",
-   "eventType": "gov",
-   "id": "event:ad8288d5633b",
-   "published": "2026-10-13",
-   "source": "경남신문",
-   "status": "unverified",
-   "title": "밀양 삼문동·하남읍 야외 드론 배송 본격화",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5xM3hEdU80MzJzeHptMlVJa0toODF5Mkpsci1ORGhkMVpxRDN6aHhkN2dzdTRWaXItSHNjVERsS2tTVGIySFBWMkNyZE9YdmxjdEEzdGk1YndKUQ?oc=5"
-  },
-  {
-   "domain": "flight-control",
-   "eventType": "video",
-   "id": "event:ac976a2362ad",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[Painless360] The channel just passed a huge milestone today! Thank you for watching!",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=Wf_oIytRCwU"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:a8550f990550",
-   "published": "2026-10-13",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "KHA’s K1000ULE Achieves Award-Ready Status Through Army DevX Autonomy Marketplace",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/khas-k1000ule-achieves-award-ready-status-through-army-devx-autonomy-marketplace/"
-  },
-  {
-   "domain": "gcs-software",
-   "eventType": "video",
-   "id": "event:a6c2eaa3e299",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[freeCodeCamp.org] Design Software Systems Like a Senior Engineer – Complete Course",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=soTfFFIQQ8U"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:993092c42a4b",
-   "published": "2026-10-13",
-   "source": "dronedj.com",
-   "status": "unverified",
-   "title": "Powerus unveils Guardian-3 fully autonomous drone interceptor",
-   "type": "Event",
-   "url": "https://dronedj.com/2026/10/13/guardian-3-counter-drone-powerus/"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:96233702dbb6",
-   "published": "2026-10-13",
-   "source": "머니투데이",
-   "status": "unverified",
-   "title": "野조경태 \"원전본부 5곳 중 드론 방어 1곳 뿐\" 원안위원장 \"용역 중\" - 머니투데이",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9CRVFaVXdHbzdFNWV5TGExU3ZJYUdSRV81NzBMaTV5anJmOEJlY1FkbUNCaVJlZmhGWi15ZmlTNFhtYXJpcDlQV3l5SnczbDlWdVRDS3dsbE9KZG5wenJZRjJhWXowX1nSAWxBVV95cUxQb0puUHhNeFlZQ2xfOGlSOS1Ub3hJc2R2cVNtd21OTXBac1RuckRsUTVjbzZ2RkQ1RzI4dlRuRlNnS0hvckpVbWlGT1FaeDIyQ0NZS05kRkM3REJhaE8tOFd3RVFXQVVWcjBlSFE?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:91f74c229442",
-   "published": "2026-10-13",
-   "source": "나우뉴스",
-   "status": "unverified",
-   "title": "[포착] 우크라 드론, 러 점령지 5층 주거용 건물에 ‘쾅’…“군사시설” 주장",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qb3h5VHVER2owOFFFYUVFaEx1clhMREVMeU9xS25xUGFyd1h3bGpvcmtVNXJDVUZfOEI4X0Jyby16VmNZb1NwZ2JzRWpPWVBZaGhUd1h1OHhRSWVEbzNXSTV6bW1aZkY0d3pBUXRDR0M?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:7c29bbe4308c",
-   "published": "2026-10-13",
-   "source": "경향신문",
-   "status": "unverified",
-   "title": "“드론 추정 물체 목격, 항공 비상 상황”···독일 뉘른베르크 공항, 항공기 운항 중단",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5JaWc0dlBwY2xfdXM0QjlNelZQR0RIMjNJLVBwSEhLTDVRNkZ4ZUc2a29UTWEyNU53bXZ5N1g1M2pWRjhyb2VXd0V5WmZhcmk2YmF3a0VqVi0wd9IBX0FVX3lxTE1xRGZaN0IzWVdNbWVudVhkRHkyTjN3VkhKdGIyaGRmOTdqcmlFUW1kYnNBbzRsY2tQZkhnelpSN00yWjBNVUlwRkdLQW5Ga3lQWUlKbmtCREtLRzFqU0RR?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:73b914797e9e",
-   "published": "2026-10-13",
-   "source": "OhmyNews",
-   "status": "unverified",
-   "title": "이천 첨단드론대전 15일 개막, 국내외 방산기업 기술 선보인다",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBPWGF0Z1BqRE9rSlpJVDNEQS1hRHUwem9jZ1Y5eGVzMy15WEV6NFc2ZU5UR2k1MFF0OXBZc21VNXp3VmtVaW5xbTVvbGVQX253YUpzSlJhUnpmVEJlbEdnNjkzSW90UTk1T0tuSnZNS2ZnMk9STlRJ?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:6df405739db9",
-   "published": "2026-10-13",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "SPH Engineering Announces Winners of the 2026 Global Drone Operations Awards",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/13/sph-engineering-announces-winners-of-the-2026-global-drone-operations-awards/"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:6b7e35bdc724",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[DJI] This isn't AI. | DJI Mavic 4 Pro",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=J9jxY9z8qZw"
   },
   {
    "domain": "",
@@ -3369,83 +3468,6 @@
   {
    "domain": "",
    "eventType": "defense",
-   "id": "event:62da4391db31",
-   "published": "2026-10-13",
-   "source": "팔당유역신문",
-   "status": "unverified",
-   "title": "이천서 첨단드론대전 개최…해외·국내 방산기업 대거 참여",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrRXE4Y0Iza1NRNHRUYU1OM2RiNXpGOHZ5UDRpQ3lqSFhUMnlRXzhCSXo5dVlDVnhIUk91bnFxSFRDUHlvVUtQWUFsNUJFYk9Wb2hHdHprLUcyZ2VteTFrUW5lT1FWLURVNUVn?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:512b2f6cb44e",
-   "published": "2026-10-13",
-   "source": "글로벌뉴스통신GNA",
-   "status": "unverified",
-   "title": "'2026 이천 첨단드론대전' 15일 개막,국내외 첨단드론·방산기술 관람",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SOGVqYlViY0FPQnZFSGFrdXZsN2x0QkxMUWF1aWN6Z2JJYWRxRndacURGX25oRENBMkpIa3psRmw2dFFIV05NR3dkQlZHT1pmalhYTUpsSGlLX1dxWm9tUTRwNm0yMVllWWZTUVdSTGpSRjF5?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:4e22d3592abe",
-   "published": "2026-10-13",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "DELOREAN TAKES TO THE SKY: racing at the pinnacle of flying car motorsport as the DeLorean Airspeeder Team",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/delorean-takes-to-the-sky-racing-at-the-pinnacle-of-flying-car-motorsport-as-the-delorean-airspeeder-team/"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:4a25a2aef320",
-   "published": "2026-10-13",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Badland Batteries Opens Drone Battery Cell Manufacturing Facility in Fargo",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/13/badland-batteries-opens-drone-battery-cell-manufacturing-facility-in-fargo/"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:467c94508083",
-   "published": "2026-10-13",
-   "source": "https://www.sisaworld.kr/",
-   "status": "unverified",
-   "title": "[글로벌 방산 테크] 1조원대 드론 킬러 ‘LIDS’, 중동 하늘 지킨다… 美·카타르·요르단과 첫 해외 수출 계약",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BYmhDZkJXbEJDU3JmaXZlVzNNNk9XVjZpdU5PYmxPVk5XTkRONnNqd0o2aDdXampjcjJWdGZvbEpUcDJfbGJHSkdqTXk2enR5Q3RJUE9xRU82Q1NkVGpIV1NUczB4QVhjOUE?oc=5"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:3b8935c29889",
-   "published": "2026-10-13",
-   "source": "dronelife.com",
-   "status": "unverified",
-   "title": "Elsight Launches Cellular-Based Positioning for GPS-Denied Uncrewed Systems",
-   "type": "Event",
-   "url": "https://dronelife.com/2026/10/13/elsight-launches-cellular-based-positioning-for-gps-denied-uncrewed-systems/"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:3b81a261b25e",
-   "published": "2026-10-13",
-   "source": "dronedj.com",
-   "status": "unverified",
-   "title": "Raytheon wins $729 million to arm three countries against drones",
-   "type": "Event",
-   "url": "https://dronedj.com/2026/10/13/raytheon-counter-drone-lids-army/"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
    "id": "event:3a6e5b32b52d",
    "published": "2026-10-13",
    "source": "아시아경제",
@@ -3453,292 +3475,6 @@
    "title": "이천시, 첨단드론대전 15일 개막…국내외 드론·방산기술 한자리에",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PY1BBRjAwZnNTYWs0ejBDandwWjdFUXVGSG1HZG1uTlFjNjY4X2xzamJEMk52MkV6QzZmeFJ4R2V1VWRlZGd2RkRkUnh5WWJlc21qRGxNMUFBVWpRbVUxWg?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:27c55b5646d8",
-   "published": "2026-10-13",
-   "source": "에너지경제신문",
-   "status": "unverified",
-   "title": "[단독] 방사청, 발칸에 AI 접목…소형 드론 대응 실증 추진",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA5SlJKSV9SdUJxVFdQbFp1WmMtMWYxdFBZSmQ1WjNneko1NEwwZjA4MVJMTzE0OUtldEZydXVHNTdaSFZXLTZiQTFoMGU5Nm1LVHZCWTRXNzUwOVJXTTY0bXViTQ?oc=5"
-  },
-  {
-   "domain": "ai-autonomy",
-   "eventType": "release",
-   "id": "event:240c97f2742b",
-   "published": "2026-10-13",
-   "source": "github.com",
-   "status": "unverified",
-   "title": "yolo v8.4.177 릴리즈",
-   "type": "Event",
-   "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.177"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:223f53afae38",
-   "published": "2026-10-13",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "Beam Global Signs Definitive Agreement to Acquire Drone Technology Company ScoutDI, Creating a Vertically Integrated U.S. Drone Platform for Industrial and Defense Markets",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/beam-global-signs-definitive-agreement-to-acquire-drone-technology-company-scoutdi-creating-a-vertically-integrated-u-s-drone-platform-for-industrial-and-defense-markets/"
-  },
-  {
-   "domain": "ops-mission",
-   "eventType": "news",
-   "id": "event:1e6f88645979",
-   "published": "2026-10-13",
-   "source": "www.suasnews.com",
-   "status": "unverified",
-   "title": "ideaForge Secures Orders from Survey of India for Q6 V2 UAVs to Support Mapping and Geospatial Applications",
-   "type": "Event",
-   "url": "https://www.suasnews.com/2026/10/ideaforge-secures-orders-from-survey-of-india-for-q6-v2-uavs-to-support-mapping-and-geospatial-applications/"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:1b194a7c1677",
-   "published": "2026-10-13",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[Joshua Bardwell] Speechless at how good it flies // AXISFLYING VERTEX 5",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=f41v9sC4D-A"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:1366825fa1e3",
-   "published": "2026-10-13",
-   "source": "KBS 뉴스",
-   "status": "unverified",
-   "title": "사우디 주도 연합군 “리야드 북부서 드론 3대 요격”",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE53Z0hvQVJzWjZocGNUeS1ZYjBfUzFtd180ZlVSenMxQ0FKRGlfWEtxdTVoQTJEU3NqVzJhYl9oQWZVelFGS1VKSzREa19GMzhYNDdaZUQ1WEhKUUU?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:0f8f71ab50ef",
-   "published": "2026-10-13",
-   "source": "SBS 뉴스",
-   "status": "unverified",
-   "title": "불가리아 앞 흑해서 또 드론에 선박 침몰…11명 실종",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5nU0EyUVl1b2pvaUphX3gxZlBNeW1NejJVR3NtTG9sb3A1cFU4MWR3WjVZc0c2a1YtTkJCb3l6ZS1WdmphZHNabVdnM0xzem94NmFiN1FuQm1xcF9YS3AyS3hiTnpGMGtaM1E?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:0765c79d9717",
-   "published": "2026-10-13",
-   "source": "Chosunbiz",
-   "status": "unverified",
-   "title": "후티 미사일·드론 공격 방어 실패에… 사우디, 방공망·경보 발령 등 자체 조사 착수 - 조선비즈",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQalNydG8zQTVfWThVNlI1bUEzRjdOd1gzTXVEeGNFdkNCQVNELWhqVUlDR21nYmJhSnNVam5MeXZNLXZUWTBjWFg1STFMTmpvMUdsTzd2a1NiRzd5dHhGclcwN2RKZ1EtdzdHcUduVzBKQVBybUZFZE5OZkVSWlZaVTVWbFVERUJlMVAtTGp1TURwelRoYnNtMHF3UUtRQdIBsgFBVV95cUxNN2NnbWNQRDhOYlpjMGt6ZE9OUjFiUlRMVVdfTDhtMDMtcERSMWNINTNpZ2RzWTl5dUx3ZkJIZkZxcnJsdDlIS010Tm9BeGo4d1Nld1FxQ004a0ZITHpTSjZmM2U3OXlLZThSOXNWMnI5aXZmUlM0RkpNMHpHMlRzNUhhYkEtUnNFb29KYVRDRG5BTllyaV9NSHFpOXFwYkk5WGk0VUFPRDZqQ1JTN0ZMQl9n?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:fc67be86a4be",
-   "published": "2026-10-12",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[DJI] One Take, Behind the Scenes | DJI Inspire 3",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=rFYgVzCBml4"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:f1f2fcc6a2c1",
-   "published": "2026-10-12",
-   "source": "oscarliang.com",
-   "status": "unverified",
-   "title": "Best Antenna Position & Alignment for FPV Drone Transmitter and Receiver",
-   "type": "Event",
-   "url": "https://oscarliang.com/antenna-positioning/"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "video",
-   "id": "event:ec9a9f2ee15b",
-   "published": "2026-10-12",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[DJI] Ice moves. Your frame doesn’t. | DJI Osmo Action 6",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=SIHHxE0sm24"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:c511861268ef",
-   "published": "2026-10-12",
-   "source": "뉴스1",
-   "status": "unverified",
-   "title": "대공무기 '발칸'으로 드론 잡는다?…AI 접목 저가·소모성 전력 대응 연구",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1PMjQzMmQybHRzb1RIZW53X0plWUFpYjN2RjIwNk9IOHdwSFAxY3JTOTFkaXBuQWV6cUNwU3Q1aVVKbmZ0QUtIcjNmVXhyVGFfQk9XQlNHeV94R1hKOG1icWdFNEV4cUU?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:b8f97487d229",
-   "published": "2026-10-12",
-   "source": "뉴시스",
-   "status": "unverified",
-   "title": "리베스트, 美 방산·배터리 관계자와 드론용 배터리 협력 논의",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9JMVNDeC1TamwxdXdHQm5zWGFLSzcya2dNOWRmU3B6R1dvLURqOEtNWW0tUktKNW1KYkpSQmNhV3YydTVkWGxDSDdDeDBLUFd4VWZOYV9pd1ZUWXAtRUl0eEJRNU0zSFVZdUVIWDRDNG5IZVNmbUt1ZtIBeEFVX3lxTE9JMVNDeC1TamwxdXdHQm5zWGFLSzcya2dNOWRmU3B6R1dvLURqOEtNWW0tUktKNW1KYkpSQmNhV3YydTVkWGxDSDdDeDBLUFd4VWZOYV9pd1ZUWXAtRUl0eEJRNU0zSFVZdUVIWDRDNG5IZVNmbUt1Zg?oc=5"
-  },
-  {
-   "domain": "gcs-software",
-   "eventType": "video",
-   "id": "event:9f190c29f377",
-   "published": "2026-10-12",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[MATLAB] What Is Deep Learning Toolbox?",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=uInbsSYXfhI"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:8588a9c8c612",
-   "published": "2026-10-12",
-   "source": "드론매거진 뉴스",
-   "status": "unverified",
-   "title": "유럽 방산·드론기업 임원 겨냥한 암살 위협 증가…서방 정보기관 경고",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5kM201d0FGWVNjU2hENFB4YlhsQzR5ZjZKWXA0QVpqQXhOUjlhTjlEM3paVjgzbERYX3RkdWF2UC13bm96dEFOLVkzZlhxamdVMkNjRHdMWWxMVXZQT0U0M3U3cWQ?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:7dfcbadf9e5c",
-   "published": "2026-10-12",
-   "source": "Actusnews",
-   "status": "unverified",
-   "title": "Parrot Strengthens Its Position in U.S. Army Drone Procurement Programs",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNR1VDQm5fZEJRZzEzc1BnU1ZFVERTRzJrRERWbG9pVGFoTVZSRkNERUxlSlpvdFZVbll3WkFRT2dGakZQZ0xqcWtXVk40LW5aT18zenZOSHRidUZpenVkNjI5eFRZZHIweVMxVTNOZUJoU3JROWYyLU94d0hJSEhxT1d3MDZOcDZMNGNicVhKbno0ZEJVN05JM2JXVkVhWlhVeDhFdmlvNDBPWTFCeW5NMlJqeEhMWEhBb0I5ZUVpQVlDMGvSAcMBQVVfeXFMTUdVQ0JuX2RCUWcxM3NQZ1NWRVREU0cya0REVmxvaVRhaE1WUkZDREVMZUpab3RWVW5Zd1pBUU9nRmpGUGdManFrV1ZONC1uWk9fM3p2Tkh0YnVGaXp1ZDYyOXhUWWRyMHlTMVUzTmVCaFNyUTlmMi1PeHdISUhIcU9XdzA2TnA2TDRjYnFYSm56NGRCVTdOSTNiV1ZFYVpYVXg4RXZpbzQwT1kxQnluTTJSanhITFhIQW9COWVFaUFZQzBr?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:53de68be18ee",
-   "published": "2026-10-12",
-   "source": "뉴스핌",
-   "status": "unverified",
-   "title": "밀양시, 드론 배송 모바일 주문 도입…전국 첫 공공배달앱 연계",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBjU2U3bTFTejk3Rmd2TE1ndU5seTd3X3A5THNqNmg4d2JYbUdtaXpCQzF1NUdqTG1XblJYWGhYTlZlTVNfV281cWRrY29xOVhkczktcWo2ZUs3RDgz?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:409b1b85dfa4",
-   "published": "2026-10-12",
-   "source": "충청매일",
-   "status": "unverified",
-   "title": "당진 신성대, 탁월한 드론 조종기술 빛났다",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBYazBvM1NzQ2dlTEFQdUtiUWlvNUptaTVIUHJBc0RaLTZWT0N6U2hkUWlNSFlsUWpPT0lNcWJMT0NKV2RRN01iWU5JRFVPeF95LTl3RHI1V3BESEN5TzZzaEc1djlwUm1DTEE?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:327c957be216",
-   "published": "2026-10-12",
-   "source": "딜라이브뉴스",
-   "status": "unverified",
-   "title": "포천 100일 선언 방산·AI드론 육성",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HNG16Tk96QTczU3pzeTBucnpxMHJDZnVMRTc0ZlNSWFl4UXVabWM1RkIySjV4Qy1TMUw0M195STg0aW5WTWVMUm1tUFFQWkVUWGtPdnNMcE5LMHZVWHNYOXZSbG1mQQ?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:2383335a7731",
-   "published": "2026-10-12",
-   "source": "글로벌이코노믹",
-   "status": "unverified",
-   "title": "쿠웨이트, 6000억원대 대드론망 구축…영국 AI 방어 통제망 도입",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNT2Jmb0wxb3UtM00wWmZ5Vk13b1VZYmVVT2tDUkFjSEtXcmFZdmhnbEZmZFNGZFNtaHhiYmJPNEdoN0pVZmtCTnQyX2FueWdpYUhWTWxrT2Rfemx2MV9tZEhwZ2ppRlhFOTk4REl6ZEhkU1pjbmNEemN0QVlfOUM5TjF0UTMwazZK?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:2121a01e2d05",
-   "published": "2026-10-12",
-   "source": "뉴스로드",
-   "status": "unverified",
-   "title": "이재명 “드론·로봇, 육해공 경계 허물어”…사관학교 통합 재차 강조",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LWTBRX3JzTFpNeHhXRElBN3J5VzZEWmdXalkyX2o3MmFyMENIWHd1ZFhMS2lOUmdzWnNkRlhKaVdkZ0puVTdpMGRqTmtiRGlxQUtaVVVLTXFUNHoxWXJydE9SU2k5cW9XOTM00gFvQVVfeXFMTjJ6ZHdrVnZuZWdtRDNYMjh2REktbnl0Y01vdjFwMGhaa053UEt1UFFsRUFUMjBDZko3ZDdON3BqSHFWYkhtRzZwSXpLb0N2Njlsc0tDVktmZkFhUFZ6OC1wNVlxYXkyRkp0T0l5djFn?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:10ec9912ba88",
-   "published": "2026-10-12",
-   "source": "동아일보",
-   "status": "unverified",
-   "title": "[단독]北전역 비행장서 ‘북한판 리퍼’ 배치용 시험… 소형 자폭 드론 대량생산-성능 훈련도 나서",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBpczkwNUNzZmNXS0YtTFZ4aHhjUnNQTkx1bEYwNXgyaEdsV1JsaWN5WlJtRjdQak9FRFVjdDBocVVOelo0ai1RaEhaeVN6S0M3TGVnenU1RWF2VHFJQWplazZBTThETmFDZE4wa29BV1R0ZllFWlJF0gFmQVVfeXFMTlR6b3E1VndQclVjM2NlcWQwLVFaS092TXQ1WjdTV0pST2g2bnlQcFlNdE9QZzRIX0hhZzR0bThnVkl6ODVGVVN5MG5SaExxbkF4SlR2UV9OZTBCcW9PZHFYRkR5TWlB?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:1055d6313d45",
-   "published": "2026-10-12",
-   "source": "뉴시스",
-   "status": "unverified",
-   "title": "'소리는 들리는데 안 보인다'…시속 600㎞ 러 제트드론에 키이우 자원봉사 방공대 고전",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1nVVdmRjNLLVhXNjlVaDV0VTNOaFR6OFVQazNxMHRyRWFMLWtrbllDaVNPQlpEeUZlb3M0VDZDWFhZM2dlcHNLc0RseVo1NUZiQ2dXMUxYVmpBd0FLc3VLTNIBeEFVX3lxTE04UEhiX1IyWHUzZ0VnSl9TaS1MVWRqal9iNjdTZ290T3pkY0NnSVFPTnVDUmdtWGpJYmhtY2ZRM3JzV001UnphQ2o4N1NKMU5lU0MwU0FpVGwtQXQ1bjN5Q2NQblAtWjRNRS1DeTVSWDFhNTZpdWI3Nw?oc=5"
-  },
-  {
-   "domain": "",
-   "eventType": "news",
-   "id": "event:04d9753711be",
-   "published": "2026-10-12",
-   "source": "머니투데이",
-   "status": "unverified",
-   "title": "900대 드론, 하늘 수놓는다…문화와 K컬쳐 묶은 '한성백제문화제' - 머니투데이",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9OejVRREpGNjBfSnFRQmF6aUs2TElsYmVueXlvUGIwSm14S1lHRTdnQkxpZXNTTF9iNXhrZjRfVk5tbnc0ZWtIS0lUeHRFM042WENSVW1lQ1hNZmtUcFNjeFlFWVBYU1hfR0HSAW9BVV95cUxNa19rTzE5cmc2WHF3MGJpbXZhcUkyVFdpREtmVzBVbl9oREJNZWhNN054dk1lbXpsbXZyZE9hZzA4RWZfaGRtek1GcDZyNjVRTl9MaEt4OVZQRzBreFd3US1QNGRPV3UwVktqb0lSajg?oc=5"
-  },
-  {
-   "domain": "flight-control",
-   "eventType": "video",
-   "id": "event:93eba960abe7",
-   "published": "2026-10-11",
-   "source": "youtube.com",
-   "status": "unverified",
-   "title": "[Auterion] Auterion in Ukraine | Wings Battalion",
-   "type": "Event",
-   "url": "https://www.youtube.com/watch?v=QNVvTt1705s"
-  },
-  {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:625723a1c485",
-   "published": "2026-10-11",
-   "source": "테크월드",
-   "status": "unverified",
-   "title": "[TECH한주] 물류·방산·UAM을 잇는 자율비행의 날개… 군집 드론 제어 플랫폼의 리더 ‘네온테크’",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE40S1lXd1lKeE92VUk2cUtHczBHTkdsdGZKX0kzSjJjMUdva0RaNzhzTExPZkctbWViaDVrcHd2VzJlS0VQYUJFZ19UN21Cc3JxaHg3QlNfNWl4azBLNTBiYjNWWnpkcERQ?oc=5"
   },
   {
    "domain": "",
@@ -3752,17 +3488,6 @@
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBNNXdmZjczNWU4VlRPVDZxWkY2alRBVFJ3eU9PYmNZcDZ3bEEyN1J1UXNCNEh3eEJkMWctSXc0ZHl3TzgtVWNhZkdZQkFaOG5vOG9FbXdOeDhUTmE3RDZubVhOZF9EMmc?oc=5"
   },
   {
-   "domain": "",
-   "eventType": "defense",
-   "id": "event:afbe3225304f",
-   "published": "2026-10-06",
-   "source": "U.S. Department of War (.gov)",
-   "status": "unverified",
-   "title": "Systems Selected for JIATF 401 Directed-Energy Counter-Drone Pilot Program",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTG5FUEtRWFNTeXdNYl9hMEt2SER2SEZnSS1FZWk5Q0pSSGlxdnRlcng3eF84a2VQZ1pJM19MR1VCbk9SQVBOQW41V3NIYXRnS2Y1T2VUOGxTd0FrcThxYWNXOXNpaUR5dW5kaGlOZmg4RDZIWS1jekdZeTV0TnFBU0RlY1d2MGpNU1M3aG5salNsbllKSUJiRW5wUVJVelp3RnpWZjc1cHNQVldOaU9hSkxzYUNneldQa3V3bWNMRzRUWENfamp2TmptUTR6Zw?oc=5"
-  },
-  {
    "domain": "hardware",
    "eventType": "news",
    "id": "event:f307a3fa119f",
@@ -3772,17 +3497,6 @@
    "title": "Auburn Police use drone first responder to arrest rape suspect - Renton Reporter",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZDY3M3FJWmRlS3FzanJvaXY0cU55UXRreUVhd3J3aVVLNFRPeUppSzJWSXJKUS14LUhMWHcxSGRUcC1NTGhSZGQtQnJtbUdzOUhQb1hkOElGbkNUNnJ6bXBXRlhlVkJyQU8tS0l3dGZqNUhmcHdFZzhudThDbU41cUNnbDJsSTBFSFdfOXNGRnRlblVrYUQta3p0aE1yQVh3LVM5NGk5X3E?oc=5"
-  },
-  {
-   "domain": "hardware",
-   "eventType": "news",
-   "id": "event:131b1172b1a7",
-   "published": "2026-09-23",
-   "source": "news.google.com",
-   "status": "unverified",
-   "title": "Skydio unveils the F10 Lightrunner: A 100 mph autonomous fixed-wing drone - The Drone Girl",
-   "type": "Event",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZU80SjU2UVcwZGNmTl9tTFFaOTBGbU5yUEJTbjNPb2V6Y1NPeFB6d05PdXVSdmNLWk1UdXM1NTRPLTd4N0N0WmpGS1RfZEhpRlM0Y0pfZ05waFdGallscGFoSUlPeUctUEdkUVhkaFBTbGR4aWF1RWJTV29LLWp1ajZwLWpEeFlNclBxVjNSdHRLUjTSAZgBQVVfeXFMT2pyejVhZFJnbE9hQjFWZElBeGlZWXRHek9JRXZvdHlEQWlaak5RdTg3aXV0M0ZHS1B6QWdOQTFpbWUwcW9EOGtNQ04yY1cyeGl4WF9Ja3BFRDJhWWxNaVFpb01NYkhmTmpKbFlOc1JtN0lqX1hwZm9SQ3g5TWVlNWlNNVBfVWgxWGFZdWdZRTdwanFlb296WHk?oc=5"
   },
   {
    "domain": "hardware",
@@ -3827,9 +3541,65 @@
    "title": "DJI Sells American Police A Dock Playbook The FCC Just Proposed Banning - DroneXL",
    "type": "Event",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5LRXNlOTZtNXZmdElvb0NLcnJSVVNGclNkaEo0WWpreUJjak5yazVjT2VIdXNYdFhwaUpZVS1WdmRONk1maVJLT0JPY2FKNkN4LVU2UnUyMVFOSWpCOWRfaG95OS1lMURkejVlUw?oc=5"
+  },
+  {
+   "domain": "regulations",
+   "eventType": "regulation",
+   "id": "event:58d0ae3e41a9",
+   "published": "2026-07-01",
+   "source": "law.go.kr",
+   "status": "unverified",
+   "title": "[법령] 항공안전법 시행규칙 · 일부개정 · 시행 2026-07-01",
+   "type": "Event",
+   "url": "https://www.law.go.kr/법령/%ED%95%AD%EA%B3%B5%EC%95%88%EC%A0%84%EB%B2%95%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99#rev-287951"
+  },
+  {
+   "domain": "regulations",
+   "eventType": "regulation",
+   "id": "event:812d8c4889dd",
+   "published": "2026-06-30",
+   "source": "law.go.kr",
+   "status": "unverified",
+   "title": "[법령] 항공안전법 시행령 · 일부개정 · 시행 2026-07-09",
+   "type": "Event",
+   "url": "https://www.law.go.kr/법령/%ED%95%AD%EA%B3%B5%EC%95%88%EC%A0%84%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9#rev-287495"
+  },
+  {
+   "domain": "regulations",
+   "eventType": "regulation",
+   "id": "event:b2e6372689ab",
+   "published": "2026-06-16",
+   "source": "law.go.kr",
+   "status": "unverified",
+   "title": "[법령] 항공안전법 · 일부개정 · 시행 2026-09-17",
+   "type": "Event",
+   "url": "https://www.law.go.kr/법령/%ED%95%AD%EA%B3%B5%EC%95%88%EC%A0%84%EB%B2%95#rev-286927"
+  },
+  {
+   "domain": "regulations",
+   "eventType": "regulation",
+   "id": "event:c35eb3b3610a",
+   "published": "2025-12-02",
+   "source": "law.go.kr",
+   "status": "unverified",
+   "title": "[법령] 드론 활용의 촉진 및 기반조성에 관한 법률 · 일부개정 · 시행 2026-06-03",
+   "type": "Event",
+   "url": "https://www.law.go.kr/법령/%EB%93%9C%EB%A1%A0%20%ED%99%9C%EC%9A%A9%EC%9D%98%20%EC%B4%89%EC%A7%84%20%EB%B0%8F%20%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0#rev-280123"
+  },
+  {
+   "domain": "regulations",
+   "eventType": "regulation",
+   "id": "event:285ff25caa40",
+   "published": "2025-12-02",
+   "source": "law.go.kr",
+   "status": "unverified",
+   "title": "[법령] 항공사업법 · 일부개정 · 시행 2026-06-03",
+   "type": "Event",
+   "url": "https://www.law.go.kr/법령/%ED%95%AD%EA%B3%B5%EC%82%AC%EC%97%85%EB%B2%95#rev-280131"
   }
  ],
- "generated": "2026-10-26",
+ "generated": "2026-10-30",
+ "law_window_days": 365,
  "links": [
   {
    "event": "event:054375eca15c",
@@ -3864,14 +3634,6 @@
    "score": 1.0
   },
   {
-   "event": "event:131b1172b1a7",
-   "method": "exact-name",
-   "node": "mfr:skydio",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
    "event": "event:15cdcd2d12ff",
    "method": "exact-name",
    "node": "mfr:dji",
@@ -3896,9 +3658,33 @@
    "score": 1.0
   },
   {
+   "event": "event:1c9da025621e",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
    "event": "event:1dab4719d48d",
    "method": "exact-name",
    "node": "mfr:skydio",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:1f138de490ed",
+   "method": "exact-name",
+   "node": "mfr:skydio",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:2104da3cfc39",
+   "method": "exact-name",
+   "node": "mfr:robin-radar-systems",
    "nodeType": "Manufacturer",
    "predicate": "mentions",
    "score": 1.0
@@ -3912,15 +3698,7 @@
    "score": 1.0
   },
   {
-   "event": "event:26720afbf28a",
-   "method": "exact-name",
-   "node": "mfr:emlid",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
-   "event": "event:2830a7d4ab6b",
+   "event": "event:2575168577e6",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -3928,7 +3706,23 @@
    "score": 1.0
   },
   {
+   "event": "event:285ff25caa40",
+   "method": "law-title-exact",
+   "node": "law:aviation-business-act",
+   "nodeType": "Law",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
    "event": "event:2a63f73aa420",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:2ae9f42735de",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -3992,6 +3786,30 @@
    "score": 1.0
   },
   {
+   "event": "event:3753e7503f5a",
+   "method": "exact-name",
+   "node": "mfr:quantum-systems",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:3afa8b0b6b56",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:3b0b9755e3f8",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
    "event": "event:3cd2d37230ea",
    "method": "exact-name",
    "node": "mfr:dji",
@@ -4000,7 +3818,7 @@
    "score": 1.0
   },
   {
-   "event": "event:45e6ae0856f0",
+   "event": "event:3f67f1e891b8",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -4008,7 +3826,23 @@
    "score": 1.0
   },
   {
-   "event": "event:47367c950843",
+   "event": "event:3f67f1e891b8",
+   "method": "exact-name",
+   "node": "mfr:walksnail",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:4423846a605d",
+   "method": "exact-name",
+   "node": "mfr:avss",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:45e6ae0856f0",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -4032,14 +3866,6 @@
    "score": 1.0
   },
   {
-   "event": "event:4b45d724a081",
-   "method": "exact-name",
-   "node": "mfr:dji",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
    "event": "event:4b58733fa82f",
    "method": "exact-name",
    "node": "mfr:dji",
@@ -4048,7 +3874,31 @@
    "score": 1.0
   },
   {
+   "event": "event:536902f3b283",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
    "event": "event:53758edc6c3f",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:58d0ae3e41a9",
+   "method": "law-title-exact",
+   "node": "law:aviation-safety-act-rule",
+   "nodeType": "Law",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:599e51b93ae7",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -4088,14 +3938,6 @@
    "score": 1.0
   },
   {
-   "event": "event:6b7e35bdc724",
-   "method": "exact-name",
-   "node": "mfr:dji",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
    "event": "event:733ae591cff3",
    "method": "exact-name",
    "node": "mfr:dji",
@@ -4128,10 +3970,10 @@
    "score": 1.0
   },
   {
-   "event": "event:7dfcbadf9e5c",
-   "method": "exact-name",
-   "node": "mfr:parrot",
-   "nodeType": "Manufacturer",
+   "event": "event:812d8c4889dd",
+   "method": "law-title-exact",
+   "node": "law:aviation-safety-act-decree",
+   "nodeType": "Law",
    "predicate": "mentions",
    "score": 1.0
   },
@@ -4176,14 +4018,6 @@
    "score": 1.0
   },
   {
-   "event": "event:8cef9fa21461",
-   "method": "exact-name",
-   "node": "mfr:emax",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
    "event": "event:8e1a40e1a601",
    "method": "exact-name",
    "node": "mfr:dji",
@@ -4208,15 +4042,15 @@
    "score": 1.0
   },
   {
-   "event": "event:93eba960abe7",
+   "event": "event:a1e121ca3535",
    "method": "exact-name",
-   "node": "mfr:auterion",
+   "node": "mfr:dji",
    "nodeType": "Manufacturer",
    "predicate": "mentions",
    "score": 1.0
   },
   {
-   "event": "event:9af94e0c9b18",
+   "event": "event:a3455765ac32",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -4243,14 +4077,6 @@
    "event": "event:acc95e6b14aa",
    "method": "exact-name",
    "node": "mfr:skydio",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
-   "event": "event:af06f832eb21",
-   "method": "exact-name",
-   "node": "mfr:dji",
    "nodeType": "Manufacturer",
    "predicate": "mentions",
    "score": 1.0
@@ -4288,7 +4114,23 @@
    "score": 1.0
   },
   {
+   "event": "event:b2e6372689ab",
+   "method": "law-title-exact",
+   "node": "law:aviation-safety-act",
+   "nodeType": "Law",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
    "event": "event:b8efd19c0ffc",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:be2418d812c2",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -4308,6 +4150,14 @@
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:c35eb3b3610a",
+   "method": "law-title-exact",
+   "node": "law:drone-promotion-act",
+   "nodeType": "Law",
    "predicate": "mentions",
    "score": 1.0
   },
@@ -4360,9 +4210,9 @@
    "score": 1.0
   },
   {
-   "event": "event:d24afc3fb429",
+   "event": "event:d1fd70ec4455",
    "method": "exact-name",
-   "node": "mfr:avss",
+   "node": "mfr:skydio",
    "nodeType": "Manufacturer",
    "predicate": "mentions",
    "score": 1.0
@@ -4376,7 +4226,15 @@
    "score": 1.0
   },
   {
-   "event": "event:e8adff8b8a41",
+   "event": "event:dc9cae2c6d70",
+   "method": "exact-name",
+   "node": "mfr:luxonis",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:e678228dcd05",
    "method": "exact-name",
    "node": "mfr:skydio",
    "nodeType": "Manufacturer",
@@ -4395,22 +4253,6 @@
    "event": "event:ec526fa6332d",
    "method": "exact-name",
    "node": "mfr:modalai",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
-   "event": "event:ec9a9f2ee15b",
-   "method": "exact-name",
-   "node": "mfr:dji",
-   "nodeType": "Manufacturer",
-   "predicate": "mentions",
-   "score": 1.0
-  },
-  {
-   "event": "event:f2a52b09b2c0",
-   "method": "exact-name",
-   "node": "mfr:dji",
    "nodeType": "Manufacturer",
    "predicate": "mentions",
    "score": 1.0
@@ -4448,7 +4290,15 @@
    "score": 1.0
   },
   {
-   "event": "event:fc67be86a4be",
+   "event": "event:fb404813f031",
+   "method": "exact-name",
+   "node": "mfr:dji",
+   "nodeType": "Manufacturer",
+   "predicate": "mentions",
+   "score": 1.0
+  },
+  {
+   "event": "event:fc082981a2eb",
    "method": "exact-name",
    "node": "mfr:dji",
    "nodeType": "Manufacturer",
@@ -4466,15 +4316,16 @@
  ],
  "stats": {
   "ambiguousAliasesDropped": 6,
-  "events": 348,
+  "events": 327,
   "input": 500,
-  "links": 79,
-  "manufacturerLinks": 79,
+  "lawLinks": 5,
+  "links": 89,
+  "manufacturerLinks": 84,
   "productLinks": 0,
-  "링크됨": 78,
-  "미링크": 270,
-  "제외:유형(paper·job 등)": 86,
-  "제외:창 밖(90일 초과 또는 미래)": 66
+  "링크됨": 87,
+  "미링크": 240,
+  "제외:유형(paper·job 등)": 79,
+  "제외:창 밖(기간 초과 또는 미래)": 94
  },
  "window_days": 90
 }
