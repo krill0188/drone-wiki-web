@@ -157,6 +157,7 @@ npm run build    # 프로덕션 빌드
 
 | 버전 | 일자 | 내용 |
 |---|---|---|
+| v2.17.1 | 2026-10-30 | **법령 개정 알림을 '그래프에 없음'(근거 부족) 즉시 응답에도 표시**(`KG_LAW_EVENTS`). 스트리밍 답변과 같은 공통 조각 `lawPanelMeta`를 써서 두 경로가 갈라지지 않으며, 메타데이터 전용이라 답변 문구·모델 입력은 불변. 상세는 [설계서 §15.5](docs/dikw-dynamic-ontology-design.md) |
 | v2.17.0 | 2026-10-30 | **법령 개정 알림 패널**(`KG_LAW_EVENTS`): 법제처 오픈API로 확정 법령 6건(항공안전법 3종·항공사업법·드론법·군사기지법)의 개정·시행 정보를 이벤트로 적재, 질문이 해당 법령을 언급하면 동향 패널에만 표시(답변 근거·모델 입력 불변). 동향 이벤트 재생성. 상세는 [RELEASES.md](docs/RELEASES.md)·[설계서 §15](docs/dikw-dynamic-ontology-design.md) |
 | v2.16.0 | 2026-10-27 | **한국어 활용형 오판 거절 수정**(질문 36개 거절 18→6), 수집 기준일·신선도(`KG_FRESHNESS`), 동향 이벤트 패널(`KG_EVENTS`), 라벨된 일반 공학 설명(`KG_GENERAL`, 원인형 한정). 상세는 [RELEASES.md](docs/RELEASES.md)·[AI Q&A 개선 계획](docs/ai-qa-improvement-plan.md) |
 | deploy-20261025-* | 2026-10-25 | 빌더 단계 일관성 검출·확정 스펙 구역·재작성 트리거, 수집 동의 고지(strict)·90일 경험 로그, 구글 로그인·내 기록(UI 숨김). 상세는 [RELEASES.md](docs/RELEASES.md) |
