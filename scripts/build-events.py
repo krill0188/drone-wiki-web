@@ -11,6 +11,8 @@
     2) 제품 모델 토큰(영문+숫자 4자 이상)이 제목에 나오고 카탈로그에서 제품 하나에만 대응하며 그 제품의 제조사도 제목에 있으면 Product 링크.
 - 기준 시각은 입력(피드의 가장 늦은 fetched 날짜)에서 정한다 → 같은 입력이면 출력이 바이트 단위로 같다.
 - 날짜를 해석할 수 없는 항목은 창에 넣지 않는다(fetched로 대체하면 거짓으로 최신처럼 보이므로).
+- 법령 이벤트(제목이 "[법령] {법령명} · …", 2nd/scripts/fetch-law.py 가 만든 것)는 laws.json 의 법령명과 정확히 같을 때만 Law 링크를 만든다.
+  개정은 공포 후 시행까지 몇 달이 걸려도 의미가 있으므로 창은 --law-window-days(기본 365)를 쓴다. 제조사·제품 링크는 시도하지 않는다.
 실행: python3 -I scripts/build-events.py [--feed PATH] [--out PATH] [--window-days 90]
 """
 import argparse, collections, hashlib, json, os, re, sys
@@ -22,6 +24,9 @@ OD = os.path.join(HERE, "..", "data", "ontology")
 # 논문은 canonical 위키가 따로 다루고, 채용 공고는 동향이 아니다.
 INCLUDE_TYPES = {"news", "video", "release", "defense", "gov", "regulation"}
 MIN_NAME_LEN = 4
+# fetch-law.py 와의 계약: "[법령] 항공안전법 · 일부개정 · 시행 2026-04-01"
+LAW_TITLE_PREFIX = "[법령] "
+LAW_TITLE_SEP = " · "
 # 제목에 흔히 나오는 일반 낱말과 겹치는 제조사명은 오링크가 많아 별칭으로 쓰지 않는다.
 GENERIC_NAMES = {"drone", "drones", "flight", "power", "motor", "motors", "systems", "technology", "robotics", "aero", "aviation", "labs", "tech"}
 
@@ -63,6 +68,8 @@ def main():
     ap.add_argument("--feed", default=os.path.expanduser("~/2nd/.ua/news-feed.json"))
     ap.add_argument("--out", default=os.path.join(OD, "events.json"))
     ap.add_argument("--window-days", type=int, default=90)
+    ap.add_argument("--law-window-days", type=int, default=365)
+    ap.add_argument("--laws", default=os.path.join(OD, "laws.json"))
     a = ap.parse_args()
 
     feed = json.load(open(a.feed, encoding="utf-8"))
@@ -75,6 +82,11 @@ def main():
         sys.exit("피드에 해석 가능한 fetched가 없습니다")
     today = max(fetched)
     floor = today - timedelta(days=a.window_days)
+    law_floor = today - timedelta(days=a.law_window_days)
+    # 법령명 → 법령 ID. 목록은 사람이 정한 laws.json 한 곳(없으면 법령 링크 없음).
+    law_by_name = {}
+    if os.path.exists(a.laws):
+        law_by_name = {x["name"]: x["id"] for x in json.load(open(a.laws, encoding="utf-8"))["laws"]}
 
     # 제조사 별칭 → 제조사 ID(둘 이상이면 모호하므로 제외)
     # 별칭이 여러 제조사 노드에 걸릴 때(예: 'DJI'가 DJI·DJI Enterprise·DJI Agriculture에 모두 파생) 노드 자신의 이름과 정확히 같은 노드가 있으면 그쪽이 정본이다.
@@ -112,12 +124,13 @@ def main():
         if it.get("type") not in INCLUDE_TYPES:
             stats["제외:유형(paper·job 등)"] += 1
             continue
+        is_law = it.get("type") == "regulation" and (it.get("title") or "").startswith(LAW_TITLE_PREFIX)
         day = parse_day(it.get("published"))
         if day is None:
             stats["제외:날짜 해석 불가"] += 1
             continue
-        if day < floor or day > today:
-            stats["제외:창 밖(90일 초과 또는 미래)"] += 1
+        if day < (law_floor if is_law else floor) or day > today:
+            stats["제외:창 밖(기간 초과 또는 미래)"] += 1
             continue
         title, url = (it.get("title") or "").strip(), (it.get("url") or "").strip()
         if not title or not url.startswith("http"):
@@ -126,6 +139,12 @@ def main():
         eid = "event:" + (it.get("sha256") or hashlib.sha256(url.encode()).hexdigest())[:12]
         events.append({"id": eid, "type": "Event", "eventType": it["type"], "title": title, "url": url,
                        "source": it.get("source") or "", "domain": it.get("domain") or "", "published": day.isoformat(), "status": "unverified"})
+        if is_law:  # 법령명이 laws.json 과 정확히 같을 때만 링크. 제조사·제품 매칭은 하지 않는다(법령 제목에 대한 오링크 방지).
+            law_id = law_by_name.get(title[len(LAW_TITLE_PREFIX):].split(LAW_TITLE_SEP)[0].strip())
+            if law_id:
+                links.append({"event": eid, "node": law_id, "nodeType": "Law", "predicate": "mentions", "method": "law-title-exact", "score": 1.0})
+            stats["링크됨" if law_id else "미링크"] += 1
+            continue
         t = " " + norm(title) + " "
         mfr_hit = sorted({mid for al, mid in mfr_alias.items() if f" {al} " in t} | {mid for name, mid in short_caps.items() if re.search(rf"(?<![A-Za-z0-9]){name}(?![A-Za-z0-9])", title)})
         for mid in mfr_hit:
@@ -137,9 +156,9 @@ def main():
 
     events.sort(key=lambda e: (e["published"], e["id"]), reverse=True)
     links.sort(key=lambda l: (l["event"], l["node"]))
-    out = {"generated": today.isoformat(), "window_days": a.window_days, "events": events, "links": links,
+    out = {"generated": today.isoformat(), "window_days": a.window_days, "law_window_days": a.law_window_days, "events": events, "links": links,
            "stats": {"input": len(feed), "events": len(events), "links": len(links), "manufacturerLinks": sum(1 for l in links if l["nodeType"] == "Manufacturer"),
-                     "productLinks": sum(1 for l in links if l["nodeType"] == "Product"), "ambiguousAliasesDropped": len(ambiguous_aliases), **dict(sorted(stats.items()))}}
+                     "productLinks": sum(1 for l in links if l["nodeType"] == "Product"), "lawLinks": sum(1 for l in links if l["nodeType"] == "Law"), "ambiguousAliasesDropped": len(ambiguous_aliases), **dict(sorted(stats.items()))}}
     with open(a.out, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1, sort_keys=True)
         f.write("\n")

@@ -27,7 +27,7 @@ interface ChatMetadata {
   // 검증되지 않은 최신 동향(뉴스·영상). 답변의 근거가 아니며 모델은 이 내용을 보지 못한다.
   // 서버가 일반 공학 설명 자격을 표시한 경우(KG_GENERAL=1). 실제 생성·검증은 별도 엔드포인트가 하며 본문과 분리된다.
   generalTier?: { eligible: boolean; kind?: string }
-  relatedEvents?: { id: string; title: string; url: string; source: string; eventType: string; published: string; about: string }[]
+  relatedEvents?: { id: string; title: string; url: string; source: string; eventType: string; published: string; about: string; kind?: "law" }[]
   answerMeta?: {
     basis?: "ontology" | "ontology-linked" | "wiki-sourced" | "none"
     status: "answered" | "insufficient_evidence" | "unverified"

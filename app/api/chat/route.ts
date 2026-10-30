@@ -27,7 +27,7 @@ import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { designEvidence } from "@/lib/evidence"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
-import { eventsEnabled, relatedEventsFor } from "@/lib/events"
+import { eventsEnabled, lawEventsEnabled, relatedEventsFor, relatedLawEventsFor } from "@/lib/events"
 import { generalTierEnabled, eligibility as generalEligibility, hasCoverageGap } from "@/lib/general-tier"
 import type { DocContext } from "@/lib/types"
 import type { DocViewRecord } from "@/lib/session-store"
@@ -123,7 +123,8 @@ export async function POST(req: NextRequest) {
         messageMetadata: ({ part }) => {
           if (part.type !== "finish") return undefined
           // 최신 동향(미검증)은 모델 컨텍스트가 아니라 이 메타데이터로만 클라이언트에 간다(KG_EVENTS=1일 때만).
-          const events = eventsEnabled() ? relatedEventsFor(plan.entities) : []
+          // 법령 개정 알림(KG_LAW_EVENTS=1 + laws.json 확정)도 같은 방식으로 모델 밖 메타데이터에만 싣는다.
+          const events = [...(eventsEnabled() ? relatedEventsFor(plan.entities) : []), ...(lawEventsEnabled() ? relatedLawEventsFor(question) : [])]
           const am = metaForStreamed(plan, ctx, acc.text)
           // 근거 기반 본문이 질문의 관점을 찾지 못했을 때만 일반 공학 설명 자격을 표시한다(본문·검증·캐시 대상은 그대로).
           const gel = generalTierEnabled() ? generalEligibility(question, plan) : null
