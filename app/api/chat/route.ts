@@ -27,7 +27,7 @@ import { evaluateDesignGate } from "@/lib/design-gate"
 import { designBlocks } from "@/lib/design-context"
 import { designEvidence } from "@/lib/evidence"
 import { buildKgSystemPrompt } from "@/lib/chat-system-prompt"
-import { eventsEnabled, lawEventsEnabled, relatedEventsFor, relatedLawEventsFor } from "@/lib/events"
+import { eventsEnabled, lawPanelMeta, relatedEventsFor } from "@/lib/events"
 import { generalTierEnabled, eligibility as generalEligibility, hasCoverageGap } from "@/lib/general-tier"
 import type { DocContext } from "@/lib/types"
 import type { DocViewRecord } from "@/lib/session-store"
@@ -98,7 +98,8 @@ export async function POST(req: NextRequest) {
       const meta = { answerMeta: { status: "insufficient_evidence", confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: plan.suggestions, ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
       // 일반 공학 설명 자격(KG_GENERAL=1): 거절 응답 뒤에 클라이언트가 별도 엔드포인트로 요청한다. 자격은 서버가 그 엔드포인트에서 다시 판정한다.
       const gel = generalTierEnabled() ? generalEligibility(question, plan) : null
-      return instantReply(insufficientMessage(plan), gel?.eligible ? { ...meta, generalTier: { eligible: true, kind: gel.kind } } : meta)
+      // 법령 개정 알림(KG_LAW_EVENTS=1)은 근거 부족 응답에도 붙인다 — 그래프가 답하지 못하는 법령 질문일수록 최근 개정 알림이 필요하다. 메타데이터 전용이며 답변 문구는 바뀌지 않는다.
+      return instantReply(insufficientMessage(plan), { ...meta, ...lawPanelMeta(question), ...(gel?.eligible ? { generalTier: { eligible: true, kind: gel.kind } } : {}) })
     }
     const vb = verbatimAnswer(plan)
     if (vb) {
@@ -124,7 +125,7 @@ export async function POST(req: NextRequest) {
           if (part.type !== "finish") return undefined
           // 최신 동향(미검증)은 모델 컨텍스트가 아니라 이 메타데이터로만 클라이언트에 간다(KG_EVENTS=1일 때만).
           // 법령 개정 알림(KG_LAW_EVENTS=1 + laws.json 확정)도 같은 방식으로 모델 밖 메타데이터에만 싣는다.
-          const events = [...(eventsEnabled() ? relatedEventsFor(plan.entities) : []), ...(lawEventsEnabled() ? relatedLawEventsFor(question) : [])]
+          const events = [...(eventsEnabled() ? relatedEventsFor(plan.entities) : []), ...(lawPanelMeta(question).relatedEvents ?? [])]
           const am = metaForStreamed(plan, ctx, acc.text)
           // 근거 기반 본문이 질문의 관점을 찾지 못했을 때만 일반 공학 설명 자격을 표시한다(본문·검증·캐시 대상은 그대로).
           const gel = generalTierEnabled() ? generalEligibility(question, plan) : null

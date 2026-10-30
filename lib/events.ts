@@ -89,3 +89,11 @@ export function lawEventsFrom(src: LawSource, question: string, max = 3, now: Da
 
 const LAW_SRC = makeLawSource(lawsFile as unknown as LawsFile, F as EventsFile)
 export const relatedLawEventsFor = (question: string, max = 3, now: Date = new Date()) => lawEventsFrom(LAW_SRC, question, max, now)
+
+// 법령 알림을 응답 메타데이터에 싣는 조각. 플래그(KG_LAW_EVENTS)가 꺼져 있거나 질문과 맞는 법령 알림이 없으면 빈 객체.
+// 스트리밍 답변과 근거 부족 즉시 응답이 같은 함수를 써서 두 경로의 판정이 갈라지지 않는다. 결과는 메타데이터로만 나가며 모델 입력에는 들어가지 않는다.
+export function lawPanelMeta(question: string, now: Date = new Date()): { relatedEvents?: RelatedEvent[] } {
+  if (!lawEventsEnabled()) return {}
+  const events = relatedLawEventsFor(question, 3, now)
+  return events.length ? { relatedEvents: events } : {}
+}

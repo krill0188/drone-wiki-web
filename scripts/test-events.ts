@@ -169,7 +169,7 @@ async function main() {
   })
 
   // ── 법령 개정 알림(1단계) ─────────────────────────────────────────────
-  const { makeLawSource, lawEventsFrom, termsOf, compact, relatedLawEventsFor, lawEventsEnabled } = await import("../lib/events")
+  const { makeLawSource, lawEventsFrom, termsOf, compact, relatedLawEventsFor, lawEventsEnabled, lawPanelMeta } = await import("../lib/events")
 
   await t("L1 laws.json 형식: 10건 이내·ID 유일·참조 주제 존재·검색어는 모두 공백 제거 후 3자 이상", () => {
     ok(lawsReal.laws.length > 0 && lawsReal.laws.length <= 10, `법령 ${lawsReal.laws.length}건`)
@@ -254,10 +254,32 @@ async function main() {
       ok(!/from\s+["'](?:@\/lib|\.)\/events["']/.test(src) && !/laws\.json/.test(src), `lib/${f} 가 events/laws 를 가져옴 — 모델 입력 유입 위험`)
     }
     const route = fs.readFileSync(path.join(ROOT, "app", "api", "chat", "route.ts"), "utf-8")
-    const uses = [...route.matchAll(/relatedLawEventsFor\(/g)].length
-    ok(uses === 1, `route.ts 의 relatedLawEventsFor 호출 ${uses}곳(메타데이터 1곳이어야 함)`)
-    const line = route.split("\n").find((l) => l.includes("relatedLawEventsFor("))!
-    ok(line.includes("const events ="), "법령 이벤트가 events 메타 변수 밖에서 쓰임")
+    ok(!/relatedLawEventsFor\(|lawEventsEnabled\(/.test(route), "route.ts 가 법령 조회 함수를 직접 부름 — lawPanelMeta 한 곳을 거쳐야 함")
+    const uses = route.split("\n").filter((l) => l.includes("lawPanelMeta("))
+    ok(uses.length === 2, `route.ts 의 lawPanelMeta 호출 ${uses.length}곳(스트리밍 1 + 근거 부족 즉시 응답 1 이어야 함)`)
+    ok(uses.some((l) => l.includes("const events =")), "스트리밍 경로: 법령 이벤트가 events 메타 변수 밖에서 쓰임")
+    ok(uses.some((l) => l.includes("instantReply(insufficientMessage(plan)")), "근거 부족 경로: 즉시 응답 메타 인자로 쓰이지 않음")
+    ok(!uses.some((l) => /streamText|system:|nimSystemPrompt|buildNimContext/.test(l)), "법령 이벤트가 모델 호출 인자와 같은 줄에서 쓰임")
+  })
+
+  await t("L7 법령 패널 메타(스트리밍·근거 부족 공통 조각): 플래그 off 면 빈 객체, on 이면 법령 질문에만 relatedEvents(kind=law), 무관 질문은 빈 객체", () => {
+    const NOW = new Date(ev.generated + "T12:00:00Z")
+    const hasLawEvents = ev.links.some((l) => l.nodeType === "Law")
+    const qs = ["초경량비행장치 비행승인", "항공안전법 개정 내용 알려줘"] // 운영 검증에서 근거 부족 즉시 응답으로 나온 질문 유형 포함
+    delete process.env.KG_LAW_EVENTS
+    for (const q of qs) ok(Object.keys(lawPanelMeta(q, NOW)).length === 0, `플래그 off 인데 메타가 나옴: ${q}`)
+    process.env.KG_LAW_EVENTS = "1"
+    try {
+      ok(Object.keys(lawPanelMeta("DJI Mini 5 사양 알려줘", NOW)).length === 0, "무관한 질문에 법령 메타")
+      ok(Object.keys(lawPanelMeta("", NOW)).length === 0, "빈 질문에 법령 메타")
+      if (lawsReal.confirmed === true && hasLawEvents) {
+        for (const q of qs) {
+          const r = lawPanelMeta(q, NOW).relatedEvents
+          ok(r && r.length > 0 && r.length <= 3 && r.every((x) => x.kind === "law" && x.eventType === "regulation"), `법령 질문인데 패널 메타 없음/형식 이상: ${q}`)
+        }
+      }
+    } finally { delete process.env.KG_LAW_EVENTS }
+    return hasLawEvents ? "법령 이벤트가 있는 번들 데이터로 확인" : "번들 데이터에 법령 이벤트 없음 — 노출 시험은 건너뜀(게이트·무관 질문만 확인)"
   })
 
   await t("L6 UI 패널: 법령 항목은 '⚖ 법령' 표시와 법적 자문 아님 고지가 있고, 법령이 없으면 고지가 없다", async () => {
