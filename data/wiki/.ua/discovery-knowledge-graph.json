@@ -18937,7 +18937,11 @@
         "raw/papers/drone-hw/fault-tolerant-dynamic-task-assignment-for-uav-based-search-teams.md",
         "raw/papers/swarm/agent-based-simulation-of-uav-battery-recharging-for-iot-applications-precision-.md",
         "raw/papers/_unclassified/dynamic-active-fleet-sizing-of-heterogeneous-uav-relays-for-post-disaster-commun.md",
-        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md",
+        "raw/papers/_unclassified/uav-기지국-운용을-위한-복귀-제약과-데이터율-보장-기반-충전소-배치-최적화.md",
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md",
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md",
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
       ]
     },
     {
@@ -18963,7 +18967,8 @@
       "sources": [
         "raw/papers/_unclassified/bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-network-with-mobile-edg.md",
         "raw/papers/_unclassified/comparison-of-clustering-algorithms-for-ground-and-hybrid-mobile-edge-computing-.md",
-        "raw/papers/drone-ai/joint-resource-management-for-energy-efficient-uav-assisted-swipt-mec-a-deep-rei.md"
+        "raw/papers/drone-ai/joint-resource-management-for-energy-efficient-uav-assisted-swipt-mec-a-deep-rei.md",
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
       ]
     },
     {
@@ -19315,7 +19320,8 @@
         "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md",
         "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md",
         "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md",
-        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md"
+        "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md",
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
       ]
     },
     {
@@ -21447,7 +21453,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md"
+        "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md",
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
       ]
     },
     {
@@ -23085,7 +23092,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/swarm/calibrate-once-fly-any-team-residual-grounded-low-fidelity-training-for-cooperat.md",
-        "raw/papers/drone-ai/how-to-model-your-crazyflie-brushless.md"
+        "raw/papers/drone-ai/how-to-model-your-crazyflie-brushless.md",
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
       ]
     },
     {
@@ -23295,7 +23303,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/articles/fetch-2026-07-29-rss-dronedj.md"
+        "raw/articles/fetch-2026-07-29-rss-dronedj.md",
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
       ]
     },
     {
@@ -29428,7 +29437,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md"
+        "raw/papers/_unclassified/uam-회랑-바람-관측을-위한-기상드론-유효성-검증.md",
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
       ]
     },
     {
@@ -29801,7 +29811,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md"
+        "raw/papers/swarm/a-novel-efficient-particle-swarm-optimization-algorithm-for-uav-applications-in-.md",
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
       ]
     },
     {
@@ -30473,7 +30484,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md",
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
       ]
     },
     {
@@ -35931,7 +35943,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/drone-ai/a-lyapunov-guided-diffusion-based-reinforcement-learning-approach-for-uav-assist.md"
+        "raw/papers/drone-ai/a-lyapunov-guided-diffusion-based-reinforcement-learning-approach-for-uav-assist.md",
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
       ]
     },
     {
@@ -38093,7 +38106,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Organization",
       "sources": [
-        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md"
+        "raw/papers/drone-sw/uav-이상-동작-탐지를-위한-적합도-함수-연구.md",
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
       ]
     },
     {
@@ -38622,6 +38636,1483 @@
       "ontologyClass": "Concept",
       "sources": [
         "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ]
+    },
+    {
+      "id": "RTK-UAV",
+      "name": "RTK-UAV",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ]
+    },
+    {
+      "id": "SfM",
+      "name": "SfM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ]
+    },
+    {
+      "id": "VRS-GNSS",
+      "name": "VRS-GNSS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ]
+    },
+    {
+      "id": "Trimble R12i",
+      "name": "Trimble R12i",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ]
+    },
+    {
+      "id": "Rhino",
+      "name": "Rhino",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ]
+    },
+    {
+      "id": "Grasshopper",
+      "name": "Grasshopper",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ]
+    },
+    {
+      "id": "Charging Station",
+      "name": "Charging Station",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/uav-기지국-운용을-위한-복귀-제약과-데이터율-보장-기반-충전소-배치-최적화.md"
+      ]
+    },
+    {
+      "id": "SWaP",
+      "name": "SWaP",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ]
+    },
+    {
+      "id": "멀티코어",
+      "name": "멀티코어",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ]
+    },
+    {
+      "id": "통신 미들웨어",
+      "name": "통신 미들웨어",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ]
+    },
+    {
+      "id": "비행제어 알고리즘",
+      "name": "비행제어 알고리즘",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ]
+    },
+    {
+      "id": "Cube-shaped modular unmanned aerial vehicle",
+      "name": "Cube-shaped modular unmanned aerial vehicle",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "single propeller",
+      "name": "single propeller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "four vanes",
+      "name": "four vanes",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "mid-air coupling",
+      "name": "mid-air coupling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "hovering",
+      "name": "hovering",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "point-to-point navigation",
+      "name": "point-to-point navigation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "multi-agent PPO (MAPPO)",
+      "name": "multi-agent PPO (MAPPO)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "physics-based simulation environment",
+      "name": "physics-based simulation environment",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "centralized training",
+      "name": "centralized training",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "decentralized execution",
+      "name": "decentralized execution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "김현민",
+      "name": "김현민",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "국립금오공과대학교",
+      "name": "국립금오공과대학교",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ]
+    },
+    {
+      "id": "Quadrotor UAV",
+      "name": "Quadrotor UAV",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Suspended Payload",
+      "name": "Suspended Payload",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "3D A* Algorithm",
+      "name": "3D A* Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Douglas–Peucker Algorithm",
+      "name": "Douglas–Peucker Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Hybrid Polynomial Optimization",
+      "name": "Hybrid Polynomial Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Jerk",
+      "name": "Jerk",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Snap",
+      "name": "Snap",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Trajectory Planning",
+      "name": "Trajectory Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md",
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Sun Yat-sen University",
+      "name": "Sun Yat-sen University",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Xinhai Wang",
+      "name": "Xinhai Wang",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ]
+    },
+    {
+      "id": "Drone Mounted Lighting",
+      "name": "Drone Mounted Lighting",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "IES Photometric Data",
+      "name": "IES Photometric Data",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "ReluxDesktop",
+      "name": "ReluxDesktop",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "Illuminance Calculation",
+      "name": "Illuminance Calculation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "Minimum Illuminance Requirement",
+      "name": "Minimum Illuminance Requirement",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "Target Area",
+      "name": "Target Area",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "Photometric Distribution",
+      "name": "Photometric Distribution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "Relative Light Output",
+      "name": "Relative Light Output",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "서지영",
+      "name": "서지영",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ]
+    },
+    {
+      "id": "eCalc",
+      "name": "eCalc",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "XCopterCalc",
+      "name": "XCopterCalc",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "Prop-KW-Wizard",
+      "name": "Prop-KW-Wizard",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "ESC",
+      "name": "ESC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "Motor",
+      "name": "Motor",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "Propeller",
+      "name": "Propeller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "Battery",
+      "name": "Battery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "LiPo Battery",
+      "name": "LiPo Battery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "FCU",
+      "name": "FCU",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "Michael Kelly",
+      "name": "Michael Kelly",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ]
+    },
+    {
+      "id": "xcopterCalc",
+      "name": "xcopterCalc",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ]
+    },
+    {
+      "id": "JavaScript",
+      "name": "JavaScript",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ]
+    },
+    {
+      "id": "RC Calculator",
+      "name": "RC Calculator",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ]
+    },
+    {
+      "id": "Multicopter Calculator",
+      "name": "Multicopter Calculator",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ]
+    },
+    {
+      "id": "Dual Gradient Consensus (DGC)",
+      "name": "Dual Gradient Consensus (DGC)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "Random Fourier feature model",
+      "name": "Random Fourier feature model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "offline BPTT policy",
+      "name": "offline BPTT policy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "least-squares adaptation",
+      "name": "least-squares adaptation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "DAPL",
+      "name": "DAPL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "confidence map",
+      "name": "confidence map",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "L1-augmented MPC",
+      "name": "L1-augmented MPC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "RFF-based MPC",
+      "name": "RFF-based MPC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "constant-step DAPL",
+      "name": "constant-step DAPL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "frozen-parameter baseline",
+      "name": "frozen-parameter baseline",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ]
+    },
+    {
+      "id": "cascade PID",
+      "name": "cascade PID",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "hover LQR",
+      "name": "hover LQR",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "boundary-layer sliding-mode control (BL-SMC)",
+      "name": "boundary-layer sliding-mode control (BL-SMC)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "linear MPC with LQR fallback (LMPC-F)",
+      "name": "linear MPC with LQR fallback (LMPC-F)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "preview-enabled LMPC-F",
+      "name": "preview-enabled LMPC-F",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "geometric $SO(3)$ controller",
+      "name": "geometric $SO(3)$ controller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "MPC",
+      "name": "MPC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "tuning protocol",
+      "name": "tuning protocol",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Reference preview",
+      "name": "Reference preview",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Actuator prediction",
+      "name": "Actuator prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Actuator modeling",
+      "name": "Actuator modeling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "fallback activity",
+      "name": "fallback activity",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Command timing",
+      "name": "Command timing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Dao, Xuan-Quy",
+      "name": "Dao, Xuan-Quy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Nguyen, Le-Minh",
+      "name": "Nguyen, Le-Minh",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Le, Ngoc-Bich",
+      "name": "Le, Ngoc-Bich",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ]
+    },
+    {
+      "id": "Hybrid Deep Learning Framework",
+      "name": "Hybrid Deep Learning Framework",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ]
+    },
+    {
+      "id": "3DGCPM",
+      "name": "3DGCPM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ]
+    },
+    {
+      "id": "F2MGDRL",
+      "name": "F2MGDRL",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ]
+    },
+    {
+      "id": "Cellular network signals",
+      "name": "Cellular network signals",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ]
+    },
+    {
+      "id": "Sathyabama Institute of Science and Technology",
+      "name": "Sathyabama Institute of Science and Technology",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ]
+    },
+    {
+      "id": "P. Tamilselvi",
+      "name": "P. Tamilselvi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ]
+    },
+    {
+      "id": "Phased Trajectory Planning Method",
+      "name": "Phased Trajectory Planning Method",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "UAV Swarm Cooperation",
+      "name": "UAV Swarm Cooperation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Global Planning",
+      "name": "Global Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Online Local Replanning",
+      "name": "Online Local Replanning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Improved Genetic Algorithm",
+      "name": "Improved Genetic Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Multi-Objective Optimization Model",
+      "name": "Multi-Objective Optimization Model",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Redundant Waypoint Deletion Operator",
+      "name": "Redundant Waypoint Deletion Operator",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Directional Selection Method",
+      "name": "Directional Selection Method",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Hierarchical Strategy",
+      "name": "Hierarchical Strategy",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Three-Dimensional Search Decoupling",
+      "name": "Three-Dimensional Search Decoupling",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Two-Dimensional Pathfinding",
+      "name": "Two-Dimensional Pathfinding",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Altitude Planning",
+      "name": "Altitude Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Improved Variable-Step Sparse A* Algorithm",
+      "name": "Improved Variable-Step Sparse A* Algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Nanjing University of Aeronautics",
+      "name": "Nanjing University of Aeronautics",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Wei Zhou",
+      "name": "Wei Zhou",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ]
+    },
+    {
+      "id": "Fluid Antennas",
+      "name": "Fluid Antennas",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "UAV Communication Systems",
+      "name": "UAV Communication Systems",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Dual-Mobility Perspective",
+      "name": "Dual-Mobility Perspective",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Macro-Mobility",
+      "name": "Macro-Mobility",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Micro-Mobility",
+      "name": "Micro-Mobility",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Joint Optimization",
+      "name": "Joint Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Offline-Online Optimization Framework",
+      "name": "Offline-Online Optimization Framework",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Beamforming",
+      "name": "Beamforming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Statistical CSI",
+      "name": "Statistical CSI",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Instantaneous CSI",
+      "name": "Instantaneous CSI",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "ISAC",
+      "name": "ISAC",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Aerial Relaying",
+      "name": "Aerial Relaying",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "LAWNs",
+      "name": "LAWNs",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Position Reconfiguration",
+      "name": "Position Reconfiguration",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Liu, Wenchao",
+      "name": "Liu, Wenchao",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Yuan, Weijie",
+      "name": "Yuan, Weijie",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Wu, Jun",
+      "name": "Wu, Jun",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Ren, Jinke",
+      "name": "Ren, Jinke",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Zhang, Xuhui",
+      "name": "Zhang, Xuhui",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "You, Changsheng",
+      "name": "You, Changsheng",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
       ]
     }
   ],
@@ -68440,6 +69931,1095 @@
       "type": "DEPENDS_ON",
       "evidence": [
         "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RTK-UAV",
+      "target": "VRS-GNSS",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RTK-UAV",
+      "target": "Trimble R12i",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RTK-UAV",
+      "target": "SfM",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trimble R12i",
+      "target": "VRS-GNSS",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "DJI Terra",
+      "target": "RTK-UAV",
+      "type": "COMPARES_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rhino",
+      "target": "Grasshopper",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Rhino",
+      "target": "RTK-UAV",
+      "type": "CONNECTS_TO",
+      "evidence": [
+        "raw/papers/_unclassified/rtk-uav-사진측량-기반-3d-메시의-grasshopper-검증-방법론과-건축-실무-연계-프로세스-연구---건축-실무-설계-연계를-위한-rh.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Charging Station",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-기지국-운용을-위한-복귀-제약과-데이터율-보장-기반-충전소-배치-최적화.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "멀티코어",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM",
+      "target": "멀티코어",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "통신 미들웨어",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM",
+      "target": "통신 미들웨어",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "비행제어 알고리즘",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAM",
+      "target": "비행제어 알고리즘",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "SWaP",
+      "type": "DESIRES",
+      "evidence": [
+        "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cube-shaped modular unmanned aerial vehicle",
+      "target": "single propeller",
+      "type": "HAS_COMPONENT",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cube-shaped modular unmanned aerial vehicle",
+      "target": "four vanes",
+      "type": "HAS_COMPONENT",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cube-shaped modular unmanned aerial vehicle",
+      "target": "mid-air coupling",
+      "type": "HAS_COMPONENT",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "mid-air coupling",
+      "target": "multi-agent PPO (MAPPO)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "mid-air coupling",
+      "target": "centralized training",
+      "type": "PROVIDES",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "mid-air coupling",
+      "target": "decentralized execution",
+      "type": "PROVIDES",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "hovering",
+      "target": "proximal policy optimization (PPO)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "point-to-point navigation",
+      "target": "proximal policy optimization (PPO)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "reinforcement learning",
+      "target": "NVIDIA Isaac Lab",
+      "type": "RUNS_ON",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "NVIDIA Isaac Lab",
+      "target": "physics-based simulation environment",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/강화학습-기반-단일-프로펠러-모듈형-uav의-비행-및-결합-제어.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quadrotor UAV",
+      "target": "Trajectory Planning",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Suspended Payload",
+      "target": "Quadrotor UAV",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trajectory Planning",
+      "target": "3D A* Algorithm",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trajectory Planning",
+      "target": "Douglas–Peucker Algorithm",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trajectory Planning",
+      "target": "Hybrid Polynomial Optimization",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Polynomial Optimization",
+      "target": "Jerk",
+      "type": "MINIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Polynomial Optimization",
+      "target": "Snap",
+      "type": "MINIMIZES",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Polynomial Optimization",
+      "target": "Particle Swarm Optimization",
+      "type": "TUNED_BY",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Xinhai Wang",
+      "target": "Sun Yat-sen University",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/trajectory-planning-for-quadrotor-uav-with-suspended-payload-via-pso-tuned-hybri.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Mounted Lighting",
+      "target": "IES Photometric Data",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Mounted Lighting",
+      "target": "Illuminance Calculation",
+      "type": "GENERATES",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Illuminance Calculation",
+      "target": "Minimum Illuminance Requirement",
+      "type": "PRODUCES",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Minimum Illuminance Requirement",
+      "target": "Target Area",
+      "type": "MEETS",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ReluxDesktop",
+      "target": "IES Photometric Data",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ReluxDesktop",
+      "target": "Illuminance Calculation",
+      "type": "COMPARISONS_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "서지영",
+      "target": "세종대학교",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/_unclassified/배광특성을-고려한-드론-탑재-조명의-목표영역-최소조도-충족을-위한-운용조건-탐색.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "XCopterCalc",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "Prop-KW-Wizard",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "ESC",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "Motor",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "Propeller",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "Battery",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ESC",
+      "target": "Motor",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ESC",
+      "target": "Battery",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LiPo Battery",
+      "target": "Battery",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "eCalc",
+      "target": "FCU",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Michael Kelly",
+      "target": "eCalc",
+      "type": "AUTHOR_OF",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc-help.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "xcopterCalc",
+      "target": "JavaScript",
+      "type": "USES",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "xcopterCalc",
+      "target": "Multicopter Calculator",
+      "type": "IS_A",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "xcopterCalc",
+      "target": "RC Calculator",
+      "type": "EXTENDS",
+      "evidence": [
+        "raw/articles/ecalc-xcoptercalc.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "Random Fourier feature model",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "offline BPTT policy",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "least-squares adaptation",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "DAPL",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "confidence map",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "L1-augmented MPC",
+      "type": "COMPARES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "RFF-based MPC",
+      "type": "COMPARES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "constant-step DAPL",
+      "type": "COMPARES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual Gradient Consensus (DGC)",
+      "target": "frozen-parameter baseline",
+      "type": "COMPARES_TO",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Reference preview",
+      "target": "MPC",
+      "type": "IMPROVES",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Reference preview",
+      "target": "fallback activity",
+      "type": "REDUCES",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "preview-enabled LMPC-F",
+      "target": "linear MPC with LQR fallback (LMPC-F)",
+      "type": "EXTENDS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "linear MPC with LQR fallback (LMPC-F)",
+      "target": "fallback activity",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "preview-enabled LMPC-F",
+      "target": "fallback activity",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Command timing",
+      "target": "MPC",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Command timing",
+      "target": "linear MPC with LQR fallback (LMPC-F)",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Command timing",
+      "target": "preview-enabled LMPC-F",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MPC",
+      "target": "Actuator prediction",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MPC",
+      "target": "Actuator modeling",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "tuning protocol",
+      "target": "cascade PID",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "tuning protocol",
+      "target": "hover LQR",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "tuning protocol",
+      "target": "boundary-layer sliding-mode control (BL-SMC)",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "tuning protocol",
+      "target": "linear MPC with LQR fallback (LMPC-F)",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "tuning protocol",
+      "target": "preview-enabled LMPC-F",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "tuning protocol",
+      "target": "geometric $SO(3)$ controller",
+      "type": "IMPACTS",
+      "evidence": [
+        "raw/papers/_unclassified/how-tuning-reference-preview-actuator-modeling-and-fallback-policies-change-quad.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Deep Learning Framework",
+      "target": "F2MGDRL",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Deep Learning Framework",
+      "target": "3DGCPM",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Deep Learning Framework",
+      "target": "Cellular network signals",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid Deep Learning Framework",
+      "target": "UAV",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "F2MGDRL",
+      "target": "3DGCPM",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "P. Tamilselvi",
+      "target": "Sathyabama Institute of Science and Technology",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Phased Trajectory Planning Method",
+      "target": "UAV Swarm Cooperation",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Phased Trajectory Planning Method",
+      "target": "Global Planning",
+      "type": "HAS_PHASE",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Phased Trajectory Planning Method",
+      "target": "Online Local Replanning",
+      "type": "HAS_PHASE",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Global Planning",
+      "target": "Improved Genetic Algorithm",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Improved Genetic Algorithm",
+      "target": "Redundant Waypoint Deletion Operator",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Improved Genetic Algorithm",
+      "target": "Directional Selection Method",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Global Planning",
+      "target": "Multi-Objective Optimization Model",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Online Local Replanning",
+      "target": "Hierarchical Strategy",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hierarchical Strategy",
+      "target": "Three-Dimensional Search Decoupling",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Three-Dimensional Search Decoupling",
+      "target": "Two-Dimensional Pathfinding",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Three-Dimensional Search Decoupling",
+      "target": "Altitude Planning",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Two-Dimensional Pathfinding",
+      "target": "Improved Variable-Step Sparse A* Algorithm",
+      "type": "IMPLEMENTS",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Wei Zhou",
+      "target": "Nanjing University of Aeronautics",
+      "type": "AFFILIATED_WITH",
+      "evidence": [
+        "raw/papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fluid Antennas",
+      "target": "UAV Communication Systems",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Communication Systems",
+      "target": "Fluid Antennas",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual-Mobility Perspective",
+      "target": "Macro-Mobility",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual-Mobility Perspective",
+      "target": "Micro-Mobility",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual-Mobility Perspective",
+      "target": "Trajectory Planning",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dual-Mobility Perspective",
+      "target": "Position Reconfiguration",
+      "type": "CONTAINS",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Macro-Mobility",
+      "target": "Dual-Mobility Perspective",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Micro-Mobility",
+      "target": "Dual-Mobility Perspective",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Joint Optimization",
+      "target": "Trajectory Planning",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Joint Optimization",
+      "target": "Position Reconfiguration",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Joint Optimization",
+      "target": "Beamforming",
+      "type": "INCLUDES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offline-Online Optimization Framework",
+      "target": "Joint Optimization",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offline-Online Optimization Framework",
+      "target": "Statistical CSI",
+      "type": "DEPENDS_ON",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offline-Online Optimization Framework",
+      "target": "Instantaneous CSI",
+      "type": "DEPENDS_ON",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offline-Online Optimization Framework",
+      "target": "Trajectory Planning",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offline-Online Optimization Framework",
+      "target": "Position Reconfiguration",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Offline-Online Optimization Framework",
+      "target": "Beamforming",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fluid Antennas",
+      "target": "Position Reconfiguration",
+      "type": "RECONFIGURES",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "ISAC",
+      "target": "UAV Communication Systems",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "MEC",
+      "target": "UAV Communication Systems",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Aerial Relaying",
+      "target": "UAV Communication Systems",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV Communication Systems",
+      "target": "LAWNs",
+      "type": "DEPENDS_ON",
+      "evidence": [
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
       ],
       "confidence": "unverified"
     }
