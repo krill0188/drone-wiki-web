@@ -139,8 +139,9 @@ proxy.ts             UUID 세션 쿠키 (Next.js 16 proxy 규약)
 | `KG_FRESHNESS=1` | 제품 사양표에 **수집 기준일**·경과일 행, 90일 초과 시 재확인 문구. 낡은 값을 단정하지 않도록 모델 규칙 1항 추가(제품 신선도 속성이 있을 때만) | 판정은 질의 시점 계산. DB·그래프 변경 없음 |
 | `KG_EVENTS=1` | **관련 최신 동향 패널**(뉴스·영상, 미검증). 모델에는 전달하지 않고 UI 메타데이터로만 노출 | 데이터 `data/ontology/events.json`(`scripts/build-events.py`, 제목·URL·출처·날짜만) |
 | `KG_GENERAL=1` | **라벨된 일반 공학 설명**(원인형 질문 한정, 본문과 분리된 점선 블록, "근거 아님" 상시 표시) | 안전·법규·제품·수치·화재 질문 차단, 코드 검증, 서버 재판정. 설계 `docs/ai-qa-improvement-plan.md` |
+| `KG_LAW_EVENTS=1` | **법령 개정 알림**(동향 패널 안 "⚖ 법령" 항목, 미검증·법적 자문 아님 고지). 질문에 확정 법령명·주제어가 있을 때만 최대 3건, 모델에는 전달하지 않음 | 마스터 확정 6건 `data/ontology/laws.json`(`confirmed=true`) + `events.json` 법령 이벤트(2nd `fetch-law.py` 법제처 오픈API 수집). `KG_EVENTS`와 독립. 설계 `docs/dikw-dynamic-ontology-design.md` §15 |
 
-세 플래그 모두 끄면 이전 동작과 완전히 같다. 롤백은 환경변수 제거 후 재배포.
+네 플래그 모두 끄면 이전 동작과 완전히 같다. 롤백은 환경변수 제거 후 재배포.
 
 ### 로컬 실행
 
@@ -156,6 +157,7 @@ npm run build    # 프로덕션 빌드
 
 | 버전 | 일자 | 내용 |
 |---|---|---|
+| v2.17.0 | 2026-10-30 | **법령 개정 알림 패널**(`KG_LAW_EVENTS`): 법제처 오픈API로 확정 법령 6건(항공안전법 3종·항공사업법·드론법·군사기지법)의 개정·시행 정보를 이벤트로 적재, 질문이 해당 법령을 언급하면 동향 패널에만 표시(답변 근거·모델 입력 불변). 동향 이벤트 재생성. 상세는 [RELEASES.md](docs/RELEASES.md)·[설계서 §15](docs/dikw-dynamic-ontology-design.md) |
 | v2.16.0 | 2026-10-27 | **한국어 활용형 오판 거절 수정**(질문 36개 거절 18→6), 수집 기준일·신선도(`KG_FRESHNESS`), 동향 이벤트 패널(`KG_EVENTS`), 라벨된 일반 공학 설명(`KG_GENERAL`, 원인형 한정). 상세는 [RELEASES.md](docs/RELEASES.md)·[AI Q&A 개선 계획](docs/ai-qa-improvement-plan.md) |
 | deploy-20261025-* | 2026-10-25 | 빌더 단계 일관성 검출·확정 스펙 구역·재작성 트리거, 수집 동의 고지(strict)·90일 경험 로그, 구글 로그인·내 기록(UI 숨김). 상세는 [RELEASES.md](docs/RELEASES.md) |
 | deploy-20261024-* | 2026-10-24 | 배선도·단계별 이미지, 안내 카드, 키 풀 폴백, 클라우드 점검, discovery 전체 승격(문서 909→3,261). 배포마다 태그 `deploy-YYYYMMDD-HHMM`, 상세는 [RELEASES.md](docs/RELEASES.md) |
