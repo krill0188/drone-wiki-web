@@ -1,6 +1,6 @@
 {
  "generated": "2026-10-31",
- "fingerprint": "12894772ab91",
+ "fingerprint": "a37334345a62",
  "counts": {
   "manufacturers": 257,
   "products": 694,
@@ -8,8 +8,8 @@
   "papers": 152,
   "claims": 394,
   "edges": 4578,
-  "documents": 3300,
-  "wikiClaims": 3120,
+  "documents": 3312,
+  "wikiClaims": 3132,
   "relations": 4613
  },
  "claimsByKind": {
@@ -46,7 +46,7 @@
   "paper:verified": 248,
   "wiki:blocked": 24,
   "wiki:contested": 6,
-  "wiki:sourced": 3086,
+  "wiki:sourced": 3098,
   "wiki:unverified": 4
  },
  "productsByCategory": {
@@ -71,19 +71,19 @@
   "countryUnknown": 51
  },
  "documents": {
-  "total": 3300,
-  "withDomain": 1007,
+  "total": 3312,
+  "withDomain": 1019,
   "noDomain": 2293,
   "unregisteredDomain": 4,
   "withOntologyClass": 1230,
   "byDomain": {
    "(없음)": 2293,
-   "ai-autonomy": 246,
+   "ai-autonomy": 252,
    "hardware": 188,
-   "ops-mission": 156,
-   "flight-control": 85,
-   "comms-protocol": 77,
-   "regulations": 62,
+   "ops-mission": 157,
+   "flight-control": 87,
+   "comms-protocol": 78,
+   "regulations": 64,
    "edge-ai-compute": 41,
    "gcs-software": 29,
    "vendor-registry": 18,
@@ -103,8 +103,8 @@
   }
  },
  "sources": {
-  "total": 3994,
-  "resolved": 3954,
+  "total": 4007,
+  "resolved": 3967,
   "unresolved": 32,
   "unknown": 8
  },
