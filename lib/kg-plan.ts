@@ -170,6 +170,22 @@ function relevant(question: string, text: string, ignore?: Set<string>): boolean
 export const REGULATORY = /허가|승인|신고|증명|과태료|벌금|벌칙|규정|규제|법령|시행규칙|항공안전법|등록|면제|자격|금지구역|공역/
 const CONCEPTUAL = /차이|비교|vs\.?|versus|무엇|뭐야|뭔가요|이란|설명|개요|정의|원리|기준|절차|방법|종류|장단점|특징|어떻게/i
 
+// 비행 스택·펌웨어 '선택·비교' 질문(예: PX4·ArduPilot 중 고정익·멀티콥터·VTOL에 뭐가 유리한가, 라이선스 차이). 설치 방법·파라미터·수치 질문은 해당 없다.
+// 이런 질문은 ①고정익·VTOL 같은 낱말에 공학 규칙 claim(태양광 비행 기록 등)이 딸려 오고 ②긴 비교 질문은 단어 일치 게이트(질문 내용어의 75%)를 claim 1건이 통과하지 못해 근거가 비던 문제가 있었다(2026-10-31).
+const FIRMWARE_WORD = /px4|ardupilot|아르두파일럿|펌웨어|firmware|비행\s*스택|flight\s*stack/i
+const SELECTION_WORD = /유리|적합|선택|추천|비교|차이|\bvs\b|versus|어느\s*쪽|어떤\s*(것|걸|펌웨어|스택)|뭐가\s*좋|뭘\s*써|장단점|라이선스|license|달라/i
+export const firmwareSelection = (question: string) => FIRMWARE_WORD.test(question) && SELECTION_WORD.test(question)
+// claims.json 의 FW 계열(공식 문서 인용 verified)에 붙는 주제 표시. 이 주제 claim 은 질문이 선택·비교형일 때 온톨로지 연결 claim처럼 바로 쓴다.
+const FIRMWARE_TOPIC = "firmware-selection"
+
+// 질문의 '요청·관점' 낱말(비교·기준·장단점·'각각'·'유리한지'·'…별' 등)은 주제어가 아니다 — 근거 텍스트에 글자 그대로 없어도 '빠진 내용'이 아니다.
+// 거절 판정(refuseMissingCore)이 쓰던 기준을 한계 문구('해당 내용은 찾지 못했습니다')에도 같게 적용한다.
+const EVALUATIVE_WORD = /^(각각|각기|유리|적합|추천|선택|어느|우열|나은|맞는|좋은)/
+const isRequestToken = (t: { orig: string; variants: string[] }): boolean =>
+  ASPECT_Q.has(t.orig) || t.variants.some((v) => ASPECT_Q.has(v)) ||
+  (/[가-힣]/.test(t.orig) && (REQUEST_WORD.test(t.orig) || t.variants.some((v) => REQUEST_WORD.test(v)) || EVALUATIVE_WORD.test(t.orig) ||
+    [...ASPECT_Q].some((a) => a.length >= 2 && t.orig.startsWith(a) && t.orig.length - a.length <= 3)))
+
 // 공식 계층에서 클래스와 그 하위 클래스(예: FlightStack → PX4·ArduPilot)
 function withDescendants(classes: string[]): Set<string> {
   const out = new Set<string>(classes)
@@ -254,12 +270,23 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     push(all<{ s: string }>(`SELECT substr(subject_id, 7) s FROM ontology_relations WHERE predicate = 'mentions' AND object_id IN (${ph}) ORDER BY 1 LIMIT 20`, ...entityIds).map((r) => r.s))
   }
   // 법령·규제 질문에서는 공학 규칙(예: '고도'→대기밀도 규칙)을 끌어오지 않는다 — 단어만 겹친 공학 claim이 '근거 있음'으로 둔갑하는 것을 막는다
-  const ruleIds = REGULATORY.test(question) ? [] : Object.entries(RULE_ALIAS).filter(([, re]) => re.test(question)).map(([r]) => r)
+  // 펌웨어 선택·비교 질문에서도 마찬가지다 — '고정익'·'VTOL' 낱말만으로 공학 규칙 claim(태양광 비행 기록 등)이 근거로 끼어드는 것을 막는다.
+  const ruleIds = REGULATORY.test(question) || firmwareSelection(question) ? [] : Object.entries(RULE_ALIAS).filter(([, re]) => re.test(question)).map(([r]) => r)
   if (ruleIds.length) {
     const ph = ruleIds.map(() => "?").join(",")
     push(all<{ claim_id: string }>(`SELECT cr.claim_id FROM claim_rules cr JOIN claims c ON c.id = cr.claim_id WHERE cr.rule_id IN (${ph}) ORDER BY (c.evidence_kind = 'reported') DESC, (c.status = 'verified') DESC, c.id LIMIT 14`, ...ruleIds).map((r) => r.claim_id))
   }
   const fq = ftsQuery(question)
+  if (firmwareSelection(question)) {
+    // 공식 문서 인용으로 검증된 '펌웨어 선택' 주제 claim(FW 계열)은 온톨로지 연결 claim처럼 게이트 없이 바로 쓴다. 질문과 겹치는 순서(bm25)를 앞세우고 나머지는 id 순으로 채워,
+    // 최종 24개 상한 안에서도 '라이선스'처럼 좁은 질문의 claim 이 밀리지 않게 한다.
+    if (fq) {
+      try {
+        push(all<{ claim_id: string }>(`SELECT f.claim_id FROM claim_fts f JOIN claims c ON c.id = f.claim_id WHERE claim_fts MATCH ? AND c.topic = ? AND c.status IN ('verified','sourced') ORDER BY bm25(claim_fts) LIMIT 24`, fq, FIRMWARE_TOPIC).map((r) => r.claim_id))
+      } catch { /* 질의 해석 실패 시 아래 id 순 채우기만 쓴다 */ }
+    }
+    push(all<{ id: string }>("SELECT id FROM claims WHERE topic = ? AND status IN ('verified','sourced') ORDER BY id LIMIT 24", FIRMWARE_TOPIC).map((r) => r.id))
+  }
   if (fq) {
     try {
       const a = all<{ claim_id: string }>(`SELECT f.claim_id FROM claim_fts f JOIN claims c ON c.id = f.claim_id WHERE claim_fts MATCH ? AND c.origin != 'wiki' ORDER BY bm25(claim_fts) LIMIT 30`, fq).map((r) => r.claim_id)
@@ -430,7 +457,7 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
   // 질문의 내용어 중 선택된 근거(문서 발췌·claim·개체)에서 한 번도 나오지 않은 말은 숨기지 않고 한계로 알린다(예: '한국' 관련 내용이 없음)
   if (plan.status === "ready") {
     const hay = (plan.pages.map((p) => `${p.title} ${p.path} ${p.excerpt}`).join(" ") + " " + plan.claims.map((c) => `${c.subjectText} ${c.value} ${c.conditions ?? ""}`).join(" ") + " " + plan.entities.map((e) => e.label).join(" ")).toLowerCase()
-    const unc = contentTokens(question, domainWords).filter((t) => !t.variants.some((v) => hay.includes(v))).map((t) => t.orig)
+    const unc = contentTokens(question, domainWords).filter((t) => !t.variants.some((v) => hay.includes(v)) && !isRequestToken(t)).map((t) => t.orig)
     if (unc.length) plan.limitations.push(`질문의 '${unc.slice(0, 4).join("', '")}'에 해당하는 내용은 선택된 근거에서 찾지 못했습니다. 그 부분은 답하지 않습니다.`)
   }
   if (plan.excluded.unverified || plan.excluded.blocked) plan.limitations.push(`근거가 확인되지 않은 claim ${plan.excluded.unverified + plan.excluded.blocked}건은 답변에서 제외했습니다.`)
