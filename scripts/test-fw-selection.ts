@@ -97,6 +97,21 @@ async function main() {
     for (const f of ["paper-claims.json", "auto-claims.json"]) ok(!read(f).some((c) => isFw(c.id)), `${f} 에 FW id 중복`)
   })
 
+  await t("F8 프롬프트: 선택·비교 질문에만 6-4 규칙(빈 칸 추측 금지)이 붙고, 그 밖의 질문 프롬프트는 이 규칙을 담지 않는다", async () => {
+    const { buildNimContext, nimSystemPrompt, FIRMWARE_SELECTION_RULE } = await import("../lib/kg-context")
+    const prompt = (q: string) => nimSystemPrompt(buildNimContext(planQuery(q)), "text")
+    for (const q of SELECTION) {
+      const p = prompt(q)
+      ok(p.includes(FIRMWARE_SELECTION_RULE), `6-4 규칙 누락: ${q}`)
+      ok(p.includes("근거 없음") && p.includes("추가 플러그인 필요") && p.includes("한국어로만"), `규칙 핵심 문구 누락: ${q}`)
+      // 줄 시작 마커로 찾는다(컨텍스트 JSON 안의 '9.' 같은 숫자와 겹치지 않도록)
+      const at = (m: string) => p.indexOf(m)
+      ok(at("\n6-4. ") > at("\n9. ") && at("\n6-4. ") < at("\n8. "), "규칙 위치(규칙 목록 끝, 출력 형식 8 앞)")
+    }
+    for (const q of NOT_SELECTION) ok(!prompt(q).includes("6-4."), `선택·비교가 아닌데 6-4 규칙이 붙음: ${q}`)
+    ok(FIRMWARE_SELECTION_RULE.endsWith("\n"), "규칙 문자열이 개행으로 끝나지 않으면 다음 규칙과 한 줄로 붙는다")
+  })
+
   const w = Math.max(...results.map((r) => r.name.length))
   for (const r of results) console.log(`${r.status}  ${r.name.padEnd(w)}${r.note ? `  — ${r.note}` : ""}`)
   const fail = results.filter((r) => r.status === "FAIL").length
