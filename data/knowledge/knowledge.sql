@@ -168,7 +168,7 @@ INSERT INTO meta (key,value) VALUES ('count_ontology_nodes','2339');
 INSERT INTO meta (key,value) VALUES ('count_ontology_relations','4613');
 INSERT INTO meta (key,value) VALUES ('count_products','694');
 INSERT INTO meta (key,value) VALUES ('count_sources','4182');
-INSERT INTO meta (key,value) VALUES ('input_fingerprint','d92b54f77a23be6d1929f86062e456b7460d399441732d572c712536ef2624fb');
+INSERT INTO meta (key,value) VALUES ('input_fingerprint','1394d01fd9ef08886fa4e2bcbad77f689d081fff8c44f813cb9c5bf305cb13fe');
 INSERT INTO meta (key,value) VALUES ('schema_version','1');
 INSERT INTO meta (key,value) VALUES ('source_root_used','True');
 INSERT INTO documents (id,path,title,document_type,domain,status,sha256,created_at,updated_at,domain_registered,domain_hint,hint_source,confidence,contested,contradictions,ontology_class,body) VALUES ('doc:comparisons/fc-firmware-comparison.md','comparisons/fc-firmware-comparison.md','FPV 드론 FC 펌웨어 비교: Betaflight vs INAV vs ArduPilot','comparison','flight-control','active','f5ed637330c16c3f28c6c2775580372e3dbcf6898bcd0fb450d2676444ca5144','2026-08-09','2026-08-09',1,NULL,NULL,'medium',0,'[]',NULL,'

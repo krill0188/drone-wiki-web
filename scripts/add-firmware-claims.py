@@ -92,6 +92,20 @@ EXTRA = {
     "FW07": ["Additional actuators for motor tilts", "Mechanically complex tilting mechanism"],
 }
 
+# 서버 생성 비교표용 분류(lib/fw-table.ts): claim id → (facet, side, kind).
+#  side: PX4 | ArduPilot | airframe(기체 유형 자체의 특성, 펌웨어 무관) / kind: 기체 유형 표의 구분(특성·장점·제약)
+FACETS = {
+    "FW01": ("supported", "PX4", ""), "FW02": ("multicopter", "PX4", ""), "FW03": ("fixedwing", "PX4", ""), "FW04": ("vtol", "PX4", ""),
+    "FW05": ("vtol", "PX4", ""), "FW06": ("vtol", "PX4", ""), "FW07": ("vtol", "PX4", ""), "FW08": ("vtol", "PX4", ""),
+    "FW09": ("airframe:multicopter", "airframe", "특성"), "FW10": ("airframe:helicopter", "airframe", "특성"),
+    "FW11": ("airframe:fixedwing", "airframe", "장점"), "FW12": ("airframe:fixedwing", "airframe", "제약"),
+    "FW13": ("airframe:vtol", "airframe", "장점"), "FW14": ("airframe:vtol", "airframe", "제약"),
+    "FW15": ("architecture", "PX4", ""), "FW16": ("license", "PX4", ""), "FW17": ("governance", "PX4", ""), "FW18": ("ros2", "PX4", ""), "FW19": ("ros2", "PX4", ""),
+    "FW20": ("supported", "ArduPilot", ""), "FW21": ("multicopter", "ArduPilot", ""), "FW22": ("multicopter", "ArduPilot", ""), "FW23": ("fixedwing", "ArduPilot", ""),
+    "FW24": ("vtol", "ArduPilot", ""), "FW25": ("vtol", "ArduPilot", ""), "FW26": ("license", "ArduPilot", ""), "FW27": ("adoption", "ArduPilot", ""),
+    "FW28": ("governance", "ArduPilot", ""), "FW29": ("tuning", "ArduPilot", ""),
+}
+
 norm = lambda s: re.sub(r"\s+", " ", s).strip()
 texts = {k: norm(fetch(v[0], v[1])) for k, v in S.items()}
 bad = []
@@ -103,6 +117,7 @@ for cid, subj, attr, val, src, loc, quote, note in C:
     if not ok: bad.append(cid)
 ids = [c[0] for c in C]
 assert len(ids) == len(set(ids)), "ID 중복"
+assert set(ids) == set(FACETS), f"FACETS 와 C 목록 불일치: {set(ids) ^ set(FACETS)}"
 print(f"\n검증: {len(C) - len(bad)}/{len(C)} 일치" + (f" — 불일치: {bad}" if bad else ""))
 if bad:
     sys.exit(1)
@@ -117,7 +132,7 @@ for cid, subj, attr, val, src, loc, quote, note in C:
     data["claims"].append({
         "id": cid, "rules": [], "subject": subj, "attribute": attr, "value": val, "unit": "-",
         "conditions": f"프로젝트 자체(제1자) 문서의 서술이며 독립 검증이 아님. 원문 대조: {VERSION[src]}, 2026-10-31 수집(공백 정규화 후 글자 일치).",
-        "sourceType": "manufacturer", "topic": "firmware-selection", "sourceId": S[src][2], "locator": loc, "quote": quote, "status": "verified", "evidenceKind": "reported", "note": note,
+        "sourceType": "manufacturer", "topic": "firmware-selection", "facet": FACETS[cid][0], "side": FACETS[cid][1], "kind": FACETS[cid][2], "sourceId": S[src][2], "locator": loc, "quote": quote, "status": "verified", "evidenceKind": "reported", "note": note,
     })
 tag = " FW 계열(2026-10-31)은 PX4·ArduPilot 공식 저장소 원문(GitHub raw)을 내려받아 인용문이 글자 그대로 들어 있는지 기계적으로 대조(공백 정규화)한 제1자 문서 claim이다."
 if tag not in data["_comment"]:
