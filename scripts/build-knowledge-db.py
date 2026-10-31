@@ -182,6 +182,13 @@ def main():
             src_by_key[sid] = True
         return sid
 
+    def web_url(sid):
+        """제조사·공식 문서 claim 의 sourceId 가 '도메인/경로'(예: docs.px4.io/main/en/)이면 클릭 가능한 공개 URL 로 저장한다.
+        카탈로그 파일명(products-*.json)·내부 경로·임의 문자열은 URL 이 아니므로 None (근거 표시가 'derived:…' 대신 링크가 되도록)."""
+        s = (sid or "").strip()
+        if "/" not in s and s.endswith((".json", ".md")): return None
+        return "https://" + s if re.match(r"^[a-z0-9-]+(\.[a-z0-9-]+)+(/\S*)?$", s) else None
+
     doc_src = {}  # (document_id, 원문 표기) → source id
     for did, rel, fm, body, sha, dom, stem in docs:
         srcs = fm.get("sources") or []
@@ -355,7 +362,7 @@ def main():
             src = add_source(None, f"paper:{pid}", paper_id=pid, stype="paper", url=f"https://arxiv.org/abs/{pid}", locator=c.get("locator"),
                              sha=(ex("SELECT sha256 FROM paper_files WHERE paper_id=?", (pid,)).fetchone() or [""])[0], resolved=(1 if ex("SELECT 1 FROM paper_files WHERE paper_id=?", (pid,)).fetchone() else None))
         else:
-            src = add_source(None, f"derived:{sid_}", stype=("catalog" if origin == "manufacturer" else "derived"), locator=c.get("locator"), sha=cat_hash.get("products-catalog.json", ""), resolved=1)
+            src = add_source(None, f"derived:{sid_}", stype=("catalog" if origin == "manufacturer" else "derived"), url=(web_url(sid_) if origin == "manufacturer" else None), locator=c.get("locator"), sha=cat_hash.get("products-catalog.json", ""), resolved=1)
         ex("INSERT INTO evidence (id,claim_id,source_id,locator,quote,evidence_type,verified,verification_method) VALUES (?,?,?,?,?,?,?,?)", (
             "ev:" + sha1_12(c["id"]), c["id"], src, c.get("locator"), quote or str(c["value"]), "abstract-quote" if abs_q else ("verbatim-quote" if has_q else "derived-calc"), int(has_q or abs_q), "abstract-literal-match" if abs_q else ("pdf-quote-match" if has_q else "derived-calc")))
     # 규칙 쪽에서 지정한 근거(rules.json claims 목록)도 claim_rules 에 반영

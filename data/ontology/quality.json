@@ -1,23 +1,23 @@
 {
- "generated": "2026-10-30",
- "fingerprint": "8804b70073b1",
+ "generated": "2026-10-31",
+ "fingerprint": "f4b309356e60",
  "counts": {
   "manufacturers": 257,
   "products": 694,
   "rules": 26,
   "papers": 152,
-  "claims": 365,
-  "edges": 4549,
+  "claims": 394,
+  "edges": 4578,
   "documents": 3300,
   "wikiClaims": 3120,
-  "relations": 4584
+  "relations": 4613
  },
  "claimsByKind": {
   "abstract-quote": 106,
   "cited-secondary": 3,
   "derived": 6,
   "model-assumption": 35,
-  "reported": 194,
+  "reported": 223,
   "simulation": 21
  },
  "claimsByTopic": {
@@ -25,6 +25,7 @@
   "propulsion": 39,
   "companion": 32,
   "vtol-fixedwing": 30,
+  "firmware-selection": 29,
   "energy": 27,
   "sizing": 23,
   "battery": 16,
@@ -40,7 +41,7 @@
   "derived:sourced": 2,
   "derived:verified": 1,
   "manufacturer:sourced": 4,
-  "manufacturer:verified": 4,
+  "manufacturer:verified": 33,
   "paper:sourced": 106,
   "paper:verified": 248,
   "wiki:blocked": 24,
@@ -112,7 +113,7 @@
   "isA": 694,
   "madeBy": 694,
   "powersWith": 403,
-  "reportedIn": 259,
+  "reportedIn": 288,
   "hasCategory": 217,
   "about": 188,
   "supports": 182,
