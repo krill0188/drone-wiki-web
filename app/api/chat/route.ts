@@ -104,7 +104,7 @@ export async function POST(req: NextRequest) {
     const vb = verbatimAnswer(plan)
     if (vb) {
       const meta = { ontologyClasses: plan.classes, answerMeta: { status: "answered", basis: plan.basis, confidence: "low", contested: false, domain: plan.domainFilter, limitations: plan.limitations, suggestions: [], ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: vb.pages, verification: { ok: true, violations: [], retried: false } } }
-      return instantReply(vb.text, meta)
+      return instantReply(vb.text, { ...meta, ...lawPanelMeta(question) }) // 비행승인·금지구역 같은 법령 질문의 대부분이 이 즉답 경로다 — 법령 개정 알림(KG_LAW_EVENTS)도 메타데이터로만 붙인다
     }
     // 반복 질문 캐시(단일 턴·문서 맥락 없음·티어 강제 지정 없음)
     const cacheable = messages.length === 1 && !docContext && !modelTier
