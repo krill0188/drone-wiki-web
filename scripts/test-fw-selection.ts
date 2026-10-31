@@ -41,13 +41,13 @@ async function main() {
     ok(!firmwareSelection("고정익과 멀티콥터 중 뭐가 유리해?"), "펌웨어 낱말이 없는데 true(기체 유형 선택은 이 경로가 아님)")
   })
 
-  await t("F2 선택·비교 질문: 검증된 FW claim 이 근거로 선택되고(≥12건), 무관한 공학 규칙·논문 claim 은 0건", () => {
+  await t("F2 선택·비교 질문: 검증된 FW claim 29건이 전부 근거로 선택되고, 무관한 공학 규칙·논문 claim 은 0건", () => {
     for (const q of SELECTION) {
       const p = planQuery(q)
       const fw = p.claims.filter((c: { id: string }) => isFw(c.id)).length
       const other = p.claims.filter((c: { id: string }) => !isFw(c.id)).map((c: { id: string }) => c.id)
       ok(p.status === "ready" && p.basis === "ontology", `상태/기반 이상(${p.status}/${p.basis}): ${q}`)
-      ok(fw >= 12, `FW claim ${fw}건뿐: ${q}`)
+      ok(fw >= 29, `FW claim ${fw}건뿐(서버 비교표는 29건 전부가 필요): ${q}`)
       ok(other.length === 0, `무관한 claim 유입 ${other.join(",")}: ${q}`)
     }
   })
@@ -120,6 +120,35 @@ async function main() {
     }
     for (const q of NOT_SELECTION) ok(!prompt(q).includes("6-4."), `선택·비교가 아닌데 6-4 규칙이 붙음: ${q}`)
     ok(FIRMWARE_SELECTION_RULE.endsWith("\n"), "규칙 문자열이 개행으로 끝나지 않으면 다음 규칙과 한 줄로 붙는다")
+    const { FIRMWARE_TABLE_RULE } = await import("../lib/kg-context")
+    const withTable = nimSystemPrompt(buildNimContext(planQuery(SELECTION[0])), "text", { fwTable: true })
+    ok(withTable.includes(FIRMWARE_TABLE_RULE) && withTable.includes("수집된 근거 없음") && withTable.includes("둘 다 지원"), "서버 표가 있는데 6-5 규칙 누락")
+    ok(!prompt(SELECTION[0]).includes("6-5. "), "서버 표가 없는데 6-5 규칙이 붙음")
+    ok(FIRMWARE_TABLE_RULE.endsWith("\n"), "6-5 규칙 문자열이 개행으로 끝나지 않음")
+  })
+
+  await t("F9 서버 비교표: 선택·비교 질문에서만 생성, FW claim 29건이 정확히 한 번씩, 근거 번호가 모델 context 번호와 일치, 근거 없는 칸은 '수집된 근거 없음'", async () => {
+    const { renderFirmwareTables, NO_EVIDENCE, fwFacetsFor } = await import("../lib/fw-table")
+    const { buildNimContext } = await import("../lib/kg-context")
+    const plan = planQuery(SELECTION[0])
+    const md = renderFirmwareTables(plan)
+    ok(md.includes("**기체 유형별 특성**") && md.includes("**PX4 vs ArduPilot**"), "표 누락")
+    const ctx = buildNimContext(plan)
+    const refToId = new Map(ctx.verified_claims.map((c: { ref: string; id: string }) => [c.ref, c.id]))
+    const used = [...md.matchAll(/\[(C\d+)\]/g)].map((m) => m[1])
+    ok(used.length > 0 && used.every((r) => refToId.has(r) && String(refToId.get(r)).startsWith("FW")), "표의 근거 번호가 모델 context 의 FW claim 번호와 어긋남")
+    ok(new Set(used).size === used.length, "같은 claim 이 표에 두 번 이상 들어감")
+    const fwRefs = ctx.verified_claims.filter((c: { id: string }) => c.id.startsWith("FW"))
+    ok(fwRefs.length === 29 && new Set(used).size === 29, `FW claim ${fwRefs.length}건 중 표에 ${new Set(used).size}건`)
+    // 값은 모델이 아니라 claim 그대로: 각 claim value 의 앞부분이 표에 그대로 있다
+    for (const c of plan.claims.filter((x: { id: string }) => isFw(x.id))) ok(md.includes(String(c.value).replace(/\s+/g, " ").trim().slice(0, 10)), `claim ${c.id} 의 값이 표에 없음`)
+    const rows = md.split("\n").filter((l) => l.startsWith("|")).join("\n")
+    ok(rows.split(NO_EVIDENCE).length - 1 === 4, `'${NO_EVIDENCE}' 칸 ${rows.split(NO_EVIDENCE).length - 1}개(코드 구조·상용 채택·ROS 2·튜닝 중 한쪽 근거 없음 4개 기대)`)
+    ok(renderFirmwareTables(plan) === md, "같은 입력의 표가 다름(비결정)")
+    ok(fwFacetsFor(SELECTION[0]).all && !fwFacetsFor("PX4와 ArduPilot 라이선스 차이는?").all, "항목 선별 판정 이상")
+    const lic = renderFirmwareTables(planQuery("PX4와 ArduPilot 라이선스 차이는?"))
+    ok(lic.includes("| 라이선스 |") && lic.includes("| 운영·개방성 |") && !lic.includes("기체 유형별 특성") && !lic.includes("ROS 2 연동") && !lic.includes("VTOL 방식"), "좁은 질문(라이선스)에 무관한 행이 섞임")
+    for (const q of NOT_SELECTION) ok(renderFirmwareTables(planQuery(q)) === "", `선택·비교가 아닌 질문에 표가 생성됨: ${q}`)
   })
 
   const w = Math.max(...results.map((r) => r.name.length))

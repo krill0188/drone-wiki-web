@@ -288,10 +288,10 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     // 최종 24개 상한 안에서도 '라이선스'처럼 좁은 질문의 claim 이 밀리지 않게 한다.
     if (fq) {
       try {
-        push(all<{ claim_id: string }>(`SELECT f.claim_id FROM claim_fts f JOIN claims c ON c.id = f.claim_id WHERE claim_fts MATCH ? AND c.topic = ? AND c.status IN ('verified','sourced') ORDER BY bm25(claim_fts) LIMIT 24`, fq, FIRMWARE_TOPIC).map((r) => r.claim_id))
+        push(all<{ claim_id: string }>(`SELECT f.claim_id FROM claim_fts f JOIN claims c ON c.id = f.claim_id WHERE claim_fts MATCH ? AND c.topic = ? AND c.status IN ('verified','sourced') ORDER BY bm25(claim_fts) LIMIT 40`, fq, FIRMWARE_TOPIC).map((r) => r.claim_id))
       } catch { /* 질의 해석 실패 시 아래 id 순 채우기만 쓴다 */ }
     }
-    push(all<{ id: string }>("SELECT id FROM claims WHERE topic = ? AND status IN ('verified','sourced') ORDER BY id LIMIT 24", FIRMWARE_TOPIC).map((r) => r.id))
+    push(all<{ id: string }>("SELECT id FROM claims WHERE topic = ? AND status IN ('verified','sourced') ORDER BY id LIMIT 40", FIRMWARE_TOPIC).map((r) => r.id))
   }
   if (fq) {
     try {
@@ -323,7 +323,7 @@ export function planQuery(question: string, opts?: { domains?: string[] }): Plan
     plan.claims.sort((a, b) => Number(a.origin === "wiki") - Number(b.origin === "wiki"))
     // 텍스트 검색으로 들어온 것은 비위키 8개·위키 6개까지만(온톨로지 연결 claim은 그대로 유지)
     let nonWikiFts = 0, wikiFts = 0
-    plan.claims = plan.claims.filter((c) => !ftsOnly.has(c.id) || (c.origin === "wiki" ? ++wikiFts <= 6 : ++nonWikiFts <= 8)).slice(0, 24)
+    plan.claims = plan.claims.filter((c) => !ftsOnly.has(c.id) || (c.origin === "wiki" ? ++wikiFts <= 6 : ++nonWikiFts <= 8)).slice(0, firmwareSelection(question) ? 40 : 24) // 펌웨어 선택 질문은 서버 비교표가 FW claim 전부를 쓰므로 상한을 넓힌다
   }
 
   // 5. evidence

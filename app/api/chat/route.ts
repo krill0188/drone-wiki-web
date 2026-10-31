@@ -15,6 +15,7 @@ import { buildNimContext, nimSystemPrompt } from "@/lib/kg-context"
 import { cacheGet, cachePut, cacheKey } from "@/lib/answer-cache"
 import { resolveTier, profileOf } from "@/lib/model-tier"
 import { renderEntityTables } from "@/lib/kg-table"
+import { renderFirmwareTables } from "@/lib/fw-table"
 import { degradedAnswer } from "@/lib/kg-degraded"
 import { softenTransform, inferenceGuard, prefixInjector, citationGuard, degradeOnError } from "@/lib/soften"
 import { unsupportedNumbers } from "@/lib/kg-verify"
@@ -113,9 +114,11 @@ export async function POST(req: NextRequest) {
     if (hit) return instantReply(hit.text, { ...hit.meta, cached: true })
     const ctx = buildNimContext(plan)
     const onto2 = buildOntologyContext(question, docContext?.title, { kgOnly: true })
-    const table = renderEntityTables(plan)
+    const entityTable = renderEntityTables(plan)
+    const fwTable = renderFirmwareTables(plan) // 펌웨어 선택·비교 질문의 비교표는 코드가 만든다(모델의 표 칸 환각·인용 혼동 방지)
+    const table = [entityTable, fwTable].filter(Boolean).join("\n\n")
     const tier = resolveTier(plan, question, modelTier)
-    const result2 = streamText({ model: wikiModel(profileOf(tier)), system: nimSystemPrompt(ctx, "text", { serverTable: !!table }) + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
+    const result2 = streamText({ model: wikiModel(profileOf(tier)), system: nimSystemPrompt(ctx, "text", { serverTable: !!entityTable, fwTable: !!fwTable }) + (onto2.block ? `\n\n${onto2.block}` : ""), messages: await convertToModelMessages(messages) })
     const acc = { text: "" } // 스트림을 지나가는 답변 텍스트를 모아 완료 후 사후 검증에 쓴다
     const tapped = result2.stream.pipeThrough(degradeOnError(() => degradedAnswer(plan, ctx), () => console.warn("[chat] 모든 모델 실패 → 근거만 표시")) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(softenTransform() as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(citationGuard(new Set([...ctx.ids.claims, ...ctx.ids.relations, ...ctx.ids.pages]), (h) => console.warn(`[chat] 존재하지 않는 인용 제거 ${h}`)) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(prefixInjector(table) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(inferenceGuard((t) => unsupportedNumbers(t, ctx).size > 0) as unknown as TransformStream<typeof result2.stream extends ReadableStream<infer P> ? P : never, typeof result2.stream extends ReadableStream<infer P> ? P : never>).pipeThrough(new TransformStream({ transform(part, ctrl) { if (part.type === "text-delta") acc.text += (part as { text?: string }).text ?? ""; ctrl.enqueue(part) } }))
     return createUIMessageStreamResponse({
