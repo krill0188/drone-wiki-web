@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "72107457c92cd0c64949f997420227dcb72e707b291b19b33dbc4518f7dbac6e",
+  "source_fingerprint": "7eb6fedbbdf8530dc57e4f81d437644dcccae804ca0a5fc05aed5df6b5985fde",
   "nodes": [
     {
       "id": "10-48550-arxiv-2607-26717",
@@ -685,6 +685,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "adaptive-lighting-night-maritime-sar-sea-fog",
+      "name": "야간 해양 수색용 드론의 해무 대응 적응형 조명 운용 (강혜란, 2026)",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "ops-mission"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
     },
     {
       "id": "adaptive-nmpc",
@@ -10286,6 +10300,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "dji-legacy-drone-firmware-updates-2026-10",
+      "name": "DJI 구형 드론 펌웨어 업데이트 (2026-10-20) 와 FCC 면제",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "company"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "dji-matrice-5-rumor",
       "name": "DJI Matrice 5 루머 및 DJI O4 Ground Station",
       "layer": "Concepts",
@@ -10914,6 +10943,20 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "drone-data-standardization-three-layer-framework",
+      "name": "AI 분석을 위한 드론 데이터 표준화 3계층 프레임워크 (이현주, 2026)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "drone-delivery-news",
@@ -17032,6 +17075,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "heterogeneous-uav-swarm-maritime-strike-system-dynamics",
+      "name": "이종 UAV 군집 해상 타격 임무 효과도의 시스템 다이내믹스 평가 (Qiu, 2026)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "heteroscedastic-uncertainty",
@@ -27637,6 +27694,20 @@
       "ontologyClass": "Person"
     },
     {
+      "id": "lora-drone-atmospheric-monitoring-system",
+      "name": "LoRa 기반 드론 탑재형 복합 대기환경정보 수집·모니터링 시스템 (고유진, 2026)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "lorenz-meier",
       "name": "Lorenz Meier",
       "layer": "Concepts",
@@ -32672,6 +32743,21 @@
       "ontologyClass": "Person"
     },
     {
+      "id": "part-107-exam-sectional-chart-change-2026-10",
+      "name": "Part 107 시험 변경 (2026-10-26) — 화면 제시형 섹셔널 차트 문항",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "particle-swarm-optimization",
       "name": "Particle Swarm Optimization",
       "layer": "Concepts",
@@ -33460,6 +33546,21 @@
       "ontologyClass": null
     },
     {
+      "id": "policy-based-ai-inspection-agent-tower-crane-uav",
+      "name": "UAV 타워크레인 결함 탐지의 정책 기반 AI 점검 에이전트 (양호준, 2026)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "ai-agent"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "policy-learning",
       "name": "Policy Learning",
       "layer": "Concepts",
@@ -33998,6 +34099,20 @@
       "ontologyClass": null
     },
     {
+      "id": "predefined-time-cooperative-guidance-control-quadrotor-swarm-impact-angle",
+      "name": "충돌각 제약 쿼드로터 군집의 사전정의 시간 협조 유도·제어 (Qian, 2026)",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "swarm"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "prediction-depth",
       "name": "prediction depth",
       "layer": "Concepts",
@@ -34404,6 +34519,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "PX4"
+    },
+    {
+      "id": "px4-developer-summit-2026-dronecode-update",
+      "name": "PX4 Developer Summit 2026 — Dronecode 커뮤니티 현황 발표",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "PX4"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "px4-flight-modes",
@@ -37106,6 +37236,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "selective-sliding-mode-control-aerial-robots-disturbances",
+      "name": "선택적 슬라이딩 모드 제어: 외란 하 쿼드로터의 강인성 (Kiran 외, 2026)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "self-correction",
@@ -45969,6 +46113,34 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "yolo-v8-4-192",
+      "name": "YOLO v8.4.192 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-194",
+      "name": "YOLO v8.4.194 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-10-31",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "yolo",
       "name": "YOLO",
       "layer": "Concepts",
@@ -49276,6 +49448,24 @@
       "type": "wikilink",
       "evidence": [],
       "confidence": "medium"
+    },
+    {
+      "source": "adaptive-lighting-night-maritime-sar-sea-fog",
+      "target": "drone-mounted-lighting-minimum-illuminance-operating-conditions",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-야간-해양-수색용-드론의-해무-대응-적응형-조명-운용-방안.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "adaptive-lighting-night-maritime-sar-sea-fog",
+      "target": "bridge-inspection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-야간-해양-수색용-드론의-해무-대응-적응형-조명-운용-방안.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "adaptive-nmpc",
@@ -98849,6 +99039,33 @@
       "confidence": "medium"
     },
     {
+      "source": "dji-legacy-drone-firmware-updates-2026-10",
+      "target": "dji",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yt-dji-is-updating-older-drones.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "dji-legacy-drone-firmware-updates-2026-10",
+      "target": "fcc-drone-approval-revocation",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yt-dji-is-updating-older-drones.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "dji-legacy-drone-firmware-updates-2026-10",
+      "target": "fcc",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yt-dji-is-updating-older-drones.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "dji-matrice-5-rumor",
       "target": "dji-enterprise",
       "type": "related",
@@ -100219,6 +100436,24 @@
       "type": "wikilink",
       "evidence": [],
       "confidence": "medium"
+    },
+    {
+      "source": "drone-data-standardization-three-layer-framework",
+      "target": "data-sync-hardware-timestamp-ntnu-wiki-and-gnss-clock",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-kci-ai-분석을-위한-드론-데이터-표준화-방안-현황분석과-3계층-프레임워크-제안--.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-data-standardization-three-layer-framework",
+      "target": "data-flightlog-ardupilot-aplogger-formats",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-kci-ai-분석을-위한-드론-데이터-표준화-방안-현황분석과-3계층-프레임워크-제안--.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "drone-delivery-news",
@@ -113584,6 +113819,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/bio-inspired-offloading-algorithms-in-a-uav-assisted-iov-network-with-mobile-edg.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "heterogeneous-uav-swarm-maritime-strike-system-dynamics",
+      "target": "phased-trajectory-planning-uav-swarm-dynamic-environments",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-evaluation-of-the-operational-effectiveness-of-a-heterogeneo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "heterogeneous-uav-swarm-maritime-strike-system-dynamics",
+      "target": "predefined-time-cooperative-guidance-control-quadrotor-swarm-impact-angle",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-evaluation-of-the-operational-effectiveness-of-a-heterogeneo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "heterogeneous-uav-swarm-maritime-strike-system-dynamics",
+      "target": "drone-wall-defense-system",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-evaluation-of-the-operational-effectiveness-of-a-heterogeneo.md"
       ],
       "confidence": "low"
     },
@@ -133672,6 +133934,24 @@
       "confidence": "low"
     },
     {
+      "source": "lora-drone-atmospheric-monitoring-system",
+      "target": "mavlink",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-kci-lora-기반-드론-탑재형-복합-대기환경정보-수집-및-모니터링-시스템의-설계-및-구현.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "lora-drone-atmospheric-monitoring-system",
+      "target": "drone-data-standardization-three-layer-framework",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-kci-lora-기반-드론-탑재형-복합-대기환경정보-수집-및-모니터링-시스템의-설계-및-구현.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "lorenz-meier",
       "target": "auto-hub-person",
       "type": "wikilink",
@@ -143037,6 +143317,24 @@
       "confidence": "low"
     },
     {
+      "source": "part-107-exam-sectional-chart-change-2026-10",
+      "target": "14-cfr-part-107",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-yt-the-part-107-test-just-changed-new-chart-questions-explained.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "part-107-exam-sectional-chart-change-2026-10",
+      "target": "fcc-drone-regulations",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-yt-the-part-107-test-just-changed-new-chart-questions-explained.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "particle-swarm-optimization",
       "target": "auto-hub-technology",
       "type": "wikilink",
@@ -144417,6 +144715,24 @@
       "confidence": "low"
     },
     {
+      "source": "policy-based-ai-inspection-agent-tower-crane-uav",
+      "target": "bridge-inspection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-kci-uav를-활용한-타워크레인-결함-탐지-결과의-선택적-검증을-위한-정책-기반-ai-점검-에이전트-시스템.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "policy-based-ai-inspection-agent-tower-crane-uav",
+      "target": "asynchronous-vlm-copilot",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-kci-uav를-활용한-타워크레인-결함-탐지-결과의-선택적-검증을-위한-정책-기반-ai-점검-에이전트-시스템.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "policy-learning",
       "target": "auto-hub-concept",
       "type": "wikilink",
@@ -145223,6 +145539,24 @@
       "confidence": "low"
     },
     {
+      "source": "predefined-time-cooperative-guidance-control-quadrotor-swarm-impact-angle",
+      "target": "phased-trajectory-planning-uav-swarm-dynamic-environments",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-predefined-time-cooperative-integrated-guidance-and-control-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "predefined-time-cooperative-guidance-control-quadrotor-swarm-impact-angle",
+      "target": "quadrotor-controller-comparison-reproducibility-study",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-29-kci-predefined-time-cooperative-integrated-guidance-and-control-.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "prediction-depth",
       "target": "adaptive-rollout",
       "type": "related",
@@ -145959,6 +146293,33 @@
       "type": "related",
       "evidence": [],
       "confidence": "medium"
+    },
+    {
+      "source": "px4-developer-summit-2026-dronecode-update",
+      "target": "dronecode",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yt-dronecode-community-update-px4-developer-summit-2026.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "px4-developer-summit-2026-dronecode-update",
+      "target": "px4-autopilot",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yt-dronecode-community-update-px4-developer-summit-2026.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "px4-developer-summit-2026-dronecode-update",
+      "target": "px4-v1-17",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yt-dronecode-community-update-px4-developer-summit-2026.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "px4-flight-modes",
@@ -150974,6 +151335,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/swarm/secure-swarm-uav-assisted-communications-with-cooperative-friendly-jamming.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "selective-sliding-mode-control-aerial-robots-disturbances",
+      "target": "crazyflie",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-arxiv-selective-sliding-mode-control-enhances-robustness-of-aerial.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "selective-sliding-mode-control-aerial-robots-disturbances",
+      "target": "quadrotor-controller-comparison-reproducibility-study",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-arxiv-selective-sliding-mode-control-enhances-robustness-of-aerial.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "selective-sliding-mode-control-aerial-robots-disturbances",
+      "target": "dual-gradient-consensus-quadrotor-ood-disturbance",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-arxiv-selective-sliding-mode-control-enhances-robustness-of-aerial.md"
       ],
       "confidence": "low"
     },
@@ -166724,6 +167112,51 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-10-28-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-192",
+      "target": "yolo-v8-4-191",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-192",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-30-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-194",
+      "target": "yolo-v8-4-192",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-194",
+      "target": "yolo-v8-4-191",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-194",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-31-yolo.md"
       ],
       "confidence": "low"
     },
