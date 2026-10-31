@@ -49,7 +49,7 @@ AI Q&A에 "PX4와 ArduPilot 중 고정익·회전익·멀티콥터 각각 어느
 
 ## 4. 시험
 
-- `scripts/test-fw-selection.ts`(F1~F7, 오프라인): 선택 판정 진리표, 선택 질문 FW≥12건·무관 claim 0건, 한계 문구에 요청 낱말 없음, **통제**(설치·파라미터·정의·공학 질문에 FW 미유입, 공학 질문은 규칙 claim 유지), 데이터 무결성(FW 전부 verified·증거 verified·`https` URL·인용문), 원본 id 유일.
+- `scripts/test-fw-selection.ts`(F1~F8·F3b, 오프라인): 선택 판정 진리표, 선택 질문 FW≥12건·무관 claim 0건, 한계 문구에 요청 낱말 없음, **통제**(설치·파라미터·정의·공학 질문에 FW 미유입, 공학 질문은 규칙 claim 유지), 데이터 무결성(FW 전부 verified·증거 verified·`https` URL·인용문), 원본 id 유일, **F3b 요청 낱말 판정**(요청·평가 낱말은 제외하고 주제어는 제외하지 않음), **F8 프롬프트**(선택·비교 질문에만 6-4 규칙이 붙고 그 밖의 질문 프롬프트는 불변), 선택 판정 오탐 통제(파라미터·설치·로그·지연 비교는 선택 질문이 아님).
 - 기존 시험 불변: `test-kg-answer` 39/0, `test_knowledge_db` 19/OK, tsc·eslint 0.
 
 ## 5. 한계 (솔직하게)
