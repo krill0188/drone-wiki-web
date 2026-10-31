@@ -31,6 +31,8 @@ async function main() {
   const NOT_SELECTION = [
     "PX4 EKF2 지연 기본값은?", "ArduPilot 설치 방법을 단계별로 알려줘", "PX4가 뭐야?", "Jetson Orin Nano에서 NanoSAM 지연은?", "MAVLink가 뭐야?",
     "고정익 장시간 비행 에너지 설계는 어떻게 해?", "멀티콥터 호버링 전력은 어떻게 계산해?",
+    // QA 지적(2026-10-31): '달라·차이·비교'가 있어도 파라미터·설치·로그·지연 비교는 선택 질문이 아니다(선택 가이드 claim 이 섞이면 모델이 오도됨)
+    "ArduPilot EKF3 파라미터는 PX4와 어떻게 달라?", "PX4와 ArduPilot 설치 방법 차이는?", "PX4 ArduPilot 지연 시간 비교", "ArduPilot 로그 형식은 PX4와 뭐가 달라?",
   ]
 
   await t("F1 선택 판정: 펌웨어 낱말 + 선택·비교 낱말일 때만 true (설치·파라미터·정의·공학 질문은 false)", () => {
@@ -59,6 +61,13 @@ async function main() {
     }
   })
 
+  await t("F3b 요청 낱말 판정: 요청·평가 낱말(유리한지·비교하고·각각·성격별…)은 제외하고, 실제 주제어(양자컴퓨터·EKF2·고정익·ArduPilot)는 제외하지 않는다", async () => {
+    const { isRequestToken } = await import("../lib/kg-plan")
+    const tok = (w: string) => ({ orig: w, variants: [w] })
+    for (const w of ["유리한지", "비교하고", "각각", "성격별", "적합해", "정리해줘", "단계별", "주의점", "뭐예요"]) ok(isRequestToken(tok(w)), `요청 낱말인데 제외되지 않음: ${w}`)
+    for (const w of ["양자컴퓨터", "ekf2", "고정익", "ardupilot", "px4", "tailsitter", "라이선스", "mavlink"]) ok(!isRequestToken(tok(w)), `주제어가 요청 낱말로 제외됨: ${w}`)
+  })
+
   await t("F4 통제: 선택·비교가 아닌 질문에는 FW claim 이 섞이지 않는다", () => {
     for (const q of NOT_SELECTION) {
       const p = planQuery(q)
@@ -78,11 +87,12 @@ async function main() {
     const rows = all<{ id: string; status: string; origin: string; topic: string }>("SELECT id, status, origin, topic FROM claims WHERE id LIKE 'FW%' ORDER BY id")
     ok(rows.length >= 29, `FW claim ${rows.length}건(≥29 기대)`)
     for (const r of rows) ok(r.status === "verified" && r.origin === "manufacturer" && r.topic === "firmware-selection", `상태 이상 ${r.id}: ${r.status}/${r.origin}/${r.topic}`)
-    const ev = all<{ claim_id: string; verified: number; quote: string; url: string | null }>(
-      "SELECT e.claim_id, e.verified, e.quote, s.source_url AS url FROM evidence e JOIN sources s ON s.id = e.source_id WHERE e.claim_id LIKE 'FW%'")
+    const ev = all<{ claim_id: string; verified: number; quote: string; url: string | null; sha: string }>(
+      "SELECT e.claim_id, e.verified, e.quote, s.source_url AS url, s.sha256 AS sha FROM evidence e JOIN sources s ON s.id = e.source_id WHERE e.claim_id LIKE 'FW%'")
     ok(ev.length === rows.length, `증거 ${ev.length}건 ≠ claim ${rows.length}건`)
     for (const e of ev) {
       ok(e.verified === 1, `증거 미검증 ${e.claim_id}`)
+      ok(e.sha === "", `웹 문서 출처에 제품 카탈로그 해시가 기록됨(감사 추적 오기록) ${e.claim_id}`)
       ok(!!e.quote && e.quote.length <= 260, `인용문 이상 ${e.claim_id}`)
       ok(!!e.url && /^https:\/\/[a-z0-9.-]+\//.test(e.url), `출처 URL 없음/이상 ${e.claim_id}: ${e.url}`)
     }
@@ -103,7 +113,7 @@ async function main() {
     for (const q of SELECTION) {
       const p = prompt(q)
       ok(p.includes(FIRMWARE_SELECTION_RULE), `6-4 규칙 누락: ${q}`)
-      ok(p.includes("근거 없음") && p.includes("추가 플러그인 필요") && p.includes("한국어로만"), `규칙 핵심 문구 누락: ${q}`)
+      ok(p.includes("근거 없음") && p.includes("추가 플러그인 필요") && p.includes("한국어로 쓰되"), `규칙 핵심 문구 누락: ${q}`)
       // 줄 시작 마커로 찾는다(컨텍스트 JSON 안의 '9.' 같은 숫자와 겹치지 않도록)
       const at = (m: string) => p.indexOf(m)
       ok(at("\n6-4. ") > at("\n9. ") && at("\n6-4. ") < at("\n8. "), "규칙 위치(규칙 목록 끝, 출력 형식 8 앞)")

@@ -173,15 +173,21 @@ const CONCEPTUAL = /차이|비교|vs\.?|versus|무엇|뭐야|뭔가요|이란|�
 // 비행 스택·펌웨어 '선택·비교' 질문(예: PX4·ArduPilot 중 고정익·멀티콥터·VTOL에 뭐가 유리한가, 라이선스 차이). 설치 방법·파라미터·수치 질문은 해당 없다.
 // 이런 질문은 ①고정익·VTOL 같은 낱말에 공학 규칙 claim(태양광 비행 기록 등)이 딸려 오고 ②긴 비교 질문은 단어 일치 게이트(질문 내용어의 75%)를 claim 1건이 통과하지 못해 근거가 비던 문제가 있었다(2026-10-31).
 const FIRMWARE_WORD = /px4|ardupilot|아르두파일럿|펌웨어|firmware|비행\s*스택|flight\s*stack/i
-const SELECTION_WORD = /유리|적합|선택|추천|비교|차이|\bvs\b|versus|어느\s*쪽|어떤\s*(것|걸|펌웨어|스택)|뭐가\s*좋|뭘\s*써|장단점|라이선스|license|달라/i
-export const firmwareSelection = (question: string) => FIRMWARE_WORD.test(question) && SELECTION_WORD.test(question)
+// 강한 선택 낱말(유리·적합·추천·라이선스…)은 단독으로, 약한 비교 낱말(차이·비교·vs·달라)은 기체 유형 낱말과 함께일 때만 선택 질문으로 본다.
+// 파라미터·설치·튜닝·로그·지연 같은 절차·수치 낱말이 있으면 선택 질문이 아니다 — 'EKF3 파라미터는 PX4와 어떻게 달라?' 같은 비교 질문에 선택 가이드 claim 24건이 주입되던 오탐(QA 지적, 2026-10-31).
+const SELECTION_STRONG = /유리|적합|추천|선택|어느\s*쪽|어떤\s*(것|걸|펌웨어|스택)|뭐가\s*좋|뭘\s*써|장단점|라이선스|license/i
+const SELECTION_WEAK = /차이|비교|\bvs\b|versus|달라/i
+const AIRFRAME_WORD = /고정익|멀티콥터|회전익|헬리|vtol|기체|multirotor|multicopter|fixed.?wing|rover|로버|쿼드/i
+const PROCEDURAL_WORD = /파라미터|param|설치|install|빌드|build|ekf|튜닝|로그|calib|캘리브|명령|지연|latency|버전|release/i
+export const firmwareSelection = (question: string) =>
+  FIRMWARE_WORD.test(question) && !PROCEDURAL_WORD.test(question) && (SELECTION_STRONG.test(question) || (SELECTION_WEAK.test(question) && AIRFRAME_WORD.test(question)))
 // claims.json 의 FW 계열(공식 문서 인용 verified)에 붙는 주제 표시. 이 주제 claim 은 질문이 선택·비교형일 때 온톨로지 연결 claim처럼 바로 쓴다.
 const FIRMWARE_TOPIC = "firmware-selection"
 
 // 질문의 '요청·관점' 낱말(비교·기준·장단점·'각각'·'유리한지'·'…별' 등)은 주제어가 아니다 — 근거 텍스트에 글자 그대로 없어도 '빠진 내용'이 아니다.
 // 거절 판정(refuseMissingCore)이 쓰던 기준을 한계 문구('해당 내용은 찾지 못했습니다')에도 같게 적용한다.
 const EVALUATIVE_WORD = /^(각각|각기|유리|적합|추천|선택|어느|우열|나은|맞는|좋은)/
-const isRequestToken = (t: { orig: string; variants: string[] }): boolean =>
+export const isRequestToken = (t: { orig: string; variants: string[] }): boolean =>
   ASPECT_Q.has(t.orig) || t.variants.some((v) => ASPECT_Q.has(v)) ||
   (/[가-힣]/.test(t.orig) && (REQUEST_WORD.test(t.orig) || t.variants.some((v) => REQUEST_WORD.test(v)) || EVALUATIVE_WORD.test(t.orig) ||
     [...ASPECT_Q].some((a) => a.length >= 2 && t.orig.startsWith(a) && t.orig.length - a.length <= 3)))
