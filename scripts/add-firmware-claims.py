@@ -85,13 +85,21 @@ C = [
  ("FW29", "ArduPilot Copter 파라미터 유연성", "튜닝 자유도", "사용자가 동작을 제어하는 수백 개의 파라미터에 접근할 수 있음(대부분은 만질 필요 없음)", "ap_copter", "Introducing Copter > Key features", "the user has access to hundreds of parameters that control its behaviour", ""),
 ]
 
+# 주 인용문 외에 value 에 반영한 보조 원문 구절(같은 출처 파일에 글자 그대로 있어야 한다 — QA 지적: 보조 인용도 자동 대조 범위에 넣는다)
+EXTRA = {
+    "FW05": ["Additional weight from separate hover/forward flight propulsion systems"],
+    "FW06": ["Simple and robust", "Tradeoff between efficiency in hover and forward flight"],
+    "FW07": ["Additional actuators for motor tilts", "Mechanically complex tilting mechanism"],
+}
+
 norm = lambda s: re.sub(r"\s+", " ", s).strip()
 texts = {k: norm(fetch(v[0], v[1])) for k, v in S.items()}
 bad = []
 print(f"{'ID':5} {'판정':4} 출처 | 인용문(앞 70자)")
 for cid, subj, attr, val, src, loc, quote, note in C:
     ok = norm(quote) in texts[src] and 0 < len(quote) <= 260
-    print(f"{cid:5} {'OK' if ok else 'FAIL':4} {src:9} | {quote[:70]}")
+    ok = ok and all(norm(e) in texts[src] for e in EXTRA.get(cid, []))  # 보조 인용도 대조
+    print(f"{cid:5} {'OK' if ok else 'FAIL':4} {src:9} | {quote[:70]}" + (f"  (+보조 {len(EXTRA[cid])}건)" if cid in EXTRA else ""))
     if not ok: bad.append(cid)
 ids = [c[0] for c in C]
 assert len(ids) == len(set(ids)), "ID 중복"

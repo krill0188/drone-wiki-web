@@ -362,7 +362,7 @@ def main():
             src = add_source(None, f"paper:{pid}", paper_id=pid, stype="paper", url=f"https://arxiv.org/abs/{pid}", locator=c.get("locator"),
                              sha=(ex("SELECT sha256 FROM paper_files WHERE paper_id=?", (pid,)).fetchone() or [""])[0], resolved=(1 if ex("SELECT 1 FROM paper_files WHERE paper_id=?", (pid,)).fetchone() else None))
         else:
-            src = add_source(None, f"derived:{sid_}", stype=("catalog" if origin == "manufacturer" else "derived"), url=(web_url(sid_) if origin == "manufacturer" else None), locator=c.get("locator"), sha=cat_hash.get("products-catalog.json", ""), resolved=1)
+            src = add_source(None, f"derived:{sid_}", stype=("catalog" if origin == "manufacturer" else "derived"), url=(web_url(sid_) if origin == "manufacturer" else None), locator=c.get("locator"), sha=("" if (origin == "manufacturer" and web_url(sid_)) else cat_hash.get("products-catalog.json", "")), resolved=1)  # 웹 문서 출처에 카탈로그 파일 해시를 붙이지 않는다(감사 추적 오기록 방지)
         ex("INSERT INTO evidence (id,claim_id,source_id,locator,quote,evidence_type,verified,verification_method) VALUES (?,?,?,?,?,?,?,?)", (
             "ev:" + sha1_12(c["id"]), c["id"], src, c.get("locator"), quote or str(c["value"]), "abstract-quote" if abs_q else ("verbatim-quote" if has_q else "derived-calc"), int(has_q or abs_q), "abstract-literal-match" if abs_q else ("pdf-quote-match" if has_q else "derived-calc")))
     # 규칙 쪽에서 지정한 근거(rules.json claims 목록)도 claim_rules 에 반영
