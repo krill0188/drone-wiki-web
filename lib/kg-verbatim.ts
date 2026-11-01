@@ -44,6 +44,6 @@ export function verbatimAnswer(plan: Plan): VerbatimAnswer | null {
   const used = [...new Set(picked.map((h) => h.page))].sort((a, b) => a - b)
   const lines = picked.map((h) => `- ${h.line} [P${used.indexOf(h.page) + 1}]`)
   const src = used.map((pi, i) => `[P${i + 1}] ${regPages[pi].title} (${regPages[pi].path})`).join("\n")
-  const text = `법령·규제 질문이라 위키에 정리된 조문 요약을 풀어 쓰지 않고 **문장 그대로** 보여 드립니다. (온톨로지 개체·관계에는 직접 연결되지 않은 위키 요약 기반이며, 법제처 원문과 문자 단위로 대조된 것은 아닙니다.)\n\n${lines.join("\n")}\n\n**출처 문서**\n${src}\n\n**한계**\n- 수집본은 법제처 조문 발췌입니다. 표(별표)와 시행령·고시의 세부 금액·구역은 포함되지 않은 것이 있습니다.\n- 조건이 여러 기준으로 나뉘는 규정(예: 신고 면제 2kg 이하, 조종자 증명 면제 250g 이하)은 서로 다른 기준이므로 위 문장을 각각 확인하세요.`
+  const text = `법령·규제 질문이라 모델이 풀어 쓰지 않고, 위키가 정리한 문장을 그대로 보여 드립니다. 아래 문장은 **위키 요약**이며 법제처 원문과 문자 단위로 대조된 것이 아니고, 위키 수집 이후 개정되었을 수 있습니다. (온톨로지 개체·관계에는 직접 연결되지 않은 위키 요약 기반입니다.) 정확한 조문과 시행일은 법제처 원문에서 확인하세요.\n\n${lines.join("\n")}\n\n**출처 문서**\n${src}\n\n**한계**\n- 수집본은 법제처 조문 발췌입니다. 표(별표)와 시행령·고시의 세부 금액·구역은 포함되지 않은 것이 있습니다.\n- 조건이 여러 기준으로 나뉘는 규정(예: 신고 면제 2kg 이하, 조종자 증명 면제 250g 이하)은 서로 다른 기준이므로 위 문장을 각각 확인하세요.`
   return { text, pages: used.map((pi) => ({ path: regPages[pi].path, title: regPages[pi].title, domain: regPages[pi].domain })) }
 }
