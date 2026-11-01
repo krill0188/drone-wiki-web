@@ -15,7 +15,14 @@ const MAX_PICK = 5
 const TIMEOUT_MS = 10_000
 
 const code = (i: number) => `L${String(i + 1).padStart(2, "0")}` // 조문 번호(제125조)와 목록 번호가 섞이지 않게 L01~L80 코드를 쓴다(실측: 숫자 번호는 모델이 조문 번호로 답함)
-const LIST = LAW_ARTICLES.map((a, i) => `[${code(i)}] ${a.law_name} ${a.article} ${a.title}`).join("\n")
+// 조문 요지: 조 머리 다음 첫 줄의 앞부분(원문 그대로 자른 것). 제목만으로 구분이 안 되는 조문(신고·변경·말소, 법·시행규칙 쌍)을 모델이 가르는 데 쓴다.
+const gist = (a: LawArticle) => {
+  const line = a.text.split("\n").map((l) => l.trim()).filter(Boolean)[1] ?? ""
+  return line.replace(/^[①-⑳\d.]+\s*/, "").replace(/<[^>]*>/g, "").slice(0, 45)
+}
+// A/B 측정(2026-11-01): 요지를 넣어도 골든 95→92%·독립 83→89%로 합산 101/111 동일(노이즈 수준), 토큰만 늘어 기본 끔. LAW_SELECT_GIST=1 로만 켠다.
+const WITH_GIST = process.env.LAW_SELECT_GIST === "1"
+const LIST = LAW_ARTICLES.map((a, i) => `[${code(i)}] ${a.law_name} ${a.article} ${a.title}${WITH_GIST && gist(a) ? ` — ${gist(a)}` : ""}`).join("\n")
 export const SELECT_SYSTEM = `당신은 한국 드론 관련 법령 조문 분류기입니다. 사용자 질문의 근거가 될 조문을 아래 <목록>에서 번호로만 고릅니다.
 
 <목록>

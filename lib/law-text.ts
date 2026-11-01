@@ -170,6 +170,7 @@ export function renderLawBlock(m: LawMatch, now: Date = new Date()): string {
   }
   const rest = m.omitted + cut
   const intro = "법령 질문이라 모델이 풀어 쓰지 않고, 위키에 수록된 **조문 원문**을 그대로 보여 드립니다. 질문의 상황에 이 조문이 적용되는지, 비행이 가능한지는 판단하지 않습니다."
+    + (m.direct ? "" : "\n\n⚠ 조문 번호를 직접 지정하지 않은 질문이라 **관련 있어 보이는 조문을 자동으로 골랐습니다.** 질문과 맞지 않는 조문이 섞이거나 필요한 조문이 빠졌을 수 있으니 출처 링크의 법제처 원문으로 확인하세요.")
   const missing = m.missing.map((x) => `- ${FULL_NAME_FOR_LINK[x.lawId]} ${x.article}은(는) 이 위키에 수록된 조문이 아닙니다(드론 관련 조문만 선별 수록). 법제처 원문: [${x.article}](${lawLink(x.lawId, x.article)})`)
   const tail = `${rest ? `표시하지 못한 관련 조문이 ${rest}건 더 있습니다. 질문을 좁히거나 조문 번호로 물어보세요.\n\n` : ""}<sub>조문 원문이며 법적 자문이 아닙니다. 이 위키는 드론 관련 조문만 선별해 수록하며 별표·시행 이후 개정은 반영하지 못할 수 있습니다. 적용 여부는 법제처 원문과 전문가에게 확인하세요.</sub>`
   return [intro, ...(missing.length ? [missing.join("\n")] : []), ...parts, tail].join("\n\n")

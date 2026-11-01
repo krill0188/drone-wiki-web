@@ -59,6 +59,9 @@ async function main() {
     const text = L.renderLawBlock(L.matchLawArticles("항공안전법 제122조")!, new Date("2026-11-02T00:00:00Z"))
     ok(text.includes("법적 자문이 아닙니다") && text.includes("적용되는지, 비행이 가능한지는 판단하지 않습니다"), "고지 문구")
     ok(!/가능합니다|불가능합니다|위반입니다|해당됩니다/.test(text.replace(/^>.*$/gm, "")), "서버 문구에 법적 결론 표현")
+    ok(!text.includes("자동으로 골랐습니다"), "직접 지정인데 자동 선별 경고가 붙음")
+    const auto = L.renderLawBlock(L.matchLawArticles("초경량비행장치 신고는 어디서 해?")!, new Date("2026-11-02T00:00:00Z"))
+    ok(auto.includes("관련 있어 보이는 조문을 자동으로 골랐습니다") && auto.includes("맞지 않는 조문이 섞이거나"), "자동 선별 경고 없음")
   })
 
   await t("L6 시점: 수집 7일 경과 경고, 시행 예정 표시, 부분 시행·조문 시행일 병기", () => {
