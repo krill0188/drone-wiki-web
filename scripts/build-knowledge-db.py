@@ -3,7 +3,7 @@
 
 입력
   --wiki-root     canonical Wiki 루트 (기본: 웹 발행 스냅샷 data/wiki). concepts/entities/comparisons/queries 와 ontology/class-hierarchy.json
-  --ontology-dir  data/ontology (graph.json, claims.json, paper-claims.json, products-*.json, rules.json, instances.json, relations.json, manufacturer-map.json)
+  --ontology-dir  data/ontology (graph.json, claims.json, law-claims.json, paper-claims.json, products-*.json, rules.json, instances.json, relations.json, manufacturer-map.json)
   --source-root   출처 경로를 실제 파일로 해석할 원본 루트 (기본: ~/2nd 가 있으면 사용). 내용은 읽지 않고 존재·해시만 기록한다.
   --papers-dir    논문 PDF 메타(candidates_*.json, pdf/) — 있으면 제목·해시 보강
 출력
@@ -332,7 +332,7 @@ def main():
     mention = {}
     for e in graph["edges"]:
         if e["p"] == "mentions" and e["s"].startswith("claim:"): mention.setdefault(e["s"][6:], e["o"])
-    cat_hash = {k: sha256_file(os.path.join(OD, k)) for k in ("products-catalog.json", "products-fwvtol.json", "claims.json") if os.path.exists(os.path.join(OD, k))}
+    cat_hash = {k: sha256_file(os.path.join(OD, k)) for k in ("products-catalog.json", "products-fwvtol.json", "claims.json", "law-claims.json") if os.path.exists(os.path.join(OD, k))}
     for c in sorted(claims_src, key=lambda x: x["id"]):
         sid_ = c["sourceId"]
         pid = sid_.split("arXiv:")[1] if sid_.startswith("arXiv:") else None
@@ -425,6 +425,11 @@ def main():
         for k, t in enumerate(TPL.get(cls, [])):
             ex("INSERT OR IGNORE INTO query_candidates VALUES (?,?,?,?)", (f"qc:{sha1_12(nid + str(k))}", nid, t, t.format(l=label[:60])))
 
+    # ═══ 7b. 법령 조문 원문(law-claims.json, 정본: scripts/add-law-claims.py) — claims 와 분리된 테이블 ═══
+    for c in sorted((loadj("law-claims.json") or {"claims": []})["claims"], key=lambda x: x["id"]):
+        ex("INSERT INTO law_articles VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", (c["id"], c["law_id"], c["law_name"], c["mst"], c["article"], c.get("title"), c["text"], c["effective"], c["article_effective"],
+            json.dumps(c["partial_effective"]) if c.get("partial_effective") else None, c["url"], c["sha256"], c["fetched_at"]))
+
     # ═══ 8. FTS 채우기 + meta ═════════════════════════════════════════════
     ex("INSERT INTO document_fts SELECT d.id, coalesce(d.domain,''), d.title, d.body, coalesce((SELECT group_concat(tag,' ') FROM (SELECT tag FROM document_tags t WHERE t.document_id=d.id ORDER BY tag)),'') FROM documents d ORDER BY d.id")
     ex("INSERT INTO claim_fts SELECT id, coalesce(subject_text,''), predicate, object_value, coalesce(conditions,'') FROM claims ORDER BY id")
@@ -433,7 +438,7 @@ def main():
     inputs.append(("builder", sha256_bytes(open(os.path.join(HERE, "build-knowledge-db.py"), "rb").read())))
     inputs.append(("schema", sha256_bytes(open(os.path.join(HERE, "knowledge_db_schema.sql"), "rb").read())))
     fp = sha256_bytes("\n".join(f"{p}:{h}" for p, h in sorted(inputs)).encode())
-    counts = {t: ex(f"SELECT count(*) FROM {t}").fetchone()[0] for t in ("documents", "sources", "ontology_nodes", "ontology_relations", "claims", "evidence", "products", "manufacturers")}
+    counts = {t: ex(f"SELECT count(*) FROM {t}").fetchone()[0] for t in ("documents", "sources", "ontology_nodes", "ontology_relations", "claims", "evidence", "products", "manufacturers", "law_articles")}
     for k, v in sorted({"schema_version": "1", "builder_version": BUILDER_VERSION, "input_fingerprint": fp, "source_root_used": str(source_root is not None), **{f"count_{c}": str(n) for c, n in counts.items()}}.items()):
         ex("INSERT INTO meta VALUES (?,?)", (k, v))
     db.commit()
@@ -511,7 +516,7 @@ def lit(v):
 
 def write_dump(db, path):
     order = ["meta", "documents", "document_tags", "document_links", "papers", "paper_files", "sources", "ontology_classes", "ontology_nodes", "ontology_class_proposals", "ontology_node_proposals", "ontology_aliases", "ontology_relations",
-             "manufacturers", "products", "rules", "edges", "claims", "claim_rules", "evidence", "query_candidates"]
+             "manufacturers", "products", "rules", "edges", "claims", "claim_rules", "evidence", "query_candidates", "law_articles"]
     schema = open(os.path.join(HERE, "knowledge_db_schema.sql"), encoding="utf-8").read()
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write("-- knowledge.sql: build-knowledge-db.py 결정론 덤프 (수정 금지, 재생성하세요)\n")

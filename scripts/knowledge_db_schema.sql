@@ -89,6 +89,24 @@ CREATE TABLE ontology_relations (
   attrs TEXT
 );
 
+-- ── 법령 조문 원문(3단계). claims 와 분리: 기존 claim 검색(FTS·개체·규칙 경로)에 섞이지 않고, 조문 인용 블록 전용 경로로만 읽는다 ──
+CREATE TABLE law_articles (
+  id TEXT PRIMARY KEY,                          -- LAW-<법령 슬러그>-<조번호>[-<가지번호>]
+  law_id TEXT NOT NULL,
+  law_name TEXT NOT NULL,
+  mst TEXT NOT NULL,                            -- 법령일련번호(개정판)
+  article TEXT NOT NULL,                        -- 제122조 / 제125조의2
+  title TEXT,
+  text TEXT NOT NULL,                           -- 조문 원문(개정 주석 포함, 요약·해석 없음)
+  effective TEXT NOT NULL,                      -- 대표 시행일 YYYY-MM-DD
+  article_effective TEXT NOT NULL,
+  partial_effective TEXT,                       -- 후속 부분 시행일 JSON 배열(없으면 NULL)
+  url TEXT NOT NULL,
+  sha256 TEXT NOT NULL,                         -- 보존본(lawService 응답) 해시
+  fetched_at TEXT NOT NULL
+);
+CREATE INDEX idx_law_articles_law ON law_articles(law_name, article);
+
 -- ── claim / evidence ────────────────────────────────────────────────────────
 CREATE TABLE claims (
   id TEXT PRIMARY KEY,

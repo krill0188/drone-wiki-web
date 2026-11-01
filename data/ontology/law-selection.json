@@ -1,0 +1,487 @@
+{
+ "version": 1,
+ "confirmed": true,
+ "note": "마스터 확정(2026-11-01): 권장 75건 + 군사기지법 5건(제2·6·9·10·24조). 후보 산정 근거는 docs/law-stage3-candidates.md. 추가·삭제는 마스터 승인 후이며 add-law-claims.py 가 이 목록만 조문 claim 으로 만든다.",
+ "articles": [
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제2조",
+   "title": "정의"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제122조",
+   "title": "초경량비행장치 신고"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제123조",
+   "title": "초경량비행장치 변경신고 등"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제124조",
+   "title": "초경량비행장치 안전성인증"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제125조",
+   "title": "초경량비행장치 조종자 증명 등"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제125조의2",
+   "title": "초경량비행장치 관련 안전교육"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제126조",
+   "title": "초경량비행장치 전문교육기관의 지정 등"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제127조",
+   "title": "초경량비행장치 비행승인 등"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제128조",
+   "title": "초경량비행장치 구조 지원 장비 장착 의무"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제129조",
+   "title": "초경량비행장치 조종자 등의 준수사항"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제130조",
+   "title": "초경량비행장치사용사업자에 대한 안전개선명령"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제131조",
+   "title": "초경량비행장치에 대한 준용규정"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제131조의2",
+   "title": "무인비행장치의 적용 특례"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제132조",
+   "title": "항공안전 활동"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제135조",
+   "title": "권한의 위임ㆍ위탁"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제136조",
+   "title": "수수료 등"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제161조",
+   "title": "초경량비행장치 불법 사용 등의 죄"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제162조",
+   "title": "명령 위반의 죄"
+  },
+  {
+   "law": "law:aviation-safety-act",
+   "name": "항공안전법",
+   "article": "제166조",
+   "title": "과태료"
+  },
+  {
+   "law": "law:aviation-safety-act-decree",
+   "name": "항공안전법 시행령",
+   "article": "제24조",
+   "title": "신고를 필요로 하지 않는 초경량비행장치의 범위"
+  },
+  {
+   "law": "law:aviation-safety-act-decree",
+   "name": "항공안전법 시행령",
+   "article": "제25조",
+   "title": "초경량비행장치 비행승인 제외 범위"
+  },
+  {
+   "law": "law:aviation-safety-act-decree",
+   "name": "항공안전법 시행령",
+   "article": "제26조",
+   "title": "권한 및 업무의 위임ㆍ위탁"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제5조",
+   "title": "초경량비행장치의 기준"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제6조",
+   "title": "사망ㆍ중상 등의 적용기준"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제202조",
+   "title": "낙하산 강하허가 신청"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제301조",
+   "title": "초경량비행장치 신고"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제302조",
+   "title": "초경량비행장치 변경신고"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제303조",
+   "title": "초경량비행장치 말소신고"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제304조",
+   "title": "초경량비행장치의 시험비행등 허가"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제305조",
+   "title": "초경량비행장치 안전성인증 대상 등"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제306조",
+   "title": "초경량비행장치의 조종자 증명 등"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제306조의2",
+   "title": "초경량비행장치 관련 안전교육"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제307조",
+   "title": "초경량비행장치 조종자 전문교육기관의 지정 등"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제308조",
+   "title": "초경량비행장치의 비행승인"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제309조",
+   "title": "초경량비행장치의 구조지원 장비 등"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제310조",
+   "title": "초경량비행장치 조종자의 준수사항"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제312조",
+   "title": "초경량비행장치사고의 보고 등"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제312조의2",
+   "title": "무인비행장치의 특별비행승인"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제313조",
+   "title": "초경량비행장치사용사업자에 대한 안전개선명령"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제313조의2",
+   "title": "국가기관등 무인비행장치의 긴급비행"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제316조",
+   "title": "항공기의 운항정지 및 항공종사자의 업무정지 등"
+  },
+  {
+   "law": "law:aviation-safety-act-rule",
+   "name": "항공안전법 시행규칙",
+   "article": "제320조의3",
+   "title": "초경량비행장치 안전교육기관의 지정"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제2조",
+   "title": "정의"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제48조",
+   "title": "초경량비행장치사용사업의 등록"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제49조",
+   "title": "초경량비행장치사용사업에 대한 준용규정"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제69조의2",
+   "title": "무인항공 분야 항공산업의 안전증진 및 활성화"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제70조",
+   "title": "항공보험 등의 가입의무"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제71조",
+   "title": "경량항공기 등의 영리 목적 사용금지"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제75조",
+   "title": "권한의 위임ㆍ위탁"
+  },
+  {
+   "law": "law:aviation-business-act",
+   "name": "항공사업법",
+   "article": "제78조",
+   "title": "항공사업자의 업무 등에 관한 죄"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제1조",
+   "title": "목적"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제2조",
+   "title": "정의"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제3조",
+   "title": "드론산업의 지원"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제4조",
+   "title": "다른 법률과의 관계"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제5조",
+   "title": "드론산업발전기본계획의 수립 등"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제6조",
+   "title": "드론산업 실태조사"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제7조",
+   "title": "드론산업협의체의 구성ㆍ운영"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제8조",
+   "title": "공공기관 드론 활용 등의 요청"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제9조",
+   "title": "드론시스템의 연구ㆍ개발"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제9조의2",
+   "title": "드론 정보체계의 구축ㆍ운영 등"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제10조",
+   "title": "드론특별자유화구역의 지정 및 관리"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제11조",
+   "title": "드론시범사업구역의 지정 및 관리"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제11조의2",
+   "title": "드론공원의 지정 및 관리"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제12조",
+   "title": "창업의 활성화"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제13조",
+   "title": "드론첨단기술의 지정 및 지원"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제14조",
+   "title": "인증등의 의제"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제15조",
+   "title": "지식재산권의 보호 및 육성"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제16조",
+   "title": "우수사업자의 지정 등"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제17조",
+   "title": "드론교통관리시스템의 구축 및 운영"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제18조",
+   "title": "전문인력의 양성"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제19조",
+   "title": "해외진출 및 국제협력"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제20조",
+   "title": "청문"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제21조",
+   "title": "권한 등의 위임ㆍ위탁"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제22조",
+   "title": "수수료 등"
+  },
+  {
+   "law": "law:drone-promotion-act",
+   "name": "드론 활용의 촉진 및 기반조성에 관한 법률",
+   "article": "제25조",
+   "title": "벌칙"
+  },
+  {
+   "law": "law:military-base-act",
+   "name": "군사기지 및 군사시설 보호법",
+   "article": "제2조",
+   "title": "정의"
+  },
+  {
+   "law": "law:military-base-act",
+   "name": "군사기지 및 군사시설 보호법",
+   "article": "제6조",
+   "title": "비행안전구역의 지정범위 등"
+  },
+  {
+   "law": "law:military-base-act",
+   "name": "군사기지 및 군사시설 보호법",
+   "article": "제9조",
+   "title": "보호구역에서의 금지 또는 제한"
+  },
+  {
+   "law": "law:military-base-act",
+   "name": "군사기지 및 군사시설 보호법",
+   "article": "제10조",
+   "title": "비행안전구역에서의 금지 또는 제한"
+  },
+  {
+   "law": "law:military-base-act",
+   "name": "군사기지 및 군사시설 보호법",
+   "article": "제24조",
+   "title": "벌칙"
+  }
+ ]
+}
