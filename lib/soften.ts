@@ -121,6 +121,24 @@ export function citationGuard(valid: Set<string>, onDrop?: (h: string) => void):
   })
 }
 
+// 모델 글 전체를 모았다가 끝에서 한 번에 고쳐 내보낸다(서버 표 뒤의 판단 불릿 검증용). 서버 표를 바로 보여 주도록 첫 글 조각 때 빈 조각을 하나 흘려 prefixInjector 를 깨운다.
+export function sectionRewriter(rewrite: (text: string) => string): TransformStream<Part, Part> {
+  const buf = new Map<string, string>()
+  return new TransformStream<Part, Part>({
+    transform(part, ctrl) {
+      const id = part.id ?? ""
+      if (part.type === "text-delta" && typeof part.text === "string") {
+        if (!buf.has(id)) ctrl.enqueue({ ...part, text: "" })
+        buf.set(id, (buf.get(id) ?? "") + part.text)
+      } else if (part.type === "text-end") {
+        if (buf.has(id)) ctrl.enqueue({ type: "text-delta", id, text: rewrite(buf.get(id) ?? "") })
+        buf.delete(id)
+        ctrl.enqueue(part)
+      } else ctrl.enqueue(part)
+    },
+  })
+}
+
 // 모델이 끝내 응답하지 않아 스트림이 오류로 끝나면(글자가 하나도 나가기 전에만) 오류 대신 대체 답변을 같은 스트림에 흘린다.
 export function degradeOnError(makeText: () => string, onUse?: () => void): TransformStream<Part, Part> {
   let started = false

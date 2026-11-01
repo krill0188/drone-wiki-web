@@ -55,29 +55,64 @@ const cell = (s: string, max = 300) => {
 }
 export const NO_EVIDENCE = "수집된 근거 없음"
 
+export type FwSide = "PX4" | "ArduPilot" | "airframe"
+export interface FwTable { text: string; refs: Map<string, FwSide> } // refs: 표에 실제로 나온 [C번호] → 그 칸의 측
+
 export function renderFirmwareTables(plan: Plan, question: string = plan.question): string {
-  if (!firmwareSelection(question)) return ""
+  return firmwareTable(plan, question).text
+}
+
+export function firmwareTable(plan: Plan, question: string = plan.question): FwTable {
+  const none: FwTable = { text: "", refs: new Map() }
+  if (!firmwareSelection(question)) return none
+  const shown = new Map<string, FwSide>()
   const ref = new Map(plan.claims.map((c, i) => [c.id, `C${i + 1}`])) // buildNimContext 의 cRef 와 같은 번호 규칙
   const byId = new Map(plan.claims.map((c) => [c.id, c]))
   const mine = [...META.values()].filter((m) => byId.has(m.id)).sort((a, b) => a.id.localeCompare(b.id))
-  if (!mine.length) return ""
+  if (!mine.length) return none
   const sel = fwFacetsFor(question)
   const cite = (m: FwMeta) => `${cell(byId.get(m.id)!.value)} [${ref.get(m.id)}]`
   const out: string[] = []
 
   if (sel.airframe) {
-    const rows = AIRFRAME_ROWS.flatMap((r) => mine.filter((m) => m.facet === r.facet).map((m) => `| ${r.label} | ${m.kind || "특성"} | ${cell(byId.get(m.id)!.value)} | [${ref.get(m.id)}] |`))
+    const rows = AIRFRAME_ROWS.flatMap((r) => mine.filter((m) => m.facet === r.facet).map((m) => { shown.set(ref.get(m.id)!, "airframe"); return `| ${r.label} | ${m.kind || "특성"} | ${cell(byId.get(m.id)!.value)} | [${ref.get(m.id)}] |` }))
     if (rows.length) out.push(["**기체 유형별 특성** — PX4 공식 문서의 서술(기체 유형 자체의 특성이며 펌웨어 고유 특성이 아님)", "", "| 기체 유형 | 구분 | 내용 | 근거 |", "|---|---|---|---|", ...rows].join("\n"))
   }
 
   const cmp = COMPARE_ROWS.filter((r) => sel.compare.has(r.facet)).map((r) => {
-    const side = (s: string) => mine.filter((m) => m.facet === r.facet && m.side === s).map(cite).join("; ") || NO_EVIDENCE
+    const side = (s: FwSide) => mine.filter((m) => m.facet === r.facet && m.side === s).map((m) => { shown.set(ref.get(m.id)!, s); return cite(m) }).join("; ") || NO_EVIDENCE
     return { label: r.label, px4: side("PX4"), ap: side("ArduPilot") }
   }).filter((r) => r.px4 !== NO_EVIDENCE || r.ap !== NO_EVIDENCE)
   if (cmp.length) {
     out.push(["**PX4 vs ArduPilot** — 각 프로젝트 공식 문서의 서술 기준(제1자 서술이며 독립 검증이 아님)", "", "| 항목 | PX4 | ArduPilot |", "|---|---|---|", ...cmp.map((r) => `| ${r.label} | ${r.px4} | ${r.ap} |`)].join("\n"))
   }
-  if (!out.length) return ""
+  if (!out.length) return none
   out.push(`<sub>서버가 검증된 claim(공식 문서 원문과 글자 단위로 대조한 인용)을 그대로 표로 만든 것입니다 · '${NO_EVIDENCE}'은 기능이 없다는 뜻이 아니라 이 지식에 해당 서술이 없다는 뜻입니다</sub>`)
-  return out.join("\n\n")
+  return { text: out.join("\n\n"), refs: shown }
+}
+
+// 표가 있는 답변에서 모델이 쓴 글을 정리한다: 모델 글은 "판단 불릿"만 남기고 나머지(표 반복·결론·한계·일반 상식)는 버린다.
+// 불릿은 ① 표에 실제로 나온 [C…]만 인용하고 ② 한쪽(PX4/ArduPilot)만 말하면서 반대쪽 칸을 인용하지 않아야 통과한다. 결론·한계 문장은 서버 고정 문구다.
+const BULLET = /^\s*(?:[-*•]|\d+[.)])\s+(.+?)\s*$/
+const MAX_BULLETS = 6
+export const FW_JUDGMENT_HEAD = "**설계 판단** — 위 표의 사실에서 도출한 판단이며 공식 문서의 서술이 아닙니다."
+export const FW_JUDGMENT_EMPTY = "표의 사실만으로 요구사항별 권장을 도출할 수 없어 판단은 생략합니다. 요구사항(라이선스·ROS 2·기체 유형 등)을 알려 주시면 해당 항목의 근거로 좁혀 안내합니다."
+export const FW_LIMITS = "<sub>한계: 위 표는 PX4·ArduPilot 공식 문서의 서술 기준이며 독립 검증이 아닙니다. 실제 선택은 보드·페이로드·인증 요건·팀 경험을 함께 보고 SITL 시험 후 정하세요.</sub>"
+
+export function sanitizeFwSection(text: string, refs: Map<string, FwSide>, onDrop?: (line: string, why: string) => void): string {
+  const kept: string[] = []
+  for (const raw of text.split("\n")) {
+    const m = BULLET.exec(raw)
+    if (!m || raw.trim().startsWith("|")) continue
+    const line = m[1]
+    const cited = [...line.matchAll(/\[C(\d+)\]/g)].map((x) => `C${x[1]}`)
+    if (!cited.length) { onDrop?.(line, "no-ref"); continue }
+    if (cited.some((c) => !refs.has(c))) { onDrop?.(line, "ref-not-in-table"); continue }
+    const px4 = /PX4/i.test(line), ap = /ardupilot|아두파일럿/i.test(line)
+    const sides = new Set(cited.map((c) => refs.get(c)))
+    if ((px4 && !ap && sides.has("ArduPilot")) || (ap && !px4 && sides.has("PX4"))) { onDrop?.(line, "side-mismatch"); continue }
+    if (!kept.includes(line)) kept.push(line)
+    if (kept.length >= MAX_BULLETS) break
+  }
+  return [FW_JUDGMENT_HEAD, "", ...(kept.length ? kept.map((l) => `- ${l}`) : [FW_JUDGMENT_EMPTY]), "", FW_LIMITS].join("\n")
 }

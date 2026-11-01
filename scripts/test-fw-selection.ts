@@ -151,6 +151,44 @@ async function main() {
     for (const q of NOT_SELECTION) ok(renderFirmwareTables(planQuery(q)) === "", `선택·비교가 아닌 질문에 표가 생성됨: ${q}`)
   })
 
+  await t("F10 판단 불릿 정리: 표 밖 인용·측 불일치·인용 없음·표 반복·결론 문장 제거, 통과분만 서버 문구로 감쌈", async () => {
+    const { firmwareTable, sanitizeFwSection, FW_JUDGMENT_HEAD, FW_JUDGMENT_EMPTY, FW_LIMITS } = await import("../lib/fw-table")
+    const plan = planQuery("PX4와 ArduPilot 라이선스 차이는?")
+    const fw = firmwareTable(plan, "PX4와 ArduPilot 라이선스 차이는?")
+    const px4 = [...fw.refs].find(([, s]) => s === "PX4")![0], ap = [...fw.refs].find(([, s]) => s === "ArduPilot")![0]
+    const drops: string[] = []
+    const raw = [
+      "결론: PX4가 낫습니다.",
+      "| 항목 | PX4 | ArduPilot |",
+      `- 상용 폐쇄 소스 통합 필요 → PX4: 허용적 라이선스 [${px4}]`,
+      `- GPL 수용 가능 → ArduPilot: 카피레프트 [${ap}]`,
+      `- ArduPilot이 더 좋음 [${px4}]`,
+      "- PX4가 업계 표준입니다",
+      "- PX4는 빠름 [C99]",
+      `- 둘 다 확인 [${px4}][${ap}]`,
+    ].join("\n")
+    const out = sanitizeFwSection(raw, fw.refs, (_l, why) => drops.push(why))
+    ok(out.startsWith(FW_JUDGMENT_HEAD) && out.endsWith(FW_LIMITS), "서버 머리말·한계 문구 누락")
+    ok(!out.includes("결론:") && !out.includes("| 항목"), "결론/표 반복이 남음")
+    ok(out.includes("상용 폐쇄 소스") && out.includes("GPL 수용") && out.includes("둘 다 확인"), "정상 불릿이 사라짐")
+    ok(!out.includes("업계 표준") && !out.includes("[C99]") && !out.includes("ArduPilot이 더 좋음"), "불량 불릿이 남음")
+    ok(drops.sort().join() === "no-ref,ref-not-in-table,side-mismatch", `제거 사유 ${drops}`)
+    ok(sanitizeFwSection("- 인용 없음", fw.refs).includes(FW_JUDGMENT_EMPTY), "통과 불릿 0건일 때 안내문 누락")
+    ok(sanitizeFwSection(Array.from({ length: 9 }, (_, i) => `- 항목${i} PX4 [${px4}]`).join("\n"), fw.refs).split("\n- ").length - 1 === 6, "불릿 상한 6 위반")
+  })
+
+  await t("F11 sectionRewriter: 첫 조각에서 빈 조각으로 표를 먼저 내보내고 끝에서 정리본만 한 번 출력", async () => {
+    const { sectionRewriter, prefixInjector } = await import("../lib/soften")
+    const parts = [{ type: "text-start", id: "a" }, { type: "text-delta", id: "a", text: "잡담 " }, { type: "text-delta", id: "a", text: "- x [C1]" }, { type: "text-end", id: "a" }]
+    const rs = new ReadableStream({ start(c) { for (const p of parts) c.enqueue(p); c.close() } })
+    const outParts: { type: string; text?: string }[] = []
+    const reader = rs.pipeThrough(sectionRewriter((t) => `<${t}>`)).pipeThrough(prefixInjector("TABLE")).getReader()
+    for (;;) { const r = await reader.read(); if (r.done) break; outParts.push(r.value) }
+    const deltas = outParts.filter((p) => p.type === "text-delta").map((p) => p.text).filter(Boolean)
+    ok(deltas.length === 2 && deltas[0] === "TABLE\n\n" && deltas[1] === "<잡담 - x [C1]>", `조각 ${JSON.stringify(deltas)}`)
+    ok(outParts.map((p) => p.type).join() === "text-start,text-delta,text-delta,text-delta,text-end", "조각 순서 이상")
+  })
+
   const w = Math.max(...results.map((r) => r.name.length))
   for (const r of results) console.log(`${r.status}  ${r.name.padEnd(w)}${r.note ? `  — ${r.note}` : ""}`)
   const fail = results.filter((r) => r.status === "FAIL").length
