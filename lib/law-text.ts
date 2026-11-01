@@ -13,6 +13,7 @@ export interface LawArticle {
   effective: string; article_effective: string; partial_effective: string[]; url: string; sha256: string; fetched_at: string
 }
 const ARTICLES = (lawFile as unknown as { claims: LawArticle[] }).claims
+export const LAW_ARTICLES: readonly LawArticle[] = ARTICLES
 const LAW_ORDER = ["law:aviation-safety-act", "law:aviation-safety-act-decree", "law:aviation-safety-act-rule", "law:aviation-business-act", "law:drone-promotion-act", "law:military-base-act"]
 const LAW_NAME = new Map(ARTICLES.map((a) => [a.law_id, a.law_name]))
 
@@ -98,6 +99,7 @@ function mentionedLaws(q: string): { id: string; at: number }[] {
 
 const LEGAL_CUE = /법|규정|규제|조문|조항|의무|처벌|벌금|허가|승인|신고|등록|자격|증명|제한|금지|과태료|근거|인증|면허|교육|기준|대상/
 const LAWISH = /드론|무인기|비행승인|조종자|초경량|비행장치|무인항공|군사기지|비행안전구역|보호구역|특별자유화|시범사업|사용사업/
+export const lawGate = (q: string) => REGULATORY.test(q) || LAWISH.test(q)
 export function matchLawArticles(question: string): LawMatch | null {
   const q = question.trim()
   const laws = mentionedLaws(q)
@@ -114,7 +116,7 @@ export function matchLawArticles(question: string): LawMatch | null {
     if (found.length || missing.length) return { articles: found.slice(0, MAX_ARTICLES), missing, direct: true, omitted: Math.max(0, found.length - MAX_ARTICLES) }
   }
   // ② 주제 매칭: 법령 질문일 때만(기존 REGULATORY 판정 + 드론 법규 낱말). 공학·설계 질문에는 조문 블록을 붙이지 않는다.
-  if (!REGULATORY.test(q) && !LAWISH.test(q)) return null
+  if (!lawGate(q)) return null
   const qs = LAW_PATTERNS.reduce((acc, p) => acc.replace(p.re, " "), q) // 법령 이름 속 낱말('활용'·'기반조성')이 조문 제목과 겹쳐 점수를 받지 않게 이름 부분은 뺀다
   const nq = nz(qs) + SYNONYMS.filter((x) => x.re.test(q)).map((x) => x.add).join("")
   const lawFilter = laws.length ? new Set(laws.map((l) => l.id)) : null
@@ -172,6 +174,8 @@ export function renderLawBlock(m: LawMatch, now: Date = new Date()): string {
   const tail = `${rest ? `표시하지 못한 관련 조문이 ${rest}건 더 있습니다. 질문을 좁히거나 조문 번호로 물어보세요.\n\n` : ""}<sub>조문 원문이며 법적 자문이 아닙니다. 이 위키는 드론 관련 조문만 선별해 수록하며 별표·시행 이후 개정은 반영하지 못할 수 있습니다. 적용 여부는 법제처 원문과 전문가에게 확인하세요.</sub>`
   return [intro, ...(missing.length ? [missing.join("\n")] : []), ...parts, tail].join("\n\n")
 }
+
+export function renderMatch(m: LawMatch, now: Date): { text: string; ids: string[] } { return { text: renderLawBlock(m, now), ids: m.articles.map((a) => a.id) } }
 
 export function lawTextAnswer(question: string, now: Date = new Date()): { text: string; ids: string[] } | null {
   const m = matchLawArticles(question)

@@ -1,0 +1,232 @@
+{
+ "version": 1,
+ "reviewed": false,
+ "note": "S3-2b 평가용 골든셋 초안(2026-11-01). 질문은 매칭 규칙 튜닝에 쓰지 않은 새 질문이며 정답 조문(복수 허용)은 작성자(Claude)의 판단이다 — 마스터 또는 법률 검토자가 검토·수정하기 전까지는 잠정 기준이다. 정답이 빈 배열이면 조문이 붙지 않아야 한다.",
+ "items": [
+  {
+   "q": "드론 팔았는데 신고한 거 어떻게 정리해?",
+   "answers": [
+    "LAW-aviation-safety-act-rule-303",
+    "LAW-aviation-safety-act-123",
+    "LAW-aviation-safety-act-rule-302"
+   ],
+   "note": "말소·변경신고"
+  },
+  {
+   "q": "산에서 헬리캠 촬영하려는데 허가가 필요한가요",
+   "answers": [
+    "LAW-aviation-safety-act-127",
+    "LAW-aviation-safety-act-rule-308",
+    "LAW-aviation-safety-act-decree-25"
+   ],
+   "note": "비행승인"
+  },
+  {
+   "q": "초보자가 드론 자격증 따려면 교육을 어디서 받나",
+   "answers": [
+    "LAW-aviation-safety-act-126",
+    "LAW-aviation-safety-act-rule-307",
+    "LAW-aviation-safety-act-125",
+    "LAW-aviation-safety-act-rule-306"
+   ],
+   "note": "전문교육기관·조종자 증명"
+  },
+  {
+   "q": "사고로 사람이 다치면 누구한테 보고해?",
+   "answers": [
+    "LAW-aviation-safety-act-rule-312"
+   ],
+   "note": "사고 보고"
+  },
+  {
+   "q": "드론 보험 안 들면 어떻게 돼",
+   "answers": [
+    "LAW-aviation-business-act-70"
+   ],
+   "note": "항공보험 가입의무"
+  },
+  {
+   "q": "농약 살포 드론은 별도 사업등록이 있나",
+   "answers": [
+    "LAW-aviation-business-act-48",
+    "LAW-aviation-business-act-49"
+   ],
+   "note": "사용사업 등록"
+  },
+  {
+   "q": "드론 비행 전 반드시 지켜야 할 규칙",
+   "answers": [
+    "LAW-aviation-safety-act-129",
+    "LAW-aviation-safety-act-rule-310"
+   ],
+   "note": "조종자 준수사항"
+  },
+  {
+   "q": "자체중량 얼마 이하는 신고 안 해도 돼?",
+   "answers": [
+    "LAW-aviation-safety-act-decree-24",
+    "LAW-aviation-safety-act-rule-5"
+   ],
+   "note": "신고 제외 범위"
+  },
+  {
+   "q": "기체 안전성 검사를 받아야 하는 드론은?",
+   "answers": [
+    "LAW-aviation-safety-act-124",
+    "LAW-aviation-safety-act-rule-305"
+   ],
+   "note": "안전성인증"
+  },
+  {
+   "q": "시범사업구역에서는 규제가 완화되나",
+   "answers": [
+    "LAW-drone-promotion-act-11",
+    "LAW-drone-promotion-act-10"
+   ],
+   "note": "시범사업구역"
+  },
+  {
+   "q": "드론특구 지정 절차",
+   "answers": [
+    "LAW-drone-promotion-act-10"
+   ],
+   "note": "특별자유화구역"
+  },
+  {
+   "q": "공군기지 주변에서 드론 날리면 처벌되나",
+   "answers": [
+    "LAW-military-base-act-10",
+    "LAW-military-base-act-24",
+    "LAW-military-base-act-6"
+   ],
+   "note": "비행안전구역·벌칙"
+  },
+  {
+   "q": "국방시설 부지 위에서 촬영 금지인가",
+   "answers": [
+    "LAW-military-base-act-9"
+   ],
+   "note": "보호구역 금지"
+  },
+  {
+   "q": "허위로 신고하면 어떤 벌이 있나",
+   "answers": [
+    "LAW-aviation-safety-act-166",
+    "LAW-aviation-safety-act-161",
+    "LAW-aviation-safety-act-162"
+   ],
+   "note": "벌칙·과태료(모호)"
+  },
+  {
+   "q": "드론 조종 자격 갱신해야 하나",
+   "answers": [
+    "LAW-aviation-safety-act-125",
+    "LAW-aviation-safety-act-rule-306"
+   ],
+   "note": "조종자 증명"
+  },
+  {
+   "q": "연구용 시험비행은 승인이 필요한가",
+   "answers": [
+    "LAW-aviation-safety-act-rule-304",
+    "LAW-aviation-safety-act-127"
+   ],
+   "note": "시험비행 허가"
+  },
+  {
+   "q": "무인비행장치는 일반 항공기 규정을 적용받나",
+   "answers": [
+    "LAW-aviation-safety-act-131-2",
+    "LAW-aviation-safety-act-131"
+   ],
+   "note": "적용 특례"
+  },
+  {
+   "q": "드론 정의가 어떻게 되나",
+   "answers": [
+    "LAW-aviation-safety-act-2",
+    "LAW-aviation-safety-act-rule-5",
+    "LAW-drone-promotion-act-2"
+   ],
+   "note": "정의"
+  },
+  {
+   "q": "드론 분야 창업 지원 근거",
+   "answers": [
+    "LAW-drone-promotion-act-12",
+    "LAW-drone-promotion-act-3"
+   ],
+   "note": "창업 활성화"
+  },
+  {
+   "q": "공공기관이 드론을 쓸 때 법적 근거",
+   "answers": [
+    "LAW-drone-promotion-act-8"
+   ],
+   "note": "공공기관 드론 활용"
+  },
+  {
+   "q": "항공안전법 제127조 비행승인 내용",
+   "answers": [
+    "LAW-aviation-safety-act-127"
+   ],
+   "note": "직접 지정"
+  },
+  {
+   "q": "시행령 제24조가 뭐야",
+   "answers": [
+    "LAW-aviation-safety-act-decree-24"
+   ],
+   "note": "직접 지정(법령 약칭)"
+  },
+  {
+   "q": "교육기관 지정이 취소되기도 해?",
+   "answers": [
+    "LAW-aviation-safety-act-126",
+    "LAW-aviation-safety-act-rule-307",
+    "LAW-aviation-safety-act-rule-320-3"
+   ],
+   "note": "전문교육기관"
+  },
+  {
+   "q": "드론으로 사업하는 사람에게 내려지는 안전개선명령",
+   "answers": [
+    "LAW-aviation-safety-act-130",
+    "LAW-aviation-safety-act-rule-313"
+   ],
+   "note": "안전개선명령"
+  },
+  {
+   "q": "비행승인 신청 수수료가 있나",
+   "answers": [
+    "LAW-aviation-safety-act-136"
+   ],
+   "note": "수수료"
+  },
+  {
+   "q": "드론 프로펠러 효율 계산 방법",
+   "answers": [],
+   "note": "비법령"
+  },
+  {
+   "q": "ArduPilot 로그 분석 방법",
+   "answers": [],
+   "note": "비법령"
+  },
+  {
+   "q": "라이선스 때문에 PX4 소스를 수정해서 배포해도 돼?",
+   "answers": [],
+   "note": "함정: 소프트웨어 라이선스"
+  },
+  {
+   "q": "비행승인 없이 SITL 시뮬레이션을 돌려도 문제없지?",
+   "answers": [],
+   "note": "함정: 시뮬레이션"
+  },
+  {
+   "q": "FPV 고글 추천해줘",
+   "answers": [],
+   "note": "비법령"
+  }
+ ]
+}

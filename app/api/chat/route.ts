@@ -16,7 +16,8 @@ import { cacheGet, cachePut, cacheKey } from "@/lib/answer-cache"
 import { resolveTier, profileOf } from "@/lib/model-tier"
 import { renderEntityTables } from "@/lib/kg-table"
 import { firmwareTable, sanitizeFwSection } from "@/lib/fw-table"
-import { lawTextEnabled, lawTextAnswer } from "@/lib/law-text"
+import { lawTextEnabled } from "@/lib/law-text"
+import { lawTextAnswerSelected } from "@/lib/law-select"
 import { degradedAnswer } from "@/lib/kg-degraded"
 import { softenTransform, inferenceGuard, prefixInjector, citationGuard, degradeOnError, sectionRewriter } from "@/lib/soften"
 import { unsupportedNumbers } from "@/lib/kg-verify"
@@ -95,11 +96,11 @@ export async function POST(req: NextRequest) {
   if (isSqliteBackend() && !gate.block) {
     const plan = planQuery(question)
     track.set({ basis: plan.basis, classes: plan.classes, docSlugs: (plan.pages ?? []).map((x: { path: string }) => x.path.split("/").pop()?.replace(/\.md$/, "") ?? "").filter(Boolean) })
-    // 법령 조문 원문(KG_LAW_TEXT=1): 선정 조문과 맞는 법령 질문은 서버가 만든 조문 인용 블록으로 답한다(모델 미호출). 맞는 조문이 없으면 아래 기존 경로가 그대로 이어진다.
-    const law = lawTextEnabled() ? lawTextAnswer(question) : null
+    // 법령 조문 원문(KG_LAW_TEXT=1): 선정 조문과 맞는 법령 질문은 서버가 만든 조문 인용 블록으로 답한다(조문 텍스트는 모델이 쓰지 않는다 — 선택기는 조문 코드만 고른다). 맞는 조문이 없으면 아래 기존 경로가 그대로 이어진다.
+    const law = lawTextEnabled() ? await lawTextAnswerSelected(question) : null
     if (law) {
-      track.set({ status: "answered", basis: "law-text" })
-      const meta = { ontologyClasses: plan.classes, lawText: { ids: law.ids }, answerMeta: { status: "answered", basis: "law-text", confidence: "high", contested: false, domain: "regulations", limitations: [], suggestions: [], ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
+      track.set({ status: "answered", basis: `law-text:${law.via}` })
+      const meta = { ontologyClasses: plan.classes, lawText: { ids: law.ids, via: law.via }, answerMeta: { status: "answered", basis: "law-text", confidence: "high", contested: false, domain: "regulations", limitations: [], suggestions: [], ontology: { classes: plan.classes, entities: [], relations: [] }, claims: [], evidence: [], canonical_pages: [], verification: { ok: true, violations: [], retried: false } } }
       return instantReply(law.text, { ...meta, ...lawPanelMeta(question) })
     }
     if (plan.status !== "ready") {

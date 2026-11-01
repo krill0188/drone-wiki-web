@@ -90,9 +90,36 @@ async function main() {
 
   await t("L9 라우트 연결: 플래그 뒤·모델 호출 전에만 조문 답변을 내고, 플래그가 꺼지면 기존 경로", () => {
     const src = fs.readFileSync(path.join(__dirname, "..", "app", "api", "chat", "route.ts"), "utf-8")
-    ok(/lawTextEnabled\(\) \? lawTextAnswer\(question\) : null/.test(src), "플래그 가드 없음")
-    ok(src.indexOf("lawTextAnswer(question)") < src.indexOf("streamText({ model: wikiModel(profileOf(tier))"), "모델 호출 뒤에 있음")
-    ok(src.indexOf("lawTextAnswer(question)") < src.indexOf('if (plan.status !== "ready")'), "근거 부족 판정보다 뒤에 있음")
+    ok(/lawTextEnabled\(\) \? await lawTextAnswerSelected\(question\) : null/.test(src), "플래그 가드 없음")
+    ok(src.indexOf("lawTextAnswerSelected(question)") < src.indexOf("streamText({ model: wikiModel(profileOf(tier))"), "모델 호출 뒤에 있음")
+    ok(src.indexOf("lawTextAnswerSelected(question)") < src.indexOf('if (plan.status !== "ready")'), "근거 부족 판정보다 뒤에 있음")
+  })
+
+  await t("L10 선택기: 코드 파싱·검증(목록 밖·형식 오류는 실패), 규칙 대체·직접 지정 우선·없음 처리, 모델 출력이 조문이 되지 않는다", async () => {
+    const S = await import("../lib/law-select")
+    ok(JSON.stringify(S.parseCodes('{"codes":["L01","L02"]}')) === "[1,2]" && JSON.stringify(S.parseCodes("{\"codes\":['L05']}")) === "[5]", "정상 파싱")
+    ok(S.parseCodes('{"codes":[]}')?.length === 0, "빈 목록")
+    ok(S.parseCodes('{"codes":["L99"]}') === null && S.parseCodes('{"codes":["312"]}') === null && S.parseCodes('{"codes":["L12","제122조"]}') === null && S.parseCodes("그냥 문장") === null && S.parseCodes('{"codes":["L01","L02"') === null, "목록 밖·번호·잘림·비JSON 은 실패")
+    ok(S.parseCodes('{"codes":["L01","L01","L02","L03","L04","L05","L06","L07"]}')!.length === 5, "상한 5·중복 제거")
+    const now = new Date("2026-11-02T00:00:00Z")
+    const gen = (out: string) => async () => out
+    const idx = claims.findIndex((a) => a.id === "LAW-aviation-safety-act-122") + 1
+    const code = `L${String(idx).padStart(2, "0")}`
+    const sel = await S.lawTextAnswerSelected("드론 기체 문제 있으면 어디에 알려야 해", { generate: gen(`{"codes":["${code}"]}`), now })
+    ok(sel?.via === "selector" && sel.ids.join() === "LAW-aviation-safety-act-122" && sel.text.includes("> 제122조(초경량비행장치 신고)"), "선택기 경로")
+    ok((await S.lawTextAnswerSelected("신고 어디서 해", { generate: gen('{"codes":[]}'), now })) === null, "없음이면 조문 없음(규칙으로 되돌아가지 않음)")
+    const fb = await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: gen("형식 깨짐"), now })
+    ok(fb?.via === "rules" && fb.ids.includes("LAW-aviation-safety-act-122"), "형식 오류 → 규칙 대체")
+    const boom = await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: async () => { throw new Error("x") }, now })
+    ok(boom?.via === "rules", "호출 예외 → 규칙 대체")
+    const slow = await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: () => new Promise((r) => setTimeout(() => r("{}"), 200)), timeoutMs: 20, now })
+    ok(slow?.via === "rules", "시간 초과 → 규칙 대체")
+    let called = 0
+    const direct = await S.lawTextAnswerSelected("항공안전법 제122조", { generate: async () => { called++; return '{"codes":[]}' }, now })
+    ok(direct?.via === "direct" && called === 0, "직접 지정은 모델을 부르지 않음")
+    ok((await S.lawTextAnswerSelected("PX4 EKF2 튜닝 팁", { generate: async () => { called++; return '{"codes":["L01"]}' }, now })) === null && called === 0, "법령어 없는 질문은 모델을 부르지 않음")
+    ok(S.SELECT_SYSTEM.includes("[L80]") && !S.SELECT_SYSTEM.includes("[L81]") && claims.length === 80, "목록 80건")
+    ok(!S.SELECT_SYSTEM.includes(claims[0].text.slice(0, 40)), "프롬프트에 조문 본문이 들어감(제목만 허용)")
   })
 
   const w = Math.max(...results.map((r) => r.name.length))
