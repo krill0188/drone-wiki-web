@@ -98,7 +98,7 @@ async function main() {
     ok(src.indexOf("lawTextAnswerSelected(question)") < src.indexOf('if (plan.status !== "ready")'), "근거 부족 판정보다 뒤에 있음")
   })
 
-  await t("L10 선택기: 코드 파싱·검증(목록 밖·형식 오류는 실패), 규칙 대체·직접 지정 우선·없음 처리, 모델 출력이 조문이 되지 않는다", async () => {
+  await t("L10 선택기: 코드 파싱·검증(목록 밖·형식 오류는 실패), 실패·없음은 조문 없음, 직접 지정 우선, 범위 밖 개체(P-73) 가드, 모델 출력이 조문이 되지 않는다", async () => {
     const S = await import("../lib/law-select")
     ok(JSON.stringify(S.parseCodes('{"codes":["L01","L02"]}')) === "[1,2]" && JSON.stringify(S.parseCodes("{\"codes\":['L05']}")) === "[5]", "정상 파싱")
     ok(S.parseCodes('{"codes":[]}')?.length === 0, "빈 목록")
@@ -111,16 +111,21 @@ async function main() {
     const sel = await S.lawTextAnswerSelected("드론 기체 문제 있으면 어디에 알려야 해", { generate: gen(`{"codes":["${code}"]}`), now })
     ok(sel?.via === "selector" && sel.ids.join() === "LAW-aviation-safety-act-122" && sel.text.includes("> 제122조(초경량비행장치 신고)"), "선택기 경로")
     ok((await S.lawTextAnswerSelected("신고 어디서 해", { generate: gen('{"codes":[]}'), now })) === null, "없음이면 조문 없음(규칙으로 되돌아가지 않음)")
-    const fb = await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: gen("형식 깨짐"), now })
-    ok(fb?.via === "rules" && fb.ids.includes("LAW-aviation-safety-act-122"), "형식 오류 → 규칙 대체")
-    const boom = await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: async () => { throw new Error("x") }, now })
-    ok(boom?.via === "rules", "호출 예외 → 규칙 대체")
-    const slow = await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: () => new Promise((r) => setTimeout(() => r("{}"), 200)), timeoutMs: 20, now })
-    ok(slow?.via === "rules", "시간 초과 → 규칙 대체")
+    // 선택 실패(형식 오류·예외·시간 초과)는 규칙 매칭으로 대체하지 않고 조문을 붙이지 않는다(규칙 매칭의 비법령 오탐이 높아서 — 설계서 §15)
+    ok((await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: gen("형식 깨짐"), now })) === null, "형식 오류 → 조문 없음")
+    ok((await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: async () => { throw new Error("x") }, now })) === null, "호출 예외 → 조문 없음")
+    ok((await S.lawTextAnswerSelected("초경량비행장치 신고는 어디서 해?", { generate: () => new Promise((r) => setTimeout(() => r("{}"), 200)), timeoutMs: 20, now })) === null, "시간 초과 → 조문 없음")
     let called = 0
     const direct = await S.lawTextAnswerSelected("항공안전법 제122조", { generate: async () => { called++; return '{"codes":[]}' }, now })
     ok(direct?.via === "direct" && called === 0, "직접 지정은 모델을 부르지 않음")
     ok((await S.lawTextAnswerSelected("PX4 EKF2 튜닝 팁", { generate: async () => { called++; return '{"codes":["L01"]}' }, now })) === null && called === 0, "법령어 없는 질문은 모델을 부르지 않음")
+    // 범위 밖 개체 가드(P-73 사례): 구역·공역 코드가 조문에 없으면 선택기도 부르지 않는다
+    let guardCalls = 0
+    for (const q of ["P-73 규정 요약해줘", "비행금지구역 P-73에서 드론 날리면 안 되나요", "R-75 구역에서 비행하려면", "P73 구역 규정", "UA-12 공역에서 초경량 비행 규정"])
+      ok((await S.lawTextAnswerSelected(q, { generate: async () => { guardCalls++; return `{"codes":["${code}"]}` }, now })) === null, `가드가 못 막음: ${q}`)
+    ok(guardCalls === 0, "가드에서 걸렸는데 선택기를 호출함")
+    for (const q of ["M300 RTK 비행승인 필요해?", "2kg 이하 드론도 신고해야 해?", "PX4 드론 신고해야 하나요", "250g 넘는 드론은 신고 대상인가"]) ok(S.unsupportedZoneCodes(q).length === 0, `제품 코드·무게 표기를 잘못 막음: ${q}`)
+    ok(S.unsupportedZoneCodes("항공안전법 제122조 P-73").length === 1 && (await S.lawTextAnswerSelected("항공안전법 제122조 P-73", { generate: async () => "{}", now }))?.via === "direct", "직접 지정은 가드보다 먼저")
     ok(S.SELECT_SYSTEM.includes("[L80]") && !S.SELECT_SYSTEM.includes("[L81]") && claims.length === 80, "목록 80건")
     ok(!S.SELECT_SYSTEM.includes(claims[0].text.slice(0, 40)), "프롬프트에 조문 본문이 들어감(제목만 허용)")
   })
