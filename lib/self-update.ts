@@ -26,6 +26,10 @@ const LAYER_DIRS = ["concepts", "entities", "comparisons", "queries"]
 const STATE_PATH = path.join(WIKI_ROOT, ".ua", "self-update-state.json")
 const SECTION_HEADER = "## 📰 최근 관련 소식"
 const NEWS_PER_ITEM_MATCHES = 2
+// 문서당 뉴스 불릿 상한(2026-11-06). 상한이 없어 검색에 자주 걸리는 문서에 기사가 무한히 쌓였다(china-drone-export-controls 592건·200KB, 그중 92%가 무관 기사)
+// → 공개 승인 상한(파일 200KB) 초과로 자동 발행이 사람 승인에 걸림. 최근 N건만 남기고 밀려난 불릿은 .ua/news-archive/<slug>.md 로 보관한다(삭제 아님).
+export const NEWS_MAX_PER_DOC = 40
+const NEWS_ARCHIVE_DIR = path.join(WIKI_ROOT, ".ua", "news-archive")
 
 // Vercel(process.env.VERCEL이 항상 설정됨)에서는 항상 false — 위키 문서에 직접
 // 쓰는 API는 이 값을 반드시 확인하고 false면 거부해야 한다(다른 write 게이트들과 동일 패턴).
@@ -132,6 +136,29 @@ function insertBullet(raw: string, bullet: string): string {
   return `${raw.slice(0, sectionEnd).trimEnd()}\n${bullet}\n${raw.slice(sectionEnd)}`
 }
 
+// 뉴스 섹션의 불릿이 max 건을 넘으면 가장 오래된(섹션 앞쪽) 것부터 덜어낸다. 불릿은 삽입 순서(=수집 순서)로 쌓이므로 뒤쪽이 최신이다.
+// 순수 함수: 덜어낸 불릿은 onRemoved 로 넘기고, 불릿이 아닌 줄(설명·빈 줄)과 다른 섹션은 건드리지 않는다. 이미 상한 이하면 원문 그대로(멱등).
+export function capNewsSection(raw: string, max = NEWS_MAX_PER_DOC, onRemoved?: (removed: string[]) => void): string {
+  const headerIdx = raw.indexOf(SECTION_HEADER)
+  if (headerIdx === -1) return raw
+  const afterHeader = headerIdx + SECTION_HEADER.length
+  const nextHeadingIdx = raw.indexOf("\n## ", afterHeader)
+  const sectionEnd = nextHeadingIdx === -1 ? raw.length : nextHeadingIdx
+  const lines = raw.slice(afterHeader, sectionEnd).split("\n")
+  const bulletIdx = lines.map((l, i) => (l.startsWith("- ") ? i : -1)).filter((i) => i >= 0)
+  if (bulletIdx.length <= max) return raw
+  const drop = new Set(bulletIdx.slice(0, bulletIdx.length - max))
+  onRemoved?.(lines.filter((_, i) => drop.has(i)))
+  return raw.slice(0, afterHeader) + lines.filter((_, i) => !drop.has(i)).join("\n") + raw.slice(sectionEnd)
+}
+
+function archiveNews(slug: string, bullets: string[]) {
+  fs.mkdirSync(NEWS_ARCHIVE_DIR, { recursive: true })
+  const file = path.join(NEWS_ARCHIVE_DIR, `${slug}.md`)
+  const header = fs.existsSync(file) ? "" : `# ${slug} — 뉴스 보관(문서 상한 ${NEWS_MAX_PER_DOC}건 초과로 밀려난 불릿)\n\n`
+  fs.appendFileSync(file, `${header}${bullets.join("\n")}\n`)
+}
+
 export function applyProposal(p: SelfUpdateProposal): { ok: boolean; error?: string } {
   if (!isSelfUpdateWritable()) {
     return { ok: false, error: "이 기능은 로컬 개발 환경에서만 사용할 수 있습니다(배포된 사이트에서는 위키 문서를 쓸 수 없습니다)." }
@@ -140,7 +167,9 @@ export function applyProposal(p: SelfUpdateProposal): { ok: boolean; error?: str
   if (!filePath) return { ok: false, error: `문서를 찾을 수 없습니다: ${p.slug}` }
 
   const raw = fs.readFileSync(filePath, "utf-8")
-  const updated = insertBullet(raw, p.bullet)
+  let removed: string[] = []
+  const updated = capNewsSection(insertBullet(raw, p.bullet), NEWS_MAX_PER_DOC, (r) => { removed = r })
+  if (removed.length) archiveNews(p.slug, removed) // 보관을 먼저 — 본문에서 덜어내고 보관이 실패하는 일이 없게
   if (updated !== raw) fs.writeFileSync(filePath, updated)
 
   const state = loadState()
