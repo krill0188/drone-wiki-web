@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "7eb6fedbbdf8530dc57e4f81d437644dcccae804ca0a5fc05aed5df6b5985fde",
+  "source_fingerprint": "375b13ac7644e54e029ec468424bf133382f1517700bd1cfc31e100a2f9ac589",
   "nodes": [
     {
       "id": "10-48550-arxiv-2607-26717",
@@ -209,6 +209,22 @@
       ],
       "updated": "2026-10-24",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "3dgcpm",
+      "name": "3DGCPM",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "cellular-network",
+        "deep-learning",
+        "uav-navigation",
+        "propagation-model"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -637,6 +653,41 @@
       ],
       "updated": "2026-10-24",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "actuator-modeling",
+      "name": "Actuator modeling",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "mpc",
+        "actuator-modeling",
+        "quadrotor-controller",
+        "tuning",
+        "reference-preview"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "actuator-prediction",
+      "name": "Actuator prediction",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "controller-comparison",
+        "mpc",
+        "pid",
+        "sliding-mode-control",
+        "quadrotor",
+        "simulation-study"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -3066,6 +3117,22 @@
       "ontologyClass": null
     },
     {
+      "id": "altitude-planning",
+      "name": "Altitude Planning",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "trajectory-planning",
+        "uav-swarm",
+        "optimization",
+        "altitude-control"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "altitude-separation",
       "name": "altitude separation",
       "layer": "Concepts",
@@ -4747,6 +4814,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "betafpv-pavo20-pro-ii",
+      "name": "BetaFPV Pavo20 Pro II (2인치 O4 Air Unit 시네후프)",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone-hw",
+        "fpv",
+        "hardware"
+      ],
+      "updated": "2026-11-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "beyond-visual-line-of-sight",
       "name": "Beyond Visual Line Of Sight",
       "layer": "Concepts",
@@ -4759,6 +4841,21 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "bezier-ig-net-uav-collision-avoidance-path",
+      "name": "베지어 곡선 기반 UAV 충돌회피 경로 최적화와 IG-Net 초기값 생성",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "drone-ai"
+      ],
+      "updated": "2026-11-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "bi-copter-model",
@@ -5098,6 +5195,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Person"
+    },
+    {
+      "id": "boundary-layer-sliding-mode-control-bl-smc",
+      "name": "boundary-layer sliding-mode control (BL-SMC)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "control-theory",
+        "sliding-mode-control",
+        "quadrotor",
+        "robust-control",
+        "actuator-modeling"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "bowu-wei",
@@ -5774,6 +5888,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "cellular-network-signals",
+      "name": "Cellular network signals",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "comm-protocol",
+        "rf-datalink",
+        "cellular-network",
+        "uav-navigation",
+        "deep-learning"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "centralized-control",
@@ -6758,6 +6889,23 @@
       "ontologyClass": "CommunicationProtocol"
     },
     {
+      "id": "command-timing",
+      "name": "Command timing",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "controller-comparison",
+        "tuning",
+        "mpc",
+        "pid",
+        "sliding-mode-control"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
       "id": "commander",
       "name": "Commander",
       "layer": "Concepts",
@@ -7082,6 +7230,24 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "constant-step-dapl",
+      "name": "constant-step DAPL",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "dapl",
+        "adaptive-learning",
+        "quadrotor-control",
+        "rff",
+        "out-of-disturbance",
+        "gradient-update"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "construction-status-analysis",
@@ -8438,6 +8604,24 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Person"
+    },
+    {
+      "id": "dapl",
+      "name": "DAPL",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "adaptive-learning",
+        "control-theory",
+        "out-of-distribution",
+        "quadrotor",
+        "rff",
+        "transient-disturbances"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "darpa-heavy-lift-challenge-2026-south-africa",
@@ -10093,6 +10277,22 @@
       "ontologyClass": null
     },
     {
+      "id": "directional-selection-method",
+      "name": "Directional Selection Method",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "swarm-cooperation",
+        "trajectory-planning",
+        "optimization",
+        "genetic-algorithm"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "disaster-recovery",
       "name": "disaster recovery",
       "layer": "Concepts",
@@ -10779,6 +10979,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "drone-acoustic-identification-crnn-with-speech",
+      "name": "음성 혼재 야외 드론 음향 데이터의 CRNN 기종 식별 성능 분석",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone"
+      ],
+      "updated": "2026-11-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "drone-agent",
@@ -12325,6 +12539,23 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "dual-mobility-perspective",
+      "name": "Dual-Mobility Perspective",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "uav-communication",
+        "fluid-antennas",
+        "trajectory-planning",
+        "channel-adaptation",
+        "dual-mobility"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "dual-uav-cable-suspended-payload-transport",
       "name": "Dual-UAV Cable-Suspended Payload Transport",
       "layer": "Concepts",
@@ -12830,7 +13061,7 @@
         "transmitter",
         "edgetx"
       ],
-      "updated": "2026-10-21",
+      "updated": "2026-11-04",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
@@ -14077,6 +14308,21 @@
       "ontologyClass": "Organization"
     },
     {
+      "id": "fade-flow-based-multichannel-tail-estimation-uav-urllc",
+      "name": "FADE: 흐름 기반 다채널 꼬리 추정 (UAV URLLC 심층 페이딩)",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "research"
+      ],
+      "updated": "2026-11-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "fading-channels",
       "name": "Fading channels",
       "layer": "Concepts",
@@ -14101,6 +14347,23 @@
       ],
       "updated": "2026-10-24",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "fallback-activity",
+      "name": "fallback activity",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "control-theory",
+        "mpc",
+        "pid",
+        "quadrotor",
+        "simulation-study"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -14256,6 +14519,22 @@
       "ontologyClass": null
     },
     {
+      "id": "fcu",
+      "name": "FCU",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "hardware",
+        "flight-controller",
+        "multicopter",
+        "rc-calculator"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "fda",
       "name": "Fda",
       "layer": "Concepts",
@@ -14398,6 +14677,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Person"
+    },
+    {
+      "id": "fiber-tethered-drone-optical-link-budget",
+      "name": "광섬유 테더드 드론 광 링크 전력 수지 및 사양 역산 모델",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "datalink",
+        "drone"
+      ],
+      "updated": "2026-11-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "field-oriented-control",
@@ -15056,6 +15349,22 @@
       "ontologyClass": null
     },
     {
+      "id": "frozen-parameter-baseline",
+      "name": "Frozen-parameter baseline",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "baseline",
+        "disturbance-rejection",
+        "quadrotor-control",
+        "rff-mpc"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
       "id": "frozen-rank-consensus",
       "name": "Frozen Rank Consensus",
       "layer": "Concepts",
@@ -15644,6 +15953,22 @@
       "ontologyClass": null
     },
     {
+      "id": "geometric-so-3-controller",
+      "name": "geometric $SO(3)$ controller",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "flight-control",
+        "nonlinear-control",
+        "so3-control",
+        "quadrotor"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "geomorphic-analysis",
       "name": "Geomorphic Analysis",
       "layer": "Concepts",
@@ -15822,6 +16147,23 @@
       ],
       "updated": "2026-10-24",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "global-planning",
+      "name": "Global Planning",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "trajectory-planning",
+        "uav-swarm",
+        "genetic-algorithm",
+        "optimization",
+        "phasd-trajectory-planning"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -17016,7 +17358,7 @@
         "drone-hw",
         "hardware"
       ],
-      "updated": "2026-10-05",
+      "updated": "2026-11-01",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Gimbal"
@@ -17534,6 +17876,23 @@
       "ontologyClass": "Person"
     },
     {
+      "id": "hover-lqr",
+      "name": "hover LQR",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "lqr",
+        "quadrotor",
+        "controller-comparison",
+        "tuning-protocol",
+        "hover-control"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "hover-point-throttle-curve",
       "name": "Hover point throttle curve",
       "layer": "Concepts",
@@ -17821,6 +18180,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "hybrid-deep-learning-framework",
+      "name": "Hybrid Deep Learning Framework for Real-Time UAV Navigation with Adaptive Smoothness Control",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "deep-learning",
+        "uav-navigation",
+        "federated-learning",
+        "reinforcement-learning",
+        "cellular-signals"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "hybrid-deep-learning-uav-navigation-cellular-signals",
@@ -18172,6 +18548,22 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "improved-genetic-algorithm",
+      "name": "Improved Genetic Algorithm",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "genetic-algorithm",
+        "trajectory-planning",
+        "uav-swarm",
+        "optimization"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "imu",
@@ -19615,6 +20007,23 @@
       "ontologyClass": "Person"
     },
     {
+      "id": "joint-optimization",
+      "name": "Joint Optimization",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "uav-communication",
+        "fluid-antennas",
+        "trajectory-optimization",
+        "beamforming",
+        "offline-online-framework"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "joneckis-lance",
       "name": "Joneckis, Lance",
       "layer": "Concepts",
@@ -20180,6 +20589,21 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "kci-gps-jamming-cost-asymmetry-layered-ew-defense",
+      "name": "드론 전자전 GPS 재밍 취약성·교전비용 비대칭성과 계층적 전자기 방어 체계",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "datalink"
+      ],
+      "updated": "2026-11-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "kci-ground-target-tracking-retinanet-kalman",
       "name": "감시 드론을 위한 심층 신경망 기반 지상 표적 추적 기법 (KCI)",
       "layer": "Concepts",
@@ -20207,6 +20631,21 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
+    },
+    {
+      "id": "kci-heterogeneous-uav-ttc-collision-avoidance-velocity",
+      "name": "이기종 다중 UAV 시간-공간 위험도(TTC) 기반 충돌 회피 속도 결정",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "swarm",
+        "drone-sw"
+      ],
+      "updated": "2026-11-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "kci-hyperspectral-litter-detection-unetpp",
@@ -26314,6 +26753,21 @@
       "ontologyClass": "Organization"
     },
     {
+      "id": "kr-agency-uav-operation-rules",
+      "name": "한국 정부기관 자체 무인비행장치 운용 규정 비교",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-11-06",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
       "id": "kr-drone-business-registration",
       "name": "한국 초경량비행장치사용사업 등록",
       "layer": "Concepts",
@@ -26368,6 +26822,21 @@
       ],
       "updated": "2026-10-20",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-local-drone-industry-ordinances",
+      "name": "한국 지자체 드론산업·드론영농 지원 조례 비교",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-11-06",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
     },
@@ -26497,6 +26966,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Person"
+    },
+    {
+      "id": "l1-augmented-mpc",
+      "name": "L1-augmented MPC",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "adaptive-control",
+        "robust-tracking",
+        "rff-quadrotor",
+        "mpc",
+        "dr-wiki-autotag"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "lan-ping",
@@ -26713,6 +27199,21 @@
       "ontologyClass": null
     },
     {
+      "id": "lawns",
+      "name": "LAWNs",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "wireless-networks",
+        "uav-communication",
+        "low-altitude"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "lcaat",
       "name": "LCAAT",
       "layer": "Concepts",
@@ -26767,6 +27268,22 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "least-squares-adaptation",
+      "name": "least-squares adaptation",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "adaptive-control",
+        "quadrotor",
+        "disturbance-rejection",
+        "learning-theory"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "least-squares-optimization",
@@ -27220,6 +27737,24 @@
       "ontologyClass": null
     },
     {
+      "id": "linear-mpc-with-lqr-fallback-lmpc-f",
+      "name": "linear MPC with LQR fallback (LMPC-F)",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "mpc",
+        "lqr",
+        "controller-comparison",
+        "quadrotor",
+        "tuning",
+        "fallback-policy"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "linfeng-yuan",
       "name": "Linfeng Yuan",
       "layer": "Concepts",
@@ -27302,6 +27837,22 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "lipo-battery",
+      "name": "LiPo Battery",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "hardware",
+        "battery",
+        "lipo",
+        "power-system"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "lipo-charging-cabinet-fire-test",
@@ -28158,6 +28709,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "macro-mobility",
+      "name": "Macro-Mobility",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "uav-communication",
+        "fluid-antennas",
+        "low-altitude-wireless-networks",
+        "trajectory-planning",
+        "mobility-classification"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "magnetometer",
@@ -29430,6 +29998,22 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "micro-mobility",
+      "name": "Micro-Mobility",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "uav-communication",
+        "fluid-antennas",
+        "low-altitude-wireless-networks",
+        "channel-adaptation"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "micro-neural-policies-mnp",
       "name": "Micro Neural Policies (MNP)",
       "layer": "Concepts",
@@ -30117,6 +30701,21 @@
       "ontologyClass": "Person"
     },
     {
+      "id": "morphing-uav-variable-camber-flight-test",
+      "name": "유연구조 기반 가변 캠버 모핑 무인기 설계 및 비행시험",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone",
+        "drone-hw",
+        "drone-sw"
+      ],
+      "updated": "2026-11-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "motegi-yuichi",
       "name": "Motegi, Yuichi",
       "layer": "Concepts",
@@ -30169,6 +30768,23 @@
       ],
       "updated": "2026-10-24",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "mpc",
+      "name": "MPC",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "mpc",
+        "quadrotor",
+        "optimal-control",
+        "actuator-modeling",
+        "reference-preview"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -30443,6 +31059,22 @@
       ],
       "updated": "2026-10-24",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "multi-objective-optimization-model",
+      "name": "Multi-Objective Optimization Model",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "trajectory-optimization",
+        "swarm-cooperation",
+        "genetic-algorithm",
+        "path-smoothness"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": null
     },
@@ -31741,6 +32373,39 @@
       "ontologyClass": "CommunicationProtocol"
     },
     {
+      "id": "offline-bptt-policy",
+      "name": "offline BPTT policy",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "adaptive-learning",
+        "quadrotor-control",
+        "offline-training",
+        "gradient-descent"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "offline-online-optimization-framework",
+      "name": "Offline-Online Optimization Framework",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "comms-protocol",
+        "uav-communication",
+        "optimization",
+        "fluid-antennas",
+        "trajectory-planning"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "offloading-strategy",
       "name": "Offloading Strategy",
       "layer": "Concepts",
@@ -31937,6 +32602,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "online-local-replanning",
+      "name": "Online Local Replanning",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "swarm-cooperation",
+        "trajectory-planning",
+        "uav-swarm",
+        "dynamic-environment",
+        "replanning"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "online-localization",
@@ -33123,6 +33805,23 @@
       "ontologyClass": null
     },
     {
+      "id": "phased-trajectory-planning-method",
+      "name": "Phased Trajectory Planning Method",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "swarm-cooperation",
+        "trajectory-planning",
+        "uav-swarm",
+        "genetic-algorithm",
+        "a-star"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "phased-trajectory-planning-uav-swarm-dynamic-environments",
       "name": "복잡 동적 환경 UAV 군집의 단계적 궤적 계획 (GA + 가변 스텝 희소 A*)",
       "layer": "Concepts",
@@ -33601,6 +34300,22 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "position-reconfiguration",
+      "name": "Position Reconfiguration",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "uav-communication",
+        "fluid-antennas",
+        "channel-adaptation",
+        "trajectory-planning"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "position-target-global-int",
@@ -34169,6 +34884,24 @@
       "ontologyClass": null
     },
     {
+      "id": "preview-enabled-lmpc-f",
+      "name": "Preview-enabled LMPC-F",
+      "layer": "Concepts",
+      "domain": "navigation-gnss-denied",
+      "tags": [
+        "lmpc",
+        "mpc-fallback",
+        "quadrotor",
+        "controller-comparison",
+        "reference-preview",
+        "actuator-modeling"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
       "id": "printed-circuit-board-pcb",
       "name": "printed circuit board (PCB)",
       "layer": "Concepts",
@@ -34254,6 +34987,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "prop-kw-wizard",
+      "name": "Prop-KW-Wizard",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "calculation-tool",
+        "propulsion",
+        "motor-selection",
+        "multicopter",
+        "ecalc"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "propeller-feedback-airspeed-estimation",
@@ -35145,6 +35895,21 @@
       "ontologyClass": "Organization"
     },
     {
+      "id": "radar-micro-doppler-cross-domain-uav-identification",
+      "name": "레이다 마이크로 도플러 신호 증강 기반 교차 도메인 UAV 식별",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "datalink"
+      ],
+      "updated": "2026-11-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "radar",
       "name": "Radar",
       "layer": "Concepts",
@@ -35524,6 +36289,22 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "redundant-waypoint-deletion-operator",
+      "name": "Redundant Waypoint Deletion Operator",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "trajectory-planning",
+        "swarm-cooperation",
+        "genetic-algorithm",
+        "waypoint-optimization"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "reference-controller",
       "name": "reference controller",
       "layer": "Concepts",
@@ -35536,6 +36317,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "reference-preview",
+      "name": "Reference preview",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "mpc",
+        "tracking",
+        "actuator-modeling",
+        "fallback-policy",
+        "quadrotor-comparison"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "reference-trajectory",
@@ -35891,6 +36689,23 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Mission"
+    },
+    {
+      "id": "rff-based-mpc",
+      "name": "RFF-based MPC",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "mpc",
+        "adaptive-control",
+        "rff",
+        "quadrotor",
+        "trajectory-tracking"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "rgb-ir-fusion-uav-detection",
@@ -38063,6 +38878,20 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "siyi-unifc-6-pico-flight-controller",
+      "name": "SIYI UniFC 6 PICO 소형 Pixhawk 스타일 비행 컨트롤러",
+      "layer": "Concepts",
+      "domain": "hardware",
+      "tags": [
+        "drone-hw",
+        "hardware"
+      ],
+      "updated": "2026-11-02",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "siyu-wang",
@@ -41323,6 +42152,20 @@
       "ontologyClass": "Mission"
     },
     {
+      "id": "truck-drone-transmission-line-inspection-milp",
+      "name": "송전 인프라 점검 트럭-드론 협업 MILP 최적화",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "ops-mission",
+        "drone"
+      ],
+      "updated": "2026-11-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
       "id": "truck-route-and-drone-trajectory-planning",
       "name": "truck route and drone trajectory planning",
       "layer": "Concepts",
@@ -41391,6 +42234,23 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "two-dimensional-pathfinding",
+      "name": "Two-Dimensional Pathfinding",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "pathfinding",
+        "uav-swarm",
+        "trajectory-planning",
+        "a-star",
+        "algorithm"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "two-sample-t-test",
@@ -41962,6 +42822,21 @@
       ],
       "updated": "2026-10-06",
       "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "Mission"
+    },
+    {
+      "id": "uav-multispectral-herbicide-selection-zoysia",
+      "name": "UAV 다중분광 캐노피 분석 기반 제초제 선발·들잔디 F1 우선선발",
+      "layer": "Concepts",
+      "domain": "ops-mission",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "drone-hw"
+      ],
+      "updated": "2026-11-05",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "Mission"
     },
@@ -43142,6 +44017,20 @@
       "ontologyClass": null
     },
     {
+      "id": "veloxity-rust-uav-autopilot",
+      "name": "Veloxity: Rust 기반 메모리 안전 UAV 오토파일럿",
+      "layer": "Concepts",
+      "domain": "flight-control",
+      "tags": [
+        "drone-sw",
+        "drone"
+      ],
+      "updated": "2026-11-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "vendor-registry-battery",
       "name": "드론 배터리 제조사 레지스트리",
       "layer": "Concepts",
@@ -43963,7 +44852,7 @@
         "drone-sw",
         "drone-ai"
       ],
-      "updated": "2026-10-22",
+      "updated": "2026-11-05",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -46141,6 +47030,92 @@
       "ontologyClass": "AIModel"
     },
     {
+      "id": "yolo-v8-4-195",
+      "name": "YOLO v8.4.195 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-197",
+      "name": "YOLO v8.4.197 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-11-02",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-198",
+      "name": "YOLO v8.4.198 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-11-03",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-201",
+      "name": "YOLO v8.4.201 Release",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone-ai",
+        "drone-sw"
+      ],
+      "updated": "2026-11-04",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-202",
+      "name": "YOLO v8.4.202 릴리스",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "yolo"
+      ],
+      "updated": "2026-11-05",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-203",
+      "name": "YOLO v8.4.203 릴리스",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "yolo"
+      ],
+      "updated": "2026-11-06",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "yolo",
       "name": "YOLO",
       "layer": "Concepts",
@@ -46434,6 +47409,21 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "zero-trust-uav-data-existence-security",
+      "name": "지속 검증·존재 허가 기반 제로트러스트 UAV 데이터 존재 보안 프레임워크",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "drone-sw",
+        "datalink"
+      ],
+      "updated": "2026-11-05",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "zexing-wang",
@@ -47206,6 +48196,26 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "dao-xuan-quy",
+      "name": "Dao, Xuan-Quy",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "researcher",
+        "quadrotor-control",
+        "pid-controller",
+        "lqr",
+        "sliding-mode-control",
+        "mpc",
+        "drone-robotics",
+        "simulation-study"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "diffusion-models-entity",
       "name": "Diffusion Models",
       "layer": "Entities",
@@ -47626,6 +48636,25 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "le-ngoc-bich",
+      "name": "Le, Ngoc-Bich",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "author",
+        "quadrotor",
+        "control-theory",
+        "mpc",
+        "pid",
+        "lqr",
+        "sliding-mode"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "matternet",
       "name": "Matternet",
       "layer": "Entities",
@@ -47671,6 +48700,21 @@
       "ontologyClass": "Technology"
     },
     {
+      "id": "michael-kelly",
+      "name": "Michael Kelly",
+      "layer": "Entities",
+      "domain": "hardware",
+      "tags": [
+        "person",
+        "rc-calculator",
+        "multicopter"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
       "id": "monava",
       "name": "Monava",
       "layer": "Entities",
@@ -47682,6 +48726,44 @@
         "security"
       ],
       "updated": "2026-10-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "nanjing-university-of-aeronautics",
+      "name": "Nanjing University of Aeronautics",
+      "layer": "Entities",
+      "domain": "education",
+      "tags": [
+        "university",
+        "china",
+        "aeronautics",
+        "education",
+        "research"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": null
+    },
+    {
+      "id": "nguyen-le-minh",
+      "name": "Nguyen, Le-Minh",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "person",
+        "quadrotor",
+        "controller-comparison",
+        "pid-controller",
+        "lqr",
+        "sliding-mode-control",
+        "mpc",
+        "so3-controller",
+        "actuator-modeling"
+      ],
+      "updated": "2026-11-01",
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -47701,6 +48783,23 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "Technology"
+    },
+    {
+      "id": "p-tamilselvi",
+      "name": "P. Tamilselvi",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "person",
+        "researcher",
+        "uav-navigation",
+        "deep-learning",
+        "federated-learning"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
     },
     {
       "id": "parrot",
@@ -47822,6 +48921,22 @@
       "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Manufacturer"
+    },
+    {
+      "id": "ren-jinke",
+      "name": "Ren, Jinke",
+      "layer": "Entities",
+      "domain": "comms-protocol",
+      "tags": [
+        "person",
+        "antenna-engineering",
+        "uav-communication",
+        "fluid-antennas"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "ris-entity",
@@ -48063,6 +49178,22 @@
       "ontologyClass": "Manufacturer"
     },
     {
+      "id": "wei-zhou",
+      "name": "Wei Zhou",
+      "layer": "Entities",
+      "domain": "ai-autonomy",
+      "tags": [
+        "person",
+        "ai-autonomy",
+        "trajectory-planning",
+        "uav-swarm"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
       "id": "wingcopter",
       "name": "Wingcopter",
       "layer": "Entities",
@@ -48090,6 +49221,21 @@
       ],
       "updated": "2026-09-30",
       "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
+    },
+    {
+      "id": "wu-jun",
+      "name": "Wu, Jun",
+      "layer": "Entities",
+      "domain": "comms-protocol",
+      "tags": [
+        "person",
+        "uav-communication",
+        "fluid-antennas"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
       "status": "canonical",
       "ontologyClass": "Technology"
     },
@@ -48140,6 +49286,22 @@
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "PerceptionModel"
+    },
+    {
+      "id": "you-changsheng",
+      "name": "You, Changsheng",
+      "layer": "Entities",
+      "domain": "comms-protocol",
+      "tags": [
+        "person",
+        "uav-communication",
+        "fluid-antennas",
+        "low-altitude-wireless-networks"
+      ],
+      "updated": "2026-11-01",
+      "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "fc-firmware-comparison",
@@ -48623,6 +49785,20 @@
         "raw/papers/_unclassified/감시-드론을-위한-심층-신경망-기반-지상-표적-추적-기법.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "3dgcpm",
+      "target": "10-48550-arxiv-2607-26717",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "3dgcpm",
+      "target": "1045-propeller",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "3gpp",
@@ -49382,6 +50558,34 @@
         "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "actuator-modeling",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "actuator-modeling",
+      "target": "actuator-prediction",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "actuator-prediction",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "actuator-prediction",
+      "target": "pid",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "ad-hoc-network",
@@ -53551,6 +54755,20 @@
         "raw/articles/fetch-2026-08-03-betaflight.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "altitude-planning",
+      "target": "altitude-control",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "altitude-planning",
+      "target": "altitude-bar",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "altitude-separation",
@@ -89863,6 +91081,33 @@
       "confidence": "low"
     },
     {
+      "source": "betafpv-pavo20-pro-ii",
+      "target": "betafpv-meteor65-pro-ii",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-yt-is-the-betafpv-pavo20-pro-ii-a-genuine-upgrade.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-pavo20-pro-ii",
+      "target": "fpv-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-yt-is-the-betafpv-pavo20-pro-ii-a-genuine-upgrade.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "betafpv-pavo20-pro-ii",
+      "target": "betaflight",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-yt-is-the-betafpv-pavo20-pro-ii-a-genuine-upgrade.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "beyond-visual-line-of-sight",
       "target": "auto-hub-concept",
       "type": "wikilink",
@@ -89877,6 +91122,24 @@
       "type": "wikilink",
       "evidence": [
         "raw/papers/datalink/flyblind-cross-slice-timeliness-attacks-on-uav-situational-awareness-over-5g.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "bezier-ig-net-uav-collision-avoidance-path",
+      "target": "hermes-evolutionary-uav-path-planning",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-베지어-곡선-기반-uav-충돌회피-경로-최적화를-위한-학습-기반-초기값-생성-기법.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "bezier-ig-net-uav-collision-avoidance-path",
+      "target": "collision-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-베지어-곡선-기반-uav-충돌회피-경로-최적화를-위한-학습-기반-초기값-생성-기법.md"
       ],
       "confidence": "low"
     },
@@ -90536,6 +91799,20 @@
         "raw/papers/_unclassified/impact-of-spatial-proximity-on-drone-services.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "boundary-layer-sliding-mode-control-bl-smc",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "boundary-layer-sliding-mode-control-bl-smc",
+      "target": "actuator-modeling",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "bowu-wei",
@@ -91795,6 +93072,20 @@
         "raw/papers/drone-sw/automated-system-level-testing-of-unmanned-aerial-systems.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "cellular-network-signals",
+      "target": "ad-hoc-network",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "cellular-network-signals",
+      "target": "ad-hoc-wireless-networks",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "centralized-control",
@@ -93543,6 +94834,20 @@
       "confidence": "low"
     },
     {
+      "source": "command-timing",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "command-timing",
+      "target": "pid",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "commander",
       "target": "px4",
       "type": "related",
@@ -94207,6 +95512,24 @@
         "raw/papers/_unclassified/대규모-언어-모델-기반의-전략적-파라미터-생성을-통한-상황-적응형-군집-무인기-임무-할당.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "constant-step-dapl",
+      "target": "dapl",
+      "type": "wikilink",
+      "evidence": [
+        "http://arxiv.org/abs/2610.34538v1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "constant-step-dapl",
+      "target": "giant-steps",
+      "type": "wikilink",
+      "evidence": [
+        "http://arxiv.org/abs/2610.34538v1"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "construction-status-analysis",
@@ -96274,6 +97597,20 @@
         "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "dapl",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "dapl",
+      "target": "constant-step-dapl",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "darpa-heavy-lift-challenge-2026-south-africa",
@@ -98733,6 +100070,20 @@
       "confidence": "low"
     },
     {
+      "source": "directional-selection-method",
+      "target": "aerial-mission-aware-llm-selection-flying-networks",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "directional-selection-method",
+      "target": "bidirectional-token-exchange",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "disaster-recovery",
       "target": "iot",
       "type": "related",
@@ -99836,6 +101187,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/_unclassified/energy-efficiency-optimization-and-dqn-based-power-allocation-in-uav-irs-assiste.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-acoustic-identification-crnn-with-speech",
+      "target": "wave-detr-multimodal-drone-detector",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-야외-환경에서-음성과-함께-수집된-드론-음향-데이터-세트에-대한-crnn-기반-식별기-성능-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-acoustic-identification-crnn-with-speech",
+      "target": "uav-detr-anti-drone-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-야외-환경에서-음성과-함께-수집된-드론-음향-데이터-세트에-대한-crnn-기반-식별기-성능-분석.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "drone-acoustic-identification-crnn-with-speech",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-야외-환경에서-음성과-함께-수집된-드론-음향-데이터-세트에-대한-crnn-기반-식별기-성능-분석.md"
       ],
       "confidence": "low"
     },
@@ -104629,6 +106007,24 @@
       "confidence": "low"
     },
     {
+      "source": "dual-mobility-perspective",
+      "target": "a2z-longtail-dual",
+      "type": "wikilink",
+      "evidence": [
+        "http://arxiv.org/abs/2610.35047v1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "dual-mobility-perspective",
+      "target": "bayesian-residual",
+      "type": "wikilink",
+      "evidence": [
+        "http://arxiv.org/abs/2610.35047v1"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "dual-uav-cable-suspended-payload-transport",
       "target": "compact-force-sensor-for-dual-uav-cable-suspended-payload-transport-with-tension",
       "type": "related",
@@ -107750,6 +109146,24 @@
       "confidence": "low"
     },
     {
+      "source": "fade-flow-based-multichannel-tail-estimation-uav-urllc",
+      "target": "fading-channels",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-arxiv-fade-a-flow-based-approach-for-multichannel-tail-estimation.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "fade-flow-based-multichannel-tail-estimation-uav-urllc",
+      "target": "active-sensing-uav-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-arxiv-fade-a-flow-based-approach-for-multichannel-tail-estimation.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "fading-channels",
       "target": "auto-hub-technology",
       "type": "wikilink",
@@ -107793,6 +109207,20 @@
         "raw/articles/px4-flight-modes-dev.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "fallback-activity",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "fallback-activity",
+      "target": "pid",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "fam-dq-dual-quadrotor-aerial-manipulator",
@@ -108060,6 +109488,20 @@
       "confidence": "low"
     },
     {
+      "source": "fcu",
+      "target": "flight-controller",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "fcu",
+      "target": "multicopter",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "fda",
       "target": "auto-hub-organization",
       "type": "wikilink",
@@ -108299,6 +109741,33 @@
       "type": "related",
       "evidence": [
         "raw/papers/drone-sw/aero-llm-a-distributed-framework-for-secure-uav-communication-and-intelligent-de.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "fiber-tethered-drone-optical-link-budget",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-광섬유-테더드-드론을-위한-광-링크-전력-수지-및-사양-역산-모델.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "fiber-tethered-drone-optical-link-budget",
+      "target": "mavlink",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-광섬유-테더드-드론을-위한-광-링크-전력-수지-및-사양-역산-모델.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "fiber-tethered-drone-optical-link-budget",
+      "target": "csi-jamming-attack-detection-uav",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-광섬유-테더드-드론을-위한-광-링크-전력-수지-및-사양-역산-모델.md"
       ],
       "confidence": "low"
     },
@@ -109611,6 +111080,24 @@
       "confidence": "low"
     },
     {
+      "source": "frozen-parameter-baseline",
+      "target": "frozen-rank-consensus",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "frozen-parameter-baseline",
+      "target": "kci-uav-battery-ecm-parameter-estimation",
+      "type": "wikilink",
+      "evidence": [
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "frozen-rank-consensus",
       "target": "auto-hub-concept",
       "type": "wikilink",
@@ -110601,6 +112088,20 @@
       "confidence": "low"
     },
     {
+      "source": "geometric-so-3-controller",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "geometric-so-3-controller",
+      "target": "backflip-controller",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "geomorphic-analysis",
       "target": "topographic-change",
       "type": "related",
@@ -110896,6 +112397,20 @@
         "raw/papers/drone-ai/lgi-detr-local-global-interaction-for-uav-object-detection.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "global-planning",
+      "target": "altitude-planning",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "global-planning",
+      "target": "autotrans-uav-suspended-payload-planning-control",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "global-position-int",
@@ -113689,6 +115204,33 @@
     },
     {
       "source": "hequav-k11-dual-sensor-gimbal",
+      "target": "holybro-6c",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-im-installing-a-smart-hequav-k11-gimbal-to-try.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "hequav-k11-dual-sensor-gimbal",
+      "target": "qgroundcontrol",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-im-installing-a-smart-hequav-k11-gimbal-to-try.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "hequav-k11-dual-sensor-gimbal",
+      "target": "mavlink-protocol",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-10-05-yt-im-installing-a-smart-hequav-k11-gimbal-to-try.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "hequav-k11-dual-sensor-gimbal",
       "target": "drone-payload-systems",
       "type": "related",
       "evidence": [
@@ -114656,6 +116198,20 @@
       "confidence": "low"
     },
     {
+      "source": "hover-lqr",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "hover-lqr",
+      "target": "hover-point-throttle-curve",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "hover-point-throttle-curve",
       "target": "altitude-hold",
       "type": "related",
@@ -115140,6 +116696,20 @@
         "raw/papers/drone-ai/machine-learning-for-uav-propeller-fault-detection-based-on-a-hybrid-data-genera.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "hybrid-deep-learning-framework",
+      "target": "reinforcement-learning",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "hybrid-deep-learning-framework",
+      "target": "a-modular-energy-aware-framework-for-multicopter-modeling-in-control-and-plannin",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "hybrid-deep-learning-uav-navigation-cellular-signals",
@@ -115842,6 +117412,20 @@
         "raw/papers/_unclassified/stanford-pupper-a-low-cost-agile-quadruped-robot-for-benchmarking-and-education.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "improved-genetic-algorithm",
+      "target": "bio-inspired-algorithms",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "improved-genetic-algorithm",
+      "target": "branch-price-and-cut-algorithm",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "imu",
@@ -118436,6 +120020,20 @@
       "confidence": "low"
     },
     {
+      "source": "joint-optimization",
+      "target": "2-dof-magnetic-spherical-joint",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "joint-optimization",
+      "target": "actoroptimization",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "joneckis-lance",
       "target": "auto-hub-person",
       "type": "wikilink",
@@ -119549,6 +121147,33 @@
       "confidence": "low"
     },
     {
+      "source": "kci-gps-jamming-cost-asymmetry-layered-ew-defense",
+      "target": "gps-spoofing",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-드론-전자전-환경에서의-gps-재밍-취약성-및-교전-비용-비대칭성-분석에-기반한-유형별-계층적-전자기-방어-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-gps-jamming-cost-asymmetry-layered-ew-defense",
+      "target": "jammer-uav",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-드론-전자전-환경에서의-gps-재밍-취약성-및-교전-비용-비대칭성-분석에-기반한-유형별-계층적-전자기-방어-.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-gps-jamming-cost-asymmetry-layered-ew-defense",
+      "target": "fiber-tethered-drone-optical-link-budget",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-드론-전자전-환경에서의-gps-재밍-취약성-및-교전-비용-비대칭성-분석에-기반한-유형별-계층적-전자기-방어-.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kci-ground-target-tracking-retinanet-kalman",
       "target": "computer-vision-drone",
       "type": "related",
@@ -119610,6 +121235,24 @@
         "raw/papers/_unclassified/드론-다중분광센서-기반-ndvi를-활용한-한라산-구상나무-개체의-고도사면향별-활력도-예비평가.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kci-heterogeneous-uav-ttc-collision-avoidance-velocity",
+      "target": "collision-risk-assessment",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-이기종-다중-uav-환경에서-시간-공간-위험도를-고려한-충돌-회피-속도-결정에-관한-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kci-heterogeneous-uav-ttc-collision-avoidance-velocity",
+      "target": "collision-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-kci-이기종-다중-uav-환경에서-시간-공간-위험도를-고려한-충돌-회피-속도-결정에-관한-연구.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "kci-hyperspectral-litter-detection-unetpp",
@@ -131349,6 +132992,60 @@
       "confidence": "low"
     },
     {
+      "source": "kr-agency-uav-operation-rules",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-admrul-2100000238178-20240319.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-agency-uav-operation-rules",
+      "target": "kr-public-emergency-drone-exemption",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-admrul-2100000238178-20240319.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-agency-uav-operation-rules",
+      "target": "public-safety",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-admrul-2100000238178-20240319.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-agency-uav-operation-rules",
+      "target": "drone-first-responder-dfr",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-admrul-2100000238178-20240319.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-agency-uav-operation-rules",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-admrul-2100000238178-20240319.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-agency-uav-operation-rules",
+      "target": "kr-ultralight-registration-certification",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-admrul-2100000238178-20240319.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kr-drone-business-registration",
       "target": "kr-ultralight-registration-certification",
       "type": "wikilink",
@@ -131509,6 +133206,51 @@
         "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art161-penalty-criminal.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kr-local-drone-industry-ordinances",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-ordin-2167251-20230611.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-local-drone-industry-ordinances",
+      "target": "kr-agency-uav-operation-rules",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-ordin-2167251-20230611.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-local-drone-industry-ordinances",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-ordin-2167251-20230611.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-local-drone-industry-ordinances",
+      "target": "kr-ultralight-registration-certification",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-ordin-2167251-20230611.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-local-drone-industry-ordinances",
+      "target": "kr-drone-business-registration",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-ordin-2167251-20230611.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "kr-public-emergency-drone-exemption",
@@ -131725,6 +133467,24 @@
         "raw/papers/swarm/robust-observer-based-visual-servoing-control-of-gimbal-mounted-cameras-for-mult.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "l1-augmented-mpc",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [
+        "arXiv:2610.34538v1 (2026)"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "l1-augmented-mpc",
+      "target": "10-48550-arxiv-2607-26717",
+      "type": "wikilink",
+      "evidence": [
+        "arXiv:2610.34538v1 (2026)"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "lan-ping",
@@ -132114,6 +133874,20 @@
       "confidence": "low"
     },
     {
+      "source": "lawns",
+      "target": "10-48550-arxiv-2607-26717",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "lawns",
+      "target": "1045-propeller",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "lcaat",
       "target": "auto-hub-technology",
       "type": "wikilink",
@@ -132220,6 +133994,20 @@
         "raw/papers/drone-ai/perception-and-energy-aware-motion-planning-for-uav-using-learning-based-model-u.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "least-squares-adaptation",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "least-squares-adaptation",
+      "target": "least-squares-optimization",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "least-squares-optimization",
@@ -133086,6 +134874,20 @@
       "confidence": "low"
     },
     {
+      "source": "linear-mpc-with-lqr-fallback-lmpc-f",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "linear-mpc-with-lqr-fallback-lmpc-f",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "linfeng-yuan",
       "target": "auto-hub-person",
       "type": "wikilink",
@@ -133246,6 +135048,20 @@
         "raw/articles/entity-ardupilot.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "lipo-battery",
+      "target": "amprius-sicore-battery",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "lipo-battery",
+      "target": "battery-bar",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "lipo-charging-cabinet-fire-test",
@@ -134751,6 +136567,20 @@
         "raw/articles/px4-architecture.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "macro-mobility",
+      "target": "dual-mobility-perspective",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "macro-mobility",
+      "target": "eve-air-mobility-transition",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "magnetometer",
@@ -137121,6 +138951,20 @@
       "confidence": "medium"
     },
     {
+      "source": "micro-mobility",
+      "target": "caddx-curve-micro-p18",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "micro-mobility",
+      "target": "dual-mobility-perspective",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "micro-neural-policies-mnp",
       "target": "auto-hub-technology",
       "type": "wikilink",
@@ -138422,6 +140266,33 @@
       "confidence": "low"
     },
     {
+      "source": "morphing-uav-variable-camber-flight-test",
+      "target": "px4-control-tuning",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-유연구조-기반-가변-캠버-모핑-무인기-설계-및-비행시험.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "morphing-uav-variable-camber-flight-test",
+      "target": "px4-pid-tuning",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-유연구조-기반-가변-캠버-모핑-무인기-설계-및-비행시험.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "morphing-uav-variable-camber-flight-test",
+      "target": "uav-airframe-structure-optimization-research",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-유연구조-기반-가변-캠버-모핑-무인기-설계-및-비행시험.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "motegi-yuichi",
       "target": "auto-hub-person",
       "type": "wikilink",
@@ -138510,6 +140381,24 @@
         "raw/articles/mastervault-px4-devnotes.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "mpc",
+      "target": "hover-lqr",
+      "type": "wikilink",
+      "evidence": [
+        "http://arxiv.org/abs/2610.35165v1"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "mpc",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [
+        "http://arxiv.org/abs/2610.35165v1"
+      ],
+      "confidence": "medium"
     },
     {
       "source": "mq-2",
@@ -139053,6 +140942,20 @@
         "raw/papers/swarm/weighted-strategies-to-guide-a-multi-objective-evolutionary-algorithm-for-multi-.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "multi-objective-optimization-model",
+      "target": "3d-environment-model",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "multi-objective-optimization-model",
+      "target": "3d-modeling",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "multi-stop-delivery-tours",
@@ -141488,6 +143391,34 @@
       "confidence": "low"
     },
     {
+      "source": "offline-bptt-policy",
+      "target": "counter-terrorism-policy",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "offline-bptt-policy",
+      "target": "decentralized-policy",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "offline-online-optimization-framework",
+      "target": "a-modular-energy-aware-framework-for-multicopter-modeling-in-control-and-plannin",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "offline-online-optimization-framework",
+      "target": "actoroptimization",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "offloading-strategy",
       "target": "vehicular-networks",
       "type": "related",
@@ -141810,6 +143741,20 @@
         "raw/papers/drone-ai/physai-bench-a-benchmark-for-llm-based-agentic-decision-making-in-autonomous-uav.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "online-local-replanning",
+      "target": "ai-sync-camera-imu-online-temporal-calibration-qin-2018",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "online-local-replanning",
+      "target": "cross-layer-local-support",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "online-localization",
@@ -143965,6 +145910,20 @@
       "confidence": "low"
     },
     {
+      "source": "phased-trajectory-planning-method",
+      "target": "altitude-planning",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "phased-trajectory-planning-method",
+      "target": "autotrans-uav-suspended-payload-planning-control",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "phased-trajectory-planning-uav-swarm-dynamic-environments",
       "target": "swarm-flight",
       "type": "related",
@@ -144805,6 +146764,20 @@
       "confidence": "low"
     },
     {
+      "source": "position-reconfiguration",
+      "target": "control-input-reconfiguration",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "position-reconfiguration",
+      "target": "dynamic-reconfiguration",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "position-target-global-int",
       "target": "auto-hub-protocol",
       "type": "wikilink",
@@ -145638,6 +147611,24 @@
       "confidence": "low"
     },
     {
+      "source": "preview-enabled-lmpc-f",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [
+        "How Tuning, Reference Preview, Actuator Modeling, and Fallback Policies Change Quadrotor Controller Comparisons: A Reproducible Simulation Study (arXiv:2610.35165v1)"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "preview-enabled-lmpc-f",
+      "target": "reference-preview",
+      "type": "wikilink",
+      "evidence": [
+        "How Tuning, Reference Preview, Actuator Modeling, and Fallback Policies Change Quadrotor Controller Comparisons: A Reproducible Simulation Study (arXiv:2610.35165v1)"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "printed-circuit-board-pcb",
       "target": "transmitter-coil",
       "type": "related",
@@ -145785,6 +147776,20 @@
         "raw/papers/drone-ai/physai-bench-a-benchmark-for-llm-based-agentic-decision-making-in-autonomous-uav.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "prop-kw-wizard",
+      "target": "multicopter",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "prop-kw-wizard",
+      "target": "1045-propeller",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "propeller-feedback-airspeed-estimation",
@@ -147474,6 +149479,33 @@
       "confidence": "low"
     },
     {
+      "source": "radar-micro-doppler-cross-domain-uav-identification",
+      "target": "uav-detr-anti-drone-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-딥러닝-기반-교차-도메인-uav-식별을-위한-레이다-마이크로-도플러-신호-증강-전략.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "radar-micro-doppler-cross-domain-uav-identification",
+      "target": "wave-detr-multimodal-drone-detector",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-딥러닝-기반-교차-도메인-uav-식별을-위한-레이다-마이크로-도플러-신호-증강-전략.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "radar-micro-doppler-cross-domain-uav-identification",
+      "target": "kci-cepstrum-single-microphone-drone-distance",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-딥러닝-기반-교차-도메인-uav-식별을-위한-레이다-마이크로-도플러-신호-증강-전략.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "radar",
       "target": "sensor-fusion-system",
       "type": "related",
@@ -148185,6 +150217,20 @@
       "confidence": "high"
     },
     {
+      "source": "redundant-waypoint-deletion-operator",
+      "target": "time-optimal-quadrotor-waypoints",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "redundant-waypoint-deletion-operator",
+      "target": "waypoint-navigation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "reference-controller",
       "target": "auto-hub-technology",
       "type": "wikilink",
@@ -148210,6 +150256,20 @@
         "raw/papers/_unclassified/stanford-pupper-a-low-cost-agile-quadruped-robot-for-benchmarking-and-education.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "reference-preview",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "reference-preview",
+      "target": "actuator-modeling",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "reference-trajectory",
@@ -148804,6 +150864,20 @@
       "evidence": [
         "inbox/processed/fetch-2026-10-20-arxiv-autonomous-agricultural-monitoring-with-aerial-drones-and-rf.md"
       ],
+      "confidence": "medium"
+    },
+    {
+      "source": "rff-based-mpc",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "rff-based-mpc",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
       "confidence": "medium"
     },
     {
@@ -152765,6 +154839,33 @@
       "type": "related",
       "evidence": [
         "raw/articles/entity-ardupilot.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "siyi-unifc-6-pico-flight-controller",
+      "target": "pixhawk",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-02-yt-first-look-new-compact-siyi-unifc-pico-pixhawk-flight-contro.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "siyi-unifc-6-pico-flight-controller",
+      "target": "ardupilot",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-02-yt-first-look-new-compact-siyi-unifc-pico-pixhawk-flight-contro.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "siyi-unifc-6-pico-flight-controller",
+      "target": "px4-flight-stack",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-02-yt-first-look-new-compact-siyi-unifc-pico-pixhawk-flight-contro.md"
       ],
       "confidence": "low"
     },
@@ -158690,6 +160791,33 @@
       "confidence": "medium"
     },
     {
+      "source": "truck-drone-transmission-line-inspection-milp",
+      "target": "multi-uav-wind-farm-inspection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-대규모-송전-인프라-점검을-위한-3차원-이산화-기반-트럭-드론-협업-최적화-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "truck-drone-transmission-line-inspection-milp",
+      "target": "uav-battery-replacement-planner",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-대규모-송전-인프라-점검을-위한-3차원-이산화-기반-트럭-드론-협업-최적화-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "truck-drone-transmission-line-inspection-milp",
+      "target": "mission-planning",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-kci-대규모-송전-인프라-점검을-위한-3차원-이산화-기반-트럭-드론-협업-최적화-연구.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "truck-route-and-drone-trajectory-planning",
       "target": "physics-aware-truck-and-drone-delivery-planning-using-optimization-machine-learn",
       "type": "related",
@@ -158805,6 +160933,20 @@
         "raw/papers/_unclassified/uav-lidar를-활용한-안동시-산불-피해지의-토사-변화량-산정과-공간-해상도별-영향인자-분석.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "two-dimensional-pathfinding",
+      "target": "high-level-semantic-pathfinding",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "two-dimensional-pathfinding",
+      "target": "infinite-dimensional-optimization",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "two-sample-t-test",
@@ -159862,6 +162004,42 @@
         "inbox/fetch-2026-08-19-kci-multi-view-glint-correction-for-uav-multispectral-imagery-in.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "uav-multispectral-herbicide-selection-zoysia",
+      "target": "uav-multispectral-glint-correction",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-겨울철-uav-다중분광-캐노피-표현형-분석을-이용한-제초제-선발-종간교잡-들잔디-f1-개체의-순차적-우선선발.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-multispectral-herbicide-selection-zoysia",
+      "target": "kci-barley-wet-stress-hyperspectral-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-겨울철-uav-다중분광-캐노피-표현형-분석을-이용한-제초제-선발-종간교잡-들잔디-f1-개체의-순차적-우선선발.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-multispectral-herbicide-selection-zoysia",
+      "target": "rtk-gps-precise-landing",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-겨울철-uav-다중분광-캐노피-표현형-분석을-이용한-제초제-선발-종간교잡-들잔디-f1-개체의-순차적-우선선발.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "uav-multispectral-herbicide-selection-zoysia",
+      "target": "visual-positioning-odometry",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-겨울철-uav-다중분광-캐노피-표현형-분석을-이용한-제초제-선발-종간교잡-들잔디-f1-개체의-순차적-우선선발.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "uav-object-detection",
@@ -162075,6 +164253,33 @@
       "type": "wikilink",
       "evidence": [
         "raw/articles/px4-uorb-messaging.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "veloxity-rust-uav-autopilot",
+      "target": "px4-flight-stack",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-arxiv-veloxity-towards-memory-safe-uav-embedded-firmware-using-the.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "veloxity-rust-uav-autopilot",
+      "target": "ardupilot",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-arxiv-veloxity-towards-memory-safe-uav-embedded-firmware-using-the.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "veloxity-rust-uav-autopilot",
+      "target": "companion-computer",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-arxiv-veloxity-towards-memory-safe-uav-embedded-firmware-using-the.md"
       ],
       "confidence": "low"
     },
@@ -167161,6 +169366,186 @@
       "confidence": "low"
     },
     {
+      "source": "yolo-v8-4-195",
+      "target": "yolo-v8-4-194",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-01-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-195",
+      "target": "yolo-v8-4-192",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-01-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-195",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-01-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-197",
+      "target": "yolo-v8-4-195",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-02-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-197",
+      "target": "yolo-v8-4-194",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-02-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-197",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-02-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-198",
+      "target": "yolo-v8-4-197",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-198",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-198",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-03-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-201",
+      "target": "yolo-v8-4-198",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-201",
+      "target": "divide-conquer-uav-detector",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-04-yolo.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "yolo-v8-4-202",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-202",
+      "target": "yolo-v8-4-201",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-202",
+      "target": "yolo-v8-4-198",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-202",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-203",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-203",
+      "target": "yolo-v8-4-202",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-203",
+      "target": "yolo-v8-4-201",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-203",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-203",
+      "target": "ai-model-yolo-ultralytics-jetson-orin-benchmarks",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
       "source": "yolo",
       "target": "yolo-v8-4-155",
       "type": "wikilink",
@@ -168012,6 +170397,42 @@
       "type": "related",
       "evidence": [
         "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "zero-trust-uav-data-existence-security",
+      "target": "mavlink2-security",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-지속-검증과-존재-허가에-기반한-제로트러스트-uav-데이터-존재-보안-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "zero-trust-uav-data-existence-security",
+      "target": "mavshield-mavlink-security-cipher",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-지속-검증과-존재-허가에-기반한-제로트러스트-uav-데이터-존재-보안-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "zero-trust-uav-data-existence-security",
+      "target": "nc2s-secure-c3-uxv",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-지속-검증과-존재-허가에-기반한-제로트러스트-uav-데이터-존재-보안-프레임워크.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "zero-trust-uav-data-existence-security",
+      "target": "nc2s-secure-c3-system",
+      "type": "related",
+      "evidence": [
+        "inbox/fetch-2026-11-05-kci-지속-검증과-존재-허가에-기반한-제로트러스트-uav-데이터-존재-보안-프레임워크.md"
       ],
       "confidence": "low"
     },
@@ -169262,6 +171683,20 @@
       "confidence": "medium"
     },
     {
+      "source": "dao-xuan-quy",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "dao-xuan-quy",
+      "target": "abz-innovation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "diffusion-models-entity",
       "target": "d3pg",
       "type": "related",
@@ -169956,6 +172391,20 @@
       "confidence": "medium"
     },
     {
+      "source": "le-ngoc-bich",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "le-ngoc-bich",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "matternet",
       "target": "doordash-air",
       "type": "related",
@@ -170118,6 +172567,20 @@
       "confidence": "high"
     },
     {
+      "source": "michael-kelly",
+      "target": "multicopter",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "michael-kelly",
+      "target": "abz-innovation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "monava",
       "target": "droneshield",
       "type": "related",
@@ -170163,6 +172626,42 @@
       "confidence": "medium"
     },
     {
+      "source": "nanjing-university-of-aeronautics",
+      "target": "gyeongsang-national-university",
+      "type": "wikilink",
+      "evidence": [
+        "papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "nanjing-university-of-aeronautics",
+      "target": "hansung-university",
+      "type": "wikilink",
+      "evidence": [
+        "papers/swarm/phased-trajectory-planning-for-uav-swarm-cooperation-in-complex-dynamic-environm.md"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "nguyen-le-minh",
+      "target": "quadrotor",
+      "type": "wikilink",
+      "evidence": [
+        "dao_2026_quadrotor_controller_comparison"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "source": "nguyen-le-minh",
+      "target": "mpc",
+      "type": "wikilink",
+      "evidence": [
+        "dao_2026_quadrotor_controller_comparison"
+      ],
+      "confidence": "medium"
+    },
+    {
       "source": "ondas",
       "target": "dfend-counter-drone-worldcup",
       "type": "related",
@@ -170179,6 +172678,20 @@
         "inbox/fetch-2026-08-08-rss-dronedj.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "p-tamilselvi",
+      "target": "abz-innovation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "p-tamilselvi",
+      "target": "airwise-nexus",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "parrot",
@@ -170414,6 +172927,20 @@
       "source": "ratefpv",
       "target": "betaflight",
       "type": "evidences",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ren-jinke",
+      "target": "abz-innovation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "ren-jinke",
+      "target": "airwise-nexus",
+      "type": "wikilink",
       "evidence": [],
       "confidence": "medium"
     },
@@ -170853,6 +173380,20 @@
       "confidence": "medium"
     },
     {
+      "source": "wei-zhou",
+      "target": "hua-zhou",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "wei-zhou",
+      "target": "jizhe-zhou",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
       "source": "wingcopter",
       "target": "zuri-cargo-tiltrotor",
       "type": "related",
@@ -170896,6 +173437,20 @@
         "inbox/processed/fetch-2026-09-30-rss-suasnews.md"
       ],
       "confidence": "low"
+    },
+    {
+      "source": "wu-jun",
+      "target": "abz-innovation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "wu-jun",
+      "target": "airwise-nexus",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "xtend-ai-robotics",
@@ -170977,6 +173532,20 @@
         "inbox/fetch-2026-08-01-yolo.md"
       ],
       "confidence": "high"
+    },
+    {
+      "source": "you-changsheng",
+      "target": "abz-innovation",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
+    },
+    {
+      "source": "you-changsheng",
+      "target": "airwise-nexus",
+      "type": "wikilink",
+      "evidence": [],
+      "confidence": "medium"
     },
     {
       "source": "fc-firmware-comparison",

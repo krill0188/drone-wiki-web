@@ -6111,7 +6111,8 @@
         "raw/papers/datalink/secure-command-control-and-communications-systems-c3-for-army-uxvs.md",
         "raw/papers/_unclassified/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md",
         "raw/papers/swarm/multi-agent-reinforcement-learning-for-energy-efficient-cooperative-uav-deployme.md",
-        "raw/papers/_unclassified/meteorologically-introduced-impacts-on-aerial-channels-and-uav-communications.md"
+        "raw/papers/_unclassified/meteorologically-introduced-impacts-on-aerial-channels-and-uav-communications.md",
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
       ]
     },
     {
@@ -11567,7 +11568,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md"
+        "raw/papers/datalink/resource-allocation-for-secure-dual-uav-assisted-isac-system.md",
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
       ]
     },
     {
@@ -15960,7 +15962,8 @@
       "ontologyClass": "Technology",
       "sources": [
         "raw/papers/_unclassified/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md",
-        "raw/papers/_unclassified/experimental-evaluation-of-a-uav-mounted-leo-satellite-backhaul-for-emergency-co.md"
+        "raw/papers/_unclassified/experimental-evaluation-of-a-uav-mounted-leo-satellite-backhaul-for-emergency-co.md",
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
       ]
     },
     {
@@ -18941,7 +18944,13 @@
         "raw/papers/_unclassified/uav-기지국-운용을-위한-복귀-제약과-데이터율-보장-기반-충전소-배치-최적화.md",
         "raw/papers/_unclassified/uav-및-uam-임베디드-시스템-기술-현황.md",
         "raw/papers/drone-ai/hybrid-deep-learning-framework-for-real-time-uav-navigation-with-adaptive-smooth.md",
-        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+        "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md",
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md",
+        "raw/papers/datalink/modeling-and-performance-analysis-for-fluid-antenna-system-enabled-uav-near-fiel.md",
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md",
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md",
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md",
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
       ]
     },
     {
@@ -19293,7 +19302,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+        "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md",
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
       ]
     },
     {
@@ -19305,7 +19315,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+        "raw/papers/_unclassified/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md",
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
       ]
     },
     {
@@ -19321,7 +19332,9 @@
         "raw/papers/drone-ai/calos-control-affine-lyapunov-on-manifold-safety-layer-for-safe-deep-reinforceme.md",
         "raw/papers/drone-ai/micro-neural-policies-for-safe-real-time-robotic-control.md",
         "raw/papers/drone-ai/diffdreamer-coupling-world-models-with-differentiable-simulation-for-agile-quadr.md",
-        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md"
+        "raw/papers/_unclassified/dual-gradient-consensus-for-adaptive-learning-to-transient-out-of-distribution-d.md",
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md",
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
       ]
     },
     {
@@ -19429,7 +19442,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+        "raw/papers/_unclassified/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md",
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
       ]
     },
     {
@@ -19441,7 +19455,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+        "raw/papers/_unclassified/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md",
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
       ]
     },
     {
@@ -20144,7 +20159,8 @@
         "raw/papers/_unclassified/켑스트럼을-이용한-단일-마이크로폰-기반-드론-거리-추정.md",
         "raw/papers/_unclassified/다양한-지역-환경에서의-utm-k-기반-드론-비행경로-오차-분석.md",
         "raw/papers/drone-ai/sea-you-later-metadata-guided-long-term-re-identification-for-uav-based-multi-ob.md",
-        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md",
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
       ]
     },
     {
@@ -21115,7 +21131,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Regulation",
       "sources": [
-        "raw/papers/_unclassified/한국형-드론-공역시스템의-법ㆍ정책적-강화를-위한-제도적-개선방안-연구---eu의-drone-strategy-20과-u-space-제도를-중심으로.md"
+        "raw/papers/_unclassified/한국형-드론-공역시스템의-법ㆍ정책적-강화를-위한-제도적-개선방안-연구---eu의-drone-strategy-20과-u-space-제도를-중심으로.md",
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
       ]
     },
     {
@@ -28198,7 +28215,12 @@
         "raw/papers/swarm/occupation-measure-mean-field-control-optimization-over-measures-and-frank-wolfe.md",
         "raw/papers/_unclassified/global-sensitive-based-input-shaping-for-uav-payload-precision-motion-control.md",
         "raw/papers/_unclassified/maspa-an-efficient-strategy-for-path-planning-with-a-tethered-marsupial-robotics.md",
-        "raw/papers/drone-ai/physics-aware-truck-and-drone-delivery-planning-using-optimization-machine-learn.md"
+        "raw/papers/drone-ai/physics-aware-truck-and-drone-delivery-planning-using-optimization-machine-learn.md",
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md",
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md",
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md",
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md",
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
       ]
     },
     {
@@ -29667,7 +29689,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Hardware",
       "sources": [
-        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md"
+        "raw/papers/_unclassified/신경망-기반-센서고장-보상과-imu-기반-구동기고장-보상을-통합한-쿼드로터-uav의-복합-고장-보완-기법.md",
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
       ]
     },
     {
@@ -30472,7 +30495,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md",
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
       ]
     },
     {
@@ -30497,7 +30521,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md",
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
       ]
     },
     {
@@ -30581,7 +30606,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md",
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
       ]
     },
     {
@@ -30593,7 +30619,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+        "raw/papers/_unclassified/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md",
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
       ]
     },
     {
@@ -32411,7 +32438,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+        "raw/papers/_unclassified/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md",
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
       ]
     },
     {
@@ -32423,7 +32451,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+        "raw/papers/_unclassified/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md",
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
       ]
     },
     {
@@ -32435,7 +32464,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Person",
       "sources": [
-        "raw/papers/_unclassified/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+        "raw/papers/_unclassified/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md",
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
       ]
     },
     {
@@ -34575,7 +34605,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+        "raw/papers/_unclassified/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md",
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
       ]
     },
     {
@@ -35271,7 +35302,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Concept",
       "sources": [
-        "raw/papers/_unclassified/uav-rotatable-antenna-under-rotation-delay.md"
+        "raw/papers/_unclassified/uav-rotatable-antenna-under-rotation-delay.md",
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
       ]
     },
     {
@@ -38539,7 +38571,8 @@
       "status": "auto-extracted",
       "ontologyClass": "Technology",
       "sources": [
-        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md"
+        "raw/papers/_unclassified/outage-analysis-and-bilevel-resource-optimization-in-ris-assisted-clustered-uav-.md",
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
       ]
     },
     {
@@ -40113,6 +40146,1134 @@
       "ontologyClass": "Person",
       "sources": [
         "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ]
+    },
+    {
+      "id": "Disaster response",
+      "name": "Disaster response",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "IQP",
+      "name": "IQP",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "QUBO",
+      "name": "QUBO",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "CPLEX",
+      "name": "CPLEX",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "QAA",
+      "name": "QAA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Quantum computing",
+      "name": "Quantum computing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "High-performance computing",
+      "name": "High-performance computing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Time-to-Solution",
+      "name": "Time-to-Solution",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Vandelli, Matteo",
+      "name": "Vandelli, Matteo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "Dragoni, Daniele",
+      "name": "Dragoni, Daniele",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ]
+    },
+    {
+      "id": "IRS",
+      "name": "IRS",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "Directional Modulation",
+      "name": "Directional Modulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "UAV secure communication",
+      "name": "UAV secure communication",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "VT method",
+      "name": "VT method",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "CE-VT algorithm",
+      "name": "CE-VT algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "BCD-VT algorithm",
+      "name": "BCD-VT algorithm",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "cross entropy (CE) method",
+      "name": "cross entropy (CE) method",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "block coordinate descent (BCD) method",
+      "name": "block coordinate descent (BCD) method",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ]
+    },
+    {
+      "id": "Fluid Antenna System",
+      "name": "Fluid Antenna System",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/modeling-and-performance-analysis-for-fluid-antenna-system-enabled-uav-near-fiel.md"
+      ]
+    },
+    {
+      "id": "FAS-adaptive subarray partition scheme",
+      "name": "FAS-adaptive subarray partition scheme",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/modeling-and-performance-analysis-for-fluid-antenna-system-enabled-uav-near-fiel.md"
+      ]
+    },
+    {
+      "id": "TDMA",
+      "name": "TDMA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Protocol",
+      "sources": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ]
+    },
+    {
+      "id": "Alternating Optimization",
+      "name": "Alternating Optimization",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ]
+    },
+    {
+      "id": "S-Procedure",
+      "name": "S-Procedure",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ]
+    },
+    {
+      "id": "Semidefinite Relaxation",
+      "name": "Semidefinite Relaxation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ]
+    },
+    {
+      "id": "Passive Beamforming",
+      "name": "Passive Beamforming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ]
+    },
+    {
+      "id": "PMSM",
+      "name": "PMSM",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "Sensorless controller-observer",
+      "name": "Sensorless controller-observer",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "UAV propeller control",
+      "name": "UAV propeller control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "Unit circle formalism",
+      "name": "Unit circle formalism",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "Gradient descent",
+      "name": "Gradient descent",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "Back-EMF estimation",
+      "name": "Back-EMF estimation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "Regional practical asymptotic stability",
+      "name": "Regional practical asymptotic stability",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ]
+    },
+    {
+      "id": "Randomized smoothing",
+      "name": "Randomized smoothing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "α-smoothing",
+      "name": "α-smoothing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Clustered α-smoothing",
+      "name": "Clustered α-smoothing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Mode collapse",
+      "name": "Mode collapse",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Multi-modal regression",
+      "name": "Multi-modal regression",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Adversarial perturbations",
+      "name": "Adversarial perturbations",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Stochastic trajectory prediction",
+      "name": "Stochastic trajectory prediction",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Wasserstein distance",
+      "name": "Wasserstein distance",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "Collision rate",
+      "name": "Collision rate",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ]
+    },
+    {
+      "id": "VIT-UAVCom",
+      "name": "VIT-UAVCom",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "K-means",
+      "name": "K-means",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "linear search (LS)",
+      "name": "linear search (LS)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "binary search (BS)",
+      "name": "binary search (BS)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "genetic search",
+      "name": "genetic search",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "non-terrestrial networks",
+      "name": "non-terrestrial networks",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ]
+    },
+    {
+      "id": "Hybrid analog-digital beamforming",
+      "name": "Hybrid analog-digital beamforming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ]
+    },
+    {
+      "id": "Fully digital beamforming",
+      "name": "Fully digital beamforming",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ]
+    },
+    {
+      "id": "LEO satellite",
+      "name": "LEO satellite",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ]
+    },
+    {
+      "id": "Beam hopping",
+      "name": "Beam hopping",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ]
+    },
+    {
+      "id": "Beam tracking",
+      "name": "Beam tracking",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ]
+    },
+    {
+      "id": "Delayed SINR-feedback power control",
+      "name": "Delayed SINR-feedback power control",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ]
+    },
+    {
+      "id": "Prediction-smoothing-projection rule",
+      "name": "Prediction-smoothing-projection rule",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ]
+    },
+    {
+      "id": "Jain's fairness index",
+      "name": "Jain's fairness index",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ]
+    },
+    {
+      "id": "PPO",
+      "name": "PPO",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "geometric SE(3) controller",
+      "name": "geometric SE(3) controller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "1-cosine gust",
+      "name": "1-cosine gust",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "large-eddy simulation",
+      "name": "large-eddy simulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ]
+    },
+    {
+      "id": "INDI",
+      "name": "INDI",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Cascaded INDI controller",
+      "name": "Cascaded INDI controller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Pitch-rate controller",
+      "name": "Pitch-rate controller",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Routh-Hurwitz criterion",
+      "name": "Routh-Hurwitz criterion",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Tilt-rotor VTOL UAV",
+      "name": "Tilt-rotor VTOL UAV",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Elevon",
+      "name": "Elevon",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Gain margin",
+      "name": "Gain margin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Phase margin",
+      "name": "Phase margin",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Model mismatch",
+      "name": "Model mismatch",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Control-effectiveness mismatch",
+      "name": "Control-effectiveness mismatch",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Sign error in allocation",
+      "name": "Sign error in allocation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Actuator lag",
+      "name": "Actuator lag",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Inertia mismatch",
+      "name": "Inertia mismatch",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Schenk, Lorenzo",
+      "name": "Schenk, Lorenzo",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Ducard, Guillaume",
+      "name": "Ducard, Guillaume",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Onder, Christopher",
+      "name": "Onder, Christopher",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ]
+    },
+    {
+      "id": "Lithium Polymer Battery",
+      "name": "Lithium Polymer Battery",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Hardware",
+      "sources": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ]
+    },
+    {
+      "id": "State-of-health (SoH)",
+      "name": "State-of-health (SoH)",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ]
+    },
+    {
+      "id": "Transfer Learning",
+      "name": "Transfer Learning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Technology",
+      "sources": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ]
+    },
+    {
+      "id": "Palladino, Vittorio",
+      "name": "Palladino, Vittorio",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ]
+    },
+    {
+      "id": "Yang, Teaya",
+      "name": "Yang, Teaya",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ]
+    },
+    {
+      "id": "Zhang, Ruiqi",
+      "name": "Zhang, Ruiqi",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ]
+    },
+    {
+      "id": "Mueller, Mark W.",
+      "name": "Mueller, Mark W.",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ]
+    },
+    {
+      "id": "Foehn, Philipp",
+      "name": "Foehn, Philipp",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Romero, Angel",
+      "name": "Romero, Angel",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Scaramuzza, Davide",
+      "name": "Scaramuzza, Davide",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Person",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Time-Optimal Trajectory Planning",
+      "name": "Time-Optimal Trajectory Planning",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Trajectory Progress Formulation",
+      "name": "Trajectory Progress Formulation",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Time Allocation Problem",
+      "name": "Time Allocation Problem",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Polynomial Trajectory",
+      "name": "Polynomial Trajectory",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "Drone Racing",
+      "name": "Drone Racing",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Mission",
+      "sources": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ]
+    },
+    {
+      "id": "EASA",
+      "name": "EASA",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Organization",
+      "sources": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Minimum 4D Flight Authorization Volume",
+      "name": "Minimum 4D Flight Authorization Volume",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "4D Operational Volume",
+      "name": "4D Operational Volume",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ]
+    },
+    {
+      "id": "Probabilistic Spatial-Temporal Envelope",
+      "name": "Probabilistic Spatial-Temporal Envelope",
+      "layer": "Discovery",
+      "domain": "",
+      "tags": [],
+      "status": "auto-extracted",
+      "ontologyClass": "Concept",
+      "sources": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
       ]
     }
   ],
@@ -71020,6 +72181,1149 @@
       "type": "DEPENDS_ON",
       "evidence": [
         "raw/papers/datalink/fluid-antennas-enabled-uav-communication-systems-fundamentals-challenges-and-fut.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "5G",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Disaster response",
+      "type": "SUPPORTS",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IQP",
+      "target": "CPLEX",
+      "type": "SOLVED_BY",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IQP",
+      "target": "Time-to-Solution",
+      "type": "SCALABILITY_MEASURED_BY",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "QUBO",
+      "target": "IQP",
+      "type": "REFORMULATION_OF",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "QAA",
+      "target": "QUBO",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "QAA",
+      "target": "Quantum computing",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "QAA",
+      "target": "High-performance computing",
+      "type": "EMULATED_ON",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Quantum computing",
+      "target": "CPLEX",
+      "type": "ALTERNATIVE_TO",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Vandelli, Matteo",
+      "target": "arXiv",
+      "type": "PUBLISHED_ON",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Dragoni, Daniele",
+      "target": "arXiv",
+      "type": "PUBLISHED_ON",
+      "evidence": [
+        "raw/papers/datalink/combinatorial-optimization-of-connected-uav-communication-bridges-for-emergency-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Directional Modulation",
+      "target": "IRS",
+      "type": "COMBINED_WITH",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Directional Modulation",
+      "target": "UAV secure communication",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "IRS",
+      "target": "UAV secure communication",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VT method",
+      "target": "IRS",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "CE-VT algorithm",
+      "target": "VT method",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "CE-VT algorithm",
+      "target": "cross entropy (CE) method",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "CE-VT algorithm",
+      "target": "cross entropy (CE) method",
+      "type": "IMPROVES_ON",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "CE-VT algorithm",
+      "target": "IRS",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BCD-VT algorithm",
+      "target": "VT method",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BCD-VT algorithm",
+      "target": "block coordinate descent (BCD) method",
+      "type": "BASED_ON",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BCD-VT algorithm",
+      "target": "block coordinate descent (BCD) method",
+      "type": "IMPROVES_ON",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "BCD-VT algorithm",
+      "target": "IRS",
+      "type": "OPTIMIZES",
+      "evidence": [
+        "raw/papers/datalink/direction-modulation-design-for-uav-assisted-by-irs-with-discrete-phase-shift.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Fluid Antenna System",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/modeling-and-performance-analysis-for-fluid-antenna-system-enabled-uav-near-fiel.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "FAS-adaptive subarray partition scheme",
+      "target": "Fluid Antenna System",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/datalink/modeling-and-performance-analysis-for-fluid-antenna-system-enabled-uav-near-fiel.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RIS",
+      "target": "UAV",
+      "type": "ASSISTS",
+      "evidence": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "TDMA",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "RIS",
+      "target": "Passive Beamforming",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Alternating Optimization",
+      "target": "Successive Convex Approximation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Alternating Optimization",
+      "target": "S-Procedure",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Alternating Optimization",
+      "target": "Semidefinite Relaxation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/datalink/robust-secure-uav-communications-with-the-aid-of-reconfigurable-intelligent-surf.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensorless controller-observer",
+      "target": "PMSM",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensorless controller-observer",
+      "target": "Unit circle formalism",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensorless controller-observer",
+      "target": "Back-EMF estimation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Back-EMF estimation",
+      "target": "Gradient descent",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensorless controller-observer",
+      "target": "Regional practical asymptotic stability",
+      "type": "ACHIEVES",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sensorless controller-observer",
+      "target": "UAV propeller control",
+      "type": "VALIDATED_IN",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV propeller control",
+      "target": "UAV",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Bosso, Alessandro",
+      "target": "Sensorless controller-observer",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Tilli, Andrea",
+      "target": "Sensorless controller-observer",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Conficoni, Christian",
+      "target": "Sensorless controller-observer",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "arXiv",
+      "target": "Sensorless controller-observer",
+      "type": "PUBLISHED",
+      "evidence": [
+        "raw/papers/drone-ai/a-robust-sensorless-controller-observer-strategy-for-pmsms-with-unknown-resistan.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "α-smoothing",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "Randomized smoothing",
+      "type": "EXTENDS",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "α-smoothing",
+      "target": "Randomized smoothing",
+      "type": "IS_VARIANT_OF",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Randomized smoothing",
+      "target": "Mode collapse",
+      "type": "FAILS_DUE_TO",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "Mode collapse",
+      "type": "MITIGATES",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mode collapse",
+      "target": "Multi-modal regression",
+      "type": "OCCURS_IN",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Randomized smoothing",
+      "target": "Adversarial perturbations",
+      "type": "DEFENDS_AGAINST",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "Stochastic trajectory prediction",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "Quadrotor",
+      "type": "EVALUATED_ON",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Stochastic trajectory prediction",
+      "target": "Wasserstein distance",
+      "type": "MEASURED_BY",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "α-smoothing",
+      "type": "OUTPERFORMS",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "Randomized smoothing",
+      "type": "OUTPERFORMS",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Clustered α-smoothing",
+      "target": "Collision rate",
+      "type": "REDUCES",
+      "evidence": [
+        "raw/papers/drone-ai/clustered-randomized-smoothing-for-stochastic-prediction-functions.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "IMU",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "GPS",
+      "type": "ALTERNATIVE_TO",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "K-means",
+      "type": "OUTPERFORMS",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "linear search (LS)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "binary search (BS)",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "genetic search",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "binary search (BS)",
+      "target": "linear search (LS)",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "VIT-UAVCom",
+      "target": "non-terrestrial networks",
+      "type": "APPLIES_TO",
+      "evidence": [
+        "raw/papers/drone-ai/enhancing-uav-trajectory-and-communications-through-vision-inertial-tracking.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid analog-digital beamforming",
+      "target": "Non-Terrestrial Networks",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid analog-digital beamforming",
+      "target": "LEO satellite",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Hybrid analog-digital beamforming",
+      "target": "UAV",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Fully digital beamforming",
+      "target": "Hybrid analog-digital beamforming",
+      "type": "CONTRAST_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "LEO satellite",
+      "target": "Non-Terrestrial Networks",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "UAV",
+      "target": "Non-Terrestrial Networks",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Beam hopping",
+      "target": "LEO satellite",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Beam tracking",
+      "target": "UAV",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Beam hopping",
+      "target": "Hybrid analog-digital beamforming",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Beam tracking",
+      "target": "Hybrid analog-digital beamforming",
+      "type": "RELATED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/hybrid-beamforming-in-non-terrestrial-networks-architectures-design-challenges-a.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Delayed SINR-feedback power control",
+      "target": "SINR",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Delayed SINR-feedback power control",
+      "target": "OTFS",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Delayed SINR-feedback power control",
+      "target": "OFDM",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Delayed SINR-feedback power control",
+      "target": "Prediction-smoothing-projection rule",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Delayed SINR-feedback power control",
+      "target": "Jain's fairness index",
+      "type": "EVALUATED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "OTFS",
+      "target": "SINR",
+      "type": "EVALUATED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/otfs-enabled-delayed-sinr-feedback-power-control-for-reliable-and-fair-high-mobi.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "PPO",
+      "target": "cascaded PID",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "PPO",
+      "target": "geometric SE(3) controller",
+      "type": "COMPARED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "discrete-gust domain randomization",
+      "target": "1-cosine gust",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "PPO",
+      "target": "discrete-gust domain randomization",
+      "type": "TRAINED_WITH",
+      "evidence": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "large-eddy simulation",
+      "target": "log law",
+      "type": "VALIDATED_AGAINST",
+      "evidence": [
+        "raw/papers/drone-ai/statistical-turbulence-and-high-fidelity-disturbance-fields-for-quadrotor-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Cascaded INDI controller",
+      "target": "INDI",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "INDI",
+      "target": "Tilt-rotor VTOL UAV",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pitch-rate controller",
+      "target": "Cascaded INDI controller",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Pitch-rate controller",
+      "target": "Elevon",
+      "type": "CONTROLS",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Routh-Hurwitz criterion",
+      "target": "Pitch-rate controller",
+      "type": "ANALYZES",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Gain margin",
+      "target": "Pitch-rate controller",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Phase margin",
+      "target": "Pitch-rate controller",
+      "type": "EVALUATES",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model mismatch",
+      "target": "INDI",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Control-effectiveness mismatch",
+      "target": "Model mismatch",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Sign error in allocation",
+      "target": "Control-effectiveness mismatch",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Actuator lag",
+      "target": "Pitch-rate controller",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Inertia mismatch",
+      "target": "Pitch-rate controller",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model mismatch",
+      "target": "Gain margin",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Model mismatch",
+      "target": "Phase margin",
+      "type": "AFFECTS",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Schenk, Lorenzo",
+      "target": "Ducard, Guillaume",
+      "type": "COLLABORATES_WITH",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Schenk, Lorenzo",
+      "target": "Onder, Christopher",
+      "type": "COLLABORATES_WITH",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Ducard, Guillaume",
+      "target": "Onder, Christopher",
+      "type": "COLLABORATES_WITH",
+      "evidence": [
+        "raw/papers/drone-hw/linear-stability-analysis-of-an-indi-pitch-rate-controller-under-model-mismatch-.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Lithium Polymer Battery",
+      "target": "UAV",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "State-of-health (SoH)",
+      "target": "Lithium Polymer Battery",
+      "type": "MEASURES",
+      "evidence": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Transfer Learning",
+      "target": "ResNet-50",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Transfer Learning",
+      "target": "Lithium Polymer Battery",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Transfer Learning",
+      "target": "State-of-health (SoH)",
+      "type": "ENABLES",
+      "evidence": [
+        "raw/papers/drone-hw/machine-learning-based-battery-state-of-health-prediction-for-unmanned-aerial-ve.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Palladino, Vittorio",
+      "target": "OA-MPPI",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Yang, Teaya",
+      "target": "OA-MPPI",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Zhang, Ruiqi",
+      "target": "OA-MPPI",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Mueller, Mark W.",
+      "target": "OA-MPPI",
+      "type": "AUTHORED",
+      "evidence": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "OA-MPPI",
+      "target": "arXiv",
+      "type": "PUBLISHED_ON",
+      "evidence": [
+        "raw/papers/drone-hw/oa-mppi-occlusion-aware-model-predictive-path-integral-control-for-uav-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Foehn, Philipp",
+      "target": "Time-Optimal Trajectory Planning",
+      "type": "PROPOSES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Romero, Angel",
+      "target": "Time-Optimal Trajectory Planning",
+      "type": "PROPOSES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Scaramuzza, Davide",
+      "target": "Time-Optimal Trajectory Planning",
+      "type": "PROPOSES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time-Optimal Trajectory Planning",
+      "target": "Quadrotor",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time-Optimal Trajectory Planning",
+      "target": "Drone Racing",
+      "type": "EVALUATED_IN",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time-Optimal Trajectory Planning",
+      "target": "Trajectory Progress Formulation",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trajectory Progress Formulation",
+      "target": "Time-Optimal Trajectory Planning",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Trajectory Progress Formulation",
+      "target": "Time Allocation Problem",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time-Optimal Trajectory Planning",
+      "target": "Time Allocation Problem",
+      "type": "SOLVES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Time-Optimal Trajectory Planning",
+      "target": "Polynomial Trajectory",
+      "type": "COMPARED_TO",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Polynomial Trajectory",
+      "target": "Quadrotor",
+      "type": "APPLIED_TO",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Drone Racing",
+      "target": "Quadrotor",
+      "type": "USES",
+      "evidence": [
+        "raw/papers/drone-hw/time-optimal-planning-for-quadrotor-waypoint-flight.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "U-space",
+      "target": "EASA",
+      "type": "DEFINED_BY",
+      "evidence": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Minimum 4D Flight Authorization Volume",
+      "target": "U-space",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "4D Operational Volume",
+      "target": "Minimum 4D Flight Authorization Volume",
+      "type": "PART_OF",
+      "evidence": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
+      ],
+      "confidence": "unverified"
+    },
+    {
+      "source": "Probabilistic Spatial-Temporal Envelope",
+      "target": "4D Operational Volume",
+      "type": "USED_FOR",
+      "evidence": [
+        "raw/papers/drone-sw/leveraging-uav-autonomy-for-minimum-4d-flight-authorization-volumes.md"
       ],
       "confidence": "unverified"
     }
