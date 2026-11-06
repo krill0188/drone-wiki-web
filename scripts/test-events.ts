@@ -283,6 +283,22 @@ async function main() {
     return hasLawEvents ? "법령 이벤트가 있는 번들 데이터로 확인" : "번들 데이터에 법령 이벤트 없음 — 노출 시험은 건너뜀(게이트·무관 질문만 확인)"
   })
 
+  await t("L8 별칭 확대(2026-11-06 승인 5종): 미노출이던 법령 의도 질문이 노출되고, 비법령·모호 질문에는 오노출이 없다", () => {
+    const NOW = new Date(ev.generated + "T12:00:00Z")
+    const hasLawEvents = ev.links.some((l) => l.nodeType === "Law")
+    process.env.KG_LAW_EVENTS = "1"
+    try {
+      if (lawsReal.confirmed === true && hasLawEvents) {
+        for (const q of ["드론 신고 의무가 있어?", "야간 비행하려면 승인 받아야 해?", "드론 사업자등록은 어떻게 해?", "초경량비행장치 조종자격 종류", "항공촬영 허가가 필요한가요"])
+          ok((lawPanelMeta(q, NOW).relatedEvents ?? []).length > 0, `별칭 질문인데 패널 없음: ${q}`)
+      }
+      // 단독 '신고'·'촬영' 같은 일반어와 비법령 질문은 걸리지 않아야 한다(별칭을 일부러 구 형태로 넣은 이유)
+      for (const q of ["민원 신고는 어디에 해?", "한라산 국립공원 드론 촬영 규정", "드론 촬영 영상 편집 추천", "동원목재 사업 문의", "DJI Mini 5 사양 알려줘", "PX4 EKF2 지연 기본값은?"])
+        ok((lawPanelMeta(q, NOW).relatedEvents ?? []).length === 0, `일반·비법령 질문에 법령 패널이 붙음: ${q}`)
+    } finally { delete process.env.KG_LAW_EVENTS }
+    return hasLawEvents ? "법령 이벤트가 있는 번들 데이터로 확인" : "번들 데이터에 법령 이벤트 없음 — 노출 시험은 건너뜀"
+  })
+
   await t("L6 UI 패널: 법령 항목은 '⚖ 법령' 표시와 법적 자문 아님 고지가 있고, 법령이 없으면 고지가 없다", async () => {
     const React = (await import("react")).default
     const { renderToStaticMarkup } = await import("react-dom/server")
