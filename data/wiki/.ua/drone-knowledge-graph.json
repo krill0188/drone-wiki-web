@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "source_fingerprint": "375b13ac7644e54e029ec468424bf133382f1517700bd1cfc31e100a2f9ac589",
+  "source_fingerprint": "26abfb84e350c074f4c94a276800c150e2796255093408d78aa7d47666e54a20",
   "nodes": [
     {
       "id": "10-48550-arxiv-2607-26717",
@@ -26835,7 +26835,7 @@
         "regulations",
         "ops-mission"
       ],
-      "updated": "2026-11-06",
+      "updated": "2026-11-07",
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
@@ -26852,6 +26852,21 @@
       ],
       "updated": "2026-10-20",
       "confidence": "medium",
+      "status": "canonical",
+      "ontologyClass": "AbstractProcess"
+    },
+    {
+      "id": "kr-uav-pilot-survey-fuel-notices",
+      "name": "한국 무인비행장치 관련 행정규칙 5종: 조종자 자격·측량·특별비행·수소용기·공공기관 특례",
+      "layer": "Concepts",
+      "domain": "regulations",
+      "tags": [
+        "drone",
+        "regulations",
+        "ops-mission"
+      ],
+      "updated": "2026-11-07",
+      "confidence": "low",
       "status": "canonical",
       "ontologyClass": "AbstractProcess"
     },
@@ -29588,6 +29603,22 @@
       "confidence": "low",
       "status": "canonical",
       "ontologyClass": null
+    },
+    {
+      "id": "mc-dsa-multi-uav-semantic-autoencoder",
+      "name": "MC-DSA: 다중 UAV 협력 심층 의미 오토인코더 통신망",
+      "layer": "Concepts",
+      "domain": "comms-protocol",
+      "tags": [
+        "drone",
+        "datalink",
+        "swarm",
+        "research"
+      ],
+      "updated": "2026-11-07",
+      "confidence": "low",
+      "status": "canonical",
+      "ontologyClass": "Technology"
     },
     {
       "id": "mc-pos-control",
@@ -32672,7 +32703,7 @@
         "drone-ai",
         "ai-agent"
       ],
-      "updated": "2026-07-29",
+      "updated": "2026-11-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -47111,6 +47142,21 @@
         "yolo"
       ],
       "updated": "2026-11-06",
+      "confidence": "high",
+      "status": "canonical",
+      "ontologyClass": "AIModel"
+    },
+    {
+      "id": "yolo-v8-4-204",
+      "name": "YOLO v8.4.204 릴리스",
+      "layer": "Concepts",
+      "domain": "ai-autonomy",
+      "tags": [
+        "drone",
+        "drone-ai",
+        "yolo"
+      ],
+      "updated": "2026-11-07",
       "confidence": "high",
       "status": "canonical",
       "ontologyClass": "AIModel"
@@ -133253,6 +133299,15 @@
       "confidence": "low"
     },
     {
+      "source": "kr-local-drone-industry-ordinances",
+      "target": "kr-uav-pilot-survey-fuel-notices",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-06-law-ordin-2167251-20230611.md"
+      ],
+      "confidence": "low"
+    },
+    {
       "source": "kr-public-emergency-drone-exemption",
       "target": "drone-first-responder-dfr",
       "type": "wikilink",
@@ -133278,6 +133333,60 @@
         "inbox/processed/fetch-2026-10-20-kr-reg-law-act-art131-2-public-exemption.md"
       ],
       "confidence": "medium"
+    },
+    {
+      "source": "kr-uav-pilot-survey-fuel-notices",
+      "target": "kr-agency-uav-operation-rules",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-law-admrul-2100000259052-20250514.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-uav-pilot-survey-fuel-notices",
+      "target": "kr-drone-law-framework",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-law-admrul-2100000259052-20250514.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-uav-pilot-survey-fuel-notices",
+      "target": "kr-ultralight-registration-certification",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-law-admrul-2100000259052-20250514.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-uav-pilot-survey-fuel-notices",
+      "target": "kr-unmanned-special-flight-approval",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-law-admrul-2100000259052-20250514.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-uav-pilot-survey-fuel-notices",
+      "target": "kr-public-emergency-drone-exemption",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-law-admrul-2100000259052-20250514.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "kr-uav-pilot-survey-fuel-notices",
+      "target": "kr-drone-flight-approval-airspace",
+      "type": "wikilink",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-law-admrul-2100000259052-20250514.md"
+      ],
+      "confidence": "low"
     },
     {
       "source": "kr-ultralight-registration-certification",
@@ -138146,6 +138255,42 @@
       "type": "related",
       "evidence": [
         "raw/articles/mastervault-px4-devnotes.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "mc-dsa-multi-uav-semantic-autoencoder",
+      "target": "datalink-communication",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-arxiv-design-of-multi-uav-cooperative-deep-semantic-autoencoders-f.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "mc-dsa-multi-uav-semantic-autoencoder",
+      "target": "swarm-coordination",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-arxiv-design-of-multi-uav-cooperative-deep-semantic-autoencoders-f.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "mc-dsa-multi-uav-semantic-autoencoder",
+      "target": "uav-isac-cross-region",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-arxiv-design-of-multi-uav-cooperative-deep-semantic-autoencoders-f.md"
+      ],
+      "confidence": "low"
+    },
+    {
+      "source": "mc-dsa-multi-uav-semantic-autoencoder",
+      "target": "uav-task-offloading-traffic-monitoring",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-arxiv-design-of-multi-uav-cooperative-deep-semantic-autoencoders-f.md"
       ],
       "confidence": "low"
     },
@@ -169542,6 +169687,51 @@
       "type": "related",
       "evidence": [
         "inbox/processed/fetch-2026-11-06-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-204",
+      "target": "yolo",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-204",
+      "target": "yolo-v8-4-203",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-204",
+      "target": "yolo-v8-4-202",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-204",
+      "target": "computer-vision-drone",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-yolo.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "source": "yolo-v8-4-204",
+      "target": "edge-constrained-uav-small-object-detection",
+      "type": "related",
+      "evidence": [
+        "inbox/processed/fetch-2026-11-07-yolo.md"
       ],
       "confidence": "high"
     },
