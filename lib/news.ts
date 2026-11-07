@@ -13,9 +13,26 @@ export interface NewsItem {
   region?: "KR" | "global"
   summary: string
   summary_ko?: string
+  /** 주제(최대 2개, 닫힌 목록) — 수집 단계 분류기(2nd news_topics.py)가 붙인다. domain(옛 7종)과 별개로 메뉴 필터에 쓴다. */
+  topics?: string[]
   sha256?: string
   published: string
   fetched: string
+}
+
+/** 뉴스 메뉴에서 뺄 분류 — 지식관리(PKM)는 외부 뉴스 대상이 아니다(2026-11-07). */
+export const NEWS_HIDDEN_DOMAINS: readonly string[] = ["knowledge-management"]
+
+/** 항목이 메뉴 분류(key)에 속하는가: 옛 domain 이 같거나 topics 에 들어 있으면 속한다. */
+export function inDomain(it: Pick<NewsItem, "domain" | "topics">, key: string): boolean {
+  return it.domain === key || (it.topics ?? []).includes(key)
+}
+
+/** 메뉴 분류별 항목 수(숨김 분류 제외). 발행마다 바뀐다. */
+export function domainCounts(items: Pick<NewsItem, "domain" | "topics">[], keys: string[]): Record<string, number> {
+  const out: Record<string, number> = {}
+  for (const k of keys) if (!NEWS_HIDDEN_DOMAINS.includes(k)) out[k] = items.filter((it) => inDomain(it, k)).length
+  return out
 }
 
 export const NEWS_TYPE_META: Record<NewsType, { label: string; emoji: string }> = {

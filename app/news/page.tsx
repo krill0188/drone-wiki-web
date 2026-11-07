@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { getNewsFeed, timeAgo, sourceHost, NEWS_TYPE_META, type NewsType } from "@/lib/news"
+import { getNewsFeed, timeAgo, sourceHost, NEWS_TYPE_META, inDomain, domainCounts, type NewsType } from "@/lib/news"
 import { DOMAIN_META } from "@/lib/types"
 
 export const metadata: Metadata = {
@@ -16,20 +16,22 @@ export default async function NewsPage({ searchParams }: Props) {
   const { domain = "", type = "", region = "" } = await searchParams
   const all = getNewsFeed()
   const items = all.filter((it) => {
-    const matchD = !domain || it.domain === domain
+    const matchD = !domain || inDomain(it, domain)
     const matchT = !type || it.type === type
     const matchR =
       !region || (region === "KR" ? it.region === "KR" : it.region !== "KR")
     return matchD && matchT && matchR
   })
 
-  const flink = (href: string, label: string, active: boolean) => (
+  const counts = domainCounts(all, Object.keys(DOMAIN_META))
+
+  const flink = (href: string, label: string, active: boolean, dim = false) => (
     <Link
       key={href}
       href={href}
       className={`whitespace-nowrap hover:underline ${
         active ? "font-bold text-signal-600 dark:text-signal-400" : ""
-      }`}
+      } ${dim && !active ? "opacity-40" : ""}`}
     >
       {label}
     </Link>
@@ -52,9 +54,11 @@ export default async function NewsPage({ searchParams }: Props) {
         {flink("/news?region=global", "🌏 해외", region === "global")}
       </div>
       <div className="text-[13px] text-slate-500 dark:text-slate-400 mb-4 flex flex-wrap gap-x-3 gap-y-1 pb-3 border-b border-slate-200 dark:border-slate-700">
-        {Object.entries(DOMAIN_META).map(([d, m]) =>
-          flink(`/news?domain=${d}`, `${m.emoji} ${m.label}`, domain === d)
-        )}
+        {Object.entries(DOMAIN_META)
+          .filter(([d]) => d in counts)
+          .map(([d, m]) =>
+            flink(`/news?domain=${d}`, `${m.emoji} ${m.label} ${counts[d]}`, domain === d, counts[d] === 0)
+          )}
       </div>
 
       {/* 뉴스 리스트 */}
