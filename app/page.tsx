@@ -6,7 +6,7 @@ import PipelineFlow from "@/components/PipelineFlow"
 import StatsSection from "@/components/StatsSection"
 import ReducedMotion from "@/components/ReducedMotion"
 import rulesJson from "@/data/ontology/rules.json"
-import qualityJson from "@/data/ontology/quality.json"
+import { getAllPages } from "@/lib/wiki"
 
 export default async function HomePage() {
   const feed = getNewsFeed()
@@ -14,7 +14,8 @@ export default async function HomePage() {
   const briefing = getDailyBriefing()
   const ruleRows = (rulesJson as { rules?: { status: string }[] }).rules ?? (rulesJson as unknown as { status: string }[])
   const implementedRules = ruleRows.filter((r) => r.status === "implemented").length
-  const wikiDocs = (qualityJson as { counts: { documents: number } }).counts.documents
+  // 공개 위키 문서 수 — /api/pages 와 같은 출처. 예전엔 고정 파일(quality.json)을 읽어 발행해도 숫자가 멈춰 있었다(2026-11-07).
+  const wikiDocs = (await getAllPages()).length
 
   return (
     <ReducedMotion>
