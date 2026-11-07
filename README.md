@@ -157,6 +157,7 @@ npm run build    # 프로덕션 빌드
 
 | 버전 | 일자 | 내용 |
 |---|---|---|
+| v2.21.4 | (배포 대기) | **AI Q&A 모델 체인 교체(무료·강한 모델 우선)**: 일반 질문(chat)·근거 답변(builder)을 `nemotron-3-ultra-550b → nemotron-3.5-super-vl-120b → gemma-4-31b` 로, 추론(reason)은 `ultra(추론 켬) → super-vl → minimax` 로, OpenRouter 무료 폴백은 `ultra:free → north-mini-code:free → nano-omni-reasoning:free` 로 변경(약한 lightning 우선·시간 초과 나는 gpt-oss-20b·결과가 매번 달라지는 openrouter/free 제거). 실측: 후보 8종 중 ultra 1.8초·super-vl 0.9초·gemma 9.4초만 본문 정상, gpt-oss·glm·deepseek·mistral-large 는 90초 시간 초과. 평가 25문항: JSON 계약 준수 100%(lightning 우선은 89%), 답변 18~19/20(편차 수준), 중앙 지연 14초(lightning 우선 5.6초) — 정확도 향상이 입증된 것은 아니며 구조 준수와 큰 모델 우선을 택한 결정. 키는 Vercel 환경변수 `NVIDIA_NIM_API_KEYS`·`OPENROUTER_API_KEYS`(각 3개) 풀 사용. |
 | v2.21.3 | (배포 대기) | **뉴스 주제 메뉴**: 메뉴 20개 중 14개가 비어 있던 문제 — 수집 단계(2nd v3.10.0)가 붙이는 `topics` 로도 필터(`domain` 또는 `topics`), 메뉴마다 건수 표시, 0건 메뉴 흐림, 지식관리(PKM) 숨김. 헬퍼 `inDomain`·`domainCounts`(lib/news.ts), 테스트 `scripts/test-news-topics-filter.ts` 6건. |
 | v2.21.2 | (배포 대기) | **메인 페이지 공개 위키 문서 수 자동 갱신**: 메인(히어로·스탯)이 11/1에 만든 고정 파일(`quality.json`, 3312)을 읽어 발행해도 숫자가 멈춰 있던 문제를 `/api/pages`와 같은 출처(`getAllPages()`)로 바꿔 해결. 발행·배포마다 실제 개수(3387)로 바뀜. 회귀 테스트 `scripts/test-home-doc-count.ts` 3건. |
 | v2.21.1 | (배포 대기) | **법령 조문 범위 밖 개체 가드**: 질문에 조문에 없는 구역·공역 코드(P-73·R-75 등)가 있으면 법령 블록을 붙이지 않고 기존 경로(거절·위키)로 보냄(일일 점검 P-73 FAIL 수정), 선택기 실패 시 규칙 대체 제거(비법령 오탐 54%→0%), 프롬프트 범위 밖 예시. 측정: 골든셋 범위 밖 오탐 0/39, 정답 포함 88%(독립 81%). 상세 [설계서 §15](docs/law-stage3-design.md) |

@@ -2,6 +2,11 @@
 
 배포마다 무엇이 바뀌었는지 기록한다. 최신이 위. Vercel 배포 목록에는 `--meta`로 같은 요약이 붙는다.
 
+## (배포 대기) v2.21.4
+
+**변경**
+- AI Q&A 모델 체인을 무료 NIM·OpenRouter 중 강한 모델 우선으로 교체 (chat·builder: ultra → super-vl-120b → gemma-4-31b, reason: ultra(추론) → super-vl → minimax, OpenRouter 폴백: ultra:free → north-mini-code:free → nano-omni-reasoning:free)
+
 ## (배포 대기) v2.21.3
 
 **기능 추가**

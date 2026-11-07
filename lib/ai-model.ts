@@ -22,9 +22,13 @@ const KNOWN_EXTRA: Record<string, Record<string, unknown>> = {
   "nvidia/nemotron-3.5-lightning-30b-a3b": NO_THINK,
   "nvidia/nemotron-3-ultra-550b-a55b": NO_THINK,
   "nvidia/nemotron-3-super-120b-a12b": NO_THINK,
+  "nvidia/nemotron-3.5-super-vl-120b-a12b": NO_THINK,
 }
 const spec = (id: string): ModelSpec => ({ id, extra: KNOWN_EXTRA[id] ?? {} })
-const DEFAULT_CHAIN: ModelSpec[] = [spec("nvidia/nemotron-3.5-lightning-30b-a3b"), spec("nvidia/nemotron-3-ultra-550b-a55b"), spec("openai/gpt-oss-20b")]
+// 2026-11-07 마스터 지시: Q&A 는 무료(NIM Free Endpoint) 모델 중 코딩·추론·분석에 강한 큰 모델로 답한다. 약한 lightning(30B-A3B) 우선·시간 초과 나는 gpt-oss-20b 를 뺐다.
+// 실측(웹 조건: 추론 끔·max_tokens 700): ultra 1.8초·super-vl-120b 0.9초·gemma-4-31b 9.4초 본문 정상. gpt-oss-20b·glm-5.3·deepseek-v4.1·mistral-large-4 는 90초 시간 초과/빈 본문.
+const STRONG_CHAIN: ModelSpec[] = [spec("nvidia/nemotron-3-ultra-550b-a55b"), spec("nvidia/nemotron-3.5-super-vl-120b-a12b"), spec("google/gemma-4-31b-it")]
+const DEFAULT_CHAIN: ModelSpec[] = STRONG_CHAIN
 const FIRST_CONTENT_MS = Number(process.env.NVIDIA_NIM_FIRST_CONTENT_MS) || 15000
 const TOTAL_BUDGET_MS = 50000 // 전환 판단에 쓰는 시간 예산(응답 전체 한도는 라우트 maxDuration 120초)
 
@@ -33,11 +37,11 @@ const TOTAL_BUDGET_MS = 50000 // 전환 판단에 쓰는 시간 예산(응답 �
 // reason: 추론이 꼭 필요한 호출 전용(2026-10-23 실측: minimax-m3.1-flash 4~8초·4/4 정답, ultra 추론켬 7~33초, glm-5.3-flash 17~47초). 추론 글자가 먼저 나오므로 첫 답변 글자 대기·전체 예산을 길게 둔다.
 export type ModelProfile = "chat" | "builder" | "reason"
 const REASON_DEFAULT_CHAIN: ModelSpec[] = [
-  spec("minimaxai/minimax-m3.1-flash"),
-  { id: "nvidia/nemotron-3-ultra-550b-a55b", extra: { chat_template_kwargs: { enable_thinking: true } } },
-  spec("z-ai/glm-5.3-flash"),
+  { id: "nvidia/nemotron-3-ultra-550b-a55b", extra: { chat_template_kwargs: { enable_thinking: true } } }, // 추론 켬 3.1초(2026-11-07 실측)
+  { id: "nvidia/nemotron-3.5-super-vl-120b-a12b", extra: {} }, // 기본(추론) 4.8초
+  spec("minimaxai/minimax-m3.1-flash"), // 11-07 실측 45초로 느려 3순위(10/23 실측은 4~8초였음)
 ]
-const BUILDER_DEFAULT_CHAIN: ModelSpec[] = [spec("nvidia/nemotron-3-ultra-550b-a55b"), spec("nvidia/nemotron-3.5-lightning-30b-a3b"), spec("openai/gpt-oss-20b")]
+const BUILDER_DEFAULT_CHAIN: ModelSpec[] = STRONG_CHAIN
 
 function modelChain(profile: ModelProfile = "chat"): ModelSpec[] {
   const envKey = profile === "builder" ? "NVIDIA_NIM_BUILDER_CHAIN" : profile === "reason" ? "NVIDIA_NIM_REASON_CHAIN" : "NVIDIA_NIM_CHAIN"
@@ -165,7 +169,8 @@ async function firstAnswerPooled(
 const HEDGE_MS: Record<ModelProfile, number> = { chat: Number(process.env.NVIDIA_NIM_HEDGE_CHAT_MS) || 4000, builder: Number(process.env.NVIDIA_NIM_HEDGE_BUILDER_MS) || 12000, reason: Number(process.env.NVIDIA_NIM_HEDGE_REASON_MS) || 9000 }
 const hedgeStat = { requests: 0, hedges: 0 }
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-const OPENROUTER_FALLBACK = ["nvidia/nemotron-3-ultra-550b-a55b:free", "nvidia/nemotron-3.5-lightning:free", "openrouter/free"]
+// 2026-11-07: 무료·추론 지원 모델만(실측 성공). 결과가 매번 달라지는 라우터(openrouter/free)와 약한 lightning 은 뺐다. north-mini-code 는 코딩 특화.
+const OPENROUTER_FALLBACK = ["nvidia/nemotron-3-ultra-550b-a55b:free", "cohere/north-mini-code:free", "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"]
 export const fallbackStat = { openrouter: 0, exhausted: 0 } // /api/health에서 폴백 사용 횟수를 본다(인스턴스 단위)
 const hedgeAllowed = () => hedgeStat.hedges < 2 + 0.25 * hedgeStat.requests // 토큰 버킷: 처음 2회 여유 + 요청의 25%
 
